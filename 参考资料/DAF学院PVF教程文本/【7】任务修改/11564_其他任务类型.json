@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[quest point]<br />\n&nbsp;QP点数量<br />\n--------------------------------------------------------</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[event]<br />\n&nbsp;1（是否是活动置顶，是就加上去，不是就不用）<br />\n--------------------------------------------------------</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[reward int data]<br />\n&nbsp;必选奖励代码&nbsp;数量<br />\n[/reward int data]</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[reward selection int data]<br />\n&nbsp;任选奖励代码1&nbsp;数量&nbsp;任选奖励代码2&nbsp;数量<br />\n[/reward selection int data]</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">--------------------------------------------------------<br />\n[pre required quest]<br />\n&nbsp;前置任务代码<br />\n[/pre required quest]</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">--------------------------------------------------------<br />\n&nbsp;`[daily]`每日任务<br />\n&nbsp;`[normaly repeat]`重复任务<br />\n&nbsp;`[achievement]`成就任务<br />\n&nbsp;`[common unique]`普通任务</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">--------------------------------------------------------</span></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-13T12:53:18.367",
+    "view_num": 1316
+}

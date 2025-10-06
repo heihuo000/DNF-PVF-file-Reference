@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>设置触发时间，设置自己的状态为站立，或者将站立设置目标为自己</p>\n\n<p>[if]</p>\n\n<p>[time]<br />\n180000 1 5000<br />\n[my state]<br />\n&#39;stand&#39;<br />\n[/if]</p>\n\n<p>[then]<br />\n【特效内容】<br />\n[/then]<br />\n&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:25:32.801",
+    "view_num": 469
+}

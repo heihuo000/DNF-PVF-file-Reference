@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、增加力量和命中率的效果范围：800 px<br />\n1、最大重叠数：5<br />\n2、效果持续时间：10秒（猜测）<br />\n[static data]<br />\n800 5 10000<br />\n[/static data]</p>\n\n<p>0、提高出血Lv：2<br />\n1、增加力量：26<br />\n2、增加命中率：0.2%<br />\n3、出血抗性减少值：13<br />\n[level info]<br />\n4 2 26 2 13</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:15:03.040",
+    "view_num": 104
+}

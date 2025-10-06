@@ -1,0 +1,33 @@
+[name] `부메랑`
+[explain]
+`부메랑`
+[grade] 1
+[creation rate] 90
+[weight] 5
+[usable job]
+`[all]`
+[/usable job]
+[minimum level] 1
+
+[stackable type] `[throw]` 0			// 타입은 `[throw]` 으로
+
+[icon] `Item/IconMaterial.img` 38
+[field image] `Item/FieldImage.img` 23
+
+[move wav] `BONE_TOUCH`
+
+[applying range] 200 // 픽셀단위 정원형 반지름, 투척아이템을 위한 태그는 아니고 특수효과를 주는 아이템들에 많이 사용
+
+[int data]
+50001					// 생성할 패시브 오브젝트 인덱스
+0					// 패시브 오브젝트 생성시 넣을 인자
+0					// 발사 전 딜레이 (발사 전 오래 모으게 하려면 이 변수를 늘인다. 기본값 0)
+450					// 발사 후 딜레이 (발사 후 경직시간을 키우려면 이 변수를 늘인다. 기본값 500 정도)
+0					// 반영시킬 속도 (0:공격속도, 1:캐스트속도)
+100					// 기본 속도 배수 (%) (동작을 빠르게 발사하려면 100 이상을 적어준다. 속도 = 반영시킬 속도 * 배수 / 100)
+[/int data]
+
+[string data]
+`PassiveObject/ThrowItem/Particle/Boomerang.ptl`	// 오브젝트의 경로를 지정할 파티클 스크립트. 절대 경로
+`THROW`							// 투척시 낼 효과음 태그
+[/string data]

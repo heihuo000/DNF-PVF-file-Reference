@@ -1,0 +1,62 @@
+// 파티클 스크립트 샘플 //
+
+[creation pos] 100 127 0		// 생성 x, y, z 좌표
+
+[x axis]				// 이동 편집할 축. 이 표시 이후의 값은 x축
+[move type] `[sin]`		// move type. `[stop]` `[straight line]` `[sin]` `[cos]` 중 택일
+[move variable 1] 100 102		// 이동 변수 1. 초기값과 최종값 (이동 속도 / 진동 최대값)
+[move variable 2] 150 152		// 이동 변수 2. 초기값과 최종값 (사용 안함 / 진동 주기)
+
+[y axis]				// 이동 편집할 축. 이 표시 이후의 값은 y축
+[move type] `[straight line]`		// move type. `[stop]` `[straight line]` `[sin]` `[cos]` 중 택일
+[move variable 1] 172 113		// 이동 변수 1. 초기값과 최종값
+
+[z axis]				// 이동 편집할 축. 이 표시 이후의 값은 z축
+[move type] `[stop]`		// move type. `[stop]` `[straight line]` `[sin]` `[cos]` 중 택일
+
+
+[changing term] 1000		// 초기값과 최종값 사이의 변화 간격
+[changing type] `[keep changing]`		// 초기값과 최종값 사이의 move type. `[keep changing]` `[keep last value]` `[ping pong]` 중 택일
+
+[gravity] 10			// gravity값
+
+[rotation angle] 30 10 0		// 회전각. 수평각 / 수직각 / 회전각
+
+수평각 : 생성 각도값 - 수평 회전값 (z축 고정 x->y 방향)
+수직각 : 생성 각도값 - 수직 회전값 (y축 고정 x->z 방향)
+회전각 : 생성 각도값 - x축 회전값  (x축 고정 z->y 방향)
+
+[life time] 1000			// life time
+
+[landing type] `[vanish]`		// 땅에 닿았을 때의 처리 `[pierce]` `[slide]` `[stop]` `[vanish]` 중 택일
+
+[transparent value] 100 0			// 시작 / 끝 투명도 (%값). 끝의 기준은 life time이다.
+
+
+[creation frequency] 0.5			// 초당 파티클 creation frequency (-1이면 최대 생성수만큼 생성)
+[maximum create number] 100		// 파티클 최대 생성수 (0이면 무제한)
+[maximum create time] 0		// 파티클 최대 생성시간 (0이면 무제한)
+
+[create area size] 100 10 0	// 생성 공간 크기
+[create area rotation angle] 100 32 0	// 생성 공간 회전각
+
+[rotation angle range type] `[rectangle]`	// 생성각의 범위를 지정하는 방법. `[rectangle]`과 `[circle]`중 택일
+[rotation angle variable] 300 10		// 생성각의 변수 1, 2 (가로 각도 범위/지름각, 세로 각도 범위/사용 안함)
+
+[random range] 10			// random range (%값)
+
+[create pos correct] 1		// 생성 좌표 보정 여부
+
+[how to create object] `[randomize]` 또는 `[in order]`	// 둘중 하나 선택
+
+[object type] `[animation]`	// 생성할 object의 타입. `[animation]`과 `[passive object]`중 택일
+[object]			// object 리스트
+`abcd.img` 3			// 생성할 object의 스트링 / 정수 데이터를 적어준다.
+`abc.ani` -1			// animation을 지정할 때는 정수 값은 -1로 (animation은 상대 경로에서 읽는다)
+// `` 3				// 수동 객체의 경우 정수 값에 객체 인덱스를 넣는다.
+[/object]			// 이것으로 닫아줘야 함
+
+[layer] `[bottom]`			// 생성한 파티클의 레이어. 생성 object가 `[animation]`일 때만 유효하다.
+				// `[close]` `[normal]` `[bottom]` `[closeback]` `[middleback]` `[distantback]` 중 택일
+
+[display effect rate] 50 75 100		// 이펙트 등급 (하-중-상) 에서 생성하는 파티클 비율. %값 (기본은 100 100 100)

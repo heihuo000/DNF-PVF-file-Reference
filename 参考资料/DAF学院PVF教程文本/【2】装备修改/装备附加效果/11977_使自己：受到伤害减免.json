@@ -1,0 +1,7 @@
+{
+    "content": "<p>[basic explain]<br />\n<code>被攻击时， 所受伤害 -7%%</code></p>\n\n<p>[detail explain]<br />\n<code>被攻击时， 所受伤害 -7%% (在决斗场、 竞技大赛和街头争霸中， 所受伤害 -3%%)</code></p>\n\n<pre>\n<code>[if]\n    [module]\n        `[dungeon type]`\n        `[war room]`\n    [/module]\n    [hit]\n        1\n[/if]\n\n[then]\n    [target]\n        `myself`    -1\n    [add absolute defense percent]\n        `all`    7\n[/then]\n\n[if]\n    [module]\n        `[pvp]`\n        `[assault]`\n    [/module]\n    [hit]\n        1\n[/if]\n\n[then]\n    [target]\n        `myself`    -1\n    [add absolute defense percent]\n        `all`    3\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T23:01:52.094",
+    "view_num": 373
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n[static data]<br />\n0 1000 0 500 6 1<br />\n[/static data]</p>\n\n<p>0、魔法攻擊力 : 独立攻击力 x 2.7<br />\n1、失明機率 : 7%<br />\n2、失明Lv : 22<br />\n3、失明持續時間 : 10秒<br />\n4、減少視野 : 60 px<br />\n5、減少命中率 : 1%<br />\n6、魔法攻擊力 : 270% + &lt;0&gt;<br />\n7、發動速度增加率 : 0%<br />\n[level info]<br />\n8 270 70 22 10000 60 1 270 0</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:28:32.297",
+    "view_num": 56
+}

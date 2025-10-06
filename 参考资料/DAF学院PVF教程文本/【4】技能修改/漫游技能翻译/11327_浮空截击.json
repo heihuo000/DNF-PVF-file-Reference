@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n【浮空截击】<br />\n路径：skill\\gunner\\airraid.skl<br />\n[@05][static data]<br />\n[@02]2//攻击次数上限<br />\n[@02]80//x轴移动距离<br />\n[@02]400//上升距离<br />\n[@02]30<br />\n[@02]200//①每段攻击浮空力<br />\n[@02]50<br />\n[@02]50<br />\n[@05][/static data]<br />\n[@05][level info]<br />\n[@02]5<br />\n[@02]10//回旋踢x轴移动距离<br />\n[@02]5//回旋踢y轴移动距离<br />\n[@02]360//固伤360%独立<br />\n[@02]200//？<br />\n[@02]100//？<br />\n注释：①浮空截击的每段攻击都会给怪一个浮空效果，所以总的浮空力=每段攻击浮空力&times;攻击次数上限。</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T20:23:48.503",
+    "view_num": 51
+}

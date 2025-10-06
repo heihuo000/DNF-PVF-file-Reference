@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>装备在某些地图中触发进行限制的模块：</p>\n\n<p>[module]<br />\n&#39;[dungeon]&#39; &#39;[tournament dungeon]&#39; &#39;[dead tower]&#39; &#39;[war room]&#39; &#39;[blood system ]&#39;<br />\n[/module]</p>\n\n<p>普通地图：dungeon<br />\n地下城类型：dungeon type<br />\n锦标赛地图：tournament dungeon<br />\n死亡之塔系列地图：dead tower<br />\n战场类地图：war room<br />\n（疑似无尽的祭坛类地图）：blood system 【理由：无尽祭坛有一个blood point系统。】<br />\n怪物攻城地图：assault<br />\n竞技场：pvp<br />\n-------------------------<br />\n[part set index]<br />\n24<br />\n-------------------------<br />\n[part set index]是关键性内容<br />\n这个是数据库的设定方式<br />\n24为什么是领域支配者<br />\n按道理他是按一个数据库列表排列下去的<br />\n为什么24才是...<br />\n2choroset15<br />\n明明是15.为什么是24号编号呢<br />\n这说明在这个套装之前<br />\n还存在了9个多余的编号套装<br />\n然后我发现.<br />\n除了这几个编号以外..<br />\n剩下的全是远古<br />\n说明这些编号在远古之前<br />\n起码时装肯定比异界出的早<br />\n所以数据库排列下来是早的<br />\n普通时装肯定是1号编号<br />\n这里我们就随便找一件时装普通</p>\n\n<p>数据库写法变不了的<br />\n你按程序去看就简单了</p>\n\n<p>路径: D:/PVF解压/equipment/character/swordman/avatar/neck/ashguard_dkknight.equ<br />\nType:9 Str:3 &#39;name_40265&gt;暗黑骑士戾芒护肩 GM<br />\n&#39;<br />\n这里我随便找一个<br />\n读的编号3，这说明什么<br />\n普通时装.高级时装.天空时装.<br />\n国服的活动套都是后期加的<br />\n肯定存在于异界后面的编号</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:33:36.491",
+    "view_num": 379
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>#PVF_File\n\n[name]\n\t`随机礼盒`\n\n[explain]\n\t`\t从各种物品中随机抽取1种； `\n\n[grade]\n\t1\n\n[attach type]\n\t`[trade]`\n\n[rarity]\n\t1\n\n[usable job]\n\t`[all]`\n[/usable job]\n\n[minimum level]\n\t1\n\n[icon]\n\t`Item/stackable/consumption.img`\t205\n\n[cool time]\n\t1000\n\n[stackable type]\n\t`[booster]`\t0\n\n[move wav]\n\t`BONE_TOUCH`\n\n[booster info]\n\t[etc]\n\t\t1\n\t\t1108\t60000\t2\n//格式：物品代码\t概率\t数量\n\t\t1108\t60000\t5\n\t\t1108\t60000\t7\n\t\t1108\t60000\t10\n\t\t1109\t60000\t2\n\t\t1109\t11363\t5\n\t\t1109\t11363\t7\n\t\t1109\t11363\t10\n\t\t1110\t11363\t2\n\t\t1110\t11363\t5\n\t\t1110\t11363\t7\n\t[/etc]\n[/booster info]\n</code></pre>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T17:11:18.319",
+    "view_num": 1095
+}

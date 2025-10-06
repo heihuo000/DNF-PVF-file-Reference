@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">&nbsp;[skill levelup]<br />\n&nbsp;&nbsp;`[swordman]`&nbsp;82&nbsp;1<br />\n&nbsp;&nbsp;`[fighter]`&nbsp;90&nbsp;1<br />\n&nbsp;&nbsp;`[at fighter]`&nbsp;90&nbsp;1<br />\n&nbsp;&nbsp;`[gunner]`&nbsp;83&nbsp;1<br />\n&nbsp;&nbsp;`[at gunner]`&nbsp;83&nbsp;1<br />\n&nbsp;&nbsp;`[mage]`&nbsp;59&nbsp;1<br />\n&nbsp;&nbsp;`[mage]`&nbsp;58&nbsp;1<br />\n&nbsp;&nbsp;`[mage]`&nbsp;81&nbsp;1<br />\n&nbsp;&nbsp;`[at mage]`&nbsp;14&nbsp;1<br />\n&nbsp;&nbsp;`[at mage]`&nbsp;30&nbsp;1<br />\n&nbsp;&nbsp;`[priest]`&nbsp;101&nbsp;1<br />\n&nbsp;&nbsp;`[demonic swordman]`&nbsp;82&nbsp;1<br />\n&nbsp;[/skill levelup]</span></p>\n\n<p><br />\n<span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">职业和技能代码后面得 1 是+1<br />\n[set ability]<br />\n把以上代码写到这里！<br />\n[/set ability]</span></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-05T22:35:37.109",
+    "view_num": 919
+}

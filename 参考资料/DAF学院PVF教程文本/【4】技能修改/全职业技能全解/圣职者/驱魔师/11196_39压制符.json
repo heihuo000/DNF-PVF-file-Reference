@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、效果範圍 : 500 px<br />\n2、对精英怪减少率：70%<br />\n3、对稀有怪减少率：40%<br />\n4、对领主怪减少率：40%<br />\n[static data]<br />\n700 500 70 40 40<br />\n[/static data]</p>\n\n<p>0、持續時間 : 20秒<br />\n1、移動速度減少 : 13.5%%<br />\n2、跳躍力減少 : 6.8%%<br />\n3、命中率減少 : 6.8%<br />\n4、壓制符HP : 1411<br />\n5、<br />\n[level info]<br />\n6 20000 135 68 68 1411 33</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:43:02.710",
+    "view_num": 54
+}

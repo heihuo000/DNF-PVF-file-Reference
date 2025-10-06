@@ -1,0 +1,76 @@
+// 소모품 스크립트 파일 샘플 //
+
+[packagable] 0	// 소포로 부칠수없음, 기본값이 부칠수있음이므로 주의
+
+[name] `포션`
+[name2] `Potion'
+[explain]					// 소모품의 설명. 줄 바꿈도 가능.
+`포션은
+죽어갈때
+먹을 것`
+[flavor text]
+`죽을 때 먹으면 좋다는 전설이 있다`
+[grade] 6				// 소모품의 등급
+[attach type] `[free]`				// 귀속 타입
+[creation rate] 2				// 생성 비율
+[rarity] 0				// 레어리티
+[weight] 5				// 무게
+[usable job]			// 사용 가능 캐릭터 목록의 시작
+`[all]`					// `[swordman]` `[fighter]` `[all]` 등의 선택이 있다.
+[/usable job]			// 반드시 이것으로 닫아줘야 함
+[minimum level] 0				// 사용하기 위한 최소 레벨.
+
+[icon] `StackableIcon.img` 2		// 아이콘 이미지 파일과 프레임 인덱스
+[icon mark] `IconMark.img` 2		// 아이콘마크 이미지 파일과 프레임 인덱스
+[field image] `StackableField.img` 1	// 땅에 떨여져 있을 때의 이미지 파일과 프레임 인덱스
+
+[stackable type] `[waste]` 14			// 소모품의 타입.
+					// 뒤의 숫자는 가격 테이블 인덱스. 가격이 없다면 0 입력.
+					// 가격을 따로 입력해도 되팔기/수리 가격은 이것을 따라간다.
+[sub type]	0			// 소모품의 부타입. 기본은 0
+[price] 100				// 가격. 테이블에서 읽을 거라면 넣을 필요 없다.
+[cash] 1200				// 캐쉬 가격
+[medal] 5				// 메달 가격
+[need material] 3043  2			// 필요한 재료템 인덱스, 재료템 개수( 예, 흑련 2개 )
+[value] 50				// 유저가 상점에 되파는 금액
+[finish point price] 10			// FP가격
+
+[stack limit] 1000			//스택제한 개수
+
+[cool time] 1000				// 사용한 뒤 액티브 스킬과 소모품의 사용을 막을 시간. ms단위이며 `[waste]`와 `[throw]`에만 유효하다.
+[쿨타입 그룹] 0				// 속하는 쿨타임 그룹. -1이거나 안쓰면 그룹 없이 자기 자신에만 적용.
+[party cooltime] 1			// 1이면 파티쿨타임적용
+
+[move wav] `MOVE_SOUND`		// 땅에 떨어질 때, 아이템 옮길 때(장착 포함) 나는 소리
+
+[use wav] `사용할 때 나올 효과음의 태그`
+
+[hp recovery] `+` 200 1000 `myself`	//hp 회복. 200만큼 1초간 자신에게 회복
+[mp recovery] `+` 200 1000 `myself`	//mp 회복. 200만큼 1초간 자신에게 회복
+
+[active status recovery] `stun` 55 `myself`	//상태변화 회복. 상태이상 종류, 최대레벨, 타겟
+[my status] `poison` 10 7000 10 90	//자신을 상태이상으로 만듬. 상태이상 종류, 확률, 지속시간, 레벨, 상태이상 종류에 따른 변수 ( 최대 4개 )
+[buff] `superarmor` 5000 `myself`	//자신을 상태이상으로 만듬 ( 기본 이외의 것들 ). 상태이상 종류, 지속시간, 타겟
+
+// 자신에게 60초동안 아래의 효과 적용
+[stat change]
+`+` 1000 `rigidity`	// 소모품 사용시 경직도 1000 증가
+`+` 100 `fire attack`	// 소모품 사용시 화속성 공격도 100 증가
+`+` 101 `water attack`	// 소모품 사용시 수속성 공격도 101 증가
+`+` 102 `dark attack`	// 소모품 사용시 암속성 공격도 102 증가
+`+` 103 `light attack`	// 소모품 사용시 명속성 공격도 103 증가
+[/stat change]
+[stat change duration] 60000 `myself`
+
+[monster summons] 123 1 20 50000 2	//몬스터 소환. 몬스터 인덱스, 최소레벨, 최대레벨, 지속시간, 최대소환개수
+[summon apc] 20404 -1 -1 300000 1	//APC 소환. 레벨을 -1로 할 경우 자신의 레벨에 맞는 apc 소환
+
+[consume item]	//소모할 아이템. 아이템 인덱스, 개수. 여러개 추가 가능
+3037 10
+[/consume item]
+
+
+//이후 수많은 int data 들이 있는데, 이건 엑셀로 작업 불가
+//수작업으로 입력하는 태그의 경우 특정 표시를 해놓으면, 툴 돌릴때 지우지 않도록 하는 장치가 있으면 좋겠음. 이게 핵심!!!
+[int data]
+[/int data]

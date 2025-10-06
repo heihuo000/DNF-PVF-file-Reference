@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>如果 XXX 触发<br />\n冷却时间<br />\n对象<br />\n机率<br />\n持续时间<br />\n产生的效果<br />\n说明：</p>\n\n<p>在参数里面的运算算法<br />\n+：为增加<br />\n%：为相乘<br />\n如果需要用到减法或除法，则写法如下：<br />\n减法：&#39;+&#39; -1000<br />\n除法：&#39;%&#39; 0.5</p>\n\n<p>--------------------------------------------------------------------------------<br />\n[passive object]<br />\n48077 0 0 0 64 0 &quot;&quot;</p>\n\n<p>注释说明：</p>\n\n<p>特效编号<br />\nX轴坐标<br />\nY轴坐标<br />\nZ轴坐标 （说明：坐标貌似只有调用了ptl才能用<br />\n特效等级<br />\n出现方式 （相关参数：<br />\n-1：跟随人物<br />\n0：正常<br />\n1：流星落出场方式<br />\n3：垂直出场方式</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:23:51.883",
+    "view_num": 818
+}

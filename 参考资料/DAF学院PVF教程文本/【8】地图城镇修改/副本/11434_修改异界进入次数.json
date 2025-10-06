@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:老牛</p>\n\n<p><br />\n地下城相关的都在dungeon，路径dungeon/impossible/&nbsp; 目录下的六个文件对应异界的6张图</p>\n\n<p><img alt=\"\" height=\"255\" src=\"/media/uploads/2023/05/08/image-20230508214131-1.png\" width=\"596\" /></p>\n\n<p>以第一个 蠕动之城为例，前面是地下城编号012345，2就是第三张图； 后面10就是进入次数。</p>\n\n<p><img alt=\"\" height=\"385\" src=\"/media/uploads/2023/05/08/image-20230508214140-2.png\" width=\"608\" /></p>\n\n<p>顺带提一下，下面紧挨着的就是[necessary party]<br />\n就是进入地下城的最低人数限制，之前是3，改成1了，也就是单人可进。<br />\n以此类推，其他的都很简单。</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-08T21:41:42.878",
+    "view_num": 857
+}

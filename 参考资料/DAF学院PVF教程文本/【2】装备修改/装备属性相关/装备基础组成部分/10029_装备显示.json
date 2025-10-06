@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n装备封装状态：代码中为封装中。</p>\n\n<p>[attach type]<br />\n&#39;[sealing]&#39;</p>\n\n<p>相关参数：</p>\n\n<p>封装：sealing<br />\n无限制：free<br />\n不可交易：trade<br />\n账号绑定：account<br />\n无法删除：trade delete<br />\n装备掉落机率<br />\n&nbsp;<br />\n[creation rate]<br />\n500<br />\n&nbsp;<br />\n数值未知，添加这段代码可以使装备在世界中掉落。<br />\n装备图标</p>\n\n<p>[icon]<br />\n&#39;Item/weapon/priest/cross.img&#39; 12</p>\n\n<p>比较特殊的路径：</p>\n\n<p>[icon]<br />\n`Item/new_equipment/01_weapon/mage/broom/broom.img` 73<br />\n装备边框</p>\n\n<p>[icon mark]<br />\n&#39;Item/IconMark.img&#39; 45</p>\n\n<p>掉落图标</p>\n\n<p>[field image]<br />\n&#39;Item/field_weapon.img&#39; 11</p>\n\n<p>武器外观</p>\n\n<p>[animation job]<br />\n`[mage]`</p>\n\n<p>动画的职业：[mage]<br />\n[variation]<br />\n1 4 &nbsp;</p>\n\n<p>外观在npk里的编号：即0104<br />\n[layer variation]<br />\n2790 `broomc`</p>\n\n<p>第一个参数：2790（贴图的算法）<br />\n第二个参数：对应装备动画文件所在的文件夹<br />\n[equipment ani script]<br />\n`equipment/character/mage.lay`</p>\n\n<p>[layer variation]<br />\n200 `broomd`</p>\n\n<p>第一个参数：200（贴图的算法）<br />\n第二个参数：对应装备动画文件所在的文件夹<br />\n[equipment ani script]<br />\n`equipment/character/mage.lay`</p>\n\n<p><br />\n武器闪光光谱（残影）</p>\n\n<p>[spectrum]<br />\n50 20 200 200 500<br />\n&nbsp;</p>\n\n<p>第一个参数：红色<br />\n第二个参数：绿色<br />\n第三个参数：蓝色<br />\n第四个参数：透明或亮度<br />\n第五个参数：线性渐变距离<br />\n公平决斗场专用装备代码段：</p>\n\n<p>[usable world]<br />\n`[fair]`</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:16:19.338",
+    "view_num": 1577
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:么文化滴吟</p>\n\n<p>http://tieba.baidu.com/p/4130738188?see_lz=1</p>\n\n<p>这里再稍微说一下各职业任务初始属性，以及成长属性修改。<br />\n在character文件夹的文件夹里面，我这里以鬼剑为例。目录为character/swordman/swordman(demonicswordman是黑暗骑士)<br />\n&nbsp;<br />\n先上图<br />\n&nbsp;<br />\n&nbsp;<img alt=\"\" height=\"613\" src=\"/media/uploads/2023/05/07/image-20230507212546-1.png\" width=\"881\" /><br />\n&nbsp;<br />\n打开看就一目了然了，里面可以随便增添删减属性，其实鬼剑原本还有光抗-20，暗抗+20的属性的，只是我的修改了。<br />\n&nbsp;<br />\n&nbsp;<br />\n至于后面的成长属性就是每一个等级升级+的点数，在这里我稍微提一下，力量体力生命值等初始属性+成长的属性不能超过65535，<br />\n硬直不能超过32677（具体数字我忘了别超过32000就好，否则会出现负值），负重也不能超10000KG，需要修改的最大值的，就去改一下数据库的设置，按道理是可以更大的。</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T21:25:49.522",
+    "view_num": 622
+}

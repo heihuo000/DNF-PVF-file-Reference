@@ -1,0 +1,7 @@
+{
+    "content": "<p>[basic explain]<br />\n<code>攻击时， 有1%%的几率使自身恢复4%%的HP。</code></p>\n\n<pre>\n<code>[if]\n    [cooltime]\n        1000\n    [attack success]\n        1\n[/if]\n\n[then]\n    [target]\n        `myself`    -1\n    [probability]\n        1\n    [restore]\n        `hp`\n        `%`    4    0\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T22:59:36.040",
+    "view_num": 228
+}

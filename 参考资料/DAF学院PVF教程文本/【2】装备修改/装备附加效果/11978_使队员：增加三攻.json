@@ -1,0 +1,7 @@
+{
+    "content": "<p>[basic explain]<br />\n<code>500px范围内队员的物理和魔法攻击力 +40</code><br />\n<code>500px范围内队员的独立攻击力 +64</code></p>\n\n<pre>\n<code>[if]\n    [change status]\n        `hp`\n        `&gt;`\n        `%`    0\n        `end`\n[/if]\n\n[then]\n    [target]\n        `party`    500\n    [stat by condition]\n        `equipment physical attack`\n        `+`    40\n    [stat by condition]\n        `equipment magical attack`\n        `+`    40\n    [stat by condition]\n        `separate attack`\n        `+`    64\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T23:02:06.400",
+    "view_num": 525
+}

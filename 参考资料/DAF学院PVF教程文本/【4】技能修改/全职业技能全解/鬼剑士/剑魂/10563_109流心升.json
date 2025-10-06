@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、装备光剑和太刀时，多段攻击次数：2次<br />\n6、<br />\n7、装备钝器、短剑和巨剑时，击中浮空的敌人攻击力增加：120%<br />\n8、<br />\n9、<br />\n[static data]<br />\n180 350 45 1 0 2 1 120 60 220<br />\n[/static data]</p>\n\n<p>0、基本攻击力：480%<br />\n1、<br />\n[cooltime level info]<br />\n1<br />\n[level info]<br />\n2 480 10000</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:11:33.464",
+    "view_num": 100
+}

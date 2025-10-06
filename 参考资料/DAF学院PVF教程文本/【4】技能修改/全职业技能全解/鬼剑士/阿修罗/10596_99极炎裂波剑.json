@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、火焰地带持续时间：4秒<br />\n2、火焰地带多段攻击间隔：0.5秒<br />\n3、<br />\n4、<br />\n[static data]<br />\n500 4000 500 100 250<br />\n[/static data]</p>\n\n<p>0、魔法攻击力：独立攻击力 x 14.35<br />\n1、爆炸攻击力：独立攻击力 x 28.69<br />\n2、火焰地带攻击力：独立攻击力 x 1.64<br />\n3、灼伤机率：100%<br />\n4、灼伤Lv：Lv72<br />\n5、灼伤持续时间：3秒<br />\n6、灼伤攻击力：96<br />\n7、灼伤周边攻击力：48<br />\n8、<br />\n9、<br />\n10、<br />\n[level info]<br />\n11 1435 2869 164 1000 72 3000 96 48 1 1000 50</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:18:08.454",
+    "view_num": 112
+}

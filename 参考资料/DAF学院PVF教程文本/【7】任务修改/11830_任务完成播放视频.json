@@ -1,0 +1,7 @@
+{
+    "content": "<p>路径<br />\n<code>etc/questmovielist.etc</code></p>\n\n<pre>\n<code>[movie play]\n    [quest index]\n        9548               //任务代码\n    [/quest index]\n    [play info]\n        [condition]\n            `[clear]`\n        [/condition]\n        [title]\n            `阻截安圖恩成功`     //标题\n        [/title]\n        [file path]\n            `video/AntonCutScene/2-S.avi`         //视频路径\n        [/file path]\n    [/play info]\n[/movie play]\n</code></pre>\n\n<h2>限制条件：</h2>\n\n<pre>\n<code>接受\n`[on accept]`\n</code></pre>\n\n<pre>\n<code>清除\n`[clear]`\n</code></pre>\n\n<pre>\n<code>清除非播放\n`[clear_nonplay]`</code></pre>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-15T11:31:06.075",
+    "view_num": 640
+}

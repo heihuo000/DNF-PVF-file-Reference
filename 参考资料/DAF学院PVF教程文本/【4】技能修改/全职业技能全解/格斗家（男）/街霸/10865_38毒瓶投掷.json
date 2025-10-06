@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、投擲的毒瓶數量 : 2<br />\n1、猛毒地带持续时间：2秒 （猜测）<br />\n2、猛毒地带范围：250 px （猜测）<br />\n[static data]<br />\n2 2000 250<br />\n[/static data]</p>\n\n<p>0、毒瓶個數 : 10<br />\n1、毒瓶魔法攻擊力 : 独立攻击力 x 3.69<br />\n2、猛毒地帶範圍 : 200 px<br />\n3、中毒機率 : 100%%<br />\n4、中毒Lv : Lv17<br />\n5、中毒持續時間 : 3秒<br />\n6、中毒傷害 : 525<br />\n使用[投擲強化]時<br />\n7、毒瓶中毒範圍增加率: 100%%<br />\n8、中毒機率 : 100%%<br />\n9、中毒Lv : Lv17<br />\n10、中毒持續時間 : 3秒<br />\n11、中毒傷害 : 1155<br />\n[level info]<br />\n12 10 369 200 100 17 3000 525 100 100 17 3000 1155</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T15:57:40.882",
+    "view_num": 47
+}

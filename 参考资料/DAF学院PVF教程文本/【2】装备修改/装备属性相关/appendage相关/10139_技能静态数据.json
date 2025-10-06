@@ -1,0 +1,7 @@
+{
+    "content": "<p>为了方便解析，我将类型分别说明一下好了。类型不分先后，但为了方便说明，我排序一下。</p>\n\n<p>一、技能静态数据改变：</p>\n\n<p>[type]<br />\n`skill data up`</p>\n\n<p>相对应的数据串</p>\n\n<p>[string data]<br />\n`[swordman]` `174` `[all]` `[level]` `0` `%` `300`</p>\n\n<p>[/string data]</p>\n\n<p>这里是调用【鬼剑士】第【174】号技能【基础精通】。【all】表示所有场景适用。如PKC，地下城，死亡之塔。<br />\n如：`[dungeon]` `[tournament dungeon]` `[dead tower]` `[war room]` `[blood system]`</p>\n\n<p><br />\n内容说明：技能的第一个参数，增加至300%。即3倍</p>\n\n<p>-----------------------------------------------------------------</p>\n\n<p>其他参考：MP消耗增加100点。</p>\n\n<p>[string data]<br />\n`[swordman]` `5` `[all]` `[mp]` `100` `+` `100`<br />\n[/string data]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T12:54:34.359",
+    "view_num": 827
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>使用教学pvf<br />\nScript\\monster\\new_goblin\\action\\throw.act<br />\n调用测试投掷哥布林<br />\n<strong>核心代码解析</strong></p>\n\n<p>&nbsp;&nbsp; &nbsp;[RESTORE]<br />\n&nbsp;&nbsp; &nbsp;[HP]<br />\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;-99<br />\n&nbsp;&nbsp; &nbsp;[%]</p>\n\n<p>改成整数就是加血 无视玩家和怪物的无敌</p>\n\n<p>&nbsp;</p>\n\n<p><strong>模板</strong></p>\n\n<pre>\n<code>#PVF_File\n\n[MOTION]\n\t[BASE ANI]\n\t\t`../animation/Throw.ani`\n\t[SOUND]\n\t\t`THROW_STONE`\t0\t\n\t[/SOUND]\n\t[SPEECH]\n\t\t`扣血效果`\t1\t100\t\n\t[/SPEECH]\n[/MOTION]\n[TRIGGER]\n\t[FRAME]\n\t\t2\t2\t\n\t[WHICH]\n\t[ALL CHARACTER TEAM]\n\t[DO BEHAVIOR]\n\t[CHECKUP OBJECT]\n\t\t0\t\n[/TRIGGER]\n\n[BEHAVIOR]\n\t[RESTORE]\n\t[HP]\n\t\t-99\n\t[%]\n[/BEHAVIOR]</code></pre>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2024-04-20T17:11:41.738",
+    "view_num": 190
+}

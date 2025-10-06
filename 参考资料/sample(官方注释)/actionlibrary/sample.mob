@@ -1,0 +1,99 @@
+[width]  40 10
+
+[ability category] 
+`[HP MAX]` `*` 100
+`[EQUIPMENT_PHYSICAL_ATTACK]` `*` 100
+`[EQUIPMENT_PHYSICAL_DEFENSE]` `*` 100
+`[EQUIPMENT_MAGICAL_ATTACK]` `*` 90
+`[EQUIPMENT_MAGICAL_DEFENSE]` `*` 90
+[/ability category]
+[category] 
+`[human]`
+`[goblin]`
+`[melee combat]`
+`[close-passive]`
+[/category]
+[level]  1 6
+[move speed]  0 0
+[attack speed]  400 400
+[cast speed]  700 790
+[hit recovery]  500 500
+[weight]  45000 45000
+
+[sight]  300
+[targeting nearest]  1
+[warlike]  60
+[attack delay]  1500
+[stuckbonus on damage]  0 0 0 0
+
+[item] 
+//3049 100
+3015 100
+//3029 100
+1000 50
+1047 200
+1004 100
+//3133 70
+//7090 1
+//7091 1
+//7092 1
+//7093 1
+//7094 1
+//7095 1
+//7096 1
+//7097 35
+//7098 35
+[/item]
+[common champion drop item]   // 일반 챔피언이 떨어뜨릴 아이템리스트
+3171 7000
+[/common champion drop item]
+[attack kind] 
+80.000000	1.000000	1.000000	1 300 0 0 0 50 0 50 0	
+100.000000	0.000000	0.000000	0 50 0 50 0 50 0 50 0	
+[/attack kind]
+[die effect]  0 1 0
+[face image]  `Monster/MonsterFace.img` 0
+
+[waiting motion]  `Animation_Goblin/Stay.ani`
+//[waiting action]  `Action_Goblin/stay.act`
+[move motion]  `Animation_Goblin/Move.ani`
+//[move action]	`Action_Goblin/move.act`
+[sit motion]  `Animation_Goblin/Sit.ani`
+[damage motion 1]  `Animation_Goblin/Damage1.ani`
+[damage motion 2]  `Animation_Goblin/Damage2.ani`
+[down motion]  `Animation_Goblin/Down.ani`
+[overturn motion]  `Animation_Goblin/Overturn.ani`
+[attack motion] 
+//`Animation_Goblin/Attack1.ani`
+`Animation_Goblin/Stay.ani`
+[/attack motion]
+[attack action]
+`Action_Goblin/Throw.act`
+``
+[/attack action]
+[attack info] 
+`AttackInfo/Attack1.atk`
+``
+[/attack info]
+
+
+
+
+[name] <7::name_660>
+
+[speech on situation] 
+`[on revenge]` <7::speech_on_situation_610> 0
+`[on revenge]` <7::speech_on_situation_615> 0
+`[on etc]` <7::speech_on_situation_620> 0
+`[on etc]` <7::speech_on_situation_625> 0
+`[on etc]` <7::speech_on_situation_665> 0
+`[on etc]` <7::speech_on_situation_670> 0
+[/speech on situation]
+
+
+[equipment]
+2
+`Monster/Goblin/gcc1.equ`
+`Monster/Goblin/Weapon01.equ`
+[/equipment]
+[lie frame] 2 2 2 3 4 // 누워서 올라가는 프레임, 누워서 떨어지는 프레임, 누워서 튕겨올라가는 프레임, 누워서 튕겨올라가서 떨어질때 프레임, 누운 프레임.

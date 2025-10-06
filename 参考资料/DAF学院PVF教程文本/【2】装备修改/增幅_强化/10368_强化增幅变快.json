@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">etc/upgrade.etc下的：<br />\n<br />\n原属性：<br />\n[upgrade&nbsp;machine&nbsp;frame&nbsp;base&nbsp;time]<br />\n4000 100 300 1500<br />\n[/upgrade&nbsp;machine&nbsp;frame&nbsp;base&nbsp;time]<br />\n<br />\n加快后：<br />\n[upgrade&nbsp;machine&nbsp;frame&nbsp;base&nbsp;time]<br />\n1000 100 300 500<br />\n[/upgrade&nbsp;machine&nbsp;frame&nbsp;base&nbsp;time]</span></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-05T22:45:26.031",
+    "view_num": 1290
+}

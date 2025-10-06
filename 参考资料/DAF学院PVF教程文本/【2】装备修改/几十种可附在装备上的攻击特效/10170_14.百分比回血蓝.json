@@ -1,0 +1,7 @@
+{
+    "content": "<p>百分比回血蓝<br />\n击中敌人触发</p>\n\n<p><br />\n代码<br />\n[if]</p>\n\n<p>[cooltime]<br />\n100&nbsp;&nbsp; &nbsp;<br />\n[attack success]<br />\n1&nbsp;&nbsp; &nbsp;<br />\n[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`myself`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n100&nbsp;&nbsp; &nbsp;<br />\n[restore]<br />\n`hp`<br />\n`%`<br />\n2&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;<br />\n[restore]<br />\n`mp`<br />\n`%`<br />\n2&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:03:39.593",
+    "view_num": 255
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>連擊達到10次時</p>\n\n<p>[if]<br />\n&nbsp;<br />\n[cooltime]<br />\n20000<br />\n[after attack]<br />\n1<br />\n[combo]<br />\n10<br />\n[/if]</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:29:59.666",
+    "view_num": 224
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>当武器变蓝时：</p>\n\n<p>[if]<br />\n[my appendage]<br />\n53<br />\n[cooltime]<br />\n1500<br />\n[/if]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:30:23.135",
+    "view_num": 306
+}

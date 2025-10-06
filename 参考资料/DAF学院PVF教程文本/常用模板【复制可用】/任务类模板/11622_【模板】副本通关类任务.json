@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>#PVF_File\n\n[grade]\n\t`[daily]`\n\n[npc index]\n\t88888\n//接受NPC代码\n\n[complete npc index]\n\t-1\n\n[job]\n\t`[all]`\n\n[event]\n\t1\n\n[grow type]\n\t-1\n\n[level]\n\t1\t99\n\n[type]\n\t`[condition under clear]`\n\n[sub type]\n\t6\n\n[int data]\n\t4929\t-1\n// 副本代码 难度代码（-1、1、2、3）\n[/int data]\n\n[reward type]\n\t`[item]`\n\n[reward int data]\n\t3037\t100\n[/reward int data]\n\n[reward selection int data]\n[/reward selection int data]\n\n[name]\n\t`任务名称`\n\n[depend message]\n\t`接受对话`\n\n[condition message]\n\t`任务提示`\n\n[solve message]\n\t`完成对话`\n</code></pre>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T17:11:36.902",
+    "view_num": 875
+}

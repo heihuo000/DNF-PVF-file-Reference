@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>#PVF_File\n\n[name]\n\t`宠物礼盒`\n\n[explain]\n\t`开启后， 可以从xxxxx宠物中选择获得1个。\n以上宠物均无法交易。`\n\n[flavor text]\n\t`&lt;礼包&gt;`\n\n[grade]\n\t1\n\n[rarity]\n\t3\n\n[usable job]\n\t`[all]`\n[/usable job]\n\n[attach type]\n\t`[account]`\n\n[minimum level]\n\t1\n\n[icon]\n\t`Item/stackable/cash_cn.img`\t3107\n\n[icon mark]\n\t`Item/IconMark.img`\t66\n\n[stackable type]\n\t`[booster selection]`\t0\n\n[move wav]\n\t`BONE_TOUCH`\n\n[booster category num]\n\t0\n\n[booster selection num]\n\t1\n\n[booster select category]\n\t0\t0\t\n\t[creature]\n\t\t400990233\t1\n\t\t400990234\t1\n\t[/creature]\n[/booster select category]\n</code></pre>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T17:11:01.564",
+    "view_num": 846
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>#PVF_File</p>\n\n<p>[name]<br />\n&lt;3::name_410642``&gt;</p>\n\n<p>[name2]<br />\n&lt;3::name2_410642``&gt;</p>\n\n<p>[basic explain]<br />\n&lt;3::basic_explain_410642``&gt;</p>\n\n<p>[flavor text]<br />\n&lt;3::flavor_text_410642``&gt;</p>\n\n<p>注释说明：</p>\n\n<p>&lt;3::name_410642``&gt;的``里面的内容可以不写</p>\n\n<p>上面的编号可以不同，例如套装中多次调用灰色描述部分的文字，就可以更改编号调用即可</p>\n\n<p><br />\n--------------------------------------------------------------------------------</p>\n\n<p>相关说明：</p>\n\n<p>name_33032&gt; 【显示的名字】<br />\nname2_33032&gt;【未知名字】<br />\nbasic_explain_33032&gt;【基本信息】<br />\ndetail_explain_33032&gt;【详细信息】<br />\nflavor_text_27098&gt; 【灰色描述】<br />\nemancipate_explain_540010&gt;【未知】<br />\n&nbsp;<br />\nset_name_10485&gt;【套装名字】<br />\nfullset_basic_explain_10485&gt;【套装基本信息】</p>\n\n<p>--------------------------------------------------------------------------------</p>\n\n<p>name_410642&gt;加持的殘忍之弒手鐲： [懺悔之錘]<br />\nname2_410642&gt;name2_410642<br />\nbasic_explain_410642&gt;[懺悔之錘]冷卻時間減少5%%\\n[懺悔之錘]MP消耗量減少5%%<br />\nflavor_text_410642&gt;收集異界的記憶碎片可改造二次異界裝備，提升裝備的基本攻擊力、基本防禦力、基本屬性和抗魔值，Lv65以上的角色可以穿戴。<br />\nemancipate_explain_410642&gt;魔法防禦力 小幅增加\\n屬性小幅增加\\n抗魔力增加9 \\nMP 每1分鐘恢復3 \\n物理暴擊機率增加1%% \\n魔法暴擊機率增加1%%</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:15:43.944",
+    "view_num": 2162
+}

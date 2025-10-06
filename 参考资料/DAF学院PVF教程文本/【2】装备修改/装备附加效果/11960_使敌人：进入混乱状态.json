@@ -1,0 +1,7 @@
+{
+    "content": "<p>[basic explain]<br />\n<code>攻击时，以3%%的机率使敌人进入混乱状态。</code></p>\n\n<p>[detail explain]<br />\n<code>攻击时以3%%的机率在6秒内让敌人陷入混乱状态。 （比Lv55高的目标陷入状态机率较低，比 Lv55低的目标陷入状态机率较高。决斗场修正为 3秒）</code></p>\n\n<pre>\n<code>\n[if]\n    [cooltime]\n        10800\n    [attack success]\n        1\n[/if]\n\n[then]\n    [target]\n        `enemy`    -1\n    [duration]\n        6000\n    [reduce duration to human armor at pvp module]\n        50\n    [probability]\n        3\n    [active status]\n        `confuse`    55    1\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T22:47:55.366",
+    "view_num": 85
+}

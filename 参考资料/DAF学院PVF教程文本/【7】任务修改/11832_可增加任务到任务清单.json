@@ -1,0 +1,7 @@
+{
+    "content": "<p>n_quest/epicquest.lst</p>\n\n<pre>\n<code>[episode]\n    70    0 //等级\n    [episode_name]\n        `新手指引`//目录名字\n    [epic_index]\n        10001    10002    10003    10004    10004//任务代码\n    [/epic_index]\n    [complete_text]\n        `Cc制作`//说明\n[/episode]</code></pre>\n\n<p>&nbsp;<img alt=\"\" height=\"340\" src=\"/media/uploads/2023/07/15/image-20230715113153-2.png\" width=\"737\" /></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-15T11:32:01.137",
+    "view_num": 1270
+}

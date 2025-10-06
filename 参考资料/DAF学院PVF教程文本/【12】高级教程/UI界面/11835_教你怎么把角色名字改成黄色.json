@@ -1,0 +1,7 @@
+{
+    "content": "<p>PVF文件修改路径：<code>ui/characterinfowindow/characterinfo.ui</code></p>\n\n<p><img alt=\"\" height=\"260\" src=\"/media/uploads/2023/07/15/image-20230715113619-1.png\" width=\"496\" /></p>\n\n<pre>\n<code>[ui controls]\n        `[text]`\n        `102`        80        121        1\n        ``        9        0        112        1        0        0        0        255        255        255（这里修改为255 255 0）\n[/ui controls]\n\n[ui controls]\n        `[text]`\n        `103`        80        136        1\n        ``        9        0        102        1        0        0        0        255        255        255（同样修改为255 255 0）\n[/ui controls]\n</code></pre>\n\n<p>（这里需要注意的是，要找到102、103开头的代码段再修改）</p>\n\n<p><img alt=\"\" height=\"506\" src=\"/media/uploads/2023/07/15/image-20230715113643-2.png\" width=\"590\" /></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-15T11:36:50.894",
+    "view_num": 987
+}

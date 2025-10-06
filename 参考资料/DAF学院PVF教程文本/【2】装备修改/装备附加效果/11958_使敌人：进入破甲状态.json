@@ -1,0 +1,7 @@
+{
+    "content": "<p>[basic explain]<br />\n<code>攻击时，以2%%的机率使敌人进入破甲状态。</code></p>\n\n<p>[detail explain]<br />\n<code>攻击时，有2%%的机率使敌人进入破武器、破甲状态7秒；破武器、破甲状态的敌人，暂时无法使用护甲且护甲的耐久度消耗增加30倍。 (若敌人高于Lv60，则减少进入异常状态的机率；反之，则增加机率)</code></p>\n\n<pre>\n<code>\n[if]\n    [cooltime]\n        10000\n    [attack success]\n        1\n[/if]\n\n[then]\n    [target]\n        `enemy`    -1\n    [duration]\n        7000\n    [probability]\n        2\n    [reduce probability to human armor at pvp module]\n        80\n    [active status]\n        `weapon break`    60    30\n    [active status]\n        `armor break`    60    30\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T22:47:06.538",
+    "view_num": 157
+}

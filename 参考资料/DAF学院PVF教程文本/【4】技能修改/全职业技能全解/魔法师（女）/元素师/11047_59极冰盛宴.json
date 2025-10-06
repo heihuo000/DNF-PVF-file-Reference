@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、蓄气时间：0.8秒<br />\n4、<br />\n5、攻击次数：8次<br />\n6、<br />\n7、<br />\n8、<br />\n[static data]<br />\n300 600 600 800 350 8 120 6 150<br />\n[/static data]</p>\n\n<p>0、魔法攻击力：区间最小：258%<br />\n1、魔法攻击力：区间最大：516%<br />\n2、攻击范围：直径区间最小：450 px<br />\n3、攻击范围：直径区间最大：540 px<br />\n4、移动速度减少率：20%<br />\n5、冰冻机率：25%<br />\n6、冰冻Lv：Lv42<br />\n7、冰冻持续时间：1秒<br />\n[level info]<br />\n8 258 516 450 540 200 250 42 1000</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:08:53.795",
+    "view_num": 86
+}

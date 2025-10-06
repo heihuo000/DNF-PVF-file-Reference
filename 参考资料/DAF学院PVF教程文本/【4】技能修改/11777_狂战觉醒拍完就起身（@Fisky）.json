@@ -1,0 +1,7 @@
+{
+    "content": "<p>狂战觉醒拍下去之后也有人物动作，让狂战拍完就起身的思路就是让狂战拍下去之后的动作的持续时间改为0</p>\n\n<p><img alt=\"\" height=\"622\" src=\"/media/uploads/2023/07/06/13.jpg\" width=\"338\" /></p>\n\n<p>打开这个文件后</p>\n\n<p><img alt=\"\" height=\"452\" src=\"/media/uploads/2023/07/06/14.jpg\" width=\"665\" /></p>\n\n<p>可以看到[DELAY]下面的一个数值，把这个数值改小狂战拍完后继续做的动作的持续时间就会缩短，楼主把这个数据改为了1，狂战基本上就能拍完起立。另外，这个文件里有多个delay下面的数值，如果不能确定哪几个是拍完后的动作的可以在npk文件内看，就是[IMAGE]下的路径</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-06T13:23:56.404",
+    "view_num": 1143
+}

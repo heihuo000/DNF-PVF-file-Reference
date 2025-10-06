@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、復原模式下所受傷害增加率 : 50%%<br />\n1、復活時立即恢復的HP量 : 10%%<br />\n2、復原模式持續時間(普通地下城) : 60秒<br />\n3、復原模式持續時間(遠古/異界地下城) : 60秒<br />\n4、復原模式持續時間(亡者峽谷) : 60秒<br />\n5、復原模式持續時間(戰場) : 60秒<br />\n6、<br />\n[static data]<br />\n50 10 15000 60000 60000 60000 60000<br />\n[/static data]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T16:23:36.687",
+    "view_num": 41
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、强化后火焰爆炸的次數上限 : 3次<br />\n3、第二次爆炸的攻擊力比率 : 50%<br />\n4、<br />\n5、<br />\n[static data]<br />\n100 900 3 50 2 3<br />\n[/static data]</p>\n\n<p>0、爆炎彈裝彈數 : 20發<br />\n1、附加魔法攻擊力 : 187%<br />\n2、植物、 昆蟲、 建築護甲時的附加魔法攻擊力 : 34%<br />\n[level info]<br />\n3 20 187 34<br />\n[/level info]</p>\n\n<p>0、附加魔法攻擊力 + 9%<br />\n[special level up]<br />\n-1 1 &#39;%&#39; 10<br />\n[/special level up]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:41:39.853",
+    "view_num": 37
+}

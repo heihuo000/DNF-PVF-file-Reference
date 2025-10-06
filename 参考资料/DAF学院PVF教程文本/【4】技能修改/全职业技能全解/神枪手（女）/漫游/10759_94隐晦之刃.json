@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、出血機率 : 40%<br />\n1、出血Lv : 50<br />\n2、出血持續時間 : 4秒<br />\n3、出血攻擊力 : 2389(最小值) + 独立攻击力 x 3.01<br />\n追加切割攻擊物理攻擊：<br />\n&nbsp; 4、[瑪麗蓮玫瑰]時 : 110%<br />\n&nbsp; 5、[上旋踢]時 : 330%<br />\n&nbsp; 6、[刺踢]時 : 440%<br />\n&nbsp; 7、[釘刺射]時 : 550%<br />\n&nbsp; 8、[音速截擊]時 : 330%<br />\n&nbsp; 9、[BBQ]時 : 770%<br />\n[level info]<br />\n10 400 50 4000 301 110 330 440 550 330 770<br />\n[/level info]&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T14:55:26.419",
+    "view_num": 49
+}

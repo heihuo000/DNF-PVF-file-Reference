@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>效果在地图中触发\n[particle]\n`same position`\n`Character/Common/Particle/rare5.ptl`\n0\t0\t100\t\n[/particle]\n\n\n效果在城镇中触发，跟随角色并且转身\n增加一个ani\n[attach target]\n`delegator`\n[attach target]\n`target`\n\n//效果\n[option]\n`floor`\n`apply custom color`\n`sync speed`\n`copy horizon`\n`copy vertical`\n`resize`\n\n[/option]\n\n\n坐标 \n[attach pos]//最上\n`middle`\n[attach pos]//中间\n`top`\n[attach pos]//最底下\n`bottom`\n\n图层 -1身后 1身前\n[index]\n1\t\n\n完整ani\n[effect]\n\n[type]\n`animation`\n\n[attach pos]\n`top`\n\n[index]\n1\t\n[option]\n`apply custom color`\n`sync speed`\n\n[/option]\n\n[module]\n`[room list]`\n\n[/module]\n\n[file name]\n`Character/Common/Animation/go2.ani`\n\n[/effect]</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-09-12T15:37:52.210",
+    "view_num": 726
+}

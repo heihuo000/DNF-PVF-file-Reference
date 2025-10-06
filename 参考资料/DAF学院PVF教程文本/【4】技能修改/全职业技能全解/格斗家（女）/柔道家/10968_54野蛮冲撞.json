@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、野蛮冲撞的蓄氣時間上限 : 0.5秒<br />\n1、（未知）蓄氣時間上限 :<br />\n2、（未知）蓄氣時間上限 :<br />\n3、（未知）蓄氣時間上限 :<br />\n4、<br />\n5、<br />\n[static data]<br />\n500 -500 400 700 -1000 1 5000<br />\n[/static data]</p>\n\n<p>0、對衝撞的敵人攻擊力 : 区间最小：720%%武器物攻<br />\n1、對衝撞的敵人攻擊力 : 区间最大：1152%%武器物攻<br />\n2、間接性攻擊力 : 区间最小：独立攻击力 x 4.32<br />\n3、間接性攻擊力 : 区间最大：独立攻击力 x 6.91<br />\n[level info]<br />\n4 720 1152 432 691</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T16:19:15.225",
+    "view_num": 49
+}

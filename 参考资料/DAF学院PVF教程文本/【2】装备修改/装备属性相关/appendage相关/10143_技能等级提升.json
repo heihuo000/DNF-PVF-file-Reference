@@ -1,0 +1,7 @@
+{
+    "content": "<p>技能等级提升：</p>\n\n<p>关于【int】数据说明：该参数有两组数据，分别是区间范围，前面为最小值，后面为最大值：</p>\n\n<p>第一个：技能等级追加值<br />\n第二个：技能编号<br />\n第三个：角色职业编号<br />\n[type]<br />\n`skill level`<br />\n[duration]<br />\n30000<br />\n[buff]<br />\n0<br />\n[icon image]<br />\n`` 0<br />\n[max overlap]<br />\n5<br />\n[int data]<br />\n1 19 1 7 19 1<br />\n[/int data]</p>\n\n<p>[string data]</p>\n\n<p>[/string data]</p>\n\n<p>[float data]</p>\n\n<p>[/float data]</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T12:55:15.792",
+    "view_num": 534
+}

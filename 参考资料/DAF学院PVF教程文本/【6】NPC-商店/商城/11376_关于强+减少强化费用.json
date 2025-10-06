@@ -1,0 +1,7 @@
+{
+    "content": "<p>by：make476<br />\nhttp://tieba.baidu.com/p/4132797344<br />\n&nbsp;<img alt=\"\" height=\"437\" src=\"/media/uploads/2023/05/07/image-20230507214414-1.png\" width=\"558\" /><br />\n&nbsp;<br />\n&nbsp;<br />\n对比下带称号和不带称号的强化费用<br />\n&nbsp;<img alt=\"\" height=\"468\" src=\"/media/uploads/2023/05/07/image-20230507214423-2.png\" width=\"564\" /><br />\n&nbsp;<br />\n下面讲解修改教程<br />\n找到文件位置：equipment/character/common/title/tecipient_ofthe_faveo_kiri.equ<br />\n拉倒最底下有这么一段代码<br />\n[@05][npc gift disallowance]<br />\n[@02]1<br />\n[@05][upgrade prob increase]<br />\n[@02]1000000<br />\n这是改好的强化几率 （可以自己修改下）然后在这段代码下加上这段代码<br />\n[@05][npc gift disallowance]<br />\n[@02]1<br />\n[@05][upgrade cost discount]<br />\n[@02]99.000000<br />\n这是减少强化费用的代码（该几率就改前面的数字，小数点后面不要动）<br />\n工具自己再贴吧找下吧里有很多<br />\n&nbsp;<br />\n直接数据库里开折扣活动更方便</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T21:44:29.417",
+    "view_num": 687
+}

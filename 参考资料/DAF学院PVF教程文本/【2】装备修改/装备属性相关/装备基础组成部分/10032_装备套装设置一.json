@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n主要组件设置：</p>\n\n<p>[set name]<br />\n&lt;3::set_name_20102``&gt;</p>\n\n<p>定义套装名称，调用equipment.kor.str文件内容<br />\n一般为胸墜（即项链）为主要部件。<br />\n[set item]<br />\n20102 22101 24103<br />\n[/set item]</p>\n\n<p>设置套装所需部件：装备ID<br />\n[item overpower part]</p>\n\n<p>[set ability]</p>\n\n<p>[physical attack]<br />\n45<br />\n【等能力相关】<br />\n[/set ability]</p>\n\n<p>套装集齐时的获得能力设置<br />\n[possible kiri protect]</p>\n\n<p>注释：套装内容信息只需要写一件完整的，<br />\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 其他剩余部件设置主要的部件就可以了。</p>\n\n<p>--------------------------------------------------------------------------------</p>\n\n<p>剩余组件设置添加代码：</p>\n\n<p>[set item master]<br />\n20102</p>\n\n<p>设置主要组件为20102<br />\n[possible kiri protect]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:17:04.026",
+    "view_num": 1260
+}

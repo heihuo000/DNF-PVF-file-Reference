@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、填裝個數 : 4<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、丢掷（装填）的间隔冷却时间：3秒<br />\n6、<br />\n7、空中投擲冷卻時間 : 1秒<br />\n8、<br />\n9、每次跳躍投擲數量上限 : 3次<br />\n10、<br />\n11、落地後投擲冷卻時間 : 1秒<br />\n[static data]<br />\n4 300 500 500 3000 3000 22221 1000 240 3 1 1000<br />\n[/static data]</p>\n\n<p>0、魔法攻擊力 : 独立攻击力 x 4.09<br />\n1、爆炸範圍 : 240 px<br />\n2、冰凍機率 : 67.8%%<br />\n3、冰凍Lv : Lv32<br />\n4、冰凍持續時間 : 3秒<br />\n[level info]<br />\n5 409 240 678 32 3000</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T15:34:46.762",
+    "view_num": 68
+}

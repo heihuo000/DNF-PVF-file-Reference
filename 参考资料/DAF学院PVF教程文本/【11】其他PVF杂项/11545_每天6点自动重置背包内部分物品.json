@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">1.控制文件地址etc/chn_server_limititemusageinfo.etc</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">2.文件内容解析<br />\n#PVF_File&nbsp; //文件头</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[reset item]&nbsp; //重置项目</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[/reset item]</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[refill item]&nbsp; //发放项目<br />\n3037&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `2030-10-17 06:00:00`<br />\n//物品 数量 到期时间 刷新时间</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[/refill item]</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[Limit Item Usage Info]</span></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-13T12:45:34.365",
+    "view_num": 916
+}

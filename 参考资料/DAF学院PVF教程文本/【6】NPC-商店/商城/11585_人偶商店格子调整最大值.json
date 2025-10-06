@@ -1,0 +1,7 @@
+{
+    "content": "<p>character/expertjob/doll_controller.exj 路径 为控偶师脚本路径</p>\n\n<pre>\n<code>[shop doll info]\n        0        3        1        6        2        9\n[/shop doll info]\n</code></pre>\n\n<p>这个文件就是调整人偶商店的格子了</p>\n\n<p>0 3 意思是 最低级 3个<br />\n1 6 是中级6个<br />\n2 9 就是最高级9个<br />\n（但是最高只能7个格子）</p>\n\n<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-character/expertjob/doll_controller.exj&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>\n\n<p>找到词条替换</p>\n\n<pre>\n<code>[shop doll info]\n0    7    1    14    2    14    \n[/shop doll info]</code></pre>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-15T12:57:19.637",
+    "view_num": 363
+}

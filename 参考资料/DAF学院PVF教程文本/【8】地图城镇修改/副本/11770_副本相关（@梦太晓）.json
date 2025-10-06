@@ -1,0 +1,7 @@
+{
+    "content": "<p>写副本之前先来拼一个副本吧</p>\n\n<p><img alt=\"\" height=\"617\" src=\"/media/uploads/2023/07/05/12.jpg\" width=\"800\" /></p>\n\n<p>&nbsp;</p>\n\n<p>这样说<br />\n怪物mob里面定义了基本act编号(一般是普通攻击的act，这个act和mob在同个目录)<br />\n怪物ai一般有4个<br />\nAction.ai这个最主要 控制怪物基本act就这个<br />\nDestinationSelect.ai这个控制目的地 具体怎么控制不懂<br />\nEvent.ai这个控制什么项目 也不太懂<br />\nMoveMethod.ai这个控制移动方法 走直线还是W型 具体怎么控制不懂<br />\n<br />\nAction.ai<br />\n这个里面对好格式think /think<br />\n[think]<br />\n思考内容<br />\n(敌人玩家人偶等 在这个范围内吗 四个数字是 前后上下 )<br />\n(我的基本act编号为1的这个技能在不在cd中)<br />\n(我的血量在这个范围内吗)<br />\n[/think]，分好true false的返回值<br />\n返回值调用基本act编号(返回-1不知道是调用移动还是不调用)<br />\n调用的基本act里面有ani怪物动画 有atk伤害、攻击控制 有obj特效调用<br />\n这个act产生效应<br />\n调用ani 让怪物做出相应动作贴图显示给你看 ani中定义了攻击框(可以比贴图显示的更大)<br />\n调用atk判定 玩家的受伤判定框与该动作ani中的攻击框重合 产生伤害 伤害在atk控制(有好几种写法伤害 绝对伤害 血量最大百分比伤害)<br />\n调用obj 产生相应特效 这个特效需要调用一些动画ani显示给你看，这个特效动画要有伤害那就得有atk，这个特效还反过来控制怪物那就得有act<br />\n就这样往复调用 调用完了ai再次思考使用编号为几的基本act 再次发动攻击<br />\n我看出来的就是这样了 也只是能看懂个大概 改都改不动 改了就死循环啥的<img alt=\"\" height=\"30\" src=\"https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/editor/images/client/image_emoticon28.png\" width=\"30\" />有大佬指点一下吗</p>\n\n<p><img alt=\"\" height=\"185\" src=\"/media/uploads/2023/07/05/13.jpg\" width=\"548\" /></p>\n\n<p>map和dgn里面非常重要的走势 连通顺序<br />\n[greed]标签下<br />\n`LL CC`<br />\n这两个参数不一样我不知道是有什么含义</p>\n",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-05T09:56:09.808",
+    "view_num": 1070
+}

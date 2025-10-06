@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp; 9&nbsp;&nbsp; &nbsp;攻擊時以3%的機率7秒內讓敵人進入隨機狀態。<br />\n(若敵人高於Lv30，則減少進入異常狀態的機率；反之，則增加機率。)</p>\n\n<p><br />\n[if]</p>\n\n<p>[cooltime]<br />\n12600&nbsp;&nbsp; &nbsp;<br />\n[attack success]<br />\n1&nbsp;&nbsp; &nbsp;</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`enemy`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[duration]<br />\n7000&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n3&nbsp;&nbsp; &nbsp;<br />\n[active status]<br />\n`any`<br />\n30&nbsp;&nbsp; &nbsp;<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:16:33.453",
+    "view_num": 230
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、献祭范围比率：100% （倍数：0.666667）<br />\n1、魔法攻击力：840%<br />\n2、灼伤机率：10%<br />\n3、灼伤Lv：40<br />\n4、灼伤持续时间：2秒<br />\n5、灼伤状态攻击力：每0.5秒：90（倍数：0.25）<br />\n6、灼伤状态对周围敌人的攻击力：120<br />\n7、灼伤攻击次数：1次（猜测）<br />\n8、灼伤状态对周围敌人的攻击力间隔时间：1秒<br />\n[level info]<br />\n9 150 840 100 40 2000 360 120 1 1000</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:13:58.870",
+    "view_num": 52
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n7、<br />\n8、<br />\n9、<br />\n10、连续踢击最小次数：3<br />\n11、连续踢击最大次数：6<br />\n12、<br />\n13、<br />\n14、<br />\n[static data]<br />\n500 -300 -500 -1000 500 -3000 -500 300 4 200 3 6 -800 -1000 1<br />\n[/static data]</p>\n\n<p><br />\n0、连续踢击物理功击：60% + &lt;1&gt;<br />\n1、连续踢击物理功击：独立攻击力 x 0.13<br />\n2、<br />\n3、最后一击物理攻击：120% + &lt;4&gt;<br />\n4、最后一击物理攻击：独立攻击力 x 0.26<br />\n5、<br />\n6、冲击波物理攻击力：你的独立 x 1.53<br />\n7、最后一击浮空比率：100%<br />\n8、<br />\n[level info]<br />\n9 60 13 0 120 26 400 153 100 400</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:54:16.970",
+    "view_num": 27
+}

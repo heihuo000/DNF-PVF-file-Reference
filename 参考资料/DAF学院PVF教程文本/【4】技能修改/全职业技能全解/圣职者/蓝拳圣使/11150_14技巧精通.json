@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n可產生附加效果的技能Lv<br />\n3、[刺拳猛擊] : 7<br />\n4、[神聖反擊] : 10<br />\n5、[破碎之捶] : 5<br />\n6、[俯衝直拳] : 1<br />\n7、[俯衝腹拳] : 3<br />\n8、[俯衝翔拳] : 2<br />\n9、<br />\n[static data]<br />\n1 1 1 7 10 5 1 3 2 200<br />\n[/static data]</p>\n\n<p>0、[普通攻擊]範圍增加量 : 3 px<br />\n1、<br />\n2、<br />\n3、<br />\n4、[聖拳連擊]範圍增加量 : 5 px<br />\n5、<br />\n6、[瞬拳]範圍增加量 : 4px<br />\n7、<br />\n8、移動速度增加量 : 5<br />\n9、<br />\n10、[神聖反擊]自主攻擊力比率 : 20%%<br />\n11、[刺拳猛擊]吸附範圍 : 150 px<br />\n12、<br />\n13、<br />\n[level info]<br />\n14 3 1 3 3 5 1 4 1 5 800 20 150 40 20</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:34:33.937",
+    "view_num": 39
+}

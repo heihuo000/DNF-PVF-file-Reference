@@ -1,0 +1,16 @@
+[MOTION]
+[BASE ANI] `../Animation_Kinol/throw.ani`
+[/MOTION]
+[TRIGGER]
+[FRAME] 2 2 // 프레임 번호 ?~? 까지
+[DO BEHAVIOR] [ME] 0
+[/TRIGGER]
+[BEHAVIOR] // 0 
+	[TELEPORT]
+		[POS] 0 0 100	// 전방 100px로 이동.
+		//[USE MY DIRECTION]
+		//[USE MY BASEPOS]
+		//[NOT USE OBJECT DIRECTION]
+		//[USE MAP POS]
+	[/TELEPORT]	
+[/BEHAVIOR]

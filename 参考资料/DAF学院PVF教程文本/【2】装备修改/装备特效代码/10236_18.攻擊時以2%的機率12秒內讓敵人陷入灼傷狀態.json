@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp; 18&nbsp;&nbsp; &nbsp;攻擊時以2%的機率12秒內讓敵人陷入灼傷狀態，每0.5秒以30的攻擊力給予傷害，<br />\n四周的敵人每3秒以150的攻擊力給予傷害。<br />\n(若敵人高於Lv60，則減少進入異常狀態的機率；反之，則增加機率)</p>\n\n<p><br />\n[if]</p>\n\n<p>[cooltime]<br />\n18000&nbsp;&nbsp; &nbsp;<br />\n[attack success]<br />\n1&nbsp;&nbsp; &nbsp;</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`enemy`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[duration]<br />\n12000&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n2&nbsp;&nbsp; &nbsp;<br />\n[active status]<br />\n`burn`<br />\n60&nbsp;&nbsp; &nbsp;950&nbsp;&nbsp; &nbsp;750&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;3000&nbsp;&nbsp; &nbsp;<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:18:06.944",
+    "view_num": 193
+}

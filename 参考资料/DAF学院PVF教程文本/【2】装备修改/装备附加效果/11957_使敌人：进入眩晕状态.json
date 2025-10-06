@@ -1,0 +1,7 @@
+{
+    "content": "<p>[basic explain]<br />\n<code>攻击时，以2%%的机率使敌人进入眩晕状态。 攻击速度增加+2%%</code></p>\n\n<p>[detail explain]<br />\n<code>攻击时以2%%的机率让敌人2秒内陷入气绝状态。 （若敌人高于Lv73，则减少进入异常状态的机率；反之，则增加机率） 攻击速度 +2%%</code></p>\n\n<pre>\n<code>\n[if]\n    [cooltime]\n        4000\n    [attack success]\n        1\n[/if]\n\n[then]\n    [target]\n        `enemy`    -1\n    [duration]\n        2000\n    [probability]\n        2\n    [active status]\n        `stun`    73\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T22:46:40.114",
+    "view_num": 103
+}

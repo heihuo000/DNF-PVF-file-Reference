@@ -1,0 +1,7 @@
+{
+    "content": "<p>通过调用ani在武器上层叠加动画，达到改变武器的外观效果。</p>\n\n<p>apd文件调用的ani路径：<br />\npvf\\appendage\\animation</p>\n\n<p><br />\n--------------------------------------------------------------------------------</p>\n\n<p>#PVF_File</p>\n\n<p>[type]<br />\n&#39;change status&#39;<br />\n[duration]<br />\n15000<br />\n[effect animation]<br />\n&#39;../animation/blue_ball_fighter.ani&#39;<br />\n[buff]<br />\n0<br />\n[icon image]<br />\n&#39;&#39; 0<br />\n[max overlap]<br />\n1<br />\n[create limit count]<br />\n1<br />\n[string data]</p>\n\n<p>[/string data]</p>\n\n<p>[int data]</p>\n\n<p>[/int data]</p>\n\n<p>[float data]</p>\n\n<p>[/float data]</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T12:54:54.697",
+    "view_num": 520
+}

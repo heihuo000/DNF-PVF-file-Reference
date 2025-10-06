@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp; 38&nbsp;&nbsp; &nbsp;攻擊時，以5%的機率使自身增加10點屬性強化，效果持續10秒。</p>\n\n<p><br />\n[if]</p>\n\n<p>[attack success]<br />\n1&nbsp;&nbsp; &nbsp;</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`myself`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[duration]<br />\n10000&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n5&nbsp;&nbsp; &nbsp;<br />\n[appendage]<br />\n19&nbsp;&nbsp; &nbsp;<br />\n[appendage]<br />\n20&nbsp;&nbsp; &nbsp;<br />\n[appendage]<br />\n21&nbsp;&nbsp; &nbsp;<br />\n[appendage]<br />\n22&nbsp;&nbsp; &nbsp;<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:21:12.102",
+    "view_num": 179
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>增加技能攻击范围</p>\n\n<p>[skill data up]<br />\n&#39;[swordman]&#39; 74 &#39;[dungeon type]&#39; &#39;[static]&#39; 4 &#39;%&#39; 10<br />\n[/skill data up]<br />\n注释：</p>\n\n<p>调用技能文件中的静态数据[static data]模块。</p>\n\n<p>0表示第一项，依次类推。</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:22:31.376",
+    "view_num": 801
+}

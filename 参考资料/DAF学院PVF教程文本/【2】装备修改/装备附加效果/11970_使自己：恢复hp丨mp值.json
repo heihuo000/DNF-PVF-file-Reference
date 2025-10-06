@@ -1,0 +1,7 @@
+{
+    "content": "<p>[explain]<br />\n<code>攻击时，以1%%的机率恢复自身234点HP。 攻击时，以5%%的机率使自身恢复678点MP。</code></p>\n\n<pre>\n<code>[if]\n    [cooltime]\n        15000\n    [attack success]\n        1\n[/if]\n\n[then]\n    [target]\n        `myself`    -1\n    [probability]\n        1\n    [restore]\n        `hp`\n        `+`    234    0\n[/then]\n\n[if]\n    [cooltime]\n        15000\n    [attack success]\n        1\n[/if]\n\n[then]\n    [target]\n        `myself`    -1\n    [probability]\n        5\n    [restore]\n        `mp`\n        `+`    678    0\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T22:59:52.629",
+    "view_num": 217
+}

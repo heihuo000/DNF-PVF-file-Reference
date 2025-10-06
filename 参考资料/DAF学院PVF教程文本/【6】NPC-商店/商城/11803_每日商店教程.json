@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>这是一个活动，活动名字叫做 中秋节活动\n \n数据库活动名为\nOneADayItemShopEvent\n109 OneADay商店活動\n \n至于怎么开活动我就不一一列举了\n \n \n然后我们再来看PVF\n    `[one a day shop]`  49\n \n这个参数 写入NPC 这个参数 就是为这个NPC开启 随机活动商店\n \n活动商店代码49\n \nitemshop/itemshop.lst\n \n49 就是指的 这个文件列表49 这个商店\n \nitemshop/oneadayitemshop.shp\n \n也就是这个\n \n首先这个商店 大部分数据和普通商店是一样的\n \n[one a day start time]\n    2012    9   27  6\n[/one a day start time]\n \n这里开始 就是参数的不同之处了 这个参数的意思就是 从2012年9.27日。6点起\n \n[one a day item]\n    10000402    10000411    10000384    10000404    10000412    -1  -1  10000531    10000517    10000416    10000413    10000414    10000415    -1  10000523    10000538    10000530    10000525    -1  -1  -1\n[/one a day item]\n \n下面每一个分类 就是代表1天的出售道具，你要卖多少天就写多少天，一旦卖完 自动回到第一个列表内容\n \n至此 该功能结束</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-13T21:31:27.582",
+    "view_num": 735
+}

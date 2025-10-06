@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、失敗率 : 30%%<br />\n1、成功率 : 52.5%%<br />\n2、大成功率 : 17.5%%<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n7、熔岩地帶傷害間隔 : 1秒<br />\n8、成功或大成功时范围：200 px<br />\n[static data]<br />\n300 525 175 7 8 9 600 1000 200<br />\n[/static data]</p>\n\n<p>0、持續時間 : 8秒<br />\n1、熔岩地帶魔法攻擊力 : 独立攻击力 x 1.55<br />\n2、失敗時爆炸魔法攻擊力 : 独立攻击力 x 8.53<br />\n3、<br />\n4、灼傷機率 : 60%<br />\n5、灼傷Lv : Lv31<br />\n6、灼傷持續時間 : 2秒<br />\n7、灼傷攻擊力 : 54<br />\n8、<br />\n9、<br />\n10、<br />\n11、移動速度減少率 : 25%<br />\n12、跳躍力減少率 : 10%<br />\n13、火屬性抗性- : 1<br />\n[level info]<br />\n14 8000 155 853 250 600 31 2000 54 11 1 1000 250 100 1&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:29:41.725",
+    "view_num": 84
+}

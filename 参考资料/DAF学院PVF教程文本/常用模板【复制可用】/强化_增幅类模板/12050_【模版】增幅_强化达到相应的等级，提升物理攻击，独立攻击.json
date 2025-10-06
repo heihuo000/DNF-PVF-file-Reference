@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>[if]\n\t[change status]\n\t\t`hp`\n\t\t`&gt;`\n\t\t`%`\t0\n\t\t`end`\n\t[equipment upgrade]\n\t\t`upgrade`\n\t\t`=`\t1\t0\n\t\t`amplify`\n\t\t`=`\t1\t0\n\t[/equipment upgrade]\n\t[cooltime]\n\t\t5000\n[/if]\n\n[then]\n\t[target]\n\t\t`myself`\t-1\n\t[equipment duration]\n\t\t5000\n\t[stat]\n\t\t`physical attack`\n\t\t`%`\t1\n\t[stat]\n\t\t`magical attack`\n\t\t`%`\t1\n[/then]</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2024-04-17T14:56:33.707",
+    "view_num": 634
+}

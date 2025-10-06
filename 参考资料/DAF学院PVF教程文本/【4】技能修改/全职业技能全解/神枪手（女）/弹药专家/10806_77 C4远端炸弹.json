@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、限制時間 : 30秒<br />\n2、炸彈裝置數量上限 : 5<br />\n3、對每人的炸彈裝置數量上限 : 3<br />\n4、<br />\n5、<br />\n6、<br />\n7、<br />\n[static data]<br />\n400 30000 5 3 40 40 30 400<br />\n[/static data]</p>\n\n<p>0、物理攻擊力 : 独立攻击力 x 6.60<br />\n1、爆炸大小比率 : 100%%<br />\n2、敵人移動速度減少率 : 20%%<br />\n3、敵人攻擊速度減少率 : 20%%<br />\n4、降低物理防御力：3200 （猜测）<br />\n[level info]<br />\n5 660 100 200 200 3200</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T15:35:10.977",
+    "view_num": 44
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>by:一路悲伤_<br />\nhttp://tieba.baidu.com/p/4175852589</p>\n\n<p><br />\n最近贴吧死气沉沉的啊。大神都气跑了 发帖也没有人回 我想总回有一两个留下吧</p>\n\n<p>[@05][if] 如果<br />\n[@05][attack success] 攻击打中<br />\n[@02]1<br />\n[@05][/if]<br />\n[@05][then] 那么<br />\n[@05][target]<br />\n[@07]all enemy<br />\n[@02]-1<br />\n[@05][probability]<br />\n[@02]100 百分百<br />\n[@05][passive object] 释放特效<br />\n[@02]11040 瞬移到左上角代码<br />\n[@02]0<br />\n[@02]0<br />\n[@02]0<br />\n[@02]0<br />\n[@02]0<br />\n[@07]<br />\n[@05][/passive object]<br />\n[@05][/then]<br />\n玩的时候当做副武器 抓住敌人后再切换就行了。<br />\n我记得有随机移动的代码 谁来研究下 发我一份</p>\n\n<p>下面请教一下 别的问题<br />\n释放技能[perform skill] 就是这个代码。为什么只有特定的技能可以用<br />\n例如气功的分身 圣骑士的圣光守护<br />\n换成武器祝福 风之气息啥的 都无效</p>\n\n<p>我知道的技能还有幻爆，黑洞，有的技能加进去无效，有的加进去就崩溃，其他的比如罩子，狮子吼，这些是通过特效加进去的<br />\n红阵冰阵也有特效,可惜好多想要的技能加不进去</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-23T13:59:36.242",
+    "view_num": 694
+}

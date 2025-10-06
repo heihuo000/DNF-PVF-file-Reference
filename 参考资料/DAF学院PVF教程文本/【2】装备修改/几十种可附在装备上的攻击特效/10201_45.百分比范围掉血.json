@@ -1,0 +1,7 @@
+{
+    "content": "<p>百分比范围掉血<br />\n击中敌人触发（精英怪效果为1/3 BOSS为1/6）（[weakness] 下面的数字为百分比）</p>\n\n<p><br />\n代码<br />\n[if]</p>\n\n<p>[cooltime]<br />\n100&nbsp;&nbsp; &nbsp;<br />\n[attack success]<br />\n1&nbsp;&nbsp; &nbsp;<br />\n[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`all enemy`<br />\n300&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n100&nbsp;&nbsp; &nbsp;<br />\n[reduce probability to human armor at pvp module]<br />\n100&nbsp;&nbsp; &nbsp;<br />\n[weakness]<br />\n50&nbsp;&nbsp; &nbsp;<br />\n[add absolute damage]<br />\n`all`<br />\n`+`<br />\n1&nbsp;&nbsp; &nbsp;<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:09:45.373",
+    "view_num": 282
+}

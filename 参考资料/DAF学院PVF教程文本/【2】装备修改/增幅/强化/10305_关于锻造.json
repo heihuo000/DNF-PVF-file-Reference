@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:R0ge<br />\nhttp://tieba.baidu.com/p/4648963990</p>\n\n<p><br />\n路径：etc/upgrade_separate.etc<br />\n[table] 下<br />\n<img alt=\"\" height=\"700\" src=\"/media/uploads/2023/04/24/image-20230424221513-1.png\" width=\"348\" /></p>\n\n<p>ABDC为一组 AB为强化强度数值 C几率D未知，应该是消耗材料数量倍率？未实际测试数据D<br />\n另外，增幅最高值为30。[separate upgrade max]下设定，锻造31成功后，武器自动归零锻造，所以最高设定为30,推荐。其他参考豆腐百科。<br />\n注意事项：[separate upgrade effect] 下为武器外框颜色渐变效果，ABCDEF 明眼人一看就知道是什么了我不做多讲解。如果你设定为30级上限，确保里面数组有29组，超过也可以。<br />\n不明白的可以进群36339344询问。<br />\n说说另外一个帖子</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-24T14:15:38.037",
+    "view_num": 1378
+}

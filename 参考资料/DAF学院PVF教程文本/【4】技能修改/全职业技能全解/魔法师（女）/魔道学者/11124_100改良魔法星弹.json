@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、失败率：20%<br />\n1、成功率：60%<br />\n2、大成功率：20%<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n7、失败时攻击次数：4次<br />\n8、成功时攻击次数：7次<br />\n9、大成功时攻击次数：10次<br />\n10、<br />\n11、<br />\n12、<br />\n13、<br />\n14、<br />\n15、<br />\n16、<br />\n17、<br />\n18、<br />\n19、<br />\n20、<br />\n21、<br />\n22、<br />\n23、<br />\n24、<br />\n25、<br />\n[static data]<br />\n200 600 200 0 1 2 400 4 7 10 200 0 400 320 300 100 100 50 45 40 35 30 25 20 15 10<br />\n[/static data]</p>\n\n<p>0、成功时魔法攻击力：250% + &lt;1&gt;<br />\n1、成功时魔法攻击力：独立攻击力 x 2.5<br />\n2、大成功时魔法攻击力：275% + &lt;3&gt;<br />\n3、大成功时魔法攻击力：独立攻击力 x 2.75<br />\n4、感电机率：20%<br />\n5、感电Lv：Lv23<br />\n6、感电持续时间：3秒<br />\n7、感电攻击力：100<br />\n[level info]<br />\n8 250 250 275 275 200 23 3000 100</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:29:32.269",
+    "view_num": 67
+}

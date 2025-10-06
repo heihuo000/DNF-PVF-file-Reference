@@ -1,0 +1,7 @@
+{
+    "content": "<p><img alt=\"\" height=\"535\" src=\"/media/uploads/2023/05/06/image-20230506225458-1.png\" width=\"792\" /></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">最后备注一下：新增称号需要重命名一个ani不要用原来的ani名称来导入。这样就会出现原有ani关联的文件出错。倒是播放出红叉。(原理跟新增装备是一样的。新增不能跟原有的文件名冲突，点到为止。多说无益)<br />\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EQU或者其他格式填写格式理解<br />\n&nbsp;&nbsp;&nbsp;&nbsp; 目录\\子目录\\子目录\\子目录\\abcdefg.ani（PVF指向填写！！与NPK文件内相对于img文件的ani）<br />\n&nbsp;&nbsp;&nbsp;&nbsp; 目录\\子目录\\abcdefg.img（NPK内与ani文件相对于的img文件）<br />\n&nbsp;导入导出遵循从哪来回哪去的原则。大神们你懂的！</span></p>\n",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-05T22:31:14.669",
+    "view_num": 1661
+}

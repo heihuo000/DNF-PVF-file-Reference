@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>[evil]\n    400    400    400    400    400\n\n[evil high level]\n    400    400    400    400    400\n\n[evil rate]\n    50    30    120    120\n</code></pre>\n\n<p>减少还剩50%/ 减少30% = 增加20%<br />\n120% 增加 *（100是原始伤害） =20%</p>\n\n<pre>\n<code>[evil rate]\n0    10         低于设定数值时保留10%属性（实际会多1%%）\n200    150         高于设定数值200%时增加150%%属性\n</code></pre>\n\n<p><img alt=\"\" height=\"532\" src=\"/media/uploads/2023/10/08/image-20231008112943-1.png\" width=\"895\" /></p>\n\n<p>官方异界默认抗魔值增益和减益属性<br />\n未满足抗魔值要求最高减益70%<br />\n达到要求抗魔值后最高增益20%</p>\n\n<p><img alt=\"\" height=\"537\" src=\"/media/uploads/2023/10/08/image-20231008112949-2.png\" width=\"881\" /></p>\n\n<p>因为默认都是一样的所以原版达到60后直接增益到最高20%，这里我将第二个词条改为了80，即最低60点进行增益，达到80点达到增益最高值。</p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T11:30:00.736",
+    "view_num": 781
+}

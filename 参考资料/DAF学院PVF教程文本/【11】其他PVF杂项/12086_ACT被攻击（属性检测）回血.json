@@ -1,0 +1,7 @@
+{
+    "content": "<p>[TRIGGER] &nbsp;//[条件控制/筛选条件/判断条件/触发器/目标]<br />\n&nbsp;&nbsp; &nbsp;[ON DAMAGE] &nbsp;//&nbsp;&nbsp; &nbsp;[被攻击时检查]<br />\n&nbsp;&nbsp; &nbsp;[WHICH] &nbsp;//&nbsp;&nbsp; &nbsp;[目标条件检查部分]<br />\n&nbsp;&nbsp; &nbsp;[ME] &nbsp;//&nbsp;&nbsp; &nbsp;[自己]<br />\n&nbsp;&nbsp; &nbsp;[IS WATER DAMAGE] &nbsp;//&nbsp;&nbsp; &nbsp;[是否是水属性攻击]<br />\n&nbsp;&nbsp; &nbsp;[DO PROC BEHAVIOR]<br />\n&nbsp;&nbsp; &nbsp;[ME] &nbsp;//&nbsp;&nbsp; &nbsp;[自己]<br />\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;0<br />\n[/TRIGGER]</p>\n\n<p>[BEHAVIOR] &nbsp;//[行为控制者。在触发器中运行的命令。按从上到下的顺序从0开始索引]<br />\n&nbsp;&nbsp; &nbsp;[RESTORE] &nbsp;//&nbsp;&nbsp; &nbsp;[恢复：仅当目标是怪物或角色时才起作用。]<br />\n&nbsp;&nbsp; &nbsp;[HP] &nbsp;//&nbsp;&nbsp; &nbsp;[血量]<br />\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;99999999<br />\n&nbsp;&nbsp; &nbsp;[POINT]<br />\n[/BEHAVIOR]</p>",
+    "auth_users": "小八",
+    "img": "",
+    "create_at": "2024-07-02T11:19:17.812",
+    "view_num": 143
+}

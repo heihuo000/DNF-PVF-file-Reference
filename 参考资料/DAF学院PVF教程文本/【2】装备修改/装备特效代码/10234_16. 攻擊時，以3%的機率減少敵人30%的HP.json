@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp; 16&nbsp;&nbsp; &nbsp;攻擊時，以3%的機率減少敵人30%的HP。<br />\n(攻擊精英怪物時效果縮減為原來的1/3、對領主和深淵怪物的效果則縮減為1/6)</p>\n\n<p><br />\n[if]</p>\n\n<p>[event attack success]<br />\n1&nbsp;&nbsp; &nbsp;</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`enemy`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n3&nbsp;&nbsp; &nbsp;<br />\n[weakness]<br />\n30&nbsp;&nbsp; &nbsp;<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:17:50.308",
+    "view_num": 238
+}

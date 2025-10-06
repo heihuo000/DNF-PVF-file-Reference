@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\nBy：坏人</p>\n\n<p><br />\netc/linksystem/characlinksystem.etc</p>\n\n<p>#PVF_File</p>\n\n<p>[link level]<br />\n50&nbsp;&nbsp; &nbsp;//不知道什么意思(抠鼻)<br />\n[low link character exp bonus]<br />\n1&nbsp;&nbsp; &nbsp;70&nbsp;&nbsp; &nbsp;10&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;//低于70级有10%经验加成<br />\n[/low link character exp bonus]</p>\n\n<p>[high link character exp bonus]<br />\n1&nbsp;&nbsp; &nbsp;70&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;//70级以上无加成<br />\n[/high link character exp bonus]</p>\n\n<p>[low link character gold bonus]<br />\n1&nbsp;&nbsp; &nbsp;70&nbsp;&nbsp; &nbsp;10&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;//低于70级10%金币加成<br />\n[/low link character gold bonus]</p>\n\n<p>[high link character gold bonus]<br />\n1&nbsp;&nbsp; &nbsp;70&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;//70级以上无加成<br />\n[/high link character gold bonus]</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:12:12.604",
+    "view_num": 1812
+}

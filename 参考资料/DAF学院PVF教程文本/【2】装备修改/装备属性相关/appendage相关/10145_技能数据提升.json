@@ -1,0 +1,7 @@
+{
+    "content": "<p>[type]</p>\n\n<p>`skill data up`</p>\n\n<p>相对应的串数据</p>\n\n<p>[string data]<br />\n`[swordman]` `174` `[all]`</p>\n\n<p>&nbsp;`[level]` `0` `%` `300`</p>\n\n<p>&nbsp;[/string data]</p>\n\n<p>这里是鬼剑士第174号技能【基础精通】调用。【all】表示所有场景适用。如PKC，地下城，死亡之塔。如：`[dungeon]` `[tournament dungeon]` `[dead tower]` `[war room]` `[blood system]`</p>\n\n<p><br />\n技能的第一个参数，增加至300%。即3倍</p>\n\n<p>-----------------------------------------------------------------</p>\n\n<p>MP消耗增加100点。</p>\n\n<p>[string data]<br />\n`[swordman]` `5` `[all]` `[mp]` `100` `+` `100`<br />\n[/string data]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T12:55:46.804",
+    "view_num": 503
+}

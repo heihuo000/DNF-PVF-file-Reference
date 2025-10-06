@@ -1,0 +1,7 @@
+{
+    "content": "<p>[LOOP]</p>\n\n<p>1&nbsp; 【一次循环】</p>\n\n<p>[SHADOW]</p>\n\n<p>0</p>\n\n<p>[FRAME MAX]</p>\n\n<p>14 【帧数】</p>\n\n<p>[FRAME000] 【第一帧】</p>\n\n<p>&nbsp;</p>\n\n<p>[IMAGE] 【调用图像NPK路径】</p>\n\n<p>&#39;Map/Title/GrakKanrak.img&#39; 0</p>\n\n<p>[IMAGE POS] 这个应该是坐标</p>\n\n<p>-146 -17</p>\n\n<p>[DELAY]</p>\n\n<p>50</p>\n\n<p>[FRAME0001] 【第二帧】</p>\n\n<p>&nbsp;</p>\n\n<p>[IMAGE]</p>\n\n<p>&#39;Map/Title/GrakKanrak.img&#39; 1</p>\n\n<p>[IMAGE POS]</p>\n\n<p>-146 -17</p>\n\n<p>[DELAY]</p>\n\n<p>50</p>\n\n<p>只看到一部分</p>\n\n<p>不过下面的感觉能猜出来</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T22:17:31.575",
+    "view_num": 1043
+}

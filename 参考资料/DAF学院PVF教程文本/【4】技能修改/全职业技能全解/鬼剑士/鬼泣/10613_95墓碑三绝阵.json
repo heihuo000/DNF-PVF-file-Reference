@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n[static data]<br />\n-150 50 150 50 0 -50<br />\n[/static data]</p>\n\n<p>0、<br />\n1、<br />\n2、掉落数量：3个<br />\n3、魔法攻击力：1205%<br />\n4、诅咒Lv：Lv72<br />\n5、诅咒机率：10%<br />\n6、诅咒持续时间：10秒<br />\n7、力量、体力、智力、精神各减少：10<br />\n8、<br />\n9、爆炸魔法攻击力：2152%<br />\n10、墓碑存在时间：10秒<br />\n11、降低暗属性抗性：-10<br />\n12、爆炸独立攻击力：独立攻击力 x 21.52<br />\n13、墓碑的光环范围：200px<br />\n[dungeon]</p>\n\n<p>[level info]<br />\n14 0 0 3 1205 72 100 10000 10 500 2152 10000 -10 2152 200</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:23:23.807",
+    "view_num": 92
+}

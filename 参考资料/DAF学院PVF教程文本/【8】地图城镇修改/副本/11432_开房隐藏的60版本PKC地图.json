@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:一路悲伤_</p>\n\n<p><img alt=\"\" height=\"302\" src=\"/media/uploads/2023/05/08/image-20230508214016-1.png\" width=\"590\" /></p>\n\n<p><img alt=\"\" height=\"479\" src=\"/media/uploads/2023/05/08/image-20230508214029-2.png\" width=\"457\" /></p>\n\n<p><img alt=\"\" height=\"459\" src=\"/media/uploads/2023/05/08/image-20230508214037-3.png\" width=\"588\" /></p>\n\n<p>我不管你是不是开私服的。随便拿<br />\n其实这技术含量不大。但是一直没人发 我自己研究出来的 就发了 。我是一路悲伤_</p>\n\n<p>首先我们打开路径<br />\nmap/map.lst<br />\n复制在文本里，然后搜索 PVP<br />\n把搜索到的地图代码 一一记下<br />\n然后打开路径<br />\netc/pvpmapbasicdata.etc<br />\n可以看到。里面已经有6个图了。就是我们现在的PKC 随机图加上5图<br />\n对比一下 刚才记录的 删掉重复的代码<br />\n写入这里[pvp map order]<br />\n下面的也要写就像这样<br />\n[pvp map basic data]<br />\n50039 660111<br />\n[/pvp map basic data]<br />\n上面的6 6 换成没占用的就行<br />\n改完同步PVF 就可以进游戏怀旧了。</p>\n\n<p><br />\n当然 这代码也可以换成赫顿玛尔的主街道 就像这样<br />\n只是站街和PK分辨率不一样 会出现下面图片不够用 黑边</p>\n\n<p>还有初始坐标没调 有几率卡在黑边里 往大神研究研究 完美的</p>\n\n<p><img alt=\"\" height=\"406\" src=\"/media/uploads/2023/05/08/image-20230508214046-4.png\" width=\"584\" /></p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-08T21:40:46.658",
+    "view_num": 539
+}

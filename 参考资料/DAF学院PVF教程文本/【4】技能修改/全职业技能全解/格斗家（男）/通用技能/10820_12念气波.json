@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、施放技能后的僵直时间：0.5秒<br />\n1、<br />\n[static data]<br />\n160 500<br />\n[/static data]</p>\n\n<p>0、射程 : 48 px （倍数：0.4）<br />\n1、魔法攻擊力 : 294%% + &lt;7&gt;<br />\n2、感電機率 : 5%<br />\n3、感電Lv : Lv17<br />\n4、大小比率 : 100%%<br />\n5、感電持續時間 : 3秒<br />\n6、感電攻擊力 : 176<br />\n7、魔法攻擊力 : 独立攻击力 x 0.73<br />\n[level info]<br />\n8 120 294 50 17 100 3000 176 73</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T15:38:25.040",
+    "view_num": 49
+}

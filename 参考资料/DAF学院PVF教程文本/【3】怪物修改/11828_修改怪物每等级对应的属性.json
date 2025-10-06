@@ -1,0 +1,7 @@
+{
+    "content": "<p>文件：<br />\n<span style=\"color:#e74c3c\"><code>monster/commonmonsterbaseparameter.tbl</code>&nbsp;</span>//修改除boss外敌人属性<br />\n<span style=\"color:#e74c3c\"><code>monster/bossmonsterbaseparameter.tbl</code></span>&nbsp;//修改boss属性</p>\n\n<p><img alt=\"\" height=\"267\" src=\"/media/uploads/2023/07/15/image-20230715112902-1.png\" width=\"385\" /></p>\n\n<p>文件内容每24行转为1行，即可将其转为如下格式。</p>\n\n<p><img alt=\"\" height=\"499\" src=\"/media/uploads/2023/07/15/image-20230715112915-2.png\" width=\"1300\" /></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-15T11:29:50.860",
+    "view_num": 1347
+}

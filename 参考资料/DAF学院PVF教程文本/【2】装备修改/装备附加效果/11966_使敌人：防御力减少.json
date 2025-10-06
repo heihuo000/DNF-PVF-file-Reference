@@ -1,0 +1,7 @@
+{
+    "content": "<p>[basic explain]<br />\n<code>HP 每3秒减少1%% 攻击时以 2%%的机率HP恢复1%% 安装时500px 范围内的所有敌人的防御力减少10%%</code></p>\n\n<p>[detail explain]<br />\n<code>HP 每3秒减少1%% 攻击时以 2%%的机率HP恢复1%%（冷却时间1秒） 安装时让500px 范围内的所有敌人的防御力减少 10%%。 （安装时从30秒之后发动。）</code></p>\n\n<pre>\n<code>[if]\n    [time]\n        3000    1    500\n[/if]\n\n[then]\n    [target]\n        `myself`    -1\n    [restore]\n        `hp`\n        `%`    -1    0\n[/then]\n\n[if]\n    [cooltime]\n        1000\n    [attack success]\n        1\n[/if]\n\n[then]\n    [target]\n        `myself`    -1\n    [probability]\n        2\n    [restore]\n        `hp`\n        `%`    1    0\n[/then]\n\n[if]\n    [start cooltime]\n        30000\n    [change status]\n        `hp`\n        `&gt;`\n        `%`    0\n        `end`\n[/if]\n\n[then]\n    [target]\n        `all enemy`    500\n    [stat by condition]\n        `equipment physical defense`\n        `%`    -10\n    [stat by condition]\n        `equipment magical defense`\n        `%`    -10\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T22:58:43.495",
+    "view_num": 220
+}

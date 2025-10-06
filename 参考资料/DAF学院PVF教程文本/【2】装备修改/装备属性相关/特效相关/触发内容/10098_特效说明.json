@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>[passive object]<br />\n48073 120 0 60 25 0 &#39;DragonHeadEnergyBall.ptl&#39;<br />\n[/passive object]</p>\n\n<p>注释说明：</p>\n\n<p>红字：特效编号<br />\n参数一：X轴坐标<br />\n参数二：Y轴坐标<br />\n参数三：Z轴坐标<br />\n参数四：特效等级<br />\n参数五：出现方式（例如：改0是正常1是就流星落那种出站方式3是垂直出站方式）</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T10:37:23.549",
+    "view_num": 402
+}

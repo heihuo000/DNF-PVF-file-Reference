@@ -1,0 +1,68 @@
+아우라 샘플~
+
+//1// 꼭 1개가 있어야 함
+//0// 없어도 됨
+//*// 없어도 되고 여러번 가능함
+
+
+
+태그 정리
+
+[type] `include`					//1// `include`, `exclude`, `alone` 중 택1
+
+[range]	600							//1// 오라 범위 (반지름px)
+
+[duration] 1000						//0// 지속 시간 (ms) 0이나 안적으면 무한
+
+[destroy method]					//0// 오라를 없애는 조건 (delegator 가 destory 될때는 무조건)
+`duration`							//0// 지속시간 이 끝나면
+`source destory`					//0// 소스가 사라지면
+[/destroy method]
+
+[event time]						//0// 오라 이벤트가 일어나는 시간 (ms) 이 태그가 없으면 즉시
+	`first`		500					//0// - waiting time for first (첫 이벤트가 일어나는 시간)
+	`repeat`	250					//0// - interval time for repeat (0이나 안적으면 무시)
+	`update`	250					//0// - interval time for update (이 옵션은 프로그래머와 상의)
+[/event time]
+
+[overlab type] `overlab`			//1// `overlab`, `update`, `skip` //`update` 미구현!!
+
+[target]							//0//
+	[object type] `all`				//*// `all`, `character`, `apc`, `monster`, 없으면 `all`
+	[ally type] `dont-care`			//0// `dont-care`, `ally`, `enemy`, 없으면 `dont-care`
+	[max target number]	0			//0// 최대 타겟 수, 0이나 안적으면 무한 //미구현!!
+	[object index] 0				//*// 오브젝트 인덱스, 0이나 안적으면 무시.[object type]종속
+[/target]
+
+[event]								//1//
+	`appendage`			2455		//*// 발생시킬 이벤트 1개 이상이면 됨
+	`appendage`			2456		//*// 첫 인자는 `appendage`, `passive object`, `aura` 중 택1
+	`aura`				1000		//*// 두 번째 인자는 스크립트화 된 인덱스 번호
+	`passive object		5121		//*// 예를 들어 이 줄의 내용은 5121패시브 오브젝트를 생성
+[/event]
+
+[effect]							//*// 해당 태그는 중복 사용 가능
+	[attach target]	`delegator`		//1// `delegator`, `target`
+	[type] `animation`				//1// `animation`, `particle`
+	[attach pos] `bottom`			//1// `bottom`, `middle`, `top`
+	[z revision] -10 				//0// z 축 이동 거리(px) 없으면 무시
+	[index] -1						//1// <animation> 이 붙는 레이어 위치
+	[option]						//0// animation 옵션
+		`keep direction`			//0// animation 옵션 (방향 고정)
+		`floor`						//0// animation 옵션 (바닥에 그림 : 장판 등)
+		`auto remove`				//0// animation 옵션 (애니메이션이 끝나면 자동 제거)
+		`apply custom color`		//0// animation 옵션 (오브젝트 색상을 따름 : 카모플라즈 등)
+		`sync speed`				//0// animation 옵션 (오브젝트 애니메이션 속도에 동기화)
+		`copy horizon`				//0// animation 옵션 (애니메이션 가로복사)
+		`copy vertical`				//0// animation 옵션 (애니메이션 세로복사)
+		`resize`					//0// animation 옵션 (오라 범위에 맞게 크기조절) 미구현!!!
+	[/option]
+	[file name] `effect/animation/aura_range.ani`	//1// 해당 이펙트 경로와 파일명
+[/effect]
+
+[effect]
+	[attach target]	`target`
+	[type] `particle`
+	[attach pos] `middle`
+	[file name] `effect/particle/aura_particle.prt`
+[/effect]

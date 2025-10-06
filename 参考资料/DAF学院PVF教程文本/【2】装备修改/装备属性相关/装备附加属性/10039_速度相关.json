@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>攻击速度（1/10）</p>\n\n<p>[attack speed]<br />\n20</p>\n\n<p>速度相关参数(整数除10)</p>\n\n<p>攻击：attack<br />\n施放：cast<br />\n移动：move<br />\n跳跃力</p>\n\n<p>[jump power]<br />\n20<br />\n城镇移动速度（X100）</p>\n\n<p>[room list move speed rate]<br />\n0.07<br />\n三轴速度增加代码段</p>\n\n<p>[x move dash speed]<br />\n0.50<br />\n更换x,y,z或添加三轴都能实现装备属性附加。</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:18:40.969",
+    "view_num": 530
+}

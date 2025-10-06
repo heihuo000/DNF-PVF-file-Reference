@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;高手勿喷</p>\n\n<p>&nbsp;</p>\n\n<p>[level linear ability]</p>\n\n<p>1 70</p>\n\n<p>[grade]</p>\n\n<p>5 71</p>\n\n<p>[repair price]</p>\n\n<p>6700 100000</p>\n\n<p>[equipment physical attack]</p>\n\n<p>103 65 1309 749</p>\n\n<p>[equipment magical attack]</p>\n\n<p>97 61 1307 562</p>\n\n<p>[separate attack]</p>\n\n<p>56 32 401 272</p>\n\n<p>[physical attack]</p>\n\n<p>8 47</p>\n\n<p>[magical attack]</p>\n\n<p>0 0</p>\n\n<p>[/level linear ability]</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>把原武器的固定属性删除 在cooltime10000后面加上这段代码 基本研究过PVF的都能看懂中间</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:30:46.046",
+    "view_num": 738
+}

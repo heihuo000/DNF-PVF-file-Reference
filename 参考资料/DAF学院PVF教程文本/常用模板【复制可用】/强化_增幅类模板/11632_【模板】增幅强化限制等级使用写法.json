@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>#PVF_File\n\n[name]\n\t`+10 装备强化券 百分之 15（1~40级）`\n\n[explain]\n\t`使用后，与目前等级无关可以把选择的装备以15%%的机率强化到+10。 只能使用于等级限制在 1至 40级之间的装备。`\n\n[grade]\n\t1\n\n[rarity]\n\t3\n\n[usable job]\n\t`[all]`\n[/usable job]\n\n[attach type]\n\t`[account]`\n\n[icon]\n\t`Item/stackable/consumption.img`\t188\n\n[stackable type]\n\t`[etc]`\t1\n\n[move wav]\n\t`PAPER_TOUCH`\n\n[stack limit]\n\t100\n\n[equipment reinforcement ticket]\t#强化范围+强化几率\n\t10\t15\n\n[equipment amplify reinforcement ticket]\t//增幅范围+增幅几率（和强化不可共存）\n\t12\t10\n\n[check usable itemlevel]\t#限制使用等级 1-40级\n\t1\t40\n</code></pre>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T17:49:46.812",
+    "view_num": 1824
+}

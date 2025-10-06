@@ -1,0 +1,7 @@
+{
+    "content": "<p>by：dsafa22<br />\nhttp://tieba.baidu.com/p/4069168685<br />\n&nbsp;<br />\n发现只有修改商 城物品的教程，这里发一个添加物 品的教 程。<br />\n文件路径etc/newcashshop.etc<br />\n我用的是Decrypt工具，就是那个pvf专业工具，这个东西比较好用。<br />\n先随便看一个<br />\n<img alt=\"\" height=\"125\" src=\"/media/uploads/2023/05/07/image-20230507214318-1.png\" width=\"568\" /></p>\n\n<p>1是位置，2是物品ID，3是数量，4是价格<br />\n我们安装这个添加一个<br />\n<img alt=\"\" height=\"79\" src=\"/media/uploads/2023/05/07/image-20230507214323-2.png\" width=\"556\" /></p>\n\n<p>这样添加打包，一般是不会成功的。原因在下面。<br />\n<img alt=\"\" height=\"246\" src=\"/media/uploads/2023/05/07/image-20230507214329-3.png\" width=\"556\" /></p>\n\n<p>我们看下这里多个0a，查询assci码,0d=&#39;\\r&#39; 0a=&#39;\\n&#39;</p>\n\n<p><img alt=\"\" height=\"123\" src=\"/media/uploads/2023/05/07/image-20230507214335-4.png\" width=\"237\" /></p>\n\n<p>&nbsp;</p>\n\n<p>cut掉，打开pvf，同步客户端和服务，OK。</p>\n\n<p><img alt=\"\" height=\"301\" src=\"/media/uploads/2023/05/07/image-20230507214342-5.png\" width=\"561\" /></p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>拿走，不送~~</p>\n\n<p><br />\n----------------------------------------------------------------------<br />\n使用工具notepad notepad++插件HEX-Editor，感谢pvf专业工具作者。<br />\nwindows下回车加换行是0d 0a, linux下是0d。多了一个字节，结果就出错了<br />\n&nbsp;<br />\n&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T21:43:45.466",
+    "view_num": 1948
+}

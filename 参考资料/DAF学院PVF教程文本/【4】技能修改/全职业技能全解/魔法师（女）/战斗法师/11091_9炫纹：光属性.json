@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、生成属性炫纹个数上限：7<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n7、炫纹大小：数值未知，引至装备<br />\n8、炫纹大小：数值未知，引至装备<br />\n[static data]<br />\n200 7 200 1 105 15 30<br />\n[/static data]</p>\n\n<p>0、炫紋持續時間 : 30秒<br />\n1、普通炫紋魔法攻擊力 : 独立攻击力 x 2.4<br />\n2、<br />\n3、浮空力比率 : 100%% （倍数：0.4）<br />\n4、攻擊速度增加率 : 9%%<br />\n5、Buff持續時間 : 30秒<br />\n6、普通炫紋大小比率 : 100%%<br />\n7、大炫紋大小比率 : 125%%<br />\n8、大炫紋魔法攻擊力 : 独立攻击力 x 3.24<br />\n9、超大炫紋大小比率 : 150%%<br />\n10、超大炫紋魔法攻擊力 : 独立攻击力 x 3.84<br />\n[level info]<br />\n11 30000 240 120 250 9 30000 100 125 324 150 384</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:22:23.808",
+    "view_num": 46
+}

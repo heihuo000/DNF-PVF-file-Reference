@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>\n[expertjob only]\n    `enchanter`    5\n[/expertjob only]\n\n[prof compound rate]\n    5\n</code></pre>\n\n<pre>\n<code>#PVF_File\n\n[name]\n    `附魔之隐月手镯`\n\n[name2]\n    `name2_22237`\n\n[grade]\n    44\n\n[rarity]\n    3\n\n[usable job]\n    `[all]`\n[/usable job]\n\n[attach type]\n    `[trade]`\n\n[minimum level]\n    40\n\n[physical attack]\n    25\n\n[physical defense]\n    50\n\n[price]\n    52800\n\n[repair price]\n    42240\n\n[value]\n    42240\n\n[equipment magical defense]\n    2448    2208\n\n[icon]\n    `Item/common/bracelet.img`    60\n\n[field image]\n    `Item/FieldImage.img`    7\n\n[equipment type]\n    `[wrist]`    21\n\n[move wav]\n    `BRACELET_TOUCH`\n\n[weight]\n    400\n\n[item group name]\n    `wrist`\n\n[cool time]\n    10000\n\n[expertjob only]\n    `enchanter`    5\n[/expertjob only]\n\n[prof compound rate]\n    5\n\n[possible kiri protect]\n</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T15:48:24.977",
+    "view_num": 83
+}

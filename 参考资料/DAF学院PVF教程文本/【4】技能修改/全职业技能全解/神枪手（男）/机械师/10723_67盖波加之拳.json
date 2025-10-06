@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n[static data]<br />\n120 700 -80 -320 160<br />\n[/static data]</p>\n\n<p>0、魔法攻擊力 : 1543<br />\n1、攻擊次數上限 : 8次<br />\n2、[Lv6]增加周围机器人的力量：260<br />\n3、[Lv6]增加周围机器人的智力：260<br />\n4、<br />\n[level info]<br />\n5 1543 8 0 0 0&nbsp; &lt; LV 1 &gt;<br />\n&nbsp;<br />\n&nbsp; 2266 8 0 0 0&nbsp; &lt; LV 3 &gt;<br />\n&nbsp;<br />\n&nbsp; 3350 8 260 260 3000&nbsp;&nbsp; &lt; LV 6 &gt;<br />\n&nbsp;<br />\n&nbsp; 35480 1 269 269 3300&nbsp; &lt; LV 9 &gt;<br />\n[/level info]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T13:17:07.794",
+    "view_num": 65
+}

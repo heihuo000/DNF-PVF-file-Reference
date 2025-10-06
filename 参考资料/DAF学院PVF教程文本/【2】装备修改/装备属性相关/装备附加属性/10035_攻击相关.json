@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>物理暴击</p>\n\n<p>[physical critical hit]<br />\n5<br />\n魔法暴击</p>\n\n<p>[magical critical hit]<br />\n5<br />\n命中率（负数显示为正）</p>\n\n<p>[stuck]<br />\n-1<br />\n回避率（除以10）</p>\n\n<p>[stuck resistance]<br />\n10<br />\n硬直</p>\n\n<p>[hit recovery]<br />\n20</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:18:07.510",
+    "view_num": 1030
+}

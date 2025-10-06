@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>1.修炼场在洛兰\n2.如果不显示地图把这两个npk放入impk2\n\nact简单教学\nScript\\monster\\new_goblin\\action\\Throw.act解压出来\n\n//////////////////////////////////////////////////////投掷的动作\n#PVF_File\n\n[MOTION]\n\t[BASE ANI]\n\t\t`../animation/Throw.ani`\t//调用的ani动画\n\t[SOUND]\n\t\t`THROW_STONE`\t0\t//音频指向，audio.xml列表\n\tSOUND]\n\n\t[SPEECH]\t\t\t\t\t\t//怪物说话，记得用繁体输入，简体会乱码\n\t\t`打死你個白嫖怪！\t`1\t33\n\t\t`嚶嚶嚶`\t2\t33\n\t\t`還不跟我學習？\t3\t33\n\t[/SPEECH]\n\n[/MOTION]\n\n[TRIGGER]\t\t\t\t//触发器头部\n\t[FRAME]\t\t\t\t//帧数检查 第二帧执行\n\t\t2\t2\n\t[DO BEHAVIOR]\n\t[ME]\t\t\t\t//触发器序列号\n\t\t0\n[/TRIGGER]\t\t\t\t//触发器尾部\n\n[BEHAVIOR]\t\t\t\t\t//行为头\n\n[CREATE PASSIVEOBJECT]\t\t//特效创建头部\n\n[INDEX]\n\t8636\t\t\t\t\t\t//特效编号 可以改成其他试试 列表在Script\\passiveobject\\passiveobject.lst\n[PARTICLE FILENAME]\n\t`../Particle/speed.ptl`\t\t//特效移动轨迹文件 不用则删除\n\n[LEVEL]\t\t\t\t\t\t//特效等级 可以无视\n\t60\t\n[POS]\n\t100\t0\t0\t\t\t\t\t//xyz的坐标\n[/CREATE PASSIVEOBJECT]\t\t//特效创建尾部\n\n\t\t\t\t\t\t\t//如果想要多个特效，并排写到里面去\n\n[/BEHAVIOR]\t\t\t\t\t////行为尾</code></pre>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2024-04-20T15:06:47.011",
+    "view_num": 402
+}

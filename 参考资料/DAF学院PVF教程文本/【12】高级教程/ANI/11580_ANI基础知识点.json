@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>1.ANI的结构和认识\nANI是DAF游戏画面的支持结构，类似Flash的一个封包。\n\n.ani为后缀\n\n\n\n[LOOP]\n1\n//循环开关\n\n[SHADOW]\n0\n//阴影开关\n\n[FRAME MAX]\n10\n//最大帧数\n\n\n\n[FRAME000]//每帧头\n[IMAGE]\n`character/knight/equipment/avatar/skin/kn_body0000.img`\n0\n[IMAGE POS]//基点\n-127    -298\n[DELAY]//延时。单位是ms。1s=1000ms\n100\n[GRAPHIC EFFECT]//线性减淡，去黑框\n`LINEARDODGE`\n\n[IMAGE RATE]//大小比率\n10    10    \n\n\n\n[DAMAGE TYPE]//附加霸体\n`SUPERARMOR`\n[ATTACK BOX]//攻击框\nX1    Y1    Z1    \nX2    Y2    Z2\n\n[DAMAGE BOX]//被击框\nX1    Y1    Z1    \nX2    Y2    Z2\n\n\n[RGBA]//渲染\n0    0    0    255    \n\n[IMAGE ROTATE]//顺时针\n-0.038    \n[IMAGE ROTATE]//逆时针\n0.038</code></pre>\n\n<p><img alt=\"\" height=\"668\" src=\"/media/uploads/2023/05/15/image-20230515124825-1.png\" width=\"738\" /></p>\n\n<p><img alt=\"\" height=\"414\" src=\"/media/uploads/2023/05/15/image-20230515124900-2.png\" width=\"695\" /></p>\n\n<p><img alt=\"\" height=\"421\" src=\"/media/uploads/2023/05/15/image-20230515124930-3.png\" width=\"703\" /></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-15T12:49:09.708",
+    "view_num": 716
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p><img alt=\"\" height=\"527\" src=\"/media/uploads/2023/08/05/image-20230805120108-1.png\" width=\"700\" /></p>\n\n<p><img alt=\"\" height=\"529\" src=\"/media/uploads/2023/08/05/image-20230805120126-2.png\" width=\"700\" /></p>\n\n<p>__declspec(naked) void make_dgnNameColor()<br />\n{<br />\n_asm {<br />\npush 0xFF3232FF //红色<br />\nlea edx, [ebp - 0x404]<br />\nmov eax, 0x00F8DE5F<br />\njmp eax<br />\n}<br />\n}<br />\n<br />\n<br />\n//0627修复event双门票词条不显示<br />\n*(char*)0x00F8DE61 = 7;<br />\nWriteJmpCode((void*)0x00F8DE57, &amp;make_dgnNameColor);</p>\n\n<p><img alt=\"\" height=\"697\" src=\"/media/uploads/2023/08/05/image-20230805120152-3.png\" width=\"1300\" /></p>\n\n<p>双门票dgn设置可参考国服80版本抉择之沼副本 id：3500~3502</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-08-05T12:03:08.780",
+    "view_num": 574
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、充電冷卻時間 : 2秒<br />\n2、改裝時延長持續時間 : 2秒<br />\n3、靜電多段攻擊間隔 : 1秒<br />\n4、<br />\n5、<br />\n6、<br />\n7、<br />\n[static data]<br />\n300 2000 2000 1000 100 1 1 1<br />\n[/static data]</p>\n\n<p>0、靜電魔法攻擊力 : 30%<br />\n1、電波魔法攻擊力 : 300%<br />\n2、G-1柯洛納攻擊力增加率 : 51%<br />\n3、G-3 猛禽攻擊力增加率 : 51%<br />\n[level info]<br />\n4 30 300 51 51<br />\n[/level info]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T13:18:22.809",
+    "view_num": 61
+}

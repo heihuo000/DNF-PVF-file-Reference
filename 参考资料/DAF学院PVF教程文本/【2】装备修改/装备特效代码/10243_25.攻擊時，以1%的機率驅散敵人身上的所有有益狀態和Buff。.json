@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp; 25&nbsp;&nbsp; &nbsp;攻擊時，以1%的機率驅散敵人身上的所有有益狀態和Buff。</p>\n\n<p><br />\n[if]</p>\n\n<p>[attack success]<br />\n1&nbsp;&nbsp; &nbsp;</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`enemy`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n1&nbsp;&nbsp; &nbsp;<br />\n[disenchant]<br />\n1&nbsp;&nbsp; &nbsp;<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:19:15.255",
+    "view_num": 164
+}

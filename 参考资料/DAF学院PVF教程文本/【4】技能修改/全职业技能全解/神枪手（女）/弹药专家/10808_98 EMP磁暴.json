@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、特殊感電傷害次數上限 : 20次<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n7、特殊感電持續時間 : 20秒<br />\n8、<br />\n9、<br />\n10、Lv3级时<br />\n11、Lv6级时<br />\n12、Lv9级时<br />\n[static data]<br />\n500 20 0 5000 600 300 2000 20000 500 240 3 6 9<br />\n[/static data]</p>\n\n<p>0、電磁場魔法攻擊力 : 834%<br />\n1、特殊感電魔法攻擊力 : 独立攻击力 x 5.56<br />\n2、機動裝置爆炸物理攻擊力 : 1668%<br />\n3、機動裝置落下物理攻擊力 : 1112%<br />\n[level info]<br />\n4 834 556 1668 1112</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T15:35:30.965",
+    "view_num": 58
+}

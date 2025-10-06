@@ -1,0 +1,7 @@
+{
+    "content": "<p>by:421755083<br />\nhttp://tieba.baidu.com/p/4052008776 &nbsp;<br />\n&nbsp;<br />\n前段时间刚开始接触pvf修改器无意间找到了怪物的属性表，看见这么多人有这方面兴趣，我就特意把血量数据找了出来，此方法简单实用，可随意修改倍数，下面效果图。<br />\n&nbsp;<img alt=\"\" height=\"427\" src=\"/media/uploads/2023/05/05/image-20230505220705-1.png\" width=\"579\" /><br />\n&nbsp;<br />\n&nbsp;<br />\n&nbsp;<br />\n&nbsp;<br />\n&nbsp;<br />\n打开pvf文件--monster--monsterapcdifficultybonus.tbl，点击修改float。<br />\n&nbsp;<img alt=\"\" height=\"526\" src=\"/media/uploads/2023/05/05/image-20230505220723-2.png\" width=\"889\" /><br />\n&nbsp;<br />\n&nbsp;<br />\n&nbsp;<br />\n&nbsp;<br />\n&nbsp;<br />\n如图中圈住的数据就是我改后的（都翻了10倍），从上到下依次对应副本难度（普通，一般，困难，英雄），第五个最好修改到跟英雄难度的倍数一样大（貌似不改也没有影响）。<br />\n就这么简单，其他的数据有兴趣的可以去试试，里面有攻击性，回避率，伤害等，具体是哪个就不知道了，反正不过要小心，改到回避率了怪物可能就要无敌了外挂秒杀都没用的（异界除外）。<br />\n补充：float里面数据都是一组组的，对应不同难度的同属性，而int数据里，直接是把属性按不同难度分开了的。用int修改可以根据怪物的等级改属性。<br />\n&nbsp;<img alt=\"\" height=\"661\" src=\"/media/uploads/2023/05/05/image-20230505220737-3.png\" width=\"890\" /><br />\n&nbsp;<br />\n&nbsp;<br />\n&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-05T22:07:46.611",
+    "view_num": 3681
+}

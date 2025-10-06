@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>技能预读多种方法，有etc有nut，其实还有个最简单直接的方法，适合小白直接用</p>\n\n<p><img alt=\"\" height=\"747\" src=\"/media/uploads/2023/10/07/6_67mFUzo.jpg\" width=\"572\" /></p>\n\n<p>小白会问这个img怎么找，我们拿比较容易卡的鬼泣，第7鬼神 : 邪神之怖拉修技能举例</p>\n\n<p><img alt=\"\" height=\"137\" src=\"/media/uploads/2023/10/07/7.jpg\" width=\"344\" /></p>\n\n<p>找到他的OBJ，再找他的ani，进而找到他的img<img alt=\"\" height=\"443\" src=\"/media/uploads/2023/10/07/8.jpg\" width=\"759\" /></p>\n\n<p>添加进去就行</p>\n\n<p><img alt=\"\" height=\"632\" src=\"/media/uploads/2023/10/07/9_Gq8YZiC.jpg\" width=\"505\" /></p>\n\n<p>这样的预读更简单，更符合原定系统的识别，相对与nut预读更简单，且实际效果可能会更好，因为nut预读中也只是读了动画ani，还需要再进而读img，这里直接读img，我们来看看实际效果对比情况</p>\n\n<p><img alt=\"\" height=\"539\" src=\"/media/uploads/2023/10/07/10.gif\" width=\"685\" /></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-10-07T22:15:35.586",
+    "view_num": 694
+}

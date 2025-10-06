@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>2&nbsp;&nbsp; &nbsp;攻擊時以 3%的機率讓敵人在2秒內進入冰凍狀態。<br />\n（高於Lv75的對象得到的機率和效果減少，低於Lv75的對象則會增加）</p>\n\n<p><br />\n[if]</p>\n\n<p>[attack success]<br />\n1&nbsp;&nbsp; &nbsp;</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`enemy`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n3&nbsp;&nbsp; &nbsp;<br />\n[reduce probability to human armor at pvp module]<br />\n80&nbsp;&nbsp; &nbsp;<br />\n[duration]<br />\n2000&nbsp;&nbsp; &nbsp;<br />\n[active status]<br />\n`freeze`<br />\n75&nbsp;&nbsp; &nbsp;<br />\n[/then]<br />\n&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:15:23.106",
+    "view_num": 397
+}

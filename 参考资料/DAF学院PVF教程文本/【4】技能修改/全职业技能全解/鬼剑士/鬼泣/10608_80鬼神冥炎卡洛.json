@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n[static data]<br />\n500 100 -300 200 -300<br />\n[/static data]</p>\n\n<p>0、持续时间：30秒<br />\n1、分身攻击力：独立攻击力 x 3.12<br />\n2、右斩击攻击力：312%<br />\n3、左斩击攻击力：468%<br />\n4、上斩击攻击力：936%<br />\n5、冥炎攻击次数：5次<br />\n6、冥炎攻击间隔：1秒<br />\n7、冥炎攻击力：独立攻击力 x 0.31<br />\n8、[冯依]状态时，普通攻击力和前冲攻击力增加量：独立攻击力 x 0.9<br />\n9、<br />\n10、<br />\n11、<br />\n12、<br />\n[level info]<br />\n13 30000 312 312 468 936 5 1000 31 90 90 90 90 90</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:21:40.061",
+    "view_num": 146
+}

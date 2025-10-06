@@ -1,0 +1,2651 @@
+{exp}모션부분{/exp}[MOTION]
+	[BASE ANI]
+		{must1}{string}
+	[!BASE ANI]
+	
+	// string태그 추가.
+	[SUB ANI]
+		{exp}경로{/exp}{string}
+			{must1}{exp}시작프레임{/exp}{int(0:)}
+			{must2}{exp}레이어{/exp}{int(0:)}
+		{!string}
+	[/SUB ANI]
+
+	//mkjung 120516 add
+	[SUB ANI WITH XY]
+		{exp}경로{/exp}{string}
+			{must1}{exp}시작프레임{/exp}{int(0:)}
+			{must2}{exp}레이어{/exp}{int(0:)}
+			{must3}{exp}X좌표{/exp}{int(:)}
+			{must4}{exp}Y좌표{/exp}{int(:)}
+		{!string}
+	[/SUB ANI WITH XY]
+
+	//mkjung 120517 add
+	[SUB ANI WITH XYZ] 
+		{exp}경로{/exp}{string}
+			{must1}{exp}시작프레임{/exp}{int(0:)}
+			{must2}{exp}레이어{/exp}{int(0:)}
+			{must3}{exp}X좌표{/exp}{int(:)}
+			{must4}{exp}Y좌표{/exp}{int(:)}
+			{must5}{exp}Z좌표{/exp}{int(:)}
+		{!string}
+	[/SUB ANI WITH XYZ]
+
+
+	// [SPEECH]와 [SOUND]는 꼭 [MOTION] 태그 안에 들어가있어야 합니다!
+	[SPEECH]
+		{exp}대사 태그{/exp}{string}
+			{must1}{exp}시작프레임{/exp}{int(0:)}
+			{opt1}{exp}말할 확률(%){/exp}{int(0:)}
+		{!string}
+	[/SPEECH]
+	
+	[SPEECH POS]
+		{exp}대사 태그{/exp}{string}
+			{must1}{exp}시작프레임{/exp}{int(0:)}
+			{must2}{exp}말할 확률(%){/exp}{int(0:)}
+			{must3}{exp}대사가 출력될 X좌표{/exp}{int(:)}
+			{must4}{exp}대사가 출력될 Y좌표{/exp}{int(:)}
+		{!string}
+	[/SPEECH POS]
+	
+	[SOUND]
+		{exp}사운드 태그{/exp}{string}
+			{must1}{exp}시작 프레임{/exp}{int(0:)}
+		{!string}
+	[/SOUND]
+	
+	[SOUND PROBABILITY]
+		{exp}사운드 태그{/exp}{string}
+			{must1}{exp}시작 프레임{/exp}{int(0:)}
+			{must2}{exp}확률{/exp}{int(0:)}
+		{!string}
+	[/SOUND PROBABILITY]
+[/MOTION]
+
+{exp}이 액션이 실행되는 동안 이동하지 않을때 추가{/exp}[HOLD POSITION]
+	{must1}{string}
+[!HOLD POSITION]
+
+{exp}현재 액션에서 사용할 기본 공격 정보{/exp}[DEFAULT ATTACKINFO]
+	{must1}{string}
+[!DEFAULT ATTACKINFO]
+
+//mkjung 120516 add
+[AUTOEND]
+	{must1}{int(:)}
+[!AUTOEND]
+
+{exp}조건 제어부, 각종 조건들을 넣어서 행위를 시킬 대상을 걸러낸다{/exp}[TRIGGER]
+	{exp}체크를 실행할 총 횟수, BEHAVIOR의 [TRIGGER] 태그로 횟수를 리셋할 수 있다{/exp}[LIMIT]
+		{must1}{exp}0이면 무한히 체크함{/exp}{int(:)}
+	[!LIMIT]	
+
+	{exp}초기 트리거의 ENABLE여부를 결정{/exp}[ENABLE] 
+		{must1}{exp}트리거 동작함(기본){/exp}[ON]
+		{must1}{exp}트리거 동작안함{/exp}[OFF] 
+	[!ENABLE]	
+		
+	{exp}트리거를 체크할 프레임 번호, 프레임 하나당 한번만 체크함, 쓰지 않으면 계속체크{/exp}[FRAME] 
+		{must1}{exp}시작 프레임 인덱스{/exp}{int(0:)}
+		{must2}{exp}끝 프레임 인덱스{/exp}{int(0:)}
+	[!FRAME]
+	
+	// 옵션 태그 모음 시작 //////////////////////////////////////////
+	
+	// 이벤트로 발동하는 트리거 (ON으로 시작하는 태그끼리는 중복 불가)
+	{opt1}{exp}공격맞았을 경우에만 체크{/exp}[ON DAMAGE] 
+	{opt1}{exp}공격성공시에만 체크{/exp}[ON ATTACKSUCCESS]
+	{opt1}{exp}어떤 물체가 생성될 때 체크{/exp}[ON CREATE OBJECT]
+	{opt1}{exp}어떤 물체가 파괴될 때 체크{/exp}[ON DESTROY OBJECT]
+	{opt1}{exp}자기 자신이 파괴될 때 체크{/exp}[ON DESTROY ME]
+	{opt1}{exp}액션이 끝날 때 체크{/exp}[ON REMOVE ACTION]
+	{opt1}{exp}액션이 시작될 때 체크{/exp}[ON SET ACTION]
+	{opt1}{exp}흔들기 인풋이 들어왔을 때 체크{/exp}[ON SHAKE INPUT]
+	{opt1}{exp}진행할수 없는 곳에 부딪쳤을 때 체크{/exp}[ON MOVE COLLISION]
+		
+	{opt2}{exp}원거리 공격일때만 통과{/exp}{etc}[IS MISSILE DAMAGE]
+	{opt2}{exp}물리 공격일때만 통과{/exp}{etc}[IS PHYSICAL DAMAGE]
+	{opt2}{exp}마법 공격일때만 통과{/exp}{etc}[IS MAGICAL DAMAGE]
+	{opt2}{exp}방어무시 공격일때만 통과{/exp}{etc}[IS ABSOLUTE DAMAGE]
+	{opt2}{exp}화속성 공격일때만 통과{/exp}{etc}[IS FIRE DAMAGE]
+	{opt2}{exp}수속성 공격일때만 통과{/exp}{etc}[IS WATER DAMAGE]
+	{opt2}{exp}암속성 공격일때만 통과{/exp}{etc}[IS DARK DAMAGE]
+	{opt2}{exp}명속성 공격일때만 통과{/exp}{etc}[IS LIGHT DAMAGE]
+	{opt2}{exp}무속성 공격일때만 통과{/exp}{etc}[IS NONE DAMAGE]
+	
+	{opt3}{exp}왼쪽을 쳐다보는지 체크{/exp}{etc}[IS DIRECTION LEFT]
+	{opt3}{exp}오른쪽을 쳐다보는지 체크{/exp}{etc}[IS DIRECTION RIGHT]
+	
+	// 옵션 태그 모음 끝 ////////////////////////////////////////////
+	
+	{exp}시간마다 체크{/exp}[CHECK TIME] 
+		{must1}{exp}체크할 시간텀(ms){/exp}{int(0:)}
+	[!CHECK TIME] 	
+	
+	{exp}고스트계열의 스킬이 있을때만 통과{/exp}{etc}[CHECK GHOST]
+	{exp}좋은 버프가 있을때만 통과{/exp}{etc}[CHECK BUFF]
+
+	{exp}특정 어펜디지를 체크{/exp}[CHECK SPECIFIC BUFF]
+		{must1}{exp}특정 ID{/exp}{string}
+		{must1}{exp}격노 어펜디지{/exp}[ANGER]
+		//mkjung 120516 add.
+		{must1}[DARKSCALP]
+		//mkjung 120518 add.
+		{must1}[AGAMEMNON TELEKINESIS]	
+		{prereq}[ANGER]{/prereq}{must2}{exp}인덱스{/exp}{int(:)}
+		{prereq}[ANGER]{/prereq}{must3}{exp}레이어의 알파값{/exp}{int(:)}
+	[!CHECK SPECIFIC BUFF]
+
+	{exp}트리거 체크 확률{/exp}[IS MEET PROB]
+		{must1}{exp}확률(%){/exp}{int(0:)}
+	[!IS MEET PROB]
+	
+	//[ON DAMAGE] 혹은 [ON ATTACKSUCCESS] 태그가 있어야만 발동	
+	{prereq}[ON DAMAGE]|[ON ATTACKSUCCESS]{/prereq}{exp}스턱인지 체크{/exp}[CHECK STUCK]
+		{must1}{exp}1: 스턱일때만 통과, 0: 스턱 아닐때만 통과{/exp}{int(0:1)}
+	[!CHECK STUCK]
+	
+	{exp}스턱이 났는지 체크하는 태그{/exp}{etc}[IS STUCK]
+	{exp}스턱이 나지 않았는지 체크하는 태그{/exp}{etc}[NOT STUCK]
+	
+	{exp}탈것에 탔는지 여부{/exp}[IS MOUNT]
+		{must1}{exp}1: 탔음, 0: 타지 않았음{/exp}{int(0:1)}
+	[!IS MOUNT]
+
+	//mkjung 120511 modify. {}는 필수.
+	{exp}IF구문. 변수와 수식 사용 가능. [GET TIME]으로 시간을 가져올수 있다{/exp}[IF] 
+
+		//{`변수` 수식 숫자} 수식 ([GET TIME] or 숫자 )
+		{must1}{exp}아이디 스트링{/exp}{string}	
+		{must2}{exp}덧셈 연산자{/exp}[+] 
+		{must2}{exp}뺄셈 연산자{/exp}[-] 
+		{must2}{exp}곱셈 연산자{/exp}[*] 
+
+		//add.
+		{must2}[/]
+		{must2}[>]
+		{must2}[=]
+		{must2}[<]
+		{must2}[>=]
+		{must2}[<=]
+		{must2}[=>]
+		{must2}[=<]
+
+		{must3}{exp}적용할 수치{/exp}{int(:)}
+		
+		//
+		{opt1}[+]
+		{opt1}[-]
+		{opt1}[*]
+		{opt1}[/]
+		{opt1}[>]
+		{opt1}[=]
+		{opt1}[<]
+		{opt1}[>=]
+		{opt1}[<=]
+		{opt1}[=>]
+		{opt1}[=<]
+		{opt2}{exp}현재 시간(ms)을 얻어온다{/exp}[GET TIME]
+		{opt2}{exp}시간 기능{/exp}{int(0:)}
+
+		//{must4}{exp}아이디가 뒷쪽 인자 이상이라면?{/exp}[>=]
+		//{must4}{exp}아이디가 뒷쪽 인자 이하라면?{/exp}[<=]
+		//{must4}{exp}같은지{/exp}[=]
+		//{must5}{exp}현재 시간(ms)을 얻어온다{/exp}[GET TIME]
+		//{must5}{exp}시간 기능{/exp}{int(:)}
+	[!IF][/IF]
+	
+	{exp}내가 AI타겟을 가지고 있는지 체크{/exp}[IS AI TARGET]
+		{must1}{exp}1: AI타겟이 있을때만 통과, 0: AI타겟이 없을때만 통과{/exp}{int(0:1)}
+	[!IS AI TARGET]
+
+	{exp}x번 트리거가 사용가능한지 체크. (트리거는 BEHAVIOR의 [TRIGGER] 태그로 껐다 켰다 할 수 있다){/exp}[TRIGGER CHECK] 
+		{must1}{exp}트리거번호{/exp}{int(0:)}
+		{must2}{exp}사용가능{/exp}[ON]
+		{must2}{exp}사용불가능{/exp}[OFF]
+	[!TRIGGER CHECK] 
+
+	{exp}트리거 검사할 대상 범위를 지정{/exp}[WHICH]
+		{must1}{exp}자신{/exp}[ME]
+		{must1}{exp}소환주{/exp}[SUMMON MASTER]
+		{must1}{exp}소환한 놈(패시브, 몬스터){/exp}[SUMMON OBJECT]
+		{must1}{exp}모든 패시브 오브젝트{/exp}[PASSIVE]
+		{must1}{exp}모든 AI 캐릭터{/exp}[AI CHARACTER]
+		{must1}{exp}생성되는 오브젝트{/exp}[CREATE OBJECT]	//{prereq}[ON CREATE OBJECT]{/prereq}
+		{must1}{exp}파괴되는 오브젝트{/exp}[DESTROY OBJECT]	//{prereq}[ON DESTROY OBJECT]{/prereq}
+		{must1}{exp}AI 상에서 잡고 있는 타겟{/exp}[TARGET]
+		{must1}{exp}자신을 몇초 이내로 공격한 공격자{/exp}[LAST ATTACKER]
+		{must1}{exp}자신을 몇초 이내로 공격한 공격자들{/exp}[LAST ATTACKERS]
+		{must1}{exp}자신이 마지막으로 데미지를 준 오브젝트{/exp}[LAST ATTACKSUCCESS]
+		{must1}{exp}자신이 마지막으로 데미지를 준 오브젝트들{/exp}[LAST ATTACKSUCCESSES]
+		{must1}{exp}자신을 마지막으로 공격한 공격자(액티브 오브젝트){/exp}[LAST ACTIVE ATTACKER]
+		{must1}{exp}자신이 마지막으로 데미지를 준 ACTIVE 오브젝트{/exp}[LAST ACTIVE ATTACKSUCCESS]
+		//mkjung 120515 add.
+		{must1}{exp}자신이 마지막으로 데미지를 준 캐릭터(APC포함){/exp}[CHARACTER ATTACKSUCCESS]
+		
+		{must1}{exp}우리팀{/exp}[ALL OUR TEAM]
+		{must1}{exp}우리팀 빼고 다{/exp}[ALL ENEMY]
+		{must1}{exp}몬스터팀{/exp}[ALL MONSTER TEAM]
+		{must1}{exp}캐릭터팀{/exp}[ALL CHARACTER TEAM]
+		{must1}{exp}모든 캐릭터{/exp}[CHARACTER]
+		{must1}{exp}모든 몬스터{/exp}[MONSTER]
+		//mkjung 120512 add.
+		{must1}{exp}CHECKUP 조건체크를 통과한 오브젝트{/exp}[CHECKUP OBJECT]		
+		{must1}{exp}CHECKUP 조건체크를 통과하지 못한 오브젝트{/exp}[DROPOUT OBJECT]
+
+		{must1}{exp}모든 캐릭터 (AI 캐릭터는 제외한 실제 파티원들){/exp}[PLAYER]
+		{must1}{exp}저장한 오브젝트를 불러내서 사용{/exp}[LOAD TARGET]
+
+		// 자신을 몇초 이내로 공격한 공격자들  첫번째 인자는 시간, 두번째 인자는 0 일때는 공격자 1일때는 액티브 오브젝트를 가져온다.
+		{prereq}[LAST ATTACKERS]{/prereq}{must2}{exp}시간{/exp}{int(0:)}
+		{prereq}[LAST ATTACKERS]{/prereq}{must3}{exp}0-공격자 1-액티브 오브젝트{/exp}{int(0:1)}
+		// 저장한 오브젝트를 불러내서 사용. 0번은 저장할때 사용한 인덱스. 
+		{prereq}[LOAD TARGET]{/prereq}{must2}{exp}사용한 인덱스{/exp}{int(:)}
+
+		{must1}{exp}특정 파티원 선택{/exp}[PARTY TARGET]
+		[!PARTY TARGET][/PARTY TARGET]
+		//[!PARTY TARGET]
+		{prereq}[PARTY TARGET]{/prereq}{must2}{exp}인덱스{/exp}[INDEX]
+		{prereq}[INDEX]{/prereq}{must3}{exp}인덱스{/exp}{int(0:3)}
+		{prereq}[PARTY TARGET]{/prereq}{opt1}{exp}파티원의 인덱스{/exp}[CHECK NEXT]
+		{prereq}[CHECK NEXT]{/prereq}{must5}{exp}(0 ~ 3){/exp}{int(0:3)}
+		{prereq}[PARTY TARGET]{/prereq}{opt2}{exp}죽은 파티원도 체크할지 여부{/exp}[INCLUDE DEAD]
+		{prereq}[INCLUDE DEAD]{/prereq}{must7}{exp}0:체크 안함, 1:체크{/exp}{int(0:1)}
+	[!WHICH]
+
+	{prereq}[WHICH]{/prereq}{exp}조건태그를 이용하여 [WHICH]문으로 설정한 대상중 걸러냅니다{/exp}[CHECKUP]
+		{exp}이름이 같은지 검사{/exp}[IS NAME]
+			{variableString} 
+		[!IS NAME][/IS NAME]
+		
+		{exp}카테고리가 같은지 검사{/exp}[IS CATEGORY]
+			{opt1}{exp}인간형{/exp}[human]
+			{opt2}{exp}야수{/exp}[beast]
+			{opt3}{exp}식물{/exp}[plant]
+			{opt4}{exp}곤충{/exp}[insect]
+			{opt5}{exp}기계{/exp}[machine]
+			{opt6}{exp}유기체{/exp}[organic]
+			{opt7}{exp}복합체{/exp}[hybrid]
+			{opt8}{exp}언데드{/exp}[undead]
+			{opt9}{exp}악마{/exp}[devil]
+			{opt10}{exp}정령{/exp}[spirit]
+			{opt11}{exp}용족{/exp}[dragon]
+			{opt12}{exp}접근전용 몬스터{/exp}[melee combat]
+			{opt13}{exp}사격전용 몬스터{/exp}[range combat]
+			{opt14}{exp}소극적인 몬스터{/exp}[close-passive]
+			{opt15}{exp}주의깊은 몬스터{/exp}[close-carefully]
+			{opt16}{exp}접근AI 저돌,위협 몬스터일때 풀슈퍼아머{/exp}[full-superarmor]
+			{opt17}{exp}저돌적인 몬스터{/exp}[close-tough]
+			{opt18}{exp}위협적인 몬스터{/exp}[close-manace]
+			{opt19}{exp}인간 아머 (살상 옵션 적용){/exp}[human armor]
+			{opt20}{exp}건물 아머 (파괴 옵션 적용){/exp}[fort armor]
+			{opt21}{exp}성령 아머 (방어력 비약적 증가){/exp}[divine armor]
+			{opt22}{exp}고블린{/exp}[goblin]
+			{opt23}{exp}타우{/exp}[tau]
+			{opt24}{exp}루가루{/exp}[lugaru]
+			{opt25}{exp}붙박이형{/exp}[fixture]
+			{opt26}{exp}초기 위치에서 움직이지 않음{/exp}[stay]
+			{opt27}{exp}CATEGORY_PASSIVEOBJECT_TYPE_MELEE{/exp}[melee]
+			{opt28}{exp}CATEGORY_PASSIVEOBJECT_TYPE_MISSILE{/exp}[missile]
+			{opt29}{exp}CATEGORY_PASSIVEOBJECT_TYPE_ENERGY{/exp}[energy]
+			{opt30}{exp}CATEGORY_PASSIVEOBJECT_TYPE_PHYSICAL{/exp}[physical]
+			{opt31}{exp}CATEGORY_PASSIVEOBJECT_TYPE_MAGICAL{/exp}[magical]
+			{opt32}{exp}CATEGORY_PASSIVEOBJECT_TYPE_BULLET{/exp}[bullet]
+			{opt33}{exp}CATEGORY_PASSIVEOBJECT_TYPE_CANON{/exp}[cannon]
+			{opt34}{exp}CATEGORY_PASSIVEOBJECT_TYPE_EXPLOSION{/exp}[explosion]
+			{opt35}{exp}CATEGORY_PASSIVEOBJECT_TYPE_INFLAME{/exp}[inflame]
+			{opt36}{exp}CATEGORY_PASSIVEOBJECT_TYPE_INFLAME{/exp}[non inflame]
+			{opt37}{exp}CATEGORY_PASSIVEOBJECT_TYPE_LIGHT{/exp}[light]
+			{opt38}{exp}CATEGORY_PASSIVEOBJECT_TYPE_DARK{/exp}[dark]
+			{opt39}{exp}CATEGORY_PASSIVEOBJECT_TYPE_WATER{/exp}[water]
+			{opt40}{exp}CATEGORY_PASSIVEOBJECT_TYPE_FIRE{/exp}[fire]
+			{opt41}{exp}CATEGORY_PASSIVEOBJECT_TYPE_FORT{/exp}[fort]
+			//mkjung 120620 add.
+			{opt42}{exp}무적{/exp}[unbeatable]
+			//mkjung 120621 add.
+			{opt43}{exp}천사{/exp}[angel]
+		[!IS CATEGORY][/IS CATEGORY]
+		
+		{exp}기입한 인덱스인 놈만 체크(패시브, 몬스터, APC 구분안함){/exp}[IS INDEX]
+			{variableInt(:)}
+		[!IS INDEX][/IS INDEX]
+		
+		{exp}기입한 인덱스가 아닌 놈만 체크(패시브, 몬스터, APC 구분안함){/exp}[IS NOT INDEX]
+			{variableInt(:)}
+		[!IS NOT INDEX][/IS NOT INDEX]
+
+		{exp}나의 오브젝트 타입을 체크{/exp}[IS OBJECT TYPE]
+			{opt1}{exp}자신{/exp}[ME]
+			{opt2}{exp}소환주{/exp}[SUMMON MASTER]
+			{opt3}{exp}소환한 놈(패시브, 몬스터){/exp}[SUMMON OBJECT]
+			//mkjung 120514 [PASSIVE--> PASSIVE OBJECT] modi.
+			{opt4}{exp}모든 패시브 오브젝트{/exp}[PASSIVE OBJECT]
+			{opt5}{exp}모든 AI 캐릭터{/exp}[AI CHARACTER]
+			{opt6}{exp}생성되는 오브젝트{/exp}[CREATE OBJECT]		//{prereq}[ON CREATE OBJECT]{/prereq}
+			{opt7}{exp}파괴되는 오브젝트{/exp}[DESTROY OBJECT]		//{prereq}[ON DESTROY OBJECT]{/prereq}
+			{opt8}{exp}AI 상에서 잡고 있는 타겟{/exp}[TARGET]
+			{opt9}{exp}자신을 몇초 이내로 공격한 공격자{/exp}[LAST ATTACKER]
+			{opt10}{exp}자신을 몇초 이내로 공격한 공격자들{/exp}[LAST ATTACKERS]
+			{opt11}{exp}자신이 마지막으로 데미지를 준 오브젝트{/exp}[LAST ATTACKSUCCESS]
+			{opt12}{exp}자신이 마지막으로 데미지를 준 오브젝트들{/exp}[LAST ATTACKSUCCESSES]
+			{opt13}{exp}자신을 마지막으로 공격한 공격자(액티브 오브젝트){/exp}[LAST ACTIVE ATTACKER]
+			{opt14}{exp}자신이 마지막으로 데미지를 준 ACTIVE 오브젝트{/exp}[LAST ACTIVE ATTACKSUCCESS]
+			//mkjung 120515 [CHARACTER ATTACKSUCCESS] add.
+			{opt15}{exp}자신이 마지막으로 데미지를 준 캐릭터(APC포함){/exp}[CHARACTER ATTACKSUCCESS]			
+			{opt16}{exp}우리팀{/exp}[ALL OUR TEAM]
+			{opt17}{exp}우리팀 빼고 다{/exp}[ALL ENEMY]
+			{opt18}{exp}몬스터팀{/exp}[ALL MONSTER TEAM]
+			{opt19}{exp}캐릭터팀{/exp}[ALL CHARACTER TEAM]
+			{opt20}{exp}모든 캐릭터{/exp}[CHARACTER]
+			{opt21}{exp}모든 몬스터{/exp}[MONSTER]
+			//mkjung 120512 [CHECKUP OBJECT] add.
+			{opt22}{exp}CHECKUP 조건체크를 통과한 오브젝트{/exp}[CHECKUP OBJECT]		
+			{opt23}{exp}CHECKUP 조건체크를 통과하지 못한 오브젝트{/exp}[DROPOUT OBJECT]
+			{opt24}{exp}모든 캐릭터 (AI 캐릭터는 제외한 실제 파티원들){/exp}[PLAYER]			
+		[!IS OBJECT TYPE][/IS OBJECT TYPE]
+
+		{exp}팀 같은지 체크{/exp}[IS TEAM]
+			{opt1}[MY TEAM] 
+			{opt2}[ENEMY TEAM] 
+			{opt3}[MONSTER TEAM]
+			{opt4}[CHARACTER TEAM]
+		[!IS TEAM][/IS TEAM]		
+
+		{exp}맵의 좌우 끝인지 체크{/exp}{etc}[IS END MAP]
+		{exp}맵의 상하 끝인지 체크{/exp}{etc}[IS END MAP VERTICALLY]
+
+		{exp}현재 대상이 기재한 좌표에 있는지 체크{/exp}[IS IN POS]
+			{must1}{exp}체크할 X좌표{/exp}{int(:)}
+			{must2}{exp}체크할 Y좌표{/exp}{int(:)}
+			{must3}{exp}체크할 Z좌표{/exp}{int(:)}
+		[!IS IN POS]
+
+		{exp}현재 대상이 기재한 영역 내에 있는지 체크{/exp}[IS IN AREA]
+			{opt1}{exp}기준좌표{/exp}[POS]
+				{must1}{exp}기준 X좌표{/exp}{int(:)}
+				{must2}{exp}기준 Y좌표{/exp}{int(:)}
+				{must3}{exp}기준 Z좌표{/exp}{int(:)}
+			[!POS]
+			{opt2}{exp}영역{/exp}[RANGE]
+				{must1}{exp}기준 X영역{/exp}{int(:)}
+				{must2}{exp}기준 Y영역{/exp}{int(:)}
+				{must3}{exp}기준 Z영역{/exp}{int(:)}
+			[!RANGE]
+			{opt3}{exp}좌표계{/exp}[COORDINATE]
+				{must1}{exp}`RELATIVE`, `ABSOLUTE` (생략 시 기본값: ABSOLUTE){/exp}{string}
+			[!COORDINATE]
+		[/IS IN AREA]
+
+		{exp}대상의 상태를 체크{/exp}[IS TARGET STATE]
+			{must1}{exp}0. 서있기,이동 1.앉기 2. 앉아있기 3. 맞기, 4.다운, 5.죽기, 6. 점프, 7. 점프 공격, 8. 공격, 9. 홀드, 10.소환시작, 11. 소환완료, 12. 투척, 13. 대쉬, 14. 대쉬 어택, 15. 아이템 줍기, 16. 버프, 17. 퀵스탠딩{/exp}{int(0:17)}			 
+		[!IS TARGET STATE]
+
+		{exp}대상의 상태가 아닌지 체크{/exp}[IS NOT TARGET STATE]
+			{must1}{exp}0. 서있기,이동 1.앉기 2. 앉아있기 3. 맞기, 4.다운, 5.죽기, 6. 점프, 7. 점프 공격, 8. 공격, 9. 홀드, 10.소환시작, 11. 소환완료, 12. 투척, 13. 대쉬, 14. 대쉬 어택, 15. 아이템 줍기, 16. 버프, 17. 퀵스탠딩{/exp}{int(0:17)}
+		[!IS NOT TARGET STATE]
+
+		{exp}X축 속도 비교{/exp}[X SPEED]
+			{must1}{exp}X축 속도가 체크할 속도보다 더 크다면{/exp}[>]
+			{must1}{exp}X축 속도가 체크할 속도와 같다면{/exp}[=]
+			{must1}{exp}X축 속도가 체크할 속도보다 더 작다면{/exp}[<]
+			{must1}{exp}X축 속도가 체크할 속도보다 같거나 더 크다면{/exp}[>=]
+			{must1}{exp}X축 속도가 체크할 속도보다 같거나 더 작다면{/exp}[<=]
+			{must1}{exp}X축 속도가 체크할 속도보다 같거나 더 크다면{/exp}[=>]
+			{must1}{exp}X축 속도가 체크할 속도보다 같거나 더 작다면{/exp}[=<]
+			{must2}{exp}체크할 X속도(픽셀/s){int(0:)}
+		[!X SPEED]
+
+		{exp}Y축 속도 비교{/exp}[Y SPEED]
+			{must1}{exp}Y축 속도가 체크할 속도보다 더 크다면{/exp}[>]
+			{must1}{exp}Y축 속도가 체크할 속도와 같다면{/exp}[=]
+			{must1}{exp}Y축 속도가 체크할 속도보다 더 작다면{/exp}[<]
+			{must1}{exp}Y축 속도가 체크할 속도보다 같거나 더 크다면{/exp}[>=]
+			{must1}{exp}Y축 속도가 체크할 속도보다 같거나 더 작다면{/exp}[<=]
+			{must1}{exp}Y축 속도가 체크할 속도보다 같거나 더 크다면{/exp}[=>]
+			{must1}{exp}Y축 속도가 체크할 속도보다 같거나 더 작다면{/exp}[=<]
+			{must2}{exp}체크할 Y속도(픽셀/s){int(0:)}
+		[!Y SPEED]
+
+		{exp}Z축 속도 비교{/exp}[Z SPEED]
+			{must1}{exp}X축 속도가 체크할 속도보다 더 크다면{/exp}[>]
+			{must1}{exp}X축 속도가 체크할 속도와 같다면{/exp}[=]
+			{must1}{exp}X축 속도가 체크할 속도보다 더 작다면{/exp}[<]
+			{must1}{exp}X축 속도가 체크할 속도보다 같거나 더 크다면{/exp}[>=]
+			{must1}{exp}X축 속도가 체크할 속도보다 같거나 더 작다면{/exp}[<=]
+			{must1}{exp}X축 속도가 체크할 속도보다 같거나 더 크다면{/exp}[=>]
+			{must1}{exp}X축 속도가 체크할 속도보다 같거나 더 작다면{/exp}[=<]
+			{must2}{exp}체크할 Z속도(픽셀/s){int(0:)}
+		[!Z SPEED]
+
+		{exp}차지한 시간 체크{/exp}[CHARGED TIME]
+			{must1}{exp}차지한 시간이 체크할 시간보다 더 크다면{/exp}[>]
+			{must1}{exp}차지한 시간이 체크할 시간과 같다면{/exp}[=]
+			{must1}{exp}차지한 시간이 체크할 시간보다 더 작다면{/exp}[<]
+			{must1}{exp}차지한 시간이 체크할 시간보다 같거나 더 크다면{/exp}[>=]
+			{must1}{exp}차지한 시간이 체크할 시간보다 같거나 더 작다면{/exp}[<=]
+			{must1}{exp}차지한 시간이 체크할 시간보다 같거나 더 크다면{/exp}[=>]
+			{must1}{exp}차지한 시간이 체크할 시간보다 같거나 더 작다면{/exp}[=<]
+			{must2}{exp}체크할 시간(ms){int(0:)}
+		[!CHARGED TIME]
+
+
+		{exp}대상과 자신과의 거리 체크{/exp}[DISTANCE]
+			{must1}{exp}대상과 자신과의 거리가 체크할 거리보다 더 크다면{/exp}[>]
+			{must1}{exp}대상과 자신과의 거리가 체크할 거리와 같다면{/exp}[=]
+			{must1}{exp}대상과 자신과의 거리가 체크할 거리보다 더 작다면{/exp}[<]
+			{must1}{exp}대상과 자신과의 거리가 체크할 거리보다 같거나 더 크다면{/exp}[>=]
+			{must1}{exp}대상과 자신과의 거리가 체크할 거리보다 같거나 더 작다면{/exp}[<=]
+			{must1}{exp}대상과 자신과의 거리가 체크할 거리보다 같거나 더 크다면{/exp}[=>]
+			{must1}{exp}대상과 자신과의 거리가 체크할 거리보다 같거나 더 작다면{/exp}[=<]
+			{must2}{exp}체크할 거리(펙셀){/exp}{int(0:)}
+		[!DISTANCE]
+
+		{exp}왼쪽 숫자/오른쪽 숫자 확률로 통과하는 조건{/exp}[RANDOM CHECK]
+			{must1}{exp}왼쪽{/exp}{int(0:)}
+			{must2}{exp}오른쪽{/exp}{int(0:)}
+		[!RANDOM CHECK]
+
+		{exp}대상의 Z좌표를 검사{/exp}[ZPOS]
+			{must1}{exp}체크할 숫자보다 더 크다면{/exp}[>]
+			{must1}{exp}체크할 숫자와 같다면{/exp}[=]
+			{must1}{exp}체크할 숫자보다 더 작다면{/exp}[<]
+			{must1}{exp}체크할 숫자보다 같거나 더 크다면{/exp}[>=]
+			{must1}{exp}체크할 숫자보다 같거나 더 작다면{/exp}[<=]
+			{must1}{exp}체크할 숫자보다 같거나 더 크다면{/exp}[=>]
+			{must1}{exp}체크할 숫자보다 같거나 더 작다면{/exp}[=<]
+			{must2}{exp}체크할 숫자{/exp}{int(:)}
+		[!ZPOS]
+		
+		[HP],[MP]
+			{must1}{exp}체크할 숫자보다 더 크다면{/exp}[>]
+			{must1}{exp}체크할 숫자와 같다면{/exp}[=]
+			{must1}{exp}체크할 숫자보다 더 작다면{/exp}[<]
+			{must1}{exp}체크할 숫자보다 같거나 더 크다면{/exp}[>=]
+			{must1}{exp}체크할 숫자보다 같거나 더 작다면{/exp}[<=]
+			{must1}{exp}체크할 숫자보다 같거나 더 크다면{/exp}[=>]
+			{must1}{exp}체크할 숫자보다 같거나 더 작다면{/exp}[=<]
+			{must2}{exp}체크할 숫자{/exp}{int(:)}
+			{must3}{exp}비율로 체크할 것인가?{/exp}[%]
+			{must3}{exp}수치로 체크할 것인가?{/exp}[POINT]
+		[!HP],[!MP]
+
+		{exp}적이 내 범위안에 있는지 체크{/exp}[CHECK DISTANCE]
+			{must1}{exp}X축 범위{/exp}{int(:)}
+			{must2}{exp}Y축 범위{/exp}{int(:)}
+		[!CHECK DISTANCE]
+		
+		{exp}특정 액션의 특정 트리거를 체크{/exp}[TRIGGER CHECK]
+			{must1}{exp}stay 액션{/exp}[STAY]
+			{must1}{exp}move 액션{/exp}[MOVE]
+			{must1}{exp}sit 액션{/exp}[SIT]
+			{must1}{exp}down 액션{/exp}[DOWN]
+			{must1}{exp}damage 액션{/exp}[DAMAGE]
+			{must1}{exp}attack 액션{/exp}[ATTACK]
+			{must1}{exp}custom 액션{/exp}[CUSTOM]
+			{must1}{exp}default 액션{/exp}[DEFAULT]
+			{must1}{exp}proc 액션{/exp}[PROC]
+			
+			//[액션]의 [X번] 트리거를 on.off.reset
+			{prereq}[STAY]|[MOVE]|[SIT]|[DOWN]|[DEFAULT]|[PROC]{/prereq}{must2}{exp}트리거번호{/exp}{int(0:)}
+			{prereq}[STAY]|[MOVE]|[SIT]|[DOWN]|[DEFAULT]|[PROC]{/prereq}{must3}{exp}켬{/exp}[ON]
+			{prereq}[STAY]|[MOVE]|[SIT]|[DOWN]|[DEFAULT]|[PROC]{/prereq}{must3}{exp}끔{/exp}[OFF]
+			{prereq}[STAY]|[MOVE]|[SIT]|[DOWN]|[DEFAULT]|[PROC]{/prereq}{must3}{exp}리셋{/exp}[RESET]
+			//[X번] [액션]의 [X번] 트리거를 on.off.reset
+			{prereq}[DAMAGE]|[ATTACK]|[CUSTOM]{/prereq}{must2}{exp}액션번호{/exp}{int(0:)}
+			{prereq}[DAMAGE]|[ATTACK]|[CUSTOM]{/prereq}{must3}{exp}트리거번호{/exp}{int(0:)}
+			{prereq}[DAMAGE]|[ATTACK]|[CUSTOM]{/prereq}{must4}{exp}켬{/exp}[ON]
+			{prereq}[DAMAGE]|[ATTACK]|[CUSTOM]{/prereq}{must4}{exp}끔{/exp}[OFF]
+			{prereq}[DAMAGE]|[ATTACK]|[CUSTOM]{/prereq}{must4}{exp}리셋{/exp}[RESET]
+		[!TRIGGER CHECK]
+
+		{exp}위협요소가 있는지 체크하는 태그(체크 거리내에 어택렉트가 있는지 체크){/exp}[CHECK THREAT]
+			{must1}{exp}체크할 거리(픽셀){/exp}{int(:)}
+		[!CHECK THREAT]
+		
+		{exp}충돌 체크:충돌이 일어나고 있는동안 계속 ON MOVE COLLISION 을 체크{/exp}[AXIS INDEX]
+			{must1}{exp}0:X축 1:Y축 2:Z축{/exp}{int(0:2)}
+		[!AXIS INDEX]
+		
+		{exp}대상과 같은편이 맞고 있는지(DAMAGE상태인지) 체크{/exp}{etc}[IS OURTEAMATTACKED]
+
+		{exp}대상의 상태 변화 인지{/exp}{etc}[IS TARGETACTIVESTATUS]
+			{must1}{exp}SLOW(0) , FREEZE(1) , POISON(2) , STUN(3), CURSE(4), BLIND(5), LIGHTNING(6), STONE(7), SLEEP(8), BURN(9), WEAPON_BREAK(10), BLEEDING(11), HASTE(12), BLESS(13), ELEMENT(14), CONFUSE(15), HOLD(16), ARMOR_BREAK(17){/exp}{int(0:)}
+		[!IS TARGETACTIVESTATUS]
+
+		{opt1}{exp}나를 바라보고 있는 객체(몬스터, 패시브, 캐릭터)들을 검색{/exp}{etc}[FRONTSIDE]
+		{opt1}{exp}나를 등지고 있는 객체(몬스터, 패시브, 캐릭터)들을 검색{/exp}{etc}[BACKSIDE]
+		{opt2}{exp}내 시야내에 있는 객체(몬스터, 패시브, 캐릭터)들을 검색{/exp}{etc}[WITHIN SIGHT]
+		{opt2}{exp}내 시야에 벗어나 있는 객체(몬스터, 패시브, 캐릭터)들을 검색{/exp}{etc}[OUT OF SIGHT]
+		{opt3}{exp}내 왼쪽에 있는 객체(몬스터, 패시브, 캐릭터)들을 검색{/exp}[IS LEFT]
+		{opt3}{exp}내 오른쪽에 있는 객체(몬스터, 패시브, 캐릭터)들을 검색{/exp}[IS RIGHT]
+
+		{exp}커스텀 심볼 체크([SET SYMBOL]로 세팅한 오브젝트를 체크한다){/exp}[CHECK SYMBOL]
+			//mkjung 120704 설명 수정.
+			//심볼값은 0,1이 아닌 임의 int값
+			{must1}{exp}심볼값{/exp}{int(0:)}
+			{must2}{exp}0(체크함),1(체크안함){/exp}{int(0:1)}
+		[!CHECK SYMBOL]
+
+		//mkjung 120511 CHECKUP add. 
+		{prereq}[CHECKUP]{/prereq}{exp}체크된 오브젝트의 숫자를 체크{/exp}[CHECKED NO]
+			{must1}{exp}체크통과된 오브젝트가 체크할 숫자보다 더 크다면{/exp}[>]
+			{must1}{exp}체크통과된 오브젝트가 체크할 숫자와 같다면{/exp}[=]
+			{must1}{exp}체크통과된 오브젝트가 체크할 숫자보다 더 작다면{/exp}[<]
+			{must1}{exp}체크통과된 오브젝트가 체크할 숫자보다 같거나 더 크다면{/exp}[>=]
+			{must1}{exp}체크통과된 오브젝트가 체크할 숫자보다 같거나 더 작다면{/exp}[<=]
+			{must1}{exp}체크통과된 오브젝트가 체크할 숫자보다 같거나 더 크다면{/exp}[=>]
+			{must1}{exp}체크통과된 오브젝트가 체크할 숫자보다 같거나 더 작다면{/exp}[=<]
+			{must2}{exp}체크할 숫자{/exp}{int(:)}
+		[!CHECKED NO]	
+
+		//mkjung 120511 add. 
+		{exp}마지막 공격에 대한우선순위{/exp}[LAST TARGET PRIORITY]
+			{must1}[LOW]
+			{must1}[HIGH]
+			{must1}[NEVER]
+			{must1}[ALWAYS]
+		[!LAST TARGET PRIORITY]
+		
+		//mkjung 120514 add. 
+		{exp}{/exp}{etc}[IS FRONTPOS]
+		{exp}{/exp}{etc}[FACE TO FACE]
+		[IS GRABABLE]
+			{must1}{int(:)}
+		[!IS GRABABLE]
+
+		//mkjung 120517 add. 
+		{exp}대상의 범위를 체크{/exp}[CHECK AREA] 
+			{must1}{exp}X축 앞{/exp}{int(:)}
+			{must2}{exp}X축 뒤{/exp}{int(:)}
+			{must3}{exp}Y축 위{/exp}{int(:)}
+			{must4}{exp}Y축 아래{/exp}{int(:)}
+		[!CHECK AREA]
+
+		//mkjung 120517 add. 
+		{exp}공격가능 한놈인지 체크{/exp}{etc}[IS DAMAGE ENABLE]
+
+		{exp}데미지 박스 여부{/exp}[IS DAMAGEBOX ENABLE]
+			{must1}{exp}0이면 없는놈, 1이면 있는놈{/exp}{int(0:1)}
+		[!IS DAMAGEBOX ENABLE]
+
+		//mkjung 120518 add
+		[IS CHILD]
+			{must1}{exp}0이면 없는놈, 1이면 있는놈{/exp}{int(0:1)}
+		[!IS CHILD]
+	[/CHECKUP]
+
+	//mkjung 120511 add. 
+	[MOVE TO]
+		{must1}[TARGET]
+		{must2}{int(:)}
+	[!MOVE TO]
+
+	//mkjung  120512 TRIGGER except. 
+	{prereq}[CHECKUP]{/prereq}{exp}체크된 오브젝트의 숫자를 체크{/exp}[CHECKED NO]
+		{must1}{exp}체크통과된 오브젝트가 체크할 숫자보다 더 크다면{/exp}[>]
+		{must1}{exp}체크통과된 오브젝트가 체크할 숫자와 같다면{/exp}[=]
+		{must1}{exp}체크통과된 오브젝트가 체크할 숫자보다 더 작다면{/exp}[<]
+		{must1}{exp}체크통과된 오브젝트가 체크할 숫자보다 같거나 더 크다면{/exp}[>=]
+		{must1}{exp}체크통과된 오브젝트가 체크할 숫자보다 같거나 더 작다면{/exp}[<=]
+		{must1}{exp}체크통과된 오브젝트가 체크할 숫자보다 같거나 더 크다면{/exp}[=>]
+		{must1}{exp}체크통과된 오브젝트가 체크할 숫자보다 같거나 더 작다면{/exp}[=<]
+		{must2}{exp}체크할 숫자{/exp}{int(:)}
+	[!CHECKED NO]	
+
+	
+	{exp}대상들을 특정 조건에 맞게 오름/내림차순으로 정렬하고 뽑는다{/exp}[GET TARGET] 
+		{must1}{exp}몇놈을 뽑을 것인가?{/exp}{int(0:)}
+		{must2}{exp}HP 기준으로 정렬{/exp}[HP]
+		{must2}{exp}MP 기준으로 정렬{/exp}[MP]
+		{must2}{exp}레벨을 기준으로 정렬{/exp}[LEVEL]
+		{must2}{exp}나와의 거리를 기준으로 정렬{/exp}[DISTANCE]
+		{must2}{exp}랜덤(정렬하지 않고 무작위로 뽑음){/exp}[RANDOM]
+		{must2}{exp}내가 때린놈들을 기준으로 정렬{/exp}[LAST ATTACKSUCCESS]
+		//[RANDOM]에는 하이 로우 안들어감.
+		{prereq}[HP]|[MP]|[LEVEL]|[DISTANCE]|[LAST ATTACKSUCCESS]{/prereq}{must3}{exp}내림차순(낮은놈 우선)으로 정렬{/exp}[LOW]
+		{prereq}[HP]|[MP]|[LEVEL]|[DISTANCE]|[LAST ATTACKSUCCESS]{/prereq}{must3}{exp}오름차순(높은놈, 최근에 때린놈 우선)으로 정렬{/exp}[HIGH]
+	[!GET TARGET]
+
+
+	//mkjung 120511 add.
+	{etc}[ON END BEHAVIOR]	
+
+	//mkjung 120518 [DO BEHAVIOR],[DO PROC BEHAVIOR],[DIRECT DO BEHAVIOR대상인자 scope modi.
+	//mkjung 120518 [DIRECT DO BEHAVIOR] 대상인자 scope , 인자 modi.
+	//mkjung 120521 [DIRECT DO BEHAVIOR]대상인자 원래데로 
+	{exp}명령 실행 제어 부분{/exp}[DO BEHAVIOR],[DO PROC BEHAVIOR],[DIRECT DO BEHAVIOR]
+		{must1}{exp}자신{/exp}[ME]
+		{must1}{exp}자신을 몇초 이내로 공격한 공격자{/exp}[LAST ATTACKER]
+		{must1}{exp}자신을 마지막으로 공격한 공격자(액티브 오브젝트){/exp}[LAST ACTIVE ATTACKER]
+		{must1}[LAST ATTACKSUCCESS]
+		{must1}[CHARACTER ATTACKSUCCESS]
+		{must1}[LAST ATTACKSUCCESSES]
+		{must1}[LAST ACTIVE ATTACKSUCCESS]
+		{must1}[SUMMON MASTER]
+		{must1}[TARGET]
+		{must1}[CHECKUP OBJECT]
+		{must1}[DROPOUT OBJECT]
+		{must1}[LOAD TARGET]
+		{prereq}[ME]|[LAST ATTACKER]|[LAST ACTIVE ATTACKER]|[LAST ATTACKSUCCESS]|[CHARACTER ATTACKSUCCESS]|[LAST ATTACKSUCCESSES]|[LAST ACTIVE ATTACKSUCCESS]|[SUMMON MASTER]|[TARGET]|[CHECKUP OBJECT]|[DROPOUT OBJECT]{/prereq}{must2}{rndint(:)}
+		{prereq}[LOAD TARGET]{/prereq}{must2}{rndint(:)}
+		{prereq}[LOAD TARGET]{/prereq}{must3}{int(:)}
+	[!DO BEHAVIOR],[!DO PROC BEHAVIOR],[!DIRECT DO BEHAVIOR]
+	
+	
+	{exp}기재한 시간이 지나면 BEHAVIOR 를 호출함{/exp}[DELAY DO BEHAVIOR]
+		{must1}{exp}자신{/exp}[ME]
+		{must1}{exp}소환주{/exp}[SUMMON MASTER]		
+		{must1}{exp}CHECKUP 조건체크를 통과한 오브젝트{/exp}[CHECKUP OBJECT]		
+		{must1}{exp}CHECKUP 조건체크를 통과하지 못한 오브젝트{/exp}[DROPOUT OBJECT]
+		{must1}{exp}AI 상에서 잡고 있는 타겟{/exp}[TARGET]
+		{must1}{exp}자신을 몇초 이내로 공격한 공격자{/exp}[LAST ATTACKER]
+		{must1}{exp}자신을 마지막으로 공격한 공격자(액티브 오브젝트){/exp}[LAST ACTIVE ATTACKER]
+		{must1}{exp}자신이 마지막으로 데미지를 준 오브젝트{/exp}[LAST ATTACKSUCCESS]
+		{must1}{exp}저장한 오브젝트를 불러내서 사용{/exp}[LOAD TARGET]
+		//mkjung 120516 [LAST ATTACKSUCCESSES] add
+		{must1}{exp}자신이 마지막으로 데미지를 준 오브젝트들{/exp}[LAST ATTACKSUCCESSES]
+
+		//비해이비어 인덱스
+		{prereq}[ME]|[SUMMON MASTER]|[CHECKUP OBJECT]|[DROPOUT OBJECT]|[TARGET]|[LAST ATTACKER]|[LAST ACTIVE ATTACKER]|[LAST ATTACKSUCCESS]|[LAST ATTACKSUCCESSES]{/prereq}{must2}{exp}비해이비어 인덱스{/exp}{rndint(:)}
+		//딜레이 시간
+		{prereq}[ME]|[SUMMON MASTER]|[CHECKUP OBJECT]|[DROPOUT OBJECT]|[TARGET]|[LAST ATTACKER]|[LAST ACTIVE ATTACKER]|[LAST ATTACKSUCCESS]|[LAST ATTACKSUCCESSES]{/prereq}{must3}{exp}딜레이 시간(ms 단위){/exp}{int(0:)}
+
+		{prereq}[LOAD TARGET]{/prereq}{must2}{exp}타켓 인덱스{/exp}{int(:)}
+		{prereq}[LOAD TARGET]{/prereq}{must3}{exp}비해이비어 인덱스{/exp}{int(:)}
+		{prereq}[LOAD TARGET]{/prereq}{must4}{exp}딜레이 시간(ms 단위){/exp}{int(0:)}
+	[!DELAY DO BEHAVIOR]
+
+	//mkjung 120517 {must1 int}-->must2 modi
+	{exp}특정 오브젝트를 저장해둔다. 나중에 [LOAD TARGET] 태그로 불러쓸 수 있다{/exp}[SAVE TARGET OBJECT]
+		{must1}{exp}해당 오브젝트중에 첫번째 오브젝트만 [X번]에 저장{/exp}{int(0:)}
+		{must1}{exp}AI 상에서 잡고 있는 타겟{/exp}[TARGET]
+		{must1}{exp}자신을 몇초 이내로 공격한 공격자{/exp}[LAST ATTACKER]	
+		{must1}{exp}자신을 마지막으로 공격한 공격자(액티브 오브젝트)[LAST ACTIVE ATTACKER]
+		{must1}{exp}자신이 마지막으로 데미지를 준 오브젝트{/exp}[LAST ATTACKSUCCESS]
+		{must1}{exp}소환주{/exp}[SUMMON MASTER]
+		//mkjung 120516 [LAST ATTACKSUCCESSES] add
+		{must1}{exp}자신이 마지막으로 데미지를 준 오브젝트들{/exp}[LAST ATTACKSUCCESSES]
+		{opt1}{exp}해당 오브젝트를 [X번]에 저장{/exp}{int(0:)}
+	[!SAVE TARGET OBJECT]
+
+	//mkjung 120516 add.
+	{exp}쾌속포-번개 체크{/exp}[REALDUNGEON CHECKUP]
+		{must1}{int(:)}
+		{must2}{int(:)}
+		{must3}{int(:)}
+	[!REALDUNGEON CHECKUP]
+	
+	//mkjung 120516 add.
+	[CHECK PARTYMEMBERS STATE]
+		{must1}{exp}모두 살아있을때만 통과{/exp}[ALL ALIVE]
+		{must1}{exp}한놈이라도 죽었다면 통과, 아니면 통과안함{/exp}[EVEN ONE DEATH]
+	[!CHECK PARTYMEMBERS STATE]
+[/TRIGGER]
+
+{exp}행동제어부, [TRIGGER]에서 넘어온 대상들을 제어한다{/exp}[BEHAVIOR]
+	
+	{exp}패시브오브젝트 소환{/exp}[CREATE PASSIVEOBJECT]
+		//INDEX, 파티클이름, LEVEL, POS 는 반드시 순서대로 들어가야함. 그 외는 들어가던 말던 상관없음.
+		{must1}{exp}패시브오브젝트 인덱스번호{/exp}[INDEX]
+			//mkjung 120516 int->rndint로 modi.
+			{must1}{exp}인덱스번호{/exp}{rndint(:)}
+		[!INDEX]
+		{must2}{exp}파티클 경로설정{/exp}[PARTICLE FILENAME]
+			{must1}{exp}파티클 경로명{/exp}{string}
+		[!PARTICLE FILENAME]
+		{must3}{exp}소환할 패시브오브젝트 레벨{/exp}[LEVEL]
+			{must1}{exp}소환할 레벨{/exp}{int(0:)}	
+		[!LEVEL]		
+		{must4}{exp}소환할 좌표설정{/exp}[POS]
+			{must1}{exp}소환할 X좌표{/exp}{rndint(:)}
+			{must2}{exp}소환할 Y좌표{/exp}{rndint(:)}
+			{must3}{exp}소환할 Z좌표{/exp}{rndint(:)}
+		[!POS]		
+		{opt1}{exp}각 낙하모드 사용{/exp}[USE ANGLE]
+			{must1}{exp}낙하할 각도(degree){/exp}{int(0:360)}
+			{must2}{exp}초기 Z좌표{/exp}{int(0:)}
+			{must3}{exp}낙하속도(픽셀/s){/exp}{int(0:)}
+			{must4}{exp}땅에 충돌했을때의 처리(0. 관통, 1. 슬라이드, 2. 정지, 3. 사라짐){/exp}{int(0:3)}
+		[!USE ANGLE]	
+		//mkjung 120517 add.
+		{opt2}{etc}[USE MY TEAM]
+		{opt2}{exp}중립 팀으로 나타남{/exp}{etc}[USE NEUTRAL TEAM]
+		{opt2}{exp}대상의 팀으로 나타남(디폴트는 주인의 팀){/exp}[USE TARGET TEAM]		
+		{opt3}{exp}소환된 패시브의 방향이 내 방향을 사용{/exp}{etc}[USE MY DIRECTION]
+		//mkjung 120517 add.
+		{opt3}{exp}방향 보정을 하지 않음{/exp}{etc}[NOT USE OBJECT DIRECTION]
+		{opt4}{exp}나를 기준으로 좌표를 설정함, 파티클 경로설정시에만 적용됨(상대좌표){/exp}{etc}[USE MY BASEPOS]
+		{opt4}{exp}맵을 기준으로 좌표를 설정함(절대좌표){/exp}{etc}[USE MAP POS]
+		{opt5}{exp}생성됐을때 바라볼 방향을 지정{/exp}[FIX DIRECTION]
+			{must1}{exp}중립{/exp}[NEUTRAL]
+			{must1}{exp}왼쪽{/exp}[LEFT]
+			{must1}{exp}오른쪽{/exp}[RIGHT]
+			{must1}{exp}랜덤방향{/exp}[RANDOM]
+		[!FIX DIRECTION]
+		{opt6}{exp}WarningMark 보정{/exp}[WARNING MARK]
+			{must1}{exp}x위치 보정{/exp}{int(:)}
+			{must2}{exp}y위치 보정{/exp}{int(:)}
+			//mkjung 120517 int-->rndint
+			{must3}{exp}딜레이{/exp}{rndint(:)}
+			{must4}{exp}경고마크 종류(1: 적색보통, 2: 적색대형, 3: 적색보통(아군만 보임), 4: 적색대형(아군만 보임), 5: 녹색보통, 6: 녹색대형){/exp}{int(1:6)}
+		[!WARNING MARK]
+		{opt7}{exp}대상의 Z좌표를 기준으로 좌표 설정할 것인지 여부{/exp}{etc}[USE OBJECT ZPOS]
+		{opt8}{exp}대상을 따라가도록 설정{/exp}{etc}[FOLLOWING TARGET]
+		{opt9}{exp}맵 상에서 이동 가능한 위치인지 체크{/exp}{etc}[MOVABLE POS ONLY]
+		//mkjung 120514 add.
+		{opt10}{exp}소환 이펙트 없이 나감{/exp}{etc}[NO EFFECT]
+	[/CREATE PASSIVEOBJECT]	
+	
+	{exp}몬스터 소환{/exp}[SUMMON MONSTER]
+		//INDEX, LEVEL, POS 는 반드시 순서대로 들어가야함. 그 외는 들어가던 말던 상관없음.
+		{must1}{exp}인덱스번호{/exp}[INDEX]
+		//mkjung 120515 int->rndint modi.
+			{must1}{rndint(:)}
+		[!INDEX]
+		{must2}{exp}마법레벨{/exp}[LEVEL]
+			{must1}{int(0:)}
+		[!LEVEL]
+		{must3}{exp}부모 좌표의 상대 좌표{/exp}[POS]
+			{must1}{exp}소환할 X좌표(상대좌표){/exp}{rndint(:)}
+			{must2}{exp}소환할 Y좌표(상대좌표){/exp}{rndint(:)}
+			{must3}{exp}소환할 Z좌표(상대좌표){/exp}{rndint(:)}
+		[!POS]
+		{opt1}{exp}소환 이펙트 없이 나감{/exp}{etc}[NO EFFECT]
+		{opt2}{exp}마법진이 그려지면서 소환됨{/exp}{etc}[MAGIC CIRCLE]
+		{opt3}{exp}몬스터가 뛰어 나가듯이 소환됨{/exp}[JUMP OUT]
+			{must1}{exp}X속도{/exp}{rndint(:)}
+			{must2}{exp}Y속도{/exp}{rndint(:)}
+			//mkjung 120515 int->rndint modi.
+			{must3}{exp}높이{/exp}{rndint(:)}
+			{must4}{exp}중립{/exp}[NEUTRAL]
+			{must4}{exp}왼쪽{/exp}[LEFT]
+			{must4}{exp}오른쪽{/exp}[RIGHT]
+			{must4}{exp}랜덤방향{/exp}[RANDOM]
+			{must5}{exp}중립{/exp}[NEUTRAL]
+			{must5}{exp}위{/exp}[UP]
+			{must5}{exp}아래{/exp}[DOWN]
+			{must5}{exp}랜덤방향{/exp}[RANDOM]
+		[!JUMP OUT]
+		{opt4}{exp}대상의 팀으로 나타남.(디폴트는 주인의 팀.){/exp}{etc}[USE TARGET TEAM]
+		{opt5}{exp}좌표 기준 X축 이동을 자신이 바라보는 방향으로 할 것인지 결정{/exp}{etc}[USE MY DIRECTION]
+		{opt6}{exp}상대 좌표 이동을 자신의 좌표 기준으로 할 것인지 지정{/exp}{etc}[USE MY BASEPOS]
+		{opt7}{exp}방향 보정을 하지 않음{/exp}{etc}[NOT USE OBJECT DIRECTION]
+		{opt8}{exp}좌표이동을 맵 절대 좌표로 함{/exp}{etc}[USE MAP POS]
+		{opt9}{exp}팀 지정{/exp}[TEAM]
+			{must1}{exp}0~:캐릭터 팀 100~: 몬스터팀 200~:중립{/exp}{int(0:)}
+		[!TEAM]
+		{opt10}{exp}Z좌표를 오브젝트 좌표를 따라가도록 수정{/exp}{etc}[USE OBJECT ZPOS]
+		{opt11}{exp}소환물이 살아 있을 시간 설정{/exp}[SUMMON TIME]
+			{must1}{exp}살아있을 시간(ms){/exp}{int(0:)}
+		[!SUMMON TIME]
+
+		//mkjung 120518 add.
+		{opt12}[SUMMON MARK]
+			{must1}{exp}소환 마크 보일 값{/exp}{int(0:)} // 바닥에 소환 마크 안보이게함 //
+		[!SUMMON MARK]
+		
+		//mkjung 120518 add.
+		{exp}바라볼 방향을 지정{/exp}[FIX DIRECTION] 
+			{must1}{exp}중립{/exp}[NEUTRAL]
+			{must1}{exp}왼쪽{/exp}[LEFT]
+			{must1}{exp}오른쪽{/exp}[RIGHT]
+			{must1}{exp}랜덤방향{/exp}[RANDOM]
+		[!FIX DIRECTION] 
+	[/SUMMON MONSTER]
+
+	{exp}APC 소환{/exp}[SUMMON APC]
+		//INDEX, LEVEL, POS 는 반드시 순서대로 들어가야함. 그 외는 들어가던 말던 상관없음.
+		{must1}{exp}인덱스번호{/exp}[INDEX]
+			{must1}{int(0:)}
+		[!INDEX]
+		{must2}{exp}마법레벨{/exp}[LEVEL]
+			{must1}{int(0:)}
+		[!LEVEL]
+		{must3}{exp}부모 좌표의 상대 좌표{/exp}[POS]
+			{must1}{exp}소환할 X좌표(상대좌표){/exp}{int(:)}
+			{must2}{exp}소환할 Y좌표(상대좌표){/exp}{int(:)}
+			{must3}{exp}소환할 Z좌표(상대좌표){/exp}{int(:)}
+		[!POS]
+		{opt1}{exp}소환 이펙트 없이 나감{/exp}{etc}[NO EFFECT]
+		{opt2}{exp}마법진이 그려지면서 소환됨{/exp}{etc}[MAGIC CIRCLE]
+		{opt3}[JUMP OUT]
+			{must1}{exp}x velocity{/exp}{int(:)}
+			{must2}{exp}y velocity{/exp}{int(:)}
+			{must3}{exp}height{/exp}{int(:)}
+			{must4}[NEUTRAL]
+			{must4}[LEFT]
+			{must4}[RIGHT]
+			{must4}[RANDOM]
+			{must5}[NEUTRAL]
+			{must5}[UP]
+			{must5}[DOWN]
+			{must5}[RANDOM]
+		[!JUMP OUT]
+		{opt4}{exp}대상의 팀으로 나타남.(디폴트는 주인의 팀.){/exp}{etc}[USE TARGET TEAM]
+		{opt5}{exp}좌표 기준 X축 이동을 자신이 바라보는 방향으로 할 것인지 결정{/exp}{etc}[USE MY DIRECTION]
+		{opt6}{exp}상대 좌표 이동을 자신의 좌표 기준으로 할 것인지 지정{/exp}{etc}[USE MY BASEPOS]
+		{opt7}{exp}방향 보정을 하지 않음{/exp}{etc}[NOT USE OBJECT DIRECTION]
+		{opt8}{exp}좌표이동을 맵 절대 좌표로 함{/exp}{etc}[USE MAP POS]
+		{opt9}{exp}Z좌표를 오브젝트 좌표를 따라가도록 수정{/exp}{etc}[USE OBJECT ZPOS]
+		{opt10}{exp}소환물이 살아 있을 시간 설정{/exp}[SUMMON TIME]
+			{must1}{exp}시간{/exp}{int(0:)}
+		[!SUMMON TIME]
+		{opt11}{exp}태그 사용하면 소환자가 맵을 넘어갈 때 따라가고 아님 안따라감{/exp}{etc}[FOLLOW SUMMONER]
+		{opt12}{etc}[SUMMON TYPE]
+			{must1}{exp}서머너 죽으면 중립{/exp}[WITHOUT SUMMONER NONE]
+			{must1}{exp}서머너 죽으면 사라짐{/exp}[WITHOUT SUMMONER DIE]
+		[!SUMMON TYPE]
+	[/SUMMON APC]
+
+	{exp}부스터 어팬디지{/exp}[BOOSTER APPENDAGE]
+		{opt1}{exp}높이에 따라 카메라 추적할지 여부(생략 시 초기 값 : 추적 안함){/exp}{etc}[ZPOS CAMERA VIEW]
+		{opt2}{exp}부스터의 가속도{/exp}[BOOSTER ACCEL]
+			{must1}{exp}생략 시 초기 값 : 0{/exp}{int(0:)}
+		[!BOOSTER ACCEL]
+		{opt3}{exp}부스터의 초기속도{/exp}[BOOSTER VELOCITY]
+			{must1}{exp}생략 시 초기 값 : 0{/exp}{int(0:)}
+		[!BOOSTER VELOCITY]
+		{opt4}{exp}부스터 게이지 소모 시간(단위: ms){/exp}[BOOSTER USING TIME]
+			{must1}{exp}생략 시 초기 값 : 0{/exp}{int(0:)}
+		[!BOOSTER USING TIME]
+		{opt5}{exp}부스터 게이지 회복 시간(단위: ms){/exp}[BOOSTER RECOVERY TIME]
+			{must1}{exp}생략 시 초기 값 : 0{/exp}{int(0:)}
+		[!BOOSTER RECOVERY TIME]
+		{opt6}{exp}회피 가속도(> 0){/exp}[EVADE ACCEL]
+			{must1}{exp},생략 시 초기 값 : 0{/exp}{int(0:)}
+		[!EVADE ACCEL]
+		{opt7}{exp}중력 가속도(>= 0){/exp}[GRAVITY]
+			{must1}{exp}생략 시 초기 값 : 0{/exp}{int(0:)}
+		[!GRAVITY]
+		{opt8}{exp}낙하 초기 속도(>= 0){/exp}[FALLING INIT VELOCITY]
+			{must1}{exp}생략 시 초기 값 : 0{/exp}{int(0:)}
+		[![FALLING INIT VELOCITY]
+		{opt9}{exp}종단 속도(> 0){/exp}[TERMINAL VELOCITY]
+			{must1}{exp}생략 시 초기 값 : 0{/exp}{int(0:)}
+		[!TERMINAL VELOCITY]
+		{opt10}{exp}낙하 초기 높이(> 0){/exp}[HEIGHT]
+			{must1}{exp}생략 시 초기 값 : 0{/exp}{int(0:)}
+		[!HEIGHT]
+		{opt11}{exp}낙하 중에 장면 전환을 위해 카메라가 멈추는 높이(> 0){/exp}[LIMIT HEIGHT]
+			{must1}{exp}생략 시 초기 값 : 0{/exp}{int(0:)}
+		[!LIMIT HEIGHT]
+		{opt12}{exp}초기 위치{/exp}[INIT POS]
+			{must1}{exp}초기 X좌표{/exp}{int(:)}
+			{must2}{exp}초기 Y좌표{/exp}{int(:)}
+			{must3}{exp}초기 Z좌표{/exp}{int(:)}
+		[!INIT POS]
+		{opt13}{exp}이동 시 각 라인간의 거리(> 0){/exp}[LINE GAP]
+			{must1}{exp}생략 시 초기 값 : 200{/exp}{int(0:)}
+		[!LINE GAP]
+		{opt14}{exp}키 입력을 막을 것인지 여부{/exp}{etc}[DISABLE KEYINPUT]
+		{opt15}[DEFAULT ANI]
+			{must1}{exp}경로{/exp}{string}
+		[!DEFAULT ANI]
+		{opt16}[BOOSTING ANI]
+			{must1}{exp}경로{/exp}{string}
+		[!BOOSTING ANI]
+	[/BOOSTER APPENDAGE]
+
+	{exp}중심좌표{/exp}[SET MOVABLE AREA]
+		{exp}기준좌표(생략 시, 기본값: 0 0 0){/exp}[POS]
+			{must1}{exp}기준 X좌표{/exp}{int(:)}
+			{must2}{exp}기준 Y좌표{/exp}{int(:)}
+			{must3}{exp}기준 Z좌표{/exp}{int(:)}
+		[!POS]
+		{exp}각 값의 1/2로 +/- 범위를 정함(>= 0, 짝수이지 않으면 1px 오차가 생김){/exp}[RANGE]
+			{must1}{exp}X넓이(범위넓이의 1/2){/exp}{int(0:)}
+			{must2}{exp}Y넓이(범위넓이의 1/2){/exp}{int(0:)}
+			{must3}{exp}Z넓이(범위넓이의 1/2){/exp}{int(0:)}
+		[!RANGE]
+		{exp}상대좌표인지 절대좌표인지 여부를 설정{/exp}[COORDINATE]
+			{must1}{exp}상대좌표: `RELATIVE` 절대좌표: `ABSOLUTE`{/exp}{string}
+		[!COORDINATE]
+	[/SET MOVABLE AREA]
+	
+	{exp}중력값을 해당 int값으로 변경{/exp}[CHANGE GRAVITY]
+		{must1}{int(0:)}
+	[!CHANGE GRAVITY]
+		
+	{exp}대상이나 나를 텔레포트 시킨다{/exp}[TELEPORT]
+		{must1}{exp}이동할 좌표(중심축){/exp}[POS]		
+			{must1}{exp}이동할 X좌표{/exp}{rndint(:)}
+			{must2}{exp}이동할 Y좌표{/exp}{rndint(:)}
+			{must3}{exp}이동할 Z좌표{/exp}{rndint(:)}
+		[!POS]
+		{opt1}{exp}좌표기준 X축 이동을 내가 바라보는 방향으로 할 것인지{/exp}{etc}[USE MY DIRECTION]
+		{opt1}{exp}방향 설정을 하지 않음(무조건 오른쪽){/exp}{etc}[NOT USE OBJECT DIRECTION]
+		{opt2}{exp}내 좌표 기준으로 이동을 할 것인지{/exp}{etc}[USE MY BASEPOS]
+		{opt2}{exp}맵 좌표 기준으로 이동을 할 것인지{/exp}{etc}[USE MAP POS]
+		{opt3}{exp}기준 오브젝트의 Z위치를 사용하지 않음{/exp}{etc}[NOT USE OBJECT ZPOS]
+		{opt4}{exp}나를 텔레포트 시킴{/exp}{etc}[MOVE ME]
+		{opt4}{exp}대상을 텔레포트 시킴{/exp}{etc}[MOVE TARGET]
+		{opt5}{exp}고정형 몹도 텔레포트 허용{/exp}{etc}[ALLOW FIXTURE]
+		//mkjung 120518 add 
+		{opt6}[USE EFFECT]
+	[/TELEPORT]
+	
+	//mkjung 120511 add.
+	//mkjugn 120516 modi.
+	{exp}변수에 수식,수치를 또는 object의 현재 시간을 가져와서 대입(동적으로 오브젝트 특정데이터를 대입){/exp}[DIM]
+
+		//{`변수` [=] 숫자 or`변수`} [+] 숫자
+		{must1}{exp}할당할 변수명{/exp}{string}
+		{must2}{exp}대입 연산자{/exp}[=]
+
+		{must3}{exp}현재 시간(ms)을 얻어온다{/exp}[GET TIME]
+		{must3}{exp}적용할 수치{/exp}{int(:)}
+		{must3}{exp}할당할 변수명{/exp}{string}
+		
+		{opt1}[+]
+		{opt1}[-]
+		{opt1}[*]
+		{opt1}[/]
+		{opt1}[>]
+		{opt1}[<]
+		{opt1}[>=]
+		{opt1}[<=]
+		{opt1}[=>]
+		{opt1}[=<]
+		{opt2}{exp}할당할 변수명{/exp}{string}
+		{opt2}{exp}적용할 수치{/exp}{int(:)}
+	[!DIM][/DIM]
+
+	
+	{exp}attackInfo파일을 변경{/exp}[CHANGE ATTACKINFO]
+		{must1}{exp}변경할 파일 경로명{/exp}{string}
+		{must1}{exp}[DEFAULT ATTACKINFO]에서 지정한 기본 공격정보로 돌아감{/exp}[DEFAULT]
+	[!CHANGE ATTACKINFO]
+
+	
+	{exp}대상의 속도를 지정{/exp}[SET SPEED]
+		{opt1}{exp}X축 속도{/exp}[X AXIS] // 필수아닐때 {opt번호}
+			{must1}{rndint(0:)}
+		[!X AXIS]
+		{opt2}{exp}Y축 속도{/exp}[Y AXIS]
+			{must1}{rndint(0:)}
+		[!Y AXIS]
+		{opt3}{exp}Z축 속도{/exp}[Z AXIS]
+			{must1}{rndint(0:)}
+		[!Z AXIS]
+		{opt4}{exp}방향이랑 관련 없을 경우. 절대방향은 오른쪽과 아래가 디폴트{/exp}{etc}[NOT USE DIRECTION]
+		{opt4}{exp}방향을 내 방향으로 맞춘다{/exp}{etc}[USE MY DIRECTION]
+	[/SET SPEED]
+
+	{exp}대상의 가속도 지정{/exp}[SET ACCEL]
+		{exp}{/exp}[X AXIS] 
+			{must1}{int(0:)}
+		[!X AXIS]
+		{exp}{/exp}[Y AXIS]
+			{must1}{int(0:)}
+		[!Y AXIS]
+		{exp}방향을 내 방향으로 맞춘다{/exp}{etc}[USE MY DIRECTION]
+	[/SET ACCEL]
+
+	{exp}파티클 생성{/exp}[PARTICLE]
+		{must1}{exp}파티클 파일의 상대 경로{/exp}{string}
+		//mkjung 120518 must-->opt로 modi
+		{opt1}{exp}생성할 파티클 X좌표{/exp}{int(:)}
+		{opt2}{exp}생성할 파티클 Y좌표{/exp}{int(:)}
+		{opt3}{exp}생성할 파티클 Z좌표{/exp}{int(:)}
+	[!PARTICLE]
+		
+	{exp}특정 액션의 트리거의 인덱스를 받아 [ON][OFF] 하는 기능{/exp}[TRIGGER]
+		{must1}{exp}트리거번호{/exp}{int(0:)}
+		{must1}{exp}stay 액션{/exp}[STAY]
+		{must1}{exp}move 액션{/exp}[MOVE]
+		{must1}{exp}sit 액션{/exp}[SIT]
+		{must1}{exp}down 액션{/exp}[DOWN]
+		{must1}{exp}damage 액션{/exp}[DAMAGE]
+		{must1}{exp}attack 액션{/exp}[ATTACK]
+		{must1}{exp}custom 액션{/exp}[CUSTOM]
+		{must1}{exp}default 액션{/exp}[DEFAULT]
+		{must1}{exp}proc 액션{/exp}[PROC]
+
+		//[X번] 트리거를 on.off.reset
+		{prereq}{int}{/prereq}{must2}{exp}켬{/exp}[ON]
+		{prereq}{int}{/prereq}{must2}{exp}끔{/exp}[OFF]
+		{prereq}{int}{/prereq}{must2}{exp}LIMIT 횟수 리셋{/exp}[RESET]
+		//[액션]의 [X번] 트리거를 on.off.reset
+		{prereq}[STAY]|[MOVE]|[SIT]|[DOWN]|[DEFAULT]|[PROC]{/prereq}{must2}{exp}트리거번호{/exp}{int(0:)}
+		{prereq}[STAY]|[MOVE]|[SIT]|[DOWN]|[DEFAULT]|[PROC]{/prereq}{must3}{exp}켬{/exp}[ON]
+		{prereq}[STAY]|[MOVE]|[SIT]|[DOWN]|[DEFAULT]|[PROC]{/prereq}{must3}{exp}끔{/exp}[OFF]
+		{prereq}[STAY]|[MOVE]|[SIT]|[DOWN]|[DEFAULT]|[PROC]{/prereq}{must3}{exp}LIMIT 횟수 리셋{/exp}[RESET]
+		//[X번] [액션]의 [X번] 트리거를 on.off.reset
+		{prereq}[DAMAGE]|[ATTACK]|[CUSTOM]{/prereq}{must2}{exp}액션번호{/exp}{int(0:)}
+		{prereq}[DAMAGE]|[ATTACK]|[CUSTOM]{/prereq}{must3}{exp}트리거번호{/exp}{int(0:)}
+		{prereq}[DAMAGE]|[ATTACK]|[CUSTOM]{/prereq}{must4}{exp}켬{/exp}[ON]
+		{prereq}[DAMAGE]|[ATTACK]|[CUSTOM]{/prereq}{must4}{exp}끔{/exp}[OFF]
+		{prereq}[DAMAGE]|[ATTACK]|[CUSTOM]{/prereq}{must4}{exp}LIMIT 횟수 리셋{/exp}[RESET]
+	[!TRIGGER]
+
+	{exp}부유형 오브젝트 높이를 변경{/exp}[CHANGE FLOATING HEIGHT]
+		{must1}{exp}부유높이(픽셀){/exp}{int(0:)}
+	[!CHANGE FLOATING HEIGHT]
+
+	{exp}HP혹은 MP를 회복시킨다. 음수를 넣을 경우 깎는 효과도 있다. 이펙트 출력됨{/exp}[RESTORE]
+		{must1}[HP]
+		{must1}[MP]
+		{must2}{exp}양수 : 회복, 음수 : 깎음{/exp}{int(:)}
+		{must3}{exp}수치기준{/exp}[POINT]
+		{must3}{exp}퍼센트기준{/exp}[%]
+	[!RESTORE]
+
+	{exp}대상을 육편도 남기지 않고 그냥 파괴함{/exp}{etc}[DESTROY]
+	
+	{exp}비해비어를 실행한다{/exp}[SEND DO BEHAVIOR]
+		{must1}{exp}자신{/exp}[ME] 
+		{must1}{exp}CHECKUP 조건체크를 통과한 오브젝트{/exp}[CHECKUP OBJECT]
+		{must1}{exp}CHECKUP 조건체크를 통과하지 못한 오브젝트{/exp}[DROPOUT OBJECT]
+		{must1}{exp}나의 타겟{/exp}[TARGET]
+		{must1}{exp}자신을 몇초 이내로 공격한 공격자(오브젝트){/exp}[LAST ATTACKER]
+		{must1}{exp}자신을 마지막으로 공격한 공격자(액티브 오브젝트){/exp}[LAST ACTIVE ATTACKER]
+		{must1}{exp}내가 마지막으로 때린 오브젝트{/exp}[LAST ATTACKSUCCESS]
+		{must1}{exp}나를 소환한 소환주{/exp}[SUMMON MASTER]
+		{must1}{exp}이 액션에서 저장한 오브젝트{/exp}[LOAD TARGET]
+		{must2}{exp}실행할 비해비어 인덱스{/exp}{int(:)}
+	[!SEND DO BEHAVIOR]
+	
+	//mkjung 120511 mody.
+	{exp}어택렉트를 켜거나 끄거나 리셋{/exp}[ATTACKRECT]
+		{must1}{exp}어택렉트를 켠다. 타격을 할 수 있음{/exp}[ON]
+		{must1}{exp}어택렉트를 끈다. 타격을 할 수 없음{/exp}[OFF]
+		//mkjung 120511 add.
+		{must1}{exp}어택렉트를 리셋한다. 한 액션에서 한번밖에 때릴 수 없기 때문에 연타를 하고 싶을때 사용함{/exp}[RESET]
+	[!ATTACKRECT]
+
+	//mkjung 120511 add.
+	[SET SAVED TARGET]
+		{must1}{int(:)}
+	[!SET SAVED TARGET]
+
+	//mkjung 120511 add.
+	[MOVE TO TARGET]
+		{must1}{int(:)}
+	[!MOVE TO TARGET]
+
+	{exp}HP를 강제로 지정 숫자만큼 변경{/exp}[SET HP]
+		{must1}{exp}설정할 HP 수치{/exp}{int(0:)}
+	[!SET HP]
+
+	{exp}대상의 방향을 바꿔줌{/exp}[SET DIRECTION]
+		{must1}[LEFT]
+		{must1}[RIGHT]
+		{must1}{exp}현재 AI타겟으로 대상의 방향을 바꿔줌{/exp}[TO TARGET]
+		{must1}[RANDOM]
+		{must1}{exp}현재 방향의 반대로 대상의 방향을 바꿔줌{/exp}[REVERSE]
+		{must1}{exp}내 방향으로 대상의 방향을 바꿔줌{/exp}[MY DIRECTION]
+		{must1}{exp}내 반대방향으로 대상의 방향을 바꿔줌{/exp}[MY OPPOSITE DIRECTION]
+		//mkjung 120518 add
+		{must1}[MY CURRENT DIRECTION]	
+	[!SET DIRECTION]
+
+	{exp}캐스팅 바가 뜬 후에 자동으로 지정된 비해이비어를 실행{/exp}[CASTING]
+		{must1}{exp}캐스팅 바 지속시간{/exp}{int(:)}
+		{must2}{exp}비해이비어 인덱스{/exp}{int(:)}
+	[!CASTING]
+
+	{exp}액션이 중간에 바뀌어도 캐스팅은 계속됨{/exp}[ABS CASTING]
+		{must1}{exp}캐스팅 지속시간{/exp}{rndint(0:)}
+		{must2}{exp}비해이비어 인덱스{/exp}{int(:)}
+	[!ABS CASTING]
+
+	{exp}캐스팅바를 그려주고 캐스팅을 한다{/exp}[CASTING EX]
+		{must1}{exp}캐스팅 시간{/exp}{int(0:)}
+		{must2}{exp}캐스팅후 실행할 BEHAVIOR 인덱스{/exp}{int(:)}
+		{must3}{exp}일반 캐스팅(액션이 바뀌면 캐스팅이 끊긴다){/exp}[NORMAL]
+		{must3}{exp}절대 캐스팅(액션이 바뀌어도 캐스팅이 유지된다. 공작유리스 참조){/exp}[ABSOLUTE]
+		{must4}{exp}대상에 캐스팅 게이지를 붙인다{/exp}[DISPLAY TARGET]
+		{must4}{exp}나에게 캐스팅 게이지를 붙인다{/exp}[DISPLAY ME]
+		{must5}{exp}화면 중앙 하단에 캐스팅바를 띄운다{/exp}[DISPLAY SCREEN]
+		{must6}{exp}캐스팅후 나의 behavior를 부른다{/exp}[DO ME]
+	[/CASTING EX]
+
+	{exp}현재 액션을 바꾼다. 바로 바꿀수도 있고 현재 액션이 끝난후에 바꿀수도 있다(패시브오브젝트의 경우 액션을 바꿔도 그 액션이 끝나면 basic action으로 돌아옴){/exp}[SET ACTION]
+		{must1}[STAND]
+		{must1}[DAMAGE]
+		{must1}[HOLD]
+		{must1}[DOWN]
+		{must1}[SIT]
+		{must1}[DIE]
+		{must1}[ATTACK]
+		{must1}[CUSTOM]
+		{must1}[PATTERN]
+
+		{prereq}[STAND]|[HOLD]|[SIT]|[DIE]{/prereq}{must2}{exp}바로 변경{/exp}[NOW]
+		{prereq}[STAND]|[HOLD]|[SIT]|[DIE]{/prereq}{must2}{exp}현재 액션의 애니메이션이 끝날때까지 기다렸다가 끝난후 변경{/exp}[END]
+		
+
+		{prereq}[DAMAGE]{/prereq}{must2}{exp}데미지모션을 취할 방향{/exp}[DIRECTION]
+		{prereq}[DAMAGE]{/prereq}{must2}{exp}힛리커버리{/exp}[HIT DELAY]
+		{prereq}[DAMAGE]{/prereq}{must2}{exp}데미지 모션 번호 0, 1{/exp}[DAMAGE MOTION]
+		{prereq}[DAMAGE]{/prereq}{must2}{exp}데미지 타입{/exp}[HIT TYPE]
+		{prereq}[DAMAGE]{/prereq}{must2}{exp}경직도{/exp}[RIGIDITY]
+		{prereq}[DAMAGE]{/prereq}{must2}{exp}히트리커버리 무시하고, 강제로 경직시키는 시간(ms){/exp}[FORCE HIT STUN TIME]
+		{prereq}[DAMAGE]{/prereq}{must2}{exp}넉백타입{/exp}[KNOCK BACK TYPE]
+		{prereq}[DAMAGE]{/prereq}{must2}{exp}넉백되는 픽셀{/exp}[KNOCK BACK PIXEL]
+
+		
+		{prereq}[DIRECTION]{/prereq}{must3}[LEFT]
+		{prereq}[DIRECTION]{/prereq}{must3}[RIGHT]
+		{prereq}[DIRECTION]{/prereq}{must3}[RANDOM]
+		{prereq}[DIRECTION]{/prereq}{must3}[REVERSE]
+		{prereq}[DIRECTION]{/prereq}{must3}[MY DIRECTION]
+		{prereq}[DIRECTION]{/prereq}{must3}[MY OPPOSITE DIRECTION]
+		{prereq}[DIRECTION]{/prereq}{must4}{exp}바로 변경{/exp}[NOW]
+		{prereq}[DIRECTION]{/prereq}{must4}{exp}현재 액션의 애니메이션이 끝날때까지 기다렸다가 끝난후 변경{/exp}[END]
+
+		{prereq}[HIT DELAY]|[DAMAGE MOTION]|[RIGIDITY]|[FORCE HIT STUN TIME]|[KNOCK BACK PIXEL]{/prereq}{must3}{int(:)}
+		{prereq}[HIT DELAY]|[DAMAGE MOTION]|[RIGIDITY]|[FORCE HIT STUN TIME]|[KNOCK BACK PIXEL]{/prereq}{must4}{exp}바로 변경{/exp}[NOW]
+		{prereq}[HIT DELAY]|[DAMAGE MOTION]|[RIGIDITY]|[FORCE HIT STUN TIME]|[KNOCK BACK PIXEL]{/prereq}{must4}{exp}현재 액션의 애니메이션이 끝날때까지 기다렸다가 끝난후 변경{/exp}[END]
+
+		{prereq}[HIT TYPE]{/prereq}{must3}{exp}넉다운 이펙트{/exp}[KNOCK]
+		{prereq}[HIT TYPE]{/prereq}{must3}{exp}베기 이펙트{/exp}[SLASH]
+		{prereq}[HIT TYPE]{/prereq}{must3}{exp}불태움 이펙트{/exp}[BURN]
+		{prereq}[HIT TYPE]{/prereq}{must3}{exp}커스텀 이펙트{/exp}[CUSTOM]
+		{prereq}[HIT TYPE]{/prereq}{must3}{exp}마나번 이펙트{/exp}[MANA BURN]
+
+		{prereq}[KNOCK BACK TYPE]{/prereq}{must3}{exp}일반{/exp}[NORMAL]
+		{prereq}[KNOCK BACK TYPE]{/prereq}{must3}{exp}뒤로 많이 밀림{/exp}[KNOCK BACK]
+		{prereq}[KNOCK BACK TYPE]{/prereq}{must3}{exp}뒤로 약간 밀림{/exp}[SHORT KNOCK BACK]
+		{prereq}[KNOCK BACK TYPE]{/prereq}{must3}{exp}150ms동안 뒤로 밀림. 이동중 경직이 풀리면 이동도 멈춤{/exp}[PIXEL WITHOUT DAMAGE TIME]
+		{prereq}[KNOCK BACK TYPE]{/prereq}{must3}{exp}뒤로 안밀림{/exp}[NOT BACK]
+		{prereq}[HIT TYPE]|[KNOCK BACK TYPE]{/prereq}{must4}{exp}바로 변경{/exp}[NOW]
+		{prereq}[HIT TYPE]|[KNOCK BACK TYPE]{/prereq}{must4}{exp}현재 액션의 애니메이션이 끝날때까지 기다렸다가 끝난후 변경{/exp}[END]
+
+		{prereq}[DOWN]{/prereq}{must2}{exp}중립방향{/exp}[DEFAULT]
+		{prereq}[DOWN]{/prereq}{must2}{exp}왼쪽방향{/exp}[LEFT]
+		{prereq}[DOWN]{/prereq}{must2}{exp}오른쪽방향{/exp}[RIGHT]
+		{prereq}[DOWN]{/prereq}{must2}{exp}랜덤(좌,우 중 택일){/exp}[RANDOM]
+		{prereq}[DOWN]{/prereq}{must2}{exp}현재 시전자의 방향{/exp}[MY DIRECTION]
+		{prereq}[DOWN]{/prereq}{must2}{exp}현재 시전자의 반대방향{/exp}[MY OPPOSITE DIRECTION]
+
+		{prereq}[DOWN]{/prereq}{must3}{exp}내부에서 사용되는 인자. 기본 0{int(0:2)}
+		{prereq}[DOWN]{/prereq}{must4}{exp}뒤로 날리는 힘과 위로 뜨는 힘을 사용{/exp}[FORCE]
+		{prereq}[DOWN]{/prereq}{must4}{exp}힘을 넣지만 바로 쓰지않고 땅에 튀길때 사용{/exp}[BOUNCE]	
+		{prereq}[DOWN]{/prereq}{must4}{exp}뒤로 날리는 속도와 띄울 높이를 넣어줌{/exp}[VALUE]
+		{prereq}[FORCE]|BOUNCE[]|[VALUE]{/prereq}{must5}{exp}[FORCE], [BOUNCE] : 뒤로 날리는 힘, [VALUE] : 뒤로 날리는 속도(픽셀/s){/exp}{int(:)}
+		{prereq}[FORCE]|BOUNCE[]|[VALUE]{/prereq}{must6}{exp}[FORCE], [BOUNCE] : 위로 뜨는 힘, [VALUE] : 위로 띄울 높이(픽셀){/exp}{int(:)}
+		{prereq}[FORCE]|BOUNCE[]|[VALUE]{/prereq}{must7}{exp}바로 변경{/exp}[NOW]
+		{prereq}[FORCE]|BOUNCE[]|[VALUE]{/prereq}{must7}{exp}현재 액션의 애니메이션이 끝날때까지 기다렸다가 끝난후 변경{/exp}[END]
+		
+
+		{prereq}[ATTACK]|[CUSTOM]|[PATTERN]{/prereq}{must2}{exp}인덱스{/exp}{rndint(:)}
+		{prereq}[ATTACK]|[CUSTOM]|[PATTERN]{/prereq}{must3}{exp}바로 변경{/exp}[NOW]
+		{prereq}[ATTACK]|[CUSTOM]|[PATTERN]{/prereq}{must3}{exp}현재 액션의 애니메이션이 끝날때까지 기다렸다가 끝난후 변경{/exp}[END]
+	[!SET ACTION]
+	
+	
+
+	{exp}이 액션의 애니프레임을 강제설정{/exp}[SET FRAME]
+		{must1}{exp}설정할 애니프레임 인덱스{/exp}{int(0:)}
+	[!SET FRAME]
+
+	{exp}대사를 출력{/exp}[SAY SPEECH]
+		{must1}{exp}출력할 대사{/exp}{string}
+	[!SAY SPEECH]
+
+	{exp}해당위치에 대사를 출력{/exp}[SAY SPEECH WITH POSITION]
+		{must1}{exp}출력할 대사{/exp}{string}
+		{must2}{exp}대사를 출력할 X좌표{/exp}{int(:)}
+		{must3}{exp}대사를 출력할 Y좌표{/exp}{int(:)}
+	[!SAY SPEECH WITH POSITION]
+	
+	{exp}화면을 흔든다{/exp}[SHAKING]
+		{must1}{exp}파워{/exp}{int(0:)}
+		{must2}{exp}지속 시간(ms){/exp}{int(0:)}
+	[!SHAKING]
+	
+	{exp}흔들기 입력을 띄울지 아닐지 여부.{/exp}[SHAKE INPUT]
+		{must1}[ON]
+		{must1}[OFF]
+	[!SHAKE INPUT]
+
+	{exp}대상이 홀드중일 때 홀드 애니메이션을 데미지 모션끼리 교체{/exp}{etc}[FLIP HOLD ANIMATION]
+	{exp}해당 좌표에 있는 오브젝트를 강제로 공격 아무 이유없이 HIT{/exp}[APPEND HIT]
+		{must1}{exp}X좌표{/exp}{int(:)}
+		{must2}{exp}Y좌표{/exp}{int(:)}
+		{must3}{exp}Z좌표{/exp}{int(:)}
+	[!APPEND HIT]
+
+	{exp}현재의 위치(X,Y,Z좌표)를 저장 [LOAD POSITION] 태그와 함께 쓰임.{/exp}{etc}[SAVE POSITION]
+
+	//mkjung 120511 modi. (END tag opt 처리)
+	//mkjung 120516 modi (tag all opt 처리) 
+	{exp}대상의 위치를 강제 지정(프레임단위). END가 X : 한자리에 고정. END가 O: START->END 사이를 이동{/exp}[SET POS FORCE]
+			
+		{opt1}{exp}X좌표 시작점을 설정{/exp}[X START] 
+			{must1}{exp}랜덤가능{/exp}{rndint(:)}	
+		[!X START]
+		
+		{opt2}{exp}X좌표 끝점을 설정{/exp}[X END]	
+			{must1}{exp}랜덤가능{/exp}{rndint(:)}
+		[!X END]
+
+		{opt3}{exp}Y좌표 시작점을 설정{/exp}[Y START] 
+			{must1}{exp}랜덤가능{/exp}{rndint(:)}
+		[!Y START]
+		
+		{opt4}{exp}Y좌표 끝점을 설정{/exp}[Y END]	
+			{must1}{exp}랜덤가능{/exp}{rndint(:)}
+		[!Y END]
+		
+		{opt5}{exp}Z좌표 시작점을 설정{/exp}[Z START] 
+			{must1}{exp}랜덤가능{/exp}{rndint(:)}
+		[!Z START]
+		
+		{opt6}{exp}Z좌표 끝점을 설정{/exp}[Z END]	
+			{must1}{exp}랜덤가능{/exp}{rndint(:)}
+		[!Z END]
+
+		{opt7}{exp}좌표 기준 X축 이동을 자신이 바라보는 방향으로 할 것인지{/exp}{etc}[USE MY DIRECTION]
+		
+		//셋중 하나
+		{opt8}{exp}상대좌표 이동을 자신의 좌표 기준으로 할 것인지 지정(기본은 대상 좌표){/exp}{etc}[USE MY BASEPOS]
+		{opt8}{exp}상대좌표 이동을 대상의 좌표 기준으로 한다{/exp}{etc}[USE TARGET POS]
+		{opt8}{exp}좌표이동을 맵 절대좌표로 함{/exp}{etc}[USE MAP POS]
+		
+		{opt9}{exp}오브젝트의 방향을 참조하지 않음{/exp}{etc}[NOT USE OBJECT DIRECTION]
+
+		//셋중 하나
+		{opt10}{exp}목표좌표까지 선형으로 움직임{/exp}{etc}[MOVE UNIFORM]
+		{opt10}{exp}목표좌표까지 가속하면서 움직임{/exp}{etc}[MOVE ACCELATE]
+		{opt10}{exp}목표좌표까지 감속하면서 움직임{/exp}{etc}[MOVE REDUCE]
+		
+		//둘중 하나
+		{opt11}{exp}나를 이동시킨다{/exp}{etc}[MOVE ME]
+		{opt11}{exp}대상을 이동시킨다{/exp}{etc}[MOVE TARGET]
+	[/SET POS FORCE]
+
+	{exp}메세지 전송{/exp}[SEND MESSAGE]
+		{must1}[ATTACK_COMMAND]
+		{must1}[MOVE_COMMAND]
+		{must1}[ETC_COMMAND]
+		{must1}[DIE_COMMAND]
+		{must2}{exp}인덱스{/exp}{int(:)}
+		//mkjung 120512 modi - 타겟, 명령 지속 시간 인자 모든 커맨드에서 해당 opt처리.
+		//{prereq}[ETC_COMMAND]{/prereq}{must3}{exp}타겟(1:보내는, 0:받는){/exp}{int(0:1)}
+		//{prereq}[ETC_COMMAND]{/prereq}{must4}{exp}명령 지속 시간{/exp}{int(0:)}
+		{opt1}{exp}타겟(1:보내는, 0:받는){/exp}{int(0:1)}
+		{opt2}{exp}명령 지속 시간{/exp}{int(0:)}
+	[!SEND MESSAGE]
+
+	{exp}몬스터의 해당 카테로그 속성을 삭제.{/exp}[REMOVE CATEGORY]
+		//mkjung 120703 FIXTURE만 사용
+		//{must1}인덱스{int(0:)}
+		//mkjung 120514 add. 
+		{must1}{exp}붙박이형 몬스터의 경우 멈춰있던 몬스터가 움직임.{/exp}[FIXTURE]
+	[!REMOVE CATEGORY]
+
+	{exp}몬스터의 해당 카테로그 속성을 삽입{/exp}[ADD CATEGORY]
+		//mkjung 120703 FIXTURE만 사용
+		//{must1}인덱스{int(0:)}
+		//mkjung 120511 add. 
+		{must1}{exp}붙박이형 카테고리인 몬스터의 경우 몬스터가 멈춤{/exp}[FIXTURE]
+	[!ADD CATEGORY]
+
+	{exp}상태 이상{/exp}[ACTIVE STATUS]
+		//mkjung 120521 
+		//ActionScript 스크립트 형식 일괄 변경 -->('[x]' => [x]) 
+		//{must1}{exp}ACTIVE STATUS 아이디{/exp}{string}-> [tag]
+				
+		//{must1}{exp}슬로우{/exp}[slow]		
+		//{must1}{exp}프리즈{/exp}[freeze]		
+		//{must1}{exp}포이즌{/exp}[poison]		//ACTIVESTATUS_POISON
+		//{must1}{exp}스턴{/exp}[stun]			//ACTIVESTATUS_STUN
+		//{must1}{exp}커스{/exp}[curse]		//ACTIVESTATUS_CURSE
+		//{must1}{exp}블라인드{/exp}[blind]		//ACTIVESTATUS_BLIND
+		//{must1}{exp}라이트닝{/exp}[lightning]		//ACTIVESTATUS_LIGHTNING
+		//{must1}{exp}스턴{/exp}[stone]		//ACTIVESTATUS_STONE
+		//{must1}{exp}슬립{/exp}[sleep]		//ACTIVESTATUS_SLEEP
+		//{must1}{exp}화상{/exp}[burn]		//ACTIVESTATUS_BURN
+		//{must1}{exp}무기 파괴{/exp}[weapon break]	//ACTIVESTATUS_WEAPON_BREAK
+		//{must1}{exp}블리딩{/exp}[bleeding]		//ACTIVESTATUS_BLEEDING
+		//{must1}{exp}헤이스트{/exp}[haste]		//ACTIVESTATUS_HASTE
+		//{must1}{exp}블레스{/exp}[bless]		//ACTIVESTATUS_BLESS
+		//{must1}{exp}엘레먼트{/exp}[element]			//ACTIVESTATUS_ELEMENT
+		//{must1}{exp}혼란{/exp}[confuse]		//ACTIVESTATUS_CONFUSE
+		//{must1}{exp}홀드{/exp}[hold]			//ACTIVESTATUS_HOLD
+		//{must1}{exp}갑옷 파괴{/exp}[armor break]	//ACTIVESTATUS_ARMOR_BREAK
+
+		//{must1}{string}
+		//{must2}{exp}확률{/exp}{int(0:)}
+		//{must3}{exp}레벨{/exp}{int(0:)}
+		//{must4}{exp}지속시간{/exp}{int(0:)}
+		//mkjung 120511 수정
+		//[burn],[bless],[curse]의 경우
+		//4개의 int값을 입력.
+		//{opt1}{int(0:)}
+		//{opt2}{int(0:)}
+		//{opt3}{int(0:)}
+		//{opt4}{int(0:)}
+		
+		//mkjung 120704 
+		//DNF Client Source 참조 구조 변경.
+		//ACTIVESTATUS_SLOW
+		{must1}{exp}슬로우{/exp}[slow]	
+			{must1}{exp}확률{/exp}{int(0:)}
+			{must2}{exp}레벨{/exp}{int(0:)}
+			{must3}{exp}지속시간{/exp}{int(0:)}
+			{must4}{exp}이속(%){/exp}{int(0:)}
+			{must5}{exp}공속(%){/exp}{int(0:)}
+		[!slow]
+		
+		//ACTIVESTATUS_FREEZE
+		{must1}{exp}프리즈{/exp}[freeze]
+			{must1}{exp}확률{/exp}{int(0:)}
+			{must2}{exp}레벨{/exp}{int(0:)}
+			{must3}{exp}지속시간{/exp}{int(0:)}
+		[!freeze]
+
+		{must1}{exp}포이즌{/exp}[poison]
+			{must1}{exp}확률{/exp}{int(0:)}
+			{must2}{exp}레벨{/exp}{int(0:)}
+			{must3}{exp}지속시간{/exp}{int(0:)}
+			{must4}{exp}데미지{/exp}{int(0:)}
+		[!poison]
+
+		{must1}{exp}스턴{/exp}[stun]
+			{must1}{exp}확률{/exp}{int(0:)}
+			{must2}{exp}레벨{/exp}{int(0:)}
+			{must3}{exp}지속시간{/exp}{int(0:)}
+			{must4}{exp}데미지{/exp}{int(0:)}
+		[!stun]
+
+		{must1}{exp}커스{/exp}[curse]
+			{must1}{exp}확률{/exp}{int(0:)}
+			{must2}{exp}레벨{/exp}{int(0:)}
+			{must3}{exp}지속시간{/exp}{int(0:)}
+			{must4}{exp}힘{/exp}{int(0:)}
+			{must5}{exp}체력{/exp}{int(0:)}
+			{must6}{exp}지능{/exp}{int(0:)}
+			{must7}{exp}정신력{/exp}{int(0:)}
+		[!curse]
+
+		{must1}{exp}블라인드{/exp}[blind]
+			{must1}{exp}확률{/exp}{int(0:)}
+			{must2}{exp}레벨{/exp}{int(0:)}
+			{must3}{exp}지속시간{/exp}{int(0:)}
+			{must4}{exp}시야(%){/exp}{int(0:)}
+			{must5}{exp}스턱률 증가(+){/exp}{int(0:)}
+		[!blind]
+
+		{must1}{exp}라이트닝{/exp}[lightning]
+			{must1}{exp}확률{/exp}{int(0:)}
+			{must2}{exp}레벨{/exp}{int(0:)}
+			{must3}{exp}지속시간{/exp}{int(0:)}
+			{must3}{exp}데미지{/exp}{int(0:)}
+		[!lightning]
+
+		{must1}{exp}스턴{/exp}[stone]
+			{must1}{exp}확률{/exp}{int(0:)}
+			{must2}{exp}레벨{/exp}{int(0:)}
+			{must3}{exp}지속시간{/exp}{int(0:)}
+			{must4}{exp}데미지{/exp}{int(0:)}
+		[!stone]
+
+		{must1}{exp}슬립{/exp}[sleep]
+			{must1}{exp}확률{/exp}{int(0:)}
+			{must2}{exp}레벨{/exp}{int(0:)}
+			{must3}{exp}지속시간{/exp}{int(0:)}
+		[!sleep]
+		
+		{must1}{exp}화상{/exp}[burn]
+			{must1}{exp}확률{/exp}{int(0:)}
+			{must2}{exp}레벨{/exp}{int(0:)}
+			{must3}{exp}지속시간{/exp}{int(0:)}
+			{must4}{exp}데미지{/exp}{int(0:)}
+			{must5}{exp}주변데미지{/exp}{int(0:)}
+			{must6}{exp}주변데미지 옵션(1이면 적군에게만 주변데미지가 적용){/exp}{int(0:)}
+			{must7}{exp}주변데미지 적용간격(시간){/exp}{int(0:)}
+		[!burn]
+
+		{must1}{exp}무기 파괴{/exp}[weapon break]
+			{must1}{exp}확률{/exp}{int(0:)}
+			{must2}{exp}레벨{/exp}{int(0:)}
+			{must3}{exp}지속시간{/exp}{int(0:)}
+			{must4}{exp}내구도 소모 체크 횟수{/exp}{int(0:)}
+		[!weapon break]
+
+		{must1}{exp}블리딩{/exp}[bleeding]
+			{must1}{exp}확률{/exp}{int(0:)}
+			{must2}{exp}레벨{/exp}{int(0:)}
+			{must3}{exp}지속시간{/exp}{int(0:)}
+			{must4}{exp}데미지{/exp}{int(0:)}
+		[!bleeding]
+
+		{must1}{exp}헤이스트{/exp}[haste]
+			{must1}{exp}확률{/exp}{int(0:)}
+			{must2}{exp}레벨{/exp}{int(0:)}
+			{must3}{exp}지속시간{/exp}{int(0:)}
+			{must4}{exp}이속(%){/exp}{int(0:)}
+			{must5}{exp}공속(%){/exp}{int(0:)}
+		[!haste]
+
+		{must1}{exp}블레스{/exp}[bless]
+			{must1}{exp}확률{/exp}{int(0:)}
+			{must2}{exp}레벨{/exp}{int(0:)}
+			{must3}{exp}지속시간{/exp}{int(0:)}
+			{must4}{exp}힘{/exp}{int(0:)}
+			{must5}{exp}체력{/exp}{int(0:)}
+			{must6}{exp}지능{/exp}{int(0:)}
+			{must7}{exp}정신력{/exp}{int(0:)}
+		[!bless]
+
+		//mkjung 120704 [weakness]-->[element]로 변경 
+		//TuningProc.h 로 확인.
+		//RDARScriptAction.cpp 검토..
+		{must1}{exp}엘레먼트{/exp}[element]
+			{must1}{exp}확률{/exp}{int(0:)}
+			{must2}{exp}레벨{/exp}{int(0:)}
+			{must3}{exp}지속시간{/exp}{int(0:)}
+			{must4}{exp}데미지 감소 비율(남아있는 HP를 기준으로 한다){/exp}{int(0:)}
+		[!element]
+
+		{must1}{exp}혼란{/exp}[confuse]
+			{must1}{exp}확률{/exp}{int(0:)}
+			{must2}{exp}레벨{/exp}{int(0:)}
+			{must3}{exp}지속시간{/exp}{int(0:)}
+			{must4}{exp}1이면 몬스터가 혼란에 걸렸을때, 같은편을 공격{/exp}{int(0:)}
+		[!confuse]
+
+		{must1}{exp}홀드{/exp}[hold]
+			{must1}{exp}확률{/exp}{int(0:)}
+			{must2}{exp}레벨{/exp}{int(0:)}
+			{must3}{exp}지속시간{/exp}{int(0:)}
+		[!hold]
+
+		{must1}{exp}갑옷 파괴{/exp}[armor break]
+			{must1}{exp}확률{/exp}{int(0:)}
+			{must2}{exp}레벨{/exp}{int(0:)}
+			{must3}{exp}지속시간{/exp}{int(0:)}
+			{must4}{exp}내구도 소모 체크 횟수{/exp}{int(0:)}
+		[!armor break]
+	[!ACTIVE STATUS]
+
+	//mkjung 120413 modi. (childdata태그 추가.)	
+	//mkjung 120511 [DELETE APPENDAGE] tag add.
+	[APPENDAGE],[MASTER APPENDAGE],[DELETE APPENDAGE]
+		{childdata1}{exp}시간{/exp}{int(0:)}
+		{prereq}[MASTER APPENDAGE]{/prereq}{childdata2}{exp}범위{/exp}{int(0:)}
+		{prereq}[MASTER APPENDAGE]{/prereq}{childdata3}{exp}내 팀을 대상으로{/exp}[MY TEAM]
+		{prereq}[MASTER APPENDAGE]{/prereq}{childdata3}{exp}적 팀을 대상으로{/exp}[ENEMY TEAM]
+		{prereq}[MASTER APPENDAGE]{/prereq}{childdata3}{exp}몬스터팀을 대상으로{/exp}[MONSTER TEAM]
+		{prereq}[MASTER APPENDAGE]{/prereq}{childdata3}{exp}캐릭터팀을 대상으로{/exp}[CHARACTER TEAM]
+
+		{opt1}[physical attack]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!physical attack]
+
+		{opt2}[magical attack]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!magical attack]
+
+		{opt3}[physical defense]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!physical defense]
+		
+		{opt4}[magical defense]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!magical defense]
+
+		{opt5}[equipment physical attack]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!equipment physical attack]
+
+		{opt6}[equipment physical defense]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!equipment physical defense]
+
+		{opt7}[jump power]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!jump power]
+
+		{opt8}[attack speed]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!attack speed]
+
+		{opt9}[move speed]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!move speed]
+
+		{opt10}[cast speed]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!cast speed]
+
+		{opt11}[hp max]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!hp max]
+
+		{opt12}[hp regen rate]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!hp regen rate]
+		
+		{opt13}[magical critical hit rate]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!magical critical hit rate]
+
+		{opt14}[physical critical hit rate]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!physical critical hit rate]
+
+		{opt15}[physical back attack critical rate]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!physical back attack critical rate]
+
+		{opt16}[magical back attack critical rate]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!magical back attack critical rate]
+
+		{opt17}[fire element]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!fire element]
+
+		{opt18}[water element]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!water element]
+
+		{opt19}[dark element]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!dark element]
+		
+		{opt20}[light element]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!light element]
+
+		{opt21}[stuck]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!stuck]
+
+		{opt22}[good hit]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!good hit]
+
+		{opt23}[mp regen rate]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!mp regen rate]
+
+		{opt24}[hit recovery]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!hit recovery]
+
+		{opt25}[equipment magical attack]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!equipment magical attack]
+
+		{opt26}[equipment magical defense]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!equipment magical defense]
+
+		{opt27}[all active status resistance]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!all active status resistance]
+
+		{opt28}[all element]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!all element]
+
+		{opt29}[fire element attack]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!fire element attack]
+
+		{opt30}[water element attack]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!water element attack]
+
+		{opt31}[dark element attack]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!dark element attack]
+
+		{opt32}[light element attack]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!light element attack]
+
+		{opt33}[all element attack]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!all element attack]
+
+		{opt34}[separate physical attack]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!separate physical attack]
+
+		{opt35}[separate magical attack]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!separate magical attack]
+
+		{opt36}[separate all attack]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!separate all attack]
+
+		{opt37}[antievil]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!antievil]
+
+		{opt38}[physical absolute damage]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!physical absolute damage]
+
+		{opt39}[village moving speed]
+			{must1}[+]
+			{must1}[%]
+			{must2}{float(:)}
+		[!village moving speed]
+	[/APPENDAGE],[/MASTER APPENDAGE],[/DELETE APPENDAGE]
+
+	{exp}정지 시간동안 몸체 색상(칼라값)을 설정.{/exp}[SET COLOR]
+		{must1}{exp}Red{/exp}{int(0:255)}
+		{must2}{exp}Greed{/exp}{int(0:255)}
+		{must3}{exp}Blue{/exp}{int(0:255)}
+	[!SET COLOR]
+
+	[ICE APPENDAGE]
+		{must1}{exp}데미지{/exp}{int(0:)}
+		{must2}{exp}범위{/exp}{int(0:)}
+		{must3}{exp}데미지간격{/exp}{int(0:)}
+	[!ICE APPENDAGE]
+
+	[CURSE APPENDAGE]
+		{must1}{exp}데미지{/exp}{int(0:)}
+		{must2}{exp}범위{/exp}{int(0:)}
+		{must3}{exp}데미지간격{/exp}{int(0:)}
+		{must4}{exp}커스 간격{/exp}{int(0:)}
+	[!CURSE APPENDAGE]
+
+	[MIND CONTROL APPENDAGE]
+		{must1}{exp}레벨{/exp}{int(0:)}
+		{must2}{exp}일정방향으로 이동하는 시간{/exp}{int(0:)}
+		{must3}{exp}지속시간{/exp}{int(0:)}
+	[!MIND CONTROL APPENDAGE]
+
+	{exp}염동력 어펜디지, 극한의제단 아가멤논이 사용함{/exp}[TELEKINESIS APPENDAGE]
+		{must1}{exp}데미지{/exp}{int(0:)}
+		{must2}{exp}범위{/exp}{int(0:)}
+		{must3}{exp}데미지간격{/exp}{int(0:)}	
+		{must4}{exp}어펜디지 유지시간(ms){/exp}{int(0:)}
+		{must5}{exp}조종을 잘못했을때 버티는 시간(ms){/exp}{int(0:)}
+		{must6}{exp}양력 변동치0~3(픽셀/s^2){/exp}{int(0:)}
+		{must7}{exp}땅바닥에 떨어질때 데미지{/exp}{int(0:)}
+		{must8}{exp}성공했을때 호출할 어택액션 인덱스{/exp}{int(0:)}
+		{must8}{exp}실패했을때 호출할 어택액션 인덱스{/exp}{int(0:)}
+	[!TELEKINESIS APPENDAGE]
+
+	{exp}감염 어펜디지, 이계의틈 인센트가 사용함{/exp}[INFECTION APPENDAGE]
+		{must1}{exp}인식 오브젝트 인덱스{/exp}{int(:)}
+		{must2}{exp}오브젝트 피격시 올라갈 게이지수{/exp}{int(0:)}
+		{must3}{exp}5칸 이상 찼을때 다음 타격시 들어가는 데미지{/exp}{int(:)}
+		{must4}{exp}감염 게이지가 1칸이 빠질 시간{/exp}{int(0:)}
+		{must5}{exp}어펜디지 지속 시간{/exp}{int(0:)}
+	[!INFECTION APPENDAGE]
+
+	{exp}몬스터가 AI타겟을 바라 볼지 아닐지 결정 플레그{/exp}[CHANGE DIRECTION BY TARGET]
+		{must1}{exp}0 : 이면 AI타겟을 처음 생성시 바라본 방향을 유지{/exp}{int(0:)}
+	[!CHANGE DIRECTION BY TARGET]
+
+	{exp}질병 어펜디지, 고통의마을 레쉬폰에서 디레지에가 사용{/exp}[DISEASE APPENDAGE]
+		{must1}{exp}질병 지속 시간{/exp}{int(0:)}
+		{must2}{exp}질병 데미지{/exp}{int(:)}
+		{must3}{exp}질병 감염 범위{/exp}{int(:)}
+		{must4}{exp}질병노출 x초후 감염{/exp}{int(0:)}
+	[!DISEASE APPENDAGE]
+
+	{exp}1이면 이동하는 방향을 보고 이동, 0이면 AI타겟을 보면서 이동{/exp}[IS DIRECTION TO MOVE]
+		{must1}{exp}(default는 0){/exp}{int(0:)}
+	[!IS DIRECTION TO MOVE]
+
+
+	{exp}특정 액션에 매칭되는 액션파일을 변경함{/exp}[CHANGE ACTION FILE]
+		{must1}[STAY]
+		{must1}[DOWN]
+		{must1}[DAMAGE]
+		{must1}[ATTACK]
+		{must1}[CUSTOM]
+		{must1}[DEFAULT]
+		{must1}[PROC]
+		//mkjung 120511 add. 
+		{must1}[MOVE]
+		{must1}[LAST]
+		{must1}[MOVEBACK]
+		{must1}[DASH]
+		{must1}[DASHATTACK]
+		{must1}[JUMP]
+		{must1}[JUMPATTACK]
+		//mkjung 120515 [OVERTURN], [SIT] add. 
+		{must1}[OVERTURN]
+		{must1}[SIT]
+		{prereq}[OVERTURN]|[SIT]|[MOVE]|[LAST]|[MOVEBACK]|[DASH]|[DASHATTACK]|[JUMP]|[JUMPATTACK]|[STAY]|[DOWN]|[DEFAULT]|[PROC]{/prereq}{must2}{exp}액션 파일 이름{/exp}{string}
+		{prereq}[DAMAGE]{/prereq}{must2}{exp}데미지액션 인덱스{/exp}{int(0:1)}
+		{prereq}[ATTACK]|[CUSTOM]{/prereq}{must2}{exp}인덱스{/exp}{int(:)}
+		{prereq}[DAMAGE]|[ATTACK]|[CUSTOM]{/prereq}{must3}{exp}변경할 액션파일 이름{/exp}{string}
+	[!CHANGE ACTION FILE]
+
+	{exp}애니메이션을 생성해서 붙인다{/exp}[ADD LAYER ANIMATION] 
+		{must1}{exp}애니메이션 경로(Script/ 이후부터 경로){/exp}{string}
+		{must2}{exp}레이어 인덱스{/exp}{int(0:)}
+	[!ADD LAYER ANIMATION] 
+
+	{exp}홀드시킨 대상의 오버턴 애니메이션으로 바꿔줌.{/exp}{etc}[SET OVERTURN]
+	
+	{exp}홀드시킨 대상의 데미지 애니메이션으로 바꿔줌{/exp}[SET HOLD DAMAGEANI]
+		{must1}{exp}0을 입력시 0번 데미지모션, 1을 입력시 1번 데미지모션{/exp}{int(0:1)}
+	[!SET HOLD DAMAGEANI]
+	
+	{exp}홀드시킨 대상의 다운 애니메이션으로 바꿔줌{/exp}{etc}[SET HOLD DOWNANI]
+	
+	[WIND APPENDAGE]
+		{must1}{exp}X축 이동 속도(소수){/exp}{float(:)}
+		{must2}{exp}Y축 이동 속도(소수){/exp}{float(:)}
+		{must3}{exp}X축 이동 방향(0 : 이동안함, 1 : 오른쪽, 2 : 왼쪽){/exp}{int(0:2)}
+		{must4}{exp}Y축 이동 방향(0 : 이동안함, 1 : 위쪽, 2 : 아래쪽){/exp}{int(0:2)}
+		{must5}{exp}시간{/exp}{int(0:)}
+	[!WIND APPENDAGE]
+
+	{exp}대상에 캐릭터 팀을 끌어당긴다{/exp}[PULL APPENDAGE]
+		{must1}{exp}x축 강도{/exp}{float(:)}
+		{must2}{exp}y축 강도{/exp}{float(:)}
+		{must3}{exp}시간(음수값을 넣으면 속도 WIND 모드로 된다. 속도모드는 반드시 6 이상을 설정){/exp}{int(0:)}
+	[!PULL APPENDAGE]
+
+	{exp}대상에 캐릭터 팀을 끌어당긴다(확장버젼){/exp}[PULL APPENDAGE EX]
+		{opt1}[SPEED]
+			{must1}{exp}x축 강도{/exp}{float(:)}
+			{must2}{exp}y축 강도{/exp}{float(:)}
+		[!SPEED]
+		{opt2}[VALIDTIME]
+			{must1}{exp}시간{/exp}{int(:)}
+		[!VALIDTIME]
+		{opt3}{exp}끌어당기는 원점을 대상으로 할지 여부{/exp}[USE TARGET]
+			{must1}{exp}(1: 대상, 0: 액션 부모){/exp}{int(0:1)}
+		[!USE TARGET]
+		{opt4}{exp}오프셋 좌표(쓰지 않으면 기본 0){/exp}[OFFSET POS]
+			{must1}{int(:)}
+			{must2}{int(:)}
+		[!OFFSET POS]
+		{opt5}{exp}끌어오기 위한 최소 범위(쓰지 않으면 기본 30){/exp}[MIN DISTANCE]
+			{must1}{int(0:)}
+		[!MIN DISTANCE]
+	[/PULL APPENDAGE EX]
+
+
+	[COLOR CHANGE EFFECT]
+		{opt1}{exp}청색 시작값{/exp}[EFFECT BLUE START]
+			{must1}{exp}데이타 안집어넣으면 0{/exp}{int(0:255)}
+		[!EFFECT BLUE START]
+		//mkjung 120516 	[EFFECT BLUE END] add. 	
+		{opt2}{exp}청색 끝값{/exp}[EFFECT BLUE END]
+			{must1}{exp}데이타 안집어넣으면 0{/exp}{int(0:255)}
+		[!EFFECT BLUE END]
+		
+		//mkjung 120516 	[EFFECT RED START] add. 	
+		{opt3}{exp}적색 시작값{/exp}[EFFECT RED START]
+			{must1}{exp}데이타 안집어넣으면 0{/exp}{int(0:255)}
+		[!EFFECT RED START]
+		{opt4}{exp}적색 끝값{/exp}[EFFECT RED END]
+			{must1}{exp}데이타 안집어넣으면 0{/exp}{int(0:255)}
+		[!EFFECT RED END]
+
+		//mkjung 120516 	[EFFECT GREEN START], [EFFECT GREEN END] add. 	
+		{opt5}{exp}적색 시작값{/exp}[EFFECT GREEN START]
+			{must1}{exp}데이타 안집어넣으면 0{/exp}{int(0:255)}
+		[!EFFECT GREEN START]
+		{opt6}{exp}적색 끝값{/exp}[EFFECT GREEN END]
+			{must1}{exp}데이타 안집어넣으면 0{/exp}{int(0:255)}
+		[!EFFECT GREEN END]
+
+
+		//mkjung 120516 	[EFFECT ALPHA START] add
+		{opt7}{exp}알파 시작값{/exp}[EFFECT ALPHA START]
+			{must1}{exp}데이타 안집어넣으면 0{/exp}{int(0:255)}
+		[!EFFECT ALPHA START]
+		{opt8}{exp}알파 끝값{/exp}[EFFECT ALPHA END]
+			{must1}{exp}데이타 안집어넣으면 0{/exp}{int(0:255)}
+		[!EFFECT ALPHA END]
+		
+		{opt9}{exp}시작 확대 축소 비율값(%){/exp}[CHANGE SIZE START]
+			{must1}{exp}지정안하면 이전에 설정한 값에서 시작{/exp}{int(0:100)}
+		[!CHANGE SIZE START]		
+		{opt10}{exp}1최종 확대축소 비율값(%){/exp}[CHANGE SIZE END]
+			{must1}{int(0:100)}
+		[!CHANGE SIZE END]
+		
+		{opt10}{exp}바뀌는 시간을 설정.(1/1000 초 단위 예:4000: 4초에걸쳐 바뀜){/exp}[CHANGE TIME]
+			{must1}{int(0:)}
+		[!CHANGE TIME]
+		
+		{opt11}{exp}변형 효과가 유지되는 시간{/exp}[LIFE TIME]
+			{must1}{exp}0으로 지정하면 몬스터가 없어질 때까지 (혹은 새로 컬러 체인지 이펙트를 할 때까지) 계속 유지{/exp}{int(0:)}
+		[!LIFE TIME]
+	[/COLOR CHANGE EFFECT]
+	
+	{exp}특정대상에게 HP를 조정하는 어펜디지를 붙인다{/exp}[HP APPENDAGE]
+		{must1}{exp}시간{/exp}{int(0:)}
+		{must2}{exp}범위{/exp}{int(0:)}
+		{must3}{exp}우리팀에게{/exp}[MY TEAM] 
+		{must3}{exp}적팀에게{/exp}[ENEMY TEAM] 
+		{must3}{exp}몬스터팀에게{/exp}[MONSTER TEAM]
+		{must3}{exp}캐릭터팀에게{/exp}[CHARACTER TEAM]
+		{must3}{exp}맵상에 있는 모두에게{/exp}[ALL]
+		{must4}{exp}적용 방법(%){/exp}[%]
+		{must4}{exp}적용 방법(+){/exp}[+]
+		{must5}{exp}기준 hp(HP){/exp}[HP]
+		{must5}{exp}기준 hp(HP MAX){/exp}[HP MAX]
+		{must6}{exp}적용 양{/exp}{int(:)}
+		{must7}{exp}적용 텀{/exp}{int(:)}
+	[/HP APPENDAGE]
+
+	{exp}스크린 전체를 번쩍인다{/exp}[FLASH SCREEN],[FLASH SCREEN EX]
+		{must1}{exp}원하는 색으로 변경되는 시간{/exp}{int(0:)}
+		{must2}{exp}변경이 유지될 시간{/exp}{int(0:)}
+		{must3}{exp}다시 원상태로 돌아가는 시간{/exp}{int(0:)}
+		{must4}{exp}최대 알파값(투명도){/exp}{int(0:)}
+		{must5}{exp}변경하고 싶은 red 색{/exp}{int(0:255)}
+		{must6}{exp}변경하고 싶은 green 색{/exp}{int(0:255)}
+		{must7}{exp}변경하고 싶은 blue값 색{/exp}{int(0:255)}
+		{prereq}[FLASH SCREEN EX]{/prereq}{must8}{exp}변경이 표시되는 레이어 <0(접경), 1(근경), 2(중경), 3(원경)>{/exp}{int(0:3)}
+	[!FLASH SCREEN],[!FLASH SCREEN EX]
+
+	{exp}유저가 잡기스킬을 했을 때 해당 몬스터에게 잡기 스킬이 적용 될지에 대한 여부{/exp}[SET GRABABLE]
+		{must1}{exp}1(잡히도록 설정), 0(안잡히도록 설정){/exp}{int(0:1)}
+	[!SET GRABABLE]
+	
+	{exp}데미지 체크 시작 (action파일){/exp}[SET DAMAGE CHECK]
+		{must1}{exp}1이면 데미지 체크시작, 0이면 데미지 체크 중지{/exp}{int(0:1)}
+		{must2}{exp}체크 시간{/exp}{int(0:)}
+	[!SET DAMAGE CHECK]
+		
+	{exp}[etc motion]에 있는 애니중 하나를 현재 액션의 서브애니로 붙임{/exp}[ADD LAYER]
+		{must1}{exp}레이어의 인덱스값{/exp}{int(0:)}
+		{must2}{exp}[etc motion]에 있는 애니의 인덱스값{/exp}{int(0:)}
+		//mkjung 120516 X,Y좌표 int->rndint mody.
+		{must3}{exp}붙일 LAYER의 X좌표{/exp}{rndint(:)}
+		{must4}{exp}붙일 LAYER의 Y좌표{/exp}{rndint(:)}
+	[!ADD LAYER]
+
+	{exp}서브애니로 붙인 [etc motion] 애니를 떼어냄{/exp}[REMOVE LAYER]
+		{must1}{exp}[ADD LAYER]로 붙인 [etc motion]에 있는 애니의 인덱스값{/exp}{int(0:)}
+	[!REMOVE LAYER]
+	
+	{exp}대상의 외곽선을 설정{/exp}[SET OUTLINE]
+		{must1}{exp}1:그리기, 0:지우기{/exp}{int(0:1)}
+		{must2}{exp}Red{/exp}{int(0:255)}
+		{must3}{exp}Green{/exp}{int(0:255)}
+		{must4}{exp}Blue{/exp}{int(0:255)}
+		{must5}{exp}외곽선 굵기(기본값 2){/exp}{int(0:)}
+	[!SET OUTLINE]	
+	
+	//mkjung 0521 modi.
+	{exp}패스타입을 바꿈(패시브 오브젝트만){/exp}[SET PASSTYPE]
+		//{opt1}{string}
+		{opt1}{exp}모두 통과{/exp}[pass all]
+		{opt2}{exp}부유형만 통과{/exp}[pass only float type]
+		{opt3}{exp}못지나감{/exp}[do not pass]
+		{opt4}{exp}레드팀만 가능 (카오스용){/exp}[pass only red team]
+		{opt5}{exp}블루팀만 가능 (카오스용){/exp}[pass only blue team]
+	[!SET PASSTYPE]
+	
+	{exp}해당 오브젝트가  특정 장소,물체에 끼었을 때 등을 체크하기 위해 대상의 width를 지정(몬스터 패시브 오브젝트에 모두 사용){/exp}[SET WIDTH]
+		{must1}{exp}xWidth{/exp}{int(0:)}
+		{must2}{exp}yWidth{/exp}{int(0:)}
+	[!SET WIDTH]	
+	
+	{exp}AI타겟을 랜덤으로 변경{/exp}{etc}[SET RANDOM TARGET]
+	
+	//mkjung 120704 수정.
+	//①필수입력1: 파티 슬롯(파티원)의 인덱스(PARTY_PLAYER_MAX = 4 (인덱스: 0~3))
+	//②필수입력2:  일반설정, 절대설정 모드에서 파티 타겟팅 여부
+	
+	//(다음자리의 캐릭터를 타겟팅 여부)
+	//- 일반설정모드(0,1)의 경우: 몬스터가 타겟 변경 못하게 설정있으면 타겟팅 못함.
+	//- 절대설정모드(2,3): 몬스터가 타겟 변경 못하게 설정되어 있더라도 타겟팅을 진행.
+
+	//해당 슬롯 인덱스의 파티원이 없으면
+	//-0: 다음자리의 캐릭터를 타겟팅 안함.
+	//-1: (일반설정모드)다음 자리의 캐릭터를 타겟팅 함.
+	//-2: 다음자리의 캐릭터를 타겟팅 안함.
+	//-3: (절대설정모드)다음 자리의 캐릭터를 타겟팅 함.	
+	{exp}AI타겟을 특정 파티원으로 변경{/exp}[SET PARTY TARGET]
+		{must1}{exp}파티 슬롯(파티원)의 인덱스(0~3){/exp}{int(0:3)}
+		{must2}{exp}해당 인덱스에 파티원이 없으면 다음자리 캐릭터를 타겟팅 할지 여부(일반설정모드(0: 변경 안함, 1: 변경함), 절대설정 모드(2: 변경 안함, 3: 변경함)){/exp}{int(0:3)}
+	[!SET PARTY TARGET]
+
+	{exp}범위 안에서 회복했을 때 데미지를 준다. DISTANCE로 체크해서 사용해야함{/exp}[HELLOFHEAL APPENDAGE]
+		{must1{exp}배수(200이면 2배){/exp}}{int(0:)}
+		{must2}{exp}적용 텀 (1000이면 1초){/exp}{int(0:)}
+	[!HELLOFHEAL APPENDAGE]
+
+	[THORNS APPENDAGE]
+		{must1}{exp}분노 레벨의 증감을 결정하는 시간 간격{/exp}{int(0:)}
+		{must2}{exp}화염 데미지 반사률 (%){/exp}{int(0:)}
+		{must3}{exp}분노 폭탄이 터지기 위한 연속 타격 횟수{/exp}{int(0:)}
+		{must4}{exp}분노 폭탄의 타격횟수 감소 간격{/exp}{int(0:)}
+		{must5}{exp}분노 폭탄의 레벨{/exp}{int(0:)}
+		{must6}{exp}분노 레벨이 떨어지기 위한 타격 수{/exp}{int(0:)}
+		{must7}{exp}지속 시간{/exp}{int(0:)}
+	[!THORNS APPENDAGE]
+
+	{exp}침묵(스킬 사용 제한){/exp}[MUCU LIMIT CONTROL]
+		{must1}{exp}시간(해당 시간 동안 스킬사용이 불가능){/exp}{int(0:)}
+	[!MUCU LIMIT CONTROL]
+
+	{exp}대상을 향해 점프(인자에 따라 점프 궤도를 조정가능,반드시 .mob파일에 [jump action]이 등록되어 있어야 함){/exp}[JUMP TO TARGET] 
+		{must1}{exp}속도{/exp}{int(:)}
+		{must2}{exp}점프 높이{/exp}{int(:)}
+		{must3}{exp}커스텀중력{/exp}{int(:)}
+		{must4}{exp}대상과 거리 유지 비율{/exp}{float(:)}
+		{must5}{exp}최대X{/exp}{int(:)}
+		{must6}{exp}최대Y{/exp}{int(:)}
+		{must7}{exp}상승시 프레임{/exp}{int(0:)}
+		{must8}{exp}하강시 프레임{/exp}{int(0:)}
+		{must9}{exp}착지시 프레임{/exp}{int(0:)}
+	[!JUMP TO TARGET] 
+
+	{exp}대상을 나의 AI타겟으로 설정함{/exp}{etc}[CHANGE MY TARGET]
+
+	{exp}대상을 먹는다.(5개의 인덱스를 지정){/exp}[TAKE IT]
+		{must1}{exp}없으면 -1{/exp}{int(:)}
+		{must2}{exp}없으면 -1{/exp}{int(:)}
+		{must3}{exp}없으면 -1{/exp}{int(:)}
+		{must4}{exp}없으면 -1{/exp}{int(:)}
+		{must5}{exp}없으면 -1{/exp}{int(:)}
+	[!TAKE IT]
+
+	{exp}먹은 오브젝트를 뱉는다{/exp}{etc}[THROW ITS OWN]
+
+	{exp}허밍 사용여부{/exp}[SET USE HOMING]
+		{must1}{exp}0:사용 안 함, 1:사용 함 {/exp}{int(0:1)}
+	[!SET USE HOMING]
+
+	{exp}벽반사설정{/exp}[BOUNCE FROM THE WALL]
+		{must1}{exp}0:위아래 벽 변사, 1:좌우 벽 반사{/exp}{int(0:1)}
+		{must2}{exp}반사각(수평선 기준으로 반시계 방향){/exp}{int(0:)}
+	[!BOUNCE FROM THE WALL]
+
+	{exp}대상의 가시성 여부를 설정한다{/exp}[SET VISIBLITY]
+		{must1}{exp}0: 보이지 않게 함, 1: 보이게 함.{/exp}{int(0:1)}
+	[!SET VISIBLITY]
+
+	{exp}지정한 시간,폭 만큼 몬스터가 진동하도록 진동 프로세스 생성{/exp}[MAKE VIBRATION]
+		{must1}{exp}진동 지속 시간(초){/exp}{float(:)}
+		{must2}{exp}진폭(픽셀){/exp}{float(:)}
+		{must3}{exp}진동 아이디{/exp}{string}
+	[!MAKE VIBRATION]
+
+	{exp}대상 캐릭터의 쿨타임을 리셋시킨다{/exp}[CHARACTER COOLTIME RESET]
+		{must1}{exp}0:전체 스킬, 1:무큐기만, 2:각성기만{/exp}{int(0:2)}
+	[!CHARACTER COOLTIME RESET]
+
+	{exp}대상의 현재 애니메이션을 *인터폴레이션(크기, 위치, 각도, 알파값을 다음 프레임 값으로 보정)할지 여부{/exp}[SET INTERPOLATION]
+		{must1}{exp}0(중지), 1(사용){/exp}{int(0:1)}
+	[!SET INTERPOLATION]
+
+	{exp}대상의 좋은 버프를 제거{/exp}{etc}[DEBUFF]
+	{exp}고스트 계열의 스킬 잡아 먹는다{/exp}{etc}[DEBUFF GHOST]
+
+	{exp}상태 이상 반사 어펜디지를 걸어준다{/exp}[REFLECTBUFF APPENDAGE]
+		{must1}{exp}지속 시간(ms){/exp}{int(0:)}
+	[!REFLECTBUFF APPENDAGE]
+
+	{exp}대상을 중심으로 줌{/exp}[ZOOM IT] 
+		{must1}{exp}줌 지속시간(ms){/exp}{int(0:)}
+		{must2}{exp}확대 비율(%){/exp}{int(0:)}
+	[!ZOOM IT]
+
+	{exp}ora 스크립트를 로드해서 오라머신을 생성{/exp}[AURA] 
+		{must1}{exp}인덱스{/exp}{int(:)}
+	[!AURA]
+
+	{exp}중앙에 메시지 출력{/exp}[CENTER MSG]
+		{must1}{exp}중앙에 출력할 메시지{/exp}{string}
+		{must2}{exp}출력할 시간(ms){/exp}{int(0:)}
+	[!CENTER MSG]
+
+	{exp}암흑의 문장 어펜디지, 바칼의 성에서 사용{/exp}[DARKSCALP APPENDAGE]
+		{must1}{exp}총 시간{/exp}{int(0:)}
+		{must2}{exp}데미지 반사%{/exp}{int(0:)}
+		{must3}{exp}회복%{/exp}{int(0:)}
+		{must4}{exp}대상몹 인덱스{/exp}{int(:)}
+		{must5}{exp}초기 데미지를 주는 값(사용 안함){/exp}{int(:)}
+		{must6}{exp}데미지를 주는 시간 간격{/exp}{int(0:)}
+		{must7}{exp}데미지 증가 미지항{/exp}{int(:)}
+		{must8}{exp}데미지 증가 미지항2(임계점을 넘었을 때){/exp}{int(:)}
+		{must9}{exp}어펜디지 이전 시간 간격{/exp}{int(0:)}
+		{must10}{exp}어펜디지 이전 범위{/exp}{int(:)}
+	[!DARKSCALP APPENDAGE]
+
+	[DESOLATEPAIN APPENDAGE]
+		{must1}{exp}유효시간{/exp}{int(0:)}
+		{must2}{exp}체크 텀{/exp}{int(:)}
+		{must3}{exp}절대 데미지{/exp}{int(:)}
+		{must4}{exp}데미지를 나눌 거리{/exp}{int(:)}
+		{must5}{exp}2인팟일때 %{/exp}{int(0:)}
+		{must6}{exp}3인팟일때 %{/exp}{int(0:)}
+		{must7}{exp}4인팟일때 %{/exp}{int(0:)}
+		{must8}{exp}데미지 줄때 소환할 폭파 인덱스{/exp}{int(:)}
+	[!DESOLATEPAIN APPENDAGE]
+
+	{exp}해당인덱스의 서브애니를 그릴지 여부를 설정{/exp}[SUB ANI FLAG]
+		{must1}{exp}애니 인덱스{/exp}{int(:)}
+		{must2}{exp}1(사용), 0(사용안함)(초기값은 사용){/exp}{int(0:1)}
+	[!SUB ANI FLAG]
+
+	[VIRTUALHP APPENDAGE]
+		{must1}{exp}가상 HP 제거위한 히트수{/exp}{int(:)}
+		{must2}{exp}가상 HP 제거위한 데미지{/exp}{int(:)}
+		{must3}{exp}가상 HP 제거 조건(0:히트수, 1:데미지, 2: 둘다 만족){/exp}{int(0:2)}
+		{must4}{exp}가상 HP 동작시 히트당 깍이는 HP{/exp}{int(:)}
+	[!VIRTUALHP APPENDAGE]
+	
+	{exp}가상 HP 제거{/exp}{etc}[REMOVE VIRTUALHP]
+
+	[TERROR APPENDAGE]
+		{must1}{exp}레벨{/exp}{int(0:)}
+		{must2}{exp}굳는데 걸리는 시간{/exp}{int(0:)}
+		{must3}{exp}지속시간{/exp}{int(0:)}
+	[!TERROR APPENDAGE]
+
+	{exp}흔들기 액션(방향키를 흔들어서 게이지가 차지 않도록 버티는 액션){/exp}[SHAKING GAGE]
+		{must1}{exp}상태유지시간{/exp}{int(0:)}
+		{must2}{exp}가만히 놔뒀을때 게이지가 꽉차는 시간{/exp}{int(0:)}
+		{must3}{exp}초당 흔들어야 하는 횟수{/exp}{int(0:)}
+		{must4}{exp}흔들기에 성공할 경우 깍이는 게이지의 퍼센트{/exp}{int(0:)}
+		{must5}{exp}게이지가 꽉차서 실패했을 경우 받는 데미지{/exp}{int(:)}
+	[!SHAKING GAGE]
+
+	{exp}일정시간동안 팀을 변경{/exp}[CHANGE TEAM]
+		{must1}{exp}배신:바꿀 팀 번호{/exp}{int(1:4)}
+		{must2}{exp}바뀔 시간(ms){/exp}{int(0:)}
+		//mkjug 120517 modi 누락인자 추가
+		{must3}{exp}바꿀 HP의 비율(%){/exp}{int(0:)}
+	[!CHANGE TEAM]
+
+	{exp}팀을 원래대로 돌린다{/exp}{etc}[DEFAULT TEAM]
+	{exp}시야교환(파티원들간에 임의로 시야를 교환){/exp}{etc}[CHANGE SIGHT]
+	{exp}시야를 원래대로 돌린다{/exp}{etc}[DEFAULT SIGHT]
+
+
+	{exp}리듬액션, 바칼의성 던전에서 바칼이 사용한다{/exp}[RHYTHM ACTION]
+		{childdata1}{exp}총 입력 커맨드 수{/exp}{int(0:)}
+		{childdata2}{exp}총 입력 가능한 시간{/exp}{int(0:)}
+		{childdata3}{exp}생성되는 패시브 오브젝트 인덱스{/exp}{int(:)}
+
+		{exp}커맨드 패턴 방향{/exp}[PATTERN]
+			{must1}{exp}우측으로{/exp}[RIGHT]
+			{must1}{exp}위로{/exp}[UP]
+			{must1}{exp}좌측으로{/exp}[LEFT]
+			{must1}{exp}아래로{/exp}[DOWN]
+			{must2}{exp}입력대기시간{/exp}{int(0:)}
+			{must3}{exp}오브젝트의 프레임번호{/exp}{int(0:)}
+		[!PATTERN]
+		{opt1}{exp}성공시 생성하는 오브젝트{/exp}[IF SUCCESS]
+			{must1}{exp}인덱스{/exp}{int(:)}
+			{must2}{exp}대상 기준으로의 X좌표{/exp}{int(:)}
+			{must3}{exp}Y좌표{/exp}{int(:)}
+			{must4}{exp}Z좌표{/exp}{int(:)}
+		[!IF SUCCESS]
+		{opt2}{exp}실패 생성하는 오브젝트{/exp}[IF FAIL]
+			{must1}{exp}인덱스{/exp}{int(:)}
+			{must2}{exp}대상 기준으로의 X좌표{/exp}{int(:)}
+			{must3}{exp}Y좌표{/exp}{int(:)}
+			{must4}{exp}Z좌표{/exp}{int(:)}
+		[!IF FAIL]
+	[/RHYTHM ACTION]
+	
+
+	{exp}데미지박스를 끄고 킨다. 데미지 박스를 끄면 피격당하지 않음{/exp}[SET DAMAGE BOX]
+		{must1}{exp}데미지박스를 킨다. 피격당할 수 있다{/exp}[ON]
+		{must1}{exp}데미지박스를 끈다. 무적 상태가 됨{/exp}[OFF]
+	[!SET DAMAGE BOX]
+
+	{exp}격노 어펜디지, 피격당할때마다 게이지가 올라가고 특정레이어가 불투명해진다{/exp}[ANGER APPENDAGE]
+		{must1}{exp}인식 레이어인덱스(예 : 격노게이지가 높아지면 붉게 만들고 싶을때는 붉은색 레이어를 넣은후 인덱스를 여기에 기재){/exp}{int(:)}
+		{must2}{exp}5칸 이상 찼을때 입을 데미지{/exp}{int(:)}
+		{must3}{exp}감염게이지가 1칸이 빠질시간{/exp}{int(0:)}
+		{must4}{exp}피격시 올라갈 칸수{/exp}{int(0:)}
+		{must5}{exp}알파 감소량{/exp}{int(0:)}
+		{must6}{exp}어펜디지 지속시간{/exp}{int(0:)}
+	[!ANGER APPENDAGE]
+
+	{exp}대상의 알파값을 변경{/exp}[SET WHOLE ALPHA]
+		{must1}{exp}변경할 알파값{/exp}{int(0:255)}
+	[!SET WHOLE ALPHA]
+
+	{exp}데미지 타입을 설정{/exp}[SET WHOLE DAMAGETYPE]
+		{must1}{exp}0: 일반. 맞는 모션과 함께 데미지, 1: 슈퍼아머. 맞는 모션은 없으나 데미지, 2: 무적. 맞는 모션도 없고 데미지도 없다{/exp}{int(0:2)}
+	[!SET WHOLE DAMAGETYPE]
+	
+	{exp}공격가능 영역 어펜디지{/exp}[ATTACKABLEAREA APPENDAGE]		
+		{must1}{exp}모드(0:근거리 타격, 1:원거리 타격){/exp}{int(0:1)}
+		{must2}{exp}기준거리{/exp}{int(0:)}
+		{must3}{exp}이미지출력유효거리{/exp}{int(0:)}
+		{must4}{exp}반사데미지%(-1 을 입력하면 원킬){/exp}{int(:)}
+		{must5}{exp}지속시간(0을 입력하면 무한){/exp}{int(0:)}
+	[!ATTACKABLEAREA APPENDAGE]
+
+	{exp}이동 정보를 갱신함{/exp}{etc}[REFRESH MOVEINFO]
+	
+	[DESPAIR APPENDAGE]
+		{must1}{exp}서로 타격해야할 데미지{/exp}{int(:)}
+		{must2}{exp}서로 타격가능한 시간{/exp}{int(0:)}
+		{must3}{exp}제거 실패시 생성되는 오브젝트{/exp}{int(:)}
+		{must4}{exp}제거 실패시 폭탄 데미지{/exp}{int(:)}
+		{must5}{exp}제거 실패시 입는 데미지(%){/exp}{int(0:)}
+	[!DESPAIR APPENDAGE]
+
+	{exp}대상을 몬스터로 변신시키는 기능{/exp}[CHANGE DISGUISER]
+		{must1}{{exp}변신할 몬스터의 인덱스(변신몬스터 인덱스는 클라개발자가 미리 설정해줘야함){/exp}int(:)}
+		{must2}{exp}변신하는 시간(ms){/exp}{int(0:)}
+	[!CHANGE DISGUISER]
+
+	{exp}액티브 오브젝트일 경우 액티브 상태를 제거하는 기능{/exp}[REMOVE ACTIVE STATUS]
+		//mkjung 120521 
+		//ActionScript 스크립트 형식 일괄 변경 -->('[x]' => [x]) 
+		//{must1}{exp}ACTIVE STATUS 아이디{/exp}{string}-> [tag]
+		//mkjung 120704 
+		//DNF Client Source 참조
+		{must1}{exp}슬로우{/exp}[slow]		//ACTIVESTATUS_SLOW
+		{must1}{exp}프리즈{/exp}[freeze]		//ACTIVESTATUS_FREEZE
+		{must1}{exp}포이즌{/exp}[poison]		//ACTIVESTATUS_POISON
+		{must1}{exp}스턴{/exp}[stun]			//ACTIVESTATUS_STUN
+		{must1}{exp}커스{/exp}[curse]		//ACTIVESTATUS_CURSE
+		{must1}{exp}블라인드{/exp}[blind]		//ACTIVESTATUS_BLIND
+		{must1}{exp}라이트닝{/exp}[lightning]		//ACTIVESTATUS_LIGHTNING
+		{must1}{exp}스턴{/exp}[stone]		//ACTIVESTATUS_STONE
+		{must1}{exp}슬립{/exp}[sleep]		//ACTIVESTATUS_SLEEP
+		{must1}{exp}화상{/exp}[burn]		//ACTIVESTATUS_BURN
+		{must1}{exp}무기 파괴{/exp}[weapon break]	//ACTIVESTATUS_WEAPON_BREAK
+		{must1}{exp}블리딩{/exp}[bleeding]		//ACTIVESTATUS_BLEEDING
+		{must1}{exp}헤이스트{/exp}[haste]		//ACTIVESTATUS_HASTE
+		{must1}{exp}블레스{/exp}[bless]		//ACTIVESTATUS_BLESS
+		//mkjung 120704 [weakness]-->[element]로 변경 
+		//TuningProc.h 로 확인.
+		//RDARScriptAction.cpp 검토..
+		{must1}{exp}엘레먼트{/exp}[element]		//ACTIVESTATUS_ELEMENT
+		{must1}{exp}혼란{/exp}[confuse]		//ACTIVESTATUS_CONFUSE
+		{must1}{exp}홀드{/exp}[hold]			//ACTIVESTATUS_HOLD
+		{must1}{exp}갑옷 파괴{/exp}[armor break]	//ACTIVESTATUS_ARMOR_BREAK
+		//mkjung 120704 [ALL] 추가.
+		//TuningProc.h 로 확인.
+		//RDARScriptAction.cpp 검토.
+		{must1}{exp}모두{/exp}[ALL]
+	[!REMOVE ACTIVE STATUS]
+	
+	{exp}}어펜디지ID 삭제{exp}[REMOVE APPENDAGE]
+		//{must1}{exp}어펜디지ID{/exp}{string}
+		//mkjung 120518 modi.
+		{must1}[ALL]
+		{must1}[AGAMEMNON TELEKINESIS]
+		{must1}[ANGER]
+		{must1}[DARKSCALP]	
+		{must1}[CHANGE GRAVITY]	
+		{must1}[ICE APPENDAGE]
+		{must1}[SUFFOCATION APPENDAGE]
+		{must1}[physical attack]
+		{must1}[magical attack]
+		{must1}[physical defense]
+		{must1}[magical defense]
+		{must1}[equipment physical attack]
+		{must1}[equipment physical defense]
+		{must1}[jump power]
+		{must1}[attack speed]
+		{must1}[move speed]
+		{must1}[cast speed]
+		{must1}[hp max]
+		{must1}[hp regen rate]
+		{must1}[magical critical hit rate]
+		{must1}[physical critical hit rate]
+		{must1}[physical back attack critical rate]
+		{must1}[magical back attack critical rate]
+		{must1}[fire element]
+		{must1}[water element]
+		{must1}[dark element]
+		{must1}[light element]
+		{must1}[stuck]
+		{must1}[mp regen rate]
+		{must1}[hit recovery]
+		{must1}[equipment magical attack]
+		{must1}[equipment magical defense]
+		{must1}[good hit]
+		{must1}[all active status resistance]
+		{must1}[all element]
+		{must1}[fire element attack]
+		{must1}[water element attack]
+		{must1}[dark element attack]
+		{must1}[light element attack]
+		{must1}[all element attack]
+		{must1}[mp max]
+		{must1}[separate attack]
+		{must1}[separate physical attack]
+		{must1}[separate magical attack]
+		{must1}[separate all attack]
+		{must1}[antievil]
+		{must1}[physical absolute damage]
+		{must1}[village moving speed]
+	[!REMOVE APPENDAGE]
+
+	{exp}부활할 위치를 설정, X, Y 둘다 -1을 넣어줄 경우 사용하지 않음{/exp}[SET RESPAWN POS]
+		{must1}{exp}X좌표{/exp}{int(:)}
+		{must2}{exp}Y좌표{/exp}{int(:)}
+	[!SET RESPAWN POS]
+
+	{exp}캐스팅 게이지 위치를 설정{/exp}[SET CASTING GAUGEPOS]
+		{must1}{exp}기준 오브젝트 위치 X{/exp}{int(:)}
+		{must2}{exp}기준 오브젝트 위치 Y{/exp}{int(:)}
+		{must3}{exp}기준 오브젝트 위치 Z{/exp}{int(:)}
+	[!SET CASTING GAUGEPOS]
+
+	{exp}변신 몹의 스킬 패턴을 변경{/exp}[CHANGE RIDABLESKILL PATTERN]
+		{must1}{exp}패턴 인덱스{/exp}{int(:)}
+	[!CHANGE RIDABLESKILL PATTERN]
+
+	{exp}현재 액션의 쿨타임을 다시 시작{/exp}{etc}[RESTART COOLTIME]
+	{exp}몬스터, APC의 이름을 가려준다{/exp}{etc}[NAME HIDE ON]
+	{exp}몬스터, APC의 이름을 표시한다{/exp}{etc}[NAME HIDE OFF]
+	{exp}초기 AI타겟으로 변경(가던길 감){/exp}{etc}[RESTORE TARGET]
+
+	{exp}피격시 화면색이 변하고 일정 피격 횟수를 넘길 경우{/exp}[HIT APPENDAGE]
+		{must1}{exp}.ani파일경로{/exp}{string}
+		{must2}{exp}애니좌표X{/exp}{int(:)}
+		{must3}{exp}애니좌표Y{/exp}{int(:)}
+		{must4}{exp}Red{/exp}{int(0:255)}
+		{must5}{exp}Green{/exp}{int(0:255)}
+		{must6}{exp}Blue{/exp}{int(0:255)}
+		{must7}{exp}피격시알파감소값{/exp}{int(0:)}
+		{must8}{exp}피격횟수{/exp}{int(0:)}
+		{must9}{exp}최종피격후주는데미지{/exp}{int(:)}
+		{must10}{exp}어펜디지발동체력(최소{/exp}{int(:)}
+		{must11}{exp}어펜디지발동체력(최대){/exp}{int(:)}
+	[!HIT APPENDAGE]
+
+	{exp}mob파일에 설정했던 AI를 원하는 파일로 변경{/exp}[CHANGE AI]
+		{must1}{exp}변경할 난이도{/exp}[EASY]
+		{must1}{exp}변경할 난이도{/exp}[MEDIUM]
+		{must1}{exp}변경할 난이도{/exp}[HARD]
+		{must1}{exp}변경할 난이도{/exp}[ULTIMATE]
+		//mkjung 120518 add
+		{must1}{exp}변경할 난이도{/exp}[NORMAL]
+		{must1}{exp}변경할 난이도{/exp}[EXPERT]
+		{must1}{exp}변경할 난이도{/exp}[MASTER]
+		{must1}{exp}변경할 난이도{/exp}[KING]
+		{must1}{exp}변경할 난이도{/exp}[HERO]
+
+		{must2}{exp}바꿀인덱스(0. Event, 1. DestinationSelect, 2. Action, 3. MoveMethod){/exp}{int(:)}
+		{must3}{exp}대체할 AI 파일경로{/exp}{string}
+	[!CHANGE AI]
+	
+	{exp}[SAVE TARGET OBJECT]에서 저장해둔 오브젝트로 설정{/exp}[SET SAVED OBJECT]
+		{must1}{exp}저장된 오브젝트 인덱스{/exp}{int(:)}
+	[!SET SAVED OBJECT]
+ 
+	{exp}대상 오브젝트에 심볼(구분값)을 설정, [CHECK SYMBOL]로 체크{/exp}[SET SYMBOL]
+		//mkjung 120704 설명 수정.
+		//심볼값은 0,1이 아닌 임의 int값
+		{must1}{exp}심볼값{/exp}[{int(0:)}
+	[!SET SYMBOL]
+
+	{exp}대상에서 어펜디지를 걸어 때릴때마다 능력을 변화시키고 아웃라인을 준다{/exp}[DAMAGE APPENDAGE]
+		{must1}{exp}캐스팅 차는 시간{/exp}{int(0:)}
+		{must2}{exp}히트텀{/exp}{int(:)}
+		{must3}{exp}히트시 줄어드는 게이지 정도 (0-100%){/exp}{int(0:)}
+		{must4}{exp}아웃라인색 R{/exp}{int(0:255)}
+		{must5}{exp}아웃라인색 G{/exp}{int(0:255)}
+		{must6}{exp}아웃라인색 B{/exp}{int(0:255)}
+		{must7}{exp}때릴 수 있을때 아웃라인색 R{/exp}{int(0:255)}
+		{must8}{exp}때릴 수 있을때 아웃라인색 G{/exp}{int(0:255)}
+		{must9}{exp}때릴 수 있을때 아웃라인색 B{/exp}{int(0:255)}
+		{must10}{exp}최대 아웃라인 굵기{/exp}{int(0:)}
+		{must11}{exp}공격력 증가{/exp}{int(:)}
+		{must12}{exp}공속 증가{/exp}{int(:)}
+		{must13}{exp}이속 증가{/exp}{int(:)}
+		{must14}{exp}줄어드는 속도(0을 입력할 경우 확 줄어듬){/exp}{int(0:)}
+	[!DAMAGE APPENDAGE]
+
+	
+	{exp}오브젝트를 불러내서 그 오브젝트를 대상을 중심으로 공전시킨다{/exp}[RESOLUTION APPENDAGE] 
+		{must1}{exp}오브젝트 숫자{/exp}{int(0:)}
+		{must2}{exp}오브젝트 인덱스{/exp}{int(:)}
+		{must3}{exp}X좌표{/exp}{int(:)}
+		{must4}{exp}Y좌표{/exp}{int(:)}
+		{must5}{exp}Z좌표{/exp}{int(:)}
+		{must6}{exp}RPM{/exp}{int(:)}
+		{must7}{exp}RPM 최대{/exp}{int(0:)}
+		{must8}{exp}RPM 변화시간{/exp}{int(0:)}
+		{must9}{exp}RPM 회복시간{/exp}{int(0:)}
+		{must10}{exp}HP 1% 감소할때 증가하는 RPM 량{/exp}{int(0:)}
+		{must11}{exp}MIN 반지름{/exp}{int(0:)}
+		{must12}{exp}MAX 반지름{/exp}{int(0:)}
+		{must13}{exp}거리보정기준인자{/exp}{int(:)}
+		{must14}{exp}반지름변화 민감도{/exp}{float(:)}
+	[!RESOLUTION APPENDAGE] 
+
+	[STRAIGHT MOVE]
+		{exp}직선이동시킬 좌표축[{/exp}[AXIS]
+			{must1}{exp}X축{/exp}[X]
+			{must1}{exp}Y축{/exp}[Y]
+			{must1}{exp}Z축{/exp}[Z]
+		[!AXIS]
+		
+		{exp}이동 중에 취할 모션{/exp}[MOVING MOTION]
+			{must1}[STAND]
+			{must1}[JUMP]
+			{must1}[DAMAGE]
+			{must1}[SIT]
+			{must1}[OVERTURN]
+			{must1}[DOWN]
+		[!MOVING MOTION]
+		
+		{exp}이동 끝난 직후에 취할 모션{/exp}[RELEASE MOTION]
+			{must1}[STAND]
+			{must1}[JUMP]
+			{must1}[DAMAGE]
+			{must1}[SIT]
+			{must1}[OVERTURN]
+			{must1}[DOWN]
+		[!RELEASE MOTION]
+
+		{exp}이동하는 시간 설정{/exp}[TIME]
+			{must1}{exp}단위:ms{/exp}{int(0:)}
+		[!TIME]
+
+		{exp}이동시킬 거리 설정{/exp}[DISTANCE]
+			{must1}{exp}단위:pixel{/exp}{int(:)}
+		[!DISTANCE]
+
+		{exp}이동 후 데미지를 준다{/exp}[DAMAGE HP]
+			{must1}{exp}단위:%{/exp}{int(0:)}
+		[!DAMAGE HP]
+
+
+		{exp}이동 후 되돌아올 좌표.(미지정: 돌아오지 않고 이동한 곳 그대로){/exp}[RETURN XPOS],[RETUNN YPOS],[RETUNN ZPOS]
+			{must1}{int(:)}
+		[!RETURN XPOS],[!RETUNN YPOS],[!RETUNN ZPOS]
+
+		{exp}이동시 가속도를 설정{/exp}[ACCELERATE]
+			{must1}{int(0:)}
+		[!ACCELERATE]
+
+	[/STRAIGHT MOVE] 
+
+	[MOVE APPENDAGE]
+		{must1}{exp}몇초동안 움직이지 않으면?{/exp}{int(0:)}
+		{must2}{exp}HP가 감소되는 시간{/exp}{int(0:)}
+		{must3}{exp}감소되는 HP%{/exp}{int(0:)}
+		{must4}{exp}어펜디지 지속시간{/exp}{int(0:)}
+		{must5}{exp}대상에게 생성되는 패시브 인덱스{/exp}{int(:)}
+	[!MOVE APPENDAGE]
+
+	[FREEZE APPENDAGE]
+		{must1}{exp}0:모든 움직임 제한 1:점프는 허용{/exp}{int(0:1)}
+		{must2}{exp}HP가 감소되는 시간{/exp}{int(0:)}
+		{must3}{exp}감소되는 HP%{/exp}{int(0:)}
+		{must4}{exp}어펜디지 지속시간{/exp}{int(0:)}
+		{must5}{exp}대상에게 생성되는 패시브 인덱스{/exp}{int(:)}
+	[!FREEZE APPENDAGE]
+
+	{exp}발동시킨 오브젝트 소멸될때까지 움직이지 못함{/exp}{etc}[TRAP APPENDAGE]
+
+	{exp}특정 영역안에 패시브 오브젝트를 랜덤 생성{/exp}[RANDOM GENERATE PASSIVE OBJECT]	
+		{exp}패시브 오브젝트 생성 영역{/exp}[GENERATE AREA]
+			{must1}{exp}X좌표 시작{/exp}{int(:)}
+			{must2}{exp}X좌표 끝{/exp}{int(:)}
+			{must3}{exp}Y좌표 시작{/exp}{int(:)}
+			{must4}{exp}Y좌표 끝{/exp}{int(:)}
+			{must5}{exp}Z좌표 시작{/exp}{int(:)}
+			{must6}{exp}Z좌표 끝{/exp}{int(:)}
+		[!GENERATE AREA]
+
+		{exp}생성빈도수{/exp}[CREATE FREQUENCE]
+			{must1}{exp}타입{/exp}{int(0:)}
+			{must2}{exp}시간{/exp}{int(0:)}
+		[!CREATE FREQUENCE]
+
+		{exp}생성될 오브젝트 리스트{/exp}[PASSIVE OBJECT INDEX]
+			{must1}{exp}번호{/exp}{int(0:)}
+			{must2}{exp}개수{/exp}{int(0:)}
+		[!PASSIVE OBJECT INDEX]
+
+		{exp}타켓 X좌표에 생성 AREA를 동기화?{/exp}{etc}[USE TARGET X POS]
+		{exp}타켓 Y좌표에 생성 AREA를 동기화?{/exp}{etc}[USE TARGET Y POS]
+		{exp}타켓 Z좌표에 생성 AREA를 동기화?{/exp}{etc}[USE TARGET Z POS]
+	[/RANDOM GENERATE PASSIVE OBJECT]
+
+	{exp}대상과 내 HP 비율을 변경{/exp}{etc}[EXCHANGE HP RATE]
+
+	{exp}대상을 특점 지점들을 경유하거나 배회하는 패턴 태그{/exp}[MOVE PATTERN]	
+		{exp}타입{/exp}[TYPE]
+			{must1}{exp}[POS] 입력점 따라 직선(0), 곡선(1) [AREA] 입력영역을 직선(2), 곡선(3){/exp}{int(0:3)}
+		[!TYPE]
+		
+		{exp}입력한 점들을 루프를 돌것인가?{/exp}[LOOP]
+			{must1}{int(0:1)}
+		[!LOOP]
+
+		{exp}이동 속도, (곡선 이동시에는 평균 속도){/exp}[VELOCITY]
+			{must1}}{int(0:)}
+		[!VELOCITY]
+		
+		{exp}한 점을 이동한 후에 거기서 머무르는 시간{/exp}[STAY TIME]
+			{must1}{int(0:)}
+		[!STAY TIME]
+		
+		{exp}이동 가능한 영역{/exp}[AREA]
+			{must1}{exp}X 시작{/exp}{int(:)}
+			{must2}{exp}X 끝{/exp}{int(:)}
+			{must3}{exp}Y 시작{/exp}{int(:)}
+			{must4}{exp}Y 끝{/exp}{int(:)}
+			{must5}{exp}Z 시작{/exp}{int(:)}
+			{must6}{exp}Z 끝{/exp}{int(:)}
+		[!AREA]
+
+		{exp}이동할 점 위치좌표{/exp}[POS]
+			{must1}{exp}X좌표{/exp}{int(:)}
+			{must2}{exp}Y좌표{/exp}{int(:)}
+			{must3}{exp}Z좌표{/exp}{int(:)}
+		[!POS]
+		{exp}한번 이동에 최소로 이동할 거리{/exp}{etc}
+		//mkjung 120521 modi etc-->line tag
+		[MIN MOVE DISTANCE]
+			{must1}{exp}거리{/exp}{int(0:)}
+		[!MIN MOVE DISTANCE]
+	[/MOVE PATTERN]	
+
+	{exp}[MOVE PATTERN] 태그를 종료{/exp}{etc}[MOVE PATTERN OFF]
+
+	//mkjung 120425 add.
+	{exp}질식 어펜디지{/exp}[SUFFOCATION APPENDAGE]	
+		[LEVEL]
+			{must1}{exp}레벨{/exp}{int(0:)}
+		[!LEVEL]
+
+		[APPEND DELAY TIME]
+			{must1}{exp}데미지 입기 시작하기 전에 딜레이 줄 타임{/exp}{int(0:)}
+		[!APPEND DELAY TIME]
+
+		[FREQUENCY TIME]
+			{must1}{exp}데미지 입는 시간 간격{/exp}{int(:)}
+		[!FREQUENCY TIME]
+
+		[DAMAGE]
+			{must1}{exp}데미지{/exp}{int(:)}
+		[!DAMAGE]
+	[/SUFFOCATION APPENDAGE]
+	
+	//mkjung 120517 add
+	[GUARD APPENDAGE]
+		[DAMAGE]
+			{opt1}[PHYSICAL]
+				{must1}{exp}물뎀{/exp}{int(:)}
+				{must2}{exp}방어 비율(백분율){/exp}{int(:)}
+			[!PHYSICAL]
+			{opt2}[MAGICAL]
+				{must1}{exp}마뎀{/exp}{int(:)}
+				{must2}{exp}방어 비율(백분율){/exp}{int(:)}
+			[!MAGICAL]
+		[/DAMAGE]
+
+		//mkjung 120518 add.
+		{exp}어펜디지 걸리는 시간{/exp}[TIME]
+			{must1}{exp}0:무한대{/exp}{int(0:)}
+		[!TIME]
+
+		[KNOCK BACK]
+			{must1}{exp}밀리는 값{/exp}{int(0:)}
+		[!KNOCK BACK]
+
+		[BACK ATTACK]
+			{must1}{exp}백어택시 적용 여부{/exp}{int(0:1)}
+		[!BACK ATTACK]
+	[/GUARD APPENDAGE]
+	//mkjung 120514 add.
+	[SET TEAM]
+		{must1}{exp}{/exp}{int(0:)}
+	[!SET TEAM] 
+
+	//mkjung 120514 add.
+	[CUT SCENE]
+		{exp}플립타입{/exp}[FLIP TYPE]
+			{must1}{exp}0:없음 1:캐릭터 방향에 따라 2:캐릭터 위치에 따라{/exp}{int(0:2)}
+		[!FLIP TYPE]
+		{exp}시작 y좌표{/exp}[START POSITION]
+			{must1}{exp}X 좌표{/exp}{int(:)}
+			{must2}{exp}Y 좌표{/exp}{int(:)}
+		[!START POSITION]
+		[ANI FILE]
+			{must1}{exp}애니파일 경로{/exp}{string}
+		[!ANI FILE]
+		//어떻게 해야하지?
+		[MOVE DIR]
+			{exp}정지할 위치 X{/exp}{int(:)}
+				{must1}{exp}정지할 위치 Y{/exp}{int(:)}
+				{must2}{exp}스피드(1/10 초당 이동거리){/exp}{int(:)}
+			{!int(:)}
+		[/MOVE DIR]
+	[/CUT SCENE]
+
+	//mkjung 120516 add.
+	[CAMOUFLAGE]
+		{must1}{int(:)}
+		{must2}{int(:)}
+	[!CAMOUFLAGE]
+
+	//mkjung 120516 add.
+	[TRIGGER QUESTEVENT]
+		{must1}{int(:)}
+	[!TRIGGER QUESTEVENT]
+
+	//mkjung 120516 add.
+	[START KEYSTROKE MODE]
+		{must1}{exp}종속 attack 액션 인덱스{/exp}{int(:)}
+		{must2}{exp}종결 attack 액션 인덱스{/exp}{int(:)}
+		{must3}{exp}연타 모드 0: 순간 키 모드, 1: 누적 키 모드{/exp}{int(:)}
+		{must4}{exp}한번 종속액션 실행하기 위해 눌러야되는 횟수{/exp}{int(:)}
+		{must5}{exp}종속 액션 루프 한계{/exp}{int(:)}
+	[!START KEYSTROKE MODE]
+	
+	//mkjung 120516 add.
+	[UNLOCK QUEST]
+		{must1}{int(:)}
+	[!UNLOCK QUEST]
+	
+	//mkjung 120516 add.
+	{exp}업적을 잠근다{/exp}[LOCK QUEST UNTIL]
+		{must1}[CHANGE MODULE]
+		{must2}{int(:)}
+	[!LOCK QUEST UNTIL]
+
+	//mkjung 120517 add.
+	//mkjung 120518 modi. [Y NORMAL],[Y SLANT]add.
+	[SET MOVEVELS]
+		[X NORMAL]
+			{must1}{int(:)}
+		[!X NORMAL]
+		[Y NORMAL]
+			{must1}{int(:)}
+		[!Y NORMAL]
+		[X SLANT]
+			{must1}{int(:)}
+		[!X SLANT]
+		[Y SLANT]
+			{must1}{int(:)}
+		[!Y SLANT]
+	[/SET MOVEVELS]
+	
+	//mkjung 120518 add.
+	{etc}[END KEYSTROKE MODE]
+	{etc}[DESTROY BY FORCE]
+[/BEHAVIOR]

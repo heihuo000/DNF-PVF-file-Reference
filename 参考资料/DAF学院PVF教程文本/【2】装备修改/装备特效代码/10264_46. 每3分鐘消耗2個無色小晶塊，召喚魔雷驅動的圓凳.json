@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp; 46&nbsp;&nbsp; &nbsp;每3分鐘消耗2個無色小晶塊，召喚魔雷驅動的圓凳。</p>\n\n<p><br />\n[if]</p>\n\n<p>[time]<br />\n180000&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;5000&nbsp;&nbsp; &nbsp;<br />\n[my state]<br />\n`stand`</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[consume item]<br />\n3037&nbsp;&nbsp; &nbsp;2&nbsp;&nbsp; &nbsp;<br />\n[target]<br />\n`myself`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[passive object]<br />\n8095&nbsp;&nbsp; &nbsp;70&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;60&nbsp;&nbsp; &nbsp;46&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;``</p>\n\n<p>[/passive object]</p>\n\n<p>[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:22:31.118",
+    "view_num": 265
+}

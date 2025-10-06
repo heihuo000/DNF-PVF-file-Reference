@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">步骤：<br />\n一：解压equipment.kor<br />\n二：解压你准备添加特效的装备</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">三：复制下面这段触发代码，粘贴到你要修改的装备上即可。（触发方式可自行修改，比如攻击时几率触发，<br />\n释放技能时触发，暴击时触发什么的，我 这个技能貌似是剑圣的觉醒（貌似吧？很久不玩了也记不清了））</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">四：打开equipment.kor查找speech_这一段，找到字段后，自行按照格式添加。<br />\n五：自行导入测试，装备修改，无需同步即可测试。</span></p>\n\n<p><br />\n<span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[if]</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[event use skill]<br />\n`swordman`<br />\n86&nbsp;<br />\n[/if]</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[then]</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[target]<br />\n`myself`<br />\n-1&nbsp;<br />\n[speech on]<br />\n0&nbsp;3000&nbsp;&lt;3::speech_25`死在我的剑下吧！啊哈哈哈！你这只辣鸡！`&gt;</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[/speech on]</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">方法差不多就是这样了，大家具体的可以自己去体验</span></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-05T22:32:11.927",
+    "view_num": 580
+}

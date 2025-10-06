@@ -1,0 +1,42 @@
+// 장비 부분세트 스크립트 파일 샘플 //
+// 모든 파츠의 스크립트에 아래의 태그들이 포함되어야 한다. //
+
+[piece set ability] 2
+	* 기능들
+	[parameter basic explain] 기본설명
+	[parameter detail explain] 상세설명
+[/piece set ability]
+
+
+[piece set ability] 5
+	* 기능들
+	[parameter basic explain] 기본설명
+	[parameter detail explain] 상세설명
+[/piece set ability]
+
+
+// 기존 세트아이템과 변경사항 //
+
+- 기존 : 마스터를 제외한 세트아이템 인덱스 지정
+- 변경 : 마스터를 포함한 세트아이템 인덱스 지정
+
+[set item]
+12097
+14095
+18082
+16081
+17050
+[/set item]
+
+
+// [2011-06-14] 추가 사항!!!
+// 마스터가 없는 부분세트의 구성품의 개수를 따로 지정하지 않고
+// Etc/EquipmentPartSet.etc 내의 구성품의 총 개수를 따라가고자 할 경우,
+// 인덱스에 -1을 지정한다.
+// (이 경우, -1을 제외한 다른 인덱스가 파일 내에 있어도 무시한다.)
+
+[piece set ability] -1
+	* 기능들
+	[parameter basic explain] 기본설명
+	[parameter detail explain] 상세설명
+[/piece set ability]

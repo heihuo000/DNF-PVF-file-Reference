@@ -1,0 +1,7 @@
+{
+    "content": "<p>依旧以无色小晶块为例。</p>\n\n<p>打开你要上架的npc商店文件，这里用赛丽亚的商店做例子。</p>\n\n<p>文件名：<strong><span style=\"color:#e74c3c\"><code>equipmentshop7.shp</code></span></strong></p>\n\n<p><img alt=\"\" height=\"137\" src=\"/media/uploads/2023/07/28/image-20230728173124-1.png\" width=\"500\" /></p>\n\n<p>[sell item]<br />\n[/sell item]<br />\n之间为她出售的物品，因为在游戏中7个为一行，所以我们将它看为7个一组</p>\n\n<p>&nbsp; 1）.看第一行，3033-3262均为物品代码，其代表的那个物品不过多解释，可以从道具lst里查看</p>\n\n<p>&nbsp; 2）.&ldquo;-1&rdquo;代表的是空白，也就是不放东西，当你想隔开售卖物品时可以用他，否则售卖的物品将会连在一起</p>\n\n<p>&nbsp; 3）.每上架一个物品，后面都需要那个箭头，它的作用是隔开代码，就像3033是一个人<br />\n&nbsp; &nbsp; &nbsp; 3034是另外一个人，如果不隔开就变成30333034，成连体婴了。编写商店的时候可以直接复制一个用。</p>\n\n<p>&nbsp; 4）.&ldquo;-2&rdquo;代表的是分页用来在另外一个页面售卖物品，比如我第一页卖的小晶块，第二页卖的异界宝珠</p>\n\n<p>但分页时需要注意在下面的<br />\n[tab name]<br />\n[/tab name]<br />\n之间写上分页的名字，不然在游戏里打开商店会炸掉</p>\n\n<p>举例：</p>\n\n<pre>\n<code>[tab name]\n       `商店`\n       `異界寶珠`\n[/tab name]</code></pre>\n\n<p><img alt=\"\" height=\"183\" src=\"/media/uploads/2023/07/28/image-20230728173226-2.png\" width=\"300\" /></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-28T17:32:41.449",
+    "view_num": 761
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、感电状态：10<br />\n1、诅咒状态：13<br />\n2、睡眠状态：4<br />\n3、<br />\n4、混乱状态：6<br />\n5、束缚状态：5<br />\n6、灼伤状态：11<br />\n7、冰冻状态：2<br />\n8、出血状态：9<br />\n9、<br />\n10、中毒状态：8<br />\n11、<br />\n12、石化状态：7<br />\n13、失明状态：1<br />\n14、眩暈狀態：3<br />\n[static data]<br />\n10 13 4 0 6 5 11 2 9 15 8 16 7 1 3<br />\n[/static data]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:40:41.395",
+    "view_num": 62
+}

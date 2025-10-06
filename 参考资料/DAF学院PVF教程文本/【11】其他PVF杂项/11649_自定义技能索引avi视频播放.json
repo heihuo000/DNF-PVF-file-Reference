@@ -1,0 +1,7 @@
+{
+    "content": "<p><img alt=\"\" src=\"http://book.tiansj.net//server/index.php?s=/api/attachment/visitFile&amp;sign=41b980928afdd36b8f1dfb023a5f2d95\" /><br />\n游戏执行某函数得出此路径：</p>\n\n<p><img alt=\"\" src=\"http://book.tiansj.net//server/index.php?s=/api/attachment/visitFile&amp;sign=ddcb70a3ddce69c3fda37c6febe980cc\" /></p>\n\n<p><code>Video/Swordman/NormalWaveEx123.avi</code></p>\n\n<p>综上所述：<br />\n技能skl文件名称就是视频名称，至于前面的&rdquo;Video/Swordman&ldquo;路径不用管它。<br />\n例：加男鬼的技能视频，就丢 &ldquo;Video\\Swordman&rdquo; 里。</p>\n\n<p><img alt=\"\" src=\"http://book.tiansj.net//server/index.php?s=/api/attachment/visitFile&amp;sign=d379bd249f2aaee5d4aadd147cab6e05\" /></p>\n\n<pre>\n<code>路径生成方法：\"Swordman/NormalWaveEx123.skl\" -&gt; Video/Swordman/NormalWaveEx123.avi\n</code></pre>\n\n<p>宝子们，注意大小写一致喔。<br />\n<code>Video/%s.avi</code></p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T18:37:01.184",
+    "view_num": 409
+}

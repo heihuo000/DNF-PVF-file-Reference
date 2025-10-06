@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">在装备主文件中加入：</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[spectrum]<br />\n255 0 0 200 500</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">前面三个值是RGB颜色的值，自己取就可以了。</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">后面两个值应该是残影的产生间隔和残影残留时间.</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">时装或皮肤也可以：</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[spectrum avatar]<br />\n255 255 255 120 500 0</span></p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-05T22:38:23.032",
+    "view_num": 517
+}

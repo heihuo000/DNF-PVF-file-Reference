@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:戮离</p>\n\n<p>&nbsp;</p>\n\n<p>worldmap/antberr.wdm 地下城接口名字, 可以是任何英文, 在worldmap.lst里注册.<br />\n[map image]<br />\n`WorldMap/Antberr.img` 地下城接口选副本时的背景. 无意义, 已被子目录的*.ui替代<br />\n0<br />\n[ui path]<br />\n`WorldMap/UI/Antberr.ui` 地下城副本接口关键文件.UI 里面有关于副本图标,图标位置的关键代码<br />\n[dungeon]<br />\n80 -1 81 -1 82 -1 83 -1 84 -1 85 -1 88 -1 89 -1 两个数值为一组, 例:80 -1 ,80这个数值代表副本编号, 在dungeon/dungeon.lst里注册, -1 这个数值代表前置任务编号,在n_quest/quest.lst里注册 -1就是不需要前置任务,<br />\n[/dungeon]<br />\n[name]<br />\n&lt;15::name_18200`安特贝鲁峡谷`&gt; name_18200 为地下城接口名字, 在worldmap/worldmap.kor.str注册<br />\n[hell dungeon]<br />\n1 这个没测试, 个人倾向认为1是代表这个地下城接口内的副本有深渊, 0代表没有, 这个真没测试, 不辩驳<br />\n[hell quest]<br />\n2613 此地下城开启深渊模式的前置任务编号, 在n_quest/quest.lst里注册, 可以删除这行, 直接开启深渊, 不需要任务, 或者-1<br />\n[/hell quest]<br />\n[hell freepass item]<br />\n690000794 1 690000661 1 8272 1 8376 1 8247 1 除门票外深渊的条件<br />\n[/hell freepass item]<br />\n[item condition]<br />\n3330 深渊门票编号, 在stackable/stackable.lst里注册<br />\n[/item condition]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-08T21:58:23.027",
+    "view_num": 696
+}

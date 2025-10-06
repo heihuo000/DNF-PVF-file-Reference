@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>\n[expertjob only]\n    `alchemist`    9\n[/expertjob only]\n\n[prof result variation]\n    5    200\n</code></pre>\n\n<pre>\n<code>#PVF_File\n\n[name]\n    `炼金术师的奥术秘典`\n\n[name2]\n    `name2_440352`\n\n[grade]\n    64\n\n[rarity]\n    3\n\n[icon mark]\n    `item/biankuang.img`    4\n\n[usable job]\n    `[all]`\n[/usable job]\n\n[attach type]\n    `[trade]`\n\n[minimum level]\n    60\n\n[physical attack]\n    30\n\n[physical defense]\n    35\n\n[magical attack]\n    25\n\n[magical defense]\n    25\n\n[price]\n    76800\n\n[repair price]\n    64512\n\n[value]\n    61440\n\n[icon]\n    `Item/common/support.img`    50\n\n[field image]\n    `Item/field_equip.img`    22\n\n[equipment type]\n    `[support]`    21\n\n[move wav]\n    `NECKLACE_TOUCH`\n\n[weight]\n    700\n\n[item group name]\n    `support`\n\n[cool time]\n    10000\n\n[icon mark]\n    `Item/IconMark.img`    48\n\n[expertjob only]\n    `alchemist`    9\n[/expertjob only]\n\n[prof result variation]\n    5    200\n\n[possible kiri protect]\n</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T15:49:30.657",
+    "view_num": 81
+}

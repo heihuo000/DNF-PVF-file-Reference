@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:么文化滴吟</p>\n\n<p>http://tieba.baidu.com/p/4130738188?see_lz=1</p>\n\n<p>这里再讲一下如何添加自定义物品独立掉落<br />\n&nbsp;<br />\n先上图<br />\n&nbsp;<br />\n&nbsp;<img alt=\"\" height=\"524\" src=\"/media/uploads/2023/05/07/image-20230507212343-1.png\" width=\"918\" /><br />\n&nbsp;<br />\n62754是烈焰盾波迪尔的ID 3300是掉落物品 500000是掉落关键数字 大概就是两个怪掉一个虚空魔石碎片吧<br />\n至于怎么修改、怎么添加，你问我？我问谁去？<br />\n&nbsp;<br />\n再稍微提一点，免得你们到时候修改的时候迷糊，怪物ID后面带的数字是0的时候，代表掉落物品是上一排list里面的。</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T21:23:47.632",
+    "view_num": 1731
+}

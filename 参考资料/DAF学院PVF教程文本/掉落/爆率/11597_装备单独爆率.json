@@ -1,0 +1,7 @@
+{
+    "content": "<p>SS路径<br />\nequipment/character/common/amulet/neck_soulchaser.equ</p>\n\n<p>以【灵魂猎者】为例</p>\n\n<p>不管是取消单独一个SS的爆率还是单独修改SS的爆率都是同一个代码，代码如图：</p>\n\n<pre>\n<code>[creation rate]\n    500\n</code></pre>\n\n<p>此代码代表SS的爆率 如果想取消这个SS的爆率就删除这个代码即可，如果想单独修改这个SS的爆率，把数值降低即可。</p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T15:42:52.450",
+    "view_num": 1450
+}

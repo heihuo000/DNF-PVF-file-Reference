@@ -1,0 +1,7 @@
+{
+    "content": "<p><img alt=\"\" height=\"371\" src=\"/media/uploads/2023/08/02/image-20230802125848-1.gif\" width=\"500\" /></p>\n\n<p>第一步：添加一个特效，编号随意，这个特效主要是为了关联act，大致内容可以这么写</p>\n\n<p><img alt=\"\" height=\"131\" src=\"/media/uploads/2023/08/02/image-20230802124404-1.png\" width=\"400\" /></p>\n\n<p>第二步：完成上一步特效里的act，这个act就是召唤APC的关键<br />\n首先写act的触发器，内容如下图：</p>\n\n<p><img alt=\"\" height=\"298\" src=\"/media/uploads/2023/08/02/image-20230802124430-2.png\" width=\"400\" /></p>\n\n<p>&nbsp;</p>\n\n<p><img alt=\"\" height=\"384\" src=\"/media/uploads/2023/08/02/image-20230802124447-3.png\" width=\"400\" /></p>\n\n<p>这里只写了一个召唤语句，可以在[BEHAVIOR]和[/BEHAVIOR]之间添加多个召唤APC语句</p>\n\n<p>第三步：制作一个消耗品，关联上这个特效。投掷类消耗品可以关联特效，所以可以先复制一个投掷类消耗品，然后再做修改，这里拿爆弹举例，如下图：</p>\n\n<p><img alt=\"\" height=\"137\" src=\"/media/uploads/2023/08/02/image-20230802124505-4.png\" width=\"400\" /></p>\n\n<p>复制这个消耗品之后，找到下图中的代码，将50100改成第一步中特效的编号即可</p>\n\n<p><img alt=\"\" height=\"148\" src=\"/media/uploads/2023/08/02/image-20230802124551-5.png\" width=\"400\" /></p>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-08-02T12:47:16.469",
+    "view_num": 838
+}

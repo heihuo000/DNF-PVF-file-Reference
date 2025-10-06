@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、雷龍可控距離上限 : 1000 px<br />\n1、<br />\n2、（未知）移动速度<br />\n3、<br />\n4、（未知）移动速度<br />\n5、（未知）移动速度<br />\n6、（未知）移动速度<br />\n7、（未知）移动速度<br />\n8、<br />\n9、龙身体个数：15个<br />\n10、雷龍多段攻擊間隔 : 0.4秒<br />\n11、<br />\n[static data]<br />\n1000 300 480 0 360 120 60 180 100 15 400 1<br />\n[/static data]</p>\n\n<p>0、雷龍頭部魔法攻擊力 : 独立攻击力 x 2.4<br />\n1、雷龍身體魔法攻擊力 : 独立攻击力 x 1.37<br />\n2、雷龍尾部魔法攻擊力 : 独立攻击力 x 1.03<br />\n3、雷龍存在時間 : 7秒<br />\n4、雷龍大小比率 : 100%%<br />\n[level info]<br />\n5 240 137 103 7000 100</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T16:11:36.873",
+    "view_num": 56
+}

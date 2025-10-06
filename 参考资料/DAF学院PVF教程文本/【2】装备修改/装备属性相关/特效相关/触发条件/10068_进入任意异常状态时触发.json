@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>any参数使用范例：</p>\n\n<p>进入任意异常状态时，HP回复1%</p>\n\n<p>[if]<br />\n&nbsp;<br />\n[cooltime]<br />\n5000<br />\n[my active status on]<br />\n&#39;any&#39;<br />\n[/if]<br />\n&nbsp;<br />\n[then]<br />\n&nbsp;<br />\n[target]<br />\n&#39;myself&#39; -1<br />\n[restore]<br />\n&#39;hp&#39; &#39;%&#39; 1 0<br />\n[/then]</p>\n\n<p>--------------------------------------------------------------------------------</p>\n\n<p>any参数使用范例：</p>\n\n<p><br />\n[then]</p>\n\n<p>[target]<br />\n`enemy`<br />\n-1<br />\n[duration]<br />\n7000<br />\n[probability]<br />\n3<br />\n[active status]<br />\n`any`<br />\n25<br />\n[/then]</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:27:39.106",
+    "view_num": 287
+}

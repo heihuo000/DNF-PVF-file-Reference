@@ -1,0 +1,7 @@
+{
+    "content": "<p>3，region文件夹</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>主要文件都是以rgn作为后缀，也就是region的缩写</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>以天界的heaven.rgn文件为例</p>\n\n<p>[towns]</p>\n\n<p>6 9 14 （town城镇的ID）</p>\n\n<p>[/towns]</p>\n\n<p>&nbsp;</p>\n\n<p>[name]</p>\n\n<p>Type:9 Str:19 &#39;name_0020&gt;天界&#39; （中文名字是啥不重要）</p>\n\n<p>[english name]</p>\n\n<p>Type:9 Str:19 &#39;name_0021&gt;the Heavens&#39; （英文名字是啥不重要）</p>\n\n<p>[minimap]</p>\n\n<p>&#39;MiniMap/heaven.mm&#39;（小地图）</p>\n\n<p>&nbsp;</p>\n\n<p>第二行就是town城镇ID，因此要确保</p>\n\n<p>A，ID是正确的。</p>\n\n<p>B，ID在town/town.lst是存在的。</p>\n\n<p>&nbsp;</p>\n\n<p>另外还有就是minimap文件夹，里面包含了各大区的小地图（游戏内右上角）。但本人还不确认如何修改！</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T22:16:13.678",
+    "view_num": 657
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n[static data]<br />\n3 1<br />\n[/static data]</p>\n\n<p>0、持續時間 : 10秒<br />\n1、[拋沙]攻擊力減少率 : -70%%<br />\n2、[街頭風暴]攻擊力減少率 : -50%%<br />\n3、[擒月炎]爆炸大小增加率 : 30%%<br />\n4、[磚襲]磚塊碎片 大小增加率 : 30%%<br />\n5、[投網]投網 大小傷害 : 105%%<br />\n6、[毒雷引爆]地雷數量 增加 : 1<br />\n[level info]<br />\n7 10000 -70 -50 30 30 105 1</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T16:15:35.063",
+    "view_num": 48
+}

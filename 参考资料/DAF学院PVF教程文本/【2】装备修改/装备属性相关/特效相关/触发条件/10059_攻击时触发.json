@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>设置冷却时间为15秒，攻击成功，目标设置为自己。</p>\n\n<p>[if]</p>\n\n<p>[cooltime]<br />\n15000<br />\n[attack success]<br />\n1<br />\n[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n&#39;myself&#39; -1<br />\n【特效内容】<br />\n[/then]</p>\n\n<p>--------------------------------------------------------------------------------</p>\n\n<p>光属性攻击时触发</p>\n\n<p>[if]</p>\n\n<p>[element]<br />\n&#39;light&#39;<br />\n[attack success]<br />\n1<br />\n[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n&#39;myself&#39; -1<br />\n[increase critical damage]<br />\n&#39;%&#39; 25<br />\n[/then]</p>\n\n<p><br />\n--------------------------------------------------------------------------------</p>\n\n<p><br />\n攻击成功，且角色为鬼剑士时触发，主要作用为防具穿戴时，辨认对应职业。</p>\n\n<p>[if]</p>\n\n<p>[attack success]<br />\n1<br />\n[character]<br />\n`swordman`</p>\n\n<p>[cooltime]<br />\n30000<br />\n[/if]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:25:40.065",
+    "view_num": 470
+}

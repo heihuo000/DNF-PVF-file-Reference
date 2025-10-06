@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、最短飛行時間 : 0.1秒<br />\n3、最長飛行時間 : 0.6秒<br />\n4、爆彈數量 : 10個<br />\n5、攻擊次數上限 : 6次<br />\n[static data]<br />\n400 1000 100 600 10 6<br />\n[/static data]</p>\n\n<p>0、物理攻擊力 : 254% + &lt;1&gt;<br />\n1、物理攻擊力 : 独立攻击力 x 2.16<br />\n2、<br />\n[level info]<br />\n3 254 216 400<br />\n[/level info]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T14:58:38.405",
+    "view_num": 46
+}

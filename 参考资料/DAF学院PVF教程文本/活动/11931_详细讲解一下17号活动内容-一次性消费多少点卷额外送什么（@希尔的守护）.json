@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>废话不多说<br />\n17号活动用我们乡巴佬的大白话讲就是一次性消费多少点卷额外送什么</p>\n\n<p><img alt=\"\" height=\"170\" src=\"/media/uploads/2023/10/07/1_YDnFZDY.jpg\" width=\"203\" /></p>\n\n<p>除了活动参数1要设100外，还要动一个经常用的商场文件</p>\n\n<p><img alt=\"\" height=\"128\" src=\"/media/uploads/2023/10/07/2_MZrTzzg.jpg\" width=\"292\" /></p>\n\n<p>如上图代表什么意思呢<br />\n就是说玩家一次性消费600~899点卷可以获得一个代号2749449的物品<br />\n而后面的1-1000代表此物品出现的概率区间</p>\n\n<p>那么我把活动参数1改为100，而我的pvf设置成1-1000导致的效果就是这样的</p>\n\n<p><img alt=\"\" height=\"303\" src=\"/media/uploads/2023/10/07/3_ipipunn.jpg\" width=\"180\" /></p>\n\n<p>差不多买了十几次才出来一次，平均下来概率就是接近10%</p>\n\n<p>所以要实现买多少点卷必得什么物品<br />\n那么只要把参数1改为1000就能实现我4楼的效果</p>\n\n<p><img alt=\"\" height=\"104\" src=\"/media/uploads/2023/10/07/4_VGyFOQs.jpg\" width=\"318\" /></p>\n\n<p>额外注意内容是，是单次消费，不是累计消费，这个字面意思就不解释了</p>\n\n<h2><span style=\"background-color:#e74c3c\">补充说明</span></h2>\n\n<p><img alt=\"\" height=\"527\" src=\"/media/uploads/2023/10/07/image-20231007222927-1.jpeg\" width=\"568\" /></p>\n\n<p>正解。活动开启参数 1&lt;= 1000；[bonus item info]词条中每组中各物品权重之和 = 1000</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-10-07T22:30:52.293",
+    "view_num": 1027
+}

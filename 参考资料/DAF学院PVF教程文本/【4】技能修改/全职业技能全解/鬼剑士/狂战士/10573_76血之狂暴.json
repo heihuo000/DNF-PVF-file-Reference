@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、间隔消减HP的时间：10秒<br />\n2、<br />\n3、<br />\n[static data]<br />\n350 10000 110 100<br />\n[/static data]</p>\n\n<p>0、施放时消减的HP：220<br />\n1、每10秒消减的HP：75<br />\n2、<br />\n3、增加命中率：0.2%<br />\n4、增加硬直：10<br />\n5、出血机率：6%<br />\n6、出血Lv：Lv36<br />\n7、出血持续时间 ：3秒<br />\n8、出血攻击力：60<br />\n9、[嗜魂之手]增加攻击力：1%<br />\n10、[嗜魂之手]减少冷却时间：0.1秒<br />\n11、[怒气爆发]增加攻击力：1%<br />\n12、[怒气爆发]减少冷却时间：0.15秒<br />\n13、[十字斩]增加攻击力：1%<br />\n14、[十字斩]减少冷却时间：0.05秒<br />\n15、HP最大恢复值：22<br />\n[level info]<br />\n16 220 75 70 2 10 60 36 3000 60 1 100 1 150 1 50 22</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:13:56.686",
+    "view_num": 194
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>monster/fighter/animation/illusionbomb.ani</p>\n\n<p>和monster/fighter/animation/illusion.ani</p>\n\n<p>上述路径中的&nbsp;&nbsp; &nbsp;[ATTACK BOX]</p>\n\n<p>6个体积坐标表示范围&nbsp;&nbsp; &nbsp;-500&nbsp;&nbsp; &nbsp;-500&nbsp;&nbsp; &nbsp;-500&nbsp;&nbsp; &nbsp;1000&nbsp;&nbsp; &nbsp;1000&nbsp;&nbsp; &nbsp;1000（大概全屏）如果还想增加或缩小就改数字 负号不要动</p>",
+    "auth_users": "老夫子",
+    "img": "",
+    "create_at": "2024-05-30T17:38:54.675",
+    "view_num": 425
+}

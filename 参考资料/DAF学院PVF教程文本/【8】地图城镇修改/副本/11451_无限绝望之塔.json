@@ -1,0 +1,7 @@
+{
+    "content": "<p>By：情歌ooo</p>\n\n<p>By：幸平绘里奈<br />\nhttp://tieba.baidu.com/p/4601666831</p>\n\n<p>&nbsp;</p>\n\n<p>1.开启1x频道.有票就可以<br />\n2.改频道.cfg重置时间 有票也可以</p>\n\n<p><br />\nwinscrp登录服务端，进入游戏目录home/dxf/game/cfg。没有dxf就找neople，找到频道文件，一般为cain01.cfg或者siroco01.cfg，打开后找到如下位置：<br />\nserver_group = 3<br />\nfatigue_time = 06<br />\navatar_time = 60<br />\nmax_user_num = 600</p>\n\n<p>将fatigue_time = 06 中06改为6000，保存后重启服务端，好了，只要有票就可以爽了，不过貌似没太大意思~~</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-08T21:57:51.836",
+    "view_num": 561
+}

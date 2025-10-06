@@ -1,0 +1,7 @@
+{
+    "content": "<p>一：df_auction_r<br />\n左 改至 右。<br />\n<img alt=\"\" src=\"http://book.tiansj.net//server/index.php?s=/api/attachment/visitFile&amp;sign=9c1f47ce113b0d7bd5ce0c9e6171db49\" /><img alt=\"\" height=\"191\" src=\"/media/uploads/2023/10/08/22.png\" width=\"1202\" /><img alt=\"\" height=\"188\" src=\"/media/uploads/2023/10/08/11.png\" width=\"1199\" /><br />\n<img alt=\"\" src=\"http://book.tiansj.net//server/index.php?s=/api/attachment/visitFile&amp;sign=2362d35dea87d30f09bcfdcd3441a3cb\" /></p>\n\n<p>二：etc/upgrade_separate.etc<br />\n[separate upgrade max]<br />\n127 //这里写多少，拍卖行窗口中的锻造文本框就能输入数字上限至多少。</p>\n\n<p>3.上传后重新 ./run</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-10-08T11:07:51.867",
+    "view_num": 551
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>[basic explain]<br />\n<code>攻击时，以2%%的机率使敌人进入减速状态。</code></p>\n\n<p>[detail explain]<br />\n<code>攻击时以2%%的机率让敌人20秒内呈现钝化状态，移动速度减少10%%，攻击速度减少10%%。 （高于Lv25的对象得到的机率和效果减少，低于Lv25的对象则会增加）</code></p>\n\n<pre>\n<code>[if]\n    [cooltime]\n        32000\n    [attack success]\n        1\n[/if]\n\n[then]\n    [target]\n        `enemy`    -1\n    [duration]\n        20000\n    [probability]\n        2\n    [active status]\n        `slow`    25    10    10\n[/then]</code></pre>\n",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T22:43:41.727",
+    "view_num": 284
+}

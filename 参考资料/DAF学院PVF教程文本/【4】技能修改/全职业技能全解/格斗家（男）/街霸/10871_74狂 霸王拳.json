@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、投擲的磚塊數量 : 3<br />\n4、<br />\n5、<br />\n6、<br />\n7、<br />\n8、<br />\n[static data]<br />\n200 -50 -50 3 400 4000 300 100 10<br />\n[/static data]</p>\n\n<p>0、磚塊個數 : 10<br />\n1、磚塊物理攻擊力 : 独立攻击力 x 4.55<br />\n2、碎磚物理攻擊力 : 独立攻击力 x 3.42<br />\n3、眩暈機率 : 50%%<br />\n使用[投擲強化]時<br />\n4、眩暈Lv : Lv32<br />\n5、眩暈持續時間 : 3秒<br />\n6、巨石物理攻擊力 : 独立攻击力 x 13.66<br />\n7、巨石碎塊物理攻擊力 : 独立攻击力 x 10.25<br />\n8、巨石碎塊眩暈機率 : 100%%<br />\n9、眩晕Lv：Lv32<br />\n10、眩暈持續時間 : 3.6秒<br />\n[level info]<br />\n11 10 455 342 500 32 3000 1366 1025 1000 32 3600</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T16:00:18.682",
+    "view_num": 65
+}

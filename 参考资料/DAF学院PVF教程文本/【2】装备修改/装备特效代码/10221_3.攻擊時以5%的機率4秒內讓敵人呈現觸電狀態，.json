@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp; 3&nbsp;&nbsp; &nbsp;攻擊時以5%的機率4秒內讓敵人呈現觸電狀態，每次擊時以230的攻擊力給予追加傷害.<br />\n(若敵人高於Lv65，則減少進入異常狀態的機率；反之，則增加機率)</p>\n\n<p><br />\n[if]</p>\n\n<p>[cooltime]<br />\n6000&nbsp;&nbsp; &nbsp;<br />\n[attack success]<br />\n1&nbsp;&nbsp; &nbsp;</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`enemy`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[duration]<br />\n4000&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n5&nbsp;&nbsp; &nbsp;<br />\n[reduce probability to human armor at pvp module]<br />\n80&nbsp;&nbsp; &nbsp;<br />\n[active status]<br />\n`lightning`<br />\n65&nbsp;&nbsp; &nbsp;230&nbsp;&nbsp; &nbsp;<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:15:35.529",
+    "view_num": 301
+}

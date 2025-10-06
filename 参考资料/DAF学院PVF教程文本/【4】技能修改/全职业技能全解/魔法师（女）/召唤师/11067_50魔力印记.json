@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、最大重叠数次：3次<br />\n[static data]<br />\n500 3<br />\n[/static data]</p>\n\n<p>0、标靶持续时间：5秒<br />\n1、攻击间隔：1秒<br />\n2、魔法攻击力：48%<br />\n3、召唤兽附加魔法攻击力：48%<br />\n4、召唤兽攻击标靶的范围：400 px<br />\n5、射程：600 px<br />\n6、<br />\n7、<br />\n[level info]<br />\n8 5000 1000 48 48 400 600 0 0</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:13:44.681",
+    "view_num": 65
+}

@@ -1,0 +1,254 @@
+[ancient dungeon] 1			// 고대던전이면 1, 아니면 없어도 됨
+
+[entering title]  `Title.ani`		// 타이틀로 사용할 애니메이션. 화면의 중앙에 애니메이션 중점을 맞춘다.
+[cutscene image]  `CutScene.img` 0	// 컷씬 이미지 파일 이름, 프레임 인덱스
+[minimap image]  `MiniMap.img`		// 미니맵 이미지팩의 파일 이름
+[prohibit practice] 1				// 연습모드를 막을 것인가(1: 막음 , 태그를 쓰지 않거나 0 기입할 경우 막지않음)
+[worldmap info] 			// 월드맵에 표시할 정보
+200 302					// 비활성화 맵의 좌표
+210 312					// 활성화 맵의 좌표
+`Godae.img`				// 월드맵에 들어갈 이미지팩
+
+[boss room entrance condition]		// 보스방 입장 조건
+`[hunt monster]`			// 몹을 잡아라!!!! (일단 이것뿐.. 나중에 확장가능)
+2					// 몹의 개체수..
+31 1 1					// 몹인덱스 등장수 잡아야할수
+22 1 1					// 몹인덱스 등장수 잡아야할수
+
+
+[minimum required level]  11		// 던전에 들어가기 위한 최소 요구 레벨
+[required item] 10003 1 1		// 던전에 들어가기 위한 아이템. 인덱스, 수량, 소모여부. 소모여부가 0이면 소모 안됨
+					// 지정 안하려면 태그를 없애거나 아이템 인덱스에 65535
+[coin limit] 3				// 던전에서의 코인 제한 사용수. (파티 전체) 태그를 없애거나 -1로 넣으면 무제한
+[basis level]  4			// 몬스터의 표준 레벨
+[experience increasing point]  1.3	// 경험치 가중치
+[champion]  10 15 20 30			// 난이도별 던전 전체에 나올 챔피언 몬스터의 수
+[item] 					// 던전 클리어시 나올 아이템 목록
+323 30					// 인덱스, 확률
+222 15
+[/item]
+[pathgate object] 			// 통로 패시브 오브젝트 인덱스. 없는 오브젝트는 -1	
+100 101 102				// 왼쪽 일반통로 / 보스통로 / 벽
+200 201 202				// 오른쪽 일반통로 / 보스통로 / 벽
+300 301					// 위쪽 일반통로 / 보스통로
+400 401					// 아래쪽 일반통로 / 보스통로
+
+[maze info] 				// 하나의 미로 정보가 시작된다는 표시.
+[size]  3 5				// 가로 맵 크기, 세로 맵 크기 (최대 50x50)
+[greed] 				// 던전 그리드 모양 표시
+`┼┾╅
+ ┾╅╂
+ ┼╊╉
+ ┾╃╂
+ ┾┿╃`
+
+[map specification] 			// 특정 그리드에서 나올 맵 리스트의 지정. 지정하지 않은 그리드는 랜덤 선택
+1 2					// 좌표 (x, y) 좌표는 좌측 최상단이 0, 0
+10001					// 맵 인덱스 리스트들
+10002					// 보스 맵으로 선택 가능한 곳이라면 보스 맵일 경우와 아닐 경우의
+10003					// 맵 인덱스가 모두 들어있어야 한다.
+[/map specification]
+[map specification] 			// 필요한 만큼 반복한다.
+2 2
+10011
+[/map specification]
+[boss map specification] 			// 해당 맵이 보스맵으로 출현할 때 나올 맵 리스트 지정.
+1 2				// 좌표
+20011				// 맵 인덱스들
+[/boss map specification]
+[start map] 			// 시작 맵으로 설정 가능한 그리드의 목록 (x, y)
+2 2
+1 2
+0 0
+[/start map]
+[boss map] 			// 보스 맵으로 설정 가능한 그리드의 목록 (x, y)
+2 3
+1 1
+[/boss map]
+
+[escape hell] 1			// 해당 메이즈에서는 헬모드가 나오지 않도록 함
+
+[maze info] 			// 하나의 미로 정보가 시작된다는 표시.
+[size]  5 3			// 가로 맵 크기, 세로 맵 크기
+[greed] 			// 던전 그리드 모양 표시
+`┼┾╅
+ ┾╅╂
+ ┼╊╉
+ ┾╃╂
+ ┾┿╃`
+
+[map specification] 			// 특정 그리드에서 나올 맵 리스트의 지정. 지정하지 않은 그리드는 랜덤 선택
+1 2				// 좌표 (x, y) 좌표는 좌측 최상단이 0, 0
+10001				// 맵 인덱스 리스트들
+10002				// 보스 맵으로 선택 가능한 곳이라면 보스 맵일 경우와 아닐 경우의
+10003				// 맵 인덱스가 모두 들어있어야 한다.
+[/map specification]
+[map specification] 			// 필요한 만큼 반복한다.
+2 2
+10011
+[/map specification]
+[start map] 			// 시작 맵으로 설정 가능한 그리드의 목록 (x, y)
+2 2
+1 2
+0 0
+[/start map]
+[boss map] 			// 보스 맵으로 설정 가능한 그리드의 목록 (x, y)
+2 3
+1 1
+[/boss map]
+
+ 
+[name]  `고대의 동굴`		// 던전의 이름
+[explain] 				// 던전의 설명. 줄바꿈 가능.
+`고대에 있던 동굴이라네
+분위기는 음침 난이도는 B급
+등등등...`
+ 
+
+//특수 수동 객체에서 생성되는 아이템 정보
+[special passive object item]
+0	-1	3	//드랍 목록중 인덱스로 쓰이는 값(중복되면 뷁!),	등급지정값(-1이면 던정등급 따라감)	아이템 목록이 몇개 있는지 겟수
+1000	5000	//아이템 인덱스					생성 확률
+1001	3000
+1002	2000
+
+1	-1	3
+1003	5000
+1004	3000
+1005	2000
+
+2	22	0
+[/special passive object item]
+
+
+/////////////////////////////////////////////////////////////////////
+// 탑용 데이터들
+[tower item drop] 0	//타워에서 아이템 드랍 여부(1: 드랍, 0: 안드랍)
+
+
+
+
+/////////////////////////////////////////////////////////////////////
+// 경쟁던전용 데이터들
+
+// 경쟁던전에서 사용할 맵 인덱스
+[warroom map index] 1000
+
+// 몬스터 타입 선택확율
+[monster type spawn prob] 50 20 20 10	// 일반, 일반챔, 슈퍼챔, 보스
+
+// 몬스터 타입별 소모 자원
+[monster type spawn cost] 2 4 6 10		// 일반, 일반챔, 슈퍼챔, 보스
+
+
+// 스폰되는 일반몬스터들의 인덱스
+[spawn common monster index]
+1
+[/spawn common monster index]
+
+// 스폰되는 일반 챔피언들의 인덱스
+[spawn common champion index]
+3000
+[/spawn common champion index]
+
+
+
+// 스폰되는 슈퍼챔피언들의 인덱스
+[spawn super champion index]
+3001
+[/spawn super champion index]
+
+// 스폰되는 보스들의 인덱스
+[spawn boss index]
+50000
+[/spawn boss index]
+
+
+// 최대스폰단계
+[spawn step max] 5
+
+// 스폰단계별 자원풀, [spawn step max]에 지정한 값만큼 지정
+[spawn step resource pool]
+30
+40
+50
+60
+70
+
+// 각종계산에 이용되는 KC상수
+[kill count const] 500
+
+// 입장비
+[join cost gold] 5000
+
+// 골드 드랍율
+[gold drop prob] 50
+
+// 일반몬스터 아이템드롭율
+[common monster item drop prob] 10
+
+// 일반챔피언 아이템드롭율
+[common champion item drop prob] 20
+
+// 슈퍼챔피언 아이템드롭율
+[super champion item drop prob] 40
+
+// 보스 아이템드롭율
+[boss item drop prob] 50
+
+// 일반 몬스터 경험치 계산용 상수
+[common monster exp const] 500
+
+// 일반 챔피언 경험치 계산용 상수
+[common champion exp const] 1000
+
+// 슈퍼 챔피언 경험치 계산용 상수
+[super champion exp const] 2000
+
+// 보스 경험치 계산용 상수
+[boss exp const] 3000
+
+// 일반 몬스터 아이템 드롭 리스트
+[common monster item drop list]
+1015
+3037
+[/common monster item drop list]
+
+
+// 일반 챔피언 아이템 드롭 리스트
+[common champion item drop list]
+1015
+3038
+[/common champion item drop list]
+
+// 슈퍼 챔피언 아이템 드롭 리스트
+[super champion item drop list]
+1000
+1001
+[/super champion item drop list]
+
+// 보스 아이템 드롭 리스트
+[boss item drop list]
+2000
+3000
+[/boss item drop list]
+
+// 플레이어끼리 죽이고 죽였을때 finishPoint 계산상수
+[player kc] 1000
+
+// 전투 제한시간 60000 = 1분
+[battle spawn time] 60000
+/////////////////////////////////////////////////////////////////////
+
+
+[event monster]		//던전에서 나올 이벤트 몬스터를 지정하는 테그
+2 20000			//몬스터선택개수 등장확률( 만분률 )
+56039 1 300 1 1		//몬스터인덱스 개수 선택확률( 상대확률 ) 루팅횟수
+[/event monster]
+ 
+
+
+[evil] 100 200 300 400  // 항마 수치 (난이도별)
+[evil rate]	        // 항마 최대 최소 비율
+0	10		// 0일때 10%의 하한선
+200	150		// 200 일때 150%의 상한선

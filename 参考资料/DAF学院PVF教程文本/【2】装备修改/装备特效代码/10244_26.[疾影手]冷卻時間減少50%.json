@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp; 26 [疾影手]冷卻時間減少50%(支援兵狀態下不適用)<br />\n别的角色和技能只需要改相应职业和技能代码就可以了</p>\n\n<p><br />\n[skill data up]<br />\n`[swordman]`<br />\n37&nbsp;&nbsp; &nbsp;`[all]`<br />\n`[level]`<br />\n0&nbsp;&nbsp; &nbsp;<br />\n`%`<br />\n50&nbsp;&nbsp; &nbsp;<br />\n[/skill data up]</p>\n\n<p><br />\n收起回复举报|30楼2015-10-05 19:05</p>\n\n<p>名为何物: 提问如果去掉37 `[all]` `[level]` 0 是否会直接变成全部职业全部技能冷却缩短？<br />\n2015-10-7 16:18回复</p>\n\n<p>名为何物: 回复 名为何物 :把swordman改成自己的职业的英文，然后37改成0应该就是当前职业全技能了&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;<br />\n2015-10-7 17:57回复</p>\n\n<p>遗忘sunrise: 回复 名为何物 :这个我倒没试过<br />\n2015-10-7 18:15回复</p>\n\n<p>名为何物: 回复 遗忘sunrise :我在改时装虽然是这么说但是我加上去没有任何卵用~ [skill cool time] -1000 用百度把技能冷却时间翻译成英文我加进去试试~</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:19:26.573",
+    "view_num": 217
+}

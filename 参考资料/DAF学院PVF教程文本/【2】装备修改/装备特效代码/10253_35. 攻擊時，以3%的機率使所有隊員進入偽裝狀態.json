@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp; 35&nbsp;&nbsp; &nbsp;攻擊時，以3%的機率使所有隊員進入偽裝狀態，效果持續20秒。(消耗5個無色小晶塊)</p>\n\n<p><br />\n[if]</p>\n\n<p>[cooltime]<br />\n30000&nbsp;&nbsp; &nbsp;<br />\n[attack success]<br />\n1&nbsp;&nbsp; &nbsp;</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[consume item]<br />\n3037&nbsp;&nbsp; &nbsp;5&nbsp;&nbsp; &nbsp;<br />\n[target]<br />\n`party`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[duration]<br />\n20000&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n3&nbsp;&nbsp; &nbsp;<br />\n[buff]<br />\n`camoflage`</p>\n\n<p>[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:20:41.637",
+    "view_num": 175
+}

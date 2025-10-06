@@ -1,0 +1,7 @@
+{
+    "content": "<p><img alt=\"\" height=\"600\" src=\"/media/uploads/2023/06/15/1b1de803738da97708eb90e3f551f8198418e3bb.jpg\" width=\"800\" /></p>\r\n\r\n<p><br />\r\n以下是正文：<br />\r\n添加装备辞典位置在&quot;etc/itemdictionary/(r)itemdictionary.etc&quot;根据装备不同出现情况内容也不一样。<br />\r\n<br />\r\n<br />\r\n独立掉落，位置在&quot;etc/independent_drop.etc&quot;，掉落信息添加到&quot;[/independent drop]&quot;以上，最后一排黄金哥布林掉落代码有异常，补全它不然不掉粉，或是跳过它，在黄金哥布林代码&quot;61726&quot;的掉落以上加入独立掉落信息。<br />\r\n<br />\r\n<br />\r\n掉落权重，位置在&quot;etc/itemdictionary/(r)independentdropinfo.etc&quot;，掉落权重加到&quot;[/item table]&quot;之前，最下面&quot;[/monster table]&quot;前要加怪物列表。<br />\r\n<br />\r\n<br />\r\n<br />\r\n&quot;etc/itemdictionary/(r)dungeon_name.etc&quot;里&quot;020011&quot;，怪物ID&quot;2&quot;后面两个数字要写&quot;0&quot;&quot;0&quot;不然副本提示右上角没有小图标。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>资源下载：链接: https://pan.baidu.com/s/10savD_1fnKvXQuH42joOfg?pwd=7tku 提取码: 7tku 复制这段内容后打开百度网盘手机App，操作更方便哦&nbsp;<br />\r\n--来自百度网盘超级会员v2的分享</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-06-15T13:08:36.652",
+    "view_num": 726
+}

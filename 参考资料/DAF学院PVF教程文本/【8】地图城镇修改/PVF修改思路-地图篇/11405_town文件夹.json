@@ -1,0 +1,7 @@
+{
+    "content": "<p>4，town文件夹</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>文件都是以twn作为后缀，也就是town的缩写</p>\n\n<p>以史拉乌工业区的slough.twn文件为例</p>\n\n<p>[entering title]</p>\n\n<p>&#39;Title/Slough.ani&#39;</p>\n\n<p>[cutscene image]</p>\n\n<p>&#39;Map/CutScene/Slough.img&#39; 0</p>\n\n<p>[dungeon what must be cleared]</p>\n\n<p>-1 （前置副本要求，-1为无要求）</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>[area]</p>\n\n<p>0 &#39;Slough/Slough_down_street.map&#39; &#39;[normal]&#39; （城镇地图之一）</p>\n\n<p>[/area]</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>[area]</p>\n\n<p>1 &#39;Slough/Slough_up_street.map&#39; &#39;[normal]&#39; （城镇地图之一）</p>\n\n<p>[/area]</p>\n\n<p>&nbsp;</p>\n\n<p>[area]</p>\n\n<p>2 &#39;Slough/Slough_powerstation.map&#39; &#39;[dungeon gate]&#39; 19 （城镇地图之一，[dungeon gate]表示连接到worldmap选图界面的ID19）</p>\n\n<p>[/area]</p>\n\n<p>&nbsp;</p>\n\n<p>[area]</p>\n\n<p>3 &#39;Slough/Gate_Slough.map&#39; &#39;[gate]&#39; 474 234 （城镇地图之一）</p>\n\n<p>[/area]</p>\n\n<p>&nbsp;</p>\n\n<p>[name]</p>\n\n<p>Type:9 Str:14 &#39;name_18210&gt;史拉烏工業區&#39; （中文名字是啥不重要）</p>\n\n<p>[limit level]</p>\n\n<p>78（城镇等级要求）</p>\n\n<p>&nbsp;</p>\n\n<p>需要做的就是：</p>\n\n<p>A，改等级要求。</p>\n\n<p>B，确认worldmap选图界面的ID是否存在及正确。</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T22:16:23.307",
+    "view_num": 626
+}

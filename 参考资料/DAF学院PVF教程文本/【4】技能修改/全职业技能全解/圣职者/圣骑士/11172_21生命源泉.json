@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、有效範圍 : 900 px<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、光環效果範圍 : 700 px<br />\n[static data]<br />\n900 500 1500 250 250 700<br />\n[/static data]</p>\n\n<p>0、持續時間 : 200秒<br />\n1、每分鐘恢復的HP量 : 43.2（倍数：0.6）<br />\n2、HP降為0時恢復量 : 144<br />\n3、增加攻擊速度 : 7%%<br />\n4、增加移動速度 : 7%%<br />\n5、增加硬直 : 175<br />\n[level info]<br />\n6 200000 72 144 70 70 175</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:38:57.005",
+    "view_num": 78
+}

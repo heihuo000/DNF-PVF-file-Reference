@@ -1,0 +1,761 @@
+// 변경된 몬스터 스크립트 파일 샘플 //
+// 080219 초안 작성
+
+
+////////////////////////////////////////////////////////// 몬스터 기본정보 지정
+
+[width] 40 10			// 몬스터의 충돌체크 범위. 태그를 넣지 않으면 기본값인 40 10 으로 지정된다.	
+
+[name] <7::name_660>		// monster.kor.str 파일 내의 인덱스를 적어준다.
+
+[face image] `MonsterFace.img` 0	// 몬스터 얼굴 이미지의 파일과 프레임 인덱스
+
+[die effect] 0 3 2	// 죽을 때 보여줄 이펙트 지정
+// param1 : 0 - 사망이펙트 있음 ([die effect] 태그가 있을때는 무조건 0으로 할 것) -> 2007.8.22추가 사항 : 0보다 크면 심의 등급에 관계없이 무조검 보여줌(얼음파편등)
+// param2 : 육편의 색상번호
+// param3 : 사망이펙트 중 보여주지않을 것들의 비트값
+// 0 : 모두 보여준다. (육편 + 피 + 스모크 + 번쩍플래쉬) 1 : 육편만 빼고 2 : 피만 빼고 4 : 스모크만 빼고 8 : 번쩍플래쉬만 빼고
+
+[ability table] 0	// 따라갈 능력치 테이블 인덱스. 0이 기본, 1이 소환수, 경쟁던전 2. 기본값 0
+[summon skill status up rate]	// 소환 스킬 1렙당 능력치 상승률(%). 능력치는 능력치 테이블의 순서대로 10개 소환수만 사용함.
+1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0
+
+[common champion elemental property]	// 일반 챔피언이 가질수있는 원소속성의 종류
+[fire element]			// 하나도 지정하지않았으면 무조건 랜덤속성챔피언이됨
+[water element]			// 하나만 지정했으면 무조건 그 속성챔피언이 됨
+[dark element]
+[light element]
+[no element]
+[/common champion elemental property]
+
+[ability category]
+[HP MAX]
+[PHYSICAL_ATTACK]		// 힘
+[PHYSICAL_DEFENSE]		// 체력
+[MAGICAL_ATTACK]		// 지능
+[MAGICAL_DEFENSE]		// 정신력
+[EQUIPMENT_PHYSICAL_ATTACK] `+` 10	// 물리 공격력
+[EQUIPMENT_PHYSICAL_DEFENSE]		// 물리 방어력
+[EQUIPMENT_MAGICAL_ATTACK]		// 마법공격 : 항목은 존재하지만 동작하지않음 - 우리 시스템에 마법공격이란 항목이 아예 없어서...
+[EQUIPMENT_MAGICAL_DEFENSE]
+// 카테고리명, + 또는 *, +는 절대값을 더해줌. *는 %단위로 곱해줌. 10 이라면 내부적으로 10 / 100 하여 0.10 으로 처리됨
+[/ability category]
+
+[category]		// 소속 카테고리의 리스트
+[undead]
+// 카테고리 목록
+// 종족 : [human][beast][plant][insect][machine][organic][hybrid][undead][devil][spirit][dragon]
+// AI : [melee combat][range combat][close-passive][close-carefully][close-tough][close-manace]   // * AI 접근 방식 참조
+// 아머 : [human armor][fort armor][divine armor]
+// 기타 : [goblin][tau][lugaru] , [fixture], [stay] 추가 [stay] 는 제자리에서 움직이지 않음	
+[/category]
+
+
+
+
+
+////////////////////////////////////////////////////////// 몬스터 특성 지정
+
+[level] 10 30		// 앞의 것이 최소 레벨, 뒤의 것이 최대 레벨
+
+[HP MAX] 1000 3000	// 앞의 것이 최소 레벨의 능력치, 뒤의 것이 최대 레벨의 능력치. 이하 동일.
+[MP MAX] 2000 3000
+
+// 원소 속성. 0이면 적지 않아도 된다. //
+[fire resistance] 99 100
+[water resistance] 30 43
+[dark resistance] -20 -3
+[light resistance] -30 -30
+
+// 특수 속성. 0이면 적지 않아도 된다. //
+[slow resistance] 100 200	// 슬로우
+[freeze resistance]		// 얼기	
+[poison resistance]		// 중독		
+[stun resistance]		// 스턴
+[curse resistance]		// 저주
+[blind resistance]		// 블라인드
+[lightning resistance]		// 감전
+[stone resistance]		// 석화
+[sleep resistance]		// 수면
+//* [deelement resistance]		// ??
+//* [deadlystrike resistance]	// ??
+[bleeding resistance]		// 출혈
+[piercing resistance]		// 관통
+[stuck resistance]		// 스턱
+[confuse resistance]		// 혼란
+[hold resistance]		// 홀드
+
+// 비공개 정보들
+[HP regen speed] 30 40 // 초당 회복률. 100이면 1초당 1씩 찬다.
+[MP regen speed] 30 40
+[move speed] 1000 1200	// 단위 : px/sec
+[attack speed] 1020 1050	// 1000이 100%. 해당 애니메이션 전체의 속도를 자체를 % 단위로 조절.
+[cast speed] 1000 1100		// 1000이 100%. 해당 애니메이션 전체의 속도를 자체를 % 단위로 조절. 몬스터의 경우에는 보로딘 외에는 의미 없음.
+[hit recovery] 1000 1000	// 2초에서 해당 수치만큼 빼줌. 애니메이션 프레임 딜레이의 합이 2초를 넘을 경우 애니메이션이 짤림.
+[weight] 7000 7000		// (단위 : 1g)
+
+
+// 몬스터 퇴치 카운트. 
+
+[destroy count] 5 // 5번의 데미지를 맞으면 몬스터 사망 <<예이다.숫자 변경가능
+[destroy count damage] 1 // 어떤 공격을 받더라도 몬스터에게 들어가는 데미지는 1 <<예이다 숫자 변경 가능
+
+// 타겟팅 보너스 지정. 넣을 거면 무조건 22개의 인자가 다 들어가야 함. 보너스 값으 높을수록 타겟으로 설정될 확률이 높음
+// 순서를 꼭 지켜야 함. APC와 같은 방식임
+// 첫번째 인자를 -1으로 하면 타겟을 바꾸지 않는다. 
+[targeting bonus]
+50	// 가까운 녀석의 보너스
+75	// 가장 최근에 날 때린 녀석
+90	// 날 가장 많이 때린 녀석
+0	// 근거리 공격자
+95	// 원거리 공격자
+0	// 물리 공격력이 낮은 녀석
+0	// 물리 공격력이 높은 녀석
+0	// 물리 방어력 낮은 녀석
+91	// 물리 방어력 높은 녀석
+0	// 마법 공격력 낮은 녀석
+0	// 마법 공격력 높은 녀석
+0	// 마법 방어력 낮은 녀석
+0	// 마법 방어력 높은 녀석
+0	// 체력 낮은 녀석
+0	// 체력 높은 녀석
+0	// X축으로 가까운 녀석의 보너스
+0	// Y축으로 가까운 녀석의 보너스
+0	// 잡히는 적이라면 보너스
+0	// 슈퍼아머 상태라면 보너스
+0	// 높이 떠있을수록 보너스
+100 [stand] [dash] 0
+// 아래와 같은 특정상태인 적의 보너스 (IRDActiveObject::state_ 기준)
+// [stand], [sit],  [sit forever], [damage],  [down], 
+// [die],   [jump], [jump attack], [attack],  [hold], 
+// [throw], [dash], [dash attack], [get item], [buff]
+// 여러개 지정이 가능하며 그중에 1개라도 해당되면 점수추가 입니다.
+//맨 끝의 의미없는 0 은 꼭 붙여주셔야합니다.
+
+0 0
+// 아래와 같은 특정상태변화인 적의 보너스
+// [slow],         [freeze],    [poison], [stun],  [curse],
+// [blind],        [lightning], [stone],  [sleep], [burn],
+// [weapon break], [bleeding],  [haste],  [bless],
+// [element],      [confuse],   [hold],   [armor break]
+// 여러개 지정이 가능하며 해당될때마다 점수추가 입니다.
+// 맨 끝의 의미없는 0 은 꼭 붙여주셔야합니다.
+
+
+[/targeting bonus]
+
+[monster title] ``   //몬스터의 칭호를 달아 준다.. 좌표 조절은 애니메이션으로 해야 함
+
+[keep distance with target] 300		// 타겟과 x축 상으로 얼마나 거리를 유지할 것인가? `DestinationSelect.ai` 에서 1번값을 리턴하면 발동
+
+[keep range distance with target] 300 200 10 10		// 타겟과 얼마나 거리를 유지할 것인가?
+							// x축으로 유지할 거리, y축으로 유지할 거리, x축 랜덤 반지름, y축 랜덤 반지름
+							//  `DestinationSelect.ai` 에서 11번값을 리턴하면 발동
+
+[intelligence] 50 60 5000				// 몬스터의 지능수치
+							// action list 에 등록된 액션을 발동할 확률, 스크립트대로 이동을 할 확률, 지능 계산을 할 시간 텀
+
+[vision] 300						// 몬스터의 시야 거리. 이게 짧으면 타겟을 못 잡을 수도 있음.
+[back vision] 0						// 뒤에 있는 오브젝트를 타겟으로 잡지 않게 하기 위한 태그 평소 0.
+							// 뒤에 있는 타겟을 안 잡으려면 -1로
+[drop item offset] 100 100				// 아이템 떨어지는위치 조정하기위한 태그
+							//몬스터 X좌표 + 첫번째 인자값, 몬스터 Y좌표 + 두번째 인자값
+
+[stuckbonus on damage]
+5 20		// 원거리 공격에 피격시 스턱보너스 %, 최소랩 / 최대랩
+0 5		// 근접 공격에 피격시 스턱보너스 %, 최소랩 / 최대랩
+
+
+
+[ambient sound] ""
+[attack sound] ""
+[appear sound] ""
+[damage sound] ""
+[die sound] ""
+
+<<<<<<< .mine
+[fix direction] 1 [left]	// 몬스터가 생성 시 바라보는 방향을 고정할지 여부 (1: 고정, 0: 미고정)
+							// 옵션: 고정일 경우, 몬스터가 항상 바라 볼 방향 지정 (고정형 몬스터가 주로 사용, 왼쪽: [left] 오른쪽:[right])
+=======
+[fix direction] 1		// 몬스터가 생성 시 바라보는 방향을 고정할지 여부 (1: 고정, 0: 미고정)
+[fix direction] `[left]`	// 몬스터가 항상 바라 볼 방향 지정 (왼쪽: `[left]` 오른쪽:`[right]`)
+>>>>>>> .r15546
+
+[flying mark] 0 // 부유형 몬스터의 밑에 마크를 그릴 것인지 여부 (1: 출력, 0: 미출력)
+
+////////////////////////////////////////////////////////// 몬스터 아이템 지정
+
+[item]			// 몬스터를 죽였을 때 나오는 지정 아이템. 특별히 지정할 아이템이 없으면 적지 않아도 된다 //
+1 600			// 앞에서부터 아이템 인덱스, 확률, 만분율
+27 1300
+[/item]		// 반드시 이것으로 닫아줘야 함
+
+
+[common champion drop item]		// 일반 챔피언이 떨어뜨릴 아이템리스트
+1015 1
+[/common champion drop item]
+
+[specific gen rate item]		//몬스터 죽였을때 특수하게 나올 아이템 지정. 이게 있으면 [item]이나 [common champion drop item]등을 무시하고 무조건 이넘으로 드랍
+1000000			//기준 확률
+3049 100000		//앞에서 부터 아이템 인덱스, 확률
+3015 100000
+[/specific gen rate item]
+
+[death tower item]		//사망의탑에서의 아이템 드랍. 만분률
+20020	500
+[/death tower item]
+
+[fixed height] 200		// 고정 높이 설정
+
+////////////////////////////////////////////////////////// 몬스터의 액션 파일 지정
+
+// 특수하게 등장하는 몬스터의 경우 사용하는 액션파일. 없으면 등장연출 없음
+
+[come in action] `Action/Magic.act` 300 150 // 사용할 액션파일과 발동을 시작할 시야범위, x축 반지름, y축 반지름
+
+[come in action ex] `Action/Resurrection.act` `Action/Resurrection2.act` 200  100 //사용할 액션파일, 특정 애니메이션을 지정한 액션파일, x축 반지름, y축 반지름
+//기존에 [come in action] 과 같은 동작을 하는 태그 이지만 두번째 인자에 액트를 
+//가까이 오기 전까지 한다. 따라서 기존 come in action에서 특정 애니를 하고 싶은 
+//경우에는 그에 해당하는 액션을 두번째 인자에 넣으면 된다.
+
+// 기본 모션 지정(액션으로 지정할 경우). 없는 것은 적지 않아도 됨. 혹은 ``로 넣으면 없는 것으로 처리 //
+[waiting action] `BodyStay.act`		// 대기 모션 액션 파일 이름
+[move action] `BodyMove.act`			// 이동 모션 액션 파일 이름
+[moveback action]  `Action/MoveBack.act`	// 후진 모션 액션 파일 이름
+[dash action] `Dash.act`			// 대쉬 액션(지금은 탈것 오브젝트만 유효합니다. 확장가능)
+[dashattack action] `DashAttack.act`		// 대쉬 어택 액션(지금은 탈것 오브젝트만 유효합니다. 확장가능)
+[sit action] `BodySit.act`			// 앉기 모션 액션 파일 이름
+[damage action 1] `BodyDamage1.act`	// 데미지 모션1 액션 파일 이름
+[damage action 2] `BodyDamage2.act`	// 데미지 모션2 액션 파일 이름
+[down action] `BodyDown.act`		// 다운 모션 액션 파일 이름
+[overturn action] `BodyOverturn.act`		// 뒤집힌 모션 액션 파일 이름
+
+[basic action] `basic.act`       //태그에 액션 경로를 넣으면 move와stay 액션이 모두 basic action으로 처리 된다.
+					//([basic action]를 사용 할 때는 [stay action][move action]은 사용하지 않습니다.)
+
+[action list]				// 주로 공격으로 사용될 액션 파일 리스트. 여기 적힌 액션이 발동될 때 피격받으면 카운터 체크가 됨
+`Attack1.act`
+`Attack2.act`
+[/action list]
+
+[attack action]				// [action list] 와 같은 뜻으로 쓰이는 것 같다.
+`Attack1.act`
+`Attack2.act`
+[/attack action]
+
+[pattern] //pattern 인덱스 0번 // 액션 리스트의 인덱스를 패턴화 시킨다. 쿨타임은 해당 액션의 쿨타임을 사용한다.
+1
+2
+3
+[/pattern]
+
+[pattern] //pattern 인덱스의 1번
+2
+3
+4
+[/pattern]
+
+[proc action] `proc.act`		//proc 액션은 애니메이션을 체크하지 않습니다.
+					//가능하면 루프보다는 이벤트 처리를 하는 것을 권장 ( [ON DAMAGE] 등의..)
+
+[cooltime]				// action list에 등록된 액션들이 사용할 쿨타임 지정. 태그안에 지정된 순서대로 액션 리스트와 1:1로 매치됨
+[Pattern] 0 			// 쿨타임 패턴 안써도 됨! 기본 0 으로 세팅
+2000
+1500
+6000
+[/cooltime]
+
+[reflection object] //특정 공격시에 원거리 공격에 대해서 반사하도록 지정하는 태그
+0 100    //어택 인덱스, 미사일 반사할 확률
+[/reflection object]
+
+[attack info]	 			// 각 액션 파일들의 어택인포. 태그안에 지정된 순서대로 액션 리스트와 1:1로 매치됨
+`AttackInfo/Attack1.atk`
+`AttackInfo/Attack1.atk`
+[/attack info]
+
+[etc action]				// 공격이 아닌 다른 용도로 사용할 액션리스트
+`Magic.act`
+`PowerUp.act`
+[/etc action]
+
+[last action] `NeverDie.act`	// 파괴되기전에 반드시 한번 실행될 action의 파일경로.
+
+
+[lie frame] 2 2 2 3 4 	// 누워서 올라가는 프레임, 누워서 떨어지는 프레임, 누워서 튕겨올라가는 프레임, 누워서 튕겨올라가서 떨어질때 프레임, 누운 프레임.
+			// 누운상태에서 피격을 당하면 세번째 인자부터 반복된다.
+[non targeted] 1			// 다른팀의 몹에게 타겟이 되지 않는지 여부 (1: 타겟이 되지 않는다, 0 : 된다) 
+
+[no change target] 0 		// 0: 타겟 변경 안함 1: 변경함
+
+
+[mounting action] `Action/in.act`		// 타는 액션 (탈 것 전용)
+[mounted action] `Action/stay1.act`		// 타고난 후 액션 (탈 것 전용)
+[unmounting action] `Action/out.act`	// 내리는 액션 (탈 것 전용)
+
+[control passive object]	// 패시브오브젝트 유저 컨트롤 태그 (탈 것 전용)
+	[index] 10503			// 패시브오브젝트 인덱스
+	[x pos] -100			// 패시브오브젝트가 이동할 수 있는 영역 좌측 상단의 상대 X좌표 (탈것 기준)
+	[y pos] -200			// 패시브오브젝트가 이동할 수 있는 영역 좌측 상단의 상대 Y좌표 (탈것 기준) / convert y to z 옵션인 경우: 상대 Z좌표
+	[width] 200			// 패시브오브젝트가 이동할 수 있는 영역 너비
+	[height] 200			// 패시브오브젝트가 이동할 수 있는 영역 높이
+	[velocity x] 200.0		// 패시브오브젝트 컨트롤 시 X축 이동 속도
+	[velocity y] 200.0		// 패시브오브젝트 컨트롤 시 Y축 이동 속도 / convert y to z 옵션인 경우: Z축 이동 속도
+	[fix direction]	[left]	// 패시브오브젝트 컨트롤 시 방향 고정 (왼쪽: [left] 오른쪽:[right])
+	[option] `convert y to z`	// y축 대신 z축 기준으로 변경
+[/control passive object]
+
+
+////////////////////////////////////////////////////////// 몬스터의 ai 파일 지정
+
+[think term] 200		// ms단위로 타겟설정, 공격방식, 이동방식 을 결정하는 생각을 한다.
+[destination change term] 500	// ms단위로 이동할 위치를 결정한다. 이게 짧으면 오도방정을 떤다.
+
+[change direction by target] 0 //1이면 타겟의 위치에 따라 방향을 바꾼다. 0이면 한방향으로만 고정
+[is direction to move] 1  //1이면 이동하는 방향을 보고 이동, 0이면 타겟을 보면서 이동(default는 0)
+
+[ai pattern]			// 던전의 난이도 별로 다른 ai를 지정해 줄 수 있음. 만약 난이도에 상관없이 모두 같은 ai를 쓰고 싶다면 그냥 똑같이 복사해서 적어두면 됨. 현재 *.mob 파일이 있는 위치로부터 상대경로로 써줌.
+[normal]
+`Monster/Goblin/ai/Event.ai`
+`Monster/Goblin/ai/DestinationSelect.ai`
+`Monster/Goblin/ai/Action.ai`
+`Monster/Goblin/ai/MoveMethod.ai`
+`ai/gather pattern.ai`
+[/normal]
+
+[master]
+`Monster/Goblin/ai/Event.ai`
+`Monster/Goblin/ai/DestinationSelect.ai`
+`Monster/Goblin/ai/Action.ai`
+`Monster/Goblin/ai/MoveMethod.ai`
+[/master]
+
+[expert]
+`Monster/Goblin/ai/Event.ai`
+`Monster/Goblin/ai/DestinationSelect.ai`
+`Monster/Goblin/ai/Action.ai`
+`Monster/Goblin/ai/MoveMethod.ai`
+[/expert]
+
+[king]
+`Monster/Goblin/ai/Event.ai`
+`Monster/Goblin/ai/DestinationSelect.ai`
+`Monster/Goblin/ai/Action.ai`
+`Monster/Goblin/ai/MoveMethod.ai`
+[/king]
+
+
+//mkjung 120619 
+ai pattern]			// 던전의 난이도 별로 다른 ai를 지정해 줄 수 있음. 만약 난이도에 상관없이 모두 같은 ai를 쓰고 싶다면 그냥 똑같이 복사해서 적어두면 됨.
+[easy]
+`ai/Event.ai`
+`ai/DestinationSelect.ai`
+`ai/Action.ai`
+`ai/MoveMethod.ai`
+`ai/gather pattern.ai`
+[/easy]
+
+[medium]
+`ai/Event.ai`
+`ai/DestinationSelect.ai`
+`ai/Action.ai`
+`ai/MoveMethod.ai`
+`ai/gather pattern.ai`
+[/medium]
+
+[hard]
+`ai/Event.ai`
+`ai/DestinationSelect.ai`
+`ai/Action.ai`
+`ai/MoveMethod.ai`
+`ai/gather pattern.ai`
+[/hard]
+
+[ultimate]
+`ai/Event.ai`
+`ai/DestinationSelect.ai`
+`ai/Action.ai`
+`ai/MoveMethod.ai`
+`ai/gather pattern.ai`
+[/ultimate]
+
+[hero]
+`ai/Event.ai`
+`ai/DestinationSelect.ai`
+`ai/Action.ai`
+`ai/MoveMethod.ai`
+`ai/gather pattern.ai`
+[/hero]
+[/ai pattern]
+
+
+// 이벤트에 의한 슈퍼아머 발동조건
+[event super on scr]
+[on hp] 10 10000 1			// [on time], [on hp], [always], [conunter], 발동조건 인덱스, 지속시간, 재활성화 여부
+[unbreakable] -1 -1 -1 -1		// 내구도, 회복력, 근거리방어력, 원거리방어력
+[with blast] 				// 광룡의 외침과 함께 발동된다.
+[/event super on scr]
+
+
+[strong] 2000 30	// 2000 이상의 데미지를 받았을때 30% 추가 데미지를 더 입는다. 2000 이하면 데미지를 받지 않는다 
+[weak] 2000 30 	// 2000 이하의 데미지를 받았을때 30% 추가 데미지를 더 입는다. 2000 이상이면 데미지를 받지 않는다
+
+////////////////////////////////////////////////////////// 기타 정보
+[is grabable] 1 //1이면 잡히는 몬스터, 0이면 안잡히는 몬스터
+
+[spawn prob] 30		// 경쟁던전 스폰 확률, 전쟁지역에 등장할 몬스터들에게 적용되는 값.
+
+[hp regen rate] 0.0 0.0  //타겟을 잡았을때 리젠 비율, 타겟이 없을때 리젠 비율
+			 //기본값 0.15f 0.6f
+
+[set damage check] 3000 //event.ai 에서 데미지 체크할 간격 //액션에서 켜 줄수도 있지만 생성시부터 항상 체크할 녀석은 이 태그로 몹 파일에 박아줄 수 있음
+
+[independent drop] //독립드랍 시스템
+4332 3000 3000 3000 3000 1 1 1 1 1 0 //index1 노멀% 익스% 마스터% 킹스% 횟수(1인) 횟수(2인) 횟수(3인) 횟수(4인) 최대드랍수 0 
+				     //마지막에 0을 쓰면 리스트를 불러오지 않는다.
+
+0 100000 0 0 0 1 1 1 1 1 1 	//리스트를 불러 올 경우 마지막에 1을 쓴다. //0 노멀% 익스% 마스터% 킹스% 횟수(1인) 횟수(2인) 횟수(3인) 횟수(4인) 최대드랍수 1
+				//인덱스에 0을 써준다.
+[list]
+420374	1
+2637210	1
+[/list]
+0 0 100000 0 0 1 1 1 1 1 1 // 노말, 익스, 마스터, 킹으로 확률을 넣고 리스트를 부를 수 있다. 
+[list]
+2643065	1
+[/list]
+[/independent drop]
+
+[reflection object] //오브젝트 반사
+0 0 //0		    //해당 액션의 인덱스	
+1 100 //5	   //오브젝트를 반사시킬 인덱스에 확률을 써주면 그 확률로 오브젝트를 반사 시킨다.	
+[/reflection object]
+
+[add gravity in aerial] 1 20.0 -300.0 //1번 인덱스 : 활성화 여부 1이면 활성화 2번인덱스 : 공중데미지 얼마 이상에서 발동할지(%) 3번인덱스 : 보정이 발동후 1%데미지당 들어가는 중력의 크기
+
+[target appendage] 238		// 특정 어펜디지 걸린 놈만 타겟팅을 한다 238(암흑의 문장 걸린놈만 타겟팅한다)
+
+[initial target]			// 초기 타겟을 설정한다(순서대로 우선순위)
+	[PASSIVE]( 혹은 [MONSTER], [CHARACTER], [MARKED]) 221	// 오브젝트 인덱스
+	[MONSTER] 62134
+[/initial target]
+
+// 난이도에 따른 물공 보정 테이블
+
+// 난이도에 따른 물공 보정 테이블					
+[physical attack besed on diff]					
+//level normal expert  master kings heros					
+1 32.27 32.27 32.27 32.27 32.27 
+2 47.43 47.43 47.43 47.43 47.43 
+3 59.34 59.34 59.34 59.34 59.34 
+[/physical attack besed on diff]
+
+
+
+[level of difficulty]
+	[normal] 0 0	// 추가 호전성, 추가 쿨타임 
+	[ex] 0 0	// (AI 스크립트와 연관 [intelligence] 태그, 몬스터 스크립트 [cooltime] 태그)
+	[master] 0 0
+	[king] 0 0
+	[hero] 0 0
+[/level of difficulty]
+
+//mkjung 120618 추가
+[sight]  300
+[targeting nearest]  1
+[warlike]  60
+[attack delay]  1500
+
+[attack kind] 
+50.000000 0.000000 0.000000 1 70 0 0 0 10 0 10 0	
+40.000000 0.000000 0.000000 1 50 0 0 0 15 0 15 0	
+30.000000 0.000000 0.000000 1 55 0 0 0 10 0 10 0
+0.000000 0.000000 0.000000 1 55 0 0 0 10 0 10 0 //난무공격 07.05.11일 추가, 원거리 공격에 따라 확률로 발동하므로 0으로 
+[/attack kind]
+
+[waiting motion]  `Animation_Goblin2/Stay.ani`
+[move motion]  `Animation_Goblin2/Move.ani`
+[sit motion]  `Animation_Goblin2/Sit.ani`
+[damage motion 1]  `Animation_Goblin2/Damage1.ani`
+[damage motion 2]  `Animation_Goblin2/Damage2.ani`
+[down motion]  `Animation_Goblin2/Down.ani`
+[overturn motion]  `Animation_Goblin2/Overturn.ani`
+[attack motion] 
+	`Animation_Goblin2/Attack1.ani`
+	`Animation_Goblin2/Stay.ani`
+[/attack motion]
+
+[speech on situation] 
+[on revenge] <7::speech_on_situation_610> 0
+[on revenge] <7::speech_on_situation_615> 0
+[on etc] <7::speech_on_situation_620> 0
+[on etc] <7::speech_on_situation_625> 0
+[on etc] <7::speech_on_situation_665> 0
+[on etc] <7::speech_on_situation_670> 0
+[on village] <7::village_goblin_1> 0
+[on village] <7::village_goblin_2> 0
+[on village] <7::village_goblin_3> 0
+[on village] <7::village_goblin_4> 0
+[on village] <7::village_goblin_5> 0
+[on village] <7::village_goblin_6> 0
+[on village] <7::village_goblin_7> 0
+[on village] <7::village_goblin_8> 0
+[/speech on situation]
+
+[throw attack]				//던져서 공격하는 몬스터의 경우 추가되는 내용
+	[attack index] 3			//공격 인덱스
+	[passive object number] 1		//파티클 파일의 수 아래 [passive object filename]의 파일 수와 일치  해야한다.
+	
+	[passive object filename] 		//던지는 파티클 파일 경로
+	 `Particle/IceBreath1.ptl`
+	[/passive object filename] 
+	
+	[object type] 1			// 0이면 패시브 오브젝트 1이면 파티클
+	[passive object index] 30413		//던지는 오브젝트 인덱스
+	[power] 0			//마법 레벨
+	[throw frame] 3			//몬스터가 몇프레임째에 오브젝트가 나가는지 정하는 플래그
+	[passive object start x cood] 60  	//던지는 오브젝트 출발점 x좌표
+	[passive object start y cood] 0   	//던지는 오브젝트 출발점 y좌표
+	[passive object start z cood] 70	//던지는 오브젝트 출발점 z좌표
+	[attack number] 1			//한번 공격에 몇번을 던질 것 인가
+	[throw sound]`AMAZONES_BREATH`	//던지는 소리, 없을 경우에는 ``로 처리
+[/throw attack]
+
+[ready action]
+	[motion index] 1			//해당 공격 모션 인덱스
+	//[effect ani file & layer index] line tag -> multi tag
+	[effect ani file & layer index]
+		1				//파일 수
+		`Animation_MountainGoblin2/Throw3_Effect.ani`   100
+	[/effect ani file & layer index]
+[/ready action]
+
+[curse resistance]  100 100
+[targeting high level]  1
+[targeting time term]  500
+[superarmor on attack]  1 50
+
+[atk super on scr]
+2 [breakable] 15 5 100 100
+[/atk super on scr]
+
+[etc attack info] 
+	`HarseSeriAttackInfo/MoveAttack.atk`
+	`HarseSeriAttackInfo/Bite.atk`
+	`HarseSeriAttackInfo/FallingAttack.atk`
+	``
+	`HarseSeriAttackInfo/RaisingAttack.atk`
+[/etc attack info]
+
+[dash attack]
+	[function index] 2
+	[attack index] 0
+	[shakeable] 0 0 0
+	[first speed] 200
+	[last speed] 500
+	[dash time] 700
+	[dash ready time] 1000
+	[animation first index] 5
+[/dash attack]
+
+[jump power]  900 900
+[jump speed]  200 200
+[jump motion] `HunterAni/JumpAttack.ani`
+
+[targeting low level]  1
+[targeting low HP]  1
+
+[burn resistance] 0 0
+[summon skill status up type] 1
+// 소환 스킬 1렙당 능력치 상승률(%). 능력치는 능력치 테이블의 순서대로 10개
+[summon skill status up rate]	0.0 0.0 0.0 0.0 2.0 2.0 2.0 0.0 2.0 0.0	//힘,체력,지능,정신,HP,MP,물공,물방,마공,마방
+[keep distance] 50
+
+[attack down prob]
+100	// 방망이 공격 확율
+100	// 이동속도 증가 공격 확율
+100	// 파워 스매셔 공격 확율
+100 	// 돌던지기 공격 확율
+100	// 돌 연속 3발 던지기 공격 확율
+100	// 돌 5개 퍼뜨려 던지기 공격 확율
+100 	// 폭탄 던지기 공격 확율
+[/attack down prob]
+
+[super champion drop item] 		// 슈퍼 챔피언이 떨어뜨릴 아이템리스트
+3166 4000 
+[/super champion drop item]
+
+[jumpattack motion] `Animation_Skeleton/JumpAttack.ani`
+[jumpattack info] `AttackInfo/JumpAttack.atk`
+
+[jump action] `Action/jump.act`	
+
+[counter attack]
+1
+[probability] 5	//카운터 할 확률 0부터 100까지
+[attack index] 0	//카운터시 어택 인덱스
+[damage type]	[approach attack]
+//[approach attack] [range attack] [all attack] 중에 하나 선택
+[/counter attack]
+
+[catch item] 
+3315 1 100	//포획드랍아이템
+[/catch item]
+
+[hell monster] 1
+
+//mkjung 120620 add
+[weapon break resistance] 0 1
+
+[targeting high HP]  1
+
+[come in motion] `Animation_Goblin/GhoulGravelUp.ani` 300 150
+
+[out of targetting] 1
+
+[jump attack]
+	[attack index] 2
+	[start frame index] 2
+	[end frame index] 6
+	[jump type] 0
+	[jump height] 5
+	[jump speed] 800
+	[jump direction] 0 //0이면 바라보는 방향으로만 점프
+	[on collision custom animation index] 2
+	[ememy distance rate]	0.6 
+	[limited x cood]	100
+	[limited y cood]     100
+[/jump attack]
+
+[targeting downed] 1
+
+[targeting low physical defense] 1	// 1이면 물리 방어력이 낮은 적 타겟팅
+
+[targeting attacker] 1	// 1이면 자신을 마지막으로 때린 적을 타겟팅
+
+[overhead gauge type] 1
+
+[base table] `NewMonsters/AdvanceAtlar/table/AdvanceAltarMonsterBaseParameter.tbl`
+
+[can beat index] 
+61270	// 이 태그를 입력하면 65523 번 몹이 때린 경우에만 데미지를 입는다
+61283
+61284
+61285
+[/can beat index]
+
+[damage time balance] 2 4 6 8
+[stun time balance] 2 4 6 8
+
+//mkjung 120621 add
+[ridableskill definition]
+	[pattern] 0
+	[image path] `sprite/Monster/impossible_blackearth/icon/pincers.img`
+	[skill]
+		0 -1 `normal` 0 		// 기본 공격
+		-1 -1 `normal` 0		// 기본 점프, 스킬 속성(normal:기본, super:필살기), 캔슬기 수, 캔슬기 인덱스
+		2 -1 `normal` 0		// 핫키 슬롯에 넣을 스킬 번호, 반드시 8 엔트리 모두 입력해줘야 한다. 없으면 -1 로 기입
+		-1 -1 `normal` 0
+		-1 -1 `normal` 0
+		-1 -1 `normal` 0
+		-1 -1 `normal` 0
+		-1 -1 `normal` 0
+	[/skill]
+[/ridableskill definition]
+
+[ridableskill explanation]
+	[pattern] 0		// 설명 패턴
+	[title] <07::ridableskill_05>
+	[subtitle] <07::ridableskill_59>
+	[category] <07::ridableskill_01>
+	[detail] <7::pincers_skill02>
+[/ridableskill explanation]
+//대쉬 어택 액션(지금은 탈것 오브젝트만 유효합니다. 확장가능)
+
+[jumpattack action] `Action/JumpAttack.act`
+
+[is on the object] 1 20
+
+[No Combo Rate Monster]
+
+//120622 add
+[targeting from direction] 1	// 1이면 현재 향한 방향의 적을 타겟팅
+
+[etc sound] `WEAPONM_MEET_02`
+
+[diving sight] 80 100
+
+[hold attack]
+	[function index] 0
+	[attack index] 2
+	[offset] 80 1
+	[animation index] 0
+	[min hold] 10
+	[max hold] 15
+[/hold attack]
+
+[warp attack]
+	[function index] 0
+	[attack index] 4
+	[warp style] 1          //0이면 무조건 캐릭터 뒤로 이동(위스프),1이면 캐릭터의 방향을 기준으로 뒤로(묘진) 
+	[target offset] 50      //타겟과 떨어 져서 나타나야할 거리
+	[after attack] 0        //위상변화후에 공격할 인덱스 
+	[after appear time] 800 //사라진후에 나타날 시간(300이하는 소용 없음)
+	[cool time]  10000       //위상 변화의 쿨타임
+[/warp attack] 
+
+[forced knockback] 20
+
+[normal dash speed] 450 150
+
+[slant dash speed] 476 228
+
+[pvp]
+[int data]
+0	// 백어택시 아이스 가스 나올 확률
+
+50     // 패시브 디펜스 캐스팅 발동하기 위한 HP 조건 확률 (10 = 체력 10% 남았을시)
+12000	// 쿨타임 (디펜스 발동 최소 쿨타임)
+
+60000	// 힐을 해줄 시간 간격
+0	// 힐을 해줄량 (10 = 10%)
+[/int data]
+// 소환 스킬 1렙당 능력치 상승률(%). 능력치는 능력치 테이블의 순서대로 10개
+[summon skill status up rate]	0.0 0.0 0.0 0.0 2.3 2.3 0.0 0.0 0.0 0.0	//힘,체력,지능,정신,HP,MP,물공,물방,마공,마방
+
+[/pvp]
+
+[pvp]
+// 소환 스킬 1렙당 능력치 상승률(%). 능력치는 능력치 테이블의 순서대로 10개
+[summon skill status up rate]	0.0 0.0 0.0 0.0 2.3 2.3 0.0 0.0 0.0 0.0	//힘,체력,지능,정신,HP,MP,물공,물방,마공,마방
+[/pvp]
+
+[explain] <7::explain_59012>
+/////////////////////////////////////////////////////////////////////////////////
+* AI 접근 방식 
+[melee combat] : 접근 전용 몬스터
+[range combat] : 사격 전용 몬스터
+[close-passive] : 소극적인 몬스터
+[close-carefully] : 주의깊은 몬스터
+[close-tough] : 저돌적인 몬스터
+[close-manace] : 위협적인 몬스터 
+
+1. 공격 방식에 따라 melee, range 로 분류
+	접근 방식에 따라 passive, carefully, tough, manace 로 분류된다.
+	설정하지 않을 시에는 기본값으로 melee, passive 로 설정되게 된다.
+
+2. 원거리 공격 받았을 때 대상을 향해서 이동하게 되며, 
+	passive, carefully 는 대상의 좌우,상하 중 랜덤으로 대상과 가까운 장소로 접근한다.
+	tough는 대상의 좌표를 향해 바로 이동한다
+	manace는 대상과 자기와 사이에 있는 대상과 가까운 장소로 이동한다. 
+
+3. 원거리 공격을 받았을 때 tough, manace는 대상을 향해 이동하면서 슈퍼아머가 발동된다.
+
+4. 대상을 향한 이동이 끝났을때, tough, manace 는 바로 대상을 공격하며,
+	passive, carefully는 대상 근처에서 대기하며, 일반적인 몬스터 공격 상태가 될때까지 배회하게 된다.
+
+5. 현재 개발상으로는 passive와 carefully의 차이는 없다. //(2012. 2. 21)
+
+
+
+

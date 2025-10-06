@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、對無法抓取的敵人附加傷害 : 30%%<br />\n[static data]<br />\n50 100 -1000 300<br />\n[/static data]</p>\n\n<p>0、物理獨立攻擊力 : 独立攻击力 x 24.88<br />\n1、失明機率 : 30%%<br />\n2、失明Lv : Lv40<br />\n3、失明持續時間 : 5秒<br />\n4、暈眩機率 : 19.8%%<br />\n5、暈眩Lv : Lv40<br />\n6、暈眩持續時間 : 2秒<br />\n7、攻擊陷入狀態異常的敵人時傷害變化率 : 13%%<br />\n[level info]<br />\n8 2488 300 40 5000 198 40 2000 130</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T16:18:12.554",
+    "view_num": 50
+}

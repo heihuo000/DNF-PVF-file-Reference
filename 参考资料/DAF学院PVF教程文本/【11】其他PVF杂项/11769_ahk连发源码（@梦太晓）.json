@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>今天发个ahk连发源码吧，我自己一边码字和一边游戏开着连发老是给我跳连发，去找到了这个源码，写了个只在dnf.exe生效的连发，切QQ打字的时候不用手动关闭连发\n----------------------------------------------分割线以下是源码，黑线是分隔符，已经注释掉了不用删\n~Pause::Pause ;//暂停\n~End:: ;//挂起热键\nSuspend\nReturn\n#IfWinActive ahk_exe DNF.exe ;//只在dnf生效\nSetStoreCapslockMode, off ;//忽略大小写生效\n;▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂\n$j:: ;//j改成你连发的那个键\nLoop\n{\nIf Not GetKeyState(\"j\", \"P\") ;//j改成你连发的那个键\nBreak\nSend {j Down} ;//j改成你连发的那个键\nSleep 20\nSend {j Up} ;//j改成你连发的那个键\nSleep 20\n}\nReturn ;\n;▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂</code></pre>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-05T09:53:09.468",
+    "view_num": 453
+}

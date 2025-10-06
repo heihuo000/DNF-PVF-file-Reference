@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、当自身HP下降到：40%<br />\n[static data]<br />\n40<br />\n[/static data]</p>\n\n<p>0、增加力量：区间最小：24<br />\n1、增加力量：区间最大：61<br />\n2、增加回避率：区间最小：0.2%<br />\n3、增加回避率：区间最大：1.5%<br />\n4、增加攻击速度：区间最小0.8%<br />\n5、增加攻击速度：区间最大2%<br />\n6、增加移动速度：区间最小0.8%<br />\n7、增加移动速度：区间最大2%<br />\n[level info]<br />\n8 24 61 2 15 8 20 8 20</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:12:29.066",
+    "view_num": 236
+}

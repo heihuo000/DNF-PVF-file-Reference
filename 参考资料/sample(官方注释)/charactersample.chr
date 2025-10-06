@@ -1,0 +1,356 @@
+// 캐릭터 스크립트 파일 샘플 //
+
+[job] `[swordman]`		// `[swordman]` `[fighter]` 중 택일
+[growtype name] `기본` `성장1검사` `성장2검사` `성장3검사` // 각 성장형별 성장형 이름
+[width] 40 10		// 순서대로 X축, Y축 폭 (픽셀값)
+
+[initial value]		// 이 표시 이후의 값들은 초기 생성시의 능력치. 소수점 첫째 자리까지 입력 가능
+[HP MAX] 1000
+[MP MAX] 2000
+[physical attack] 100.5
+[physical defense] 120.3
+[magical attack] 110
+[magical defense] 130.7
+
+// 원소 속성. 0이면 적지 않아도 된다. //
+[fire resistance] 99.2
+[water resistance] 30.3
+[dark resistance] -20
+[light resistance] -30
+
+// 특수 속성. 0이면 적지 않아도 된다. //
+[slow resistance] 18
+[freeze resistance] 39
+[poison resistance] 11
+[stun resistance] 33
+[curse resistance] 10
+[blind resistance] 10
+[lightning resistance] 24
+[stone resistance] 3
+[sleep resistance] 33
+[deelement resistance] 1
+[deadlystrike resistance] 2
+[bleeding resistance] 32.3
+[piercing resistance] 12
+[stuck resistance] 11	// 0.1% 단위
+[confuse resistance] 10
+[hold resistance] 10
+
+[inventory limit] 3000	// (단위 : 10g)
+
+[HP regen speed] 0
+[MP regen speed] 1000
+
+[move speed] 1000	// 1000이 표준인 값들
+[attack speed] 1000
+[cast speed] 1000
+[hit recovery] 0
+[jump power] 1000
+[weight] 6000		// (단위 : 10g)
+
+[skill]			// 초기 부여 스킬 목록
+3 1			// 스킬 인덱스, 레벨
+22 1
+27 1
+[/skill]
+
+[category]		// 소속 카테고리의 리스트
+`[human]`
+[/category]
+// 카테고리 목록
+// 종족 : `[human]``[beast]``[plant]``[insect]``[machine]``[hybrid]``[undead]``[devil]``[spirit]``[dragon]`
+// AI : `[melee combat]``[range combat]``[close-passive]``[close-carefully]``[close-tough]``[close-manace]`
+// 아머 : `[human armor]``[fort armor]``[divine armor]`
+// 기타 : `[goblin]``[tau]``[lugaru]`
+
+[module damage rate] 1.0 1.0 1.0	// PVP, 쟁역, 카오스에서의 데미지 비율
+					// 전직 후 값에서 전직 전 값을 그대로 쓸려면 태그를 안쓰거나 0.0을 써준다.
+
+[growtype 1]		// 이후의 값들은 전직 전 능력치 상승치
+[HP MAX] 10
+[MP MAX] 20
+[physical attack] 1
+[physical defense] 12
+[magical attack] 1
+[magical defense] 10
+
+// 원소 속성. 0이면 적지 않아도 된다. //
+[fire resistance] 1
+[water resistance] 2
+[dark resistance] 3
+[light resistance] 0
+
+// 특수 속성. 0이면 적지 않아도 된다. //
+[slow resistance] 18
+[freeze resistance] 39
+[poison resistance] 11
+[stun resistance] 33
+[curse resistance] 10
+[blind resistance] 10
+[lightning resistance] 24
+[stone resistance] 3
+[sleep resistance] 33
+[deelement resistance] 1
+[deadlystrike resistance] 2
+[bleeding resistance] 32
+[piercing resistance] 12
+
+[inventory limit] 1
+
+// 비공개 정보들. //
+[HP regen speed] 0
+[MP regen speed] 2
+[move speed] 3
+[attack speed] 15
+[cast speed] 2
+[hit recovery] 4
+[jump power] 0
+[weight] 2
+
+[growtype 2]		// 이후의 값들은 첫 전직으로 전직시 파라메터
+[HP MAX] 20
+[MP MAX] 30
+[physical attack] 1
+[physical defense] 12
+[magical attack] 1
+[magical defense] 10
+
+// 원소 속성. 0이면 적지 않아도 된다. //
+[fire resistance] 1
+[water resistance] 2
+[dark resistance] 3
+[light resistance] 0
+
+// 특수 속성. 0이면 적지 않아도 된다. //
+[slow resistance] 18
+[freeze resistance] 39
+[poison resistance] 11
+[stun resistance] 33
+[curse resistance] 10
+[blind resistance] 10
+[lightning resistance] 24
+[stone resistance] 3
+[sleep resistance] 33
+[deelement resistance] 1
+[deadlystrike resistance] 2
+[bleeding resistance] 32
+[piercing resistance] 12
+
+[inventory limit] 1
+
+// 비공개 정보들. //
+[HP regen speed] 0
+[MP regen speed] 2
+[move speed] 3
+[attack speed] 15
+[cast speed] 2
+[hit recovery] 4
+[jump power] 0
+[weight] 2
+
+[skill]			// 전직시 부여할 스킬
+34 1			// 스킬 인덱스, 레벨
+123 1
+127 1
+[/skill]
+
+[category]	// 전직시 획득할 아머. initial value의 것과 겹치면 안된다.
+`[armor]`
+[/category]
+[module damage rate] 1.0 0.3 0.0	// PVP, 쟁역, 카오스에서의 데미지 비율
+					// 전직 후 값에서 전직 전 값을 그대로 쓸려면 태그를 안쓰거나 0.0을 써준다.
+
+
+[growtype 3]		// 이후의 값들은 두번째 전직으로 전직시 파라메터
+[HP MAX] 30
+[MP MAX] 40
+[physical attack] 1
+[physical defense] 12
+[magical attack] 1
+[magical defense] 10
+
+// 원소 속성. 0이면 적지 않아도 된다. //
+[fire resistance] 1
+[water resistance] 2
+[dark resistance] 3
+[light resistance] 0
+
+// 특수 속성. 0이면 적지 않아도 된다. //
+[slow resistance] 18
+[freeze resistance] 39
+[poison resistance] 11
+[stun resistance] 33
+[curse resistance] 10
+[blind resistance] 10
+[lightning resistance] 24
+[stone resistance] 3
+[sleep resistance] 33
+[deelement resistance] 1
+[deadlystrike resistance] 2
+[bleeding resistance] 32
+[piercing resistance] 12
+
+[inventory limit] 1
+
+// 비공개 정보들. //
+[HP regen speed] 0
+[MP regen speed] 2
+[move speed] 3
+[attack speed] 15
+[cast speed] 2
+[hit recovery] 4
+[jump power] 0
+[weight] 2
+
+
+[growtype 4]		// 이후의 값들은 세번째 전직으로 전직시 파라메터
+[HP MAX] 40
+[MP MAX] 50
+[physical attack] 1
+[physical defense] 12
+[magical attack] 1
+[magical defense] 10
+
+// 원소 속성. 0이면 적지 않아도 된다. //
+[fire resistance] 1
+[water resistance] 2
+[dark resistance] 3
+[light resistance] 0
+
+// 특수 속성. 0이면 적지 않아도 된다. //
+[slow resistance] 18
+[freeze resistance] 39
+[poison resistance] 11
+[stun resistance] 33
+[curse resistance] 10
+[blind resistance] 10
+[lightning resistance] 24
+[stone resistance] 3
+[sleep resistance] 33
+[deelement resistance] 1
+[deadlystrike resistance] 2
+[bleeding resistance] 32
+[piercing resistance] 12
+
+[inventory limit] 1
+
+// 비공개 정보들. //
+[MP regen speed] 2
+[move speed] 3
+[attack speed] 15
+[cast speed] 2
+[hit recovery] 4
+[jump power] 0
+[weight] 2
+
+[growtype 5]		// 이후의 값들은 네번째 전직으로 전직시 파라메터
+[HP MAX] 40
+[MP MAX] 50
+[physical attack] 1
+[physical defense] 12
+[magical attack] 1
+[magical defense] 10
+
+// 원소 속성. 0이면 적지 않아도 된다. //
+[fire resistance] 1
+[water resistance] 2
+[dark resistance] 3
+[light resistance] 0
+
+// 특수 속성. 0이면 적지 않아도 된다. //
+[slow resistance] 18
+[freeze resistance] 39
+[poison resistance] 11
+[stun resistance] 33
+[curse resistance] 10
+[blind resistance] 10
+[lightning resistance] 24
+[stone resistance] 3
+[sleep resistance] 33
+[deelement resistance] 1
+[deadlystrike resistance] 2
+[bleeding resistance] 32
+[piercing resistance] 12
+
+[inventory limit] 1
+
+// 비공개 정보들. //
+[MP regen speed] 2
+[move speed] 3
+[attack speed] 15
+[cast speed] 2
+[hit recovery] 4
+[jump power] 0
+[weight] 2
+
+
+// 애니메이션 리스트. 없는 것은 적지 않아도 됨. 혹은 ``로 넣으면 없는 것으로 처리 //
+[waiting motion] `BodyStay.ani`		// 대기 모션 애니메이션 파일 이름
+[move motion] `BodyMove.ani`		// 이동 모션 애니메이션 파일 이름
+[sit motion] `BodySit.ani`		// 앉기 모션 애니메이션 파일 이름
+[damage motion 1] `BodyDamage1.ani`	// 데미지 모션1 애니메이션 파일 이름
+[damage motion 2] `BodyDamage2.ani`	// 데미지 모션2 애니메이션 파일 이름
+[down motion] `BodyDown.ani`		// 다운 모션 애니메이션 파일 이름
+[overturn motion] `BodyOverturn.ani`		// 뒤집힌 모션 애니메이션 파일 이름
+[jump motion] `BodyJump.ani`		// 점프 모션 애니메이션 파일 이름
+[jumpattack motion] `BodyJumpAttack.ani`	// 점프공격 모션 애니메이션 파일 이름
+[rest motion] `BodyRest.ani`		// 휴식 모션 애니메이션 파일 이름
+[throw motion 1-1] `BodyThrow1.ani`		// 투척 모션1 모으기 애니메이션 파일 이름
+[throw motion 1-2] `BodyThrow2.ani`		// 투척 모션1 발사 애니메이션 파일 이름
+[throw motion 2-1] `BodyCast1.ani`		// 투척 모션2 모으기 애니메이션 파일 이름
+[throw motion 2-2] `BodyCast2.ani`		// 투척 모션2 발사 애니메이션 파일 이름
+[dash motion] `BodyDash.ani`		// 대시 모션 애니메이션 파일 이름
+[dashattack motion] `BodyDashAttack.ani`	// 대시공격 모션 애니메이션 파일 이름
+[getitem motion] `BodyGetItem.ani`	// 아이템 줍기 모션 애니메이션 파일 이름
+[buff motion] `BodyBuff.ani`		// 버프 사용 모션 애니메이션 파일 이름
+[attack motion]				// 공격 모션 애니메이션 파일 이름 리스트
+`Attack1.ani`
+`Attack2.ani`
+[/attack motion]				// 반드시 이것으로 닫아줘야 함
+[etc motion]				// 하드코딩용 모션 애니메이션 파일 이름 리스트 (순서가 중요함)
+`Magic.ani`
+`PowerUp.ani`
+[/etc motion]				// 반드시 이것으로 닫아줘야 함
+
+// 공격 정보 리스트. 없는 것은 적지 않아도 됨. 혹은 ``로 넣으면 없는 것으로 처리 //
+[jumpattack info] `JumpAttack.atk`	// 점프공격의 공격 정보
+[dashattack info] `DashAttack.atk`	// 대시공격의 공격 정보
+[attack info]				// 기본적인 공격 모션의 공격 정보
+`Attack1.atk`
+`Attack2.atk`
+[/attack info]			// 반드시 이것으로 닫아줘야 함
+[etc attack info]				// 그 외 하드코딩용 공격 정보
+`Magic.atk`
+[/etc attack info]			// 반드시 이것으로 닫아줘야 함
+
+// 효과음 리스트
+[weapon wav]				// 무기 서브타입 1의 커스텀 효과음 리스트
+`SHORT_SWORD_WHIP`
+`SHORT_SWORD_HIT`
+[/weapon wav]				// 반드시 이것으로 닫아줘야 함
+[weapon wav]				// 무기 서브타입 2의 커스텀 효과음 리스트
+`LONG_SWORD_WHIP`
+`LONG_SWORD_HIT`
+[/weapon wav]				// 반드시 이것으로 닫아줘야 함
+[weapon wav]				// 무기 서브타입 3의 커스텀 효과음 리스트
+`BLUNT_SWORD_WHIP`
+`BLUNT_SWORD_HIT`
+[/weapon wav]				// 반드시 이것으로 닫아줘야 함
+
+[weapon hit info]			// 무기의 Subtype 별 정보 (자세한 내용은 AttackInfo샘플 참고)
+`[blow]` `[no blood]` 50 1.0
+`[blow]` `[no blood]` 50 1.0
+`[blow]` `[blood]` 10 1.0
+`[blow]` `[no blood]` 50 1.0
+`[blow]` `[no blood]` 100 2.0
+`[cut]` `[no blood]` 100 2.0
+[/weapon hit info]			// 반드시 이것으로 닫아줘야 함
+
+[weapon skill info]	// 무기의 Subtype별 무기 스킬의 MP, 쿨타임 정보.
+1.0 1.0 1.0 1.0		// 물리 MP, 물리 쿨타임, 마법 MP, 마법 쿨타임 비율
+1.0 1.0 1.0 1.0
+1.0 1.0 1.0 1.0
+1.0 1.0 1.0 1.0
+1.0 1.0 1.0 1.0
+1.0 1.0 1.0 1.0
+[/weapon skill info]

@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>#PVF_File\n\n[grade]\n\t`[daily]`\n\n[npc index]\n\t2\n\n[complete npc index]\n\t-1\n\n[job]\n\t`[all]`\n\n[grow type]\n\t-1\n\n[level]\n\t1\t99\n\n[type]\n\t`[clear map]`\n\n[sub type]\n\t-1\n\n[int data]\n\t1024\n//房间的编号\n[/int data]\n\n[reward type]\n\t`[item]`\n\n[reward int data]\n\t3037\t1\n[/reward int data]\n\n[name]\n\t`通关某个类模板`\n\n[depend message]\n\t`通关某个类模板`\n\n[condition message]\n\t`这里要标明是什么副本不然玩家不知道你自己也不知道！`\n\n[solve message]\n\t`通关某个类模板`\n</code></pre>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T17:12:46.460",
+    "view_num": 302
+}

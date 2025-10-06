@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>在决斗场无效的代码段</p>\n\n<p>[if]<br />\n[time]<br />\n40000 1 40000<br />\n[disable pvp ]<br />\n1<br />\n[/if]<br />\n相关参数：</p>\n\n<p>普通地图：dungeon<br />\n地下城类型：dungeon type<br />\n锦标赛地图：tournament dungeon<br />\n死亡之塔系列地图：dead tower<br />\n战场类地图：war room<br />\n（疑似无尽的祭坛类地图）：blood system 【理由：无尽祭坛有一个blood point系统。】<br />\n怪物攻城地图：assault<br />\n竞技场：pvp</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:32:19.457",
+    "view_num": 280
+}

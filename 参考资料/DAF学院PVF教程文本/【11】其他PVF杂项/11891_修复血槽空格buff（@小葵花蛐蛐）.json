@@ -1,0 +1,7 @@
+{
+    "content": "<p><img alt=\"\" height=\"809\" src=\"/media/uploads/2023/08/05/image-20230805115842-1.png\" width=\"567\" /></p>\n\n<pre>\n<code>Naked void make_buffIcon()\n{\n_asm {\ncmp eax, 153 //sub_4B2CD0 default:153 空白buff 编号\nje label1\nmov ecx, [ebp + 0xC]\ncmp eax, [ecx + 0x8]\npush 0x004C895D\nret\nlabel1 :\nmov eax, 0x004C89A1\njmp eax\n}\n}\n\n\nWriteJmpCode((void*)0x004C8957, &amp;make_buffIcon);</code></pre>\n\n<p>同理，使用大地球仪等消耗品道具或装备等其他行为触发此类空格buff都可以解决。</p>\n\n<p>Tips：本贴及之前所有帖子内容仅作参考</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-08-05T12:00:13.143",
+    "view_num": 831
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>其实这个问题很简单，在武器装扮的 文件里把图层优先数值调低</p>\n\n<p><img alt=\"\" src=\"http://book.tiansj.net//server/index.php?s=/api/attachment/visitFile&amp;sign=22528a9bee7f0cf72cc226fee66fc17c\" /></p>\n\n<p>要注意的是不要调的太低免得 武器被手和时装挡住，你也可以只调剑身不调剑柄。</p>\n\n<p>第二个调低了 时装会挡住武器</p>\n\n<p>图层优先级降低，比如武器图层651，装扮要用650</p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T15:25:34.843",
+    "view_num": 483
+}

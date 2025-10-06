@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:么文化滴吟<br />\nhttp://tieba.baidu.com/p/4130738188?see_lz=1</p>\n\n<p>首先是强化。 文件路径在etc/upgrade。<br />\n&nbsp;<br />\n先上图<br />\n&nbsp;<img alt=\"\" height=\"740\" src=\"/media/uploads/2023/04/24/image-20230424221328-1.png\" width=\"1361\" /><br />\n&nbsp;<br />\n&nbsp;<br />\n注意我打的箭头，这是几个关键点， 最左边的 1 31 对应1-31的等级强化的相关资料，后面的可以忽略。<br />\n最后面的3037以及3037后面的数字，代表强化需要的编号3037的物品，也就是无色，和需要无色的是数量。<br />\n至于我其他的箭头对的低级强化等级对应的 0 和 10000 我这里是改过的，本来6级强化的数字比10000大 六级以后的好像也是，这是修改强化成功几率的关键数字。 31的时候大概是80000多。我没法测算出具体的成功几率，要想提高几率，最好是设置10000左右。这样就几率就变为低等级强化的成功几率了，也不需要称号 。<br />\n&nbsp;<br />\n再上一张图<br />\n&nbsp;<img alt=\"\" height=\"738\" src=\"/media/uploads/2023/04/24/image-20230424221337-2.png\" width=\"1363\" /><br />\n&nbsp;<br />\n&nbsp;<br />\n红箭头指向的是各等级装备的强化加成权重，原本是不一样的，我这里是修改过的，史诗的最高<br />\n这里六个数字对应的装备等级为 common uncommon rare unique epic chronicle 英文水平有限，不会翻译，不过这几个单词的翻译装备词典上都有。<br />\n&nbsp;<br />\n&nbsp;<br />\n在红箭头上面的那一排是各等级装备强化需要的金币权重，就到这里，其他的自行思考吧。</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-24T14:13:47.011",
+    "view_num": 1609
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;act里填上</p>\n\n<pre>\n<code>[TRIGGER]\n    [FRAME]\n        0    0\n    [WHICH]\n    [PLAYER]\n    [DO BEHAVIOR]\n    [CHECKUP OBJECT]\n        0\n[/TRIGGER]\n\n[BEHAVIOR]\n    [COLOR CHANGE EFFECT]\n        [EFFECT BLUE START]\n            0\n        [EFFECT RED END]\n            0\n        [EFFECT ALPHA END]\n            0\n        [CHANGE SIZE START]\n            100\n        [CHANGE SIZE END]\n            50\n        [CHANGE TIME]\n            500\n        [LIFE TIME]\n            0\n    [/COLOR CHANGE EFFECT]\n[/BEHAVIOR]</code></pre>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-10-08T23:10:02.001",
+    "view_num": 1238
+}

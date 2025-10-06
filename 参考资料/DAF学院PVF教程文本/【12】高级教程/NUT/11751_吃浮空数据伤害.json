@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>function onSetState_liftslash(obj, state, datas, isResetTimer)\n{\n        if(!obj) return;\n \n        obj.sq_StopMove();\n \n        local state = obj.getVar(\"state\").get_vector(0);\n        local skilllevel = sq_GetSkillLevel(obj, SKILL_LIFTSLASH); \n        if(state == 0)\n        {\n            obj.sq_SetCurrentAnimation(0);\n            obj.sq_SetCurrentAttackInfo(0);\n             \n            local attackBonusRate = obj.sq_GetBonusRateWithPassive(SKILL_LIFTSLASH, STATE_LIFTSLASH, SKL_LVL_COLUMN_IDX_0, 1.0);\n            local upForce = obj.sq_GetLevelData(2);\n            local attackInfo = sq_GetCurrentAttackInfo(obj);\n             \n            sq_SetCurrentAttacknUpForce(attackInfo, upForce);\n            sq_SetCurrentAttackBonusRate(attackInfo, attackBonusRate);\n        }\n    }</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-03T13:03:52.017",
+    "view_num": 455
+}

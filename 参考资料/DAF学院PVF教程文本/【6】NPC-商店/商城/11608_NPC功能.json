@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>[role]\n    `[secret shop]`    1002    //加百利商店\n    `[recover stamina]`    0    //恢复虚弱\n    `[sera shop]`    0    //跳转商城\n    `[guild]`    0    //创建工会\n    `[upgrade item]`    0    //强化装备\n    `[amplify item]`    0    //装备增幅\n    `[disjoint item]`    0    //分解装备\n    `[product item]`    17    //生产商店\n    `[item storage]`    0    //仓库\n    `[post box]`    0    //邮箱\n    `[move town]`    2    //城镇传送\n    `[convert avatar]`    0    //分解时装\n    `[genuine damage upgrade]`    0    //锻造\n    `[play quest movie]`    0    //重播任务视屏\n    `[event message board]`    1     //NPC留言\n    `[one a day shop]`    49     //每日商店\n    `[image communication]`    0     //图像通讯\n    `[automat]`    1    //点击弹出商场页面\n    `[convert avatar]`    33    //时装分解\n    `[compound emblem]`    33    //徽章合成\n    `[random option operate]`    0    //魔法封印\n    `[event message board]`    0    //无法留言\n    `[power war]`    3    //加入势力\n[/role]</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T15:58:34.136",
+    "view_num": 1230
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、投掷准备时间：0.15秒<br />\n1、<br />\n2、攻击范围增加：0<br />\n[static data]<br />\n150 300 0<br />\n[/static data]</p>\n\n<p>0、失明機率 : 50%%<br />\n1、失明Lv : Lv13<br />\n2、物理攻擊力 : 288%% + &lt;6&gt;<br />\n3、失明持續時間 : 5秒<br />\n4、減少視野 : 20%%<br />\n5、減少命中率 : 3%%<br />\n6、物理攻擊力 : 独立攻击力 x 0.72<br />\n[level info]<br />\n7 500 13 288 5000 20 3 72</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T16:08:03.344",
+    "view_num": 34
+}

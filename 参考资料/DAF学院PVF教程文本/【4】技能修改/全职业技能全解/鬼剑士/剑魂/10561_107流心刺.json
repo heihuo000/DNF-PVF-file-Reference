@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、基本多段攻击次数：2次<br />\n3、<br />\n4、<br />\n5、装备太刀与光剑时：多段攻击次数：2次<br />\n6、装备太刀与光剑时多段攻击力（与基本攻击力成正比）：70%<br />\n7、装备钝器攻击时，眩晕持续时间：3秒<br />\n8、装备巨剑和短剑后，追加的捶击攻击力：450%<br />\n9、<br />\n10、<br />\n11、<br />\n12、对异常状态下的敌人攻击力增加率：20%<br />\n[static data]<br />\n300 50 2 1 1 2 70 3000 450 300 -1500 650 200<br />\n[/static data]</p>\n\n<p>0、基本攻击力：140%<br />\n1、<br />\n2、装备钝器攻击时，眩晕机率：33%<br />\n3、装备钝器攻击时，眩晕等级：LV22<br />\n[level info]<br />\n4 140 5000 330 22</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:11:09.101",
+    "view_num": 125
+}

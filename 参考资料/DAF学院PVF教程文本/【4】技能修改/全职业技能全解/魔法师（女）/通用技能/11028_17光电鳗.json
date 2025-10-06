@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、光电鳗发射数：3个<br />\n2、蓄气时间上限：0.6秒<br />\n[static data]<br />\n600 3 600<br />\n[/static data]</p>\n\n<p>0、魔法攻击力：60% + &lt;6&gt;<br />\n1、达蓄气上限时魔法攻击力：120% + &lt;7&gt;<br />\n2、持续时间：区间最小：2秒<br />\n3、持续时间：区间最大：3秒<br />\n4、光电鳗大小比率：区间最小：100%<br />\n5、光电鳗大小比率：区间最大：120%<br />\n6、魔法攻击力：独立攻击力 x 0.17<br />\n7、达蓄气上限时魔法攻击力：独立攻击力 x 0.34<br />\n[level info]<br />\n8 60 120 2000 3000 1000 1200 17 34</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:05:04.018",
+    "view_num": 42
+}

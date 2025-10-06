@@ -1,0 +1,7 @@
+{
+    "content": "<p>1.控制文件地址etc/chn_server_limititemusageinfo.etc</p>\n\n<p>2.文件内容解析</p>\n\n<pre>\n<code>#PVF_File  //文件头\n\n[reset item]  //重置项目\n\n[/reset item]\n\n[refill item]  //发放项目\n3037        5        `2030-10-17 06:00:00`\n//物品 数量 到期时间 刷新时间\n\n[/refill item]\n\n[Limit Item Usage Info]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T23:05:12.372",
+    "view_num": 1548
+}

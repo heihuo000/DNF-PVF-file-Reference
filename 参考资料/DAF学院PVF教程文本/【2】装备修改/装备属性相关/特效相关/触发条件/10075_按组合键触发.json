@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>輸入上，下，+[寵物技能操作鍵]時<br />\n先设置输入指令，再调用触发。</p>\n\n<p>Pvftool写法：</p>\n\n<p>[command]<br />\n{6=`(UP)`}<br />\n{8=`,`}<br />\n{6=`(DOWN)`}<br />\n{8=`,`}<br />\n{6=`(CREATURE)`}<br />\n[/command]<br />\n&nbsp;<br />\n[if]<br />\n&nbsp;<br />\n[use command]<br />\n1<br />\n[cooltime]<br />\n120000<br />\n[/if]</p>\n\n<p>--------------------------------------------------------------------------------</p>\n\n<p>DE写法：</p>\n\n<p>暂无<br />\n相关参数：</p>\n\n<p>上：UP<br />\n下：DOWN<br />\n左：LEFT<br />\n右：RIGHT<br />\n宠物技能键：CREATURE<br />\n攻击键：ATTACK<br />\n技能1键：SKILL<br />\n技能2键：BUFF<br />\nSuperPVF的技能指令：</p>\n\n<p>[@05][command]<br />\n[@06](UP)<br />\n[@08],<br />\n[@06](DOWN)<br />\n[@08],<br />\n[@06](CREATURE)<br />\n[@05][/command]<br />\n[@05][if]<br />\n[@05][use command]<br />\n[@02]1<br />\n[@05][cooltime]<br />\n[@02]15000<br />\n[@05][/if]</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:29:40.212",
+    "view_num": 246
+}

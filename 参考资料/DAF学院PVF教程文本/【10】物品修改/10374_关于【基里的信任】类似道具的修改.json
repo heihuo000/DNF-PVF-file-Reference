@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:mnbv1775</p>\n\n<p>&nbsp;</p>\n\n<p><br />\n首先在PVF TOOLS中 打开文件 etc/serverparameter.etc</p>\n\n<p>找到如下内容<br />\n[get reward count]<br />\n24 70<br />\n[protect of upgrade down]<br />\n8239 12 15 0 8240 12 15 0 8325 12 15 0 8326 16 20 0<br />\n[/protect of upgrade down]</p>\n\n<p><img alt=\"\" height=\"100\" src=\"/media/uploads/2023/05/05/image-20230505225952-1.png\" width=\"611\" /></p>\n\n<p>[get reward count]<br />\n24 70 (24不知道是啥 70是装备等级上限)<br />\n[protect of upgrade down]<br />\n8239 12 15 0 8240 12 15 0 8325 12 15 0 8326 16 20 0 (以第一个为例 很显而易见 8239是物品代码 就是消耗什么道具来保护的 12是开始保护增幅等级 15是结束保护增幅等级 0未知)<br />\n[/protect of upgrade down]</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-05T22:59:56.133",
+    "view_num": 809
+}

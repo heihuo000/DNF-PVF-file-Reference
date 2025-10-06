@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>by:yanghao615</p>\n\n<p>http://tieba.baidu.com/p/4095476840</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>修改路径</p>\n\n<p>monster/项下所有后缀为mob的文件</p>\n\n<p>修改int</p>\n\n<p>[HP MAX] 最大血量</p>\n\n<p>[PHYSICAL_ATTACK]&quot;物攻</p>\n\n<p>[PHYSICAL_DEFENSE]&quot;物防</p>\n\n<p>[MAGICAL_ATTACK]&quot;魔攻</p>\n\n<p>[MAGICAL_DEFENSE]&quot;魔防</p>\n\n<p>[move speed]移动速度</p>\n\n<p>[attack speed]攻击速度</p>\n\n<p>[cast speed]释放速度</p>\n\n<p>[hit recovery]回复 （慎改）</p>\n\n<p>[warlike] 好战度 （觉得怪物AI低？改它就对了）</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-05T22:15:08.265",
+    "view_num": 2555
+}

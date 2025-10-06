@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、冲击波范围：150 px<br />\n2、<br />\n3、崩山裂地斩多段攻击数：6<br />\n4、碎攻击力：100 （数值未知）<br />\n[static data]<br />\n130 150 500 6 100<br />\n[/static data]</p>\n\n<p>0、捶击时物理攻击力：144%<br />\n1、冲击波物理攻击力：独立攻击力 x 10.08<br />\n2、岩浆物理攻击力：独立攻击力 x 7.06<br />\n3、HP消减量：400<br />\n[level info]<br />\n4 144 1008 706 400</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:14:26.646",
+    "view_num": 201
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>[if]<br />\n&nbsp;<br />\n[target state]<br />\n`jump`<br />\n[event attack success]<br />\n1<br />\n[/if]<br />\n对象状态检测：</p>\n\n<p>跳跃、空中（浮空中）：jump<br />\n跳跃攻击：jump attack<br />\n倒地、浮空后落下：down<br />\n攻击：attack</p>\n\n<p><br />\n攻击条件：背后攻击<br />\n对象状态：攻击状态</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:29:13.074",
+    "view_num": 234
+}

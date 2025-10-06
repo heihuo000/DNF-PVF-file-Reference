@@ -1,0 +1,7 @@
+{
+    "content": "<p>[elemental property]<br />\n&#39;[dark element]&#39;<br />\n暗<br />\n[elemental property]<br />\n&#39;[lignt element]&#39;<br />\n光<br />\n[elemental property]<br />\n&#39;[fire element]&#39;<br />\n火<br />\n[elemental property]<br />\n&#39;[water element]&#39;<br />\n水<br />\n一种属性添加到稀有装扮套rareset.equ里,一种属性添加到称号里,一种属性用宝珠,一种属性用契约这样就4种属性都有了</p>\n\n<p>还有一种比较复杂的是在装备里添加,攻击或释放技能100%几率赋予武器属性攻击,懒得弄了<br />\n嫌麻烦可以在稀有装扮套rareset.equ中的3件套里加一种属性,5件套加一种属性,8件套加一种属性,称号再加一种属性,最后也集齐4属性了<br />\n<img alt=\"\" height=\"497\" src=\"/media/uploads/2023/04/23/image-20230423220423-1.png\" width=\"224\" /></p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-23T14:04:32.669",
+    "view_num": 700
+}

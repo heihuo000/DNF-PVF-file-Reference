@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、持續時間 : 20秒<br />\n1、攻擊力增加比率 : 2n% （n为技能等级）<br />\n2、增加發射子彈數上限 左輪槍 : 4發<br />\n3、增加發射子彈數上限 自動手槍 : 6發<br />\n4、增加發射子彈數上限步槍 : 3發<br />\n5、增加發射子彈數上限 手炮 : 2發<br />\n6、增加發射子彈數上限 手弩 : 7發<br />\n[level info]<br />\n7 20000 2 4 6 3 2 7<br />\n[/level info]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T14:52:08.644",
+    "view_num": 42
+}

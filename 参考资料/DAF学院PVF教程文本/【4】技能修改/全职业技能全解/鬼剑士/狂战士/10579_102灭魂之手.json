@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、血气吸入多段攻击间隔：0.2秒<br />\n3、喷发时多段攻击间隔：0.05秒<br />\n4、喷发时多段攻击次数上限：3次<br />\n5、<br />\n6、<br />\n[static data]<br />\n1200 500 200 50 3 400 8<br />\n[/static data]</p>\n\n<p>0、血气吸入物理攻击力：独立攻击力 x 1.5<br />\n1、喷发时物理攻击力：独立攻击力 x 7.5<br />\n2、增加力量的持续时间：10秒<br />\n3、增加力量：200<br />\n抓取出血状态的敌人时<br />\n4、物理攻击力：独立攻击力 x<br />\n5、<br />\n6、血气吸入持续时间：1秒<br />\n7、<br />\n[level info]<br />\n8 150 750 10000 200 225 20000 1000 500</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:15:20.746",
+    "view_num": 115
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、攻擊次數上限 : 2次<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n[static data]<br />\n2 80 400 30 200 50 50<br />\n[/static data]</p>\n\n<p>0、X軸每秒移動距離 : 5px<br />\n1、Y軸每秒移動距離 : 10px<br />\n2、物理攻擊力 : 独立攻击力 x 3.6<br />\n3、<br />\n4、<br />\n[level info]<br />\n5 10 5 360 200 100<br />\n[/level info]</p>\n\n<p>0、技能每增加Lv1時，攻擊力 + 10%<br />\n1、X軸每秒移動速度&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + 5%<br />\n2、Y軸每秒移動速度&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + 5%<br />\n[special level up]<br />\n-1 2 &#39;%&#39; 10<br />\n-1 0 &#39;%&#39; 5<br />\n-1 1 &#39;%&#39; 5<br />\n[/special level up]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:35:33.400",
+    "view_num": 40
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>[basic explain]<br />\n<code>被攻击时，以10%%的机率使自身进入祝福状态。</code></p>\n\n<p>[detail explain]<br />\n<code>被攻击时，以10%%的机率使自身进入祝福状态20秒； 祝福状态下，增加18点力量、体力、智力和精神。</code></p>\n\n<pre>\n<code>\n[if]\n    [cooltime]\n        1000\n    [hit]\n        1\n[/if]\n\n[then]\n    [target]\n        `myself`    -1\n    [duration]\n        20000\n    [probability]\n        10\n    [reduce probability to human armor at pvp module]\n        78\n    [active status]\n        `bless`    25    18    18    18    18\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T23:00:48.074",
+    "view_num": 201
+}

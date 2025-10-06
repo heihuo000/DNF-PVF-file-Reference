@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp; 21&nbsp;&nbsp; &nbsp;被攻擊時，有10%的機率使自身進入加速狀態20秒；<br />\n加速狀態下，增加12%的移動速度和12%攻擊速度。</p>\n\n<p><br />\n[if]</p>\n\n<p><br />\n[cooltime]<br />\n1000&nbsp;&nbsp; &nbsp;<br />\n[hit]<br />\n1&nbsp;&nbsp; &nbsp;</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`myself`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[duration]<br />\n20000&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n10&nbsp;&nbsp; &nbsp;<br />\n[reduce probability to human armor at pvp module]<br />\n78&nbsp;&nbsp; &nbsp;<br />\n[active status]<br />\n`haste`<br />\n35&nbsp;&nbsp; &nbsp;12&nbsp;&nbsp; &nbsp;12&nbsp;&nbsp; &nbsp;<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:18:37.632",
+    "view_num": 198
+}

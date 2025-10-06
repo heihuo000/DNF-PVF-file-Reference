@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、喷射时间上限：5秒<br />\n5、多段攻击间隔：0.25秒<br />\n[static data]<br />\n0 100 50 700 5000 250<br />\n[/static data]</p>\n\n<p>0、物理攻击力：独立攻击力 x 2.55<br />\n1、<br />\n2、冲击波攻击力：独立攻击力 x 11.48<br />\n3、每秒HP减少量：100</p>\n\n<p>[level info]<br />\n4 255 400 1148 100</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:15:10.936",
+    "view_num": 126
+}

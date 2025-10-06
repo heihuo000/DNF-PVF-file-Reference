@@ -1,0 +1,7 @@
+{
+    "content": "<p>因为在添加物品时发现上架不了，后来找到相关贴子后算是解决了无法上架和搜索不到的方法。&nbsp;<br />\n添加完成后又做了一张表格，表格做的不美观大伙儿将就看吧。还有各职业和部位的时装没有整理。<br />\n我看有些时装是经过一次 交易/邮寄/拍卖行 后变为无法交易状态<br />\n在时装下加上下面的词条可实现交易次数限制</p>\n\n<pre>\n<code>[trade limit max]\n\t1\n[stack limit]\n\t1</code></pre>\n\n<p>限制交易的次数上限与其它物品没有进行过测试，不清楚是否也能通用该词条。</p>\n\n<p>多人玩游戏的话还是得尽可能完善拍卖行比较好，这一贴没技术含量滋当水贴了</p>\n\n<p><img alt=\"\" height=\"480\" src=\"/media/uploads/2023/12/20/image-20231220154548-1.png\" width=\"1280\" /></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-12-20T15:44:54.809",
+    "view_num": 307
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:变态大叔</p>\n\n<p>&nbsp;</p>\n\n<p><br />\n首个我们了解一下appendage里的文件apd是一个什么文件。<br />\n以我的理解来讲，它是一个宏，或者说是一个模块。它拥有着可以改变状态和武器颜色等各种用途，<br />\n有些装备会调用里面的内容，不过现在的版本中调用已经非常少了。<br />\n下面进入正题，首先上一段代码供大家参考一下：</p>\n\n<p>装备状态改变及模块调用的格式写法大概如下：<br />\n【type】为类型<br />\n【duration】为持续时间<br />\n【buff】状态<br />\n【icon image】图标路径<br />\n【max overlap】最大叠加数<br />\n【int data】整数运算数据<br />\n【string data】数据串<br />\n【float data】浮动运算数据<br />\n#PVF_File</p>\n\n<p>[type]<br />\n`skill data up`<br />\n[duration]<br />\n10000<br />\n[buff]<br />\n0<br />\n[icon image]<br />\n`` 0<br />\n[max overlap]<br />\n1<br />\n[int data]</p>\n\n<p>[/int data]</p>\n\n<p>[string data]<br />\n`[swordman]` `174` `[all]` `[level]` `0` `%` `300` `[demonic swordman]` `174` `[all]` `[level]` `0` `%` `300` `[fighter]` `174` `[all]` `[level]` `0` `%` `300` `[gunner]` `174` `[all]` `[level]` `0` `%` `300` `[at gunner]` `174` `[all]` `[level]` `0` `%` `300` `[mage]` `174` `[all]` `[level]` `0` `%` `300` `[priest]` `174` `[all]` `[level]` `0` `%` `300` `[thief]` `174` `[all]` `[level]` `0` `%` `300` `[at fighter]` `174` `[all]` `[level]` `0` `%` `300` `[at mage]` `174` `[all]` `[level]` `0` `%` `300`<br />\n[/string data]</p>\n\n<p>[float data]</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T12:54:20.606",
+    "view_num": 707
+}

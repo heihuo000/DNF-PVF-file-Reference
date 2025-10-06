@@ -1,0 +1,7 @@
+{
+    "content": "<p>NPK里的img就是DNF里的各种图片【人物、技能、界面等等，不多赘述】</p>\n\n<p><img alt=\"\" height=\"146\" src=\"/media/uploads/2023/08/05/image-20230805104548-1.png\" width=\"147\" />韩服，美服，国服新版img有分为v6，v5、v4、v2格式，甚至未知格式。由于台服只支持v2老版本，所以需要转换</p>\n\n<p><img alt=\"\" height=\"130\" src=\"/media/uploads/2023/08/05/image-20230805104613-2.png\" width=\"220\" />但是一个NPK里有大量img，img又分好几种格式，<img alt=\"\" height=\"75\" src=\"/media/uploads/2023/08/05/image-20230805104628-3.png\" width=\"247\" /></p>\n\n<p>v6转v2、v5转v2、v4转v2，甚至v2转v2，每种互转都是不同的，<br />\n【ARPG8888】【ARPG4444】【ARPG1555】三种不同的颜色格式进一步造成差距<br />\n乱转换就造成大量数据冗余，甚至图片缺失</p>\n\n<p>贴吧99.9%的提取素材都是批量转换v2，这就是吧内各个版本单机体积那么大的原因</p>\n\n<p>每种格式单独转换即可解决，比如单独勾选全部v6转v2，然后v5....v4..然而工作量巨大<br />\n主要是繁琐还容易眼花，跟玩连连看几个月一样</p>\n\n<p>这里顺便分享一下500时装的不渝婚纱（暗夜使者）图标修复正确路径<br />\n婚纱帽<br />\n`item/avatar/thief/th_acap.img`594<br />\n婚纱腰<br />\n`item/avatar/thief/th_abelt.img`526<br />\n婚纱鞋<br />\n`item/avatar/thief/th_ashoes.img`588<br />\n婚纱衣<br />\n`item/avatar/thief/th_acoat.img`619<br />\n婚纱裙<br />\n`item/avatar/thief/th_apants.img`579<br />\n婚纱颈<br />\n`item/avatar/thief/th_aneck.img`522婚纱发<br />\n`item/avatar/thief/th_ahair.img`537<br />\n婚纱脸<br />\n`item/avatar/thief/th_aface.img`507</p>\n\n<p><img alt=\"\" height=\"506\" src=\"/media/uploads/2023/08/05/image-20230805104719-4.png\" width=\"900\" /></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-08-05T10:47:55.003",
+    "view_num": 1002
+}

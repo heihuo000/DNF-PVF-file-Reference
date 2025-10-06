@@ -1,0 +1,7 @@
+{
+    "content": "<h2>使自己：进入霸体状态</h2>\n\n<p>[basic explain]<br />\n<code>施放技能时， 有10%%的几率使自身进入伪装状态。</code></p>\n\n<p>[detail explain]<br />\n<code>施放技能时， 有10%%的几率使自身进入伪装状态10秒。</code></p>\n\n<pre>\n<code>[if]\n    [cooltime]\n        20000\n    [casting]\n        1\n[/if]\n\n[then]\n    [target]\n        `myself`    -1\n    [duration]\n        10000\n    [probability]\n        10\n    [buff]\n        `camoflage`\n[/then]\n</code></pre>\n\n<p>[basic explain]<br />\n<code>攻击时， 有5%%的几率使自身进入伪装状态， 并增加自身属性。</code></p>\n\n<p>[detail explain]<br />\n<code>攻击时， 有5%%的几率使自身进入伪装状态， 并增加3%%的移动速度和攻击速度、 5%%的施放速度和物理暴击率， 以及7%%的魔法暴击率， 效果持续20秒。 (在决斗场中无法进入伪装状态)</code></p>\n\n<pre>\n<code>[if]\n    [cooltime]\n        30000\n    [attack success]\n        1\n[/if]\n\n[then]\n    [target]\n        `myself`    -1\n    [duration]\n        20000\n    [probability]\n        5\n    [stat]\n        `attack speed`\n        `+`    30\n    [stat]\n        `move speed`\n        `+`    30\n    [stat]\n        `cast speed`\n        `+`    50\n    [stat]\n        `physical critical hit rate`\n        `+`    5\n    [stat]\n        `magical critical hit rate`\n        `+`    7\n    [buff]\n        `camoflage`\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T23:01:22.292",
+    "view_num": 188
+}

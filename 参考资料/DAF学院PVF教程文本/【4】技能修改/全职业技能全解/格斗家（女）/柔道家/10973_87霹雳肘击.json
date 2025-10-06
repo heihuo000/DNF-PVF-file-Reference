@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、抓取站立的敵人時攻擊力減少值 : 20%%<br />\n5、抓取倒地的敵人時攻擊力增加值 : 30%%<br />\n[static data]<br />\n600 300 800 500 20 30<br />\n[/static data]</p>\n\n<p>0、攻擊力 : 960%%武器物攻<br />\n1、衝擊波攻擊力 : 独立攻击力 x 5.76<br />\n2、衝擊波範圍比率 : 100%%<br />\n[level info]<br />\n3 960 576 100</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T16:20:07.388",
+    "view_num": 66
+}

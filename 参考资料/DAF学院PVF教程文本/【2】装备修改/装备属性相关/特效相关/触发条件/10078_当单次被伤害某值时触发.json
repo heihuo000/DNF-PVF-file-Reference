@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>被攻击时，单次伤害导致角色被消灭HP MAX的10%以上，半径500PX以内的敌人都会进入石化状态</p>\n\n<p>[if]</p>\n\n<p>[check damage]<br />\n&#39;%&#39; 10<br />\n[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n&#39;all enemy&#39; 500<br />\n[duration]<br />\n5000<br />\n[active status]<br />\n&#39;stone&#39; 65 0<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:30:53.844",
+    "view_num": 193
+}

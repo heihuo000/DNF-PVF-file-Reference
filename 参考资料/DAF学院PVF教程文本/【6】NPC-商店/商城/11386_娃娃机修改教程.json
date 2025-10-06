@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:sm90</p>\n\n<p>&nbsp;</p>\n\n<p>路径是etc/craneminigameitem.etc<br />\n我们一步步说明<br />\n1.viewCnt<br />\n&nbsp;&nbsp;&nbsp; 娃娃机一次出现多少种道具，6个是默认的，根据我的计算，时间大概只够3轮，建议保持6，如果你想玩得刺激点，一轮出现8个10个的话，那第二轮得赶快抓了。</p>\n\n<p>2.item 到 /item（重要！）&nbsp;&nbsp;&nbsp; 娃娃机里的道具</p>\n\n<p>-2.1 第一个数字<br />\n&nbsp;&nbsp;&nbsp;&nbsp; 道具ID<br />\n-2.2 cnt<br />\n&nbsp;&nbsp;&nbsp; 道具的数量<br />\n-2.3 viewRatio<br />\n&nbsp;&nbsp;&nbsp; 出现几率，如果不是特别稀有的道具没必要设置太低，我写的一般都是48.35，百分比。<br />\n-2.4 pickRatio<br />\n&nbsp;&nbsp;&nbsp; 抓中几率，如果不是特别稀有的道具没必要设置太低，我根据稀有度设计，比如天空套5%的几率，结果我们服还是有一大堆人抓到，气人。</p>\n\n<p>3.material<br />\n&nbsp;&nbsp;&nbsp; 需要消耗什么道具来抓，需要几个，我觉得根本不必解释这个[滑稽]</p>\n\n<p>4.send mail<br />\n&nbsp;&nbsp;&nbsp; 邮件相关，不想解释，因为没有任何影响。</p>\n\n<p>5.need material(重要！)<br />\n&nbsp;&nbsp;&nbsp; 购买硬币时，需要的额外道具、数量，最多、最少设置多少种我并没有测试，我设置的是3种，比如需要无色、1000个，黑色、200个，金色、10个这样，全都随意，也可以设计成同一种道具，一切随意。<br />\n&nbsp;&nbsp;&nbsp; *千万不要在硬币里面加入need material，一定要在娃娃机里面加入，否则可能会出BUG！</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T21:56:52.581",
+    "view_num": 409
+}

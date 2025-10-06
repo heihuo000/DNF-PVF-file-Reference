@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、鐳射炮射程：900 px<br />\n2、鐳射炮大小比率 ： 130%<br />\n[static data]<br />\n300 900 130<br />\n[/static data]</p>\n\n<p>0、独立攻击力 x 3.99<br />\n1、物理攻擊力 : 479% + &lt;0&gt;<br />\n[level info]<br />\n2 399 479<br />\n[/level info]</p>\n\n<p>以下为ex :</p>\n\n<p>0、独立攻击力 +10%<br />\n1、物理攻擊力 +10% + &lt;0&gt;<br />\n3、鐳射炮大小 +3%<br />\n[special level up]<br />\n-1 0 &#39;%&#39; 10<br />\n-1 1 &#39;%&#39; 10<br />\n2 2 &#39;%&#39; 3<br />\n[/special level up]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T13:11:06.812",
+    "view_num": 236
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>加速状态：</p>\n\n<p>[active status]<br />\n&#39;haste&#39; 40 16 16<br />\n第一个数值：加速Lv：Lv40<br />\n第二个数值：攻击速度增加：16%<br />\n第三个数值：移动速度增加：16%</p>\n\n<p>减速状态：</p>\n\n<p>[active status]<br />\n`slow` 55 14 14<br />\n第一个数值：加速Lv：Lv40<br />\n第二个数值：移动速度减少：16%<br />\n第三个数值：攻击速度减少：16%</p>\n\n<p>祝福状态：</p>\n\n<p>[active status]<br />\n`bless` 22 13 13 13 13<br />\n第一个数值：加速Lv：Lv22<br />\n第二个数值：力量增加：13<br />\n第三个数值：体力增加：13<br />\n第四个数值：智力增加：13<br />\n第五个数值：精神增加：13</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T12:46:13.373",
+    "view_num": 335
+}

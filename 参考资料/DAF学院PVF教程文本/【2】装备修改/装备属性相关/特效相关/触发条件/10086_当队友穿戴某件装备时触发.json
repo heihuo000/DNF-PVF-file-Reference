@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>[if]</p>\n\n<p>[any body equipped]</p>\n\n<p>[target]<br />\n&#39;party exclude self&#39;<br />\n[indexes]<br />\n101010328<br />\n[/indexes]<br />\n[/any body equipped]<br />\n[/if]<br />\n注释说明：</p>\n\n<p>红字：队伍排除（不包括）自己<br />\n粉字：索引（即物品ID）</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:33:28.431",
+    "view_num": 274
+}

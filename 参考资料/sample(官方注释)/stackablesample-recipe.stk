@@ -1,0 +1,46 @@
+[name] `던&파 레서피`
+[explain]
+`던&파를 만드는 방법!`
+[grade] 1
+[creation rate] 90
+[weight] 5
+[usable job]
+`[all]`
+[/usable job]
+[minimum level] 1
+
+[stackable type] `[recipe]` 0		// 타입은 `[recipe]`로
+
+[icon] `Item/IconMaterial.img` 38
+[field image] `Item/FieldImage.img` 23
+
+[move wav] `BONE_TOUCH`
+
+[int data]
+3					// 필요한 아이템의 종류 수
+27 1					// 아이템의 인덱스, 아이템 수. (필요한 아이템 종류만큼 반복)
+28 4					// ex) 지금은 27번 1개 28번 4개 29번 2개가 필요함
+29 2
+
+2					// 생성되는 아이템의 종류 수
+10001 1					// 아이템의 인덱스, 아이템 수. (생성되는 아이템 종류만큼 반복)
+77 3					// ex) 지금은 10001번 1개, 77번 3개가 생성됨
+
+2					// 필요한 스킬의 종류 수 (없으면 0, 직업에 무관하게 인덱스로만 체크)
+140 1					// 스킬 인덱스, 최소 레벨 (필요한 스킬의 종류만큼 반복)
+142 7					// ex) 지금은 140번 스킬 1레벨, 142번 스킬 7레벨 이상 필요함
+
+1					// 필요 등급. 0:모두 가능 1:프리미엄 2:전문직업. 안적으면 0
+[/int data]
+
+[string data]
+// 레서피 타입.
+// 세공 - [craftmanship]
+// 방직 - [weaving]
+// 기계 - [machinary]
+// 화학 - [chemistry]
+// 인챈트 - [enchant]
+// 중에서 택일
+// 대소문자 정확히 맞출것!!
+`[craftmanship]`
+[/string data]

@@ -1,0 +1,7 @@
+{
+    "content": "<h1>让人物奔跑与移动时出现残影</h1>\r\n\r\n<p><img alt=\"\" src=\"http://book.tiansj.net//server/index.php?s=/api/attachment/visitFile&amp;sign=ec3bf9f539aa46153a27d5dfcbc434b3\" /></p>\r\n\r\n<pre>\r\n<code>[SPECTRUM]\r\n        1\r\n        [SPECTRUM TERM]\r\n                100\r\n        [SPECTRUM LIFE TIME]\r\n                500\r\n        [SPECTRUM COLOR]\r\n                255        255        255        255\r\n        [SPECTRUM EFFECT]\r\n                `NONE`\r\n</code></pre>\r\n\r\n<p>已经实现残影效果的文件路径：（作为参考）<br />\r\naicharacter/_jojochan/swordman/godsword/animation/dash.ani<br />\r\naicharacter/_jojochan/swordman/godsword/animation/move.ani</p>\r\n\r\n<p>需要修改的文件路径：(此方法是直接关系到人物残影)<br />\r\ncharacter/swordman/animation/dash.ani<br />\r\ncharacter/swordman/animation/move.ani</p>\r\n\r\n<h1>效果：</h1>\r\n\r\n<p><img alt=\"\" src=\"http://book.tiansj.net//server/index.php?s=/api/attachment/visitFile&amp;sign=f153e7261aad3bd7fcfe51b7b72f5662\" /><img alt=\"\" height=\"303\" src=\"/media/uploads/2023/10/08/image-20231008112345-1.png\" width=\"399\" /></p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T11:23:57.682",
+    "view_num": 691
+}

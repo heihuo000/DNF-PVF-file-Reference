@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>隊員增加1名時力量、智能增加15。</p>\n\n<p>[if]<br />\n&nbsp;<br />\n[party count]<br />\n&#39;=&#39; 1<br />\n[change status]<br />\n&#39;hp&#39; &#39;&gt;&#39; &#39;%&#39; 0 &#39;end&#39;<br />\n[/if]<br />\n&nbsp;<br />\n[then]<br />\n&nbsp;<br />\n[target]<br />\n&#39;myself&#39; -1<br />\n[stat by condition]<br />\n&#39;physical attack&#39; &#39;+&#39; 15<br />\n[stat by condition]<br />\n&#39;magical attack&#39; &#39;+&#39; 15<br />\n[/then]<br />\n注释说明：</p>\n\n<p>第一段红字代表队员个数。最大可以写到4<br />\n第二段红字和第三段练字，可以根据队员增加视情况改变。</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:27:07.961",
+    "view_num": 244
+}

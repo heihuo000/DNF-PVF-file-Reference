@@ -1,0 +1,7 @@
+{
+    "content": "<p><img alt=\"\" height=\"330\" src=\"/media/uploads/2023/08/05/image-20230805115118-1.png\" width=\"950\" /></p>\n\n<p>游戏执行某函数得出此路径：</p>\n\n<p><img alt=\"\" height=\"147\" src=\"/media/uploads/2023/08/05/image-20230805115151-2.png\" width=\"240\" />Video/Swordman/NormalWaveEx123.avi</p>\n\n<p>综上所述：<br />\n技能skl文件名称就是视频名称，至于前面的&rdquo;Video/Swordman&ldquo;路径不用管它。<br />\n例：加男鬼的技能视频，就丢 &quot;Video\\Swordman&quot; 里。</p>\n\n<p><img alt=\"\" height=\"299\" src=\"/media/uploads/2023/08/05/image-20230805115228-3.png\" width=\"320\" /></p>\n\n<p>因为蛐蛐不会改pvf新增技能，索性直接拿没有对应avi视频的技能测试，结果如上图所示。<br />\n希望能帮到大家！</p>\n\n<p>路径生成方法：&quot;Swordman/NormalWaveEx123.skl&quot; -&gt; Video/Swordman/NormalWaveEx123.avi</p>\n\n<p>宝子们，注意大小写一致喔Video/%s.avi</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-08-05T11:53:48.430",
+    "view_num": 845
+}

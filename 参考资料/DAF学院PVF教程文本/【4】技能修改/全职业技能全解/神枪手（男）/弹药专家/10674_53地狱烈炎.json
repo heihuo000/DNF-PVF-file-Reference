@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、多段攻擊間隔 : 1秒<br />\n1、蓄氣時間上限 : 0.5秒<br />\n2、蓄氣後爆炸魔法攻擊力 : 2000%<br />\n3、<br />\n4、<br />\n5、<br />\n[static data]<br />\n1000 500 2000 140 140 120<br />\n[/static data]</p>\n\n<p>0、爆炸魔法攻擊力 : 1920%<br />\n1、爆炸範圍 : 270px<br />\n2、火焰地帶範圍 : 360px<br />\n3、移動速度減少率 : 15%<br />\n4、跳躍力減少率 : 7.5%<br />\n5、火焰地帶魔法攻擊力 : 独立攻击力 x 0.8<br />\n6、火焰地帶持續時間 : 10秒<br />\n[level info]<br />\n7 1920 270 360 150 75 80 10000<br />\n[/level info]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:38:05.030",
+    "view_num": 59
+}

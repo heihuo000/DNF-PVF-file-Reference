@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、範圍 : 400 px<br />\n1、攻擊間隔時間 : 0.25秒<br />\n2、持續時間上限 : 4秒<br />\n[static data]<br />\n400 250 4000<br />\n[/static data]</p>\n\n<p>0、光刃魔法攻擊力 : 独立攻击力 x 0.96<br />\n1、長矛魔法攻擊力 : 独立攻击力 x 15.36<br />\n2、魔法陣持續上限時長矛魔法攻擊力 : 独立攻击力 x 33.79<br />\n[level info]<br />\n3 96 1536 3379</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:41:22.229",
+    "view_num": 51
+}

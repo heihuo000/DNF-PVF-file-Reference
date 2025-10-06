@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#808080\"><span style=\"font-size:medium\"><span style=\"font-family:宋体\"><strong><span style=\"color:#0000ff\"><span style=\"font-size:small\"><span style=\"font-family:微软雅黑\"><span style=\"background-color:#ffffff; color:#333333; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:14px\">etc/dialogwindowimageindex.etc</span><br />\n<span style=\"background-color:#ffffff\">对话立绘 NPC编号 跟 img 帧数</span><br />\n<br />\n<br />\n<span style=\"background-color:#ffffff; color:#333333; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:14px\">很多萌新发现添加了NPC对话立绘会有问题，这里可能是你NPC编号超了四位数以上</span></span></span></span></strong></span></span></span><br />\n&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-13T12:44:14.347",
+    "view_num": 423
+}

@@ -1,0 +1,34 @@
+[MOTION]
+	[BASE ANI] `../animation/ShoulderAttack.ani`
+[/MOTION]
+
+
+[TRIGGER]
+[FRAME] 0 0 // 프레임 번호 ?~? 까지
+[DO BEHAVIOR] [ME] 0
+[/TRIGGER]
+
+
+[TRIGGER]
+[ON END BEHAVIOR]	// behavior가 끝나면 아래를 실행함
+[DO BEHAVIOR] [ME] 1
+[/TRIGGER]
+
+
+// 0
+[BEHAVIOR] 
+	[WHICH] [ALL ENEMY] // 우선순위 1 : 카테고리    //상호관계에 있는 타겟을 지정하기 위해 behavior안에 타겟지정이 가능함
+
+	[CHECKUP]
+		[DISTANCE] [<=] 500 // 우선순위 2 : 특정 거리 내에 
+		[LAST TARGET PRIORITY] [LOW]
+		//[LAST ATTACK PRIORITY] [LOW] // ( [LOW] or [HIGH] or [NEVER] or [ALWAYS] ) 우선순위 4 : 마지막 공격에 대한우선순위
+	[/CHECKUP]
+
+	[MOVE TO] [TARGET] 500	
+[/BEHAVIOR]
+
+// 1
+[BEHAVIOR] 
+	[SET ACTION] [ATTACK] 1 [NOW]
+[/BEHAVIOR]

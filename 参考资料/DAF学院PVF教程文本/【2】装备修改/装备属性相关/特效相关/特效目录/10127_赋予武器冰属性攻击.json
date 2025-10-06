@@ -1,0 +1,7 @@
+{
+    "content": "<p>[if]</p>\n\n<p>[time]<br />\n30000 1 1000<br />\n[module]<br />\n&#39;[dungeon type]&#39;<br />\n[/module]</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n&#39;myself&#39; -1<br />\n[consume item]<br />\n3036 1<br />\n[duration]<br />\n30000<br />\n[elemental weapon]<br />\n&#39;water&#39;<br />\n[/then] &nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T12:48:53.241",
+    "view_num": 284
+}

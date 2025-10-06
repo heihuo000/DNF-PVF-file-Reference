@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n[static data]<br />\n4 150 200 1 0<br />\n[/static data]</p>\n\n<p>0、錘擊物理攻擊力 : 312%%<br />\n1、最後一擊時物理攻擊力 : 515%%<br />\n2、錘擊攻擊次數 : 最少：2次<br />\n3、錘擊攻擊次數 : 最多：4次<br />\n4、衝擊波範圍 : 300 px<br />\n5、衝擊波物理攻擊力 : 独立攻击力 x 5.66<br />\n6、眩暈機率 : 30%%<br />\n7、眩暈Lv : Lv36<br />\n8、眩暈持續時間 : 2秒<br />\n[level info]<br />\n9 312 515 2 4 300 566 300 36 2000</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:45:41.527",
+    "view_num": 63
+}

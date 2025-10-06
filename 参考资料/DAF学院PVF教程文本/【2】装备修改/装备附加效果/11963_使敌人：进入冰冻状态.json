@@ -1,0 +1,7 @@
+{
+    "content": "<p>[basic explain]<br />\n<code>被攻击时以1%%的机让敌人陷入冰冻状态</code></p>\n\n<p>[detail explain]<br />\n<code>被攻击时以 1%% 的机率2秒内让敌人进入冰冻状态。 (若敌人高于Lv45，则减少进入异常状态的机率；反之，则增加机率)</code></p>\n\n<pre>\n<code>\n[if]\n    [cooltime]\n        1000\n    [hit]\n        1\n[/if]\n\n[then]\n    [target]\n        `enemy`    -1\n    [duration]\n        2000\n    [probability]\n        1\n    [reduce probability to human armor at pvp module]\n        60\n    [active status]\n        `freeze`    45\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T22:57:49.118",
+    "view_num": 168
+}

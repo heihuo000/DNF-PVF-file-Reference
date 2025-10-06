@@ -1,0 +1,7 @@
+{
+    "content": "<p>赋予武器某种颜色</p>\n\n<p>例中串数据为，线性减淡，白色，灰色，可添加多个颜色参数，位置无要求。</p>\n\n<p>[type]<br />\n`change weapon color`<br />\n[duration]<br />\n5000<br />\n[effect animation]<br />\n``<br />\n[buff]<br />\n1<br />\n[icon image]<br />\n`` 0<br />\n[max overlap]<br />\n0<br />\n[int data]<br />\n5000<br />\n[/int data]</p>\n\n<p>[string data]<br />\n`linear dodge` `white` `gray`<br />\n[/string data]</p>\n\n<p>[float data]</p>\n\n<p>[/float data]</p>\n\n<p>参数相关：</p>\n\n<p>线性渐变：linear dodge</p>\n\n<p>红色：red<br />\n白色：white<br />\n灰色：gray<br />\n粉色：pink<br />\n橙色：orange<br />\n黄色：yellow<br />\n蓝色：blue<br />\n绿色：green<br />\n黑色：black<br />\n&nbsp;<br />\n浅色系颜色前面加light，暗色系前面加dark，记得加一个空格。<br />\n其他颜色可通过百度翻译得到。</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T12:55:05.618",
+    "view_num": 443
+}

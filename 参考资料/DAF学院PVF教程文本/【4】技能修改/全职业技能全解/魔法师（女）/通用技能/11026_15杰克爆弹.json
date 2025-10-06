@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、蓄气时间上限：0.6秒<br />\n2、<br />\n3、<br />\n4、<br />\n[static data]<br />\n600 600 2000 400 25<br />\n[/static data]</p>\n\n<p>0、魔法攻击力：120% + &lt;8&gt;<br />\n1、达蓄气上限时魔法攻击力：240% + &lt;9&gt;<br />\n2、射程：区间最小：700 px<br />\n3、射程：区间最大：1050 px<br />\n4、杰克爆弹大小：区间最小：100%<br />\n5、杰克爆弹大小：区间最大：120%<br />\n6、爆炸大小：区间最小：100%<br />\n7、爆炸大小：区间最大：110%<br />\n8、魔法攻击力：独立攻击力 x 0.3<br />\n9、魔法攻击力：独立攻击力 x 0.6<br />\n[level info]<br />\n10 120 240 700 1050 1000 1200 1000 1100 30 60</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:04:44.826",
+    "view_num": 46
+}

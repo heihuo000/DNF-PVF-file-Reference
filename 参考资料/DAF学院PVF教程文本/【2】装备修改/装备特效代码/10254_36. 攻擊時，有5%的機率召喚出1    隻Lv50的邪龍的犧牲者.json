@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp; 36&nbsp;&nbsp; &nbsp;攻擊時，有5%的機率召喚出1&nbsp;&nbsp; &nbsp;隻Lv50的邪龍的犧牲者協助召喚者攻擊敵人，邪龍的犧牲者存在100秒。<br />\n(召喚的怪物只能同時存在1隻，若召喚的怪物受到較大傷害，則召喚時間結束前就會消失)</p>\n\n<p><br />\n[if]</p>\n\n<p>[cooltime]<br />\n130000&nbsp;&nbsp; &nbsp;<br />\n[attack success]<br />\n1&nbsp;&nbsp; &nbsp;</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`myself`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[duration]<br />\n100000&nbsp;&nbsp; &nbsp;<br />\n[reduce duration at pvp module]<br />\n75&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n3&nbsp;&nbsp; &nbsp;<br />\n[summon monster]<br />\n60116&nbsp;&nbsp; &nbsp;50&nbsp;&nbsp; &nbsp;3&nbsp;&nbsp; &nbsp;<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:20:53.276",
+    "view_num": 201
+}

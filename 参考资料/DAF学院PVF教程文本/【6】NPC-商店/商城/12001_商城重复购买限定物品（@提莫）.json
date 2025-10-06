@@ -1,0 +1,7 @@
+{
+    "content": "<p><strong>商城加入限定物品，只可购买一次。通过修改数据库可重复购买！</strong></p>\n\n<p><img alt=\"\" height=\"191\" src=\"/media/uploads/2023/12/20/image-20231220160411-1.png\" width=\"572\" /></p>\n\n<p><img alt=\"\" height=\"197\" src=\"/media/uploads/2023/12/20/image-20231220160417-2.png\" width=\"1035\" /></p>\n\n<p><code><strong><span style=\"color:#e74c3c\">ipg_no</span></strong>&nbsp;&nbsp;</code>**就是商城礼包编号，在PVF这里设置。这里是帐号限购！</p>\n\n<p>删除数据库对应角色的ipg_no就能重复购买礼包**</p>\n\n<p>&nbsp;</p>\n\n<p><img alt=\"\" height=\"222\" src=\"/media/uploads/2023/12/20/image-20231220160423-3.png\" width=\"1122\" /></p>\n\n<p>这里是角色购买限购礼包处理路径！</p>\n\n<p>有能力的可以写一个mysql触发器，设置每天6点恢复或者每周限购一次触发器。</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-12-20T16:03:52.473",
+    "view_num": 424
+}

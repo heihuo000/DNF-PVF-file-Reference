@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、诅咒箭矢数量：7只<br />\n1、<br />\n2、射程：300px<br />\n[static data]<br />\n7 5000 300<br />\n[/static data]</p>\n\n<p>0、魔法攻击力：72% + &lt;1&gt;<br />\n1、魔法攻击力：独立攻击力 x 0.36<br />\n2、诅咒几率：20%<br />\n3、诅咒等级：17级<br />\n4、诅咒持续时间：10秒<br />\n5、力量、體力、智力、精神各減少：5点<br />\n[level info]<br />\n6 72 36 200 17 10000 5</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:55:55.930",
+    "view_num": 30
+}

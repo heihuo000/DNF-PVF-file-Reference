@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n[static data]<br />\n700 300 4<br />\n[/static data]</p>\n\n<p>0、独立攻击力 x 0.52<br />\n1、被攻击敌人僵硬时间 ：5S （猜测）<br />\n2、攻擊間隔 : 0.2秒<br />\n3、噴射時移動速度比率 : 25%<br />\n4、物理攻擊力 : 62% + &lt;0&gt;<br />\n[level info]<br />\n5 52 5000 200 250 62<br />\n[/level info]</p>\n\n<p>以下为EX：</p>\n\n<p>0、独立攻击力 +10%<br />\n1、聚焦噴火器的攻擊力 +10% +&lt;0&gt;<br />\n2、移動速度增加 +2.5%<br />\n[special level up]<br />\n-1 0 &#39;%&#39; 10<br />\n-1 4 &#39;%&#39; 10<br />\n-1 3 &#39;+&#39; 25<br />\n[/special level up]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T14:56:46.984",
+    "view_num": 83
+}

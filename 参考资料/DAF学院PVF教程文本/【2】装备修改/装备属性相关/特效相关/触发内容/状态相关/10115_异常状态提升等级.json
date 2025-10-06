@@ -1,0 +1,7 @@
+{
+    "content": "<p>石化几率增加0%<br />\n异常状态变化等级加5，<br />\n石化变化状态增加LV0<br />\n异常状态伤害加25%<br />\n[active status control info]<br />\n&#39;bleeding&#39; 0 5 0 25<br />\n状态代码：</p>\n\n<p>失明：blind<br />\n感电：lightning<br />\n灼伤：burn<br />\n冰冻：freeze<br />\n束缚：hold<br />\n睡眠：sleep<br />\n出血：bleeding<br />\n混乱：confuse<br />\n诅咒：curse<br />\n石化：stone<br />\n晕眩：stun<br />\n中毒：posion<br />\n所有异常状态：all activestatus<br />\n随机：any<br />\n武器：weapon break<br />\n防具：armor break<br />\n增益状态：</p>\n\n<p>加速：haste<br />\n减速：slow<br />\n祝福：bless<br />\n其他状态：</p>\n\n<p>弱点Vital Point(未测试)<br />\n元素Elemental(未测试)</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T12:46:02.882",
+    "view_num": 335
+}

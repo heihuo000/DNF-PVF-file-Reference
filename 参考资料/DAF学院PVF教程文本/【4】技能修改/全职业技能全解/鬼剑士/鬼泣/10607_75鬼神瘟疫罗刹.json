@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n6、召唤范围250px<br />\n7、<br />\n8、<br />\n[static data]<br />\n450 1000 100 100 100 80 250 4 3<br />\n[/static data]</p>\n\n<p>0、持续时间：20秒<br />\n1、<br />\n2、减少攻击速度：5<br />\n3、减少物防：776<br />\n4、减少硬直：15<br />\n5、<br />\n6、中毒机率：100%<br />\n7、中毒Lv：Lv37<br />\n8、中毒持续时间：10秒<br />\n9、中毒攻击力：120<br />\n10、失明机率：100%<br />\n11、失明Lv：Lv36<br />\n12、失明持续时间：5秒<br />\n13、失明视野范围：40px<br />\n14、失明减少命中率：1%<br />\n15、出血机率：100%<br />\n16、出血Lv：Lv37<br />\n17、出血持续时间：10秒<br />\n18、出血攻击力：120<br />\n19、鬼神附身持续时间：10秒<br />\n[level info]<br />\n20 20000 10000 5 776 15 2000 1000 37 10000 120 1000 36 5000 40 1 1000 37 10000 120 10000</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:21:21.104",
+    "view_num": 132
+}

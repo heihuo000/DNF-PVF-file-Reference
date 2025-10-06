@@ -1,0 +1,7 @@
+{
+    "content": "<p>[basic explain]<br />\n<code>攻击时， 有5%%的几率击退敌人。</code></p>\n\n<pre>\n<code>[if]\n    [cooltime]\n        3000\n    [attack success]\n        1\n[/if]\n\n[then]\n    [target]\n        `enemy`    -1\n    [probability]\n        5\n    [knockback]\n        1\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T23:02:21.633",
+    "view_num": 528
+}

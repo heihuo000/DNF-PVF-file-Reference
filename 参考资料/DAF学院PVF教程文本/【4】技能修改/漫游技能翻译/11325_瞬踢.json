@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>【瞬踢】<br />\n路径：skill\\gunner\\fastknee.skl<br />\n[@05][level info]<br />\n[@02]7<br />\n[@02]180//180%独立固伤<br />\n[@02]0//发动速度增加率0％<br />\n[@02]100//眩晕几率100&permil;<br />\n[@02]16//眩晕等级<br />\n[@02]1000//眩晕持续时间1000ms<br />\n[@02]90//①击退时间比率<br />\n[@02]216//216%物攻<br />\n&nbsp;注释：①这里的数据和游戏内显示的不同，游戏内显示的要在pvf数据的基础上乘上1.1111,。不知道这样设置的用意是什么_(:3」&ang;)_<br />\n【回旋踢】<br />\n路径：skill\\gunner\\windmill.skl<br />\n[@05][static data]<br />\n[@02]100//基础发动速度<br />\n[@05][/static data]<br />\n[@05][level info]<br />\n[@02]4<br />\n[@02]120//固伤120%独立<br />\n[@02]1//①回旋次数<br />\n[@02]0//发动速度增加率0<br />\n[@02]144//物攻144%<br />\n注释：①就是回旋踢转了几圈&hellip;&hellip;转一圈是踢两下。改成0无明显效果。</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T20:23:33.335",
+    "view_num": 68
+}

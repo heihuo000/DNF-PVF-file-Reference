@@ -1,0 +1,7 @@
+{
+    "content": "<p>活动：赛丽亚的祝福<br />\r\n文件位置：event/seriablessing.evt<br />\r\n标签：[Seria&nbsp;Blessing]&nbsp;&nbsp;&nbsp;&nbsp;[/Seria&nbsp;Blessing]<br />\r\n解释：6个数据一组，第一个数据：ID(编号)，第二个数据：最小等级，第三个数据：最大等级，第4/5/6数据未实测，通关经验加成百分比，理论上来说是代表难度，或者代表随机取其中一个</p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-08-20T19:51:30.619",
+    "view_num": 1527
+}

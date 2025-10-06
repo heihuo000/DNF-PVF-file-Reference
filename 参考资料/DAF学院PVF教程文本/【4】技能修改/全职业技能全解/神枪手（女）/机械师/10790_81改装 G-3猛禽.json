@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、打擊間隔 : 0.5秒<br />\n2、改裝時延遲持續時間 : 10秒<br />\n3、HP減少後無法攻擊時間 : 4秒<br />\n4、猛禽雷射攻擊範圍 :1000px<br />\n5、敵人僵直時間間隔 : 0.9秒<br />\n6、<br />\n[static data]<br />\n300 500 10000 4000 1000 2 0<br />\n[/static data]</p>\n\n<p>0、魔法攻擊力 : 43%<br />\n1、HP : 1282<br />\n2、G-1 柯洛納攻擊力增加率 : 49%<br />\n3、G-2 旋雷攻擊力增加率 : 49%<br />\n[level info]<br />\n4 43 1282 49 49<br />\n[/level info]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T15:31:42.707",
+    "view_num": 106
+}

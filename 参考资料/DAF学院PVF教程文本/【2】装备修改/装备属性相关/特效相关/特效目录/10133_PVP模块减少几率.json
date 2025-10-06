@@ -1,0 +1,7 @@
+{
+    "content": "<p><br />\n[(reduce) （duration） to human armor at （pvp） module]<br />\n50<br />\n原译：人类防具在PVP模块中减少持续时间</p>\n\n<p>说明：以原本的代码数值为基础，按百分比减少。如下面代码中持续时间为2000毫秒为例，2000-2000/100*50来计算，得出在PVP模式地图下持续时间为1000毫秒。</p>\n\n<p>分析猜测：括号内的内容具有可变性，如：</p>\n\n<p>第一个括号减少可以换成增加increase。<br />\n第二个括号持续时间可以换成机率，也可以换成异常状态或属性等。<br />\n第三个括号模块可以换成 普通地图 或 死亡之塔 等其他模块。<br />\n[then]</p>\n\n<p>[target]<br />\n&#39;enemy&#39; -1<br />\n[reduce duration to human armor at pvp module]<br />\n50<br />\n[duration]<br />\n2000<br />\n[reduce probability to human armor at pvp module]<br />\n80<br />\n[probability]<br />\n2<br />\n[active status]<br />\n&#39;stun&#39; 62<br />\n[/then]</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T12:50:13.397",
+    "view_num": 204
+}

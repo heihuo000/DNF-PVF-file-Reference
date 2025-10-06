@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、命中範圍 : 600px<br />\n2、追加攻擊力 ：300 ？？？<br />\n3、<br />\n4、左輪槍發射數上限 : 5次<br />\n5、自動手槍發射數上限 : 5次<br />\n6、步槍發射數上限 : 5次<br />\n7、手炮發射數上限 : 0次<br />\n8、手弩發射數上限 : 5次<br />\n[static data]<br />\n200 600 300 120 5 5 5 0 5<br />\n[/static data]</p>\n\n<p>0、物理攻擊力 : 646%<br />\n1、攻擊額外敵人的機率 : 50%<br />\n2、敵人僵直時間比率 : 126%<br />\n[level info]<br />\n3 646 50 125<br />\n[/level info]</p>\n\n<p>0、目標鎖定範圍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +10%<br />\n1、追加攻擊力&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +10%<br />\n2、攻擊額外敵人的機率 +10%<br />\n[special level up]<br />\n1 1 &#39;%&#39; 10<br />\n2 2 &#39;%&#39; 10<br />\n-1 1 &#39;%&#39; 10<br />\n[/special level up]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:36:06.812",
+    "view_num": 53
+}

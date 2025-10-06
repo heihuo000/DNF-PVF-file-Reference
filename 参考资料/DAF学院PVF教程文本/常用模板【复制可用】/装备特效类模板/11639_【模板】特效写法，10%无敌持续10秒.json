@@ -1,0 +1,7 @@
+{
+    "content": "<h2>(賜福)受遊戲管理員祝福，有10%%的幾率使自身進入無敵狀態，效果持續10秒(冷卻時間50秒)；</h2>\n\n<pre>\n<code>[if]\n\t[change status]\n\t\t`hp`\n\t\t`&gt;`\n\t\t`%`\t0\n\t\t`end`\n\t[cooltime]\n\t\t50000\n[/if]\n\n[then]\n\t[target]\n\t\t`myself`\t-1\n\t[probability]\n\t\t10\n\t[duration]\n\t\t10000\n\t[buff]\n\t\t`unbreakable`\n[/then]\n</code></pre>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T18:27:30.724",
+    "view_num": 1010
+}

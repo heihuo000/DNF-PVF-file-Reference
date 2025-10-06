@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">etc/goldlimitbylevel.etc</span></p>\n\n<p><br />\n<span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">打开PVF文件，找到这个文件</span></p>\n\n<p><br />\n<span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">最前面的两个0不用管</span></p>\n\n<p><br />\n<span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">后面的2个数字为一组</span></p>\n\n<p><br />\n<span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">例如：1&nbsp;&nbsp;&nbsp;&nbsp;100000&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;200000</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">意思就是1级上限10万金币</span></p>\n\n<p><br />\n<span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">2级上限20万金币</span></p>\n",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-13T12:46:24.792",
+    "view_num": 775
+}

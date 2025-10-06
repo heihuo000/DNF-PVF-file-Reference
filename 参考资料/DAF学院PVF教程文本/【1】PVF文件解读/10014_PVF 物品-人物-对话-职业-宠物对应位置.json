@@ -1,0 +1,7 @@
+{
+    "content": "<p>event/event.kor.str&nbsp;&nbsp; &nbsp;修改流动广告&nbsp;&nbsp; &nbsp;<br />\nequipment.kor.str&nbsp;&nbsp; &nbsp;修改物品名称&nbsp;&nbsp; &nbsp;<br />\nnpc/npc.kor.str&nbsp;&nbsp; &nbsp;修改人物名称&nbsp;&nbsp; &nbsp;<br />\netc.kor.str&nbsp;&nbsp; &nbsp;物品与活动介绍&nbsp;&nbsp; &nbsp;<br />\naicharacter.kor.str&nbsp;&nbsp; &nbsp;游戏内人物对话&nbsp;&nbsp; &nbsp;<br />\ncharacter.kor.str&nbsp;&nbsp; &nbsp;职业介绍&nbsp;&nbsp; &nbsp;<br />\ncreature.kor.str&nbsp;&nbsp; &nbsp;宠物信息与对话&nbsp;&nbsp; &nbsp;<br />\ndungeon.kor.str&nbsp;&nbsp; &nbsp;地点介绍&nbsp;&nbsp; &nbsp;<br />\nitemshop.kor.str&nbsp;&nbsp; &nbsp;商店对话&nbsp;&nbsp; &nbsp;<br />\nmonster.kor.str&nbsp;&nbsp; &nbsp;怪物信息&nbsp;&nbsp; &nbsp;<br />\nquest.kor.str&nbsp;&nbsp; &nbsp;转职觉醒对话&nbsp;&nbsp; &nbsp;<br />\npassiveobject.kor.str&nbsp;&nbsp; &nbsp;技能信息&nbsp;&nbsp; &nbsp;<br />\nmission.kor.str &nbsp;&nbsp;&nbsp; &nbsp;PK场信息&nbsp;&nbsp; &nbsp;<br />\nskill.kor.str&nbsp;&nbsp; &nbsp;技能介绍&nbsp;&nbsp; &nbsp;<br />\nstackable.kor.str&nbsp;&nbsp; &nbsp;物品与技能信息介绍&nbsp;&nbsp; &nbsp;<br />\nui.kor.str&nbsp;&nbsp; &nbsp;活动与商场信息&nbsp;&nbsp; &nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:08:23.149",
+    "view_num": 2486
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n稀有度</p>\n\n<p>[rarity]<br />\n4</p>\n\n<p>0：普通级<br />\n1：蓝色级<br />\n2：紫色级<br />\n3：粉色级<br />\n4：史诗级<br />\n5：勇者级</p>\n\n<p>重量</p>\n\n<p>[weight]<br />\n3100</p>\n\n<p>适用职业</p>\n\n<p>[usable job]<br />\n&#39;[priest]&#39;<br />\n[/usable job]</p>\n\n<p>鬼剑士：swordman<br />\n暗黑骑士：demonic swordman<br />\n神枪手-男：gunner<br />\n神枪手-女：atgunner<br />\n魔法师-女：mage<br />\n魔法师-男：atmage<br />\n缔造者：creator mage<br />\n格斗家-男：atfighter<br />\n格斗家-女：fighter<br />\n圣职者：priest<br />\n暗夜使者：thief<br />\n显示优先级【可使用职业，鬼剑士，黑骑士】</p>\n\n<p>[routing priority]<br />\n&#39;swordman&#39; 1<br />\n[demonic swordman]<br />\n0<br />\n[/routing priority]</p>\n\n<p>佩戴等级</p>\n\n<p>[minimum level]<br />\n1</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:15:53.835",
+    "view_num": 1597
+}

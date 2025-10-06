@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp; 13&nbsp;&nbsp; &nbsp;被攻擊時，有10%的機率使敵人進入中毒狀態0.5秒；中毒狀態下的敵人 每0.5秒受到5000點傷害。<br />\n(若敵人高於Lv70，則減少進入異常狀態的機率和效果；反之，則增加機率和效果)</p>\n\n<p><br />\n[if]</p>\n\n<p>[hit]<br />\n1&nbsp;&nbsp; &nbsp;</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`enemy`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[duration]<br />\n500&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n10&nbsp;&nbsp; &nbsp;<br />\n[active status]<br />\n`poison`<br />\n70&nbsp;&nbsp; &nbsp;5000&nbsp;&nbsp; &nbsp;<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:17:17.552",
+    "view_num": 211
+}

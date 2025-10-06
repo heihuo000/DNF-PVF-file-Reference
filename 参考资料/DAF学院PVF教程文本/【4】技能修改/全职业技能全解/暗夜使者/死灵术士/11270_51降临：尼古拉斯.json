@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、召唤代码：61531<br />\n1、<br />\n2、<br />\n3、<br />\n[static data]<br />\n61531 50 100 100<br />\n[/static data]</p>\n\n<p>0、尼古拉斯血量：2053<br />\n1、尼古拉斯等级：20<br />\n2、蜘蛛团攻击力：独立攻击力 x 0.24<br />\n3、蜘蛛团多段攻击间隔：0.2秒<br />\n4、<br />\n5、艾克洛索攻击力：独立攻击力 x 0.48<br />\n6、艾克洛索冲击波攻击力：独立攻击力 x 1.44<br />\n7、蜘蛛团攻击力：48% + &lt;2&gt;<br />\n8、艾克洛索攻击力：96% + &lt;5&gt;<br />\n9、艾克洛索冲击波攻击力：288% + &lt;6&gt;<br />\n10、尼古拉斯存在时间：300秒<br />\n[level info]<br />\n11 2053 20 24 200 300 48 144 48 96 288 300000</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T20:00:48.135",
+    "view_num": 65
+}

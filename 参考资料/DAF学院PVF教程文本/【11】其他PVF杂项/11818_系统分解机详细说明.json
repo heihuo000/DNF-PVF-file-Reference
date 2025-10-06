@@ -1,0 +1,7 @@
+{
+    "content": "<p>路径：<code>etc/disjoint.etc</code></p>\n\n<pre>\n<code>[cube creation const]  #无色得产出倍率\n    150    1.2    1.5    0.07    1.64    1.8    1.5\n\n[additional result]    #分解装备时，额外获得的材料\n    0    4    3033    3034    3035    3036    #普通，高级装备可获得的额外材料\n    1    3166    #稀有装备可获得的额外材料\n    1    3167    #神器装备可获得的额外材料\n    1    3260    #史诗装备可获得的额外材料\n    1    3228    #勇者装备可获得的额外材料\n\n[additional result const]    //获得额外材料的倍率，以及几率\n    0.0                    //普通装备未写额外获得的材料\n    0.3    8.7    8    5        //高级装备\n    50    50    8    10        //稀有装备\n    0.19    5.65    8    20    //神器装备\n    0.81    30    100    30    //史诗装备\n    4.5    30    8    15        //勇者装备\n</code></pre>\n\n<p>&mdash;&mdash;&mdash;1&mdash;&mdash;-2&mdash;&mdash;-3&mdash;&mdash;&mdash;4&mdash;&mdash;-<br />\n上下数字对标说明！！！<br />\n&mdash;&mdash;-1&mdash;&mdash;&mdash;&mdash;&mdash;-2&mdash;&mdash;&mdash;&mdash;-3&mdash;&mdash;&mdash;&mdash;-4&mdash;&mdash;-<br />\n//[大成功倍率，成功倍率，大成功几率，成功几率]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-15T11:14:44.040",
+    "view_num": 998
+}

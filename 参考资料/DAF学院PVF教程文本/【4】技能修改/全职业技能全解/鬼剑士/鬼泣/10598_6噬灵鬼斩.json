@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、蓄气上限：0.2秒<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n[static data]<br />\n0 200 750 -1200 0 300<br />\n[/static data]</p>\n\n<p>0、最大蓄气时攻击力增加比率：12%<br />\n1、[卡赞]魔法攻击力：436%<br />\n2、[萨亚]魔法攻击力：458%<br />\n3、[普戾]蒙魔法攻击力：491%<br />\n4、[卡赞]力量增加：19<br />\n5、[卡赞]智力增加：19<br />\n6、[卡赞]力量智力效果持续时间：10秒<br />\n7、[萨亚]冰冻机率：10%<br />\n8、[萨亚]冰冻Lv：Lv27<br />\n9、[萨亚]冰冻持续时间：1秒<br />\n10、[普戾蒙]睡眠机率：10%<br />\n11、[普戾蒙]睡眠Lv：Lv27<br />\n12、[普戾蒙]睡眠持续时间：3秒<br />\n[level info]<br />\n13 12 436 458 491 19 19 10000 10 27 1000 10 27 3000</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:18:31.368",
+    "view_num": 130
+}

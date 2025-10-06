@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n【多重爆头】<br />\n路径：skill\\gunner\\multiheadshot.skl<br />\n[@05][static data]<br />\n[@02]200&rarr;1//？<br />\n[@02]600//攻击范围<br />\n[@02]300&rarr;3333//？<br />\n[@02]120//①发射反方向攻击范围<br />\n[@02]5//左轮发射次数<br />\n[@02]5//自动发射次数<br />\n[@02]5//步枪发射次数<br />\n[@02]0//手炮发射次数<br />\n[@02]5//手弩发射次数<br />\n[@05][/static data]<br />\n[@05][level info]<br />\n[@02]3<br />\n[@02]646//物攻646%<br />\n[@02]50//攻击额外敌人几率50%<br />\n[@02]125//敌人僵直时间比率125%<br />\n注释：①把这个数值改大以后，假设你往右发射，怪站在你人物左边一点也能打到它。而且改的越大，可以打到的范围就越大。<br />\n另外，&ldquo;数据&rarr;另一个数据&rdquo;表示我在测试的时候曾经把这个数据改成箭头后面的数据，但没有发现技能有明显的变化。这个大家可以忽略。</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T20:24:11.392",
+    "view_num": 107
+}

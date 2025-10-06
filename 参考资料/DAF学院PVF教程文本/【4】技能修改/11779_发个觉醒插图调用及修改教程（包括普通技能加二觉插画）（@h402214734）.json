@@ -1,0 +1,7 @@
+{
+    "content": "<p><img alt=\"\" height=\"424\" src=\"/media/uploads/2023/07/06/1_b0ERCdK.jpg\" width=\"800\" /></p>\n\n<p>如图，巴拉克野性释放时带二觉动画</p>\n\n<p>觉醒是特殊技能，立绘动画的调用在etc/ultimateskillani下面，每个职业都有个ANI文件，对应NPK文件中的CUTIN系列的立绘动画。其中ANI文件是把动画拆成25帧，每副每副接起来，总共时长1秒（24帧）</p>\n\n<p><img alt=\"\" height=\"506\" src=\"/media/uploads/2023/07/06/2_j64CQhv.jpg\" width=\"676\" /></p>\n\n<p>如图是死灵觉醒动画的ANI文件解析总计26帧，有一帧空白帧<br />\n这里就有个思路，可以调用台服未开放的职业的觉醒立绘，只需要找到NPK文件的img插图，逐帧插入就好，比如死灵立绘改女圣骑立绘，男鬼剑改女鬼剑等等，甚至可以新增</p>\n\n<p>下来是这个觉醒立绘是如何调用，觉醒是个特殊技能，在pvf里，什么技能算是觉醒技能有个单独文件指定，只有觉醒技能才可以调用立绘。这个文件位置在etc/ultimateskillcutscene.etc，为一个所有职业觉醒技能列表，打开如图所示</p>\n\n<p><img alt=\"\" height=\"322\" src=\"/media/uploads/2023/07/06/3_7BA9CjP.jpg\" width=\"457\" /></p>\n\n<p>以死灵为例，skill index指技能目录，6代表盗贼这个大职业，2代表转职的死灵，59为死灵的觉醒千魂祭技能代码<br />\nANI FILE为立绘的调用路径<br />\n普通技能添加觉醒立绘思路：添加一个新的skill index，写入自己的职业代码和技能代码，及立绘调用路径<br />\n觉醒改非本职业立绘思路：直接修改ANI FILE的指向路径<br />\n下图为巴拉克的野心这个技能添加进觉醒目录并调用死灵觉醒立绘的文本</p>\n\n<p><img alt=\"\" height=\"329\" src=\"/media/uploads/2023/07/06/4_LvYIpLU.jpg\" width=\"413\" /></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-06T15:56:22.558",
+    "view_num": 966
+}

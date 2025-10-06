@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>[if]</p>\n\n<p>[cooltime]<br />\n18000<br />\n[attack type]<br />\n&#39;magical&#39;<br />\n[attack success]<br />\n1<br />\n[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n&#39;enemy&#39; -1<br />\n【特效内容】<br />\n[/then]<br />\n【使用物理攻击时，代码段替换成：physical】</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:26:25.303",
+    "view_num": 240
+}

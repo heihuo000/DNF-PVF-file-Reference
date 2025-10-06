@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\nby:dod魂猪</p>\n\n<p>&nbsp;</p>\n\n<p>用DE解压出商城文件newcashshop.etc。。翻到下面有个字段。。[cerapoint disallowance] 这个字段里的商城物品序号代码就是无法使用D点购买的。<br />\n想全部D点无法购买。那么你要添加所有商城的物品序号代码。不是物品代码。记得！自己对比一下。。就是物品代码前面的那个编号。。</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T21:51:52.773",
+    "view_num": 538
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>攻击成功，且角色为鬼剑士时触发，主要作用为防具穿戴时，辨认对应职业。</p>\n\n<p>[if]<br />\n&nbsp;<br />\n[attack success]<br />\n1<br />\n[character]<br />\n`swordman` 4 -1<br />\n[cooltime]<br />\n30000<br />\n[/if]<br />\n红字注释说明：</p>\n\n<p>参数1：角色职业<br />\n参数2：职业编号 （可不写）<br />\n参数3：范围 （可不写）</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:31:17.354",
+    "view_num": 258
+}

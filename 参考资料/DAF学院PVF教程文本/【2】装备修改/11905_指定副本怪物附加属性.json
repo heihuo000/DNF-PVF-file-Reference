@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>[if]\n\n[dungeon check]\n201\t\n[/dungeon check]\n\n[target check]\n`monster`\n56743\t\n[/target check]\n\n[attack success]\n1\t\n[/if]\n\n[then]\n\n[target]\n`enemy`\n-1\t\n[add absolute damage]\n`all`\n`%`\n20\t\n[/then]</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-09-12T15:40:51.052",
+    "view_num": 645
+}

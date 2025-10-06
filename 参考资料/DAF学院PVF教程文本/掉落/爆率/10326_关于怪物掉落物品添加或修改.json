@@ -1,0 +1,7 @@
+{
+    "content": "<p>BY:呆子一个_____<br />\n&lt;http://tieba.baidu.com/p/4079701531&gt;<br />\n&nbsp;<br />\n怪物物品掉落文件的地址为\\etc\\worlddrop.etc<br />\n里面的每一个-1代表一段的结束，-1 每一段第一个数为等级<br />\n&nbsp;<img alt=\"\" height=\"21\" src=\"/media/uploads/2023/05/05/image-20230505221126-1.png\" width=\"65\" /> 第一个数为物品代码 后面的则是掉率<br />\n要是觉得一段一段的改麻烦的话，可以找一个全部怪物都会出的物品 直接全部替换为你要的东西<br />\n关于想要怪物掉落D点的话可以找一个可以开的礼包之类的把里面的代码换成D点的代码<br />\n&nbsp;<img alt=\"\" height=\"549\" src=\"/media/uploads/2023/05/05/image-20230505221144-2.png\" width=\"935\" /><br />\n例如这样的，我标记的那一段就是开出来的东西 ，而D点的代码在\\stackable\\twdf\\cash\\goldtradeauction里面的gold_trade_voucher1_10至1000 10到1000就是多少D点 打开文件就可以看到代码了<br />\n还有<br />\n[package data]</p>\n\n<p><br />\n[/package data]<br />\n要换成<br />\n[etc]</p>\n\n<p><br />\n[/etc]<br />\n&nbsp;<br />\n&nbsp;<br />\n&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-05T22:11:55.517",
+    "view_num": 3826
+}

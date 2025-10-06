@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、未知攻击力：<br />\n1、<br />\n2、<br />\n[static data]<br />\n10 120 200<br />\n[/static data]</p>\n\n<p>0、第1擊魔法攻擊力：158% + &lt;1&gt;<br />\n1、第1擊魔法攻擊力：独立攻击力x 1.58<br />\n2、第2擊魔法攻擊力：475% + &lt;3&gt;<br />\n3、第2擊魔法攻擊力：独立攻击力x 4.75<br />\n4、第1擊衝擊波：独立攻击力 x 3.17<br />\n5、第2擊衝擊波：独立攻击力 x 23.76<br />\n[level info]<br />\n6 158 158 475 475 317 2376</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T20:00:16.015",
+    "view_num": 48
+}

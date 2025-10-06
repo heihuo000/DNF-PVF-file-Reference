@@ -1,0 +1,7 @@
+{
+    "content": "<p>[basic explain]<br />\n<code>施放技能时， 有10%%的几率使自身进入霸体状态。</code></p>\n\n<p>[detail explain]<br />\n<code>施放技能时， 有10%%的几率使自身进入霸体状态10秒。</code></p>\n\n<pre>\n<code>[if]\n    [cooltime]\n        20000\n    [casting]\n        1\n[/if]\n\n[then]\n    [target]\n        `myself`    -1\n    [duration]\n        10000\n    [probability]\n        10\n    [buff]\n        `superarmor`\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T23:01:02.468",
+    "view_num": 323
+}

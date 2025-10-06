@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;文件路径：dungeon/towers/towerofillusion ，后缀是.dgn</p>\n\n<p>直接看到这一段，前面的第一个数字原本是15，代表的就是该塔的总层数，<br />\n后面1代表第一层，31001代表的是map文件里注册的地图文件，也就是第一层是哪个图，<br />\n你照着写就行了是不是非常简单被删除的10层塔甚至都没有被删除注册。<br />\n<img alt=\"\" src=\"http://book.tiansj.net//server/index.php?s=/api/attachment/visitFile&amp;sign=d2b3e445b1bf0c5bfa00eb0e698a7209\" /><img alt=\"\" height=\"136\" src=\"/media/uploads/2023/10/08/image-20231008113415-1.png\" width=\"552\" /></p>\n\n<p>稍微注意一下这里，第二段原本是11 15，代表第11至15层通关后恢复百分之50的状态。把15改成25<br />\n<img alt=\"\" src=\"http://book.tiansj.net//server/index.php?s=/api/attachment/visitFile&amp;sign=0bc047c9074ca3d6996b9e7d4d3e666c\" /><img alt=\"\" height=\"135\" src=\"/media/uploads/2023/10/08/image-20231008113423-2.png\" width=\"203\" /></p>\n\n<p>这里就是每层塔开始和结束时的剧情对话了，你有多少层就写满多少层，能记得以前的台词更好，记不得就自己写吧，我是直接自己写了。<br />\n<img alt=\"\" src=\"http://book.tiansj.net//server/index.php?s=/api/attachment/visitFile&amp;sign=6c522fc2b6d09df12adab91fd3ed3899\" /><img alt=\"\" height=\"203\" src=\"/media/uploads/2023/10/08/image-20231008113430-3.png\" width=\"555\" /><br />\n<img alt=\"\" src=\"http://book.tiansj.net//server/index.php?s=/api/attachment/visitFile&amp;sign=0ef916053e9d05066c4527e966e619f8\" /><img alt=\"\" height=\"296\" src=\"/media/uploads/2023/10/08/image-20231008113444-4.png\" width=\"505\" /></p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-10-08T11:35:08.373",
+    "view_num": 270
+}

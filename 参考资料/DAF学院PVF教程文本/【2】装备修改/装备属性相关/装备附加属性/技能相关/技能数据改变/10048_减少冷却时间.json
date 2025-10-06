@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>减少技能冷却时间：</p>\n\n<p>[skill data up]<br />\n&#39;[demonic swordman]&#39; 50 &#39;[all]&#39; &#39;[cooltime]&#39; 0 &#39;+&#39; -1500<br />\n[/skill data up]<br />\n调用技能文件中的技能冷却时间[cooltime]模块</p>\n\n<p>0为最小值，1为最大值【这个是技能成长数据的区间范围】</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:22:23.287",
+    "view_num": 659
+}

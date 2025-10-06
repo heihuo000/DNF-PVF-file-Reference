@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>【非典型触发】</p>\n\n<p>装备時200px 範圍內出血狀態的敵人每1隻 力量、智力增加10，攻擊速度增加1%%，移動速度增加1%%（最多重疊15次）</p>\n\n<p>[variable stat]<br />\n`physical attack` `+` 10<br />\n`object number` `enemy` 200 `bleeding` 15 &nbsp;<br />\n`magical attack` `+` 10<br />\n`object number` `enemy` 200 `bleeding` 15 &nbsp;<br />\n`attack speed` `+` 10<br />\n`object number` `enemy` 200 `bleeding` 15<br />\n`move speed` `+` 10<br />\n`object number` `enemy` 200 `bleeding` 15<br />\n[/variable stat]<br />\n注释说明：</p>\n\n<p>变量属性<br />\n参数1：属性<br />\n参数2：运算符<br />\n参数3：变量&#39;对象数目&#39;<br />\n参数4：被检测对象<br />\n参数5：对象范围<br />\n参数6：异常状态<br />\n参数7：最大重叠数</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:31:43.369",
+    "view_num": 237
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>[if]\n\t[module]\n\t\t`[dead tower]`\n\t\t`[dungeon]`\n\t\t`[war room]`\n\t[/module]\n\t[attack type]\n\t\t`physical`\n\t[attack condition]\n\t\t`counter`\n\t[attack success]\n\t\t1\n\t[cooltime]\n\t\t1000\n[/if]\n\n\n[then]\n\t[target]\n\t\t`myself`-1\n\t[probability]\n\t\t100\n\t[equipment duration]\n\t\t1000\n\t[appendage]\n\t\t334\n[/then]\n\n\n[if]\n\t[my appendage]\n\t\t334\n\t[change status]\n\t\t`hp`\n\t\t`&gt;`\n\t\t`%`\t0\n\t\t`end`\n\t[cooltime]\n\t\t1000\n[/if]\n\n\n[then]\n\t[target]\n\t\t`myself`-1\n\t[equipment duration]\n\t\t1000\n\t[stat]\n\t\t`equipment physical attack`\n\t\t`%`50\n[/then]</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-12-20T15:39:10.292",
+    "view_num": 823
+}

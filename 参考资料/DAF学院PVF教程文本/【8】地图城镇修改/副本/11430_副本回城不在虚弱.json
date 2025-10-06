@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:菜鸟级X</p>\n\n<p>http://tieba.baidu.com/p/4200485721</p>\n\n<p>&nbsp;</p>\n\n<p>路就是把普通地下城改为远古地下城</p>\n\n<p>需要工具，SUPERPVF<br />\n1把PVF拖到程序左边白框加载</p>\n\n<p><img alt=\"\" height=\"355\" src=\"/media/uploads/2023/05/08/image-20230508213819-1.png\" width=\"554\" /></p>\n\n<p>2.点开DUNGEON，找到XXX.dgn</p>\n\n<p><img alt=\"\" height=\"474\" src=\"/media/uploads/2023/05/08/image-20230508213826-2.png\" width=\"244\" /></p>\n\n<p><img alt=\"\" height=\"379\" src=\"/media/uploads/2023/05/08/image-20230508213833-3.png\" width=\"250\" /></p>\n\n<p>3.添加代码<br />\n[@05][ancient dungeon]<br />\n[@02]1</p>\n\n<p><img alt=\"\" height=\"214\" src=\"/media/uploads/2023/05/08/image-20230508213845-4.png\" width=\"260\" /></p>\n\n<p>添加好后点PVF的&ldquo;编译明文&rdquo;来保存修改，然后再点选另一个dgn重复添加，保存（每个dgn代表一个副本，所以要改很多个<br />\n全部修改好后，点&ldquo;更新封包&rdquo;，然后本地和服务端同步就可以了<br />\n塔和异界是不用改的，改了会否出错我可不保证</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-08T21:38:48.636",
+    "view_num": 606
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>技能固定数值添加</p>\n\n<p>[skill data up]<br />\n&#39;[swordman]&#39; 72 &#39;[dungeon type]&#39; &#39;[static]&#39; 0 &#39;+&#39; 2<br />\n&nbsp;</p>\n\n<p>注释：</p>\n\n<p>调用技能文件中的静态数据[static data]模块。</p>\n\n<p>0表示第一项，依次类推。</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:22:12.271",
+    "view_num": 632
+}

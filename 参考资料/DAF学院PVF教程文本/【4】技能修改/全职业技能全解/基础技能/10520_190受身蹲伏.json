@@ -1,0 +1,7 @@
+{
+    "content": "<p>静态数据相关</p>\n\n<p>0、蹲在地上的时间和无敌状态时的时间。<br />\n1、未知<br />\n[static data]<br />\n300 0<br />\n[/static data]</p>\n\n<p><br />\n--------------------------------------------------------------------------------</p>\n\n<p>受身蹲伏技能信息：</p>\n\n<p>0、蹲伏姿势无敌时间<br />\n1、起身时霸体时间<br />\n[level info]<br />\n2 3000 300</p>\n\n<p>测试发现：长按蹲伏技能时，可以长时间蹲在地上保持无敌状态</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:02:04.625",
+    "view_num": 121
+}

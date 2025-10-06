@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、最长格挡时间（猜测）<br />\n[static data]<br />\n500 400 100 400 3000<br />\n[/static data]</p>\n\n<p>0、物理攻击时被击退时间（猜测）<br />\n1、魔法攻击时被击退时间（猜测，被击退时间是正确的）<br />\n2、吸收物理伤害%<br />\n3、吸收魔法伤害%<br />\n4、待测试<br />\n[level info]<br />\n5 200 200 40 15 10</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:04:32.143",
+    "view_num": 164
+}

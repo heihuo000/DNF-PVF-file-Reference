@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>#PVF_File\n\n[name]\n\t`时装礼包`\n\n[explain]\n `蓝字介绍，礼包内容介绍。不需要写装了什么系统会自动显示`\n\n\n[flavor text]\n `灰字介绍，可以写写版权或者吹个牛`\n\n[grade]\n\t1\n\n[attach type]\n\t`[trade]`\n\n[rarity]\n\t2\n\n[usable job]\n\t`[all]`\n[/usable job]\n\n[minimum level]\n\t1\n\n[icon]\n\t`Item/stackable/cash.img`\t606\n\n[stackable type]\n\t`[usable cera package]`\t0\n\n[package data]\n\t601550067\t1\n\t601560065\t1\n\t601570060\t1\n\t601520059\t1\n\t601500067\t1\n\t601510066\t1\n\t601530058\t1\n\t601540067\t1\n[/package data]\n\n[suitable job]\n\t`[swordman]`\n\t`[demonic swordman]`\n[/suitable job]\n//这个可以在商城礼包页面自动按职业分类，如果不想分类请直接删除这段即可！\n\n\n[move wav]\n\t`BONE_TOUCH`\n</code></pre>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T17:10:21.279",
+    "view_num": 788
+}

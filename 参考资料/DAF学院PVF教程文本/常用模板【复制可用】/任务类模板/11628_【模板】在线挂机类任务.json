@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>#PVF_File\n\n[grade]\n\t`[daily]`\n\n[difficulty]\n\t`D`\n\n[npc index]\n\t2\n\n[complete npc index]\n\t-1\n\n[job]\n\t`[all]`\n\n[grow type]\n\t-1\n\n[level]\n\t1\t99\n\n[event]\n\t1\n//活动任务（任务名称会变成绿色）\n\n\n[type]\n\t`[custom quest]`\n\n[sub type]\n\t4\n\n[int data]\n\t-1\t1\n[/int data]\n//这里不要动\n\n[reward type]\n\t`[item]`\n\n[reward int data]\n\t3037\t1000\n[/reward int data]\n\n[reward selection int data]\n\n[/reward selection int data]\n\n[online]\n\t100\n//这里为接收任务起多少时间（分钟）\n\n[name]\n\t`在线站街活动`\n\n[depend message]\n\t`在线站街活动！`\n\n[solve message]\n\t`你怎么才上线！`\n\n[condition message]\n\t`接受任务后需要在线100分钟，可获得奖品`\n</code></pre>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T17:14:06.236",
+    "view_num": 559
+}

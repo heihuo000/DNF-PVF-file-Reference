@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、蓄气时间上限：0.6秒<br />\n2、<br />\n[static data]<br />\n600 600 2000<br />\n[/static data]</p>\n\n<p>0、魔法攻击力：72% + &lt;8&gt;<br />\n1、达蓄气上限时魔法攻击力：144% + &lt;9&gt;<br />\n2、暗影夜猫速度增加率：区间最小：0%<br />\n3、暗影夜猫速度增加率：区间最大：50%<br />\n4、射程：区间最小：180 px<br />\n5、射程：区间最大：270 px<br />\n6、暗影夜猫大小：区间最小：100%<br />\n7、暗影夜猫大小：区间最大：110%<br />\n8、魔法攻击力：独立攻击力 x 0.18<br />\n9、达蓄气上限时魔法攻击力：独立攻击力 x 0.36<br />\n[level info]<br />\n10 72 144 0 500 180 270 1000 1100 18 36</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:05:12.268",
+    "view_num": 39
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">冒险团佣兵</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">etc/linksystem/characlinksystem.etc</span></p>\n\n<p><br />\n<span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">&nbsp;</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[low link character exp bonus]<br />\n1&nbsp;70&nbsp;10&nbsp;0&nbsp;//低于70级有10%经验加成<br />\n[/low link character exp bonus]</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[high link character exp bonus]<br />\n1&nbsp;70&nbsp;0&nbsp;0&nbsp;//70级以上无加成<br />\n[/high link character exp bonus]</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[low link character gold bonus]<br />\n1&nbsp;70&nbsp;10&nbsp;0&nbsp;//低于70级10%金币加成<br />\n[/low link character gold bonus]</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[high link character gold bonus]<br />\n1&nbsp;70&nbsp;0&nbsp;0&nbsp;//70级以上无加成<br />\n[/high link character gold bonus]</span></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-13T12:46:12.202",
+    "view_num": 603
+}

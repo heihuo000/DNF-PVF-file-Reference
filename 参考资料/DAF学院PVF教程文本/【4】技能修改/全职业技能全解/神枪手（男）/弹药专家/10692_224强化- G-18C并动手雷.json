@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、冰凍手雷的填裝數 ：3發<br />\n1、<br />\n2、投擲後的僵值 ：0.2s<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n7、<br />\n8、<br />\n9、<br />\n10、<br />\n11、<br />\n[static data]<br />\n3 50 200 500 3000 3000 22221 1000 200 1 1 0<br />\n[/static data]</p>\n\n<p>0、魔法攻擊力 :独立攻击力 x 5.14<br />\n1、爆炸範圍 : 240px<br />\n2、冰凍機率 : 77.8%<br />\n3、冰凍Lv : Lv32<br />\n4、冰凍持續時間 : 3秒<br />\n[level info]<br />\n5 514 240 778 32 3000<br />\n[/level info]</p>\n\n<p>0、冰凍手雷的填裝數 +2發<br />\n1、冰凍Lv +2<br />\n[special level up]<br />\n0 0 &#39;+&#39; 2<br />\n-1 3 &#39;+&#39; 2<br />\n[/special level up]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:44:11.951",
+    "view_num": 32
+}

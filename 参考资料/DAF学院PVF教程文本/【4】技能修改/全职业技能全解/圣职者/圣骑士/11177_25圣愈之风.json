@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、效果範圍 : 900 px<br />\n1、屏障範圍 : 640 px<br />\n2、<br />\n3、<br />\n4、<br />\n[static data]<br />\n900 640 250 250 250<br />\n[/static data]</p>\n\n<p>0、持續時間 : 5秒<br />\n1、每分鐘恢復的HP量 : 398<br />\n2、每分鐘恢復的MP量 : 159<br />\n3、屏障承受的傷害量 : 133<br />\n4、屏障持續時間 : 6秒<br />\n[level info]<br />\n5 5000 398 159 133 6000</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:39:39.686",
+    "view_num": 65
+}

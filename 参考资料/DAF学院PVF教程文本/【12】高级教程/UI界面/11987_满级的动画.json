@@ -1,0 +1,7 @@
+{
+    "content": "<p>sprite_common_commoneffect.NPK</p>\n\n<p>----------------------------------------------------------------------------@雪龙尼克</p>\n\n<p>sprite_common_commoneffect 这个<br />\nlevelup.img 这个是提升的提示<br />\nlower_text_normal.img 这个是满级的提示<br />\n可以去国服找个同名替换就好， 我之前帮客户修过这个问题</p>\n\n<p>-----------------------------------------------------------------------------@魔化你姐的心</p>\n\n<p>passiveobject/common/animation/lower_text_normal.ani<br />\n满级动画ani<br />\npassiveobject/common/animation/dodge_on_ani.ani<br />\n满级动画虚幻背景</p>\n\n<p>升级ani<br />\ncommon/commoneffect/animation/levelup.ani<br />\n如果你玩单机，用大合集或者其他exe，改不了的满级等级特效的时候<br />\n可以删掉上面的虚幻特效，把这个ani复制到满级动画ani。<br />\n美中不足的是，找不到黑屏ani，烟花ani找到了。不然完美。</p>\n\n<p>passiveobject/common/animation/squib_on_dodge3.ani<br />\n123，共三个烟花特效</p>\n\n<p>---------------------------------------------------------------------------------@MollyToken</p>\n",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-11-15T13:53:45.867",
+    "view_num": 1067
+}

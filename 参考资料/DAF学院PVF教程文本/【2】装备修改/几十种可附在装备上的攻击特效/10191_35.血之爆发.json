@@ -1,0 +1,7 @@
+{
+    "content": "<p>血之爆发<br />\n击中敌人触发</p>\n\n<p><br />\n代码<br />\n[if]</p>\n\n<p>[attack success]<br />\n1&nbsp;&nbsp; &nbsp;<br />\n[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`enemy`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n100&nbsp;&nbsp; &nbsp;<br />\n[passive object]<br />\n48302&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;60&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;``</p>\n\n<p>[/passive object]</p>\n\n<p>[/then]</p>\n\n<p>[if]</p>\n\n<p>[target active status]<br />\n`bleeding`</p>\n\n<p>[attack success]<br />\n1&nbsp;&nbsp; &nbsp;<br />\n[cooltime]<br />\n100&nbsp;&nbsp; &nbsp;<br />\n[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`myself`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[duration]<br />\n20000&nbsp;&nbsp; &nbsp;<br />\n[stat]<br />\n`attack speed`<br />\n`+`<br />\n30&nbsp;&nbsp; &nbsp;<br />\n[stat]<br />\n`move speed`<br />\n`+`<br />\n30&nbsp;&nbsp; &nbsp;<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:07:56.685",
+    "view_num": 163
+}

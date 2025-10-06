@@ -1,0 +1,7 @@
+{
+    "content": "<p>思路跟我以前写的添加NPC是一样的，</p>\n\n<p>首先你得写一个文件，并且赋予编号及所在路径。<br />\n然后才在武器里调用。提供一小段调用代码</p>\n\n<p>[if]</p>\n\n<p>[casting]<br />\n1<br />\n[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`myself` -1<br />\n[probability]<br />\n100<br />\n[equipment duration]<br />\n60000<br />\n[appendage]<br />\n32[/then]</p>\n\n<p>触发说明：施放技能时，100%机率增加10点智力，效果持续60秒（最大可叠加5次。）</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T12:56:02.991",
+    "view_num": 476
+}

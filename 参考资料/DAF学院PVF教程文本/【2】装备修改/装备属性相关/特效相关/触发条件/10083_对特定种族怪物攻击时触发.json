@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>对野兽类怪物攻击附加伤害，加号可以换成%</p>\n\n<p>[if]</p>\n\n<p>[target type]<br />\n&#39;beast&#39;<br />\n[attack success]<br />\n1<br />\n[/if]</p>\n\n<p>其他对象相关：</p>\n\n<p>野兽族：beast<br />\n植物族：plant<br />\n昆虫族：insect<br />\n不死族：undead<br />\n恶魔族：devil<br />\n精灵族：spirit<br />\n龙族：dragon<br />\n组合体：hybrid<br />\n人型：human<br />\n机械：machine<br />\n建筑：fort armor<br />\n哥布林：goblin<br />\n天使：angel<br />\n种族特性：</p>\n\n<p>建筑：会霸体<br />\n天使：异常状态免疫（或极高）</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:32:43.177",
+    "view_num": 190
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>[static data]<br />\n&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;6&nbsp;&nbsp; &nbsp;15&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;150&nbsp;&nbsp; &nbsp;100&nbsp;&nbsp; &nbsp;50&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;20&nbsp;&nbsp; &nbsp;200&nbsp;&nbsp; &nbsp;50&nbsp;&nbsp; &nbsp;24&nbsp;&nbsp; &nbsp;12&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;50<br />\n[/static data]</p>\n\n<p><br />\n防具精通 增加物理伤害比例 &nbsp;替换技能数值静态数据就可以了</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-08-01T13:56:33.072",
+    "view_num": 814
+}

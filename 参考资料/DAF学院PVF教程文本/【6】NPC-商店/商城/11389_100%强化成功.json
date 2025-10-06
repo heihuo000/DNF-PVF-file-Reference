@@ -1,0 +1,7 @@
+{
+    "content": "<p>by:老牛专吃回头草<br />\nhttp://tieba.baidu.com/p/4102361307<br />\n&nbsp;<br />\n&nbsp;<br />\n思路：凯丽 的最爱，这个称号是加强化几率的<br />\n<img alt=\"\" height=\"203\" src=\"/media/uploads/2023/05/07/image-20230507215810-1.png\" width=\"308\" /></p>\n\n<p>所以想到改这个。<br />\n文件位置：equipment/character/common/title/tecipient_ofthe_faveo_kiri.equ</p>\n\n<p><img alt=\"\" height=\"475\" src=\"/media/uploads/2023/05/07/image-20230507215818-2.png\" width=\"756\" /></p>\n\n<p>后面的[upgrade prob increase] 就是增加强化几率，原来的1000应该是1%或者10%，保险起见，我们后面加上3个0，那么就是一定成功了。<br />\n改完后打包，进游戏用强化券强化，成功30次后，获得凯丽 的最爱这个称号，戴上，试试效果。</p>\n\n<p><img alt=\"\" height=\"361\" src=\"/media/uploads/2023/05/07/image-20230507215826-3.png\" width=\"335\" /></p>\n\n<p>发现一路直上31，凯丽 都惊呆了！</p>\n\n<p><img alt=\"\" height=\"356\" src=\"/media/uploads/2023/05/07/image-20230507215835-4.png\" width=\"223\" /></p>\n\n<p>当然，还有减少强化费用之类的，推测这些代码也能用在其他装备上，有兴趣研究下强化的小伙伴们可以试试。<br />\n&nbsp;<br />\n&nbsp;<br />\n&nbsp;<br />\n&nbsp;<br />\nby:Kyiba<br />\nhttp://tieba.baidu.com/p/4063284317<br />\n&nbsp;<br />\n&nbsp;<br />\n&nbsp;<br />\n找到方法了,上面8楼提出的方法,改称号.<br />\n我改的破碎的心.<br />\n地址如下:<br />\ncharacter/common/title/craftsmanship.equ<br />\n里面最后那个1000,就是增加的成功率1%<br />\n具体增加多少就看自己了<br />\n进游戏,就是称号匠者之心.<br />\n已经实测,可行<br />\n&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T21:58:37.601",
+    "view_num": 927
+}

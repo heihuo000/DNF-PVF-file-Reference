@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、風暴多段攻擊間隔 : 0.5秒<br />\n3、<br />\n4、<br />\n[static data]<br />\n500 500 500 300 150<br />\n[/static data]</p>\n\n<p>0、抓取敵人物理攻擊力 : 独立攻击力 x 4.37<br />\n1、吸附敵人物理攻擊力 : 独立攻击力 x 2.62<br />\n2、抓取敵人最後一擊物理攻擊力 : 独立攻击力 x 78<br />\n3、吸附敵人最後一擊物理攻擊力 : 独立攻击力 x 46.8<br />\n4、最後一擊衝擊波範圍 : 303 px<br />\n5、<br />\n6、<br />\n7、風暴持續時間 : 6.6秒<br />\n8、<br />\n9、<br />\n10、<br />\n11、增加一次抛投攻击力：独立攻击力 x 0<br />\n12、增加一次螺旋彗星落攻击力：独立攻击力 x 0<br />\n13、增加一次地狱摇篮攻击力：独立攻击力 x 0<br />\n[level info]<br />\n14 437 262 7800 4680 303 102 51 6600 403 102 51 0 0 0</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T16:19:36.375",
+    "view_num": 45
+}

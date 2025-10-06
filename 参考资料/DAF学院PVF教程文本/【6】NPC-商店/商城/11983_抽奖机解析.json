@@ -1,0 +1,7 @@
+{
+    "content": "<p>抽奖机物品数量大于1，不能全服公告会卡死。</p>\n\n<p>看到不少人不知道怎么改，很简单的下面说一下吧</p>\n\n<pre>\n<code>首选抽奖机文件路径 etc/pcroom.vm\n</code></pre>\n\n<p>这个就是抽奖机的文件，怎么改看下面图片</p>\n\n<p><img alt=\"\" height=\"228\" src=\"/media/uploads/2023/10/08/image-20231008230704-2.png\" width=\"687\" /></p>\n\n<pre>\n<code>路径是：\netc/pcroom.etc、\npcroom3.etc、\npcroom4.etc，\n</code></pre>\n\n<p>内容一样<br />\npcroom是卡妮娜的，<br />\n3是阿加雷斯的宝箱，<br />\n4是赛丽亚售货机</p>\n\n<p><img alt=\"\" height=\"75\" src=\"/media/uploads/2023/10/08/image-20231008230711-3.png\" width=\"262\" /></p>\n\n<p>NPC代码：<br />\n阿加雷斯的宝箱ID是81，赛丽亚售货机ID是83</p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T23:07:18.320",
+    "view_num": 936
+}

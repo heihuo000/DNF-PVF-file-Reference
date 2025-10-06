@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:a5563195</p>\n\n<p>http://tieba.baidu.com/p/4521296052</p>\n\n<p><br />\n居然又有人装逼，那我就来发教程啦。哈哈哈哈。</p>\n\n<p>关于地图上下移动的问题，非常的简单。<br />\n那是因为国服与台服的extended tile格式不同，详情如下图。</p>\n\n<p><img alt=\"\" height=\"660\" src=\"/media/uploads/2023/05/08/image-20230508215119-1.png\" width=\"645\" /></p>\n\n<p>很明显可以看到国服的[extended tile]的格式是分别给每个til一个编号，接着用编号排序的方式排列til构成背景。<br />\n那我们怎么改呢，只需要把每个编号的til分别复制改成台服的格式即可。<br />\n如下图。</p>\n\n<p><img alt=\"\" height=\"656\" src=\"/media/uploads/2023/05/08/image-20230508215130-2.png\" width=\"643\" /></p>\n\n<p>最后，添加城镇也非常的简单，<br />\n1、首先是mm文件，建立世界地图与城镇地图。<br />\n2、接着是town添加关联。<br />\n3、Worldmap添加副本关联。<br />\n4、Map下建立城镇地图。<br />\n5、剩下的npc，传送口什么的就自己看着办吧。</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-08T21:51:33.058",
+    "view_num": 827
+}

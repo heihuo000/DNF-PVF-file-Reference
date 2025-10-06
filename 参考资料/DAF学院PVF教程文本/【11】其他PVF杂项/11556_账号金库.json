@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">路径是etc/accountcargo.etc<br />\nrequired level是多少级可以开，默认60，我改成了15<br />\nrequired item就是开启账号金库所需要的道具，默认是虚空魔石3299，可以改无色或者狗眼，你们随意，我没改动这里。<br />\nupgrade info就是金库的设定，我没有进行太大的改动，就调整率的数值<br />\n4个一组，分别为：<br />\n多少格、最多存多少钱、开启需要多少个道具(上面提到的)、开启需要多少钱</span></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-13T12:49:29.318",
+    "view_num": 574
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、失敗率 : 20%%<br />\n1、成功率 : 60%%<br />\n2、大成功率 : 20%%<br />\n3、<br />\n4、<br />\n5、<br />\n6、夜叉：906<br />\n7、射手哥布林：61411<br />\n8、塔乌牛头怪：61154<br />\n[static data]<br />\n200 600 200 0 1 2 906 61411 61154<br />\n[/static data]</p>\n\n<p>0、魔法攻擊力 : 独立攻击力 x 3<br />\n1、詛咒機率 : 10%<br />\n2、詛咒Lv : Lv26<br />\n3、詛咒持續時間 : 10秒<br />\n4、減少力量、 智力、 體力、 精神 : 5<br />\n5、召喚機率 : 30%<br />\n6、召喚獸Lv : Lv26<br />\n7、召喚獸持續時間 : 30秒<br />\n8、魔法攻擊力 : 300%<br />\n[level info]<br />\n9 300 100 26 10000 5 300 26 30000 300</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:28:52.663",
+    "view_num": 90
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>思路很强，遗憾的是小白看不懂，或者看懂了，nut方面也不够资深。<br />\n怪物坦度不够硬确实打起来没感觉，那么对小白来说有没有办法呢？当然是有的！<br />\n这里呢就来个简单版的，开整<br />\n方法当然也是<code><span style=\"background-color:#d35400\">nut</span></code>，为怪物附加上一个<code><span style=\"background-color:#d35400\">ap</span></code>，<code><span style=\"background-color:#d35400\">onSetHp</span></code>就是明面意思设置<code><span style=\"background-color:#d35400\">HP</span></code>。<br />\n怪物每次掉血，都会经过<code><span style=\"background-color:#d35400\">onSetHp</span></code>函数，然后设置<code>HP</code>（当前HP-减少的血量）<br />\n当前HP-（<code><span style=\"background-color:#d35400\">onSetHp</span></code>所计算过的HP）得到了要减少的血量。<br />\n再把得到的要减少的血量折中一下（减少的血量 / 2）得到半数。把处理后的要减少的血量 当前HP-（减少的血量 / 2）返回给<code><span style=\"background-color:#d35400\">onSetHp</span></code><br />\n掉血减半的效果就达到了，版本有加nut字体的话，并不会影响显示的字体值，原生字体就不知道了，没测试过。<br />\n以上只是例子，血量还不够用的话，也可以（减少的血量 / 10）只减少十分之一或更少。</p>\n\n<p><img alt=\"\" height=\"213\" src=\"/media/uploads/2023/06/18/1_AZ4gAjv.png\" width=\"575\" /></p>\n\n<p>提示：望越100有现成的可以提取，不想动手的可以去提取。</p>\n\n<p>太过加强怪物防御和抗性，只会让固伤职业很尴尬，有兴趣的可以试试这个</p>",
+    "auth_users": "旭旭姥姥",
+    "img": "",
+    "create_at": "2023-06-18T14:36:44.370",
+    "view_num": 1065
+}

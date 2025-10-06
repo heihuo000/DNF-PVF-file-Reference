@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、蓄气时间上限：0.3秒<br />\n3、<br />\n4、<br />\n5、<br />\n[static data]<br />\n500 -800 300 200 500 200<br />\n[/static data]</p>\n\n<p>0、直接物理攻击力：264% + &lt;8&gt;<br />\n1、达蓄气上限时物理攻击力：330% + &lt;9&gt;<br />\n2、击飞力比率：100% (数值倍数：0.25)<br />\n3、<br />\n4、攻击速度增加率：0%<br />\n5、间接物理攻击力：区间最小：79%武器物攻<br />\n6、间接物理攻击力：区间最大：100%武器物攻<br />\n7、（）物理攻击力：（未知未测试）<br />\n8、直接物理攻击力：独立攻击力 x 0.79<br />\n9、达蓄气上限时物理攻击力：独立攻击力 x 1<br />\n[level info]<br />\n10 264 330 400 200 0 79 100 95 79 100</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:04:37.354",
+    "view_num": 42
+}

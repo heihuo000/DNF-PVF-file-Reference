@@ -1,0 +1,7 @@
+{
+    "content": "<p><code>修复100级要点：</code></p>\n\n<p><code>1.PVF里的 character/exptable.tbl 最大经验值不要超过21亿，百级端经验值总数100个，每前一个数值都要比后一个的数值大，前后差为升级所需的实际经验。另外为了兼容你自己的旧账号和旧角色，最好在后面加上新等级的经验，不要修改之前的等级经验值，不然旧账号会被封号成限制交易状态，无法买卖东西和使用金币等问题。</code></p>\n\n<p>&nbsp;</p>\n\n<p><code>2.PVF里的 etc/etcparameter.etc 文件内，[skill damage base parameter dungeon]和[skill damage base parameter pvp]标签要添加上从缺少到101级的一段参数，不然100级会独立攻击变0；</code></p>\n\n<p>&nbsp;</p>\n\n<p><code>3.PVF里的 n_quest/job/cc_start.qst 是转职说明任务，[level]最低等级上限要大于服务器端等级补丁的，而最大上限要大于任务的最低等级上限；如是一百级端改成[level]101 102即可。</code></p>\n\n<p>&nbsp;</p>\n\n<p><code>4.PVF里所有的*.qst任务文件和所有*.npc文件都要改成服务端等级补丁等级上限，qst任务文件不改的话qst在角色到100级会没任务或出错导制封号无法解锁；npc文件不改的话到100级会没有对话;</code></p>\n\n<p>&nbsp;</p>\n\n<p><code>5.PVF里的 etc/goldlimitbylevel.etc 是修改金币等级限制的文件，不会修去自己去看豆腐百科或找教程；</code></p>\n\n<p>&nbsp;</p>\n\n<p><code>6.PVF里的 etc/sptable.etc 文件是修复sp的地方，自己看着修，不会修去自己去看豆腐百科或找教程；</code></p>\n\n<p>&nbsp;</p>\n\n<p><code>7.PVF里的 etc/pvpchannellist.etc 文件是修复pk场限进等级的地方，不会修去自己去看豆腐百科或找教程；</code></p>\n\n<p>&nbsp;</p>\n\n<p><code>8.一般修改后被封号，如果不是exptable.tbl出错就是因用了旧账号使数据库与pvf相应的数据异常导致的。</code></p>\n\n<p><code>以上是对修复100级各种问题的最后总结。经过反复测试，没问题了才发出来的。现成补丁就不放，省得到时因为别的、其它的各种问题，你们自己出错怪到我的头上。</code></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-13T21:29:44.788",
+    "view_num": 656
+}

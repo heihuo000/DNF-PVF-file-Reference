@@ -1,0 +1,7 @@
+{
+    "content": "<p>[basic explain]<br />\n<code>攻击时，以15%%的机率使敌人进入出血状态。</code></p>\n\n<p>[detail explain]<br />\n<code>攻击时以15%%的机率4秒内让敌人呈现出血状态，每0.5秒以1000的攻击力给予伤害。 (若敌人高于Lv65，则减少进入异常状态的机率；反之，则增加机率)</code></p>\n\n<pre>\n复制<code>[if]\n    [module]\n        `[dungeon type]`\n    [/module]\n    [cooltime]\n        4000\n    [attack success]\n        1\n[/if]\n\n[then]\n    [target]\n        `enemy`    -1\n    [duration]\n        4000\n    [probability]\n        15\n    [active status]\n        `bleeding`    65    8000\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T22:44:47.990",
+    "view_num": 167
+}

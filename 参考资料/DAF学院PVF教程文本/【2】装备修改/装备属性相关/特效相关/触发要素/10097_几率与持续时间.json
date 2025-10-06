@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>触发机率：</p>\r\n\r\n<p>[probability]<br />\r\n3<br />\r\n触发内容持续时间：</p>\r\n\r\n<p>[duration]<br />\r\n30000<br />\r\n装备持续时间，仅适用于appendage：</p>\r\n\r\n<p>[probability]<br />\r\n100<br />\r\n[equipment duration]<br />\r\n60000<br />\r\n[appendage]<br />\r\n53<br />\r\n技能（剩余）持续时间：</p>\r\n\r\n<p>[skill duration]<br />\r\n119 `[level]` 1<br />\r\n注释：</p>\r\n\r\n<p>参数1：技能编号<br />\r\n参数2：技能信息调用（详情请参考技能对照表）<br />\r\n参数3：技能信息调用编号</p>\r\n\r\n<p>--------------------------------------------------------------------------------</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>关于</p>\r\n\r\n<p>[appendage]<br />\r\n53<br />\r\n改变武器颜色为蓝色。</p>\r\n\r\n<p>相关路径：\\appendage\\appendage.lst</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:35:16.634",
+    "view_num": 475
+}

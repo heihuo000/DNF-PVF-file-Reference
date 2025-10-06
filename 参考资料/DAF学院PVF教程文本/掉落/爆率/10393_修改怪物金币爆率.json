@@ -1,0 +1,7 @@
+{
+    "content": "<p>by:A850926265<br />\r\nhttp://tieba.baidu.com/p/4050301163<br />\r\n首先感谢贴吧大神贡献的PVF修改工具，其次感谢其他大神的修改教程。<br />\r\n我发现的是修改地下城怪物金币爆率的，不知道有没有人发过，反正精品贴我里没有看见。<br />\r\n相信贴吧里应该有不少人知道怎么改金币爆率，但还是有人不知道，所以我就发了<br />\r\n&nbsp;<br />\r\n&nbsp;<img alt=\"\" height=\"368\" src=\"/media/uploads/2023/05/06/image-20230506214413-1.png\" width=\"628\" /><br />\r\n&nbsp;<br />\r\n&nbsp;<img alt=\"\" height=\"543\" src=\"/media/uploads/2023/05/06/image-20230506214424-2.png\" width=\"785\" /><br />\r\n&nbsp;<br />\r\n方便某些人，发个10倍金币的数据链接，链接: &lt;http://pan.baidu.com/s/1jGxpYV8&gt; 密码: nkw7，<br />\r\n全选复制-全选粘贴即可。还有，改完的PVF要保存，输出，再放到WINSCP里。<br />\r\n&nbsp;<br />\r\n&nbsp;<br />\r\n&nbsp;<br />\r\nby：421755083<br />\r\nhttp://tieba.baidu.com/p/4053994279<br />\r\n&nbsp;<br />\r\n&nbsp;<br />\r\n、金币（两个方法）<br />\r\n⑴同样用Navicat打开服务端数据库，打开taiwan_cain--account_cargo，依然最左边是账号ID，money就是金库金额（金额不要超过4亿，超过了会发生什么我不知道，也不负责= =），同时把右边的capacity改成64（8的倍数）。<br />\r\n&nbsp;<br />\r\n⑵通过PVF来改怪物金币掉落，打开PVF工具（工具自行到【相关下载】处下载），找到etc展开，进入itemdropinfo_common.etc， 如图，图中数据3个为一组，修改掉落金币数即可。<br />\r\n&nbsp;<img alt=\"\" height=\"649\" src=\"/media/uploads/2023/05/06/image-20230506214445-3.png\" width=\"796\" /><br />\r\n&nbsp;<br />\r\n&nbsp;<br />\r\n&nbsp;<br />\r\n&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-06T21:44:54.330",
+    "view_num": 1380
+}

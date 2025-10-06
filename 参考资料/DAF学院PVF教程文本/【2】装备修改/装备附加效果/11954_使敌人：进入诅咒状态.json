@@ -1,0 +1,7 @@
+{
+    "content": "<p>[basic explain]<br />\n<code>攻击时，以2%%的机率使敌人进入诅咒状态。</code></p>\n\n<p>[detail explain]<br />\n<code>攻击时以2%%的机率在20秒内让敌人陷入诅咒状态，力量减少30，体力减少30，智能减少30，精神力减少30。 (若敌人高于Lv50，则减少进入异常状态的机率；反之，则增加机率)</code></p>\n\n<pre>\n<code>[if]\n    [cooltime]\n        30000\n    [attack success]\n        1\n[/if]\n\n[then]\n    [target]\n        `enemy`    -1\n    [duration]\n        20000\n    [probability]\n        2\n    [active status]\n        `curse`    50    30    30    30    30\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T22:45:29.510",
+    "view_num": 117
+}

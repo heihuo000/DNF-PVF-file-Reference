@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、最大連打次數：20次<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n[static data]<br />\n20 500 100 400 150 100<br />\n[/static data]</p>\n\n<p>0、<br />\n1、揮擊物理攻擊力 :区间最小：792%%<br />\n2、揮擊物理攻擊力 :区间最大：1584%%<br />\n3、[星落打]击飞力：500 （单位未知）<br />\n4、[星落打]击飞力：500 （单位未知）<br />\n5、[星落打]击飞力：500 （单位未知）<br />\n6、[星落打]击飞力：500 （单位未知）<br />\n[level info]<br />\n7 0 792 1584 500 500 500 500<br />\n-------------------------------------------------------------<br />\n星落打敌人漂起的时间 减少，高度减少，飞跃的力量 减少，星落打最大连击数 减少<br />\n`[priest]` 41 `[dungeon type]`<br />\n`[static]` 2 `+` 350</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:43:18.755",
+    "view_num": 58
+}

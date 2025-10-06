@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>恢复血量</p>\n\n<p>[restore]<br />\n&#39;hp&#39; &#39;%&#39; 1 0</p>\n\n<p>第一个数值：HP最大值的百分数：1%<br />\n第二个数值：HP回复时间：0秒。（0为立即回复）</p>\n\n<p>相关参数：</p>\n\n<p>血量：HP<br />\n蓝量：MP</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T10:37:35.998",
+    "view_num": 308
+}

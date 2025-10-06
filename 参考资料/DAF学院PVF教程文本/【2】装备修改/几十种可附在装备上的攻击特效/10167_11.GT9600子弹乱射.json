@@ -1,0 +1,7 @@
+{
+    "content": "<p>GT9600子弹乱射<br />\n攻击直接触发</p>\n\n<p><br />\n代码<br />\n[if]</p>\n\n<p>[cooltime]<br />\n100&nbsp;&nbsp; &nbsp;<br />\n[set my state]<br />\n1&nbsp;&nbsp; &nbsp;<br />\n[my state]<br />\n`attack`</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`myself`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n100&nbsp;&nbsp; &nbsp;<br />\n[reduce probability to human armor at pvp module]<br />\n90&nbsp;&nbsp; &nbsp;<br />\n[passive object]<br />\n48191&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;``</p>\n\n<p>[/passive object]</p>\n\n<p>[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:03:13.694",
+    "view_num": 228
+}

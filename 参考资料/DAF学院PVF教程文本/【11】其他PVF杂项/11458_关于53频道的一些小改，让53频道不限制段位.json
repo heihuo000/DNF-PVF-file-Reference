@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;<br />\n&nbsp;<br />\nby:风之忘<br />\nhttp://tieba.baidu.com/p/4087108184<br />\n&nbsp;<br />\n&nbsp;<br />\n&nbsp;<br />\n目的很简单。就是想让53频道不限制段位。。然后任何段位的都能进去PK。同时还能增加pk点。<br />\n&nbsp;<br />\n&nbsp;<br />\netc\\pvpchannellist.etc<br />\n&nbsp;<img alt=\"\" height=\"663\" src=\"/media/uploads/2023/05/08/image-20230508220150-1.png\" width=\"952\" /><br />\n&nbsp;<br />\n&nbsp;<br />\n把53的0 1改为0 34 后并同步后。能进去了。取消了段位限制了。。可惜没经验。。。。<br />\n希望能有那位大腿。告知一下。取消段位限制同时能增加PK经验的修改方法。。<br />\n&nbsp;<br />\n好把。。已解决。。<br />\n服务器开56频道。然后PVF改56的最低进入限制。。<br />\n同步OK。。<br />\n&nbsp;<br />\n&nbsp;<br />\n感谢群友DOD魂猪的提示。。<br />\n&nbsp;<br />\n56频道的第2个数字20改成0就OK。。<br />\n&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-08T22:01:53.309",
+    "view_num": 599
+}

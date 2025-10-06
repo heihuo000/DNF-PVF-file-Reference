@@ -1,0 +1,193 @@
+// 스킬 스크립트 파일 샘플 //
+
+[name]		//스킬 명을 지정하는 태그 보통, <12:: > Skill.kor.str 파일과 링크 시킨다.
+[name2]		//스킬의 영문명이나 한자명을 지정하는 태그.
+[basic explain]		//스킬의 기본 설명을 지정하는 태그.
+[explain]		//스킬의 상세한 설명을 지정하는 태그.
+[basic explain ex]	//ex 패시브 스킬의 기본 설명을 지정하는 태그.
+[explain ex]		//ex 패시브 스킬의 상세한 설명을 지정하는 태그.
+
+[feature skill type] 1	//특성 스킬을 결정해 주는 태그, 1이면 특성이고 0이거나 태그가 없으면 일반 스킬이다.
+
+[feature skill index] 140 //연관 되는 특성 패시브 스킬을 지정해 주는 태그, 뒤에는 인덱스를 적는다. 140번이 이 스킬과 연동되는 특성 스킬이 된다.
+
+[purchase cost]			// 레벨별 구입에 필요한 SP. 이 수치의 수가 곧 최대 레벨의 수가 된다.
+100				// 레벨 1을 획득하기 위한 SP
+200				// 레벨 1을 획득한 상태에서 레벨 2를 획득하기 위한 SP
+200				// 중간에 끊어주면 이후는 다 그 값으로 사용됨
+[/purchase cost]			// 이것으로 닫아줘야 함
+
+
+[special purchase cost] 	//이 태그가 있으면, 구입하는데 sp가 아닌 TP가 든다.
+1				//레벨별 구입에 필요한 TP 수치.
+[/special purchase cost]
+
+[required level] 10			// 스킬을 배우기 위해 필요한 캐릭터의 최소 레벨.
+[required level range] 3		// 요구레벨의 구간
+
+[pre required skill]			// 스킬을 배우기 위해 먼저 배워야 할 스킬의 목록
+3 2				// 앞에서부터 스킬 인덱스, 레벨
+11 1
+[/pre required skill]			// 이것으로 닫아줘야 함
+
+[type] `[active]`			// 스킬의 타입. `[active]` 와 `[passive]` 중 택일
+[skill class] 1			// 비슷한 스킬을 하나로 묶는 스킬 계열의 인덱스 [예: 더티, 마살아츠, 체술 ]
+[growtype fitness] 0 0 0 10	// 성장형별 적합도. 0이 보통, 30이면 70%의 SP만 필요(거의? 아예? 안씀)
+[maximum level] 10			// 모든 수단을 통해 올릴수 있는 최대 레벨 (아이템, 버프 등 포함)
+[growtype maximum level] 2 2 2 3	// 스킬 구입으로 획득 가능한 최대 레벨
+
+[skill fitness growtype]		// 정식으로 스킬을 배울수있는 성장형의 번호를 등록
+3
+[/skill fitness growtype]
+
+// - 기존 [growtype fitness]와 사용법이 같다 [아직 사용되는곳이 없음]
+// 스킬을 배울수 있는 적합 성장형
+[second growtype fitness] 0 0 1 0 0 0 0 0 0 0
+
+
+// - 기존 [growtype maximum level]와 사용법이 같다 (각성 스킬을 여기서 지정한다. 1차 2차 각성)
+[second growtype maximum level] 0 0 1 0 0 0 0 0 0 0
+
+
+// - 기존 [skill fitness growtype]와 사용법이 같다
+[skill fitness second growtype] 
+2
+[/skill fitness second growtype]
+
+
+[consume MP] 10.0 300.0		// 1회당 소모 MP. 레벨1과 최고 레벨에서의 값
+[maintain MP] 20.0 600.0	// 1초당 소모 MP. 지속적인 MP 소모가 있는 스킬에서만 사용
+
+[shake screen] 2 200		// 특정상황에서 화면을 진동시킨다.
+				// 2 == 화면 흔들 강도
+				// 200 == 화면 흔들 시간
+				// 주의 : 화면을 진동시키는 것은 하드코딩이므로
+				// 이 값을 입력하였다면 어떤상황에서 화면을 흔들어야하는지
+				// 반드시 프로그래머에게 알려주실것
+[casting time] 1000 500 		// 시전 시간. ms단위. 레벨1, 최종레벨
+
+[seal enable] 1			// 기능 봉인이 가능한 스킬인지 여부
+
+[consume item]			// 스킬 사용을 위해 필요한 아이템
+1001 1 1			// 아이템 인덱스, 레벨 1에서의 소모 수, 최고 레벨에서의 소모 수 (보통 무색 큐브 조각을 등록한다.)
+1002 2 5
+[/consume item]
+[limit count]			// 한 던전에서의 횟수 제한. 0이거나 안적으면 무제한
+1				// 레벨별로 적는다
+2
+3
+4
+5
+6
+[/limit count]			// 중간에 끊어주면 이후는 다 그 값으로 사용됨
+[auto limit count reduce] 0	// 제한수를 자동으로 줄일지 여부. 1이 기본값
+
+[cool time] 1000 2000		// 사용한 뒤 액티브 스킬과 소모품의 사용을 막을 시간. ms단위이며 액티브에만 유효하다.
+				// 레벨1, 만렙
+[skill under cooltime effect]	// 이 스킬 발동시 쿨타임이 같이 걸리는 스킬 목록
+12
+11
+[/skill under cooltime effect]
+[auto cooltime apply] 0		// 쿨타임을 자동으로 적용할지 여부. 1이 기본값, 0이면 하드코딩으로 쿨타임을 적용해야 함, -1이면 하드코딩으로 쿨타임을 적용해야 하며, 수동 적용 전까지는 스킬이 Disable 된다.
+
+[weapon effect type] `[none]`	// MP, 쿨타임이 무기의 어떤 파라메터를 따라갈지 여부. `[none]` `[physical]` `[magical]` 중 택일
+
+[icon]
+`SkillIcon.img` 0		// 아이콘 이미지 파일과 프레임 인덱스
+`SkillIcon.img` 1		// 비활성화 아이콘 이미지 파일과 프레임 인덱스
+
+[command]			// 조작법
+(SKILL) (ATTACK) &		// 입력시 눌려 있어야 하는 키들을 적은 뒤 &로 마무리한다. 없으면 안적어도 됨
+(LEFT) 100, (DOWN)! (RIGHT)	// 키 리스트에 있는 키들의 조합과 딜레이 시간으로 하나의 입력이 만들어진다.
+`DOWN`				// 입력 사이는 ! (150ms) , (300ms) ~ (1000ms) 중 하나로 구분.
+				// 체크 타입은 `DOWN` `DOWN ONCE` `UP` `UP ONCE` 중 택일
+				// 넣을 수 있는 커맨드 : (LEFT) (RIGHT) (UP) (DOWN) (SKILL) (ATTACK) (JUMP) (CREATURE) (BUFF)
+[/command]
+
+[command key explain] `커맨드 : → ← ⓩ` 	//커맨드의 설명을 지정하는 태그.
+
+
+[skill command advantage] 10 20	// 쿨타임 감소비율(0.1%단위), MP소모량 감소비율(0.1%단위) // 스킬을 커맨드로 입력했을때 얻을 수 있는 이득
+
+[static data]			// 하드코딩에서 사용하는 고정 자료들의 집합 (스킬 레벨이 올라가도 변하지 않는 값들)
+1
+10
+100
+300
+300
+400
+[/static data]
+
+[level info]			// 하드코딩에서 사용하는 레벨별 자료들의 집합 (스킬 레벨에 따라 값이 변하는 자료들)
+2				// 레벨별 자료의 수
+// 자료1	자료2
+1		20		// 첫줄이 레벨1. 자료1과 2를 차례로 써준다
+2		30		// 만렙만큼 반복
+4		40
+6		50
+8		60
+[/level info]
+
+//0. 레벨 1. 독립 공격력 2. 중독 공격력 3. 블리딩 공격력 4. 화상 공격력 5. 감전 공격력 6. 석화 공격력
+
+[level property]			// 스킬 특성 설명
+1 10				// 적용 레벨 구간
+`물리 공격을 <정수>확률로 <소수1>% 막아낸다.`	// 설명. 파라메터를 넣을 부분은 <정수> <소수1> <소수2> 중 택일해서 적는다.
+						// <소수1>은 소수점 1자리, <소수2>는 소수점 2자리 표시.
+0 1 1.0				// 두번째 들어갈 인자의 정수 자료 인덱스. 레벨1~만렙, 곱할 값. 이하 반복
+2 3 1.0				// 두번째 들어갈 인자의 정수 자료 인덱스. 레벨1~만렙, 곱할 값. 이하 반복, 5줄까지 가능
+-1 0 1.0			// 첫번째 값이 -1이면 [level info]에서 읽어온다. 두번째 값은 몇번째 자료를 참조할지
+				// -1 퍼뎀	
+				// -2 독립
+				// -3 독
+				// -4 블리딩
+				// -5 화상
+				// -6 라이트닝
+				// -7 석화
+[/level property]
+
+[level property]			// 스킬 특성 설명
+11 99				// 적용 레벨 구간
+`물리 공격을 <정수>확률로 <소수1>% 마법 공격을 <정수>확률로 <소수2>% 막아낸다.`
+0 1 1.0				// 첫번째 들어갈 인자의 정수 자료 인덱스. 레벨1~만렙, 곱할 값
+2 3 1.0				// 두번째 들어갈 인자의 정수 자료 인덱스. 레벨1~만렙, 곱할 값. 이하 반복
+0 1 1.0
+4 5 1.0
+[/level property]
+
+[skill preloading image]//미리 로딩하고 싶은 파일을 적어준다.(예는 거너 네이팜탄의 경우)
+`Character/Gunner/Effect/NapalmBombShoot.img`
+`Character/Gunner/Effect/NapalmBombExplosionNormal.img`
+`Character/Gunner/Effect/NapalmBombExplosionDodge.img`
+`Character/Gunner/Effect/NapalmBombAreaFire2.img`
+`Character/Gunner/Effect/NapalmBombAreaFire1.img`
+`Character/Gunner/Effect/NapalmBombArea.img`
+[/skill preloading image]
+
+[start cool time] 10000	// 결투, 사탑, 전쟁지역등 시작하자마자 쿨타임이 걸려있도록 할 경우 여기에 0 보다큰 숫자 입력
+
+[feature skill type] 1 // 특성스킬인지 일반 스킬인지 ( 0: 일반스킬 1: 특성스킬 )
+
+[special level up]
+-1 0 `+` 50		// 0: -1이면 level info이고 나머지는 static info 입니다. 
+1 1 `-` 50		// 1: 몇번 데이터 2: 연산자 3: 연산할 수치
+2 2 `%` 150
+[/special level up]
+
+[feature skill index] 140 // 해당 스킬에 특성 스킬이 존재하면 특성 스킬 인덱스를 지정한다. 
+
+[dungeon]
+//이 태그 속에 있는 수치들은 던전에서만 적용된다. 이런류의 태그가 없으면 기본으로 던전에서 적용된다.
+[/dungeon]
+
+[pvp]
+//이 태그 속에 있는 수치들은 결투장에서만 적용된다.
+[/pvp]
+
+[death tower]
+//이 태그 속에 있는 수치들은 망자의 협곡에서 적용된다. 
+[/death tower]
+
+[warroom]
+//이 태그 속에 있는 수치들은 싸우자에서만 적용된다.
+[/warroom]

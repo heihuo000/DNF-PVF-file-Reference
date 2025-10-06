@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n7、<br />\n8、<br />\n9、<br />\n[static data]<br />\n0 0 0 0 0 0 1000 1000 1000 1000<br />\n[/static data]</p>\n\n<p>0、增加力量 : 96<br />\n1、增加智力 : 96<br />\n2、增加物防 : 1060<br />\n3、增加魔防 : 1060<br />\n4、增加攻擊速度 : 5%%<br />\n5、增加移動速度 : 5%%<br />\n6、光線魔法攻擊力 : 独立攻击力 x 1.2<br />\n7、最後一擊魔法攻擊力 : 独立攻击力 x 48<br />\n8、光线延迟时间：0.4<br />\n9、Buff範圍 : 800 px<br />\n10、攻擊範圍 : 600 px<br />\n11、Buff時間 : 10秒<br />\n12、攻擊時間 : 5秒<br />\n13、多段攻擊間隔時間 : 0.3秒<br />\n[level info]<br />\n14 96 96 1060 1060 50 50 120 4800 400 800 600 10000 5000 300</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:41:30.222",
+    "view_num": 69
+}

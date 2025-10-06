@@ -1,0 +1,7 @@
+{
+    "content": "<p>首先我们加一段<br />\n[@05][command]<br />\n[@06](UP)<br />\n[@08],<br />\n[@06](UP)<br />\n[@08],<br />\n[@06](DOWN)<br />\n[@08],<br />\n[@06](DOWN)<br />\n[@08],<br />\n[@06](LEFT)<br />\n[@08],<br />\n[@06](RIGHT)<br />\n[@08],<br />\n[@06](LEFT)<br />\n[@08],<br />\n[@06](RIGHT)<br />\n[@08],<br />\n[@06](CREATURE)<br />\n[@05][/command]<br />\n这段手搓出来的代码是上上下下左右左右V<br />\n然后<br />\n[@05][if]<br />\n[@05][use command]<br />\n[@02]1<br />\n[@05][cooltime]<br />\n[@02]//这里CD，不需要就连同上面的cooltime一起删了<br />\n[@05][/if]<br />\n[@05][then]<br />\n//这里是触发的事件</p>\n\n<p>[@05][/then]</p>\n\n<p>稍有常识的人就能看出，想加什么指令就能搓什么指令<br />\n一个装备只能加一个指令，不要和其他装备指令重复了<br />\n最多多少个指令我不清楚，你没事做可以加两百个搓着玩</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-23T14:02:32.588",
+    "view_num": 653
+}

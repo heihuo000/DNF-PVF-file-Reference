@@ -1,0 +1,7 @@
+{
+    "content": "<p>[basic explain]<br />\n<code>攻击时，以5%%的机率使自身增加30%%的物理攻击力，效果持续30秒。</code></p>\n\n<p>[detail explain]<br />\n<code>攻击时，有5%%的机率使武器耐久度减少1，并增加30%%的物理攻击力，效果持续30秒。</code></p>\n\n<pre>\n<code>\n[if]\n    [module]\n        `[war room]`\n        `[dungeon]`\n        `[assault]`\n        `[dead tower]`\n        `[blood system]`\n        `[assault]`\n    [/module]\n    [cooltime]\n        45000\n    [attack success]\n        1\n[/if]\n\n[then]\n    [target]\n        `myself`    -1\n    [duration]\n        30000\n    [probability]\n        5\n    [stat]\n        `equipment physical attack`\n        `%`    30\n    [reduction]\n        `weapon`    1\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T22:59:21.082",
+    "view_num": 143
+}

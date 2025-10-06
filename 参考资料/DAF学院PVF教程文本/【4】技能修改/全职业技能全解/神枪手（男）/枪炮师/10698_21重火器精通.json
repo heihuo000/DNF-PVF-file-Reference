@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、M-137格林機槍<br />\n1、M-3噴火器<br />\n2、BBQ<br />\n3、聚焦噴火器<br />\n4、鐳射炮<br />\n5、反坦克炮<br />\n6、量子爆彈<br />\n7、衛星光束<br />\n8、X-1 壓縮量子炮<br />\n9、FM-92 刺砲彈<br />\n10、FM-31榴彈發射器<br />\n11、<br />\n12、<br />\n13、<br />\n[static data]<br />\n12 13 14 36 39 40 45 54 71 75 38 3 50 2500<br />\n[/static data]</p>\n\n<p>0、重火器技能MP消耗減少比率 : 3n%<br />\n1、手炮拔出速度增加率 : 10n%<br />\n2、手炮攻擊力增加率 : 10n%%<br />\n[level info]<br />\n3 3 10 10<br />\n[/level info]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T13:10:14.625",
+    "view_num": 79
+}

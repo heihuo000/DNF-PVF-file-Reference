@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#808080; font-family:宋体\"><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[evil rate]<br />\n0&nbsp;10&nbsp;&nbsp;// 低于设定数值时保留10%属性（实际会多1%%）<br />\n200&nbsp;150&nbsp;&nbsp;// 高于设定数值200%时增加150%%属性 </span></span></p>\n\n<p>&nbsp;</p>\n\n<p><span style=\"color:#808080; font-family:宋体\"><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">例如：</span></span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[evil]<br />\n&nbsp;400&nbsp;400&nbsp;400&nbsp;400&nbsp;400</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[evil high level]<br />\n&nbsp;400&nbsp;400&nbsp;400&nbsp;400&nbsp;400</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[evil rate]<br />\n&nbsp;50&nbsp;30&nbsp;120&nbsp;120<br />\n&nbsp; 减少还剩50/ 减少&nbsp;&nbsp; 增加20%&nbsp;&nbsp; 增加 *（100是原始伤害）</span></p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-11T22:15:54.492",
+    "view_num": 625
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>[basic explain]<br />\n<code>攻击时，以2%%的机率使敌人进入睡眠状态。 这时，以5%%的机率使自身也进入睡眠状态并恢复100点HP。</code></p>\n\n<p>[detail explain]<br />\n<code>攻击时，以2%%机率 7秒内使敌人陷入睡眠状态。 (若敌人高于Lv25，则减少进入异常状态的机率和效果；反之，则增加机率和效果) 敌人进入睡眠状态时，有5%%的机率使自身进入睡眠状态5秒，并恢复100点HP。</code></p>\n\n<pre>\n<code>\n[if]\n    [cooltime]\n        12600\n    [attack success]\n        1\n[/if]\n\n[then]\n    [target]\n        `enemy`    -1\n    [duration]\n        7000\n    [reduce duration to human armor at pvp module]\n        75\n    [probability]\n        2\n    [active status]\n        `sleep`    25\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T22:48:29.158",
+    "view_num": 86
+}

@@ -1,0 +1,255 @@
+[map name] <6::map_name_455>		//맵의 이름
+
+[player name] 1 4 			//최소인원, 최대인원
+
+[is character escape] 			//캐릭터끼임탈출 예외
+
+[show dust]							//먼지와 발자국 효과 
+`Common/CommonEffect/Animation/SandDust.ani` 			//출력할 먼지 경로
+`Common/CommonEffect/Animation/FootPrintOnSand.ani` 		//출력할 발자국 경로
+
+[sort bottom] 1 				//일반 레이어 외에 타 레이어 정렬 여부 1:사용 그외:미사용
+
+[pvp start area]				//pvp시작지점 정의 (X좌표, Y좌표, 넓이, 높이 순)
+0 0 0 0						//개인전 시작지점
+0 0 0 0						//1팀의 시작지점
+0 0 0 0						//2팀의 시작지점
+
+[pvp practice start area]			//pvp연습모드 시작지점 정의 (X좌표, Y좌표, 넓이, 높이 순)
+112 201 69 231					//1팀의 시작지점
+497 205 69 226					//2팀의 시작지점
+
+[tournament start area] 1 760 270 2		//무투장 맵 시작좌표 정의 (입장 인원 수, X좌표, Y좌표, 팀(1:캐릭터, 2:몬스터))
+
+
+
+[shadow type]	 `[mirror]`, `[more darker]`	//그림자 모드 : `[mirror]` 로 세팅했을때 상위,하위 레이어 그림자를 그린다. 
+						//현재 PVP, 주점에서 '[mirror]` 모드 사용중
+
+[dungeon]					//이 맵이 사용되는 던전 리스트
+1507
+[/dungeon]
+
+[type] `[normal]`, `[boss]`, `[dummy]`	//타입 설정 : 노멀방, 보스방, 더미방 (유혹의마을 하멜른에서 사용 : 보스용 하드코딩) 
+
+[background pos] 80			//800*600 확장되면서 기존 배경 그리는 위치에서 수치만큼 올려서 그려준다. 보통 80으로 설정
+
+[greed]					//던전에서 어떤 그리드 타입에서 사용되는 맵인지 설정 
+`┿ ┿`
+
+[tile]					//맵 기본 타일 - 근경 레이어에 그려진다.
+`Tile/hm01_1.til`
+`Tile/hm01_1.til`
+`Tile/hm01_1.til`
+`Tile/hm01_1.til`
+[/tile]
+
+[extended tile]				//확장 타일 리스트 타일 아래에 붙는 확장 타일의 목록
+`Tile/tileex01.til`			//[tile] 태그의 타일 수 만큼 가로로 배치되고 남은것은 아래쪽에 배치된다. 
+`Tile/tileex01.til`
+`Tile/tileex01.til`
+`Tile/tileex01.til`
+`Tile/tileex01.til`
+`Tile/tileex03.til`
+`Tile/tileex03.til`
+`Tile/tileex03.til`
+`Tile/tileex03.til`
+`Tile/tileex03.til`
+[/extended tile]
+
+[elemental property] `[fire element]`, `[warter element]`, `[dark element]`, `[light element]`		//맵에 속성을 지정한다. 
+
+// 레이어의 스크롤 속도. (스크롤 속도 기본값은 100) 
+[far sight scroll] 60				// 타일 스크롤 속도와 원경 스크롤 속도의 비율 (%) 100이면 같이 스크롤, 0이면 스크롤 안됨
+[middle sight scroll] 80			// 타일 스크롤 속도와 중경 스크롤 속도의 비율 (%) 100이면 같이 스크롤, 0이면 스크롤 안됨
+[near sight scroll] 120				// 타일 스크롤 속도와 접경 스크롤 속도의 비율 (%) 100이면 같이 스크롤, 0이면 스크롤 안됨
+
+// 0, 0 좌표부터 자동으로 반복해서 그려지는 배경 애니메이션들.
+// 레이어는 `[close]` `[normal]` `[bottom]` `[closeback]` `[middleback]` `[distantback]` 중 택일할 수 있고,
+// `[below]` 이면 해당 레이어의 애니메이션과 오브젝트를 그리기 전에,
+// `[upper]` 면 해당 레이어의 애니메이션과 오브젝트를 그린 뒤에 그리게 된다.
+// `[close]`의 경우 `[below]` 면 타일을 그리기 전에 그린다.
+[background animation]
+	[ani info]
+		[filename] `Animation/far1.ani`			//애니경로
+		[layer] `[distantback]`				//그려지는 레이어
+		[order] `[below]`				
+		[loop y axis] 1 				//아래 Y좌표로 계속해서 반복 여부
+		[screen pos] 0 80 				//시작되는 좌표를 스크린 좌표 기준으로 설정
+	[/ani info]
+[/background animation]
+
+//+ 대기실용 맵 전용 데이터 +//
+[town movable area]				// 대기실용 시작 영역의 리스트.
+0 30 150 100 1 1				// 차례대로 x좌표, y좌표, x사이즈, y사이즈, 이동 마을 인덱스, AREA 인덱스
+300 20 150 100 -1 -1				// 이동 마을 인덱스와 AREA 인덱스를 -1로 지정하면 AREA이동이 아니라 던전 시작
+[/town movable area]			
+
+[virtual movable area]				// 대기실용 캐릭터가 이동 가능한 사각의 영역 리스트. 차례대로 x좌표, y좌표, x사이즈, y사이즈
+0 100 1500 300					// 리스트들의 합집합의 영역에 이동 할 수 있다.
+100 0 1300 500					
+[/virtual movable area]			
+//- 대기실용 맵 전용 데이터 -//
+
+[guild agit entrance info]			//길드 아지트 입/출장용 에어리어 영역 x좌표,y좌표,x사이즈,y사이즈,-2, -2를 넣어준다
+833 196 78 61 -2 -2
+[/guild agit entrance info]
+
+[pathgate pos]					// 통로 오브젝트를 배치할 좌표
+0 200						// 왼쪽 오브젝트 x, y
+1000 200					// 오른쪽 오브젝트 x, y
+500 0						// 위쪽 오브젝트 x, y
+500 400						// 아래쪽 오브젝트 x, y
+
+[dungeon start area] 950 219 114 172		//던전 시작 맵에 설정, 캐릭터가 던전 시작시 위치하는 x좌표,y좌표,x사이즈,y사이즈
+
+[static player start pos]			// 고정된 맵 시작 위치. 정확히 지정된 좌표에서 시작한다.
+	[player 1] 100 120 200			// 플레이어, x, y, z
+	[player 2] 200 120 400
+	[player 3] 300 120 600
+	[player 4] 400 120 800
+[/static player start pos]
+
+[opening bgm] `M_BAKALCASTLE_BOSS_INTRO`  30000 // 태그명 사운드를 재생시간(30초 만큼 재생 한후 메인 BGM 재생
+
+[sound]						// 맵에 들어갈 때 출력할 사운드 태그의 목록
+`AMBIENT_FOREST`
+`BGM_FOREST`
+[/sound]
+
+[animation]					// 맵에 올라가는 애니메이션 지정. 없으면 안 적어도 됨.
+`Lawn.ani` `[bottom]` 30 100 0			// 앞에서부터 애니메이션 파일 이름, 레이어, x좌표, y좌표, z좌표
+`Picture.ani` `[closeback]` 30 0 30		// 레이어는 `[close]` `[normal]` `[bottom]` `[closeback]` `[middleback]` `[distantback]` 중 택일
+[/animation]			
+
+[passive object]				// 맵에 올라가는 수동 객체 지정. 없으면 안 적어도 됨.
+37 100  27  0					// 앞에서부터 차례로 객체 인덱스, x좌표, y좌표, z좌표
+38 270  100 72
+39 1020 183 -1
+[/passive object]
+
+[monster]					// 맵에 올라가는 몬스터 지정. 없으면 안 적어도 됨.
+1  1 10 1003 37 0 1 1 `[fixed]` `[normal]`	// 몬스터 인덱스, 레벨 자동 지정 여부, 레벨, x좌표, y좌표, Z좌표, 랜덤아이템드롭횟수, 지정아이템드롭횟수, 복사 타입, 몬스터 타입
+71 1 15 173  28 0 2 2 `[half]` `[champion]` 0	// 레벨 자동 지정이면 레벨은 보정값, 아니면 절대값
+3  0 15 188  57 0 1 1 `[ratio]` `[boss]`		// 복사 타입은 `[fixed]` 이면 무조건 1마리, `[half]`이면 플레이어 수의 반 (1, 2인 - 1마리, 3, 4인 - 2마리), `[ratio]`면 플레이어 수만큼
+						// 몬스터 타입은 `[normal]` `[champion]` `[super champion]` `[boss]` 중 택일
+						// `[champion]`, `[super champion]` 사용시 뒤에 특성 개수 및 특성을 지정해준다.
+						// 아이템드롭횟수 란?
+						// 새로 추가된 인자로써 만약 3 이라면 최소 0 개에서 최대 3개까지 아이템이 등장함
+63024 1 0 523 268 0 1 1 `[fixed]` `[NPC]` 1020 `[boss]`	
+						//몬스터 타입 앞에 `[NPC]` NPC 번호 를 입력하면 이 몬스터를 잡고나면 이 NPC가 등장하게된다.
+[/monster]					// 반드시 이것으로 닫아줘야 함.
+
+[monster condition]				// 맵에 등장할 조건부 몬스터 [monster] 테그와 동일
+[/monster condition]				// 흑요석 묘지, 그림자 미궁 참조 
+
+[blood monster] 				//몬스터인덱스,소환전(5초전)에 나타날 연출 오브젝트의 인덱스,x,y,z좌표,얼마동안 리스폰 될것인가, 
+62001 0 792 258 0 10000 3000 1 0 3		//리스폰 숫자가 증가하는 타이밍(1000 이 1초),블러드 시작시 소환되는 몬스터 숫자, 
+62001 0 792 258 0 7000 3000 1 0 2		//몬스터 리스폰 숫자가 늘어나는 정도, 몬스터가 증가할 총 횟수
+[/blood monster]
+
+[ultimate monster]				//[blood monster]와 동일
+[/ultimate monster]
+
+[tournament monster]				//무투장에 등장할 몬스터 리스트
+1						//몇인용 무투장인지? (현재 1인만 가능)	
+56156	900					//몬스터 인덱스, 추첨 포인트 (낮을수록 초반 경기에 만날 확률이 높다)
+56045	600	
+[/tournament monster]
+
+
+[blood phase time]				//몇번째 라운드 인지, 블러드 몬스터의 리스트 인덱스(-1은 리스트안에서 랜덤으로..),
+0 0 3000 1.1 0 0				//다음 라운드로 이동할 시간 (-1이면 마지막 블러드 지정, 클리어 되게…,몇배 강해질 것인가?(2면 2배,최대 4배)
+0 1 2000 1.1 1 3				//라운드 안에서 소환될 리스트들의 순서
+0 2 2000 1.1 1 1				//라운드 안에서 연속으로 소환될 몬스터 리스트들의 갯수
+0 3 2000 1.1 1 1
+[/blood phase time]
+
+[ultimate phase time]				//[blood phase time] 과 동일하지만 마지막에 난이도를 넣어준다 'A', 'B', 'C', 'D', 'E'
+0 0 5000 1.5 0 0 `A`     
+[/ultimate phase time]
+
+[heroes mode map index] 13091			// 히어로즈 모드일때 대신 나오는 맵 인덱스
+
+[monster team]					// 맵에 등장할 몬스터의 팀. 따로 팀지정을 하지 않을 경우 필요 없음.	
+0						// 앞에서부터 차례로 입력한다. 0이면 캐릭터 팀. 캐릭터들의 편
+100						// 100이면 몬스터팀. 일반적인 몬스터.
+[/monster team]					// 몬스터의 숫자만큼 입력하고 반드시 이것으로 닫아줘야함.
+
+[monster specific AI]					// 맵에 로밍, 지역방어 AI를 가지고 있는 몹이 올라갈 경우 지정. 없으면 지정하지 않아도 됨 몬스터 AI 지정은 선언한 순서대로 
+`[normal]`						// 몬스터가 일반 AI대로 움직일 경우 지정. 
+							// 아래 두 AI는 CHAOS 모드에서 사용된다
+`[zone defence]` 100 100				// 100, 100 에서 몬스터 시야에 타겟이 나타날때까지 대기. 타겟을 잃어버리면 다시 100, 100으로 돌아옴.
+`[roaming]` 	4 100 100 150 150 200 100 250 150	//좌표개수  X1  Y1  X2  Y2  X3  Y3  X4  Y4     몬스터는 타겟이 없을 경우 X1 Y1 부터 순서대로 이동 끝까지 돈 후 다시 처음으로 돌아옴.
+[/monster AI specific]
+
+[champion] 11						// 챔피언 몬스터 수
+
+[special passive object]
+222 400 172						// 패시브오브젝트인덱스, x좌표 , y좌표
+3							// 생성할 객체의 갯수
+`[monster]` 202 16 -1 -1 1				// 몬스터 인덱스, 몬스터 레벨,  생성 확률1, 생성 확률2 (생성 확률1/생성확률2로 생성된다), 튀어나올 것인가(-1이면 튀어나옴)
+`[trap]`  48003 5 -1 -1 -1				// 트랩 패시브의 인덱스, 트랩의 마법레벨,  생성 확률1, 생성 확률2 (생성 확률1/생성확률2로 생성된다), 사용안함
+`[item]` 1 -1 -1 -1 -1					// dungeon script의 [special passive object item]에서의 인덱스, 지정드랍 생성시도 횟수, 랜덤드랍 생성시도 횟수 , 아이템박스인덱스, 사용안함
+`[hellparty]`						// 헬파티 인덱스, 상대확률, 그룹번호
+101	25	1	// 블레이즈
+102	25	1	// 베이퍼
+103	25	1	// 오버그로스
+`[/hellparty]`
+[/special passive object]
+		
+[NPC]						// 맵에 올라가는 NPC 지정. 없으면 안 적어도 됨.
+2 `[left]` 300 200				// 앞에서부터 차례로 인덱스, 향한 방향, x좌표, y좌표
+1001 `[right]` 352 127				// 방향은 `[left]` `[right]` 중 택일
+[/NPC]	
+
+
+// 경쟁던전용
+[monster spawn pos]
+5						// 등장좌표의 갯수
+50 100 30					// x좌표, y좌표, 등장확율
+50 100 30
+50 100 30
+50 100 30
+50 100 30
+
+[ai character]
+20301 494 252 0 `[monster]` `[normal]` 1 0		//AI몬스터 인덱스, x좌표, y좌표, z좌표, 팀, 몬스터타입('[monster]` 태그 참조), 랜덤아이템 생성 횟수, 지정아이템 생성 횟수
+20301 494 252 0 `[monster]` `[NPC]` 5 `[normal]` 1 0	//APC가 죽고 나서 소환될 NPC가 있으면 팀 뒤에 [NPC] 태그를 넣어준다.
+[/ai character]
+
+[event monster position]			// 이벤트 몬스터 스폰 좌표
+257 239 0					// x좌표, y좌표, z좌표
+441 233 0					
+944 235 0					
+1164 238 0					
+[/event monster position]
+
+// 이 맵이 로딩될때 표시될 이미지
+// img 는 800*640 의 크기를 가지며
+// 0번은 본문, 1번은 배경 으로 구성된다.  1번>0번 순서로 그려지며, 
+// 이때 1번이 없으면 본문만 그려진다.
+[map loading image path] `sprite/map/loadingimage/samui_otoko.img`
+
+[quest animation]					// 퀘스트로 에니메이션을 보이거나 안보이도록 할수있다. 
+`Animation/Village_0.ani` `[normal]` 636 180 0 2490	// Animation 경로, 레이어, x좌표, y좌표, z좌표, 퀘스트 번호(이 퀘스트를 완료하면 재생된다)
+[/quest animation]
+
+
+[attacked monster info]					// 마을 어택 몬스터 정보
+1	433	346	0	557 	20000	153	// 몬스터 인덱스, x좌표, y좌표, z좌표(사용안함), 생성될 비율(합이 10000이 되어야한다), 던전 번호, 클리어 제한타임
+1016	433	346	0	429 	20001	184	// 던전번호와 클리어 제한 타임 용도는 파악 불가능 추후 추가 부탁드립니다.
+262	433	346	0	286 	20002	230
+5005	433	346	0	143 	20003	275
+17	433	346	0	13 	20020	306
+5	883	266	0	557 	20000	153
+1016	883	266	0	429 	20001	184
+[/attacked monster info]
+
+[move layered map]					// 위 아래로 겹쳐진 맵 (layered map) 이동 조건.
+	[all dead case passable]		// 파티원이 전멸했을 경우엔 자동으로 이동 (이 태그 없을 경우 현재 맵에 머뭄)
+	[zpos under] -300				// [zpos under] -300 : z값이 -300 미만일때 
+[/move layered map]
+
+[map dialog] <11::despair_dummy_03>			// 맵 진입시 나올 다이얼로그 
+

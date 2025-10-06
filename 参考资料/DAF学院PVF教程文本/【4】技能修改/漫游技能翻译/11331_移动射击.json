@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n【移河蟹泥煤动射击】<br />\n路径：skill\\gunner\\walkshoot.skl<br />\n[@05][static data]<br />\n[@02]20//左轮击中目标滞留原地时间<br />\n[@02]10//自动&hellip;&hellip;<br />\n[@02]20//步枪&hellip;&hellip;<br />\n[@02]30//手炮&hellip;&hellip;<br />\n[@02]15//手弩&hellip;&hellip;<br />\n[@02]40//左轮击中目标硬直<br />\n[@02]30//自动&hellip;&hellip;<br />\n[@02]45//步枪&hellip;&hellip;<br />\n[@02]50//手炮&hellip;&hellip;<br />\n[@02]30//手弩&hellip;&hellip;<br />\n[@05][/static data]<br />\n[@05][level info]<br />\n[@02]8<br />\n[@02]222//物攻222%<br />\n[@02]0//移动速度增加率0&permil;<br />\n[@02]30000//持续时间30000ms<br />\n[@02]30//左轮发射数<br />\n[@02]50//自动发射数<br />\n[@02]30//步枪发射数<br />\n[@02]20//手炮发射数<br />\n[@02]45//手弩发射数<br />\n这里补充一下，&ldquo;目标滞留原地&rdquo;意思是击中目标后，目标会卡在原地不动并进入硬直状态，看上去就像目标身后有墙挡住一样；&ldquo;目标硬直&rdquo;意思是击中目标后，目标会有一段正常的击退，并进入硬直状态。</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T20:24:19.936",
+    "view_num": 107
+}

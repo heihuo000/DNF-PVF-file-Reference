@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"background-color:#ffffff\"><span style=\"color:#0000ff\"><span style=\"font-size:small\"><span style=\"font-family:微软雅黑\"><span style=\"background-color:#ffffff\">1.若背包有增幅保护卷进行武器增幅的时候未出现【是否使用增幅保护提示】，说明武器没有保护词条[possible kiri protect]</span></span></span></span></span></p>\n\n<p><br />\n<span style=\"background-color:#ffffff\"><span style=\"color:#0000ff\"><span style=\"font-size:small\"><span style=\"font-family:微软雅黑\"><span style=\"background-color:#ffffff\">2.武器明明写有保护词条却还是不受保护导致武器碎了，这里需要从头到尾仔细排查武器写法中有没有问题</span></span></span></span></span></p>\n\n<p><br />\n<span style=\"background-color:#ffffff\"><span style=\"color:#0000ff\"><span style=\"font-size:small\"><span style=\"font-family:微软雅黑\"><span style=\"background-color:#ffffff\">因为pvf有个特性，中间某一段写法错误会导致下面的全部不生效（常见于萌新添加独立掉落在路径末尾不生效，可能就是中间某一段就写错了）</span></span></span></span></span></p>\n\n<p><br />\n<span style=\"background-color:#ffffff\"><span style=\"color:#0000ff\"><span style=\"font-size:small\"><span style=\"font-family:微软雅黑\"><span style=\"background-color:#ffffff\">3.还有一种可能就是不看描述了，有的保护卷只保护+13以上的。你拿+11的增幅自然不关保护卷的事了</span> </span></span></span></span></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-05T22:26:37.880",
+    "view_num": 828
+}

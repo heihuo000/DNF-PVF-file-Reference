@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>Hook地址：0x00F363D0\t//显示物品界面函数\n\nInstallHookStub((PVOID)0x00F363D0, My_ShowEuipmentInfo);\t//对此函数进行Hook\n\n\ntypedef DWORD(WINAPI __pfnShowEuipmentInfo)(DWORD dwObjAddress);\t//显示物品界面函数定义\nDWORD WINAPI My_ShowEuipmentInfo(DWORD RetAddr, __pfnShowEuipmentInfo pfnOriginal, DWORD dwObjAddress)\n{\n\tDWORD dwResult = pfnOriginal(dwObjAddress);\n\tDWORD dwBoxAddress = *(DWORD *)(dwObjAddress + 0x44);\t//取出显示界面Box地址\n\tif (!IsBadReadPtr((PVOID)dwBoxAddress, 4)){\t\t\t\t//判断Box地址是否合法\n\t\tDWORD dwShow = *(DWORD *)(dwBoxAddress + 0x2C);\t\t\t\n\t\tif (dwShow == 0){\t\t\t\t\t\t\t\t\t\n\t\t\tDWORD dwItemAddress = *(DWORD*)0x01AE45B4;\t\t\t//获取当前鼠标指向的物品的基地址\n\t\t\tif (!IsBadReadPtr((PVOID)dwItemAddress, 4)){\t\n\t\t\t\tint x = *(DWORD *)(dwObjAddress + 0x14);\t\t\n\t\t\t\tint y = *(DWORD *)(dwObjAddress + 0x18);\n\t\t\t\tint width = *(DWORD *)(dwObjAddress + 0x38);\n\t\t\t\tint boxx = x + width - 35;\n\t\t\t\tint boxy = y + 3;\n\t\t\t\t_asm\n\t\t\t\t{\n\t\t\t\t\tmov     ecx, dwItemAddress;\n\t\t\t\t\tmov     eax, dword ptr[ecx];\n\t\t\t\t\tmov     edx, dword ptr[eax + 0xC];\n\t\t\t\t\tpush\t1;\n\t\t\t\t\tpush\t1;\n\t\t\t\t\tpush\t0;\n\t\t\t\t\tpush\tboxy;\n\t\t\t\t\tpush\tboxx;\n\t\t\t\t\tcall\tedx;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n\treturn dwResult;\n}</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-09-12T15:38:43.638",
+    "view_num": 763
+}

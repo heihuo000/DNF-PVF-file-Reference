@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、命中精英怪物时触发的忏悔机率：70 （单位未知）<br />\n1、命中稀有怪物时触发的忏悔机率：40 （单位未知）<br />\n2、命中领主怪物时触发的忏悔机率：30 （单位未知）<br />\n3、命中深渊怪物时触发的忏悔机率：30 （单位未知）<br />\n4、命中人形护甲怪物时触发的忏悔机率：30 （单位未知）<br />\n[static data]<br />\n70 40 30 30 30<br />\n[/static data]</p>\n\n<p>0、鎚子魔法攻擊力 : 独立攻击力 x 11.88<br />\n1、衝擊波魔法攻擊力 : 独立攻击力 x 594<br />\n2、懺悔機率 : 40%%<br />\n3、懺悔時間 : 8秒<br />\n[level info]<br />\n4 1188 594 400 8000</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:41:11.477",
+    "view_num": 85
+}

@@ -1,0 +1,112 @@
+[small face]  `slainer.img` 0			// 창에 뜨는 작은 얼굴의 이미지 파일 이름과 프레임 인덱스
+[big face]  `slainer.img` 1			// 창에 뜨는 큰 얼굴의 이미지 파일 이름과 프레임 인덱스
+[popup face]  `slainer.img` 2			// 팝업메뉴에 뜰 작은 얼굴의 이미지 파일 이름과 프레임 인덱스
+[field animation]  `Animation/slainer.ani`	// 필드에서 보여줄 애니메이션의 상대 경로
+[field wav]  `STATIC_SOUND`			// 필드에 있을 때 항상 있는 효과음
+[popup wav]  `NPC_SOUND` `NPC_END_SOUND`	// 메뉴 띄울 때, 닫을 때 낼 효과음
+[look around]  0					// 필드에서 말 거는 방향으로 돌아볼지 여부. 1(돌아보기)이 기본값
+
+[chaos team]
+`[red team]` 또는 `[blue team]` 또는 `[neutral team]` 	// 카오스모드에서 사용되는 npc의 팀지정
+
+[role]	// NPC의 역할 목록. 필요한 역할 이름과 인덱스를 교대로 적는다. 순서는 의미 없음.
+`[item shop]` 3		// 아이템샵. 일반샵과 수리샵 공통. 인덱스는 아이템샵 인덱스
+`[secret shop]`	1002	// 비밀상점. 가브리엘과 같이 던전에서 불규칙적으로 등장하는 npc. 인덱스는 아이템샵 인덱스
+`[recover stamina]` 0	// 스테미너 회복. 인덱스는 무조건 0
+`[sera shop]` 0		// 세라샵. 인덱스는 무조건 0
+`[guild]` 0		// 길드 관리. 인덱스는 무조건 0
+`[upgrade item]` 0	// 아이템 업그레이드. 인덱스는 무조건 0
+`[disjoint item]` 0	// 아이템 해체. 인덱스는 무조건 0
+`[product item]` 17	// 아이템 생산. 인덱스는 아이템샵 인덱스
+`[item storage]` 0	// 창고. 인덱스는 무조건 0
+`[post box]` 0		// 우편함. 인덱스는 무조건 0
+`[move town]` 2		// 마을 이동. 이동시킬 town index
+`[convert avatar]` 0	// 아바타 변환. 인덱스는 무조건 0
+`[genuine damage upgrade]` 0 // 무기 재련  인덱스는 무조건 0
+`[play quest movie]` 0	//동영상 다시 보기
+[/role]
+
+[skill] 						// 가르쳐주는 스킬
+`[fighter]`					// 직업. `[swordman]` `[fighter]` `[common]` 중 택일
+1						// 가르쳐주는 스킬 인덱스들
+34
+27
+33
+[/skill]
+[skill] 
+`[common]`
+127
+138
+140
+[/skill]
+
+ 
+[name]  `승민`					// 이름
+[field name]  `프로그래머 승민`			// 필드에서 뜨는 이름
+[quest speech] 
+`자자 날이면 날마다 오는게 아니여		// 퀘스트 제안창에 뜨는 기본 대사
+좋은 말 할때 빨리 수행해~`
+
+[speech] 						// 대사 하나 시작
+1						// 인덱스. 처음 말을 걸면 1번 대사부터 시작한다.
+3 5						// 대사가 뜨는 레벨. (ex : 3~5) 렙제 없으면 0 0이나 1 99로 적을 것
+`NDS에 관하여`					// 표제 (버튼에 뜰 글. 짧게 한줄로)
+`NDS가 최고라구!				// 내용 (없고 선택지만 있으면 ``)
+너도사!
+두개사!`
+3 4						// 서브 대사 인덱스 목록. 없으면 안적어도 됨
+[/speech]
+[speech] 
+2
+1 99
+`PSP에 관하여`
+`PSP도 멋져!
+NDS 안살거면 PSP 사!`
+[/speech]
+[speech] 
+3
+3 5
+`NDS 멀티플`
+`NDS는 팩 하나로 멀티 플레이가 된다!`
+[/speech]
+[speech] 
+4
+3 5
+`GBA 확장`
+`NDS는 GBA 팩도 플레이가 된다!`
+[/speech]
+ 
+
+[dialog]
+4                     //대화 인덱스
+1 99                  //레벨 제한
+-1		//나열할 직업 갯수, 직업 인덱스(1(귀검사) 1(on)/0(off) 2(격투가) 1(on)/0(off).... 5(프리스트) 1(on)/0(off)), 모든 직업에게 on시키려면 -1
+0		//스태미너 : OTL 상태를 고려한다면 1, 아니면 0
+0		//위 4가지의 조건을 OR 연산하려면 1, AND 연산 하려면 0
+<8::dialog_Ser_MDL_1>	//대화
+1//관련 퀘스트 인덱스, 필요한만큼 추가 가능
+[/dialog]
+ 
+// 보스방에서 던전 클리어 전에는 안 보이다가 던전 클리어 후에 보이도록 설정
+[visible on dungeon clear] 1
+
+// NPC에 클릭 마크를 표시해 주는 기능. 2개 이상 설정 가능하다
+// 첫번째 인자는 클릭 마크가 표시되는 조건이면 나머지는 조건별 데이터이다
+// 조건이 0번이면 퀘스트가 진행 중일 때 클릭마크가 표시된다. 다음에 오는 숫자는 퀘스트 인덱스다.
+[click mark]
+0	1016
+0	2000
+[/click mark]
+
+[move town limit str]				// NPC 지역 이동 제한 팝업창 문자열
+<8::marlene_arad_movetown_limit>	// 팝업창에 출력될 내용
+
+[move town confirm str]				// NPC 지역 이동 전 확인 팝업창 문자열
+<8::marlene_arad_movetown_confirm>	// 확인창에 출력될 내용
+
+// Npc 메세지 발룬 랜덤으로 띄우기
+[random message balloon]
+`[random message animation]`  `Animation/ChristmasSanta_Random.ani`	// 랜덤 메세지 돌때 나오는 애니메이션
+`[random message probability]`  20			// 랜덤 메세지 나오는 확률
+`[random message list]`  3	<8::random_message_1>	<8::random_message_2>	<8::random_message_3>	// 개수 메세지스트링
+[/random message balloon]

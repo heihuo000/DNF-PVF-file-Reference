@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:么文化滴吟</p>\n\n<p>http://tieba.baidu.com/p/4130738188?see_lz=1</p>\n\n<p>这里再稍微详细一点讲一下独立掉落问题 文件在etc/independent-drop<br />\n&nbsp;<br />\n先上图<br />\n&nbsp;<br />\n&nbsp;<img alt=\"\" height=\"631\" src=\"/media/uploads/2023/05/07/image-20230507212318-1.png\" width=\"968\" /><br />\n&nbsp;<br />\n注意一下我的这几个箭头 33107是掉落的装备ID 后面的 14551 16550都是 33107是鲁卡斯的雷枪 天空之城第一个BOSS鲁卡斯掉的东西 40<br />\n表示鲁卡斯的ID 后面的488888 688888什么的就是掉率的关键数字，自己可以根据原本的进行调整越大越好，具体几率我猜测应该是数字/100W。<br />\n忘了还有一点了 装备ID后面的数字应该代表物品掉落权重，我猜测的，可能是掉的四个装备里要掉两个雷枪。这也符合TX的坑爹风格，刷半天给你掉个不能带的武器。<br />\n&nbsp;<br />\n忘了说了 488888 688888 888888 988888对应四个难度。这个应该不用我说。</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T21:23:23.088",
+    "view_num": 1897
+}

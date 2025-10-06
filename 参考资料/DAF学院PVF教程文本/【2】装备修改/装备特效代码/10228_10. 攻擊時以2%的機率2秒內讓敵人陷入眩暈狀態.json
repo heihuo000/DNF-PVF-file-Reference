@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp; 10&nbsp;&nbsp; &nbsp;攻擊時以2%的機率2秒內讓敵人陷入眩暈狀態。<br />\n(若敵人高於Lv42，則減少進入異常狀態的機率；反之，則增加機率。決鬥場修正為1秒)</p>\n\n<p><br />\n[if]</p>\n\n<p>[cooltime]<br />\n4000&nbsp;&nbsp; &nbsp;<br />\n[attack success]<br />\n1&nbsp;&nbsp; &nbsp;</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`enemy`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[reduce duration to human armor at pvp module]<br />\n50&nbsp;&nbsp; &nbsp;<br />\n[duration]<br />\n2000&nbsp;&nbsp; &nbsp;<br />\n[reduce probability to human armor at pvp module]<br />\n80&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n2&nbsp;&nbsp; &nbsp;<br />\n[active status]<br />\n`stun`<br />\n24&nbsp;&nbsp; &nbsp;<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:16:44.716",
+    "view_num": 213
+}

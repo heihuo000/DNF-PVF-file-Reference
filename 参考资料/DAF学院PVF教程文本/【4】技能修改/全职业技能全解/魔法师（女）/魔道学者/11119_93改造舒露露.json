@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、失敗率 : 20%<br />\n1、成功率 : 60%<br />\n2、大成功率 : 20%<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n7、<br />\n8、<br />\n9、<br />\n10、可挑釁精英怪物的技能Lv : Lv5<br />\n11、可挑釁稀有怪物的技能Lv : Lv10<br />\n12、可挑釁領主怪物的技能Lv : Lv15<br />\n13、可挑釁深淵怪物的技能Lv : Lv15<br />\n14、可挑釁人形護甲怪物的技能Lv : Lv15<br />\n[static data]<br />\n200 600 200 0 1 2 10 0 10 0 5 10 15 15 15<br />\n[/static data]</p>\n\n<p>0、成功時魔法攻擊力 : 独立攻击力 x 9.72<br />\n1、大成功時魔法攻擊力 : 独立攻击力 x 13.61<br />\n2、大成功时爆发范围：200 px<br />\n[level info]<br />\n3 972 1361 200</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:28:44.530",
+    "view_num": 59
+}

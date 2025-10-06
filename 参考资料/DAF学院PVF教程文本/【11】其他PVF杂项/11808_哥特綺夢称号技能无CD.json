@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>[if]\n    [module]\n        `[dead tower]`\n        `[dungeon]`\n        `[tournament dungeon]`\n        `[war room]`\n        `[blood system]`\n    [/module]\n    [change status]\n        `hp`\n        `&gt;`\n        `%` 0\n        `end`\n    [time]\n        500 1   500\n[/if]\n \n[then]\n    [target]\n        `myself`    -1\n    [probability]\n        100\n    [add stat at once]\n        `skill cool time`\n        `%` -100\n[/then]</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-13T21:38:07.923",
+    "view_num": 629
+}

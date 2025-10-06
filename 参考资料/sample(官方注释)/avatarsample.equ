@@ -1,0 +1,135 @@
+// 아바타 스크립트 샘플 파일
+// 아바타 스크립트 샘플 파일
+
+
+[name] <3::name_44801>			// 아바타 한글 이름 인덱스
+[name2] <3::name2_44801>		// 아바타 영문 이름 인덱스
+[explain] <3::basic_explain_44801>	// 아바타 설명 인덱스
+[grade] 2				// 아바타 등급 // 1 일반, 2 상급, 3 레어
+[attach type] `[free]`			// 교환 여부 // free 교환가능, trade 교환불가
+[rarity] 2
+[usable job]				// 착용 가능 직업
+`[fighter]`
+[/usable job]
+[minimum level] 1			// 착용 가능 최저 레벨
+[usable period] 15			// 기간제
+
+[icon] `item/avatar/fighter/ft_acoat.img` 171	// 아이콘 이미지 경로
+
+[equipment type] `[coat avatar]` 0	// 착용 위치 
+
+
+[avatar func filter] 0			// 아바타 기능 // 0 모두 불가, 1 합성 가능, 2 해체 가능, 3합성, 해체 가능
+
+[avatar type select]			// 구입시 타입 선택
+7 0 0 1700 0				// 기간=골드=승점=세라=소켓개수=소켓정보
+30 0 0 3400 0
+0 0 0 6800 0
+0 0 0 7480 2 `[C socket]` `[C socket]`
+[/avatar type select]
+
+
+[variation] 54 0				// 착용 이미지 레이어 번호
+[layer variation] 1800 `coat_a`
+////쓰지말것 아래태그로 변경됨 /////<include> `equipment/character/fighter.lay`
+[equipment ani script] `equipment/character/fighter.lay`
+[layer variation] 500 `coat_d`
+////쓰지말것 아래태그로 변경됨 /////<include> `equipment/character/fighter.lay`
+[equipment ani script] `equipment/character/fighter.lay`
+
+[move wav] `CLOTH_TOUCH`
+
+
+[part set index] 2				// 일반 세트 번호 // 2 상급 세트, 3 레어 세트
+
+
+[set name] <3::set_name_44801>			// 세트명 (지정된 세트가 있을 경우)
+[set item]					// 세트 효과를 이루는 다른 파츠 인덱스 (지정된 세트가 있을 경우)
+43138
+43575
+43909
+44317
+44801
+45197
+45516
+45976
+46212
+[/set item]
+
+
+
+[set ability]					// 세트 아바타 효과 (지정된 세트가 있을 경우)
+[HP MAX] 150
+[MP MAX] 150
+[physical attack] +15
+[physical defense] +15
+[magical attack] +15
+[magical defense] +15
+[inventory limit] 6000
+[HP regen speed] 20
+[MP regen speed] 4
+[move speed] 20
+[attack speed] 20
+[cast speed] 20
+[skill levelup] 
+`[fighter]` 5 1
+[/skill levelup] 
+[/set ability]
+
+[avatar select ability]				// 아바타 선택 능력치
+`[SKILL_LEVEL]` `[fighter]` 30 1
+`[SKILL_LEVEL]` `[fighter]` 20 1
+`[SKILL_LEVEL]` `[fighter]` 1 1
+`[SKILL_LEVEL]` `[fighter]` 3 1
+`[SKILL_LEVEL]` `[fighter]` 45 1
+`[SKILL_LEVEL]` `[fighter]` 22 1
+`[SKILL_LEVEL]` `[fighter]` 10 1
+`[SKILL_LEVEL]` `[fighter]` 51 1
+`[SKILL_LEVEL]` `[fighter]` 50 1
+`[SKILL_LEVEL]` `[fighter]` 11 1
+`[SKILL_LEVEL]` `[fighter]` 37 1
+`[SKILL_LEVEL]` `[fighter]` 43 1
+`[SKILL_LEVEL]` `[fighter]` 49 1
+`[SKILL_LEVEL]` `[fighter]` 36 1
+`[SKILL_LEVEL]` `[fighter]` 31 1
+`[SKILL_LEVEL]` `[fighter]` 4 1
+`[SKILL_LEVEL]` `[fighter]` 38 1
+`[SKILL_LEVEL]` `[fighter]` 18 1
+`[SKILL_LEVEL]` `[fighter]` 42 1
+`[SKILL_LEVEL]` `[fighter]` 52 1
+`[SKILL_LEVEL]` `[fighter]` 39 1
+`[SKILL_LEVEL]` `[fighter]` 44 1
+`[SKILL_LEVEL]` `[fighter]` 40 1
+`[SKILL_LEVEL]` `[fighter]` 19 1
+`[SKILL_LEVEL]` `[fighter]` 14 1
+`[SKILL_LEVEL]` `[fighter]` 54 1
+`[SKILL_LEVEL]` `[fighter]` 15 1
+`[SKILL_LEVEL]` `[fighter]` 16 1
+`[SKILL_LEVEL]` `[fighter]` 60 1
+`[SKILL_LEVEL]` `[fighter]` 62 1
+`[SKILL_LEVEL]` `[fighter]` 69 1
+`[SKILL_LEVEL]` `[fighter]` 68 1
+`[SKILL_LEVEL]` `[fighter]` 74 1
+`[SKILL_LEVEL]` `[fighter]` 75 1
+`[SKILL_LEVEL]` `[fighter]` 76 1
+`[SKILL_LEVEL]` `[fighter]` 77 1
+`[SKILL_LEVEL]` `[fighter]` 78 1
+`[SKILL_LEVEL]` `[fighter]` 79 1
+`[SKILL_LEVEL]` `[fighter]` 90 1
+`[SKILL_LEVEL]` `[fighter]` 80 1
+`[SKILL_LEVEL]` `[fighter]` 91 1
+`[SKILL_LEVEL]` `[fighter]` 83 1
+`[SKILL_LEVEL]` `[fighter]` 82 1
+`[SKILL_LEVEL]` `[fighter]` 81 1
+`[SKILL_LEVEL]` `[fighter]` 87 1
+`[SKILL_LEVEL]` `[fighter]` 89 1
+`[SKILL_LEVEL]` `[fighter]` 88 1
+[/avatar select ability]
+
+
+// 오라아바타 부가 기능
+// `[none]` //아무런 기능없는 오라아바타
+// `[party teleport]` index  //파티 순간 이동 (파티이동 쿨타임)
+[aura ability]
+`[party teleport]` 600 
+[/aura ability]

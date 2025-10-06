@@ -1,0 +1,33 @@
+[FRAME MAX] 5
+
+[FRAME000]
+[IMAGE] `Monster/Bantu/BantuFighter.img` 17
+[IMAGE POS] -239 -301
+[DELAY] 120
+[ATTACK BOX] 26 -10 -6 68 20 20
+[DAMAGE BOX] -21 -10 -5 76 10 70
+
+[FRAME001]
+[IMAGE] `Monster/Bantu/BantuFighter.img` 18
+[IMAGE POS] -239 -301
+[DELAY] 100
+[DAMAGE BOX] -21 -10 -5 76 20 70
+
+[FRAME002]
+[IMAGE] `Monster/Bantu/BantuFighter.img` 19
+[IMAGE POS] -239 -301
+[DELAY] 200
+[DAMAGE BOX] -11 -10 -5 47 20 106
+
+[FRAME003]
+[IMAGE] `Monster/Bantu/BantuFighter.img` 20
+[IMAGE POS] -239 -301
+[DELAY] 50
+[DAMAGE BOX] -51 -10 -5 74 20 60
+
+[FRAME004]
+[IMAGE] `Monster/Bantu/BantuFighter.img` 20
+[IMAGE POS] -239 -301
+[DELAY] 250
+[DAMAGE BOX] -51 -10 -5 74 20 60
+

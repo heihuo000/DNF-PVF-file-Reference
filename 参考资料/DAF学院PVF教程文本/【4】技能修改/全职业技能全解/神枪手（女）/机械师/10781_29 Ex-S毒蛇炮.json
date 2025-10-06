@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、每秒發射子彈數 : 5發<br />\n2、發射子彈後休息時間 : 1秒<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n[static data]<br />\n200 5 1000 10 0 90 5<br />\n[/static data]</p>\n\n<p>0、Ex-S毒蛇炮Lv : Lv25<br />\n1、子彈魔法攻擊力 : 105%<br />\n2、爆炸魔法攻擊力 : 600%<br />\n3、持續時間 : 15秒<br />\n[level info]<br />\n4 25 105 600 15000<br />\n[/level info]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T15:29:34.842",
+    "view_num": 63
+}

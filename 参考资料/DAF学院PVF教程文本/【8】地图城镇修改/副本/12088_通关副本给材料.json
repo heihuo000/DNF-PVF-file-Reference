@@ -1,0 +1,7 @@
+{
+    "content": "<p>#PVF_File</p>\n\n<p>[grade]<br />\n`[daily]`</p>\n\n<p>[ignore quest level 4 exp]<br />\n1&nbsp;<br />\n[difficulty]<br />\n`A`</p>\n\n<p>[gold multiple]<br />\n90&nbsp;<br />\n[npc index]<br />\n628&nbsp;<br />\n[complete npc &nbsp;index]<br />\n-1&nbsp;<br />\n[job]<br />\n`[all]`</p>\n\n<p>[grow type]<br />\n-1&nbsp;<br />\n[level]<br />\n90&nbsp;99&nbsp;<br />\n[monster reward &nbsp;item]<br />\n8899004&nbsp;1022&nbsp;-1&nbsp;20111702&nbsp;1&nbsp;100&nbsp;100&nbsp;<br />\n//怪物代码&nbsp; &nbsp;副本代码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;材料代码&nbsp; 数量<br />\n[/monster reward item]</p>\n\n<p>[type]<br />\n`[seeking]`</p>\n\n<p>[sub type]<br />\n-1&nbsp;<br />\n[int data]<br />\n20111702&nbsp;1&nbsp;<br />\n[/int &nbsp;data]</p>\n\n<p>[dungeon info]<br />\n1022&nbsp;-1&nbsp;<br />\n[/dungeon info]</p>\n\n<p>[reward type]<br />\n`[item]`</p>\n\n<p>[reward int &nbsp;data]<br />\n3216&nbsp;100&nbsp;10313058&nbsp;60&nbsp;10312872&nbsp;5&nbsp;2021301508&nbsp;28&nbsp;<br />\n[/reward &nbsp;int data]</p>\n\n<p>[reward selection int data]</p>\n\n<p>[/reward selection int data]</p>\n\n<p>[name]<br />\n`秘密之森`</p>\n\n<p>[depend message]<br />\n`黑暗之眼正在注視著你。`</p>\n\n<p>[condition message]<br />\n`進入洞察之眼秘密之森`</p>\n\n<p>[solve message]<br />\n`幹的好，冒險家們`</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "勇敢的飞",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level2.gif",
+    "create_at": "2024-07-02T18:49:10.074",
+    "view_num": 285
+}

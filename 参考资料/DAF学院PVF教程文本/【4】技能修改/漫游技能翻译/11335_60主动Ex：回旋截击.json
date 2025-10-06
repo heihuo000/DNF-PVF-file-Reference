@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n【60主动EX：回旋截击】<br />\n路径：skill\\gunner\\airraidex.skl<br />\n[@05][static data]<br />\n[@02]0<br />\n[@02]0<br />\n[@02]400//上升高度400px<br />\n[@02]0<br />\n[@02]0<br />\n[@02]0<br />\n[@02]0<br />\n[@05][/static data]<br />\n[@05][level info]<br />\n[@02]6<br />\n[@02]667//空中回旋踢固伤667%独立<br />\n[@02]500//空中回旋踢击飞距离<br />\n[@02]250//上升过程固伤250%独立<br />\n[@02]100//上升过程每次攻击浮空力<br />\n[@02]4//上升过程攻击次数4次<br />\n[@02]3//空中回旋踢攻击次数3次</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T20:24:58.734",
+    "view_num": 53
+}

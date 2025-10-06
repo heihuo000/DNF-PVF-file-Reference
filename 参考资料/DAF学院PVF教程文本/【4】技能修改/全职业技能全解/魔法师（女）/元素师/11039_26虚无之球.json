@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、蓄气时间上限：1秒<br />\n3、<br />\n[static data]<br />\n700 500 1000 2000<br />\n[/static data]</p>\n\n<p>0、魔法攻击力：区间最小：63%<br />\n1、魔法攻击力：区间最大：133%<br />\n2、射程：区间最小：600 px<br />\n3、射程：区间最大：720 px<br />\n4、球体大小比率：区间最小：100%<br />\n5、球体大小比率：区间最大：120%<br />\n[level info]<br />\n6 67 133 6000 7200 1000 1200</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:07:11.256",
+    "view_num": 96
+}

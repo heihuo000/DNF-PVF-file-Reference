@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n7、<br />\n8、<br />\n9、<br />\n[static data]<br />\n7 150 350 160 40 100 6 10000 2 500<br />\n[/static data]</p>\n\n<p>0、拋出數量 : 25個<br />\n1、中毒持續時間 : 10秒<br />\n2、中毒攻擊力 : 1080<br />\n3、普通用品的攻擊力 : 独立攻击力 x 2.16<br />\n4、中毒機率 : 100%%<br />\n5、中毒Lv : Lv48<br />\n6、特殊用品的攻擊力 : 独立攻击力 x 4.32<br />\n7、中毒機率 : 100%%<br />\n8、中毒Lv : Lv48<br />\n9、特殊用品的拋出機率 : 20%%<br />\n[level info]<br />\n10 25 10000 1080 216 100 48 432 100 48 20</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T16:17:35.222",
+    "view_num": 51
+}

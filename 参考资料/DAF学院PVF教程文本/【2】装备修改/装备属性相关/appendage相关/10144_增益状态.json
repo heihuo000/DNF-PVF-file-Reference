@@ -1,0 +1,7 @@
+{
+    "content": "<p>赋予霸体状态</p>\n\n<p>[type]<br />\n`super armor`<br />\n[duration]<br />\n8000<br />\n[buff]<br />\n1<br />\n[icon image]<br />\n`` 0<br />\n[max overlap]<br />\n1<br />\n[int data]</p>\n\n<p>[/int data]</p>\n\n<p>[string data]</p>\n\n<p>[/string data]</p>\n\n<p>[float data]</p>\n\n<p>[/float data]</p>\n\n<p>类型参数更换相关</p>\n\n<p>增益型：</p>\n\n<p>霸体：superarmor<br />\n无敌：unbreakable<br />\n伪装：camoflage</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T12:55:25.801",
+    "view_num": 499
+}

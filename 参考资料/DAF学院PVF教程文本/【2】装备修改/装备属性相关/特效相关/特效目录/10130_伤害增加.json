@@ -1,0 +1,7 @@
+{
+    "content": "<p>任意攻击成功时，伤害增加20%。</p>\n\n<p>[if]<br />\n[event attack success]<br />\n1<br />\n[/if]<br />\n[then]<br />\n[target]<br />\n&#39;enemy&#39; -1<br />\n[increase damage]<br />\n&#39;%&#39; 20<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T12:49:31.234",
+    "view_num": 290
+}

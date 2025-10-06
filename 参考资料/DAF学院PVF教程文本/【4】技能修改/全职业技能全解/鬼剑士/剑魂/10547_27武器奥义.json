@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、技能编号：12 短剑精通<br />\n1、技能编号：13 太刀精通<br />\n2、技能编号：14 巨剑精通<br />\n3、技能编号：15 钝器精通<br />\n4、技能编号：4 光剑精通<br />\n[static data]<br />\n12 13 14 15 4<br />\n[/static data]</p>\n\n<p>0、短剑精通等级增加3<br />\n1、太刀精通等级增加3<br />\n2、巨剑精通等级增加3<br />\n3、钝器精通等级增加3<br />\n4、光剑精通等级增加2<br />\n[level info]<br />\n5 3 3 3 3 2</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:08:17.003",
+    "view_num": 151
+}

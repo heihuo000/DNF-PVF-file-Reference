@@ -1,0 +1,7 @@
+{
+    "content": "<p>第一个就是修改装备等级</p>\n\n<p><img alt=\"\" height=\"54\" src=\"/media/uploads/2023/07/07/image-20230707132751-1.png\" width=\"100\" /></p>\n\n<p>就是这个，所有装备中的这个grade词条。这个数值越高，增幅的加成越高。<br />\n第二个方法就是改增幅加成。有两个路径，又好像只改一个就够了，但是我还是说说吧，毕竟我都是直接改两个的，第一个路径etc/amplifyitem.etc，然后找到[rarity weight]这里，</p>\n\n<p><img alt=\"\" height=\"152\" src=\"/media/uploads/2023/07/07/image-20230707132847-2.png\" width=\"200\" /></p>\n\n<p>这里是增幅数值加成，第一个加成是白装，第二个蓝装，以此类推，那个加成1.6的就是史诗装备增幅加成，1.6是我自己改的，其他的应该都是1.5或者其他的数值。自己改就好。<br />\n然后第二个路径就是etc/upgrade.etc这里，找到这里[upgrade failed bonus weight by rarity]</p>\n\n<p><img alt=\"\" height=\"114\" src=\"/media/uploads/2023/07/07/image-20230707132914-3.png\" width=\"400\" /></p>\n\n<p>还是一样是改epic史诗加成，比例自己改，改完保存。完毕。<br />\n说一下这些，可能就是那两个路径只要改一个就够了的，但是我也不知道改哪个，我是先改第一个amp这里的，然后怕不成功，就有去改了一下upg那里，你们自己去试试吧。还有，欢迎大佬指正。<img alt=\"\" height=\"30\" src=\"https://tb2.bdstatic.com/tb/editor/images/face/i_f07.png?t=20140803\" width=\"30\" /></p>\n\n<p><img alt=\"\" height=\"456\" src=\"/media/uploads/2023/07/07/image-20230707133003-4.png\" width=\"200\" /></p>\n\n<p>刚刚试了下，就改一个就行了，etc/amplifyitem.etc，就这里。epic。</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-07-07T13:28:34.390",
+    "view_num": 1764
+}

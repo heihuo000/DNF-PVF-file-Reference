@@ -1,0 +1,7 @@
+{
+    "content": "<p>骷髅弹<br />\r\n击中敌人触发</p>\r\n\r\n<p><br />\r\n代码<br />\r\n[if]</p>\r\n\r\n<p>[attack success]<br />\r\n1&nbsp;&nbsp; &nbsp;<br />\r\n[/if]</p>\r\n\r\n<p>[then]</p>\r\n\r\n<p>[target]<br />\r\n`enemy`<br />\r\n-1&nbsp;&nbsp; &nbsp;<br />\r\n[probability]<br />\r\n100&nbsp;&nbsp; &nbsp;<br />\r\n[passive object]<br />\r\n48079&nbsp;&nbsp; &nbsp;70&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;70&nbsp;&nbsp; &nbsp;30&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;`Redrock.ptl`</p>\r\n\r\n<p>[/passive object]</p>\r\n\r\n<p>[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:06:01.733",
+    "view_num": 114
+}

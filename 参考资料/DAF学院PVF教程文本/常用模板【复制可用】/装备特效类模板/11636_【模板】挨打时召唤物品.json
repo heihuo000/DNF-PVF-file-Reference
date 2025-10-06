@@ -1,0 +1,7 @@
+{
+    "content": "<h2>被攻擊時，有20%%的機率召喚出1隻Lv55的雷沃斯協助召喚者攻擊敵人，雷沃斯存在100秒</h2>\n\n<pre>\n<code>[if]\n\t[cooltime]\n\t\t100000\n\t[hit]\n\t\t1\n[/if]\n\n[then]\n\t[target]\n\t\t`myself`\t-1\n\t[duration]\n\t\t100000\n\t[reduce duration at pvp module]\n\t\t75\n\t[probability]\n\t\t20\n\t[summon monster]\n\t\t60115\t55\t1\n[/then]</code></pre>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T18:25:28.201",
+    "view_num": 640
+}

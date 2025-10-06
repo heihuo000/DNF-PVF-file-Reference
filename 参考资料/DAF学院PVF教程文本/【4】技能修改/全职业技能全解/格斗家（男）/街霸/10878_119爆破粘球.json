@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n[static data]<br />\n200 1000 100<br />\n[/static data]</p>\n\n<p>0、物理攻擊傷害 : 独立攻击力 x 30<br />\n1、減速機率 : 100%%<br />\n2、減速Lv : Lv62<br />\n3、減速持續時間 : 7秒<br />\n4、減速狀態下， 移動速度減少率 : 25%%<br />\n5、攻擊速度減少率 : 15%%<br />\n[level info]<br />\n6 3000 1000 62 7000 250 150</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T16:01:49.171",
+    "view_num": 41
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>Script.pvf/etc/towerofdespair.etc</p>\n\n<p>&nbsp;<br />\n1.每当出现9进10的时候，将10西面的NPC编号 例如10的编号为11017，将它改为9的编号11016；<br />\n&nbsp;<br />\n道理很简单绝望每10层选取一个玩家数据改为APC，单机没有玩家数据所以服务端卡死<br />\n&nbsp;<br />\n2.100层里面10层改一次，一次都不能漏<br />\n&nbsp;<br />\n3.之前的修改100层的NPC编号不用修改剑神梁月，拉倒最下面会有10.20.30.40.50.60<br />\n&nbsp;<br />\n70.80.90的数值，全部改成0&nbsp; &nbsp;<br />\n&nbsp;<br />\n号的大功告成<br />\n&nbsp;<img alt=\"\" height=\"417\" src=\"/media/uploads/2023/05/08/image-20230508213614-1.png\" width=\"559\" /><br />\n&nbsp;<br />\n&nbsp;<img alt=\"\" height=\"417\" src=\"/media/uploads/2023/05/08/image-20230508213622-2.png\" width=\"556\" /><br />\n&nbsp;<br />\n&nbsp;<img alt=\"\" height=\"458\" src=\"/media/uploads/2023/05/08/image-20230508213630-3.png\" width=\"555\" /></p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-08T21:36:32.376",
+    "view_num": 706
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n7、<br />\n8、<br />\n9、<br />\n10、<br />\n11<br />\n[static data]<br />\n4 50 400 500 3000 3000 22220 1500 200 1 1 0<br />\n[/static data]</p>\n\n<p>0、攻擊力 ：（独立攻击力 x 2.39）光屬性魔攻<br />\n1、爆炸範圍 : 220<br />\n2、感電機率 : 60%<br />\n3、感電Lv : Lv26<br />\n4、感電持續時間 : 7秒<br />\n5、感電狀態附加攻擊力 : 383（猜测）<br />\n[level info]<br />\n6 239 220 600 26 7000 383<br />\n[/level info]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:38:25.319",
+    "view_num": 105
+}

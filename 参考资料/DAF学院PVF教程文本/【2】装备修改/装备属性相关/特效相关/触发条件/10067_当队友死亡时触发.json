@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>隊員死亡時自己10秒內武器變紅，攻擊力增加30%%。（安裝解除時選項解除）</p>\n\n<p>注释：这里一个比较有趣且特殊的触发，它是一个嵌套型触发。第一个触发是队友死亡之后，触发赋予武器红色，第二个触发是当武器颜色为红色时，触发攻击力增加30%的特效</p>\n\n<p><br />\n--------------------------------------------------------------------------------</p>\n\n<p>[if]<br />\n&nbsp;<br />\n[party death ]<br />\n1<br />\n[/if]<br />\n[then]<br />\n[target]<br />\n&#39;myself&#39; -1<br />\n[equipment duration]<br />\n10000<br />\n[appendage]<br />\n38<br />\n[speech on]<br />\n0 2000 &lt;3::speech_8`靈魂： 咯吱咯吱..呃啊啊力量源源不絕湧出。`&gt;<br />\n[/speech on]<br />\n[/then]</p>\n\n<p>--------------------------------------------------------------------------------</p>\n\n<p>[if]</p>\n\n<p>[my appendage]<br />\n38<br />\n[event attack success]<br />\n1<br />\n[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`myself`<br />\n-1<br />\n[increase damage]<br />\n`%`<br />\n30<br />\n[/then]</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:27:27.318",
+    "view_num": 196
+}

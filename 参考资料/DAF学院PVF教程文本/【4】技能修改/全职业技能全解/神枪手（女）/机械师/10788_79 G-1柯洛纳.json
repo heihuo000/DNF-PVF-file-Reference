@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、改裝時延長持續時間 : 10秒<br />\n3、改裝冷卻時間 : 5秒<br />\n4、自動發射冷卻時間 : 1秒<br />\n5、<br />\n6、发射炮弹数量 ：1&nbsp; （猜测）<br />\n7、彈爆炸大小比率 : 130%<br />\n[static data]<br />\n300 3 10000 5000 1000 400 1 130<br />\n[/static data]</p>\n\n<p>0、魔法攻擊力 : 102%<br />\n1、持續時間 : 20秒<br />\n2、敵人僵直時間比率 : 70%<br />\n3、G-2 旋雷攻擊力增加率 : 60%<br />\n4、G-3 猛禽攻擊力增加率 : 60%<br />\n5、<br />\n[level info]<br />\n6 102 20000 70 60 60 9<br />\n[/level info]</p>\n\n<p><br />\n以下为EX ：</p>\n\n<p>0、<br />\n1、<br />\n2、改裝時延長持續時間 : 10秒<br />\n3、改裝冷卻時間 : 5秒<br />\n4、自動發射冷卻時間 : 1秒<br />\n5、<br />\n6、发射炮弹数量 ：1&nbsp; （猜测）<br />\n7、彈爆炸大小比率 : 130%<br />\n8、大型柯洛納的攻擊造成敵人僵直時間比率 : 150%<br />\n9、大型柯洛納出现需要發射数量 ：3<br />\n[static data]<br />\n300 3 10000 5000 1000 400 1 130 150 3 &nbsp;<br />\n[/static data]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T15:31:13.810",
+    "view_num": 130
+}

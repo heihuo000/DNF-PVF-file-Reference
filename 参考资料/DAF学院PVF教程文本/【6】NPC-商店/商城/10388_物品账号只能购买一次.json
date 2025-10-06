@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:老牛</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>简单说明下，不是很难。</p>\r\n\r\n<p>商城里面有个新手礼包，大伙儿可能发现账号购买一次后就消失了，新手礼包对应的文件里面并没有对应的控制标签。<br />\r\n其实，相关的控制文件都在etc目录下。</p>\r\n\r\n<p>以老牛PVF商城文件来说明，商城路径etc/newcashshop.etc</p>\r\n\r\n<p><img alt=\"\" height=\"239\" src=\"/media/uploads/2023/05/06/image-20230506213553-1.png\" width=\"605\" /></p>\r\n\r\n<p>商城物品代码690000117，新手礼包，商城排序编号为10080。</p>\r\n\r\n<p>再来看下商城的补充文件，路径etc/newcashshop_restrict.etc</p>\r\n\r\n<p><img alt=\"\" height=\"280\" src=\"/media/uploads/2023/05/06/image-20230506213604-2.png\" width=\"561\" /></p>\r\n\r\n<p>[account restrict]表示账号限制，比如账号只能购买多少次。<br />\r\n[character restrict]表示角色限制，比如单个角色只能购买多少次。</p>\r\n\r\n<p>大致是这个意思</p>\r\n\r\n<p><img alt=\"\" height=\"53\" src=\"/media/uploads/2023/05/06/image-20230506213624-3.png\" width=\"872\" /></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-06T21:36:33.528",
+    "view_num": 1318
+}

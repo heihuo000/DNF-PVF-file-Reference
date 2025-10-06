@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n[static data]<br />\n100 500 1 1<br />\n[/static data]</p>\n\n<p>0、魔法攻击力：独立攻击 x 1.43<br />\n1、魔法攻击力：287% + &lt;0&gt;<br />\n2、爆炸魔法攻击力：独立攻击 x 2.87<br />\n3、爆炸魔法攻击力：3443% + &lt;3&gt;<br />\n4、最大抓取数量：10<br />\n5、每抓取1个敌人减少Hp量：250点<br />\n[level info]<br />\n6 143 287 287 3443 10 250</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T20:03:18.758",
+    "view_num": 42
+}

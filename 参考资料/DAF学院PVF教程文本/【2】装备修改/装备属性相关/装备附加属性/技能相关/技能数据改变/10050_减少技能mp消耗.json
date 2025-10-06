@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>减少技能MP消耗</p>\n\n<p>[skill data up]<br />\n&#39;[swordman]&#39; 74 &#39;[dungeon type]&#39; &#39;[mp]&#39; 0 &#39;%&#39; -18<br />\n[/skill data up]<br />\n调用技能文件中的魔法值消耗[cost mp]模块</p>\n\n<p>0为最小值，&nbsp; 1为最大值。</p>\n\n<p>相关参考：</p>\n\n<p>[殺意波動]每10秒MP的消耗量減少70%%<br />\n[skill data up]<br />\n`[swordman]` 52 `[dungeon type]`<br />\n`[maintain mp]` 0 `%` -70</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:22:46.548",
+    "view_num": 402
+}

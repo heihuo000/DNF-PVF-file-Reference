@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:一路悲伤_</p>\n\n<p>&nbsp;</p>\n\n<p>下面教你们在PKC装逼大法<br />\n昨天一个房间满人乱战 我找了个角落来了个飞天大法 顿时全场不打了、 看着我 ， 那酸爽<br />\n根本停不下来</p>\n\n<p>&nbsp; &nbsp;<img alt=\"\" height=\"799\" src=\"/media/uploads/2023/05/08/image-20230508213919-1.png\" width=\"576\" /></p>\n\n<p>方法很简单，让食人鼠咬住你。然后连发后跳 就可以慢慢起飞了。我是一路悲伤_<br />\n下面教你们怎么设置PVF<br />\n召唤代码[召唤出来是自己人]<br />\n[if]<br />\n[cooltime]<br />\n120000 冷却时间<br />\n[casting]<br />\n1 释放技能时<br />\n[/if]<br />\n[then]<br />\n[target]<br />\n&#39;myself&#39; -1<br />\n[duration]<br />\n60000 持续时间<br />\n[probability]<br />\n100 几率<br />\n[summon monster]<br />\n62676-11 怪物代码<br />\n[/then]</p>\n\n<p>-----------------------------------------------------------------------------<br />\n改完后我们去修改食人鼠的信息<br />\n路径</p>\n\n<p>monster/event/bluemarble/biterat/attackinfo/attack.atk<br />\nmonster/event/bluemarble/biterat/attackinfo/bite.atk<br />\nmonster/event/bluemarble/biterat/attackinfo/jumpattack.atk<br />\n-------------------------------------------------------------------------------<br />\n[weapon damage apply]<br />\n1<br />\n&uarr;在这代码下面加上<br />\n[attack friend] 就是攻击自己人<br />\n1</p>\n\n<p><br />\n这个方法大多数老玩家都会 我只是教你们通过修改PVF 在PKC召唤出来的怪物也可以咬自己再改个名字 取名直升飞机 加点特效什么的&nbsp; 那逼格简直了得 0 0</p>\n\n<p><img alt=\"\" height=\"602\" src=\"/media/uploads/2023/05/08/image-20230508213930-2.png\" width=\"799\" /></p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-08T21:39:38.760",
+    "view_num": 533
+}

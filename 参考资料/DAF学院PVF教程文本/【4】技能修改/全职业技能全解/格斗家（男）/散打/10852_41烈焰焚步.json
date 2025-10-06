@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n[static data]<br />\n3 6 9<br />\n[/static data]</p>\n\n<p>0、持續時間 : 30秒<br />\n1、武鬥系列技能冷卻時間減少率 : 35%%<br />\n2、敵人僵直時間變化率 : 113%%<br />\n3、施放技能後的僵直時間減少率 : 12%%<br />\n4、附加獨立物理傷害 : 12%%<br />\n5、施放技能时对周围敌人产生的伤害 : 0 （单位未知）<br />\n6、地面上的烈焰对敌人产生的伤害：100 （单位未知）<br />\n7、[技能Lv9]增加力量：100<br />\n8、[技能Lv9]增加力量持续时间：15秒<br />\n[level info]<br />\n9 30000 350 1130 120 12 0 0 0 0</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T15:54:36.250",
+    "view_num": 75
+}

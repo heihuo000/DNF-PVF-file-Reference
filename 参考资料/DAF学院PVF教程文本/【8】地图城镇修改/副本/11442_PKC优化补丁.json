@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\nBy：z496834134</p>\n\n<p>&nbsp;</p>\n\n<p><br />\n研究了很久 现在也只是大概能用用 和谐了几件变态装备的属性 或者取消特效 或者降低几率 或者在PKC里直接扣大量HP<br />\n进PKC统一 70CC一套 算首饰 伤害高还可以+12</p>\n\n<p>修改副职业升级经验<br />\ncharacter\\expertjob&nbsp; 改成 1~11了</p>\n\n<p>修改宠物装备 攻击力 两个攻击上W的装备 我改成了6666<br />\nequipment\\creature\\artifact_blue\\bead_sky.equ<br />\nequipment\\creature\\artifact_rede\\bead_earth.equ</p>\n\n<p>删除了称号 就是天空套送的&nbsp; 100%异常抗性 改成了1%<br />\nequipment--character--cmmon-title<br />\nempirehero_red.equ<br />\nempirehero_blue.equ</p>\n\n<p>修改怪物血量<br />\n4 5 6 8这样改的。。 攻击力增加1 防御力增加 20%<br />\nmonster--monsterapcdifficultybonus.tbl</p>\n\n<p><br />\n金币掉落修改 掉落数据乘五<br />\nect--itemdropinfo_common.etc</p>\n\n<p>修改爆率 因为我的服只有4个人 爆率比较高<br />\nect--itemdropinfo 金币下面</p>\n\n<p>商城物品变价 强化卷 挑战卷<br />\netc/newcashshop.etc<br />\n+12的普通卷 我改成了100DB&nbsp; +12的增幅 改成了250 挑战书改成了200DB 500本<br />\n就这样感觉还是变态 还吧一个东西删除了&nbsp; 到底是啥给忘了0 0</p>\n\n<p>赛利亚商店 删除无色小<br />\nitemshop-equipmentshop7.shp&nbsp; 3037</p>\n\n<p>和谐了剑魂太刀空中连斩的恐怖攻击<br />\n进56线PKC等级限制改为65级<br />\n其他线没改</p>\n\n<p>导入新手武器礼盒下线消失 补丁</p>\n\n<p>70CC装备首饰套 每件加血1250 防御防御*3 首饰防御*2</p>\n\n<p>和谐 新加入的80SS 惊天破日剑 冰雪公主首饰套 星云迷踪腰带 赫格尼之剑 炎月之魂 在PKC的变态属性</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-08T21:50:35.355",
+    "view_num": 354
+}

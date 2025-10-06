@@ -1,0 +1,7 @@
+{
+    "content": "<p>By 绅士</p>\n\n<p>&nbsp;</p>\n\n<p>路径在这<br />\netc/ultimatedungeonlist.etc<br />\n里面就一个字段<br />\n[apply ultimate]<br />\n数字是副本的代码<br />\n哪个副本要加地狱难度<br />\n就在里面加上副本代码即可<br />\n理论上所有有难度的副本都能加成功<br />\n我用寂静城副本测试过<br />\n怪物属性和通关经验跟王者难度比都有增加</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-08T21:57:41.702",
+    "view_num": 751
+}

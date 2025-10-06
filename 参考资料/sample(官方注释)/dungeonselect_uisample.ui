@@ -1,0 +1,126 @@
+// UI 스크립트 샘플 //
+// 제작 : bizarre
+// 시스템 문의 : 던전클라
+
+// 1번 태그 : 던전 선택화면 배경을 설정하는 태그
+// 다른건 건들지말고(다른건 하드코딩이며 클라분이 설정하심) 배경 img 경로 및 인덱스만 수정하면 됨.
+[ui controls]
+	`[image]`
+	`IDC_WORLDMAP_BACKGROUND`	// 컨트롤 이름
+	0			//X
+	0			//Y
+	1			//string 데이터 개수
+	`WorldMap/AradCartel.img`
+	1			//int 데이터 개수
+	0			//이미지 인덱스
+	//[common action]  `Action/banner_common.act`
+[/ui controls]
+
+
+// 2번 태그 : 던전 선택화면에서 지옥파티 배경을 설정하는 태그
+// 다른건 건들지말고(다른건 하드코딩이며 클라분이 설정하심) 배경 img 경로 및 인덱스만 수정하면 됨.
+[ui controls]
+	`[image]`
+	`IDC_WORLDMAP_HELLPARTY_MODE_BACKGROUND`	// 지옥파티 배경
+	0			// X
+	0			// Y
+	1			// string 데이터 개수
+	`Interface2/SelectDungeon/SelectDungeonHell/SelectDungeonHell.img`
+	3			// int 데이터 개수
+	0			// 이미지 인덱스
+	0			// 처음출력시 보여준다 
+	0			// 배너가 이벤트를 받으면 안되므로 Enable 속성을 false 로 해준다
+	[common action]  `Action/background_event.act`
+[/ui controls]
+
+// 3번 태그 : 던전 선택화면에서 연습모드 배경을 설정하는 태그
+// 다른건 건들지말고(다른건 하드코딩이며 클라분이 설정하심) 배경 img 경로 및 인덱스만 수정하면 됨.
+[ui controls]
+	`[image]`
+	`IDC_WORLDMAP_EXERCISE_MODE_BACKGROUND`	// 던전 연습모드 배경
+	0			// X
+	0			// Y
+	1			// string 데이터 개수
+	`Interface2/DungeonExercise/DungeonExercise.img`
+	3			// int 데이터 개수
+	0			// 이미지 인덱스
+	0			// 처음출력시 보여준다 
+	0			// 배너가 이벤트를 받으면 안되므로 Enable 속성을 false 로 해준다
+	[common action]  `Action/background_event.act`
+[/ui controls]
+
+// 4번 태그 : 던전 선택화면에서 차원의 틈 확장(改이계던전) 배경을 설정하는 태그
+// 다른건 건들지말고(다른건 하드코딩이며 클라분이 설정하심) 배경 img 경로 및 인덱스만 수정하면 됨.
+[ui controls]
+	`[image]`
+	`IDC_WORLDMAP_EXPAND_DIMENSION_BACKGROUND`	// 차원의 틈 확장 배경
+	0			// X
+	0			// Y
+	1			// string 데이터 개수
+	`Interface2/DungeonExercise/DungeonExercise.img`
+	3			// int 데이터 개수
+	2			// 이미지 인덱스
+	0			// 처음출력시 보여준다 
+	0			// 배너가 이벤트를 받으면 안되므로 Enable 속성을 false 로 해준다
+	[common action]  `Action/background_event.act`
+[/ui controls]
+
+// 여기서부터 던전 선택화면 이미지(풍선이미지) 셋팅
+// 버튼 이미지 정의 (오데사 시가전)
+[ui controls]
+	`[balloon]`		// ui컨트롤이 가지는 속성(`balloon` 으로 된것들이 던전 선택화면 임)
+	`IDC_WORLDMAP_BUTTON1`	// 컨트롤 이름(중복되면 안됨!! // 0부터 써도 무관하나 그냥 1부터 쓰자)
+	451			// X (풍선의 x좌표)
+	158			// Y (풍선의 y좌표)
+	1			// string data 숫자 (건들지 말것! 문의는 클라에게)
+	`WorldMap/selectdungeon02.img`	// (건들지 말것!! 문의는 클라에게)
+	3			// int data 숫자 (건들지 말것!! 문의는 클라에게)
+	1			// 풍선컨트롤 타입(0. 일반 풍선, 1. 던전선택 풍선) // (건들지말것!! 1번 쓰면됨)
+	2			// 풍선컨트롤 패턴(WorldMapPatternTable2ND.tbl 에 셋팅된 패턴에 매칭되는 모양의 풍선을 표시한다)
+				// 현재 0~17의 패턴이 있으며, 추가적으로 모양을 추가하고 싶으면 던전클라에 문의
+				// 0~17의 패턴 모양은 \\192.168.20.35\dnfshare\graphic\2_완성본\02_interface\UI_ver03\UI\SelectDungeon_ver2.0\png
+				// 폴더의 030~047 파일 이미지를 참조하면 된다.
+	60			// 표시할 던전 인덱스
+	[common action]  `Action/worldmap_balloon.act`	// 풍선 액션 경로 (건들지 말것!! 문의는 클라에게)
+[/ui controls]
+
+// 버튼 이미지 정의 (녹색도시 그로즈니)
+[ui controls]
+	`[balloon]`
+	`IDC_WORLDMAP_BUTTON2`	// 컨트롤 이름
+	288			// X
+	428			// Y
+	1			// string data 숫자
+	`WorldMap/selectdungeon02.img`
+	3			// int data 숫자
+	1			// 풍선컨트롤 타입(0. 일반 풍선, 1. 던전선택 풍선)
+	3			// 풍선컨트롤 패턴
+	61		// 표시할 던전 인덱스
+	[common action]  `Action/worldmap_balloon.act`
+[/ui controls]
+
+// 버튼 이미지 정의
+[ui controls]
+	`[switchbox]`
+	`IDC_WORLDMAP_SWITCHBOX`	// 컨트롤 이름
+	400			// X
+	100			// Y
+	1			// string data 숫자
+	`WorldMap/selectdungeon02.img`
+	14			// int data 숫자
+	1			// 스위치컨트롤 타입(0. 일반 스위치, 1. 던전선택 스위치)
+	24			// 메인 바디 인덱스
+	3			// 이전버튼(일반)
+	4			// 이전버튼(마우스 오버)
+	5			// 이전버튼(마우스 다운)
+	6			// 이전버튼(비활성화)
+	7			// 다음버튼(일반)
+	8           // 다음버튼(마우스 오버)
+	9           // 다음버튼(마우스 다운)
+	10          // 다음버튼(비활성화)
+	11			// 노말
+	12			// 익스
+	13			// 마스터
+	14			// 킹
+[/ui controls]
+

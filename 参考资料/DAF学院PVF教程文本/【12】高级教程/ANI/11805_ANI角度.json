@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>计算方式：你所要旋转的角度/5.7=数值*0.1(ps数值正负颠倒)\n \n3.14为顺时针旋转180度\n \n1.57为顺时针旋转90度\n \n0.79为顺时针旋转45度\n \n0.26为顺时针旋转15度\n----------------------------\n-3.14为逆时针旋转180度\n \n-1.57为逆时针旋转90度\n \n-0.79为逆时针旋转45度\n \n-0.26为逆时针旋转15度</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-13T21:32:45.116",
+    "view_num": 539
+}

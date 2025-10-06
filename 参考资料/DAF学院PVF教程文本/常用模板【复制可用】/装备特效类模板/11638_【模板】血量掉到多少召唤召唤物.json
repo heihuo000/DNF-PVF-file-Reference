@@ -1,0 +1,7 @@
+{
+    "content": "<p>血量掉到多少召唤召唤物的模板，道理是一样的，自己改改HP和召唤物即可，</p>\n\n<h2>HP 20%% 以下時召喚1隻阿奢尼</h2>\n\n<pre>\n<code>[if]\n\t[time]\n\t\t1000\t1\t1000\n\t[stat change]\n\t\t`hp`\n\t\t`&lt;`\n\t\t`%`\t20\n\t[cooltime]\n\t\t10000\n[/if]\n\n[then]\n\t[target]\n\t\t`myself`\t-1\n\t[duration]\n\t\t100000\n\t[reduce duration at pvp module]\n\t\t75\n\t[probability]\n\t\t100\n\t[summon monster]\n\t\t60112\t49\t1\n[/then]\n</code></pre>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T18:26:44.395",
+    "view_num": 668
+}

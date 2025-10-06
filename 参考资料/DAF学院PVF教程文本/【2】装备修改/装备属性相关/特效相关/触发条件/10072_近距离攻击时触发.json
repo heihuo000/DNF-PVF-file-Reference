@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>攻击距离：近距離</p>\n\n<p>[if]<br />\n&nbsp;<br />\n[attacker]<br />\n&#39;character&#39; -1<br />\n[event attack success]<br />\n1<br />\n[/if]<br />\n攻击者参数：<br />\n第一个参数：`职业特征（？）`<br />\n注释：猜测可以换成怪物、生物（宠物或APC）什么的。<br />\n第二个参数：范围。</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:28:38.345",
+    "view_num": 222
+}

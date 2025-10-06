@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>一、失明抗性</p>\n\n<p>[blind resistance]<br />\n10<br />\n二、异常状态增加。</p>\n\n<p>石化几率增加1%<br />\n石化变化状态增加LV6<br />\n石化持续时间增加10秒<br />\n石化伤害增加40%</p>\n\n<p>[active status control info]<br />\n&#39;stone&#39; 1 6 10000 40<br />\n将红字替换为其他状态即可。</p>\n\n<p>状态代码：</p>\n\n<p>失明：blind<br />\n感电：lightning<br />\n灼伤：burn<br />\n冰冻：freeze<br />\n束缚：hold<br />\n睡眠：sleep<br />\n出血：bleeding<br />\n混乱：confuse<br />\n诅咒：curse<br />\n石化：stone<br />\n晕眩：stun<br />\n所有异常状态：all activestatus<br />\n随机：any</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:18:32.647",
+    "view_num": 573
+}

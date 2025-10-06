@@ -1,0 +1,7 @@
+{
+    "content": "<p>附加伤害30%(白字伤害)</p>\n\n<p>[add absolute damage]<br />\n&#39;all&#39; &#39;%&#39; 30<br />\n相关参数：</p>\n\n<p>属性伤害：<br />\n火：fire<br />\n光：light<br />\n暗：dark<br />\n水：water<br />\n&nbsp;</p>\n\n<p>伤害增加5%（直接增加）</p>\n\n<p>[increase damage]<br />\n&#39;%&#39; 5</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T12:45:10.689",
+    "view_num": 514
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n[static data]<br />\n900 150 400 180 150 300<br />\n[/static data]</p>\n\n<p>0、魔法攻击力：450% + &lt;5&gt;<br />\n1、持续时间：3秒<br />\n2、光电冰墙HP：12852<br />\n3、移动速度减少率：50%<br />\n4、攻击速度减少率：50%<br />\n5、魔法攻击力：独立攻击力 x 1.5<br />\n6、光电鳗魔法攻击力：180% + &lt;3&gt;<br />\n7、光电鳗魔法攻击力：独立攻击力 x 0.3<br />\n8、冲击波魔法攻击力：360% + &lt;9&gt;<br />\n9、冲击波魔法攻击力：独立攻击力 x 3<br />\n10、<br />\n[level info]<br />\n11 450 3000 12852 500 500 150 180 30 360 300 1000</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:10:12.692",
+    "view_num": 58
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:mnbv1775</p>\n\n<p>&nbsp;</p>\n\n<p>首先打开PVF TOOLS</p>\n\n<p>找到etc/craneminigameitem.etc 这个文件<br />\n&nbsp;<img alt=\"\" height=\"126\" src=\"/media/uploads/2023/05/07/image-20230507215530-1.png\" width=\"525\" /></p>\n\n<p>[item]<br />\n102000045<br />\n[cnt]<br />\n1<br />\n[viewRatio]<br />\n1.06<br />\n[pickRatio]<br />\n3<br />\n[/item]</p>\n\n<p>可以看到有这么一串代码</p>\n\n<p>代表的是什么呢</p>\n\n<p>[item]<br />\n102000045 (出现的物品ID)<br />\n[cnt]<br />\n1 (不明 应该是是否出现的参数)<br />\n[viewRatio]<br />\n1.06 (视线比例 应该就是 抓取的范围 就是能不能抓到 而不是能不能抓上来)<br />\n[pickRatio]<br />\n3 (抓取几率 能不能抓上来)<br />\n[/item]</p>\n\n<p><br />\n然后大家就可以修改拉</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T21:55:33.090",
+    "view_num": 502
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>时装镶嵌出来后，其实大家很不感冒，因为这个玩意说到底属性差<br />\n但如果我们仔细看看徽章的词条是怎么实现属性加成的可以发现</p>\n\n<p><img alt=\"\" height=\"130\" src=\"/media/uploads/2023/10/07/1.jpg\" width=\"208\" /></p>\n\n<p>它其实是附魔<br />\n那么....这就很有意思了<br />\n如果装备只能附魔一个宝珠，<br />\n那么.......<br />\n那么时装岂不是可以附魔两个宝珠了？<br />\n话不多说，我直接一步到位</p>\n\n<p><img alt=\"\" height=\"458\" src=\"/media/uploads/2023/10/07/2_hwiE433.jpg\" width=\"270\" /><img alt=\"\" height=\"394\" src=\"/media/uploads/2023/10/07/3_XIBRPVV.jpg\" width=\"210\" /><img alt=\"\" height=\"527\" src=\"/media/uploads/2023/10/07/4_IvhL9Fh.jpg\" width=\"649\" /></p>\n\n<p>我们就可以这样操作一番，进图瞧瞧能不能实现</p>\n\n<p><img alt=\"\" height=\"600\" src=\"/media/uploads/2023/10/07/5_L471esX.jpg\" width=\"800\" /></p>\n\n<p>同理，既然徽章是附魔，我们可以hook徽章镶嵌，直接到本身装备上，但大概率会因为双重附魔导致不稳定，没试过，看贴吧大佬已经搞镶嵌到装备了，就不知道属性是只读了一个还是另外的理解思路</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-10-07T22:11:47.342",
+    "view_num": 1077
+}

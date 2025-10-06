@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">character/expertjob/doll_controller.exj 路径 为控偶师脚本路径</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[shop doll info]<br />\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9<br />\n[/shop doll info]</span></p>\n\n<p><br />\n<span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">这个文件就是调整人偶商店的格子了</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">0 3 意思是 最低级 3个&nbsp; 1 6 是中级6个 29 就是最高级9个 </span></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-13T12:48:07.541",
+    "view_num": 612
+}

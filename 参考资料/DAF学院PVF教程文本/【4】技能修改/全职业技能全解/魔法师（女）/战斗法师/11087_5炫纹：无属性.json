@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、无属性炫纹数量上限：7<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n[static data]<br />\n200 7 200 1 100 15 30<br />\n[/static data]</p>\n\n<p>0、炫紋持續時間 : 30秒<br />\n1、普通炫紋魔法攻擊力 : 独立攻击力 x 2<br />\n2、移動速度增加率 : 1%%<br />\n3、Buff持續時間 : 30秒<br />\n4、普通炫紋大小比率 : 100%%<br />\n5、大炫紋大小比率 : 125%%<br />\n6、大炫紋魔法攻擊力 : 独立攻击力 x 2.8<br />\n7、超大炫紋大小比率 : 150%%<br />\n8、超大炫紋魔法攻擊力 : 独立攻击力 x 3.3<br />\n[level info]<br />\n9 30000 200 10 30000 100 125 280 150 330</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:21:40.321",
+    "view_num": 67
+}

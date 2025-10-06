@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、崩山击最大跳跃距离：200 px<br />\n4、<br />\n5、<br />\n6、<br />\n7、<br />\n8、多段攻击次数：区间最小2<br />\n9、多段攻击次数：区间最小3<br />\n10、<br />\n[static data]<br />\n30 200 50 200 50 120 150 100 2 3 500<br />\n[/static data]</p>\n\n<p>0、物理攻击力：125%<br />\n已學[血氣旺盛]時<br />\n1、冲击波物理攻击力：独立攻击力 x 2.25<br />\n2、出血机率：20%<br />\n3、出血Lv：12<br />\n4、持续时间：10秒<br />\n5、出血攻击力：45<br />\n6、冲击波范围：区间最小250<br />\n7、冲击波范围：区间最小375<br />\n[level info]<br />\n8 125 225 200 12 10000 45 250 375</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:06:57.607",
+    "view_num": 157
+}

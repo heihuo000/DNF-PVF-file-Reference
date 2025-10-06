@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp; 31&nbsp;&nbsp; &nbsp;攻擊時，以3%的機率出現冰凍針刺。</p>\n\n<p><br />\n[if]</p>\n\n<p><br />\n[cooltime]<br />\n3000&nbsp;&nbsp; &nbsp;<br />\n[attack success]<br />\n1&nbsp;&nbsp; &nbsp;</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`enemy`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n3&nbsp;&nbsp; &nbsp;<br />\n[passive object]<br />\n30059&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;40&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;``</p>\n\n<p>[/passive object]</p>\n\n<p>[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:20:05.011",
+    "view_num": 227
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n7、<br />\n8、<br />\n9、<br />\n10、<br />\n11、<br />\n12、<br />\n13、<br />\n[static data]<br />\n500 -500 800 -2000 80 35 60 45 0 3000 -800 1000 70 50<br />\n[/static data]</p>\n\n<p>0、<br />\n1、第一击物理攻击力：150%<br />\n2、间隔：0.5秒<br />\n3、第二击物理攻击力：300%<br />\n4、间隔：0.5<br />\n5、第三击物理攻击力：300%<br />\n6、第三击攻击次数：3<br />\n7、冲击波物理攻击力：2100%<br />\n8、<br />\n[level info]<br />\n8 150 500 300 500 300 3 2100 150</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:59:19.221",
+    "view_num": 29
+}

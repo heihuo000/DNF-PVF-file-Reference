@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#e74c3c\"><code>支持称号装备</code></span></p>\n\n<p>不可強化、增幅、提鍊、解體、送禮、倉庫儲存 下面代码</p>\n\n<pre>\n<code>[impossible contents]\n    `upgrade`//强化\n    `amplify upgrade`//增幅\n    `disjoint`//分解\n    `gift`//送礼\n    `separate upgrade`//锻造\n    `charac cargo`//仓库存储\n     `ban redeemitem`//出售后不可重新购买\n[/impossible contents]\n</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T18:34:58.469",
+    "view_num": 456
+}

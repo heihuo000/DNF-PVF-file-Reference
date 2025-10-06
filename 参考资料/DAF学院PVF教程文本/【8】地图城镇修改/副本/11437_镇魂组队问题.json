@@ -1,0 +1,7 @@
+{
+    "content": "<p>By：Lox君</p>\n\n<p>http://tieba.baidu.com/p/4340321451</p>\n\n<p><img alt=\"\" height=\"86\" src=\"/media/uploads/2023/05/08/image-20230508214509-1.png\" width=\"237\" /></p>\n\n<p>找了 town worldmap map dungeon文件 都翻了遍。可里面只有 最低等级进入<br />\n按理来说是在这里的。 但是里面没有组队数据 然后又翻了etc 没有。但是老牛的PVF可以进 拿老牛的一个一个文件对比。够蛋疼的。。。<br />\n还是没找到 从中午一直弄到第二天早上七点 。快吐血了 其实中间都是在弄装备</p>\n\n<p>已解決。改一下 dungeon 里面的魂图基础等级就好了 改成90。。 我本以为是图的等级 一直没用理会这个。结果试一下 居然好了。。</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-08T21:45:10.486",
+    "view_num": 569
+}

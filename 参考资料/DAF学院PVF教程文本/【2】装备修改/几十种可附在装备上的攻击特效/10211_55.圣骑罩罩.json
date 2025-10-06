@@ -1,0 +1,7 @@
+{
+    "content": "<p>圣骑罩罩<br />\n攻击直接触发</p>\n\n<p><br />\n代码<br />\n[if]</p>\n\n<p>[set my state]<br />\n1&nbsp;&nbsp; &nbsp;<br />\n[my state]<br />\n`attack`</p>\n\n<p>[cooltime]<br />\n100&nbsp;&nbsp; &nbsp;<br />\n[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`myself`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[duration]<br />\n5000&nbsp;&nbsp; &nbsp;<br />\n[perform skill]<br />\n`priest`<br />\n22&nbsp;&nbsp; &nbsp;50&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:11:51.211",
+    "view_num": 207
+}

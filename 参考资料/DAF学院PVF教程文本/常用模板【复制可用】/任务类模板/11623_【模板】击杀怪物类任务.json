@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>#PVF_File\n\n[grade]\n\t`[daily]`\n\n[npc index]\n\t88001\n//接受任务的NPC（中文是注释-实际要删除）\n\n[complete npc index]\n\t-1\n\n[job]\n\t`[all]`\n\n[grow type]\n\t-1\n\n[level]\n\t1\t99\n\n[type]\n\t`[hunt monster]`\n\n[sub type]\n\t-1\n\n[int data]\n\t316\t-1\t59538\t1\n//\t316（副本代码）\t-1（副本难度）\t59538（怪物代码）\t1（击杀的数量）\t\n[/int data]\n\n[dungeon info]\n\t316\t-1\n//\t316（副本代码）\t-1（副本难度）\n[/dungeon info]\n\n[reward type]\n\t`[item]`\n\n[reward int data]\n\t1295\t1\n[/reward int data]\n\n[reward selection int data]\n\n[/reward selection int data]\n\n[name]\n\t`★★★击杀BOSS★★★`\n\n[depend message]\n\t`★★★击杀BOSS★★★`\n\n[condition message]\n\t`★★★击杀BOSS★★★`\n\n[solve message]\n\t`★★★击杀BOSS★★★`\n</code></pre>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T17:11:55.727",
+    "view_num": 531
+}

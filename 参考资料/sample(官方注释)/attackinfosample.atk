@@ -1,0 +1,86 @@
+// 공격 정보 스크립트 예제 //
+
+[damage] 100			// 데미지.
+[absolute damage] 30		// 방어력을 무시하는 절대 데미지
+[damage bonus] 10		// 데미지의 보너스. %값
+[attack type] [physic]		// 공격의 타입. [physic] [magic] [ignore defense] 중 택1
+[weapon damage apply] 1		// 무기 데미지를 적용할지 여부. 기본값 0. [ignore defense]면 물리 데미지가 적용된다.
+// 공격 대상별 공격 여부. 기본값이면 적지 않아도 됨 //
+[attack myself] 0			// 자신을 공격할지 여부. 기본값 0
+[attack friend] 0			// 아군을 공격할지 여부. 기본값 0
+[attack enemy] 1			// 적(자신과 아군을 제외한 모두)을 공격할지 여부. 기본값 1
+[elemental property] [no element]			// 공격의 원소속성. [no element] [fire element] [water element] [dark element] [light element] 중 택1. 안쓰면 기본값 [no element]1
+[damage reaction] [damage]		// 공격에 맞았을 때의 반응 [none] [damage] [down] [damage except human] 중 택1 
+[push aside] 200			// 뒤로 날리는 힘
+[lift up] 30			// 위로 띄우는 힘
+[knuck back] 1			// 넉백 타입. 0:일반 1:많이 밀림 -1:안밀림
+// 이하의 값은 1 or 0
+[weakness]	3.0 5.5		// 3.0%의 확률로 hp의 5.5%에 해당하는 피해를 입힌다.
+[bounce] 1			// 바운스 여부. 1로 하면 [lift up]의 힘이 바운스때 적용된다.
+[HP drain] 0		// 미구현
+[MP drain] 1		// 미구현
+[ignore defense] 1
+[human damage rate] 100.0	// 살상 (대 휴먼) 공격 비율. 소수점 가능, %값, 100이 기본
+[fort damage rate] 100.0	// 파괴 (대 건물) 공격 비율. 소수점 가능, %값, 100이 기본
+
+[monster damage rate] 100.0	// 괴수 (아머카테고리가 0개인 녀석들을 위한) 공격 비율. 소수점 가능, %값, 100이 기본
+
+[critical hit] +2.7		// 크리티컬 히트 확률 변화치
+[stuck] +2.2			// 스턱 확률 변화치
+[stuck prob increase] 1		// 공격 히트시마다 스턱 확률이 증가하는지 여부. 기본값 0
+[hit wav] `HIT_SOUND`	// 타격시 출력할 효과음의 태그
+[attack direction] [hit lift up]		// 공격 방향. [hit lift up] [hit horizon] [hit down] 중 택1
+[hit info] [cut] [blood] 50 1.0// 첫번째 것은 타격 종류. [cut] [blow] [burn] [etc] [mana burn]중 택1 무기 서브타입 따라갈려면 ``
+				//[mana burn]은 hp가 줄지 않고 mp가 소모됨
+				// 두번째 것은 피 튀기는 여부. [blood] [no blood] 중 택1
+				// 세번째 것은 타격시 일시 정지 시간. 무기 서브타입 따라갈려면 -1
+				// 네번째 것은 힛 딜레이 타임 배수. 무기 서브타입 따라갈려면 -1
+
+
+[active status] [curse] 37 100	// 제일 앞은 공격에 의해 걸리는 상태 이상 종류.
+					// 아래중 중 택일
+					// 두번째는 걸릴 확률 (`[none]을 적었으면 아무 값이나 적을 것)
+					// 세번째는 걸릴 강도 (`[none]을 적었으면 아무 값이나 적을 것)
+
+[active status] [blind] 100 20 3000 10 100		// 확률, 레벨, 지속시간, 시야(%), 스턱률 증가(+)
+[active status] [freeze] 100 20 3000			// 확률, 레벨, 지속시간
+[active status] [stun] 100 20 3000			// 확률, 레벨, 지속시간
+[active status] [slow] 100 20 10000 50 50		// 확률, 레벨, 지속시간, 이속(%), 공속(%)
+[active status] [haste] 100 20 3000 50 50		// 확률, 레벨, 지속시간, 이속(%), 공속(%)
+[active status] [stone] 100 20 3000 50		// 확률, 레벨, 지속시간, 데미지값(+)
+[active status] [sleep] 100 20 3000			// 확률, 레벨, 지속시간
+[active status] [confuse] 100 20 3000 1		// 확률, 레벨, 지속시간, 1이면 몬스터가 혼란에 걸렸을때, 같은편을 공격하게 된다.
+[active status] [hold] 100 20 3000			// 확률, 레벨, 지속시간
+[active status] [weakness] 100 20 50			// 확률, 레벨, 데미지 감소 비율(남아있는 HP를 기준으로 한다)
+[active status] [armor break] 100 20 10000 15		// 확률, 레벨, 지속시간, 내구도 소모 체크 횟수
+[active status] [weapon break] 100 20 10000 15	// 확률, 레벨, 지속시간, 내구도 소모 체크 횟수
+[active status] [poison] 100 10 20000 1000 		// 확률, 레벨, 지속시간, 데미지
+[active status] [lightning] 100 10 2000 100 		// 확률, 레벨, 지속시간, 데미지
+[active status] [bleeding] 100 10 5000 10 		// 확률, 레벨, 지속시간, 데미지
+[active status] [burn] 100 10 20000 1000 10 1 3000	// 확률, 레벨, 지속시간, 데미지, 주변데미지, 주변데미지 옵션(1이면 적군에게만 주변데미지가 적용된다), 주변데미지 적용간격(시간)
+[active status] [bless] 100 10 5000 10 10 10 10	// 확률, 레벨, 지속시간, 힘,체력,지능,정신력
+[active status] [curse] 100 10 5000 20 20 20 20	// 확률, 레벨, 지속시간, 힘,체력,지능,정신력
+
+
+///// 공격정보 (.atk) /////
+[active status] [curse] 100 10 5000 20 20 20 20
+- equ와 사용 방법은 같으나, `.atk`파일에는 target정보가 들어가지 않는다.
+
+///결투장 상태보정을 위해 추가하는 것.
+[human active status rate] 70.0 // 휴먼 아머에게 70.0%의 약한 상태변화 효과를 주게 된다. 수치의 1/10
+
+[is hit number increasing] 0    //1이면 피격이 올라가고 0이면 올라 가지 않는다.
+
+[ignore diehard] 1 		//불사 패시브를 무시할지 여부. 기본값 0
+
+//mkissue 120531 add
+[max target hit number] 1
+[ignore super armor] 1
+[ignore weight] 1
+
+[pvp]
+	[damage bonus] -10	// 기술 고유의 공격력
+[/pvp]
+
+//mkissue 120601 add
+[hit direction] [front]

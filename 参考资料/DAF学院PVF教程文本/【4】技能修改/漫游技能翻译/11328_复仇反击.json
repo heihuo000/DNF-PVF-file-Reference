@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n【复仇反击】<br />\n路径：skill\\gunner\\countershoot.skl<br />\n[@05][static data]<br />\n[@02]1000 //被攻击后发动时间<br />\n[@05][/static data]<br />\n[@05][level info]<br />\n[@02]5<br />\n[@02]513 //物攻513%<br />\n[@02]100 //发动速度比率100%<br />\n[@02]300 //眩晕几率300&permil;<br />\n[@02]26 //眩晕等级26<br />\n[@02]1000 //眩晕持续时间1000ms</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T20:23:55.340",
+    "view_num": 45
+}

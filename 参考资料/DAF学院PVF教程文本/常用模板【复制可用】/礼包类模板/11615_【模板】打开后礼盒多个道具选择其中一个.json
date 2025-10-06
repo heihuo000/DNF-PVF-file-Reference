@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>#PVF_File\n\n[name]\n\t`礼盒自选模板`\n\n[explain]\n\t`礼盒蓝字描述`\n\n[flavor text]\n\t`礼盒下方灰字秒速`\n\n[grade]\n\t1\n\n[attach type]\n\t`[account]`\n\n[rarity]\n\t4\n\n[usable job]\n\t`[all]`\n[/usable job]\n\n[minimum level]\n\t1\n\n[icon]\n\t`Item/stackable/consumption_cn.img`\t1385\n\n[stackable type]\n\t`[booster selection]`\t0\n\n[booster category num]\n\t0\n\n[booster selection num]\n\t1\n\t//这里控制礼盒选择数量\n\n[booster select category]\n\t0\t0\t\n\t[stackable]\n\t\t20190533\t1\n\t\t20190534\t1\n\t\t20190535\t1\n\t\t//代码\t数量（顺序往下写即可）\n\t[/stackable]\n[/booster select category]\n\n[move wav]\n\t`BONE_TOUCH`\n</code></pre>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T17:01:02.470",
+    "view_num": 1949
+}

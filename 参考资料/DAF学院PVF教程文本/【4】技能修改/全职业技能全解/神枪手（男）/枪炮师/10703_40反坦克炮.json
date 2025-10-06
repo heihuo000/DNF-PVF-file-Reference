@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n6、爆炸次數 : 1次<br />\n[static data]<br />\n10 0 3 0 1000 0 1<br />\n[/static data]</p>\n\n<p>0、独立攻击力 x 1.21<br />\n1、独立攻击力 x 4.84<br />\n2、拔出武器需要的時間 : 0.35秒<br />\n3、物理攻擊力 : 144% + &lt;0&gt;<br />\n4、爆炸物理攻擊力 : 578% + &lt;1&gt;<br />\n5、爆炸大小比率 : 180%<br />\n[level info]<br />\n6 121 484 350 144 578 180<br />\n[/level info]</p>\n\n<p><br />\n以下为EX:</p>\n\n<p><br />\n0、独立攻击力 x 1.21<br />\n1、独立攻击力 x 4.84<br />\n2、拔出武器需要的時間 : 0.35秒<br />\n3、物理攻擊力 : 144% + &lt;0&gt;<br />\n4、爆炸物理攻擊力 : 578% + &lt;1&gt;<br />\n5、爆炸大小比率 : 150%<br />\n6、出血Lv : Lv21<br />\n7、出血持續時間 : 5秒<br />\n8、出血攻擊力 : 206<br />\n9、出血大小比率 ：180% （猜测）<br />\n[level info]<br />\n10 121 484 350 144 578 150 21 5000 206 180<br />\n[/level info]</p>\n\n<p>0、独立攻击力 +10%<br />\n1、独立攻击力 +10%<br />\n2、物理攻击力 +10%<br />\n3、爆炸物理攻击力 +10%<br />\n4、爆炸大小比率 +10%<br />\n5、出血概率 +10%<br />\n6、出血LV +2<br />\n7、出血伤害 +10%<br />\n[special level up]<br />\n-1 0 &#39;%&#39; 10<br />\n-1 1 &#39;%&#39; 10<br />\n-1 3 &#39;%&#39; 10<br />\n-1 4 &#39;%&#39; 10<br />\n-1 5 &#39;%&#39; 10<br />\n-1 6 &#39;+&#39; 2<br />\n-1 8 &#39;%&#39; 10<br />\n[/special level up]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T13:11:15.960",
+    "view_num": 132
+}

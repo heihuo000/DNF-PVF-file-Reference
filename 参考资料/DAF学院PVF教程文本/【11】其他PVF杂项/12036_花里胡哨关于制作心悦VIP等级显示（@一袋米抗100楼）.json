@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#333333\"><span style=\"font-family:&amp;quot\">etc/emotionexpressiondata.etc</span></span><br />\n<span style=\"color:#333333\"><span style=\"font-family:&amp;quot\">里面增加</span></span></p>\n\n<pre>\n<code>33 1`Common/EmotionExpression/vip_01.ani``Common/EmotionExpression/vip_01.ani`001`心悦1``-心悦1``$END`</code></pre>\n\n<p><br />\n<span style=\"color:#333333\"><span style=\"font-family:&amp;quot\">33为ID 可以一直增加 ani自己随便搓</span></span><br />\n<span style=\"color:#333333\"><span style=\"font-family:&amp;quot\">etc/titlebook.etc</span></span><br />\n<span style=\"color:#333333\"><span style=\"font-family:&amp;quot\">称号簿里面加一条</span></span><br />\n<span style=\"color:#333333\"><span style=\"font-family:&amp;quot\">怎么凑条件自己看着办</span></span></p>\n\n<pre>\n<code>[section icon]\n\t`Interface2/TitleBook/TitleBookIcon.img`5\n[section name]\n\t`测试`\n[reward type]\n\t[name]\n\t\t`發放心情狀態222`\n\t[image path]\n\t\t`Interface/EmotionExpression/EmotionExpressionIcon.img`10\n\t[give emotion]\n\t\t33\n[/reward type]</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2024-04-10T16:22:11.611",
+    "view_num": 387
+}

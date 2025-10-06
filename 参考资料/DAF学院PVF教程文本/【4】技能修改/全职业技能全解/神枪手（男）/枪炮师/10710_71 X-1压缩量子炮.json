@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、蓄氣時間上限 : 0.8秒<br />\n1、最大蓄氣後自動發射時間 : 2秒<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n7、<br />\n8、<br />\n9、<br />\n10、吸附範圍 : 500px<br />\n11、<br />\n12、<br />\n13、<br />\n[static data]<br />\n800 2000 500 400 600 30 70 110 100 150 500 300 240 120<br />\n[/static data]</p>\n\n<p>0、物理攻擊力 ：区间最小：&nbsp; 独立攻击力 x 24<br />\n1、物理攻擊力 ：区间最大：&nbsp; 独立攻击力 x 33.6<br />\n[level info]<br />\n2 2400 3360<br />\n[/level info]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T13:13:45.071",
+    "view_num": 64
+}

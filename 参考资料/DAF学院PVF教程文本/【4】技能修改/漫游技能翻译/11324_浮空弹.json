@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n【浮空弹】<br />\n路径：skill\\gunner\\liftshot.skl<br />\n[@05][static data] //①不随等级变动的数据<br />\n[@02]250 //射击后自身僵直时间<br />\n[@05][/static data]<br />\n[@05][level info]<br />\n[@02]4<br />\n[@02]350//基础浮空力度<br />\n[@02]75//②浮空飞出角度<br />\n[@02]240//物攻240%<br />\n[@02]50//浮空力比率=50%独立</p>\n\n<p><br />\n这里感谢大神@bbmmweiwei 之前对&ldquo;浮空飞出角度&rdquo;和&ldquo;射击后自身僵直时间&rdquo;的补充</p>\n\n<p>注释：①不是每个技能都有这部分数据，也不是所有不随等级变动的数据都保存在这里。 ②角度以角色正前方为0度，向上方（即跳起来的方向）角度增加，<br />\n垂直于地面即为90度。这里没有试过把角度改成负的会怎么样，不知道怪会不会钻进地下</p>\n\n<p>[@05][level property]//这里是运算以上数据嵌入到等级文本level_property_16210<br />\n[@02]1//？？？？<br />\n[@02]99<br />\n[@09]12<br />\n[@0A]level_property_16210<br />\n[@02]-1//？？？？<br />\n[@02]0<br />\n[@04]1.00<br />\n[@02]-1<br />\n[@02]2<br />\n[@04]0.10<br />\n[@02]-1<br />\n[@02]3<br />\n[@04]1.00<br />\n[@05][/level property]<br />\n[@05][skill preloading image]技能插图<br />\n[@05][/skill preloading image]<br />\n[@05][feature skill index]//TP技能的索引<br />\n[@02]140<br />\n技能插图是放觉醒的时候左下角那个插图吗？<br />\n不是,是部分技能需要用到的特效插图,像强袭流星打会调用HandStrike.img<br />\n懂了！不过其他的，比如&rdquo;运算以上数据嵌入到等级文本&ldquo;还是不明白有什么用不管怎么说，谢谢啦！<br />\n0 1.00 -1第一组数据,2 0.10 -1第二组数据,第二组数据的2是取level info的第三位数据乘以0.10显示到level_property_16210 的文本以&lt;int&gt;或&lt;float1&gt;类型显示,<br />\n而-1参考为回车,分析技能其实用Decrypt解压出来更直观</p>\n\n<p>还有一点就是修改level property的数据仅作为显示,并不会影响到技能的真实数据</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T20:23:25.805",
+    "view_num": 109
+}

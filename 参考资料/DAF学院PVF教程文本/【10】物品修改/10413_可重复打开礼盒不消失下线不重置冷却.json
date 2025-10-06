@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[stack limit]<br />\n&nbsp;1</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[do not delete]</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[cool time]<br />\n&nbsp;86400000</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[cooltime maintenance]<br />\n&nbsp;1&nbsp;1&nbsp;1</span></p>\n\n<p><br />\n<span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">第一段：携带上限，1个</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">第二段：使用后不删除不消失</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">第三段：冷却时间（换算比例1秒=1000，一分钟也就是60000，十分钟就是600000）</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">第四段：下线后不重置冷却，必须一直在线，中途下线已重置的冷却部分不消失，可继续挂机。</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">可根据礼盒用途，选择再加一段时间戳，用日期控制多久后盒子消失。</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">使用上面4段代码之前，记得把原版里面的携带上限和冷却删除，避免冲突。</span></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-06T21:57:28.617",
+    "view_num": 586
+}

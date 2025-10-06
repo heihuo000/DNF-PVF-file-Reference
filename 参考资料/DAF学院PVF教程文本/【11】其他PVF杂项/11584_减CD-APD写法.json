@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>#PVF_File\n\n[type]\n    `change status`\n\n[duration]\n    0\n\n[effect animation]\n    ``\n\n[buff]\n    0\n\n[icon image]\n    ``    0\n\n[max overlap]\n    1\n\n[string data]\n    `skill cool time`\n[/string data]\n\n[int data]\n    1\n[/int data]\n\n[float data]\n    10.0\n[/float data]\n\n[name]\n    ``\n</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-15T12:56:41.941",
+    "view_num": 585
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>特定技能攻击力增加：例为冰刃。波动剑攻击力为18%</p>\r\n\r\n<p>[skill data up]<br />\r\n&#39;[swordman]&#39; 21 &#39;[dungeon type]&#39; &#39;[level ]&#39; 3 &#39;%&#39; 18<br />\r\n[/skill data up]<br />\r\n注释说明：</p>\r\n\r\n<p>第一个参数为角色职业<br />\r\n第二个参数为技能编号<br />\r\n第三个参数为地图模块<br />\r\n第四个参数为属性模块（如[static]等静态数据或[level]技能信息等）<br />\r\n第五个参数为属性模块中的信息数据编号<br />\r\n第六个参数为运算符%，此处表示增加的意思。其他运算符未做测试。<br />\r\n第七个参数为数值。<br />\r\n红字相关参数：</p>\r\n\r\n<p>静态数据项：static<br />\r\n技能数据信息项：level<br />\r\n技能冷却时间：cooltime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （参数项：0<br />\r\n技能MP消耗：mp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （参数项：0<br />\r\n每10秒MP的消耗量：maintain mp<br />\r\n说明：maintain为保持的意思，此处为持续消耗，通过搜索得出，只有杀意波动才有此项数据，其他未知<br />\r\n技能消耗道具：skill consume item</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:20:47.653",
+    "view_num": 950
+}

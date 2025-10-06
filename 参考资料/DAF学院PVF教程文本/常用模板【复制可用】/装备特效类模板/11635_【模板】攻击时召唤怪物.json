@@ -1,0 +1,7 @@
+{
+    "content": "<h2>以下的代码意思就是：攻击时有1%几率召唤一只LV10的哥布林 哥布林持续存在60S（冷却时间78S）</h2>\n\n<pre>\n<code>[if]\n\t[cooltime]\n\t\t78000  //冷却时间（中文是注释-实际要删除）\n\t[attack success]\n\t\t1\n[/if]\n\n[then]\n\t[target]\n\t\t`myself`\t-1\n\t[duration] \n\t\t60000   //持续时间（中文是注释-实际要删除）\n\t[reduce duration at pvp module]\n\t\t75\n\t[probability]\n\t\t1 //几率（中文是注释-实际要删除）\n\t[summon monster]\n\t\t1\t10\t1 //三个数字分别是：怪物代码 怪物等级 怪物数量（中文是注释-实际要删除）\n[/then]\n</code></pre>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T18:25:01.401",
+    "view_num": 885
+}

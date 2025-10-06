@@ -1,0 +1,7 @@
+{
+    "content": "<p>By：Kroiema</p>\n\n<p>http://tieba.baidu.com/p/4556556655?see_lz=1</p>\n\n<p><br />\n首先城镇问题....<br />\n城镇引用的需要用到四个文件夹或者四个方面 分别是 map town region 和worldmap map中的区域移动会引用到town的编号也就是 town.lst 中的编号<br />\n而大家经常遇到较多的问题有可能是如下这几种<br />\n1.添加了map 转码没问题 为什么进去会炸呢<br />\n1.map中的部分代码不支持 没删减干净<br />\n2.map中引用的npc没删掉 或者 npc.lst 没有指定npc<br />\n2.加完的城镇地图 为什么感觉好别扭啊 怎么感觉没显示全呢。</p>\n\n<p><img alt=\"\" height=\"205\" src=\"/media/uploads/2023/05/08/image-20230508215632-1.png\" width=\"487\" /></p>\n\n<p>看到这个国服文件的写法顺序了吧 大家往往不删除这种写法代码 导致炸端<br />\n然而怎么修复呢 修复了又不显示全面 怎么办呢 下面上图 对比下就明白了。</p>\n\n<p><img alt=\"\" height=\"238\" src=\"/media/uploads/2023/05/08/image-20230508215639-2.png\" width=\"260\" /></p>\n\n<p>3.为什么我加完城镇 跑服务端会出现 gameworld fail啊 代码没错啊 编号没错啊 转码没错啊 怎么回事？<br />\n那是因为 town那里添加的编号一定要按顺序来 一定要是连续的 不能有空断。<br />\n4.为什么我进选图界面那会炸啊，boom！！！的不要不要的啦。。<br />\n检查wdm中引用的dgn编号 pvf里有没有。<br />\n把国服wdm引用的后缀xui改成ui<br />\n发现国服的worldmap中的ui是看不懂的数据，别慌，引用pvf原有的ui 里边的dgn编号相应的改下即可。<br />\n还有注意的就是 button那里编号不要重复切记 切记</p>\n\n<p>至于地图方面 主要留意的就是 tile的写法和修复 还有就是尽可能的不要丢特效 。 也就是map中引用的特效编号<br />\n还有就是map中引用的怪物编号不要丢 否则会炸端的。</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-08T21:56:42.018",
+    "view_num": 661
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、多段攻击间隔：0.15秒<br />\n2、最大多段攻击次数：10次<br />\n3、爆炸大小比率：120%<br />\n[static data]<br />\n250 150 10 120<br />\n[/static data]</p>\n\n<p>0、持续时间：3秒<br />\n1、鬼印珠魔法攻击力：45%<br />\n2、鬼印珠大小比率：30%<br />\n每增加1个波动印时：<br />\n3、攻击力增加比率：23%<br />\n4、持续时间：0.3秒<br />\n5、增加多段攻击次数：1次<br />\n6、鬼印珠大小增加比率：10%<br />\n7、爆炸魔法攻击力：90%<br />\n8、爆炸攻击力增加比率：45%<br />\n[level info]<br />\n9 3000 45 1000 23 300 1 100 90 45</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:15:43.262",
+    "view_num": 139
+}

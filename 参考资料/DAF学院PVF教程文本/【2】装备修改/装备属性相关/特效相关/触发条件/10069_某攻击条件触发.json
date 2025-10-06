@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>[attack condition]<br />\n&#39;counter&#39;<br />\n[event attack success]<br />\n1<br />\n攻击条件参数相关：</p>\n\n<p>破招：counter<br />\n背後攻擊：back attack<br />\n暴擊：critical<br />\n回避：stuck（攻击成功为2，MISS为1）<br />\n注释：背击反击：背后攻击且检测到对象状态为攻击状态的情况</p>\n\n<p><br />\n--------------------------------------------------------------------------------</p>\n\n<p><br />\n攻击条件：背后攻击<br />\n对象状态：攻击状态</p>\n\n<p>[if]</p>\n\n<p>[attack condition]<br />\n`back attack`</p>\n\n<p>[target state]<br />\n`attack`</p>\n\n<p>[event attack success]<br />\n1<br />\n[/if]</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:27:53.138",
+    "view_num": 347
+}

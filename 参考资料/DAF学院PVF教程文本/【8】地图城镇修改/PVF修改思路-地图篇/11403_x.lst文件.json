@@ -1,0 +1,7 @@
+{
+    "content": "<p>2，*.lst文件</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>整个pvf，每个文件夹底下，都有个*.lst文件。</p>\n\n<p>*.lst文件，是pvf，甚至整个游戏的核心和灵魂躯干。</p>\n\n<p>游戏的相互调用，如调用某个地图，调用某个装备，调用某个技能，都是通过对应的ID来实现。而ID的设置，就是在*.lst文件里。</p>\n\n<p>&nbsp;</p>\n\n<p>*.lst文件的内容很浅显易懂，每一行的格式是</p>\n\n<p>ID（空格）路径（空格）</p>\n\n<p>A，路径要用两个单引号&rsquo;xxxxxx&rsquo;包住</p>\n\n<p>B，ID数字的先后顺序不重要，同类型的ID数字不能重复</p>\n\n<p>C，路径不能是错误路径</p>\n\n<p>D，行末记得要空格</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>额外说明一点，不同分类之间的ID，可以是相同的。</p>\n\n<p>例如，NPC的ID可以有1，而副本接口的ID也可以有1，因为它们是属于不同类，不会相互混淆。</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T22:16:03.258",
+    "view_num": 676
+}

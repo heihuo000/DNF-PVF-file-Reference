@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:难道你是00</p>\n\n<p>http://tieba.baidu.com/p/4650665673</p>\n\n<p><br />\n刚刚回家看见有个傻逼再喷我，我就特别想问你，你是求学的还是特麽的干嘛的，别人都在耐心的等着，你这个傻逼在这找不自在，下面是深渊地图的开启方法，不要说是哪里的原创 ， 另外我需要一些人帮助我去完成复古，毕竟一个人的力量真的有限。</p>\n\n<p><br />\n首先我们打开</p>\n\n<p><img alt=\"\" height=\"59\" src=\"/media/uploads/2023/05/08/image-20230508215808-1.png\" width=\"138\" /></p>\n\n<p>随便找一个路径写入<br />\n[seal door map index]<br />\n60026<br />\n[seal door pos]<br />\n1 0<br />\n[hit count]<br />\n50 50 50 50 50<br />\n[seal door appear rate]<br />\n10<br />\n[hell dungeon]<br />\n1</p>\n\n<p>然后我们打开worldmap文件</p>\n\n<p>[hell freepass item]<br />\n8272 1 8376 1 8247 1<br />\n[/hell freepass item]</p>\n\n<p><br />\n[item condition]<br />\n3330<br />\n[/item condition]写入即可</p>\n\n<p>如果出现深渊票不足的[hell freepass item]<br />\n3330<br />\n[/hell freepass item]即可因为天空之城的需要活动才能进入</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-08T21:58:10.815",
+    "view_num": 599
+}

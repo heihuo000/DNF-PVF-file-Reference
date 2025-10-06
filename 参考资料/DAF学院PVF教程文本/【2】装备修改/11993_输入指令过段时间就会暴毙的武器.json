@@ -1,0 +1,7 @@
+{
+    "content": "<p><img alt=\"\" height=\"290\" src=\"/media/uploads/2023/12/20/1.png\" width=\"320\" /></p>\n\n<p><img alt=\"\" height=\"373\" src=\"/media/uploads/2023/12/20/2.png\" width=\"470\" /></p>\n\n<p>装备调用9875特效 特效改成跟随</p>\n\n<p>路径：<strong><span style=\"color:#e74c3c\"><code>passiveobject/actionobject/monster/tower_of_despair/d_touch.obj</code></span></strong></p>\n\n<p>删除obj：<strong><span style=\"color:#e74c3c\"><code>9875</code>&nbsp;<code>9876</code>&nbsp;<code>9877</code></span></strong>&nbsp;中的</p>\n\n<pre>\n<code>[TRIGGER]\n\t[FRAME]\n\t\t0   0\n\t[WHICH]\n\t[AI CHARACTER]\n\t[CHECKUP]\n\t\t[IS INDEX]\n\t\t\t21507\n\t\t[/IS INDEX]\n\t\t[CHECKED NO]\n\t\t[=]\n\t\t\t0\n\t[/CHECKUP]\n\t[DO BEHAVIOR]\n\t[ME]\n\t\t0\n[/TRIGGER]\n</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-12-20T15:37:07.945",
+    "view_num": 407
+}

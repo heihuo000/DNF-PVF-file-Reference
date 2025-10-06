@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp; 34&nbsp;&nbsp; &nbsp;攻擊時，有10%的機率增加20%的物理暴擊率和10%的魔法暴擊率，效果持續20秒。</p>\n\n<p><br />\n[if]</p>\n\n<p>[cooltime]<br />\n40000&nbsp;&nbsp; &nbsp;<br />\n[attack success]<br />\n1&nbsp;&nbsp; &nbsp;</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`myself`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[duration]<br />\n20000&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n10&nbsp;&nbsp; &nbsp;<br />\n[reduce probability to human armor at pvp module]<br />\n80&nbsp;&nbsp; &nbsp;<br />\n[stat]<br />\n`physical critical hit rate`<br />\n`+`<br />\n20&nbsp;&nbsp; &nbsp;<br />\n[stat]<br />\n`magical critical hit rate`<br />\n`+`<br />\n10&nbsp;&nbsp; &nbsp;<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:20:33.799",
+    "view_num": 174
+}

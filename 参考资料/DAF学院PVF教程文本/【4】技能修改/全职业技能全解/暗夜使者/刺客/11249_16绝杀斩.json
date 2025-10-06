@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n[static data]<br />\n300 -1000 600 -1000 400 -1000<br />\n[/static data]</p>\n\n<p>0、<br />\n1、物理攻击力：371% + &lt;2&gt;<br />\n2、物理攻击力：独立攻击力 x 0.97<br />\n3、眩晕几率：41.6%<br />\n4、眩晕LV：23级<br />\n5、眩晕时间：1.04秒<br />\n6、下段踢物理攻击力：独立攻击力 X 0.19<br />\n7、切割攻击物理攻击力：48% + &lt;7&gt;<br />\n8、切割攻击物理攻击力：独立攻击力 X 0.13<br />\n9、切割攻击次数：3次<br />\n10、增加攻击速度持续时间：20秒<br />\n11、增加攻击速度比率：0.3%<br />\n[level info]<br />\n11 371 97 416 23 1040 19 48 13 3 20000 3</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:56:50.031",
+    "view_num": 45
+}

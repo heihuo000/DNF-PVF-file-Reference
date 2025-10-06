@@ -1,0 +1,223 @@
+// 수동 오브젝트 스크립트 파일 샘플 //
+
+[name] (스트링 인덱스)		// 오브젝트의 이름
+[width] 40 10			// 몬스터의 충돌체크 범위.
+
+[layer] `[bottom]`		// 그리기 레이어. `[close]` `[normal]` `[bottom]` `[closeback]` `[middleback]` `[distantback]` 중 택일
+[layer level] -500 		// 레이어 레벨. 이 수치가 높을수록 앞에 위치한다. 즉 이 수치가 낮으면 수치가 높은 놈들에게 가려질 것이다.
+[pass type] `[pass all]`	// `[pass all]` `[pass only float type]` `[do not pass]` 중 택일 `[pass only red team]`, `[pass only blue team]` 추가(세력전 용)
+[piercing power] 50		// 공격시의 관통력. 공격 성공시 확률을 계산하여 실패하면 오브젝트가 사라짐
+[piercing tolerance] 1		// 관통 내성
+
+[hp max] 5000 			// 패시브 오브젝트의 HP값 없으면 아예 데미지 자체를 입지 않음(장애물 개념)
+[hp destroy] 1			// HP 다 떨어지면 부숴질것인가 말 것인가. 0이면 안부서짐, 1이면 부서짐
+// 타격감은 있되 부서져서는 안되는 오브젝트를 만들고 싶으면 [hp max]를 0 이상으로 대충 정해주고 [hp destroy]를 0으로 해주면 때리면 반응은 있는데 절대 안부서짐.
+
+[vanish on move collision] 1 	// 충돌시 사라지는지 여부 (1: 사라짐[기본] 0: 사라지지 않음)
+
+[category]			// 해당 오브젝트의 소속 카테고리의 리스트
+`[undead]`
+[/category]
+// 카테고리 목록
+// 종족 : `[human]``[beast]``[plant]``[insect]``[machine]``[hybrid]``[undead]``[devil]``[spirit]``[dragon]`
+// AI : `[melee combat]``[range combat]``[close-passive]``[close-carefully]``[close-tough]``[close-manace]`
+// 아머 : `[human armor]``[fort armor]``[divine armor]`
+// 기타 : `[goblin]``[tau]``[lugaru]` , `[fixture]`, `[stay]` 추가 [stay] 는 제자리에서 움직이지 않음
+
+
+
+// 애니메이션 리스트. 없는 것은 적지 않아도 됨. 혹은 ``로 넣으면 없는 것으로 처리 //
+[basic motion] `Lawn.ani`		// 기본 모션 애니메이션 파일 이름
+[etc motion]			// 하드코딩용 모션 애니메이션 파일 이름 리스트 (순서가 중요함)
+`Burn.ani`
+[/etc motion]			// 반드시 이것으로 닫아줘야 함
+
+[basic action] `blah/basic.act`	// 기본 액션의 경로와 파일 이름
+
+[etc action] 		// 오브젝트는 기본적으로 어택이 없기 때문에 [action list] 태그는 쓰지 않고 [etc action] 태그만 쓴다.
+`blah/action1.act`	// 커스텀 액션 - 액션파일의 [SET ACTION] [COSTOM] 으로 접근할 수 있는 액션들 앞에서부터 0, 1 순.
+`blah/action2.act`	// 커스텀 액션
+[/etc action]
+[team] 0	// 팀번호 0~ : 캐릭터 팀        100~ : 몬스터 팀      200~ : 중립팀
+[trap] 1	// 트랩여부. 1이면 깨야만 클리어됨.
+[last action] `pangya.act`	// 파괴되기전에 반드시 한번 실행될 action의 파일경로.
+
+[destroy particle]
+	`Particle/Destroy.ptl`	// 파괴될 때 생성할 (1회) 파티클의 스크립트 파일 이름. 상대 경로
+[/destroy particle]
+
+// 유도기능
+[homing]
+	[homing use] 1
+	[homing follow] `[ENEMY]`		// `[ME]` `[ENEMY]`  //`[CHARACTER]` 0 - 캐릭터일 경우에는 파티 인덱스를 넣어 준다.
+						// `[MONSTER]` 1 - 특정 몬스터 따라 다니게 하기 위해서 숫자는 인덱스	
+ 	[homing velocity] 100 50			// 속도, 가속도
+	[homing check gap] 200			// 추적중인 타겟 위치 체크 시간 간격(1/1000)초
+	[sync animation rotation] 1		// 애니메이션을 이동 방향에 따라 정렬시킬 것인지 여부 (기본값 0)
+	[max rotation] 200			// 초당 최대 회전 가능한 각도(0이면 무한 회전)
+	[init rotation] 0			// 오브젝트 생성시 회전각도(기본값 0)
+	[diff rotation] 100			// 목표를 인지할 수 있는 각도(기본값 180) - [max rotation]이 0이 아닐 때 작동
+	[homing time] 10000			// 유도기능이 작동하는 시간(0이면 무한대, 기본값 0)
+	[sync target move]			// 호밍 기능 도중 타겟이 이동하면 그 거리만큼 실시간 이동 되어서 호밍 퀘적이 변하지 않게 하는 기능
+[/homing]
+
+
+[sound category] 
+`[after object create]` `ZOMBIE_EYEROLLING_LOOP` 43739 //객체 생성후 바로 소리나게 할 경우
+`[on frame]` `ZOMBIE_EYEROLLING_LOOP` 43739 1 //오브젝트가 일정 프레임 이상 지났을때, 마지막에 시작 프레임 번호
+`[on attack]` `ZOMBIE_EYEROLLING_LOOP` 43739 //다른오브젝트와 충돌 했을 때
+`[on damage]``ZOMBIE_EYEROLLING_LOOP` 43739 //오브젝트가 데미지를 입었을 때
+`[on destroyobject]` `ZOMBIE_EYEROLLING_LOOP` 43739 //오브젝트가 파괴 되었을 때
+//`[카테고리]` `사운드 태그이름` [오브젝트 인덱스] (루프인 사운드를 한번만 나오게 할려면 -1, 아무 조건 없을경우 -2)
+//파괴 사운드는 loop하지 말것
+[/sound category]
+
+[add object effect]
+`Ani/ZEyeBallGlow.ani` 100 //layer 파일 이름, 붙이는 순서
+[/add object effect]
+
+[add particles]
+
+	[particle]
+		[file]`a.ptl`					// 파티클의 생성위치는 패시브 오브젝트의 생성 위치 + 파티클 스크립트의 생성 위치
+	[/particle]
+
+	[particle]
+		[file] `b.ptl`
+		[create delay]	1000			// 패시브 오브젝트 생성후 파티클 이펙트가 나오기까지 딜레이
+		[create sound]	`SOUND_TAG`		// 파티클 생성시 출력할 사운드(루프 지원 안함)
+		[follow parent]	 10 10 10		// 파티클의 생성위치를 패시브 오브젝트에서 특정위치 만큼 떨어진 위치로 변경  <move type : 가장 마지막에 선언된 move type 만 유효>
+	[/particle]
+
+[/add particles]
+
+[object destroy condition]
+	`[destroy condition]` `[time limite]` 4000
+
+	//[on end of animation]이면 에니메이션 종료 후 오브젝트 삭제, 그외에 입력사항없음
+	//예>>[on end of animation]
+	//[z pos equal zero] 이면 땅에 닿았을 때 오브젝트 삭제, 그외에 입력사항없음
+	//예>>[z pos equal zero]
+	//[time limite] 이면 시간 지난 후 삭제 [time limite]에만 시간 입력
+	//예>>[time limite] 400
+
+	`[destroy action]` `[only destroy]`
+	//[only destroy]이면 자신 파괴
+	//[object create after destroy]이면 자신 파괴 후 다른 오브젝트 생성
+	`[add object index]`		
+	1
+	30005		//새로 생성할 오브젝트 인덱스
+
+
+	//오브젝트 충돌시에 처리, 추가 옵션으로 없으면 안넣어도 무방
+	`[on attack]` `[object create after destroy]` 
+	`[add object index on attack]`
+	1
+	30005		//새로 생성할 오브젝트 인덱스
+[/object destroy condition]
+
+[is blocking obj] 1	// 1로 설정하고 문앞에 놓으면 문이 안열림.
+[is hp by difficulty] 1 //1이면 난이도에 따라 hp 변경 노말 * 1.0 - 익스 * 2.0 - 마스터 * 3.0 - 킹스 * 4.0 - 히어로즈 - * 5.0
+
+[hp gage] 1 //1이면 hp게이지 그린다.
+
+[burning death path] `PassiveObject/Common/Animation/SunkenRock.ani`	// 화속성 무기로 피니시를 당할 경우 출력할 이펙트 경로(본 태그를 기입할 경우 화속성일때만 죽는다
+
+[can beat index] // 이 태그 내의 인덱스를 가진 몹들이 때린 경우에만 데미지를 입는다.
+65523
+61902
+[/can beat index]
+
+[apply physics] 1500	// 동역학 적용, 강체의 뉴턴값(기본 1500N)
+
+
+[follow parent] `[from parent]`    // `[path gate]`   들어가는 문에서 랜덤한 위치
+				   // `[parent]`      PARENT와 정확히 겹치는 자리에
+				   // `[from parent]` PARENT와의 상대적 위치를 유지
+				   // `[keep position]` 좌표 유지
+				   // `[none]`		디폴트값. 따라다니지 않음.
+
+
+// 악령의 구름용 속도제어 패시브 오브젝트 (순서 상관없이 여러 개의 [passive object] 등록 가능)
+// 악령의 구름의 [int data] 중 속도 증가 키 오브젝트 인덱스(4번째), 속도 감소 키 오브젝트 인덱스(6번째)가 모두 -1이어야 이 태그가 작동한다.
+[speed control passive objects]
+[passive object]
+	[index] 9165		// 속도를 제어하는 오브젝트 인덱스
+	[speed] `[up]`		// 속도 증가
+[/passive object]
+[passive object]
+	[index] 51332		// 속도를 제어하는 오브젝트 인덱스
+	[speed] `[down]`	// 속도 감소
+[/passive object]
+[/speed control passive objects]
+
+//주기적으로 패시브 오브젝트를 생성하기 위한 패시브 오브젝트 제네레이터를 위한 태그//////////////
+//생성할 오브젝트 등록.
+[objects]
+	[object]
+		[id] 1		   // [data] 패턴에 사용할 아이디. 패턴에 나올 오브젝트를 이 값으로 구분
+		[index] 9974	   // 생성할 오브젝트 인덱스
+		[probability] 0.25 // 오브젝트가 생성될 확률
+		[warning] `true`   // warning mark 표시 여부
+	[/object] 
+[/objects]
+//[patterns]에 패턴들을 종류별로 기록하고, [sequences]에서 그 패턴들이 나올 순서를 지정한다
+[patterns]
+	[pattern] 		//->패턴들을 지정할 수 있다. 여러개도 가능
+		[name] `A`	//->패턴의 고유한 이름. 유일한 이름이어야 한다.
+		[interval] 500	//->오브젝트가 생성되는 시간 주기. ms단위.
+		[columns] 3	//->한 번의 주기에 생성될 패턴의 단위 개수.
+		[data] 		//->여기서 패턴 데이터를 지정한다. 0은 빈 공간, 1은 생성할 패시브 오브젝트를 의미한다.
+			0 1 1 	//  [data] 태그를 생략할 경우 오브젝트는 랜덤하게 나온다.
+			0 1 0 	//  [columns]값이 3일 경우 data의 숫자를 3개씩 끊어서 패턴을 생성한다.
+			1 0 1 	//  따라서 데이터 갯수는 반드시 column의 배수여야 한다.
+			0 1 1 
+			1 0 1
+		[/data]
+	[/pattern] 		//->여기까지가 하나의 패턴
+[/patterns]
+[sequences]				//->위에서 지정한 패턴들을 순차적으로 뿌려준다. 
+	[pattern] `A` 3000 [/pattern]	//  첫번째 인자는 패턴 이름, 반드시 위에 있는 [patterns] 태그에서 지정한 이름이어야 한다.
+	[pattern] `B` 3000 [/pattern]	//  두번째 인자는 패턴이 지속될 시간, ms 단위.
+	[pattern] `A` 3000 [/pattern]	//  예시의 경우 3초 간격으로 A-B-A-A-B-R-A의 순서로 패턴이 바뀐다.
+	[pattern] `A` 3000 [/pattern]	//  패턴이 다 끝나면 다시 처음부터 반복된다.
+	[pattern] `B` 3000 [/pattern]
+	[pattern] `R` 3000 [/pattern]
+	[pattern] `A` 3000 [/pattern]
+[/sequences]
+
+//mkjung 120627
+[string data] 			//여기는 사운드등등을 넣은 공간인듯
+``
+``
+``
+`WOOD_HIT`
+`WOOD_CRASH`
+[/string data]
+
+[under gravity] 1
+
+[transparent on meet player] 1
+
+[pvp room transparent value for observer] 100	// 이 태그가 있다면 옵저버에게만 이값으로 오브젝트가 투명하게 보임
+
+[SNIPER TYPE]
+	[WAIT TIME] 12000
+	[INVOKE TIME] 20000
+	[INIT VELOCITY] 700
+	[INVOKE CHECK TIME] 250
+	[INVOKE DELAY TIME] 2000
+	[SHOT DISTANCE] 10
+[/SNIPER TYPE]
+
+[warning]
+	[min distance] 0 0 500
+	[max distance] 0 0 1500
+[/warning]
+
+[quest type][must be destroyed]
+
+[for tournament] 1
+
+[create sound] `CROSSCRASH`
+

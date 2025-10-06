@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、召唤代码：61532<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n[static data]<br />\n61532 0 500 300 100<br />\n[/static data]</p>\n\n<p>0、僵尸血量：1646<br />\n1、僵尸等级：22级<br />\n2、僵尸撕咬攻击力：独立攻击力 x 0.23<br />\n3、僵尸最后撕咬攻击力：独立攻击力 x 0.44<br />\n4、僵尸撕咬次数：3次<br />\n5、尸咒发动几率：10%<br />\n6、尸咒持续时间：5秒<br />\n7、尸咒伤害：独立攻击力 x 0.05<br />\n8、尸咒伤害间隔：1秒<br />\n9、僵尸存在时间：20秒<br />\n10、<br />\n11、召唤僵尸上限：5只<br />\n12、僵尸爆炸魔法攻击力：162% + &lt;13&gt;<br />\n13、僵尸爆炸魔法攻击力：独立攻击力 x 0.05<br />\n14、<br />\n15、<br />\n[level info]<br />\n16 1646 22 23 44 3 100 5000 5 1000 20000 500 5 162 5 120 5</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T20:00:59.407",
+    "view_num": 45
+}

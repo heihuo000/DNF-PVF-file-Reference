@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#e74c3c\"><code>etc/hellparty.etc</code></span></p>\n\n<p>dgn文件内<span style=\"color:#e74c3c\"><code>[seal door map index]</code></span>词条指向深渊的map文件<br />\nmap文件底部<span style=\"color:#e74c3c\"><code>[special passive object]</code></span>词条指向深渊组<br />\n<span style=\"color:#e74c3c\"><code>etc/hellparty.etc</code></span>路径内<span style=\"color:#e74c3c\"><code>[group index]</code></span>代表深渊组<br />\n深渊组内X-0或者X-1为怪物和APC。即0为怪物，1为APC</p>\n\n<pre>\n<code>[difficulty]\n    4\n    `A`    8    5    3    60    0\n    `B`    6    4    97    40    0\n    `C`    4    3    0    0    0\n    `D`    0    3    0    0    1\n[/difficulty]\n</code></pre>\n\n<p>这里固定掉落信息；</p>\n\n<pre>\n<code>[difficulty]\n    4\n    `A`    1    1    60    60    0\n    `B`    1    1    40    40    0\n    `C`    1    1    1    0    0\n    `D`    1    1    1    0    0\n[/difficulty]\n</code></pre>\n\n<p>这是60版本固定掉落1个装备，无论什么颜色。</p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T23:05:53.155",
+    "view_num": 2282
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>[BEHAVIOR]</p>\n\n<p>[ACTIVE STATUS]</p>\n\n<p>[burn]<br />\n100&nbsp;71&nbsp;20000&nbsp;0&nbsp;200&nbsp;1&nbsp;500&nbsp;<br />\n[/BEHAVIOR]</p>\n\n<p>----------------------------</p>\n\n<p>[BEHAVIOR]</p>\n\n<p>[ACTIVE STATUS]-----------------------附加BUFF/DEBUFF状态</p>\n\n<p>[burn]------------------------------------例：灼烧状态<br />\n100&nbsp;71&nbsp;20000&nbsp;0&nbsp;200&nbsp;1&nbsp;500&nbsp;---------参数不考究，理论为：[0位丨触发几率]、[1位丨BUFF等级]、[2位丨时间（*0.001）]......<br />\n[/BEHAVIOR]</p>",
+    "auth_users": "勇敢的飞",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level2.gif",
+    "create_at": "2024-07-01T20:45:42.796",
+    "view_num": 173
+}

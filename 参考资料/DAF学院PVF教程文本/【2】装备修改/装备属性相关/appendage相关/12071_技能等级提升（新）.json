@@ -1,0 +1,7 @@
+{
+    "content": "<p>写这个主要是在教程里面看到一个有比较严重的错误，而且写得也不是很清楚，我就想着自己写一份</p>\n\n<pre>\n<code class=\"language-json\">#PVF_File\n\n[type]#识别标签，必须是下面这个\n\t`skill level`\n\n[duration]#持续时间\n\t80000\n\n[buff]\n\t0\n\n[icon image]\n\t``\t0\n\n[max overlap]#最大重叠次数\n\t1\n\n[int data]\n\t0\t27\t9\n#第一个参数“0”是职业，也就是鬼剑士\n#第二个参数“27”是技能ID，也就是白手的武器奥义\n#第三个参数“9”是提升的等级，就是会增加9级技能等级\n[/int data]\n\n[string data]\n[/string data]\n\n[float data]\n[/float data]</code></pre>\n\n<p>当时我想了半天，这个职业ID是怎么算的，后面想了一下，应该是根据</p>\n\n<p><strong>character/character.lst</strong></p>\n\n<p>职业ID来算的（印象中还有不少都是用这个的），比如鬼剑士职业ID就是0，格斗家的是1那就是1</p>",
+    "auth_users": "筒子",
+    "img": "",
+    "create_at": "2024-05-17T10:24:52.022",
+    "view_num": 937
+}

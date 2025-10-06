@@ -1,0 +1,7 @@
+{
+    "content": "<p><img alt=\"\" height=\"540\" src=\"/media/uploads/2023/06/18/1.gif\" width=\"800\" /></p>\n\n<p>1.使用notepad全局搜索sqr文件夹，找到<code><span style=\"background-color:#e67e22\">function onStartDungeon_Swordman(obj)</span></code>函数</p>\n\n<p>2.添加代码：</p>\n\n<pre>\n<code>if(sq_getGrowType(obj)==3&amp;&amp;obj.sq_GetSkillLevel(76)&gt;0){\nobj.sq_IntVectClear();\nobj.sq_IntVectPush(0);// throwState\nobj.sq_IntVectPush(0);// throwType\nobj.sq_IntVectPush(76);// throwIndex\nobj.sq_IntVectPush(0);// throwChargeTime\nobj.sq_IntVectPush(0);// throwShootTime\nobj.sq_IntVectPush(10);// throwAnimationIndex\nobj.sq_IntVectPush(4);// chargeSpeedType\nobj.sq_IntVectPush(4);// throwShootSpeedType\nobj.sq_IntVectPush(10009);// chargeSpeedValue\nobj.sq_IntVectPush(10009);// throwShootSpeedValue\nobj.sq_IntVectPush(-1);// personalCastRange\nobj.sq_AddSetStatePacket(STATE_THROW, STATE_PRIORITY_USER, true);\n}\n</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "旭旭姥姥",
+    "img": "",
+    "create_at": "2023-06-18T14:42:22.857",
+    "view_num": 1265
+}

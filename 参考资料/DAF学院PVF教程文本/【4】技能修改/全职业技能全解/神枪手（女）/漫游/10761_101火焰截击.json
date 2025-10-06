@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n[static data]<br />\n0 700 220 0 30 800 0<br />\n[/static data]</p>\n\n<p>0、<br />\n1、物理攻擊力 : &lt;2&gt; x 5 次<br />\n2、独立攻击力 x 5.4<br />\n3、<br />\n4、<br />\n5、灼傷機率 : 20%<br />\n6、灼傷Lv : Lv62<br />\n7、灼傷持續時間 : 5秒<br />\n8、灼傷攻擊力 : 381（最小值）+独立攻击力 x 0.6<br />\n9、<br />\n10、<br />\n11、<br />\n[level info]<br />\n12 10 5 540 50 5 200 62 5000 60 0 0 1000<br />\n[/level info]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T14:56:02.140",
+    "view_num": 39
+}

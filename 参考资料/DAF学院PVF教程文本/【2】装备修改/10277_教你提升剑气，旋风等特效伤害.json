@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;<br />\n&nbsp;<br />\n&nbsp;<br />\nby:黄色哥_<br />\nhttp://tieba.baidu.com/p/4101755934<br />\n&nbsp;<br />\n&nbsp;<br />\n&nbsp;<br />\n首先passiveobject文件夹的passiveobject.lst特效目录文件<br />\n&nbsp;<img alt=\"\" height=\"522\" src=\"/media/uploads/2023/04/16/image-20230416213828-1.png\" width=\"937\" /><br />\n&nbsp;<br />\n&nbsp;<br />\n拿西岚剑气20065为例，可以发现剑气是IllusionSlashWave2.obj文件，<br />\n打开IllusionSlashWave2.obj它发现<br />\n&nbsp;<br />\n&nbsp;<img alt=\"\" height=\"322\" src=\"/media/uploads/2023/04/16/image-20230416213837-2.png\" width=\"574\" /><br />\n&nbsp;<br />\nIllusionSlashWave2.atk这个文件是关于攻击信息的，然后打开它<br />\n[damage bonus]<br />\n900<br />\n这个就是伤害的代码，900你可以改成9000等等<br />\n&nbsp;<br />\n&nbsp;<img alt=\"\" height=\"229\" src=\"/media/uploads/2023/04/16/image-20230416213845-3.png\" width=\"283\" /><br />\n&nbsp;<br />\n改成90000基本上就9999999的伤害了<br />\n&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:38:46.399",
+    "view_num": 932
+}

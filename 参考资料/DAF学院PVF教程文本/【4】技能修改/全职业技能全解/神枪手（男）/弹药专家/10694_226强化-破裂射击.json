@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、屬性彈攻擊力減少率 : 25%</p>\n\n<p>[static data]<br />\n0 25<br />\n[/static data]</p>\n\n<p>0、破裂射擊攻擊力 : 独立攻击力 x 3.96<br />\n1、消耗的屬性彈數 (左輪槍) : 1<br />\n2、消耗的屬性彈數 (自動手槍) : 1<br />\n3、消耗的屬性彈數 (步槍) : 1<br />\n4、消耗的屬性彈數 (手炮) : 1<br />\n5、消耗的屬性彈數 (手弩) : 1<br />\n[level info]<br />\n6 396 1 1 1 1 1<br />\n[/level info]</p>\n\n<p>0、破裂射擊的攻擊力 +10%<br />\n1、屬性彈丸攻擊力下降率 -1%<br />\n[special level up]<br />\n-1 0 &#39;%&#39; 10<br />\n1 1 &#39;-&#39; 1<br />\n[/special level up]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:44:35.893",
+    "view_num": 27
+}

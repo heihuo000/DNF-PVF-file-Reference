@@ -1,0 +1,7 @@
+{
+    "content": "<h2>每2分鐘消耗10個黑色小晶塊，並召喚出1隻Lv50的骷髏協助召喚者攻擊敵人，骷髏存在60秒。</h2>\n\n<pre>\n<code>[if]\n\t[time]\n\t\t120000\t1\t1000 //时间120S（复制之后删除这个中文注释）\n\t[my state]\n\t\t`stand`\n[/if]\n\n[then]\n\t[consume item]\n\t\t3033\t10  //消耗的物品 代码3033 10个就是10个黑色（复制之后删除这个中文注释）\n\t[target]\n\t\t`myself`\t-1\n\t[duration]\n\t\t60000 //持续时间60S（复制之后删除这个中文注释）\n\t[summon monster]\n\t\t1000\t50\t1\n[/then]\n</code></pre>\n\n<p>&nbsp;</p>\n",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T18:26:02.047",
+    "view_num": 658
+}

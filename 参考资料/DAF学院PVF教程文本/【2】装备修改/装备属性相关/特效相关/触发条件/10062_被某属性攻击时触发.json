@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>被光属性攻击时，赋予武器光属性攻击，效果持续120秒。</p>\n\n<p>[if]<br />\n&nbsp;<br />\n[element]<br />\n&#39;light&#39;<br />\n[hit]<br />\n1<br />\n[/if]<br />\n&nbsp;<br />\n[then]<br />\n&nbsp;<br />\n[target]<br />\n&#39;myself&#39; -1<br />\n[duration]<br />\n120000<br />\n[elemental weapon]<br />\n`light`<br />\n[/then]<br />\n元素代码修改相关：</p>\n\n<p>火：fire<br />\n暗：dark<br />\n光：light<br />\n水：water<br />\n所有属性：all elemental<br />\n【其他属性自行更换】</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:26:10.120",
+    "view_num": 237
+}

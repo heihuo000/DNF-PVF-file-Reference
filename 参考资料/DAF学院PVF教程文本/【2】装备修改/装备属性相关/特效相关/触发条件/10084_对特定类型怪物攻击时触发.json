@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>当攻击普通怪物时触发</p>\n\n<p>[if]</p>\n\n<p>[event attack success]<br />\n1<br />\n[target grade]<br />\n`common`<br />\n[/if]<br />\n相关参数：</p>\n\n<p>普通怪物：common<br />\n精英怪物：champion<br />\n深渊怪物：named<br />\n领主怪物：boss</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:32:59.321",
+    "view_num": 197
+}

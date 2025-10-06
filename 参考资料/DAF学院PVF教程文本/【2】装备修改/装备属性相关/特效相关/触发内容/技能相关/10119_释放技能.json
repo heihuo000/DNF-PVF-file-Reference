@@ -1,0 +1,7 @@
+{
+    "content": "<p>触发施放技能结果。</p>\n\n<p>[perform skill]<br />\n&#39;[职业]&#39; 技能编号 等级<br />\n&nbsp;</p>\n\n<p>[perform skill]<br />\n&#39;fighter&#39; 69 30 10<br />\n格斗家 幻影爆碎 Lv：30 分身数量10</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T12:46:45.272",
+    "view_num": 289
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、閃擊地雷存在時間上限 : 0.2秒<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n[static data]<br />\n200 10000 140 300 200 100 1<br />\n[/static data]</p>\n\n<p>0、物理攻擊力 : 1650%%<br />\n1、眩暈範圍 : 280 px<br />\n2、眩暈機率 : 40%%<br />\n3、眩暈Lv : Lv62<br />\n4、眩暈持續時間 : 2秒<br />\n5、迷你炮彈攻擊力 : 独立攻击力 x 16.5<br />\n[level info]<br />\n6 1650 280 400 62 2000 1650</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T15:36:01.878",
+    "view_num": 40
+}

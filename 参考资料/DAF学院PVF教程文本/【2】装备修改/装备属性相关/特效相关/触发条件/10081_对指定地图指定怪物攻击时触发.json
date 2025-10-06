@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>真：比爾馬克帝國試驗場的血液粉，善變貓妖，倔強的哈尼克怪物攻擊時触发<br />\n[if]</p>\n\n<p>[dungeon check]<br />\n201<br />\n[/dungeon check]</p>\n\n<p>[target check]<br />\n`monster` 56743 &nbsp;<br />\n`monster` 56742 &nbsp;<br />\n`monster` 61748<br />\n[/target check]</p>\n\n<p>[attack success]<br />\n1<br />\n[/if]<br />\n注释说明：</p>\n\n<p>[dungeon check]：对地下城进行检测<br />\n参数：地下城编号<br />\n[target check]：对对象进行检测<br />\n参数1：对象<br />\n相关：<br />\n怪物：monster<br />\n人偶：apc<br />\n参数2：编号</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:32:03.616",
+    "view_num": 224
+}

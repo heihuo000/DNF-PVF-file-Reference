@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n两个1分别是召唤兽和队员的Buff叠加数（具体对应待测试）<br />\n[static data]<br />\n1 1<br />\n[/static data]</p>\n\n<p>0、Buff持续时间：20秒<br />\n召唤兽Buff<br />\n1、移动速度增加2%<br />\n2、攻击速度增加1.4%<br />\n3、好战性增加：3<br />\n4、视野增加：10 px<br />\n5、攻击机率增加：1%<br />\n队员Buff<br />\n6、移动速度增加：0.5%<br />\n7、攻击速度增加：0.5%<br />\n8、魔法攻击力：258% + &lt;9&gt;<br />\n9、魔法攻击力：独立攻击力 x 0.65<br />\n召唤兽Buff<br />\n10、力量增加：31<br />\n11、智力增加：31<br />\n12、增加僵直时间：1%<br />\n13、<br />\n[level info]<br />\n14 20000 20 14 3 10 1 5 5 258 65 31 31 1 2</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:05:22.607",
+    "view_num": 58
+}

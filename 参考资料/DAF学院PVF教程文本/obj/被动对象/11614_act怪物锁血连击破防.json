@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>#PVF_File\n\n[TRIGGER]\n    [LIMIT]\n        1\n    [WHICH]\n    [ME]\n    [CHECKUP]\n        [HP]\n        [&lt;=]\n            99999999\n        [ POINT]\n    [/CHECKUP]\n    [ DO BEHAVIOR]\n    [ME]\n        0\n[/TRIGGER]\n\n[BEHAVIOR]\n    [VIRTUALHP APPENDAGE]\n        699 99999999    2   10\n[/BEHAVIOR]\n</code></pre>\n\n<p>//理论就是当怪物血量小于或者等于99999999的时候触发连击条件 699次之后怪物破防</p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T16:04:28.774",
+    "view_num": 1465
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>character/exptable.tbl为等级经验表</p>\n\n<p>算法是下一级减去当前级别的需求经验等于下一级的真实需求经验<br />\n举个栗子 5543(3级)-2653(2级)=2890(3级真实的)<br />\netc/sptable.etc为修改每级获得SP点数表<br />\nBT点的直接在1级改成20000就够用了，省去吃书的烦恼，TP木有找到在哪改<br />\n倒是QP可以在etc/questshop.etc里面修改[quest point] ，不能改为0，最低为1</p>\n\n<p><br />\n角色初始属性在character/各职业文件夹里的.chr文件<br />\n必须上传到服务端，只有修改后的新建角色和怪物享有这些属性，已有的角色不受影响<br />\n&nbsp;</p>\n\n<p><img alt=\"\" height=\"556\" src=\"/media/uploads/2023/05/07/image-20230507210721-1.png\" width=\"592\" /></p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T21:07:26.349",
+    "view_num": 1073
+}

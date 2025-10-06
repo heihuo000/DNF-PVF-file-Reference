@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:lblb699</p>\n\n<p>&nbsp;</p>\n\n<p>之前 压杆由 写了一篇（任务教程系列之改任务条件直接对话完成）的帖子，里面提到的思路挺好， 不过3000多个文件如果一个一个手动去改的话， 想想确实恐怖！<br />\n那么，批量修改是个行之有效的方法。<br />\n工具PVFtool 1.6<br />\nNotepad++<br />\n而方法则是正则表达式</p>\n\n<p>&nbsp;<img alt=\"\" height=\"462\" src=\"/media/uploads/2023/05/07/image-20230507220911-1.png\" width=\"599\" /><br />\n这里查找模式选择正则表达式<br />\n查找目标：\\[type\\]\\r\\n.*\\r\\n\\[/int data\\]<br />\n替换内容：\\[type\\]\\r\\n(`\\[meet npc\\]`\\r\\n\\r\\n\\[sub type\\]\\r\\n-1\\r\\n\\[int data\\]\\r\\n2\\r\\n)\\[/int data\\]<br />\n然后查找替换就可以了， 如果需要对多个文件替换的话， 选择第三项文件查找定位好目录就可以了。</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T22:09:15.700",
+    "view_num": 1505
+}

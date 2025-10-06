@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:朽叶鸨时</p>\n\n<p>http://tieba.baidu.com/p/4647945149</p>\n\n<p><img alt=\"\" height=\"405\" src=\"/media/uploads/2023/05/07/image-20230507221326-1.png\" width=\"831\" /></p>\n\n<p>4个灵魂支配之环，我想改成8个，前边已经改成<br />\n[int data]<br />\n4316 8<br />\n也就是需要8个，任务描述那里也改了，但是保存之后再看又变成4个了，试了好几次都这样</p>\n\n<p>修改完之后int data哪里已经变成8了，但是寻找精神支配之环，那里还写着需要4个，修改很多次一直不能变成8</p>\n\n<p>n_quest/quest.kor.str 在这个文件里面,<br />\n实际上已经是4个就可以了 只是描述没改过来<br />\n要进这个文件改描述<br />\n或者换一种写法,<br />\n85版本的pvf都是用新写法了</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T22:13:31.302",
+    "view_num": 1117
+}

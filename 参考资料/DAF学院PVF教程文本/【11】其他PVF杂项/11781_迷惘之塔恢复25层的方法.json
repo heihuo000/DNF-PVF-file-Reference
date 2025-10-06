@@ -1,0 +1,7 @@
+{
+    "content": "<p>文件路径：dungeon/towers/towerofillusion ，后缀是.dgn，不知道为啥一起发出来会变成奇怪的东西，将就着看一下吧。</p>\n\n<p>直接看到这一段，前面的第一个数字原本是15，代表的就是该塔的总层数，后面1代表第一层，31001代表的是map文件里注册的地图文件，也就是第一层是哪个图，你照着写就行了是不是非常简单<img alt=\"\" height=\"30\" src=\"https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/editor/images/client/image_emoticon16.png\" width=\"30\" />被删除的10层塔甚至都没有被删除注册。</p>\n\n<p><img alt=\"\" height=\"133\" src=\"/media/uploads/2023/07/06/11_u1NCPqr.jpg\" width=\"552\" /></p>\n\n<p>稍微注意一下这里，第二段原本是11 15，代表第11至15层通关后恢复百分之50的状态。把15改成25</p>\n\n<p><img alt=\"\" height=\"136\" src=\"/media/uploads/2023/07/06/12_ptfw5eV.jpg\" width=\"204\" /></p>\n\n<p>这里就是每层塔开始和结束时的剧情对话了，你有多少层就写满多少层，能记得以前的台词更好，记不得就自己写吧，我是直接自己写了。</p>\n\n<p><img alt=\"\" height=\"202\" src=\"/media/uploads/2023/07/06/13_VVgtNTo.jpg\" width=\"554\" /></p>\n\n<p><img alt=\"\" height=\"298\" src=\"/media/uploads/2023/07/06/14_9kK9KjH.jpg\" width=\"508\" /></p>\n\n<p>没了，发几张效果图。</p>\n\n<p><img alt=\"\" height=\"600\" src=\"/media/uploads/2023/07/06/15_W2EaQa3.jpg\" width=\"800\" /></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-06T18:47:50.834",
+    "view_num": 391
+}

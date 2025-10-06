@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n例如左神的PVF凱莉那無法擺攤 打開town\\hendonmyre.twn<br />\n找到[area] 0 &#39;HendonMyre/Hendon.map&#39; &#39;[minimap rect]&#39; 175 201 325 230 &#39;[/minimap rect]&#39; &#39;[dungeon gate]&#39; 141<br />\n替換&#39;[dungeon gate]&#39; 141 改成 &#39;[normal]&#39;</p>\n\n<p>很简单吧 替換服務端後就可以擺攤了<br />\nnormal就是可以摆摊dungeon gate差不多就是进图门口那种无法摆摊的可以自己看着弄</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-08T21:44:54.858",
+    "view_num": 341
+}

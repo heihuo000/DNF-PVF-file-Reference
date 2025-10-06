@@ -1,0 +1,7 @@
+{
+    "content": "<p>0，地图的相关文件夹说明</p>\n\n<p>&nbsp;</p>\n\n<p>region</p>\n\n<p>【大区】</p>\n\n<p>&nbsp;</p>\n\n<p>town</p>\n\n<p>大区下的城镇，简称【城镇】</p>\n\n<p>&nbsp;</p>\n\n<p>worldmap</p>\n\n<p>副本入口选图界面，简称【选图界面】</p>\n\n<p>&nbsp;</p>\n\n<p>dungeon</p>\n\n<p>副本，完整意思应该是副本接口，后面称【副本接口】</p>\n\n<p>&nbsp;</p>\n\n<p>map</p>\n\n<p>副本的每个小房间，简称【副本房间】，同时也包含了城镇的各个地图，简称【城镇地图】</p>\n\n<p>&nbsp;</p>\n\n<p>npc</p>\n\n<p>众所周知，最出名的就是凯利</p>\n\n<p>&nbsp;</p>\n\n<p>n_quest</p>\n\n<p>任务系统，不是本帖重点，只会稍微提及</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T22:15:40.922",
+    "view_num": 1364
+}

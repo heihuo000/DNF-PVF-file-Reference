@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、追蹤攻擊的攻擊間隔 : 0.3秒<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n7、<br />\n8、<br />\n[static data]<br />\n600 600 300 0 500 0 0 0 0<br />\n[/static data]</p>\n\n<p>0、首次攻擊的物理攻擊力 : 662<br />\n1、追蹤攻擊的物理攻擊力 : 226<br />\n2、持續時間 : 10秒<br />\n3、镭射次数：5<br />\n4、镭射攻击力 ：100% （猜测）<br />\n5、命中速度 ：50% （猜测）<br />\n6、<br />\n7、<br />\n8、[Lv9]光属性抗性： -24%<br />\n9、[Lv9]光属性抗性持续时间：10秒<br />\n[level info]<br />\n10 662 266 10000 5 100 50 500 240 0 0&nbsp;&nbsp; ( LV1 )<br />\n&nbsp; &nbsp;<br />\n&nbsp;&nbsp; 972 390 12000 6 100 50 500 240 0 0&nbsp;&nbsp; ( LV3 )<br />\n&nbsp;<br />\n&nbsp; 1438 576 12600 7 120 60 550 260 0 0&nbsp;&nbsp;&nbsp; ( LV6 )<br />\n&nbsp;<br />\n&nbsp; 1904 762 13200 8 135 75 565 275 -24 10000&nbsp;&nbsp;&nbsp; ( LV9 )<br />\n[/level info]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T13:12:30.434",
+    "view_num": 75
+}

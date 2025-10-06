@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、硬直减少：-250<br />\n1、<br />\n2、<br />\n3、<br />\n[static data]<br />\n-250 50 50 30<br />\n[/static data]</p>\n\n<p>0、物理攻擊力 : 独立攻击力 x 3<br />\n出血时：<br />\n1、減少硬直持續時間 : 2秒<br />\n2、出血機率 : 100%%<br />\n3、出血持續時間 : 3秒<br />\n4、出血傷害 : 300<br />\n5、出血Lv : Lv22<br />\n中毒时：<br />\n6、减少硬直持续时间：1秒<br />\n7、中毒Lv：Lv22<br />\n8、中毒持续时间：3秒<br />\n9、中毒攻击力：100<br />\n减速时：<br />\n10、减少硬直持续时间：1秒<br />\n11、减速Lv：Lv22<br />\n12、减速持续时间：3秒<br />\n[level info]<br />\n13 300 2000 1000 3000 300 22 1000 22 3000 100 1000 22 3000</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T16:17:18.383",
+    "view_num": 50
+}

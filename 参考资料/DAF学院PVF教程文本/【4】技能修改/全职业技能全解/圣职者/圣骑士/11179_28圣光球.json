@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、多段攻擊間隔 : 0.5秒<br />\n2、眩暈範圍 : 600 px<br />\n3、<br />\n[static data]<br />\n500 500 600 1000<br />\n[/static data]</p>\n\n<p>0、魔法攻擊力 : 独立攻击力 x 1.12<br />\n1、爆炸魔法攻擊力 : 独立攻击力 x 10.91<br />\n2、持續時間 : 5秒<br />\n3、眩暈Lv : Lv36<br />\n4、眩暈持續時間 : 3秒<br />\n[level info]<br />\n5 112 1091 5000 36 3000</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:40:05.770",
+    "view_num": 58
+}

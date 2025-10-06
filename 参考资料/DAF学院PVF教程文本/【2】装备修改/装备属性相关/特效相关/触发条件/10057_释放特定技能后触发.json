@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>例：施放特定技能时【提升】技能等级</p>\n\n<p>[if]</p>\n\n<p>[event use skill]<br />\n&#39;swordman&#39; 5<br />\n[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n&#39;myself&#39; -1<br />\n[probability]<br />\n50<br />\n[skill levelup]<br />\n&#39;swordman&#39; 5 5<br />\n[/skill levelup]<br />\n[/then]<br />\n技能等级提升</p>\n\n<p>[skill levelup]<br />\n&#39;swordman&#39; 5 5</p>\n\n<p>相关说明：</p>\n\n<p>第一个参数为角色职业<br />\n第二个参数为技能编号<br />\n第三个参数为提升的技能等级数<br />\n另一种写法参考：</p>\n\n<p>[if]<br />\n&nbsp;<br />\n[skill]<br />\n`swordman` 62<br />\n[/skill]<br />\n[attack success]<br />\n1<br />\n[/if]</p>\n\n<p>--------------------------------------------------------------------------------</p>\n\n<p>[if]</p>\n\n<p>[use skill]<br />\n`creator mage`<br />\n251<br />\n[/use skill]<br />\n[/if]</p>\n\n<p>--------------------------------------------------------------------------------</p>\n\n<p>施放某技能时，减少某个技能的当前冷却时间</p>\n\n<p>[if]</p>\n\n<p>[event use skill]<br />\n`mage`<br />\n31<br />\n[/event use skill]</p>\n\n<p>[character]<br />\n`mage`</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`myself`<br />\n-1<br />\n[skill cooltime reset]<br />\n55 `%`<br />\n-5<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:25:21.990",
+    "view_num": 508
+}

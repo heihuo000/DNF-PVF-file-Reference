@@ -1,0 +1,7 @@
+{
+    "content": "<p>dungeon文件夹</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>分为多个文件夹，每个文件夹又包含多个*.dgn文件，dgn是dungeon的缩写</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>以kohlepowerstation.dgn为例（摘选部分内容）</p>\n\n<p>[minimum required level]</p>\n\n<p>70 （等级要求，这边已经是改过的）</p>\n\n<p>&nbsp;</p>\n\n<p>[size]</p>\n\n<p>5 3 （副本房间的格局，横5竖3，注意排序是从0开始）</p>\n\n<p>&nbsp;</p>\n\n<p>[greed]</p>\n\n<p>&#39;IIJJFFNNEE</p>\n\n<p>LLOOAALLMM</p>\n\n<p>CCDDFFHHGG&#39;</p>\n\n<p>（副本房间的连接顺序，请参考http://tieba.baidu.com/p/4069218170）</p>\n\n<p>&nbsp;</p>\n\n<p>[map specification]</p>\n\n<p>1 0 18001 （横1竖0，副本房间的ID是18001）</p>\n\n<p>&nbsp;</p>\n\n<p>[boss map specification]</p>\n\n<p>4 1 18008（boss的副本房间为横4竖1，副本房间的ID是18008）</p>\n\n<p>&nbsp;</p>\n\n<p>[start map]</p>\n\n<p>0 0 0 1 0 2（起始点的副本房间坐标，表明可能是0 0或者0 1或者0 2）</p>\n\n<p>&nbsp;</p>\n\n<p>[hell dungeon]</p>\n\n<p>1</p>\n\n<p>[seal door map index]</p>\n\n<p>60067</p>\n\n<p>[seal door pos]</p>\n\n<p>4 0</p>\n\n<p>（深渊boss的副本房间ID 60067和坐标4 0）</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>请确保各个副本房间ID在map/map.lst是存在的。</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T22:16:42.905",
+    "view_num": 575
+}

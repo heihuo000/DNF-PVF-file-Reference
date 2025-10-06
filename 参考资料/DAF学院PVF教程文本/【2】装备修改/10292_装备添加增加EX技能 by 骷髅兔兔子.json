@@ -1,0 +1,7 @@
+{
+    "content": "<p>[all skill item]</p>\n\n<p><br />\n[item growtype]<br />\n&#39;[all]&#39; 0<br />\n[skill apply condition]</p>\n\n<p><br />\n[skill group]<br />\n&#39;[all]&#39;<br />\n[lower bound level]<br />\n1<br />\n[upper bound level]<br />\n70<br />\n[value]<br />\n58<br />\n[extra condition]<br />\n&#39;[except for ex skill]&#39;<br />\n[/extra condition]</p>\n\n<p><br />\n[/skill apply condition]</p>\n\n<p><br />\n[skill phase]<br />\n&#39;[all]&#39;<br />\n[/all skill item]<br />\n上面是所有技能加58级<br />\n把中间的这段删除<br />\n[extra condition]<br />\n&#39;[except for ex skill]&#39;<br />\n[/extra condition]</p>\n\n<p><img alt=\"\" height=\"298\" src=\"/media/uploads/2023/04/23/image-20230423220144-1.png\" width=\"583\" /></p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-23T14:01:49.580",
+    "view_num": 482
+}

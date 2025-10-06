@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>首先明确锻造相关的文件：/etc/upgrade_separate.etc<br />\n其中叫重要的数据有：[table]、 [separate upgrade max] 、 [level]、 [item weights by grade] 、[separate upgrade effect]，下面一一说明这些数据对锻造的影响以及如何修改。<br />\n1、separate upgrade max<br />\n很明显，规定了锻造等级上限，此值&lt;=30，并且table和separate upgrade effect中数据&ldquo;组&rdquo;数量要&gt;=此值。<br />\n2、 table<br />\ntable中数据的格式是A B C D四个数为一组，最最重要的就是A，A决定了每级锻造的数值。这里我们将武器锻造一级时的独立值称为&ldquo;锻造基数&rdquo;。那么锻造值 = 锻造基数 * A / 2 。举个例子：table中有36个数字，就是9组数据。第7组的数据为63 15 10000 2.1，那么锻造7段的独立值=锻造基数*63/2 = 锻造基数*31.5.<br />\n<br />\n<br />\n锻造基数在下面也会讲。<br />\n<br />\n<br />\n数据B目前影响不明，随意设置。<br />\n<br />\n<br />\n数据C决定了每级的锻造成功率，万分值。 即成功率 = C/10000.<br />\n<br />\n<br />\n数据D时材料消耗的系数。<br />\n<br />\n<br />\n3、level<br />\n之前看到几个大佬说level=锻造等级上限+1. 经过实测后发现并不是这样，实际上level决定了非常重要的一个数据，即前面说到的&ldquo;锻造基数&rdquo;！ level越小，锻造基数越大，相应的锻造效果更好！<br />\n<br />\n<br />\n4、item weights by grade<br />\n这里的数据三个一组： E F G<br />\nE表示装备的等级，这里等级不是使用等级，然后武器文件中grade对应的值。<br />\nF表示锻造需要什么材料。<br />\nG表示需要消耗的材料的基数。<br />\n这里一般只需要修改材料的代码即可。<br />\n材料消耗的公式：（E-&gt;G)*稀有度对应的系数*table中的D<br />\n稀有度系数是item weights by rarity中定义的值，倒数第二个是史诗的系数，最后一个是异界武器的系数。<br />\n<br />\n<br />\n5、separate upgrade effect<br />\n规定了每级锻造的外观效果。6个数据一组，只要保证数据&rdquo;组&ldquo;数量足够即可。</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-06T18:50:01.540",
+    "view_num": 1246
+}

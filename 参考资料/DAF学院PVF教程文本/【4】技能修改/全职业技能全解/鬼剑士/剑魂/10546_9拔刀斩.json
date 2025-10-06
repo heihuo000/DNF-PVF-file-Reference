@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、斩击1个敌人时，攻击力增加30%<br />\n2、斩击2个敌人时，攻击力增加22.5%<br />\n3、斩击3个敌人时，攻击力增加15%<br />\n4、斩击4个敌人时，攻击力增加7.5%<br />\n5、斩击5个以上敌人时，攻击力增加0%</p>\n\n<p>[static data]<br />\n500 300 225 150 75 0<br />\n[/static data]</p>\n\n<p>0、拔刀斩武器物理攻击力：1080%</p>\n\n<p>[level info]<br />\n1 1080</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:08:07.880",
+    "view_num": 353
+}

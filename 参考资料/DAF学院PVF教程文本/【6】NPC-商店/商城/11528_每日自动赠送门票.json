@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">关于DAF台服每日自动赠送门票设置/增幅保护卷修改</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">关于设置每日类似死亡之塔的门票赠送方法<br />\n目录：etc/chn_server_limititemusageinfo.etc</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[refill -item]<br />\n&gt; 2680688&rarr;3<br />\n&nbsp;2030-01-01.06:00:00&rarr;为2673000&rarr;3<br />\n&nbsp;2030-01-01.06:00:00&rarr;2673001&rarr;2<br />\n&nbsp;2030-01-01.06:00:00 &rarr; 2673008&rarr;3<br />\n&nbsp;2030-01- 01.06: 00:00<br />\n[/refill.item]</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">前面是物品代码，后面是结束时间</span></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-13T12:37:03.687",
+    "view_num": 693
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">副本，在人为增加了进入条件限制，也就是需要门票进入后，发现无效</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">很好解决，副本主文件打开，在里面添加这一段：</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[ancient dungeon]<br />\n&nbsp;1</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">即可！这一段自己翻译就知道，远古地下城的意思，也就是只有远古图才可以吃门票。</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">包括出图不虚弱，也是这一段！</span></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-11T22:32:00.749",
+    "view_num": 616
+}

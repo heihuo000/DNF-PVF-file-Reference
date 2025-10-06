@@ -1,0 +1,7 @@
+{
+    "content": "<p>路径：<br />\n在：equipment/character/priest/weapon/路径下。</p>\n\n<p>对应的5种武器下面，都有包含这个willdriver.ani文件，全都要改的，img调用192改197，一共30多个文件。</p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T15:42:04.751",
+    "view_num": 393
+}

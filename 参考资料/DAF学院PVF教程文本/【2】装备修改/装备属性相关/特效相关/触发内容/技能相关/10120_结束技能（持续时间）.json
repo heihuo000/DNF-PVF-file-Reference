@@ -1,0 +1,7 @@
+{
+    "content": "<p>魔化解除，或者说结束技能</p>\n\n<p>[end skill]<br />\n`priest` 119<br />\n注释：</p>\n\n<p>参数1：职业<br />\n参数2：（状态）技能编号</p>\n\n<p><br />\n--------------------------------------------------------------------------------<br />\n示例说明：</p>\n\n<p>装备解除时魔化状态解除</p>\n\n<p>[if]</p>\n\n<p>[remove equip]<br />\n[/if]</p>\n\n<p>[then]</p>\n\n<p>[end skill]<br />\n`priest` 119<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T12:46:58.610",
+    "view_num": 240
+}

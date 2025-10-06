@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">首先找到铁鳞海贼团的副本文件<br />\ndungeon/quest/steelscales.dgn<br />\n然后根据调用的map编号，搜索map.lst，跳到start map的文件<br />\nmap/steelscales/15097(0,0)start.map<br />\n在[passive object]内看到这一行<br />\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10383&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 520&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 248&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<br />\n这个10383就是让人变身的OBJ，去passiveobject.lst里搜索就能看到</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">passiveobject/actionobject/monster/quest_masa.obj<br />\n跳到他的act里看看，然后发现了这条代码<br />\n[BEHAVIOR]<br />\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [CHANGE DISGUISER]<br />\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 61249&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10000000<br />\n[/BEHAVIOR]</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">这个61249就是马萨乔的编号了，顺便说明，马萨乔是怪物，也就是monster，所以到monster.lst里搜索，得到<br />\nmonster/newmonsters/riding/masaccio_quest/masaccio_quest.mob<br />\n这个就是蓝影马萨乔的文件了，值得注意的是，这里面记录了角色变身成马萨乔后的各项基础属性及技能，而且这和玩家在其他副本见到的绿名马萨乔并不共用一个文件，这个文件和其他文件的结构也有出入，具体细节未考究。</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">最后，把10383这行删掉后，进图就不会变身了。</span></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-05T22:18:37.398",
+    "view_num": 1092
+}

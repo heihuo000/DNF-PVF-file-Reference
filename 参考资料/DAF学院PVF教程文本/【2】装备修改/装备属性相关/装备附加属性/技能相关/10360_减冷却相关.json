@@ -1,0 +1,7 @@
+{
+    "content": "<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[if]</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[module]<br />\n`[dead tower]`<br />\n`[dungeon]`<br />\n`[tournament dungeon]`<br />\n`[war room]`<br />\n`[blood system]`</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[/module]</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[change status]<br />\n`hp`<br />\n`&gt;`<br />\n`%`<br />\n0&nbsp;`end`</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[cooltime]<br />\n5000&nbsp;<br />\n[/if]</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[then]<br />\n&nbsp;[target]<br />\n&nbsp;&nbsp;`myself`&nbsp;-1</span></p>\n\n<p><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\"><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\"><span style=\"color:#0000ff; font-family:微软雅黑; font-size:small\">[probability]<br />\n100&nbsp;<br />\n[equipment duration]<br />\n5000&nbsp;<br />\n&nbsp;[stat by condition]<br />\n&nbsp;&nbsp;`skill cool time`<br />\n&nbsp;&nbsp;`%`&nbsp;-10<br />\n[/then]</span></span></span></p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-05T22:36:31.224",
+    "view_num": 682
+}

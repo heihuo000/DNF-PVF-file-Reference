@@ -1,0 +1,7 @@
+{
+    "content": "<p><img alt=\"\" height=\"650\" src=\"/media/uploads/2023/08/05/image-20230805105123-1.png\" width=\"900\" /></p>\n\n<p>说实话，这个东西几个人研究也无力，不如丢给吧友一起研究，这里我开个头，把时装潜能方法丢出来，字符串我就没有办法，是我另外一个朋友的，这个时装潜能是我给狼叔一个思路，狼叔搞出来的，狼叔也同意公布出来了</p>\n\n<p>首先连接数据库，我是单机</p>\n\n<p><img alt=\"\" height=\"842\" src=\"/media/uploads/2023/08/05/image-20230805105158-2.png\" width=\"644\" /></p>\n\n<p>&nbsp;</p>\n\n<p>进入到这个表里面来。打开taiwan_cain_2nd&mdash;&mdash; 进入：user_items， it_id就是时装ID</p>\n\n<p><img alt=\"\" height=\"434\" src=\"/media/uploads/2023/08/05/image-20230805105231-3.png\" width=\"1200\" /></p>\n\n<p>开启时装关键在于：Hidden option 里面的0改为1,就能开启了，他对应力量</p>\n\n<p>avatarfixedhiddenoptionlist.etc 这个是他属性表格。</p>\n\n<p>2就是力量2,我的教程感觉很无脑了，看不懂没办法</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-08-05T10:53:50.973",
+    "view_num": 714
+}

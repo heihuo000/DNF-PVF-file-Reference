@@ -1,0 +1,7 @@
+{
+    "content": "<p>CD词条不叠加，错误。<br />\r\ndnf里面的机制是相同的CD不叠加，比如称号和装备都5%，那么就只有5%，并且我带100%CD的和5%CD的一起佩戴，会只有5%而不是取最高，应该是有个优先级的设定。<br />\r\n解决办法是找一个进图显示在buff减CD的词条复制粘贴就好了。</p>\r\n\r\n<pre>\r\n<code>[if]\r\n[module]\r\n`[dead tower]`\r\n`[dungeon]`\r\n`[tournament dungeon]`\r\n`[war room]`\r\n`[blood system]`\r\n[/module]\r\n[change status]\r\n`hp`\r\n`&gt;`\r\n`%`0\r\n`end`\r\n[cooltime]\r\n5000\r\n[/if]\r\n[then]\r\n[target]\r\n`myself`-1\r\n[probability]\r\n100\r\n[equipment duration]\r\n5000\r\n[stat]\r\n`skill cool time`\r\n`%`-10\r\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T11:37:35.151",
+    "view_num": 745
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>by：模范游戏<br />\nhttp://tieba.baidu.com/p/4148209822</p>\n\n<p>&nbsp;</p>\n\n<p>物品修改<br />\nA.可穿戴物品 /equipment<br />\nB.不可穿戴物品 /stackable</p>\n\n<p>为什么将物品分为这两类,是因为在PVF的目录下,所有的可穿戴物品 都在/equipment目录下<br />\n而不可穿戴物品 都在/stackable目录下</p>\n\n<p>在/equipment 和 /stackable下 都有<br />\nequipment.lst和stackable.lst这两个文件</p>\n\n<p>这两个 也就是将&lt;物品代码&gt;关联到&lt;物品&gt;的文件<br />\n添加文件后 在这两个文件中 是肯定要添加关联语句的</p>\n\n<p>这两个文件修改不正确,很容易导致服务端无法启动<br />\n例如在文件中 关联了一段实际PVF中没有的文件路径 那么就会无法启动服务端<br />\n在最后没有加回车 或者 多加了几个回车 也会导致无法启动服务端(但从SUPER PVF工具而言是这样的,其余工具没用过 不太清楚)</p>\n\n<p>在.lst文件中 添加了关联代码语句后<br />\n就要在.kor.str文件中添加名称了<br />\n当然这一步是不会导致服务端无法启动的如果没有进行添加,也仅仅是游戏中无法显示道具名称罢了</p>\n\n<p>.lst文件是最容易导致服务端无法启动的,在更改完物品之后!一定要检查.lst文件的结尾对不对</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:08:59.994",
+    "view_num": 1803
+}

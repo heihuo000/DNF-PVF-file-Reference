@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n[static data]<br />\n500 700 200 -2000 50<br />\n[/static data]</p>\n\n<p>0、對於無法抓取的敵人，暗屬性爆炸攻擊力 : 独立攻击力 x 50<br />\n1、砸向地面時，魔法攻擊力 : 独立攻击力 x 8.25<br />\n2、砸向地面時，衝擊波攻擊力 : 独立攻击力 x 4.95<br />\n3、衝擊波範圍 : 150 px<br />\n4、拖動敵人時，多段魔法攻擊力 : 独立攻击力 x 1.65<br />\n5、拋出前，按壓攻擊力 : 独立攻击力 x 4.95<br />\n6、拋敵攻擊力 : 独立攻击力 x 19.8<br />\n7、惡魔能量消耗量 : 90<br />\n[level info]<br />\n8 5000 825 495 150 165 495 1980 90</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:50:04.406",
+    "view_num": 57
+}

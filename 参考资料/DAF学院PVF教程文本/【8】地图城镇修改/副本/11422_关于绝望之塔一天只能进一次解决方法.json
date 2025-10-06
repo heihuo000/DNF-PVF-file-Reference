@@ -1,0 +1,7 @@
+{
+    "content": "<p>by:情歌ooo</p>\n\n<p>http://tieba.baidu.com/p/4106598867</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>先说下原因- 为了节省资源-关了1线这个频道（lz是这原因-不知道和你们的一样不）</p>\n\n<p>打开虚拟机 home/neople/run 最后两行： sleep 2 ./df_game_r cain02 start &amp; 删除 打开home/neople/game/cfg/cain01将channel_no=1 channel_name=ch.1 修改为channel_no=11 channel_name=ch.11</p>\n\n<p>&nbsp;</p>\n\n<p>解决方法--就是开启1线这个频道</p>\n\n<p>打开虚拟机 home/neople/run 最下面添加两行：</p>\n\n<p>sleep 2</p>\n\n<p>./df_game_r cain02 start &amp;</p>\n\n<p>如果原先有</p>\n\n<p>请勿添加</p>\n\n<p>打开home/neople/game/cfg/cain01</p>\n\n<p>下面这一栏</p>\n\n<p>gc_no = 3001</p>\n\n<p>server_type = 0</p>\n\n<p>channel_no = 1（如果你改11了-那就改回1）</p>\n\n<p>channel_name = ch.1（这里也是）</p>\n\n<p>ip = 192.168.200.131</p>\n\n<p>tcp_port = 10001</p>\n\n<p>udp_port = 11001</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>sky_lq0o0: winscp直接把1线ip改掉多简单的</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-08T21:32:03.142",
+    "view_num": 829
+}

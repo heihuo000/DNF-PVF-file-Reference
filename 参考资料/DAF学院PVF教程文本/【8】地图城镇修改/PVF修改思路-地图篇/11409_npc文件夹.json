@@ -1,0 +1,7 @@
+{
+    "content": "<p>8，npc文件夹</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>npc其实不是本修改的重点，但是我们这边要修改某个NPC。</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>看了上面的内容，有朋友其实已经想到一个问题：如何从悬空海港到工业区。</p>\n\n<p>因此，我们需要给悬空海港的贝伦，增加一个地区传送功能，用以传送到工业区。</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>悬空海港的贝伦，npc/wernvonnegut.npc的文件里面</p>\n\n<p>[role]</p>\n\n<p>&#39;[item shop]&#39; 43</p>\n\n<p>[/role]</p>\n\n<p>&nbsp;</p>\n\n<p>而工业区的贝伦，npc/wernvonnegut_slough.npc的文件里面</p>\n\n<p>[role]</p>\n\n<p>&#39;[item shop]&#39; 43 &#39;[move town]&#39; 65</p>\n\n<p>[/role]</p>\n\n<p>&nbsp;</p>\n\n<p>&lsquo;[move town]&rsquo;就是传送功能，65是NPC的ID。</p>\n\n<p>记住了，NPC的传送，是从某个NPC传送到另外一个NPC，以NPC的ID【的原始位置】为目标，而不是城镇ID为目标。</p>\n\n<p>&nbsp;</p>\n\n<p>显然原始文件里，悬空海港的贝伦的传送功能被干掉了。</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>那么，我们就改下npc/wernvonnegut.npc</p>\n\n<p>[role]</p>\n\n<p>&#39;[item shop]&#39; 43 &#39;[move town]&#39; 136 （136就是工业区贝伦的ID）</p>\n\n<p>[/role]</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T22:17:02.577",
+    "view_num": 508
+}

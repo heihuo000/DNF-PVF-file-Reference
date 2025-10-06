@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、移动距离：600 px<br />\n1、<br />\n[static data]<br />\n600 -1000<br />\n[/static data]</p>\n\n<p>三段斩的各物理攻击力</p>\n\n<p>0、第一斩物理攻击力：158% +<br />\n1、第一斩独立攻击力：x 0.47<br />\n2、第二斩物理攻击力：198% +<br />\n3、第二斩独立攻击力：x 1.38<br />\n4、第三斩物理攻击力：198% +<br />\n5、第三斩独立攻击力：x 1.58<br />\n五段斩的各物理攻击力计算</p>\n\n<p>0、第一斩到第三斩物理攻击力：158% +<br />\n1、第一斩到第三斩独立攻击力：x 0.47<br />\n2、第四斩物理攻击力：198% +<br />\n3、第四斩独立攻击力：x 1.38<br />\n4、第五斩物理攻击力：198% +<br />\n5、第五斩独立攻击力：x 1.58<br />\n[level info]<br />\n6 158 198 198 47 138 158</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:04:48.786",
+    "view_num": 118
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>[basic explain]<br />\n<code>攻击时，以3%%的机率使敌人进入随机异常状态。</code></p>\n\n<p>[detail explain]<br />\n<code>攻击时以 3%% 的机率7秒内让敌人进入随机状态。 (若敌人高于Lv30，则减少进入异常状态的机率；反之，则增加机率。)</code></p>\n\n<pre>\n<code>[if]\n    [cooltime]\n        12600\n    [attack success]\n        1\n[/if]\n\n[then]\n    [target]\n        `enemy`    -1\n    [duration]\n        7000\n    [probability]\n        3\n    [active status]\n        `any`    30\n[/then]</code></pre>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T22:58:05.319",
+    "view_num": 227
+}

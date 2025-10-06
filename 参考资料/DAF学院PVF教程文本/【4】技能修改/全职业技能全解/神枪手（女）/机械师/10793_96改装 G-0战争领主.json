@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、鎖定限制時間 : 7秒<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n7、<br />\n8、<br />\n9、<br />\n10、<br />\n11、格林機槍發射數 : 30<br />\n[static data]<br />\n7000 0 0 0 300 600 350 640 100 640 800 30<br />\n[/static data]</p>\n\n<p>0、格林機槍魔法攻擊力 : 138<br />\n1、導彈鎖定攻擊時魔法攻擊力 : 344<br />\n2、導彈周邊攻擊時魔法攻擊力 : 86<br />\n3、鐳射鎖定攻擊時魔法攻擊力 : 860<br />\n4、鐳射周邊攻擊時攻擊力 : 215<br />\n5、一定时间内G-1等级提升：0<br />\n6、G-1等级提升持续时间：0秒<br />\n7、（导弹？）飞弹发射数量：12<br />\n8、普通怪物目标锁定次数：2次<br />\n9、领主、深渊、稀有和人形护甲怪物目标锁定次数：8次<br />\n10、（鐳射？）飞弹发射数量：12<br />\n[level info]<br />\n11 138 344 86&nbsp;&nbsp; 860 215 0 0&nbsp;&nbsp;&nbsp;&nbsp; 12 2 8&nbsp; 12 （ LV1 ）</p>\n\n<p>[/level info]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T15:32:25.094",
+    "view_num": 63
+}

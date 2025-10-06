@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、持續時間 : 120秒<br />\n1、每個機器人增加HP最大值 :10%<br />\n2、每個機器人增加力量 ：64<br />\n3、每個機器人增加智力 : 64<br />\n4、每個機器人增加移動速度 : 10% (实际9.6)<br />\n[level info]<br />\n5 120000 10 64 64 96<br />\n[/level info]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T13:16:08.234",
+    "view_num": 64
+}

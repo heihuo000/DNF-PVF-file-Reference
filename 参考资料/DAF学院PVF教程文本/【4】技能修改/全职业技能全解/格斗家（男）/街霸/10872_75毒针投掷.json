@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、投擲的毒針數量 : 4<br />\n4、<br />\n5、<br />\n6、<br />\n7、<br />\n8、<br />\n9、<br />\n[static data]<br />\n500 700 300 4 20 -250 50 50 30 3000<br />\n[/static data]</p>\n\n<p>0、毒針個數 : 10<br />\n1、毒針攻擊力 : 独立攻击力 x 4.14<br />\n2、<br />\n3、穿刺機率 : 100%%<br />\n4、出血機率 : 40%%<br />\n5、出血Lv : Lv27<br />\n6、出血持續時間 : 3秒<br />\n7、出血傷害 : 360<br />\n使用[投擲強化]時<br />\n8、多重攻擊個數 : 4<br />\n9、多重攻擊穿刺機率 : 100%%<br />\n10、多重攻擊狀態下出血機率 : 40%<br />\n11、出血Lv : Lv27<br />\n12、出血持續時間 : 3秒<br />\n13、出血傷害 : 497<br />\n14、多重攻擊狀態下單枚毒針攻擊力 : 独立攻击力 x 3.31<br />\n[level info]<br />\n15 10 414 2000 100 40 27 3000 360 4 100 40 27 3000 497 331</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T16:00:30.403",
+    "view_num": 50
+}

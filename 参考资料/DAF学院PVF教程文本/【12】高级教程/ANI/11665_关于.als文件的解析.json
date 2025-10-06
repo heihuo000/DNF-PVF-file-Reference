@@ -1,0 +1,7 @@
+{
+    "content": "<p>关于als文件，这个文件可以称之为ani的集合文件，就是用这一个文件调用了N个ani文件</p>\n\n<pre>\n<code>\n[use animation]    //使用ANI动画\n\n    `02_Dawningseria_Call_Eff_Back_Normal.Ani`     //集合的ani文件\n    `Dawningseria_Call_Eff_Back_Normal`      //在ani集合里面自定义的名字\n\n[use animation]\n\n    `02_Dawningseria_Call_Eff_Front_Dodge.Ani`\n    `Dawningseria_Call_Eff_Front_Dodge`\n\n[use animation]\n\n    `02_Dawningseria_Call_Eff_Back_Dodge.Ani`\n    `Dawningseria_Call_Eff_Back_Dodge`\n\n[none effect add]  //不添加效果\n\n0-2     // 0是第多少帧-2是图层顺序 //* 这里有个重点0号图层也就是主图层。\n\n// 我们的这个als的文件以主图层后面加后缀\".als\"来命名的。\n\n// 0号图层是不能写进als的，主图层默认就是0号图层。\n\n    `Dawningseria_Call_Eff_Back_Dodge`   // 同样 在ani集合里面自定义的名字\n\n// 这个名字跟上面自定义的名字需要一样，这里是排图层顺序的地方。\n\n// -2，-1，0，1，2，3这样的顺序，这里-号也就是说这个图层他是在0号图层的后面\n\n// 1，2，3这些是在前面，以此类推。。。。\n\n[none effect add]\n    0    -1\n    `Dawningseria_Call_Eff_Front_Dodge`\n\n[none effect add]\n    0    1\n    `Dawningseria_Call_Eff_Back_Normal`\n</code></pre>\n\n<p><img alt=\"\" height=\"493\" src=\"http://book.tiansj.net//server/index.php?s=/api/attachment/visitFile&amp;sign=43c52bb2e1d09eb9ac4fee62b476f417\" width=\"950\" /></p>\n\n<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-&nbsp;<strong>By：AL</strong></p>\n",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-16T16:46:54.315",
+    "view_num": 554
+}

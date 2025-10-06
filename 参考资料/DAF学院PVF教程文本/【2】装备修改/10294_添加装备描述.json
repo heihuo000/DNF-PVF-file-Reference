@@ -1,0 +1,7 @@
+{
+    "content": "<p><img alt=\"\" height=\"383\" src=\"/media/uploads/2023/04/23/image-20230423220303-1.png\" width=\"360\" /></p>\n\n<p><img alt=\"\" height=\"466\" src=\"/media/uploads/2023/04/23/image-20230423220322-2.png\" width=\"750\" /></p>\n\n<p><img alt=\"\" height=\"63\" src=\"/media/uploads/2023/04/23/image-20230423220333-3.png\" width=\"893\" />&nbsp;</p>\n\n<p>找到装备代码，用SuperPVF打开在grade前面添加<br />\n[@05][flavor text]<br />\n[@09]3<br />\n[@0A]flavor_text_100090009 （数字为物品代码）<br />\n修改完直接编译明文，再更新封包。<br />\nNotepad++打开equipment.kor.str<br />\n用物品代码直接查找装备描述<br />\n装备描述下面添加<br />\nflavor_text_100090009&gt;你想要的文字</p>\n\n<p>这个东西就是给装备没有下面白字的，增加的</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-23T14:03:40.986",
+    "view_num": 624
+}

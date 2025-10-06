@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、跑動中攻擊次數 : 2次<br />\n4、<br />\n5、<br />\n6、<br />\n7、<br />\n8、追加操作物理攻擊力上升率 : 20%%<br />\n[static data]<br />\n600 0 200 2 500 600 150 100 20<br />\n[/static data]</p>\n\n<p>0、扔開抓住的敵人時物理攻擊力 : 独立攻击力 x 1.92<br />\n1、扔開抓住的敵人時物理攻擊力 : 192%% + &lt;0&gt;<br />\n2、跑動中撞到敵人時物理攻擊力 : 独立攻击力 x 0.77<br />\n3、跑動中撞到敵人時物理攻擊力 : 77%% + &lt;2&gt;<br />\n4、間接物理攻擊力 : 独立攻击力 x 0.96<br />\n5、間接物理攻擊力 : 96%% + &lt;4&gt;<br />\n[level info]<br />\n6 192 192 77 77 96 96</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:32:27.678",
+    "view_num": 43
+}

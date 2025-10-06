@@ -1,0 +1,7 @@
+{
+    "content": "<p>by:maoniufei3<br />\nhttp://tieba.baidu.com/p/4099348797<br />\n&nbsp;<br />\n&nbsp;<br />\n先发个图，招招人气~<br />\nps：感谢@轮回几多忆乌山大神对于&ldquo;四鬼剑技能合一&rdquo;的研究</p>\n\n<p><img alt=\"\" height=\"421\" src=\"/media/uploads/2023/05/07/image-20230507204230-2.png\" width=\"559\" /></p>\n\n<p>教程的话就参考@轮回几多忆乌山 大神的教程，我刚把技能树，专职自动学习技能和觉醒自动学习的被动技能修改完毕，下面就会着手修改单个技能。<br />\n修改技能时发现几个问题：<br />\n1、[skill class]这个属性不明确。<br />\n2、[growtype maximum level]这个是每个职业能学此技能的最大等级有6组数，应该为鬼剑、剑魂、鬼泣、狂战、阿修罗、征服者（这个没出场，应该是以后版本的事）<br />\n3、[skill fitness growtype]这个属性应该是允许那个职业学习的吧，不确定。。。<br />\n剩下的就是慢慢修改了，完事我会放出单个导入文件的，大家不要着急。<br />\n[skill fitness growtype]已确定是允许职业学习的属性 0代表鬼剑1代表剑魂2代表鬼泣3代表狂战4代表阿修罗<br />\n这些也就知道 maximumlvl 可以允许学习且可点出最高等级 skillclass 和fithessgtyp 每个专职后的职业都不同 似乎好像是技能体系<br />\n不过我改了职业相应的值 武极觉醒 依旧不能使用原其他系的职业 感觉武极觉醒好似变身 但是柔道里三个45以上的 技能原本就能使用 不知哪的问题<br />\n&nbsp;<br />\nPS：技能不要学太多，服务端容易崩溃。我制作这个的初衷是懒得把每个职业都练一遍，任务不好做啊。<br />\n&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T20:42:35.605",
+    "view_num": 2794
+}

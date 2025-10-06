@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:sm90</p>\n\n<p><br />\n路径是etc/pcroom.etc、pcroom3.etc、pcroom4.etc，内容一样pcroom是卡妮娜的，3是阿加雷斯的宝箱，4是赛丽亚售货机<br />\n图的话就不发了，第一个谁都知道，第二个是个箱子，第三个是粉色的，首先我说一下开启另外两个售货机的方法<br />\n已经绑定了NPC了，只用把这两个NPC加进来就够了，有添加NPC的教程，如果没有的话那我过段时间再写一个好了。<br />\n就说一下NPC的ID，第一个就不说了，阿加雷斯的宝箱ID是81，赛丽亚售货机ID是83<br />\n其他的还有可乐售货机等，因为缺失NPK，所以就不说了，也没必要说，三个够你们玩了。</p>\n\n<p>我们一步步说明<br />\n1.material<br />\n&nbsp;&nbsp;&nbsp; 售货机需要的硬币ID、数量</p>\n\n<p>2.output<br />\n&nbsp;&nbsp;&nbsp; 售货机里面的道具，4个一组，分别为道具ID、抽中几率*[1]，数量，是否公告*[2]</p>\n\n<p>注：</p>\n\n<p>1.抽中几率不能为0，通常是不能为0的，如果只是希望展示而不被抽中，写1，其他的设定高一些就行。<br />\n&nbsp;&nbsp; 抽中几率最大值没有限制，但是最好不要超出100W，具体的没有测试，抽中几率的数字越大，抽中几率越高。<br />\n&nbsp;&nbsp; 抽奖计算规则：<br />\n&nbsp;&nbsp; 把所有道具的抽中几率相加，再分别计算出每个道具抽中的百分比。</p>\n\n<p>2.是否公告即为玩家抽中该道具后，系统提示中会滚动出一条公告，比如：<br />\n&nbsp;&nbsp; XXX在售货机中获得[仿制的空城泪 - 旧王愁]<br />\n&nbsp;&nbsp; 0为不公告，1为公告</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T21:56:18.197",
+    "view_num": 606
+}

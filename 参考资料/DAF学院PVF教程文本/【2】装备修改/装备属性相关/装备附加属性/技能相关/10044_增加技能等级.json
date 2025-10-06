@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>加技能等级，职业、技能编号、加多少级。</p>\n\n<p>[skill levelup]<br />\n&#39;[at gunner]&#39; 215 1<br />\n[/skill levelup]</p>\n\n<p>--------------------------------------------------------------------------------</p>\n\n<p>鬼剑士全技能增加</p>\n\n<p>[all skill item]<br />\n[item growtype]<br />\n&#39;[swordman]&#39; 0 &nbsp;<br />\n[skill apply condition]<br />\n[skill group]<br />\n&#39;[all]&#39;<br />\n[lower bound level]<br />\n1<br />\n[upper bound level]<br />\n70<br />\n[value]<br />\n1<br />\n[extra condition]<br />\n&#39;[except for ex skill]&#39;<br />\n[/extra condition]<br />\n[/skill apply condition]<br />\n[skill phase]<br />\n&#39;[all]&#39;<br />\n[/all skill item]<br />\n注释说明：</p>\n\n<p>所有技能道具<br />\n道具特性：角色职业，0未知<br />\n技能应用条件<br />\n技能组：所有<br />\n下限等级：1<br />\n上限等级：70<br />\n参数：加1 （即全部技能加1）<br />\n额外（除外）条件：EX技能除外<br />\n技能阶段：所有</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:20:07.168",
+    "view_num": 924
+}

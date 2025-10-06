@@ -1,0 +1,34 @@
+[MOTION]
+	[BASE ANI] `../Animation/Buster.ani`
+	[SUB ANI]
+		`../Animation/CastEffect.ani` 0 1
+		`../Animation/CastEffectGlow.ani` 0 2
+	[/SUB ANI]
+[/MOTION]
+// [DEFAULT ATTACK INFO] `../Attackinfo/Cast.atk`
+
+[TRIGGER]
+	[FRAME] 0 0 
+	[WHICH] [ME]
+	[DO BEHAVIOR] [ME] 0
+[/TRIGGER]
+
+[TRIGGER]
+	[FRAME] 1 2 
+	[DO BEHAVIOR] [TARGET] 1
+[/TRIGGER]
+
+
+[BEHAVIOR] // 0번
+[CASTING] 1500 2 // 시간, 행동번호.
+[/BEHAVIOR]
+
+[BEHAVIOR] // 1번 
+	[CREATE PASSIVEOBJECT]	// 패시브 오브젝트 생성하기.
+		[INDEX] 23013	//인덱스번호
+		[PARTICLE FILENAME] `../Particle/ShootingStarPath.ptl`	// 패시브 오브젝트 생성 파티클
+		[LEVEL] 32						// 마법레벨.
+		[POS] 0 0 300 // 부모 좌표의 상대 좌표 x y z
+		[WARNING MARK] 330 0 100 2 // WarningMark 보정. x위치 보정 y 보정 위치 딜레이, 경고마크 종류.
+	[/CREATE PASSIVEOBJECT]
+[/BEHAVIOR]

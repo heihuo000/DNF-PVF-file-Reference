@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>重置一个冷却时间最短的技能</p>\n\n<p>[@05][skill cooltime reset]<br />\n[@02]0 Type:7 Str:587 1<br />\n[@05][speech on]<br />\n[@02]0<br />\n[@02]2000<br />\n[@09]3<br />\n[@0A]speech_100300002&gt;<br />\n[@05][/speech on]<br />\n[@05][/then]<br />\n参考:</p>\n\n<p>[skill cooltime reset]<br />\n0 Type:7 Str:587 1<br />\n[speech on]<br />\n0 2000 Type:9 Str:3 &#39;speech_100300002&gt;時空主宰者<br />\n&#39;<br />\n[/speech on]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:20:18.776",
+    "view_num": 631
+}

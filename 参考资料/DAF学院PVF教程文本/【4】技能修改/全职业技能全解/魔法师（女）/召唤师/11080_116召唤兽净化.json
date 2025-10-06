@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、诅咒状态：13（猜测）<br />\n2、出血状态：9 （猜测）<br />\n3、眩晕状态：3 （猜测）<br />\n4、失明状态：1 （猜测）<br />\n5、石化状态：7 （猜测）<br />\n6、<br />\n7、束缚状态：5 （猜测）<br />\n8、<br />\n9、中毒状态：8 （猜测）<br />\n10、混乱状态：6（猜测）<br />\n11、灼伤状态：11（猜测）<br />\n12、冰冻状态：2 （猜测）<br />\n13、<br />\n14、睡眠状态：4 （猜测）<br />\n15、Buff最高重叠数：3<br />\n16、<br />\n[static data]<br />\n500 13 9 3 1 7 16 5 15 8 6 11 2 0 4 3 3<br />\n[/static data]</p>\n\n<p>0、净化范围：400 px<br />\n1、每次净化数量上限：1<br />\n2、可净化的异常状态最高Lv：24<br />\n3、净化时的MP恢复量：3<br />\n4、施放速度增加率：1%<br />\n5、施放速度增加时间：20秒<br />\n[level info]<br />\n6 400 1 24 3 10 20000</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:17:32.023",
+    "view_num": 49
+}

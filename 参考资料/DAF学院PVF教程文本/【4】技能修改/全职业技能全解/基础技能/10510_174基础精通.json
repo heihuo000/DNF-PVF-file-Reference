@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n基础技能信息</p>\n\n<p>0、未知<br />\n测试说明：当数据改成0时，伤害是数次修改中最高的，下面是数据记录：<br />\n0-1973<br />\n10000-1679<br />\n100-1679<br />\n-1-1686<br />\n[static data]<br />\n1<br />\n[/static data]</p>\n\n<p>数值【3】表示：每级技能参数3个数为一组（数值/10），</p>\n\n<p>分别为：</p>\n\n<p>0.基本攻击力增加量<br />\n1.前冲攻击力增加量<br />\n2.跳跃攻击力增加量<br />\n[level info]<br />\n3 0 0 0 24 24 24 48 48 48</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T10:52:49.661",
+    "view_num": 285
+}

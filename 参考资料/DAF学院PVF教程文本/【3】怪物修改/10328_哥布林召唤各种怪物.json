@@ -1,0 +1,7 @@
+{
+    "content": "<p>by:阳光般的地狱<br />\nhttp://tieba.baidu.com/p/4097447017<br />\n&nbsp;<br />\n&nbsp;<img alt=\"\" height=\"273\" src=\"/media/uploads/2023/05/05/image-20230505221409-1.png\" width=\"521\" /><br />\n至于教程，今天实在不想弄了，聪明的人看到第二张图，大概已经想到怎么召唤怪物了吧。<br />\n这里大致说下思路<br />\n走狗boss投掷RX-78，投掷一个obj文件（此文件执行act或者atk文件），act文件里Summon monster 就是召唤怪物，index怪物代码<br />\n值得注意的是，投掷技能有连锁反应，投掷一个obj，obj执行act和atk，atk文件是攻击技能。act里面可以添加obj代码（obj文件都有对应的代码，请自行搜索），<br />\n然后添加的这个obj再执行act和atk，act里再添加obj嗲吗！！如此循环，你们懂得<br />\n&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-05T22:14:11.041",
+    "view_num": 1134
+}

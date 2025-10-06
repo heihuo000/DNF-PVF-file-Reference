@@ -1,0 +1,7 @@
+{
+    "content": "<p>实现这一效果的思路就是在鬼泣放阵的动作文件内加入霸体代码</p>\n\n<p>鬼泣放阵时的动作和狂战放狂暴时的动作还有鬼剑扔爆弹等道具时的动作相同，所以这些动作应该是用的同一个动作文件</p>\n\n<p>在pvf内楼主找到了名为throw的动作文件</p>\n\n<p><img alt=\"\" height=\"618\" src=\"/media/uploads/2023/07/06/15.jpg\" width=\"339\" /></p>\n\n<p>实际上这就是上面说的那些动作所用的动作文件，打开动作文件在其中加入霸体代码，这样在做这个动作时就会调用霸体状态</p>\n\n<p><img alt=\"\" height=\"452\" src=\"/media/uploads/2023/07/06/16.jpg\" width=\"672\" /></p>\n\n<p>霸体代码为<br />\n[DAMAGE TYPE]<br />\n`SUPERARMOR`</p>\n\n<p>霸体代码可以在逆向反击的文件内找到，就是hitback.ani</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-06T13:26:19.255",
+    "view_num": 862
+}

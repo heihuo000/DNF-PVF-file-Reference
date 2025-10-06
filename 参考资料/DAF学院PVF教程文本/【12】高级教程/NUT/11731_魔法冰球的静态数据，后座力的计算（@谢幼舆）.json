@@ -1,0 +1,7 @@
+{
+    "content": "<p>冰球前进速度400<br />\n冰球射程425<br />\n后座力：发射后角色后退速度-450<br />\n后退加速度1500<br />\n后座力：在施法时按前进键，发射后角色后退速度-225<br />\n在施法时按前进键，后退加速度1000</p>\n\n<pre>\n<code>[static data]\n400 425 -450 1500 -225 1000\n[/static data]\n</code></pre>\n\n<p>根据物理变速直线运动公式：</p>\n\n<pre>\n<code>v = u + at，\nv^2 = u^2 + 2as，\n</code></pre>\n\n<p>其中v为末速度，u为初始速度，a为加速度，t为时间，s为位移。<br />\n可计算，施法时不按方向键，后退时间t=0.3秒，后退距离s=-67.5</p>\n\n<p>来源，watercannon.nut</p>\n\n<pre>\n<code class=\"language-javascript\">local sizeRate = sq_GetLevelData(obj, SKILL_WATER_CANNON, 1, skillLevel); // 获取魔法冰球大小\nlocal xVelocityWaterCannon = sq_GetIntData(obj, SKILL_WATER_CANNON, 0); // 获取魔法冰球速\n// 获取魔法冰球的速度和加速度\nlocal xVelocity = sq_GetIntData(obj, SKILL_WATER_CANNON, 2);\nlocal xAccel = sq_GetIntData(obj, SKILL_WATER_CANNON, 3);\n// 检查方向键是否相反\nlocal direction = obj.sq_GetInputDirection(0);\nif (obj.getDirection() == sq_GetOppositeDirection(direction))\n{\nxVelocity = sq_GetIntData(obj, SKILL_WATER_CANNON, 4);\nxAccel = sq_GetIntData(obj, SKILL_WATER_CANNON, 5);\n}\n// 设置静态移动信息，实现后退效果\nobj.sq_SetStaticMoveInfo(0, xVelocity, xVelocity, false, xAccel, true);\nobj.sq_SetStaticMoveInfo(1, 0, 0, false);\n</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "旭旭姥姥",
+    "img": "",
+    "create_at": "2023-06-18T14:40:55.240",
+    "view_num": 515
+}

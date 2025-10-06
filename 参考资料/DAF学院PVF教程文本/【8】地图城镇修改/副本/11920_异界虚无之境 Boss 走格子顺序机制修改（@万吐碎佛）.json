@@ -1,0 +1,7 @@
+{
+    "content": "<p>自19年接触贴吧开始，一直有个疑问为什么台服的虚无之境boss图的格子顺序跟国服不一样，就很乱，东一个西一个的，走不好很容易掉血影响游戏体验，国服初期应该也是这样，那时候我是大转移才回归的，于是问了很多人，要么不会、不了解、无所谓，然后我也研究别的去了。<br />\n最近想起来，贴吧也找了并没有相关问题，也许有大佬已经解决了，但是这玩意没必要藏着掖着，正好最近有点时间花了一两个小时研究boss机制，寻思着这玩意肯定不是写死的，就找到了相关文件，废话不多说，直接上修改方法：<br />\n一、第一步<br />\npassiveobject/actionobject/monster/dimensiongate/cosmofiend/gaunis/_namgyu/start_tile_red01.obj</p>\n\n<p><img alt=\"\" height=\"680\" src=\"/media/uploads/2023/09/23/image-20230923124829-1.jpeg\" width=\"1200\" /></p>\n\n<p>二、第二步<br />\npassiveobject/actionobject/monster/dimensiongate/cosmofiend/gaunis/_namgyu/action/start_tile_red01.act</p>\n\n<p><img alt=\"\" height=\"649\" src=\"/media/uploads/2023/09/23/image-20230923124922-2.jpeg\" width=\"1200\" /></p>\n\n<p>三、第三步<br />\npassiveobject/actionobject/monster/dimensiongate/cosmofiend/gaunis/_namgyu/action/15/red_master_01.act</p>\n\n<p><img alt=\"\" height=\"649\" src=\"/media/uploads/2023/09/23/image-20230923125006-4.jpeg\" width=\"1200\" /></p>\n\n<p>四、一个一个试出来的格子坐标，附上国服的三个顺序<br />\n可延伸出很多玩法，自行摸索天马行空</p>\n\n<p><img alt=\"\" height=\"361\" src=\"/media/uploads/2023/09/23/image-20230923125026-5.jpeg\" width=\"800\" /></p>\n\n<p><img alt=\"\" height=\"722\" src=\"/media/uploads/2023/09/23/image-20230923125057-6.jpeg\" width=\"550\" /></p>\n\n<p>&nbsp;</p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-09-23T12:51:10.653",
+    "view_num": 568
+}

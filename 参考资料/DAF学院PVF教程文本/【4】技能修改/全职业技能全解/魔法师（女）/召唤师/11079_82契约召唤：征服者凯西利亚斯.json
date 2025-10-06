@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、数值对应在怪物列表中的编号：60024<br />\n3、施放技能的角色动作动画编号：2<br />\n4、施放技能后的僵直时间：0秒<br />\n5、周围元素检测范围及召唤兽可出现的范围：100 px<br />\n6、<br />\n7、献祭精灵数量：0<br />\n8、献祭高级精灵数量：0<br />\n9、<br />\n[static data]<br />\n2 0 60024 2 0 100 1 0 0 100<br />\n[/static data]</p>\n\n<p>0、征服者凯西利亚斯Lv：Lv51<br />\n1、<br />\n2、召唤兽数量上限：1<br />\n3、召唤兽存在时间：44秒<br />\n4、召唤时的HP消减：HP最大值的：20%<br />\n5、夜冥流&middot;不动剑冷却时间：1.158秒<br />\n6、夜冥流&middot;疾风剑冷却时间：2.315秒<br />\n7、夜冥流&middot;残心剑冷却时间：4.630秒<br />\n8、夜冥流&middot;不动剑物理攻击力：397%<br />\n9、夜冥流&middot;疾风剑物理攻击力：476%<br />\n10、夜冥流&middot;残心剑物理攻击力：636%<br />\n11、<br />\n12、必杀剑&middot;千鬼杀物理攻击力：1907% x 5<br />\n13、必杀剑&middot;狱冥天地物理攻击力：199%<br />\n14、<br />\n[level info]<br />\n15 51 1 1 44000 20 1158 2315 4630 397 476 636 2383 1907 199 2000</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T19:17:19.443",
+    "view_num": 82
+}

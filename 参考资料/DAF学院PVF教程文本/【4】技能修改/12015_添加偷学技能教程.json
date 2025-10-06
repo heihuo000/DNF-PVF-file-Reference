@@ -1,0 +1,7 @@
+{
+    "content": "<p>鉴于还有兄弟不会改，这里发一个简单的教程。。。。<br />\n首先，你想偷学哪一个技能，就去skill目录下，找到对应的技能。。。<br />\n比如说我举例子的狂战士双刀，就是skill\\swordman目录下的frenzy，在代码之中添加一段：<br />\n[steel learning skill]<br />\n1501000<br />\n这段代码的意思是这个技能可以被偷学。。。。<br />\n并且[growtype maximum level]这一栏之中，中间四个数字改成一样的，表示四个转职之后的职业都可以最高学到几级，比如双刀就是最高20级。。。。</p>\n\n<p><img alt=\"\" height=\"207\" src=\"/media/uploads/2023/12/21/1.jpg\" width=\"360\" /></p>\n\n<p>&nbsp;</p>\n\n<p>接着去NPC列表之中，找到albert和albert_fairpvp两个文件。。。</p>\n\n<p>&nbsp;</p>\n\n<p><img alt=\"\" height=\"493\" src=\"/media/uploads/2023/12/21/2.jpg\" width=\"489\" /></p>\n\n<p>&nbsp;</p>\n\n<p>如上图所示，把原来的技能ID替换成你想要改的ID。。。<br />\n保存，上传到服务端，重新跑一次五国。。。<br />\n然后你就可以学到技能了。。<br />\n友情提示，只能偷学50级以下的技能，觉醒技怎么改都学不了，我研究了好几天都没鼓捣出来，应该是在EXE里面写死的限制。。。。。</p>",
+    "auth_users": "大亮哥哥",
+    "img": "",
+    "create_at": "2023-12-21T17:07:52.999",
+    "view_num": 1081
+}

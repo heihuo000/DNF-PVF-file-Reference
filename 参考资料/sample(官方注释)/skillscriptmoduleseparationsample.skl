@@ -1,0 +1,110 @@
+[name] <12::antiair_upper_name>
+[name2] <12::antiair_upper_name2>
+[explain] <12::antiair_upper_explain>
+[basic explain] <12::antiair_upper_basic_explain>
+
+[purchase cost] 
+20
+[/purchase cost]
+[type]  `[active]`
+[skill class]  2
+[maximum level]  20
+[growtype maximum level]  10 10 10 10 10
+[skill fitness growtype] 
+0
+1
+2
+3
+4
+[/skill fitness growtype]
+
+[required level]  1
+[required level range]  3
+
+[consume MP]  6 24
+
+
+
+/*
+	던전, 결장, 사탑, 쟁역 모듈별로 스킬데이터 나누기
+
+	0. 지원되는 모듈
+		[dungeon], [/dungeon]		= 던전, 마을
+		[pvp], [/pvp]			= 결투장, 마을에서 싸우자
+		[warroom], [/warroom]		= 전쟁지역
+		[death tower], [/death tower]	= 사망의 탑
+
+	1. 모듈별로 나누기가 지원되는 태그
+		[casting time]
+		[cool time]
+		[consume MP]
+		[static data]
+		[level info]
+		[start cool time]
+
+	2. 주의사항
+		ㄱ. 언제나 [dungeon], [/dungeon] 묶음이 다른 것들보다 위에 와야 한다. 샘플파일을 보시면 이해가 될 듯.
+		ㄴ. 모듈별로 나누어질 태그가 추가되면 반드시 담당자에게 말한다. 버그가 생길 수 있음.
+*/
+[dungeon]
+[cool time]  2000 2000
+[/dungeon]
+
+[death tower]
+[cool time]  0 0
+[/death tower]
+
+[pvp]
+[cool time]  400 400
+[/pvp]
+
+[warroom]
+[cool time]  3000 3000
+[/warroom]
+
+
+[durability decrease rate] 10
+[weapon effect type] `[physical]`
+
+[icon] 
+`Character/Priest/Effect/SkillIcon.img` 18
+`Character/Priest/Effect/SkillIcon.img` 19
+
+[command] 
+(SKILL)
+[/command]
+[command key explain]  <12::command_key_explain_15105>
+
+[shake screen]  3 300
+
+[level info]
+2
+// 0.공격력% 1.띄우는 힘 : 수정시 [level property] 수정해야 함
+100 	350 
+106 	368 
+111 	387 
+117 	405 
+122 	424 
+128 	442 
+133 	461 
+139 	479 
+145 	497 
+150 	516 
+156 	534 
+161 	553 
+167 	571 
+173 	589 
+178 	608 
+184 	626 
+189 	645 
+195 	663 
+200 	682 
+206 	700 
+[/level info]
+
+[level property] 
+1 99
+<12::antiair_upper_level_property>
+-1 1 0.285714285714 // 0.285714285714 : 100 / 1렙때 띄우는 힘.
+-1 0 1.0
+[/level property]

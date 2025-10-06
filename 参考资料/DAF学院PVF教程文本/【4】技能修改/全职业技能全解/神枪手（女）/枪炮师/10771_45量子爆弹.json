@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n[static data]<br />\n600 400 600 0 500 240 1<br />\n[/static data]</p>\n\n<p>0、爆炸物理攻擊力 : 独立攻击力 x 15.02<br />\n1、感電機率 : 30%<br />\n2、感電LV:42<br />\n3、感電持續時間 : 5秒<br />\n4、感電攻擊力 : 125%<br />\n5、爆炸範圍 : 360px<br />\n6、導彈物理攻擊力 : 独立攻击力 x 4.38<br />\n[level info]<br />\n7 1502 300 42 5000 125 360 438<br />\n[/level info]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T14:57:48.835",
+    "view_num": 88
+}

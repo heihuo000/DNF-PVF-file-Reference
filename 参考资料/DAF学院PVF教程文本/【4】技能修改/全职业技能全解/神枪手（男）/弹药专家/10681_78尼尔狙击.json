@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、尼爾狙擊的延遲時間 ：0.4s<br />\n1、狙擊次數上限 : 5次<br />\n2、狙擊冷卻時間 : 0.8秒<br />\n3、狙擊限制時間 : 10秒<br />\n4、狙擊移動攻擊力 ：500<br />\n5、狙擊移動速度 : 300<br />\n6、最大射程 : 1280px<br />\n7、<br />\n8、<br />\n9、<br />\n[static data]<br />\n400 5 800 10000 500 300 1280 640 400 1<br />\n[/static data]</p>\n\n<p>0、物理攻擊力 :&nbsp; 独立攻击力 x 13.2<br />\n1、眩暈機率 : 100%<br />\n2、眩暈Lv : Lv 46<br />\n3、眩暈持續時間 : 1秒<br />\n[level info]<br />\n4 1320 1000 46 1000<br />\n[/level info]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:39:55.102",
+    "view_num": 87
+}

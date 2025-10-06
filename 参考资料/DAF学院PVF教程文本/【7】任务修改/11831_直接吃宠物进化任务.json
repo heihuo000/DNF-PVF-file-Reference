@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>#PVF_File\n\n[grade]\n    `[achievement]`\n\n[npc index]\n    36\n\n[complete npc index]\n    -1\n\n[job]\n    `[all]`\n\n[grow type]\n    -1\n\n[level]\n    60    99\n\n[pre required quest]\n    7999\n[/pre required quest]\n\n[type]\n    `[seeking]`\n\n[sub type]\n    -1\n\n[int data]\n    100330534    1    20101011    1\n[/int data]\n\n[reward type]\n    `[event creature evolution]`\n\n[reward int data]\n[/reward int data]\n\n[reward selection int data]\n    100330623    302\n[/reward selection int data]\n\n[name]\n    `機械大師球 進化`\n\n[depend message]\n    `冒險家，想要寵物變得強大嗎，去收集升級所需材料吧`\n\n[condition message]\n    `收集以下材料你的寵將會進化到下一階\n完成任務后取下寵物再帶上才會正常顯示外觀`\n\n[solve message]\n    `啊， 你真的升級寵物了！讓我們看看你的寵物身上隱藏著什麼故事吧。\n啊！ 這……這是……`\n</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-15T11:31:28.843",
+    "view_num": 797
+}

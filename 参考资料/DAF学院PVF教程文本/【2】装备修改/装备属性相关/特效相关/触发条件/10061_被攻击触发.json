@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>设置冷却时间为20秒，被攻击成功，目录设置为敌人。</p>\n\n<p>[if]</p>\n\n<p>[cooltime]<br />\n20000<br />\n[hit]<br />\n1<br />\n[/if]</p>\n\n<p>[then]<br />\n[target]<br />\n&#39;enemy&#39; -1<br />\n【特效内容】<br />\n[/then]<br />\n相关参数</p>\n\n<p>1：被攻击成功<br />\n2：MISS</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T09:25:57.839",
+    "view_num": 261
+}

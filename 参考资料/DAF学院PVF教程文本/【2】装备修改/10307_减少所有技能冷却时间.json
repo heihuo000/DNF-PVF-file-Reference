@@ -1,0 +1,7 @@
+{
+    "content": "<p>By：360972089<br />\nhttp://tieba.baidu.com/p/4711879482</p>\n\n<p><br />\n[if]</p>\n\n<p><br />\n[time]<br />\n300013000<br />\n[/if]</p>\n\n<p><br />\n[then]</p>\n\n<p><br />\n[target]<br />\n`party`<br />\n-1<br />\n[duration]<br />\n90000<br />\n[probability]<br />\n100<br />\n[stat]<br />\n`skill cool time`<br />\n`%`<br />\n-100<br />\n[/then]</p>\n\n<p>&nbsp;</p>\n\n<p><br />\n这个代码好久就有了，貌似贴吧没发过<br />\n别的地方扣来的<br />\n装备3秒后所有技能冷却时间减100%<br />\n当然，可以自己修改时间什么的！</p>\n\n<p><br />\n实测，可以加在任何装备上面都有效！</p>\n\n<p><br />\nBy：氢氧化肥</p>\n\n<p>[if]<br />\n[change status]<br />\n&#39;hp&#39; &#39;&gt;=&#39; &#39;%&#39; 0 &#39;end&#39;<br />\n[/if]<br />\n[then]<br />\n[target]<br />\n&#39;myself&#39; -1<br />\n[stat by condition]<br />\n&#39;skill cool time&#39; &#39;%&#39; -100<br />\n[/then]</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-24T14:19:20.796",
+    "view_num": 1030
+}

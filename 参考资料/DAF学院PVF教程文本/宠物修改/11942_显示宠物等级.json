@@ -1,0 +1,7 @@
+{
+    "content": "<p>直接宠物.cre文件上面加上这个代码就行了不可缺少任何一串才能显示</p>\n\n<pre>\n<code>[selective grow creature]\n    [using exp item]\n        1\n    [grow Atype item index]\n        778866\n    [item count for levelup]\n        10\n[/selective grow creature]\n\n[event evolute creature]\n    1004\n[/event evolute creature]\n</code></pre>\n\n<p>下面解析词条意思</p>\n\n<pre>\n<code>[selective grow creature]\n    [using exp item]调用exe里的项目编码\n        1\n    [grow Atype item index]需要的消耗品编码(具体写法如下)\n        778866\n    [item count for levelup]在城镇吃多少个778866可以升级\n        10\n[/selective grow creature]\n\n[event evolute creature]升到多少级之后可以变成下面这个宠物不可缺少（测试为不生效）\n    1004\n[/event evolute creature]\n</code></pre>\n\n<p>城镇使用的消耗品778866写法如下 .stk</p>\n\n<pre>\n<code>复制#PVF_File\n\n\n[name]\n    `进阶宠物的食物食物`\n\n[name2]\n    `name2_778866`\n\n[explain]\n    ``\n\n[grade]\n    1\n\n[rarity]\n    2\n\n[usable job]\n    `[all]`\n[/usable job]\n\n[attach type]\n    `[trade]`\n\n[minimum level]\n    1\n\n[cool time]\n    10\n\n[icon]\n    `Item/stackable/consumption.img`    997\n\n[field image]\n    `Item/field_consumption.img`    68\n\n[stackable type]\n    `[creature expitem]`    0\n\n[move wav]\n    `FOOD_TOUCH`\n\n[stack limit]\n    1000</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-10-08T11:27:56.603",
+    "view_num": 837
+}

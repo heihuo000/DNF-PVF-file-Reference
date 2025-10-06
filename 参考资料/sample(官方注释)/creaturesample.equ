@@ -1,0 +1,49 @@
+[name] `챠프의 알`
+[name2] `An Egg of Charp`
+[creature species] 7		// 종족명 인덱스
+[grade] 1
+[attach type] `[free]`
+[creation rate] 0
+[weight] 0
+[usable job]
+`[all]`
+[/usable job]
+[minimum level] 1
+
+[icon] `Item/IconAcc.img` 66
+[field image] `Item/FieldImage.img` 6
+
+[equipment type] `[creature]` 10
+[sub type] 1			// 0 : 크리쳐, 1 : 알, 2 : 캡슐
+[price] 100
+[cool time] 10000
+
+[creature minimum level] 10			//사용하기 위한 크리쳐 최소 레벨
+
+[creature physical attack] 10			// 크리쳐 물리 공격력
+[creature magical attack] 10			// 크리쳐 마법 공격력
+[creature skill consume mp rate] -10.00		// 크리쳐 스킬 소모MP 비율(%)
+[creature skill charge time rate] -10.00	// 크리쳐 차지 타임 비율(%)
+[creature skill over charge time rate] -10.00	// 크리쳐 오버 차지 타임 비율(%)
+[creature experience amount rate] 10.00		// 크리쳐 경험치 획득량 비율(%)
+[creature physical critical hit] 5.0		// 크리쳐 물리 크리티컬 히트
+[creature magical critical hit] 5.0		// 크리쳐 마법 크리티컬 히트
+[creature stuck] -3.0				// 크리쳐 스턱률
+
+[MP MAX rate] 30.0		// 장착시 MP 최대치 증가비율(%)
+
+[move wav] `NECKLACE_TOUCH`
+
+[set item master] -1
+
+[hatch item id] 63003		// 크리쳐 알에서 부화시 생성될 크리쳐 인덱스
+
+[int data]
+63006	1000			// 크리쳐 캡슐에서 나올 크리쳐 알 인덱스와 상대 확률
+63007	1000
+
+300				// 만복도 풀일때 버프타임 시간 (sec)
+-20				// 버프시 크리쳐 차지 타임 비율 (%, 오버타임 포함)
+30 				// 먹이 사용시 만복도 증가량
+[/int data]
+

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、Lv3：施放后使自身进入无敌状态<br />\n5、Lv6：施放时增加暴击几率。<br />\n6、Lv9：增加[极 &middot; 鬼剑术 (斩铁式)]的技能等级<br />\n7、[极 &middot; 鬼剑术 (斩铁式)]的技能等级效果持续3秒<br />\n[static data]<br />\n150 35 250 20 3 6 9 3000<br />\n[/static data]</p>\n\n<p>0、剑插入地面时的物理攻击力：626<br />\n1、剑阵物理攻击力：417<br />\n2、完结技能物理攻击力：2501<br />\n3、<br />\n4、<br />\n5、<br />\n[level info]<br />\n6 626 417 2501 0 0 0</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:10:04.043",
+    "view_num": 237
+}

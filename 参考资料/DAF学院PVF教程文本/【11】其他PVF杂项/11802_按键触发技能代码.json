@@ -1,0 +1,7 @@
+{
+    "content": "<pre>\n<code>[command]\n    {6=`(DOWN)`}\n    {8=`,`}\n    {6=`(DOWN)`}\n    {8=`,`}\n    {6=`(CREATURE)`}\n[/command]\n \n[if]\n    [use command]\n        1\n    [cooltime]\n        60000\n[/if]\n \n[then]\n    [target]\n        `myself`    -1\n    [probability]\n        100\n    [passive object]\n        4803    0   0   0   99  0\n        ``\n    [/passive object]\n[/then]</code></pre>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-13T21:30:32.473",
+    "view_num": 595
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp; 40&nbsp;&nbsp; &nbsp;被攻擊時，以20%的機率100秒內內召喚1隻Lv55精靈：冰奈斯攻擊敵人。<br />\n（召喚的怪物最大可同時存在1隻，受到許多傷害時，就會和召喚時間無關消失。）</p>\n\n<p><br />\n[if]</p>\n\n<p>[cooltime]<br />\n100000&nbsp;&nbsp; &nbsp;<br />\n[hit]<br />\n1&nbsp;&nbsp; &nbsp;</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`myself`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[duration]<br />\n100000&nbsp;&nbsp; &nbsp;<br />\n[reduce duration at pvp module]<br />\n75&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n20&nbsp;&nbsp; &nbsp;<br />\n[summon monster]<br />\n60103&nbsp;&nbsp; &nbsp;55&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;<br />\n[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:21:31.682",
+    "view_num": 169
+}

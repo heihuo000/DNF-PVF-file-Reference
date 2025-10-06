@@ -1,0 +1,7 @@
+{
+    "content": "<p>下面我称之为无视抗性百分比、抗性百分比<br />\n这个参数的位置是，<code>monster/monsterapcdifficultybonus.tbl</code>，这里面的第56-60个数（不是行）<br />\n其他参数也标出来了，打问好的是不好测试的东西，但应该没错，没打问号的 就是出来准确的参数定义</p>\n\n<p><img alt=\"\" src=\"http://book.tiansj.net//server/index.php?s=/api/attachment/visitFile&amp;sign=d10dba85a49b8f1abae27277921801b2\" /></p>\n\n<pre>\n<code>1-5      好战性\n6-10    视野\n11-15    命中\n16-20    为回避率\n21-25    为血量HP\n26-30    为攻速\n31-35    为移动速度\n36-40    为异常状态抗性\n41-45    为攻击伤害\n46-50    为防御\n51-55    为硬直\n56-60    百分比忽略玩家武器强化带来的无视攻击力\n61-65    对玩家的额外伤害\n66-169    ？？？4个数值一组 不知道是什么了。欢迎大家踊跃测试投稿！\n</code></pre>\n\n<h2>单独怪物设置：</h2>\n\n<pre>\n<code>[monster difficulty bonus]\n500    500    500    500    500\n500    500    500    500    500\n1    1    1    1    1\n0.1    0.1    0.1    0.1    0.1\n10    10    10    10    10\n1    1    1    1    1\n1    1    1    1    1\n100    100    100    100    100\n5    5    5    5    5\n3    3    3    3    3\n500    500    500    500    500\n0.1    0.1    0.1    0.1    0.1\n0.5    0.5    0.5    0.5    0.5\n[/monster difficulty bonus]\n</code></pre>\n\n<h2>格式对比上面表一样！</h2>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-07-15T11:28:34.332",
+    "view_num": 2191
+}

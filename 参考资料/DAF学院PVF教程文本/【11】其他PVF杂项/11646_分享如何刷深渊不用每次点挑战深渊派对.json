@@ -1,0 +1,7 @@
+{
+    "content": "<p>frida 脚本服务端代码：<br />\n原理：hook进入副本的函数，修改深渊派对的标志</p>\n\n<pre>\n<code>function startHellParty(){\nInterceptor.attach(ptr(0x085a0954), {\nonEnter: function (args) {\nif(heffPartyTag){\nargs[3] = ptr(1);\n}\n}\n});\n}\n</code></pre>\n\n<p><code>需要在start()函数里面添加 startHellParty() 函数</code></p>\n\n<p><code>heffPartyTag</code>&nbsp;标志 使用&nbsp;<code>var heffPartyTag = false;</code>&nbsp;在函数外面创建一个<br />\n在接收gm消息的地方加如下代码</p>\n\n<pre>\n<code>else if(msg == 'onhell'){\nheffPartyTag = true;\napi_CUser_SendNotiPacketMessage(user, '开启深渊模式', 1);\n}else if(msg == 'offhell'){\nheffPartyTag = false;\napi_CUser_SendNotiPacketMessage(user, '关闭深渊模式', 1);\n}\n</code></pre>\n\n<p>扩展，可以通过角色是否使用某项物品 然后一直开启此模式，然后使用另一个物品关闭此模式，服务端加入角色验证，标志改为角色和标志的map</p>\n\n<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;台服dnf吧：@vhjgdvmjk</p>",
+    "auth_users": "玲珑",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level6.gif",
+    "create_at": "2023-05-15T18:35:36.832",
+    "view_num": 812
+}

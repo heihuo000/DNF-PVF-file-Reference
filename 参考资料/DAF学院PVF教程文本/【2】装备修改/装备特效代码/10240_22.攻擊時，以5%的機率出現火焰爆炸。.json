@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p>&nbsp; 22&nbsp;&nbsp; &nbsp;攻擊時，以5%的機率出現火焰爆炸。</p>\n\n<p><br />\n[if]</p>\n\n<p>[cooltime]<br />\n1000&nbsp;&nbsp; &nbsp;<br />\n[attack success]<br />\n1&nbsp;&nbsp; &nbsp;</p>\n\n<p>[/if]</p>\n\n<p>[then]</p>\n\n<p>[target]<br />\n`enemy`<br />\n-1&nbsp;&nbsp; &nbsp;<br />\n[probability]<br />\n5&nbsp;&nbsp; &nbsp;<br />\n[reduce probability to human armor at pvp module]<br />\n80&nbsp;&nbsp; &nbsp;<br />\n[passive object]<br />\n48077&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;64&nbsp;&nbsp; &nbsp;0&nbsp;&nbsp; &nbsp;``</p>\n\n<p>[/passive object]</p>\n\n<p>[/then]</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T13:18:49.432",
+    "view_num": 204
+}

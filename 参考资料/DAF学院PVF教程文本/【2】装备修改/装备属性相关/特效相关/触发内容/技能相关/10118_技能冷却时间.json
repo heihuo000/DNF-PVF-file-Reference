@@ -1,0 +1,7 @@
+{
+    "content": "<p>减所有技能冷却时间 -12%</p>\n\n<p>[stat by condition]<br />\n&#39;skill cool time&#39; &#39;%&#39; -12</p>\n\n<p>触发内容：目前技能冷却时间：-5%，当数值为-100时，即：重置技能冷却时间。</p>\n\n<p>[skill cooltime reset]<br />\n55 `%` -5<br />\n注释：55为技能编号。</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-16T12:46:36.607",
+    "view_num": 441
+}

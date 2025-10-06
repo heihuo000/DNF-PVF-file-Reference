@@ -1,0 +1,7 @@
+{
+    "content": "<p>By:一路悲伤_<br />\nhttp://tieba.baidu.com/p/4190863578</p>\n\n<p><img alt=\"\" height=\"224\" src=\"/media/uploads/2023/04/23/image-20230423220614-1.png\" width=\"382\" /></p>\n\n<p><img alt=\"\" height=\"217\" src=\"/media/uploads/2023/04/23/image-20230423220619-2.png\" width=\"404\" /></p>\n\n<p>&nbsp;<img alt=\"\" height=\"347\" src=\"/media/uploads/2023/04/23/image-20230423220631-3.png\" width=\"496\" /></p>\n\n<p><img alt=\"\" height=\"245\" src=\"/media/uploads/2023/04/23/image-20230423220638-4.png\" width=\"429\" /><br />\n&nbsp;<br />\n&nbsp;<img alt=\"\" height=\"192\" src=\"/media/uploads/2023/04/23/image-20230423220646-5.png\" width=\"281\" /></p>\n\n<p>看出来什么了吗？</p>\n\n<p>对了。就是释放技能时候 会喊话<br />\n在\\stackable\\stackable.kor里面修改speech_1内容<br />\n代码如下</p>\n\n<p>[@05][if]<br />\n[@05][event use skill]<br />\n[@07]swordman<br />\n[@02]74<br />\n[@05][/if]<br />\n[@05][then]<br />\n[@05][target]<br />\n[@07]myself<br />\n[@02]-1<br />\n[@05][speech on]<br />\n[@02]0<br />\n[@02]2000<br />\n[@09]3<br />\n[@0A]speech_1<br />\n[@05][/speech on]<br />\n[@05][/then]<br />\n经测试。就只剩PKC里面出不了效果。有哪位大神知道怎么在PKC显示吗</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-04-23T14:06:52.024",
+    "view_num": 589
+}

@@ -1,0 +1,7 @@
+{
+    "content": "<p>&nbsp;</p>\n\n<p><br />\n0、<br />\n1、<br />\n2、<br />\n3、<br />\n4、<br />\n5、<br />\n6、<br />\n7、<br />\n[static data]<br />\n250 10 300 100 260 130 100 0<br />\n[/static data]</p>\n\n<p>0、每發子彈攻擊力 : 112%武器物攻<br />\n1、發射次數 : 最小12次<br />\n2、發射次數 : 最多20次<br />\n[level info]<br />\n3 112 12 20<br />\n[/level info]</p>\n\n<p>0、技能每增加Lv1時，發射次數 +2次<br />\n1、技能每增加Lv1時，發射次數 +2次<br />\n[special level up]<br />\n-1 1 &#39;+&#39; 2 -1 2 &#39;+&#39; 2<br />\n[/special level up]</p>\n\n<p>&nbsp;</p>",
+    "auth_users": "学院搬运工",
+    "img": "https://dafstatic.oss-cn-beijing.aliyuncs.com/static/title/level4.gif",
+    "create_at": "2023-05-07T11:35:02.856",
+    "view_num": 48
+}
