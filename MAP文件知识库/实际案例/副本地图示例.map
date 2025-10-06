@@ -1,0 +1,321 @@
+// ========================================
+// 实际案例: 格兰之森副本
+// 类型: 副本地图
+// 功能: 怪物战斗、BOSS战、宝箱奖励
+// 特点: 多区域、条件触发、随机事件
+// ========================================
+
+[map info]
+	`map type`	`dungeon`
+	`width`		1200
+	`height`	900
+	`tile width`	32
+	`tile height`	32
+	`map name`	`格兰之森深处`
+
+[layer info]
+	`layer count`	5
+	`layer 0`	`back`		// 背景层
+	`layer 1`	`tile`		// 地板瓦片
+	`layer 2`	`obj`		// 障碍物和装饰
+	`layer 3`	`monster`	// 怪物层
+	`layer 4`	`effect`	// 特效层
+
+[map attribute]
+	`bgm`			`Music/dungeon_forest.ogg`
+	`camera limit rect`	0	0	1200	900
+	`minimap size`		300	225
+	`minimap color`		255	255	255
+	`monster count limit`	30		// 最大怪物数量
+	`monster respawn`	1		// 允许怪物重生
+	`monster respawn time`	30		// 重生时间(秒)
+
+[tile info]
+	`tile total`		64
+	`tile attribute`	`tile/forest_dungeon.til`
+	`tile image`		`tile/forest_dungeon.img`
+
+[dungeon movable area]
+	`area count`	4
+	// 入口区域
+	`area 0`	50	100	200	200
+	// 中央区域
+	`area 1`	300	300	600	300
+	// BOSS区域
+	`area 2`	900	400	250	250
+	// 宝箱区域
+	`area 3`	800	700	150	150
+
+[dungeon start area]
+	`area count`	1
+	`area 0`	50	100	100	100	// 玩家出生区域
+
+[static data]
+	`static count`	8
+	// 玩家出生点
+	`static 0`
+		`type`		`player start pos`
+		`pos`		100	150
+	// 第一个门
+	`static 1`
+		`type`		`dungeon gate`
+		`pos`		250	200
+		`height`	100
+		`width`		50
+		`link index`	1		// 连接到中央区域
+	// 第二个门
+	`static 2`
+		`type`		`dungeon gate`
+		`pos`		800	450
+		`height`	100
+		`width`		50
+		`link index`	2		// 连接到BOSS区域
+	// 第三个门
+	`static 3`
+		`type`		`dungeon gate`
+		`pos`		900	650
+		`height`	100
+		`width`		50
+		`link index`	3		// 连接到宝箱区域
+	// 宝箱1
+	`static 4`
+		`type`		`treasure box`
+		`pos`		850	750
+		`item group`	`forest_normal_box`
+	// 宝箱2(稀有)
+	`static 5`
+		`type`		`treasure box`
+		`pos`		900	800
+		`item group`	`forest_rare_box`
+		`appear condition`	`boss die`	// BOSS死亡后出现
+	// 副本出口
+	`static 6`
+		`type`		`dungeon exit`
+		`pos`		950	800
+	// 隐藏宝箱
+	`static 7`
+		`type`		`treasure box`
+		`pos`		150	200
+		`item group`	`forest_hidden_box`
+		`appear condition`	`monster all die`	// 所有怪物死亡后出现
+
+[monster]
+	`monster count`	5
+	// 普通怪物组 - 入口区域
+	`monster 0`
+		`monster id`		1001
+		`monster type`		`normal`
+		`pos`			100	200
+		`count`			5
+		`distance`		50
+		`is boss`		0
+	// 精英怪物 - 中央区域
+	`monster 1`
+		`monster id`		1002
+		`monster type`		`elite`
+		`pos`			500	400
+		`count`			3
+		`distance`		80
+		`is boss`		0
+		`appear condition`	`enter area 1`	// 进入中央区域触发
+	// 陷阱怪物 - 中央区域
+	`monster 2`
+		`monster id`		1003
+		`monster type`		`trap`
+		`pos`			600	500
+		`count`			2
+		`distance`		40
+		`is boss`		0
+		`appear condition`	`monster 1 die`	// 精英怪死亡后出现
+	// BOSS前卫兵 - BOSS区域入口
+	`monster 3`
+		`monster id`		1004
+		`monster type`		`elite`
+		`pos`			850	400
+		`count`			2
+		`distance`		60
+		`is boss`		0
+		`appear condition`	`enter area 2`	// 进入BOSS区域触发
+	// BOSS - BOSS区域中央
+	`monster 4`
+		`monster id`		2001
+		`monster type`		`boss`
+		`pos`			950	450
+		`count`			1
+		`distance`		0
+		`is boss`		1
+		`appear condition`	`monster 3 die`	// 卫兵死亡后出现
+		`die condition`		`open area 3`	// 死亡后开启宝箱区域
+
+[passive object]
+	`obj count`	10
+	// 入口处倒塌的树
+	`obj 0`
+		`file name`	`passiveobject/fallen_tree.po`
+		`pos`		80	120
+		`z pos`		0
+	// 中央区域石柱
+	`obj 1`
+		`file name`	`passiveobject/stone_pillar.po`
+		`pos`		400	350
+		`z pos`		0
+	// 中央区域石柱2
+	`obj 2`
+		`file name`	`passiveobject/stone_pillar.po`
+		`pos`		600	350
+		`z pos`		0
+	// 中央区域祭坛
+	`obj 3`
+		`file name`	`passiveobject/altar.po`
+		`pos`		500	450
+		`z pos`		0
+	// BOSS区域王座
+	`obj 4`
+		`file name`	`passiveobject/throne.po`
+		`pos`		950	450
+		`z pos`		0
+	// 宝箱区域宝石雕像
+	`obj 5`
+		`file name`	`passiveobject/gem_statue.po`
+		`pos`		850	750
+		`z pos`		0
+	// 可破坏物 - 木桶
+	`obj 6`
+		`file name`	`passiveobject/breakable_barrel.po`
+		`pos`		300	200
+		`z pos`		0
+		`breakable`	1
+		`drop item`	`potion_small`
+	// 可破坏物 - 木箱
+	`obj 7`
+		`file name`	`passiveobject/breakable_crate.po`
+		`pos`		700	400
+		`z pos`		0
+		`breakable`	1
+		`drop item`	`gold_small`
+	// 陷阱 - 地刺
+	`obj 8`
+		`file name`	`passiveobject/trap_spike.po`
+		`pos`		600	500
+		`z pos`		-10
+		`trap damage`	100
+		`trap delay`	2
+	// 机关 - 隐藏开关
+	`obj 9`
+		`file name`	`passiveobject/hidden_switch.po`
+		`pos`		200	150
+		`z pos`		-5
+		`activate condition`	`attack hit`
+		`activate effect`	`open hidden box`
+
+[animation]
+	`ani count`	6
+	// 入口区域光线
+	`ani 0`
+		`ani file name`		`sprite/forest_light.ani`
+		`ani pos`		100	100
+		`ani loop`		1
+		`ani play speed`	60
+	// 中央区域祭坛光效
+	`ani 1`
+		`ani file name`		`sprite/altar_glow.ani`
+		`ani pos`		500	450
+		`ani loop`		1
+		`ani play speed`	80
+	// BOSS区域火焰
+	`ani 2`
+		`ani file name`		`sprite/boss_flame.ani`
+		`ani pos`		950	450
+		`ani loop`		1
+		`ani play speed`	100
+		`ani condition`		`enter area 2`	// 进入BOSS区域触发
+	// BOSS死亡爆炸
+	`ani 3`
+		`ani file name`		`sprite/boss_explosion.ani`
+		`ani pos`		950	450
+		`ani loop`		0
+		`ani play speed`	120
+		`ani condition`		`monster 4 die`	// BOSS死亡触发
+	// 宝箱区域宝石光芒
+	`ani 4`
+		`ani file name`		`sprite/gem_shine.ani`
+		`ani pos`		850	750
+		`ani loop`		1
+		`ani play speed`	70
+		`ani condition`		`enter area 3`	// 进入宝箱区域触发
+	// 隐藏宝箱出现效果
+	`ani 5`
+		`ani file name`		`sprite/treasure_appear.ani`
+		`ani pos`		150	200
+		`ani loop`		0
+		`ani play speed`	90
+		`ani condition`		`monster all die`	// 所有怪物死亡触发
+
+[sound]
+	`sound count`	8
+	// 环境音 - 森林背景
+	`sound 0`	`Sound/forest_ambient.ogg`	600	450	100
+	// 入口区域流水声
+	`sound 1`	`Sound/water_stream.ogg`	100	150	30
+	// 中央区域风声
+	`sound 2`	`Sound/wind_howl.ogg`		500	400	40
+	// 祭坛嗡鸣声
+	`sound 3`	`Sound/altar_hum.ogg`		500	450	25
+	// BOSS区域火焰声
+	`sound 4`	`Sound/fire_crackle.ogg`		950	450	35
+	// BOSS咆哮声
+	`sound 5`	`Sound/boss_roar.ogg`		950	450	50
+	`sound condition 5`	`monster 4 appear`	// BOSS出现时触发
+	// 宝箱开启声
+	`sound 6`	`Sound/treasure_open.ogg`	850	750	30
+	`sound condition 6`	`treasure open`		// 宝箱开启时触发
+	// 隐藏宝箱出现声
+	`sound 7`	`Sound/secret_found.ogg`		150	200	40
+	`sound condition 7`	`monster all die`	// 所有怪物死亡触发
+
+[special event]
+	`event count`	3
+	// 随机事件 - 精英怪增援
+	`event 0`
+		`event type`		`monster spawn`
+		`event condition`	`monster 1 hp < 30%`	// 精英怪血量低于30%
+		`event action`		`spawn monster 1002 at 550 450 count 2`
+		`event message`		`增援到达！小心！`
+	// 随机事件 - 宝箱陷阱
+	`event 1`
+		`event type`		`trap`
+		`event condition`	`open treasure 4`	// 开启普通宝箱
+		`event action`		`spawn monster 1003 at 850 750 count 1`
+		`event message`		`这是个陷阱！`
+	// 随机事件 - 隐藏奖励
+	`event 2`
+		`event type`		`reward`
+		`event condition`	`time < 300`	// 5分钟内完成
+		`event action`		`spawn treasure forest_time_box at 500 800`
+		`event message`		`发现隐藏奖励！`
+
+// ========================================
+// 设计说明:
+// 1. 多区域设计，提供探索体验
+// 2. 条件触发机制，增加游戏深度
+// 3. 多种怪物类型，丰富战斗体验
+// 4. 隐藏奖励，鼓励探索和速通
+// 5. 环境音效和动画，增强氛围
+// ========================================
+
+// ========================================
+// 功能特点:
+// - 多阶段BOSS战：先清除卫兵，再挑战BOSS
+// - 条件触发宝箱：BOSS死亡后出现稀有宝箱
+// - 随机事件：低血量触发增援，宝箱可能是陷阱
+// - 速通奖励：5分钟内完成获得额外宝箱
+// - 隐藏机关：找到并激活隐藏开关获得奖励
+// ========================================
+
+// ========================================
+// 性能优化:
+// - 区域分割，只在玩家进入时加载怪物
+// - 条件触发动画，减少同时播放的动画数量
+// - 音效范围限制，避免全图播放
+// - 可破坏物数量控制，减少物理计算
+// ========================================

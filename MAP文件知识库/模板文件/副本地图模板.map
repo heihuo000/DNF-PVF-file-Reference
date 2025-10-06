@@ -1,0 +1,149 @@
+// ========================================
+// 副本地图标准模板
+// 适用于: 战斗副本、任务副本、挑战副本
+// 特点: 允许技能、怪物配置、起始区域设定
+// ========================================
+
+[map info]
+	`map type`	`dungeon`		// 副本类型地图
+	`width`		1200			// 地图宽度
+	`height`	800			// 地图高度
+	`tile width`	32			// 瓦片宽度
+	`tile height`	32			// 瓦片高度
+	`map name`	`新副本地图`		// 地图显示名称
+
+[layer info]
+	`layer count`	4			// 图层数量
+	`layer 0`	`back`			// 背景层
+	`layer 1`	`tile`			// 瓦片层
+	`layer 2`	`obj`			// 对象层
+	`layer 3`	`effect`		// 特效层
+
+[map attribute]
+	`skill no effect`	0		// 允许技能效果
+	`sound reverb`		40		// 音效混响
+	`bgm`			`Music/dungeon_battle.ogg`	// 背景音乐
+	`camera limit rect`	0	0	1200	800		// 相机限制区域
+
+[tile info]
+	`tile total`		128		// 瓦片总数
+	`tile attribute`	`tile/dungeon_stone.til`	// 瓦片属性文件
+	`tile image`		`tile/dungeon_stone.img`	// 瓦片图像文件
+
+[movable area]
+	`area count`	3			// 移动区域数量
+	`area 0`	100	100	400	300	// 起始区域
+	`area 1`	600	200	500	400	// 主战斗区域
+	`area 2`	50	600	1100	150	// 通道区域
+
+[dungeon start area]
+	`area count`	1			// 起始区域数量
+	`area 0`	50	650	150	100	// 玩家出生区域
+
+[static player start pos]
+	`pos count`	4			// 玩家起始位置
+	`pos 0`		100	700		// 玩家1位置
+	`pos 1`		120	700		// 玩家2位置
+	`pos 2`		140	700		// 玩家3位置
+	`pos 3`		160	700		// 玩家4位置
+
+[monster]
+	`monster count`	5			// 怪物数量
+	// 小怪组1
+	`monster 0`
+		`file name`	`monster/goblin_warrior.mon`
+		`pos`		300	400
+		`level`		25
+		`ai pattern`	`normal`
+	`monster 1`
+		`file name`	`monster/goblin_archer.mon`
+		`pos`		350	350
+		`level`		25
+		`ai pattern`	`support`
+	// 小怪组2
+	`monster 2`
+		`file name`	`monster/orc_soldier.mon`
+		`pos`		800	300
+		`level`		27
+		`ai pattern`	`aggressive`
+	`monster 3`
+		`file name`	`monster/orc_shaman.mon`
+		`pos`		850	250
+		`level`		27
+		`ai pattern`	`caster`
+	// BOSS
+	`monster 4`
+		`file name`	`monster/dungeon_boss.mon`
+		`pos`		1000	400
+		`level`		30
+		`ai pattern`	`boss`
+
+[monster condition]
+	`condition count`	2		// 怪物出现条件
+	// 第二波怪物
+	`condition 0`
+		`monster index`		2	// 对应monster 2
+		`appear condition`	`monster_clear`	// 前面怪物清理后出现
+		`appear delay`		1000	// 延迟1秒
+	// BOSS出现
+	`condition 1`
+		`monster index`		4	// 对应monster 4 (BOSS)
+		`appear condition`	`all_monster_clear`	// 所有小怪清理后
+		`appear delay`		3000	// 延迟3秒
+
+[passive object]
+	`obj count`	4			// 被动对象数量
+	// 宝箱
+	`obj 0`
+		`file name`	`passiveobject/treasure_chest.po`
+		`pos`		1100	200
+		`z pos`		0
+	// 机关
+	`obj 1`
+		`file name`	`passiveobject/switch_door.po`
+		`pos`		500	500
+		`z pos`		0
+	// 装饰柱子
+	`obj 2`
+		`file name`	`passiveobject/pillar_stone.po`
+		`pos`		400	200
+		`z pos`		-20
+	`obj 3`
+		`file name`	`passiveobject/pillar_stone.po`
+		`pos`		800	200
+		`z pos`		-20
+
+[animation]
+	`ani count`	2			// 动画数量
+	// 火把效果
+	`ani 0`
+		`ani file name`		`sprite/torch_flame.ani`
+		`ani pos`		200	150
+		`ani loop`		1
+		`ani play speed`	100
+	// 魔法阵效果
+	`ani 1`
+		`ani file name`		`sprite/magic_circle.ani`
+		`ani pos`		1000	400
+		`ani loop`		1
+		`ani play speed`	80
+
+[sound]
+	`sound count`	3			// 环境音效数量
+	`sound 0`	`Sound/dungeon_ambient.ogg`	600	400	40	// 环境音
+	`sound 1`	`Sound/torch_crackle.ogg`	200	150	25	// 火把声
+	`sound 2`	`Sound/wind_cave.ogg`		100	100	20	// 洞穴风声
+
+[opening bgm]
+	`file name`	`Music/dungeon_intro.ogg`	// 开场音乐
+	`play time`	8000				// 播放8秒
+
+// ========================================
+// 使用说明:
+// 1. 修改 map name 为实际副本名称
+// 2. 调整地图尺寸适应副本设计
+// 3. 配置怪物文件和等级
+// 4. 设置合适的移动区域和起始位置
+// 5. 添加必要的机关和装饰对象
+// 6. 配置怪物出现条件实现战斗流程
+// ========================================

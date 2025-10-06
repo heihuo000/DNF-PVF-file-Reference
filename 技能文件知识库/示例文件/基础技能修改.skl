@@ -1,0 +1,141 @@
+#PVF_File
+
+// ================================================================
+// 基础技能修改示例 - 鬼剑士上挑技能
+// 本示例展示如何修改现有技能的基本参数
+// 修改内容：伤害、冷却时间、SP消耗、学习等级等
+// ================================================================
+
+[skill]
+	[name] `上挑`	// 技能名称
+	[explain] `向上挥砍武器攻击敌人，可以使敌人浮空。`	// 技能说明
+	
+	[basic info]
+		[skill type] 0		// 技能类型：0=主动技能，1=被动技能，2=觉醒技能
+		[skill class] 0		// 技能分类：影响技能在技能树中的分组
+		[maximum level] 70	// 技能最大等级
+		[growtype maximum level] 70 70 70 70 70 70	// 各转职的最大等级（鬼剑、剑魂、鬼泣、狂战、阿修罗、征服者）
+		[skill fitness growtype] 0 1 2 3 4	// 允许学习的职业：0=鬼剑士，1=剑魂，2=鬼泣，3=狂战士，4=阿修罗
+		[durability decrease rate] 8	// 武器耐久度消耗率
+		[mp] 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70	// 各等级MP消耗
+		[cool time] 3000	// 冷却时间（毫秒）：3000 = 3秒
+		[casting time] 300	// 施法时间（毫秒）
+		[can cancel] 1	// 是否可以取消：1=可以，0=不可以
+		[need weapon] 1	// 是否需要武器：1=需要，0=不需要
+		[weapon effect] 1	// 武器效果：1=有，0=无
+		[icon] `skill/swordman/upperslash.img`	// 技能图标路径
+		[command] `command/swordman/upperslash.cld`	// 技能指令文件
+		[sound] `UPPERSLASH_01`	// 技能音效
+		[pvp] 1	// PVP中是否可用：1=可用，0=不可用
+	[/basic info]
+	
+	[required level] 1	// 学习所需角色等级
+	[required sp] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1	// 各等级所需SP点数
+	
+	// 前置技能要求（如果有的话）
+	[required skill]
+		[skill] 0	// 前置技能ID（0表示无前置技能）
+		[level] 1	// 前置技能等级要求
+	[/required skill]
+	
+	// 各等级的技能数据
+	[level info]
+		// 1级数据
+		[level]
+			[physical attack] 120.0	// 物理攻击力百分比
+			[attack range] 150.0	// 攻击范围
+			[hit recovery] 500	// 硬直时间（毫秒）
+			[hit info]
+				[blow] 1	// 击飞效果：1=有，0=无
+				[blood] 1	// 流血效果：1=有，0=无
+			[/hit info]
+		[/level]
+		
+		// 2级数据
+		[level]
+			[physical attack] 125.0
+			[attack range] 150.0
+			[hit recovery] 500
+			[hit info]
+				[blow] 1
+				[blood] 1
+			[/hit info]
+		[/level]
+		
+		// 3级数据
+		[level]
+			[physical attack] 130.0
+			[attack range] 150.0
+			[hit recovery] 500
+			[hit info]
+				[blow] 1
+				[blood] 1
+			[/hit info]
+		[/level]
+		
+		// 4级数据
+		[level]
+			[physical attack] 135.0
+			[attack range] 150.0
+			[hit recovery] 500
+			[hit info]
+				[blow] 1
+				[blood] 1
+			[/hit info]
+		[/level]
+		
+		// 5级数据
+		[level]
+			[physical attack] 140.0
+			[attack range] 150.0
+			[hit recovery] 500
+			[hit info]
+				[blow] 1
+				[blood] 1
+			[/hit info]
+		[/level]
+		
+		// 更多等级数据可以继续添加...
+		// 建议：每5级增加5%的攻击力，保持游戏平衡
+		
+	[/level info]
+	
+	// 特殊效果设置（可选）
+	[special effect]
+		[effect] `skill/swordman/upperslash_effect.ani`	// 技能特效文件
+		[sound effect] `UPPERSLASH_HIT`	// 命中音效
+	[/special effect]
+	
+[/skill]
+
+// ================================================================
+// 修改说明：
+// 1. 物理攻击力从原来的100%提升到120%起步
+// 2. 冷却时间从5秒减少到3秒
+// 3. MP消耗略微增加以平衡强化效果
+// 4. 保持了原有的击飞和流血效果
+// 5. 所有转职都可以学习此技能
+// ================================================================
+
+// ================================================================
+// 常用修改参数说明：
+// 
+// [physical attack] - 物理攻击力百分比，100.0 = 100%
+// [magical attack] - 魔法攻击力百分比
+// [attack range] - 攻击范围，数值越大范围越大
+// [cool time] - 冷却时间，单位毫秒，1000 = 1秒
+// [mp] - MP消耗，可以设置各等级不同的消耗
+// [casting time] - 施法时间，单位毫秒
+// [hit recovery] - 硬直时间，敌人被击中后的僵直时间
+// [maximum level] - 技能最大等级，建议不超过70
+// [required level] - 学习等级要求
+// [required sp] - 各等级SP消耗
+// 
+// 特殊效果：
+// [blow] - 击飞效果
+// [blood] - 流血效果
+// [stun] - 眩晕效果
+// [freeze] - 冰冻效果
+// [poison] - 中毒效果
+// [burn] - 灼烧效果
+// ================================================================

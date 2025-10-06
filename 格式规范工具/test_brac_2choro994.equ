@@ -1,0 +1,86 @@
+#PVF_File
+
+[name]
+	`精 · 加持的禁锢之限手镯 : [湮灭黑洞]`
+
+[name2]
+	`Fixed Bracelet of Powerful Enlargement : Night Hallow`
+
+[basic explain]
+	`[湮灭黑洞]范围 +3%%`
+
+[grade]
+	72
+
+[rarity]
+	5
+
+[icon mark]
+	`item/iconmark.img`	65
+
+[usable job]
+	`[all]`
+[/usable job]
+
+[attach type]
+	`[sealing]`
+
+[minimum level]
+	70
+
+[physical attack]
+	44
+
+[physical defense]
+	69
+
+[magical attack]
+	20
+
+[MP regen speed]
+	1
+
+[anti evil]
+	10
+
+[repair price]
+	55680
+
+[value]
+	5800
+
+[equipment magical defense]
+	3696	3552
+
+[physical critical hit]
+	1
+
+[magical critical hit]
+	1
+
+[icon]
+	`Item/common/bracelet.img`	35
+
+[field image]
+	`Item/FieldImage.img`	7
+
+[equipment type]
+	`[wrist]`	20
+
+[move wav]
+	`BRACELET_TOUCH`
+
+[weight]
+	400
+
+[item group name]
+	`wrist`
+
+[cool time]
+	10000
+
+[skill data up]
+	`[mage]`	58	`[dungeon type]`	`[static]`	3	`%`	3
+[/skill data up]
+
+[possible kiri protect]

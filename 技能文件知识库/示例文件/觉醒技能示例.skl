@@ -1,0 +1,186 @@
+#PVF_File
+
+// ================================================================
+// 觉醒技能示例 - 剑魂觉醒技能"极·鬼剑术"
+// 本示例展示觉醒技能的特殊设置和高级参数
+// 觉醒技能特点：高伤害、长冷却、特殊效果、限制条件
+// ================================================================
+
+[skill]
+	[name] `极·鬼剑术`	// 觉醒技能名称
+	[explain] `剑魂的终极奥义，释放强大的剑气攻击敌人，造成巨额伤害。`	// 技能说明
+	
+	[basic info]
+		[skill type] 2		// 技能类型：2=觉醒技能
+		[skill class] 3		// 技能分类：3=觉醒技能分类
+		[maximum level] 10	// 觉醒技能通常最大等级较低
+		[growtype maximum level] 0 10 0 0 0 0	// 只有剑魂(1)可以学习
+		[skill fitness growtype] 1	// 只允许剑魂学习
+		[durability decrease rate] 20	// 觉醒技能武器耐久消耗较高
+		[mp] 200 220 240 260 280 300 320 340 360 380	// 各等级MP消耗（觉醒技能消耗较高）
+		[cool time] 45000	// 冷却时间45秒（觉醒技能冷却较长）
+		[casting time] 1500	// 施法时间1.5秒
+		[can cancel] 0	// 觉醒技能通常不可取消
+		[need weapon] 1	// 需要武器
+		[weapon effect] 1	// 有武器效果
+		[icon] `skill/swordman/awaken_skill.img`	// 觉醒技能图标
+		[command] `command/swordman/awaken_skill.cld`	// 技能指令文件
+		[sound] `AWAKEN_SKILL_01`	// 觉醒技能音效
+		[pvp] 1	// PVP可用
+		
+		// 觉醒技能特殊设置
+		[awaken skill] 1	// 标记为觉醒技能
+		[awaken type] 1		// 觉醒类型：1=一觉，2=二觉
+		[awaken level] 48	// 觉醒等级要求
+	[/basic info]
+	
+	[required level] 48	// 学习所需角色等级（觉醒等级）
+	[required sp] 5 5 5 5 5 5 5 5 5 5	// 各等级所需SP点数（觉醒技能SP消耗较高）
+	
+	// 前置技能要求（通常需要完成觉醒任务）
+	[required skill]
+		[skill] 1001	// 前置觉醒任务技能ID
+		[level] 1	// 前置技能等级要求
+	[/required skill]
+	
+	// 觉醒技能特殊要求
+	[required quest]
+		[quest] 2001	// 觉醒任务ID
+		[complete] 1	// 必须完成
+	[/required quest]
+	
+	// 各等级的技能数据
+	[level info]
+		// 1级数据
+		[level]
+			[physical attack] 800.0	// 觉醒技能伤害极高
+			[magical attack] 200.0	// 附加魔法伤害
+			[attack range] 400.0	// 攻击范围很大
+			[hit recovery] 2000	// 长硬直时间
+			[attack count] 5	// 多段攻击
+			[hit info]
+				[blow] 1	// 击飞效果
+				[blood] 1	// 流血效果
+				[stun] 1	// 眩晕效果
+				[critical] 1	// 必定暴击
+			[/hit info]
+			
+			// 觉醒技能特殊效果
+			[special effect]
+				[invincible] 1500	// 施法期间无敌时间（毫秒）
+				[super armor] 1	// 霸体效果
+				[ignore defense] 50	// 无视50%防御
+				[penetrate] 1	// 穿透效果
+			[/special effect]
+			
+			// 范围攻击设置
+			[area attack]
+				[width] 300	// 攻击宽度
+				[height] 200	// 攻击高度
+				[depth] 400	// 攻击深度
+			[/area attack]
+		[/level]
+		
+		// 2级数据
+		[level]
+			[physical attack] 850.0
+			[magical attack] 220.0
+			[attack range] 420.0
+			[hit recovery] 2000
+			[attack count] 5
+			[hit info]
+				[blow] 1
+				[blood] 1
+				[stun] 1
+				[critical] 1
+			[/hit info]
+			[special effect]
+				[invincible] 1500
+				[super armor] 1
+				[ignore defense] 55
+				[penetrate] 1
+			[/special effect]
+			[area attack]
+				[width] 320
+				[height] 220
+				[depth] 420
+			[/area attack]
+		[/level]
+		
+		// 3级数据
+		[level]
+			[physical attack] 900.0
+			[magical attack] 240.0
+			[attack range] 440.0
+			[hit recovery] 2000
+			[attack count] 6
+			[hit info]
+				[blow] 1
+				[blood] 1
+				[stun] 1
+				[critical] 1
+			[/hit info]
+			[special effect]
+				[invincible] 1500
+				[super armor] 1
+				[ignore defense] 60
+				[penetrate] 1
+			[/special effect]
+			[area attack]
+				[width] 340
+				[height] 240
+				[depth] 440
+			[/area attack]
+		[/level]
+		
+		// 更多等级数据...
+		// 觉醒技能每级提升幅度较大
+		
+	[/level info]
+	
+	// 觉醒技能特殊动画和效果
+	[animation]
+		[cast] `skill/swordman/awaken_cast.ani`	// 施法动画
+		[attack] `skill/swordman/awaken_attack.ani`	// 攻击动画
+		[effect] `skill/swordman/awaken_effect.ani`	// 特效动画
+	[/animation]
+	
+	// 觉醒技能音效
+	[sound effect]
+		[cast] `AWAKEN_CAST`	// 施法音效
+		[hit] `AWAKEN_HIT`	// 命中音效
+		[finish] `AWAKEN_FINISH`	// 结束音效
+	[/sound effect]
+	
+[/skill]
+
+// ================================================================
+// 觉醒技能特点说明：
+// 
+// 1. 高伤害：基础攻击力通常在500%-1000%以上
+// 2. 长冷却：冷却时间通常在30-60秒
+// 3. 高消耗：MP消耗和SP消耗都比普通技能高
+// 4. 特殊效果：
+//    - [invincible] 无敌时间
+//    - [super armor] 霸体效果
+//    - [ignore defense] 无视防御
+//    - [penetrate] 穿透效果
+//    - [critical] 必定暴击
+// 5. 范围攻击：通常有大范围的攻击判定
+// 6. 多段攻击：[attack count] 设置攻击段数
+// 7. 职业限制：只有特定转职可以学习
+// 8. 等级要求：通常需要48级以上
+// 9. 任务要求：需要完成觉醒任务
+// ================================================================
+
+// ================================================================
+// 觉醒技能修改注意事项：
+// 
+// 1. 伤害平衡：觉醒技能伤害虽高，但要考虑游戏平衡
+// 2. 冷却时间：不建议设置过短，会破坏游戏体验
+// 3. 职业限制：确保只有对应职业可以学习
+// 4. 前置条件：保持觉醒任务等前置条件
+// 5. 特效文件：确保动画和音效文件存在
+// 6. PVP平衡：考虑PVP中的表现，可能需要单独调整
+// 7. 测试验证：觉醒技能修改后务必进行充分测试
+// ================================================================

@@ -1,0 +1,189 @@
+// ========================================
+// 实际案例: 塞利亚房间
+// 类型: 城镇地图
+// 功能: 新手指导、商店、仓库、任务接取
+// 特点: 安全区域、多功能NPC、温馨氛围
+// ========================================
+
+[map info]
+	`map type`	`town`
+	`width`		800
+	`height`	600
+	`tile width`	32
+	`tile height`	32
+	`map name`	`塞利亚房间`
+
+[layer info]
+	`layer count`	4
+	`layer 0`	`back`		// 背景层
+	`layer 1`	`tile`		// 地板瓦片
+	`layer 2`	`obj`		// 家具和NPC
+	`layer 3`	`effect`	// 光效和装饰
+
+[map attribute]
+	`skill no effect`	1		// 城镇禁用技能
+	`sound reverb`		15		// 室内音效
+	`bgm`			`Music/town_seria_room.ogg`
+	`camera limit rect`	0	0	800	600
+
+[tile info]
+	`tile total`		48
+	`tile attribute`	`tile/seria_room.til`
+	`tile image`		`tile/seria_room.img`
+
+[town movable area]
+	`area count`	3
+	`area 0`	100	200	600	350	// 主要活动区域
+	`area 1`	50	100	150	100	// 门口区域
+	`area 2`	650	150	100	200	// 窗边区域
+
+[passive object]
+	`obj count`	12
+	// 主要NPC - 塞利亚
+	`obj 0`
+		`file name`	`passiveobject/npc_seria.po`
+		`pos`		400	300
+		`z pos`		0
+		`direction`	1
+	// 家具 - 床
+	`obj 1`
+		`file name`	`passiveobject/furniture_bed.po`
+		`pos`		650	200
+		`z pos`		-20
+	// 家具 - 桌子
+	`obj 2`
+		`file name`	`passiveobject/furniture_table.po`
+		`pos`		200	250
+		`z pos`		-10
+	// 家具 - 椅子
+	`obj 3`
+		`file name`	`passiveobject/furniture_chair.po`
+		`pos`		180	270
+		`z pos`		-5
+	// 功能 - 仓库箱子
+	`obj 4`
+		`file name`	`passiveobject/storage_chest.po`
+		`pos`		150	200
+		`z pos`		0
+	// 装饰 - 书架
+	`obj 5`
+		`file name`	`passiveobject/furniture_bookshelf.po`
+		`pos`		100	150
+		`z pos`		-15
+	// 装饰 - 花盆
+	`obj 6`
+		`file name`	`passiveobject/decoration_flowerpot.po`
+		`pos`		700	180
+		`z pos`		0
+	// 装饰 - 窗帘
+	`obj 7`
+		`file name`	`passiveobject/decoration_curtain.po`
+		`pos`		700	150
+		`z pos`		-25
+	// 功能 - 任务板
+	`obj 8`
+		`file name`	`passiveobject/quest_board.po`
+		`pos`		300	150
+		`z pos`		0
+	// 装饰 - 地毯
+	`obj 9`
+		`file name`	`passiveobject/decoration_carpet.po`
+		`pos`		400	350
+		`z pos`		-30
+	// 照明 - 吊灯
+	`obj 10`
+		`file name`	`passiveobject/light_chandelier.po`
+		`pos`		400	200
+		`z pos`		50
+	// 功能 - 传送门(隐藏)
+	`obj 11`
+		`file name`	`passiveobject/portal_hidden.po`
+		`pos`		50	300
+		`z pos`		0
+
+[pathgate pos]
+	`gate count`	3
+	`gate 0`	50	300	`hendon_myre`	// 到赫顿玛尔
+	`gate 1`	400	500	`dungeon_select`	// 副本选择
+	`gate 2`	700	300	`shop_area`		// 商店区域
+
+[animation]
+	`ani count`	4
+	// 壁炉火焰
+	`ani 0`
+		`ani file name`		`sprite/fireplace_flame.ani`
+		`ani pos`		250	180
+		`ani loop`		1
+		`ani play speed`	80
+	// 窗外阳光
+	`ani 1`
+		`ani file name`		`sprite/sunlight_window.ani`
+		`ani pos`		680	120
+		`ani loop`		1
+		`ani play speed`	50
+	// 吊灯摇摆
+	`ani 2`
+		`ani file name`		`sprite/chandelier_sway.ani`
+		`ani pos`		400	180
+		`ani loop`		1
+		`ani play speed`	30
+	// 书页翻动
+	`ani 3`
+		`ani file name`		`sprite/book_pages.ani`
+		`ani pos`		120	170
+		`ani loop`		1
+		`ani play speed`	60
+
+[sound]
+	`sound count`	5
+	// 环境音 - 室内氛围
+	`sound 0`	`Sound/room_ambient.ogg`	400	300	25
+	// 壁炉声
+	`sound 1`	`Sound/fireplace_crackle.ogg`	250	180	20
+	// 时钟滴答声
+	`sound 2`	`Sound/clock_tick.ogg`		500	150	15
+	// 窗外鸟鸣
+	`sound 3`	`Sound/birds_outside.ogg`	700	100	18
+	// 翻书声
+	`sound 4`	`Sound/book_rustle.ogg`		120	170	10
+
+[background animation]
+	`ani info count`	2
+	// 窗外云朵飘动
+	`ani info 0`
+		`file name`	`sprite/clouds_drift.ani`
+		`pos`		650	50	150	100
+		`loop`		1
+		`speed`		25
+	// 室内光影变化
+	`ani info 1`
+		`file name`	`sprite/light_shadow.ani`
+		`pos`		0	0	800	600
+		`loop`		1
+		`speed`		40
+
+// ========================================
+// 设计说明:
+// 1. 温馨的室内环境，体现塞利亚的个性
+// 2. 合理的家具布局，营造生活气息
+// 3. 多个功能区域：休息、学习、储物
+// 4. 丰富的音效和动画增强沉浸感
+// 5. 隐藏传送门提供快速导航
+// ========================================
+
+// ========================================
+// 功能特点:
+// - 新手指导: 塞利亚NPC提供教学
+// - 仓库功能: 储物箱供玩家使用
+// - 任务中心: 任务板显示可接任务
+// - 休息场所: 安全的恢复区域
+// - 传送枢纽: 连接各个重要区域
+// ========================================
+
+// ========================================
+// 性能优化:
+// - 动画数量控制在4个以内
+// - 音效音量适中，避免重叠
+// - 移动区域分割，提高检测效率
+// - 装饰对象合理分层，优化渲染
+// ========================================

@@ -1,0 +1,72 @@
+// ========================================
+// 城镇地图标准模板
+// 适用于: 安全区域、商店区、社交区域
+// 特点: 禁用技能、允许自由移动、支持NPC交互
+// ========================================
+
+[map info]
+	`map type`	`town`			// 城镇类型地图
+	`width`		800			// 地图宽度
+	`height`	600			// 地图高度
+	`tile width`	32			// 瓦片宽度
+	`tile height`	32			// 瓦片高度
+	`map name`	`新城镇地图`		// 地图显示名称
+
+[layer info]
+	`layer count`	3			// 图层数量
+	`layer 0`	`back`			// 背景层
+	`layer 1`	`tile`			// 瓦片层  
+	`layer 2`	`obj`			// 对象层
+
+[map attribute]
+	`skill no effect`	1		// 禁用技能效果
+	`sound reverb`		20		// 音效混响
+	`bgm`			`Music/town_peaceful.ogg`	// 背景音乐
+	`camera limit rect`	0	0	800	600		// 相机限制区域
+
+[tile info]
+	`tile total`		64		// 瓦片总数
+	`tile attribute`	`tile/town_basic.til`	// 瓦片属性文件
+	`tile image`		`tile/town_basic.img`	// 瓦片图像文件
+
+[town movable area]
+	`area count`	1			// 移动区域数量
+	`area 0`	50	50	700	500	// 主要活动区域
+
+[passive object]
+	`obj count`	3			// 被动对象数量
+	// NPC商店
+	`obj 0`
+		`file name`	`passiveobject/npc_shop.po`
+		`pos`		200	300		// NPC位置
+		`z pos`		0		// z轴位置
+		`direction`	1		// 朝向右
+	// 装饰家具
+	`obj 1`
+		`file name`	`passiveobject/furniture_table.po`
+		`pos`		400	250
+		`z pos`		-10
+	// 传送门
+	`obj 2`
+		`file name`	`passiveobject/portal_dungeon.po`
+		`pos`		600	400
+		`z pos`		0
+
+[pathgate pos]
+	`gate count`	2			// 传送门数量
+	`gate 0`	100	500	`dungeon_entrance`	// 副本入口
+	`gate 1`	700	500	`other_town`		// 其他城镇
+
+[sound]
+	`sound count`	2			// 环境音效数量
+	`sound 0`	`Sound/town_ambient.ogg`	400	300	30	// 环境音
+	`sound 1`	`Sound/wind_light.ogg`		200	200	20	// 风声
+
+// ========================================
+// 使用说明:
+// 1. 修改 map name 为实际地图名称
+// 2. 调整 width/height 适应地图尺寸
+// 3. 替换 tile 文件路径为实际瓦片
+// 4. 配置 passive object 为需要的NPC和装饰
+// 5. 设置 pathgate pos 连接到其他地图
+// ========================================

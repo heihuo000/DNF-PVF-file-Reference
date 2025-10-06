@@ -1,0 +1,66 @@
+#PVF_File
+
+[name]
+	`特级生命秘药`
+
+[name2]
+	`Great Grade Vital Nostrum`
+
+[explain]
+	`	使用后，	增加1450点HP最大值，	效果持续30分钟。`
+
+[grade]
+	65
+
+[attach type]
+	`[free]`
+
+[rarity]
+	2
+
+[icon mark]
+	`item/iconmark.img`	64
+
+[weight]
+	1
+
+[usable job]
+	`[all]`
+[/usable job]
+
+[minimum level]
+	60
+
+[stack limit]
+	1000
+
+[icon]
+	`Item/stackable/consumption.img`	473
+
+[field image]
+	`Item/FieldImage.img`	32
+
+[stackable type]
+	`[waste]`	0
+
+[expert type]
+	`[alchemist]`
+
+[appendage group]
+	1
+
+[item group name]
+	`potion`
+
+[cool time]
+	10000
+
+[move wav]
+	`POTION_TOUCH`
+
+[effect maintenance]
+	0	1	1	0
+
+[stat change duration]
+	1800000
+	`myself`

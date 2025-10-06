@@ -1,0 +1,247 @@
+//==============================================================================
+// 实际案例：元素召唤师 - 基于特殊怪物模板的完整实现
+// 适用场景：具有召唤和元素魔法能力的特殊怪物
+//==============================================================================
+
+//------------------------------------------------------------------------------
+// 基础信息
+//------------------------------------------------------------------------------
+[name]	`元素召唤师`	// 特殊怪物名称
+[width]	55	// 中等宽度
+[floating height]	30	// 浮空施法
+[layer]	`[normal]`	// 普通图层
+[category]	`[magic]`	// 魔法分类
+
+//------------------------------------------------------------------------------
+// 等级与基础属性（魔法型）
+//------------------------------------------------------------------------------
+[level]	40	// 中高等级
+[hp]	12000	// 中等生命值
+[mp]	8000	// 高魔法值
+[physical attack]	300	// 很低物理攻击
+[physical defense]	400	// 较低物理防御
+[magical attack]	1800	// 高魔法攻击
+[magical defense]	1200	// 高魔法防御
+
+//------------------------------------------------------------------------------
+// 元素抗性配置
+//------------------------------------------------------------------------------
+[fire resistance]	50	// 火元素精通
+[water resistance]	50	// 水元素精通
+[dark resistance]	30	// 中等暗抗
+[light resistance]	70	// 高光抗（光元素精通）
+
+[slow resistance]	60	// 高减速抗性
+[freeze resistance]	80	// 高冰冻抗性（水元素保护）
+[poison resistance]	40	// 中等毒抗
+[stun resistance]	50	// 中等眩晕抗性
+[curse resistance]	90	// 高诅咒抗性（魔法保护）
+[blind resistance]	70	// 高致盲抗性
+[lightning resistance]	60	// 高感电抗性
+[stone resistance]	70	// 高石化抗性
+[sleep resistance]	95	// 几乎免疫睡眠（精神力强）
+[bleeding resistance]	30	// 较低出血抗性
+[piercing resistance]	25	// 较低穿刺抗性
+[stuck resistance]	80	// 高束缚抗性（魔法挣脱）
+[confuse resistance]	85	// 高混乱抗性（理智清醒）
+[hold resistance]	60	// 中等抓取抗性
+
+//------------------------------------------------------------------------------
+// 速度属性（法师特性）
+//------------------------------------------------------------------------------
+[move speed]	100	// 较慢移动速度
+[attack speed]	700	// 中等攻击速度
+[cast speed]	1500	// 极快施法速度
+[hit recovery]	800	// 较快硬直恢复
+[jump power]	500	// 高跳跃力（魔法辅助）
+[weight]	25000	// 较轻重量
+
+//------------------------------------------------------------------------------
+// AI行为设置（智能施法）
+//------------------------------------------------------------------------------
+[sight]	450	// 大视野范围
+[targeting time]	1500	// 较短锁定时间
+[targeting condition]	`[multiple]`	// 优先攻击多个目标
+[warlike]	60	// 中等好战度（谨慎施法）
+[attack delay]	600	// 较短攻击延迟
+
+//------------------------------------------------------------------------------
+// 动画设置
+//------------------------------------------------------------------------------
+[wait motion]	`monster/elemental_mage/float_wait.ani`	// 浮空待机
+[move motion]	`monster/elemental_mage/float_move.ani`	// 浮空移动
+[damage motion]	`monster/elemental_mage/damage.ani`	// 受伤动画
+[down motion]	`monster/elemental_mage/down.ani`	// 倒地动画
+[overturn motion]	`monster/elemental_mage/overturn.ani`	// 翻身动画
+[sit motion]	`monster/elemental_mage/meditate.ani`	// 冥想动画
+
+//------------------------------------------------------------------------------
+// 多元素攻击设置
+//------------------------------------------------------------------------------
+[attack kind]	4	// 四种元素攻击
+	[attack info]	0	// 火球术
+		[attack motion]	`monster/elemental_mage/fireball.ani`
+		[attack delay]	1000
+		[damage delay]	500
+		[attack range]	280
+		[hit info]
+			[blow]
+				[level]	2
+				[hit sound]	`FIRE_MAGIC_HIT`
+			[attack element]	`[fire]`
+			[status effect]	`[burn]`	// 燃烧效果
+
+	[attack info]	1	// 冰锥术
+		[attack motion]	`monster/elemental_mage/ice_spike.ani`
+		[attack delay]	1200
+		[damage delay]	600
+		[attack range]	250
+		[hit info]
+			[blow]
+				[level]	1
+				[hit sound]	`ICE_MAGIC_HIT`
+			[attack element]	`[water]`
+			[status effect]	`[freeze]`	// 冰冻效果
+
+	[attack info]	2	// 闪电链
+		[attack motion]	`monster/elemental_mage/lightning_chain.ani`
+		[attack delay]	1500
+		[damage delay]	700
+		[attack range]	320
+		[hit info]
+			[blow]
+				[level]	3
+				[hit sound]	`LIGHTNING_MAGIC_HIT`
+			[attack element]	`[light]`
+			[status effect]	`[shock]`	// 感电效果
+
+	[attack info]	3	// 元素召唤
+		[attack motion]	`monster/elemental_mage/summon_elemental.ani`
+		[attack delay]	2500
+		[damage delay]	1200
+		[attack range]	400
+		[hit info]
+			[summon]
+				[monster]	`monster/fire_elemental.mob`	// 火元素
+				[monster]	`monster/water_elemental.mob`	// 水元素
+				[count]	2
+				[duration]	40000
+
+//------------------------------------------------------------------------------
+// 投掷攻击（魔法弹）
+//------------------------------------------------------------------------------
+[throw attack info]
+	[throw motion]	`monster/elemental_mage/magic_missile.ani`
+	[throw delay]	600
+	[projectile]
+		[particle]	`monster/elemental_mage/magic_missile.ptl`
+		[sound]	`MAGIC_MISSILE_CAST`
+		[speed]	400
+		[power]	120
+		[element]	`[light]`
+		[homing]	1	// 追踪弹
+
+//------------------------------------------------------------------------------
+// 能力分类（元素精通）
+//------------------------------------------------------------------------------
+[ability category]
+	`[MAGICAL_ATTACK]`	150	// 魔法攻击加成
+	`[CAST_SPEED]`	180	// 施法速度大幅加成
+	`[MP]`	160	// 魔法值加成
+	`[FIRE_MASTERY]`	120	// 火元素精通
+	`[WATER_MASTERY]`	120	// 水元素精通
+	`[LIGHT_MASTERY]`	130	// 光元素精通
+	`[SUMMON_MASTERY]`	140	// 召唤精通
+
+//------------------------------------------------------------------------------
+// 召唤技能状态提升
+//------------------------------------------------------------------------------
+[summon skill status up type]	`[elemental]`	// 元素属性提升
+[summon skill status up rate]	60	// 高提升率
+
+//------------------------------------------------------------------------------
+// 掉落物品（魔法物品）
+//------------------------------------------------------------------------------
+[item]
+	[item category]	`[magic item drop]`	// 魔法物品掉落
+	[magic item drop rate]	40	// 魔法物品掉落率
+	[elemental_orb drop rate]	25	// 元素宝珠掉落率
+
+//------------------------------------------------------------------------------
+// 特效设置
+//------------------------------------------------------------------------------
+[die effect]	`monster/elemental_mage/elemental_explosion.ptl`	// 元素爆炸死亡特效
+[face image]	`monster/elemental_mage/face.img`	// 神秘头像
+[ready action effect]	`monster/elemental_mage/magic_circle.ptl`	// 魔法阵特效
+[aura effect]	`monster/elemental_mage/elemental_aura.ptl`	// 元素光环
+
+//------------------------------------------------------------------------------
+// 装备设置
+//------------------------------------------------------------------------------
+[equipment]
+	`monster/elemental_mage/elemental_staff.equ`	// 元素法杖
+	`monster/elemental_mage/mage_robe.equ`	// 法师长袍
+	`monster/elemental_mage/magic_orb.equ`	// 魔法宝珠
+	`monster/elemental_mage/elemental_ring.equ`	// 元素戒指
+
+//------------------------------------------------------------------------------
+// 语音设置
+//------------------------------------------------------------------------------
+[speech on situation]
+	[on appear]	`元素之力，听从我的召唤！`
+	[on cast]	`感受元素的愤怒！`
+	[on summon]	`来吧，我的元素仆从！`
+	[on fire_attack]	`烈焰焚烧！`
+	[on ice_attack]	`冰霜刺骨！`
+	[on lightning_attack]	`雷霆万钧！`
+	[on damage]	`我的护盾...`
+	[on low_mp]	`魔力不足...`
+	[on die]	`元素...回归自然...`
+
+//------------------------------------------------------------------------------
+// 整数数据（特殊机制参数）
+//------------------------------------------------------------------------------
+[integer data]
+	0	8	// 召唤冷却时间
+	1	4	// 最大召唤数量
+	2	12	// 元素切换冷却时间
+	3	90	// 魔法成功率
+	4	300	// 魔法护盾值
+	5	15	// 元素爆发冷却时间
+	6	25	// 低魔法值阈值（百分比）
+
+//------------------------------------------------------------------------------
+// 生成概率
+//------------------------------------------------------------------------------
+[spawn probability]	20	// 较低生成概率（稀有怪物）
+
+//------------------------------------------------------------------------------
+// 特殊行为模式
+//------------------------------------------------------------------------------
+[behavior pattern]
+	[phase 1]	// 第一阶段：单体攻击
+		[hp_threshold]	100	// 满血状态
+		[preferred_attacks]	0,1,2	// 优先使用火球、冰锥、闪电链
+		[attack_frequency]	80	// 攻击频率
+
+	[phase 2]	// 第二阶段：召唤阶段
+		[hp_threshold]	50	// 半血状态
+		[preferred_attacks]	3	// 优先召唤
+		[summon_frequency]	60	// 召唤频率
+
+	[phase 3]	// 第三阶段：绝望反击
+		[hp_threshold]	20	// 低血状态
+		[attack_speed_bonus]	50	// 攻击速度加成
+		[cast_speed_bonus]	80	// 施法速度加成
+		[damage_bonus]	30	// 伤害加成
+
+//==============================================================================
+// 设计说明：
+// 1. 元素召唤师体现了特殊怪物的复杂机制
+// 2. 四种元素攻击各有特色和状态效果
+// 3. 高魔法属性和低物理属性符合法师定位
+// 4. 召唤能力增加战斗的策略性
+// 5. 分阶段行为模式让战斗更有层次感
+// 6. 元素精通和相应抗性体现专业性
+// 7. 浮空特性和魔法护盾增加生存能力
+//==============================================================================

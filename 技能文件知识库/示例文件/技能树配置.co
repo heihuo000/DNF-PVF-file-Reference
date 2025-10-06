@@ -1,0 +1,452 @@
+#PVF_File
+
+// ================================================================
+// 技能树配置示例 - 剑魂技能树 (swordman_sp.co)
+// 本示例展示如何配置技能在技能树中的位置和连接关系
+// 包含技能坐标、前置关系、分支结构等
+// ================================================================
+
+[skill tree]
+	[name] `剑魂技能树`	// 技能树名称
+	[class] 1	// 对应职业ID：1=剑魂
+	[max level] 70	// 最大等级
+	
+	// 技能树背景设置
+	[background]
+		[image] `ui/skill_tree/swordman_bg.img`	// 背景图片
+		[width] 800	// 宽度
+		[height] 600	// 高度
+	[/background]
+	
+	// 技能节点配置
+	[skill nodes]
+		
+		// ================================================================
+		// 基础技能区域 (第一排)
+		// ================================================================
+		
+		// 上挑技能
+		[skill node]
+			[skill id] 1	// 技能ID
+			[position]
+				[x] 100	// X坐标
+				[y] 50	// Y坐标
+			[/position]
+			[level requirement] 1	// 等级要求
+			[sp requirement] 0	// SP要求
+			[prerequisite] 0	// 前置技能ID（0表示无前置）
+			[branch] 0	// 分支ID（0表示主分支）
+			[icon] `skill/swordman/upperslash.img`	// 技能图标
+		[/skill node]
+		
+		// 下劈技能
+		[skill node]
+			[skill id] 2
+			[position]
+				[x] 200
+				[y] 50
+			[/position]
+			[level requirement] 3
+			[sp requirement] 0
+			[prerequisite] 1	// 需要上挑技能
+			[branch] 0
+			[icon] `skill/swordman/downslash.img`
+		[/skill node]
+		
+		// 三段斩技能
+		[skill node]
+			[skill id] 3
+			[position]
+				[x] 300
+				[y] 50
+			[/position]
+			[level requirement] 5
+			[sp requirement] 0
+			[prerequisite] 2	// 需要下劈技能
+			[branch] 0
+			[icon] `skill/swordman/tripleslash.img`
+		[/skill node]
+		
+		// ================================================================
+		// 进阶技能区域 (第二排)
+		// ================================================================
+		
+		// 银光落刃
+		[skill node]
+			[skill id] 10
+			[position]
+				[x] 150
+				[y] 150
+			[/position]
+			[level requirement] 10
+			[sp requirement] 5
+			[prerequisite] 3	// 需要三段斩
+			[branch] 0
+			[icon] `skill/swordman/silver_fall.img`
+		[/skill node]
+		
+		// 里鬼剑术
+		[skill node]
+			[skill id] 11
+			[position]
+				[x] 250
+				[y] 150
+			[/position]
+			[level requirement] 15
+			[sp requirement] 10
+			[prerequisite] 10	// 需要银光落刃
+			[branch] 0
+			[icon] `skill/swordman/ghost_sword.img`
+		[/skill node]
+		
+		// 拔刀斩
+		[skill node]
+			[skill id] 12
+			[position]
+				[x] 350
+				[y] 150
+			[/position]
+			[level requirement] 20
+			[sp requirement] 15
+			[prerequisite] 11	// 需要里鬼剑术
+			[branch] 0
+			[icon] `skill/swordman/draw_sword.img`
+		[/skill node]
+		
+		// ================================================================
+		// 分支技能区域 (第三排)
+		// ================================================================
+		
+		// 分支A：速度流
+		[skill node]
+			[skill id] 20
+			[position]
+				[x] 100
+				[y] 250
+			[/position]
+			[level requirement] 25
+			[sp requirement] 20
+			[prerequisite] 12	// 需要拔刀斩
+			[branch] 1	// 分支A
+			[icon] `skill/swordman/speed_branch.img`
+		[/skill node]
+		
+		// 分支B：力量流
+		[skill node]
+			[skill id] 21
+			[position]
+				[x] 300
+				[y] 250
+			[/position]
+			[level requirement] 25
+			[sp requirement] 20
+			[prerequisite] 12	// 需要拔刀斩
+			[branch] 2	// 分支B
+			[icon] `skill/swordman/power_branch.img`
+		[/skill node]
+		
+		// 分支C：技巧流
+		[skill node]
+			[skill id] 22
+			[position]
+				[x] 500
+				[y] 250
+			[/position]
+			[level requirement] 25
+			[sp requirement] 20
+			[prerequisite] 12	// 需要拔刀斩
+			[branch] 3	// 分支C
+			[icon] `skill/swordman/skill_branch.img`
+		[/skill node]
+		
+		// ================================================================
+		// 高级技能区域 (第四排)
+		// ================================================================
+		
+		// 速度流高级技能
+		[skill node]
+			[skill id] 30
+			[position]
+				[x] 100
+				[y] 350
+			[/position]
+			[level requirement] 35
+			[sp requirement] 30
+			[prerequisite] 20	// 需要速度分支技能
+			[branch] 1
+			[icon] `skill/swordman/speed_advanced.img`
+		[/skill node]
+		
+		// 力量流高级技能
+		[skill node]
+			[skill id] 31
+			[position]
+				[x] 300
+				[y] 350
+			[/position]
+			[level requirement] 35
+			[sp requirement] 30
+			[prerequisite] 21	// 需要力量分支技能
+			[branch] 2
+			[icon] `skill/swordman/power_advanced.img`
+		[/skill node]
+		
+		// 技巧流高级技能
+		[skill node]
+			[skill id] 32
+			[position]
+				[x] 500
+				[y] 350
+			[/position]
+			[level requirement] 35
+			[sp requirement] 30
+			[prerequisite] 22	// 需要技巧分支技能
+			[branch] 3
+			[icon] `skill/swordman/skill_advanced.img`
+		[/skill node]
+		
+		// ================================================================
+		// 觉醒技能区域 (第五排)
+		// ================================================================
+		
+		// 一觉技能
+		[skill node]
+			[skill id] 40
+			[position]
+				[x] 200
+				[y] 450
+			[/position]
+			[level requirement] 48
+			[sp requirement] 50
+			[prerequisite] 30	// 需要任意高级技能
+			[branch] 0
+			[icon] `skill/swordman/awaken1.img`
+			[awaken] 1	// 标记为一觉技能
+		[/skill node]
+		
+		// 二觉技能
+		[skill node]
+			[skill id] 41
+			[position]
+				[x] 400
+				[y] 450
+			[/position]
+			[level requirement] 75
+			[sp requirement] 100
+			[prerequisite] 40	// 需要一觉技能
+			[branch] 0
+			[icon] `skill/swordman/awaken2.img`
+			[awaken] 2	// 标记为二觉技能
+		[/skill node]
+		
+		// ================================================================
+		// 新增自定义技能
+		// ================================================================
+		
+		// 雷电斩技能（新增）
+		[skill node]
+			[skill id] 99001	// 自定义技能ID
+			[position]
+				[x] 450
+				[y] 150
+			[/position]
+			[level requirement] 15
+			[sp requirement] 10
+			[prerequisite] 10	// 需要银光落刃
+			[branch] 0
+			[icon] `skill/custom/thunder_slash.img`
+			[custom] 1	// 标记为自定义技能
+		[/skill node]
+		
+	[/skill nodes]
+	
+	// ================================================================
+	// 技能连接线配置
+	// ================================================================
+	
+	[skill connections]
+		
+		// 基础技能连接
+		[connection]
+			[from] 1	// 从上挑
+			[to] 2	// 到下劈
+			[line type] 0	// 直线连接
+		[/connection]
+		
+		[connection]
+			[from] 2	// 从下劈
+			[to] 3	// 到三段斩
+			[line type] 0
+		[/connection]
+		
+		// 进阶技能连接
+		[connection]
+			[from] 3	// 从三段斩
+			[to] 10	// 到银光落刃
+			[line type] 1	// 曲线连接
+		[/connection]
+		
+		[connection]
+			[from] 10	// 从银光落刃
+			[to] 11	// 到里鬼剑术
+			[line type] 0
+		[/connection]
+		
+		[connection]
+			[from] 11	// 从里鬼剑术
+			[to] 12	// 到拔刀斩
+			[line type] 0
+		[/connection]
+		
+		// 分支连接
+		[connection]
+			[from] 12	// 从拔刀斩
+			[to] 20	// 到速度分支
+			[line type] 2	// 分支连接
+		[/connection]
+		
+		[connection]
+			[from] 12	// 从拔刀斩
+			[to] 21	// 到力量分支
+			[line type] 2
+		[/connection]
+		
+		[connection]
+			[from] 12	// 从拔刀斩
+			[to] 22	// 到技巧分支
+			[line type] 2
+		[/connection]
+		
+		// 高级技能连接
+		[connection]
+			[from] 20	// 从速度分支
+			[to] 30	// 到速度高级
+			[line type] 0
+		[/connection]
+		
+		[connection]
+			[from] 21	// 从力量分支
+			[to] 31	// 到力量高级
+			[line type] 0
+		[/connection]
+		
+		[connection]
+			[from] 22	// 从技巧分支
+			[to] 32	// 到技巧高级
+			[line type] 0
+		[/connection]
+		
+		// 觉醒技能连接
+		[connection]
+			[from] 30	// 从速度高级
+			[to] 40	// 到一觉
+			[line type] 3	// 觉醒连接
+		[/connection]
+		
+		[connection]
+			[from] 31	// 从力量高级
+			[to] 40	// 到一觉
+			[line type] 3
+		[/connection]
+		
+		[connection]
+			[from] 32	// 从技巧高级
+			[to] 40	// 到一觉
+			[line type] 3
+		[/connection]
+		
+		[connection]
+			[from] 40	// 从一觉
+			[to] 41	// 到二觉
+			[line type] 3
+		[/connection]
+		
+		// 自定义技能连接
+		[connection]
+			[from] 10	// 从银光落刃
+			[to] 99001	// 到雷电斩
+			[line type] 1	// 曲线连接
+		[/connection]
+		
+	[/skill connections]
+	
+	// ================================================================
+	// 技能树分支配置
+	// ================================================================
+	
+	[branches]
+		
+		// 主分支
+		[branch]
+			[id] 0
+			[name] `主分支`
+			[color] 0xFFFFFF	// 白色
+		[/branch]
+		
+		// 速度分支
+		[branch]
+			[id] 1
+			[name] `速度流`
+			[color] 0x00FF00	// 绿色
+		[/branch]
+		
+		// 力量分支
+		[branch]
+			[id] 2
+			[name] `力量流`
+			[color] 0xFF0000	// 红色
+		[/branch]
+		
+		// 技巧分支
+		[branch]
+			[id] 3
+			[name] `技巧流`
+			[color] 0x0000FF	// 蓝色
+		[/branch]
+		
+	[/branches]
+	
+[/skill tree]
+
+// ================================================================
+// 技能树配置说明：
+// 
+// 1. 坐标系统：
+//    - 原点(0,0)在左上角
+//    - X轴向右递增，Y轴向下递增
+//    - 建议技能间距离至少50像素
+// 
+// 2. 前置关系：
+//    - [prerequisite] 设置前置技能ID
+//    - 0表示无前置技能
+//    - 可以设置多个前置技能
+// 
+// 3. 分支系统：
+//    - [branch] 设置技能所属分支
+//    - 0为主分支，其他数字为子分支
+//    - 同分支技能通常有相关性
+// 
+// 4. 连接线类型：
+//    - 0: 直线连接（普通技能）
+//    - 1: 曲线连接（特殊关系）
+//    - 2: 分支连接（分支起点）
+//    - 3: 觉醒连接（觉醒技能）
+// 
+// 5. 特殊标记：
+//    - [awaken] 觉醒技能标记
+//    - [custom] 自定义技能标记
+//    - [passive] 被动技能标记
+// ================================================================
+
+// ================================================================
+// 技能树修改注意事项：
+// 
+// 1. 坐标规划：合理规划技能位置，避免重叠
+// 2. 前置关系：确保前置关系逻辑正确
+// 3. 分支平衡：各分支技能数量和强度要平衡
+// 4. 视觉效果：连接线要清晰，不要交叉过多
+// 5. 等级要求：技能等级要求要递增合理
+// 6. SP消耗：SP消耗要与技能强度匹配
+// 7. 兼容性：确保与现有技能系统兼容
+// 8. 测试验证：修改后要充分测试技能树显示
+// ================================================================

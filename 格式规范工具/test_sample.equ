@@ -1,0 +1,23 @@
+#PVF_File
+
+[name]	"测试装备"
+    [level]	`85`
+[type]	equipment
+	[grade]	6
+  [physical	attack]	100	200
+[magical attack]	150	250
+[strength]	50
+[intelligence]	"30"
+    [vitality]	25
+[spirit]	20
+
+[equipment	option]
+	[physical attack]	10
+    [magical	attack]	15
+	[strength]	5
+[/equipment	option]
+
+[flavor	text]	`这是一个测试装备，用于验证格式检查工具的功能。`
+
+// 这是注释行
+[comment]	测试注释

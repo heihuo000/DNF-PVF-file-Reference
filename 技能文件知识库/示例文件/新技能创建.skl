@@ -1,0 +1,218 @@
+#PVF_File
+
+// ================================================================
+// 新技能创建示例 - 自定义技能"雷电斩"
+// 本示例展示如何从零开始创建一个全新的技能
+// 包含完整的技能参数设置和特殊效果配置
+// ================================================================
+
+[skill]
+	[name] `雷电斩`	// 新技能名称
+	[explain] `挥舞武器释放雷电之力，对前方敌人造成雷属性伤害并有概率造成感电效果。`	// 技能说明
+	
+	[basic info]
+		[skill type] 0		// 技能类型：0=主动技能
+		[skill class] 1		// 技能分类：1=攻击技能
+		[maximum level] 60	// 技能最大等级
+		[growtype maximum level] 60 60 60 60 60 60	// 各转职的最大等级
+		[skill fitness growtype] 0 1 2 3 4	// 允许学习的职业（鬼剑士系）
+		[durability decrease rate] 12	// 武器耐久度消耗率
+		[mp] 25 28 31 34 37 40 43 46 49 52 55 58 61 64 67 70 73 76 79 82 85 88 91 94 97 100 103 106 109 112 115 118 121 124 127 130 133 136 139 142 145 148 151 154 157 160 163 166 169 172 175 178 181 184 187 190	// 各等级MP消耗
+		[cool time] 8000	// 冷却时间8秒
+		[casting time] 500	// 施法时间0.5秒
+		[can cancel] 1	// 可以取消
+		[need weapon] 1	// 需要武器
+		[weapon effect] 1	// 有武器效果
+		[icon] `skill/custom/thunder_slash.img`	// 自定义技能图标
+		[command] `command/custom/thunder_slash.cld`	// 技能指令文件
+		[sound] `THUNDER_SLASH_01`	// 技能音效
+		[pvp] 1	// PVP可用
+		
+		// 新技能特殊标识
+		[custom skill] 1	// 标记为自定义技能
+		[skill id] 99001	// 自定义技能ID（建议使用99000以上避免冲突）
+	[/basic info]
+	
+	[required level] 15	// 学习所需角色等级
+	[required sp] 2 2 2 2 2 3 3 3 3 3 4 4 4 4 4 5 5 5 5 5 6 6 6 6 6 7 7 7 7 7 8 8 8 8 8 9 9 9 9 9 10 10 10 10 10 11 11 11 11 11 12 12 12 12 12	// 各等级所需SP点数
+	
+	// 前置技能要求
+	[required skill]
+		[skill] 1	// 前置技能：上挑
+		[level] 5	// 前置技能等级要求
+	[/required skill]
+	
+	// 各等级的技能数据
+	[level info]
+		// 1级数据
+		[level]
+			[physical attack] 180.0	// 物理攻击力
+			[magical attack] 120.0	// 魔法攻击力（雷属性）
+			[attack range] 200.0	// 攻击范围
+			[hit recovery] 800	// 硬直时间
+			[attack count] 3	// 攻击段数
+			
+			// 命中效果
+			[hit info]
+				[blow] 0	// 无击飞
+				[blood] 0	// 无流血
+				[shock] 1	// 感电效果
+				[element] 2	// 元素属性：2=雷属性
+				[element damage] 50	// 元素伤害
+			[/hit info]
+			
+			// 特殊效果
+			[special effect]
+				[shock probability] 30	// 感电概率30%
+				[shock duration] 3000	// 感电持续时间3秒
+				[shock damage] 20	// 感电伤害
+				[chain lightning] 1	// 连锁闪电效果
+				[chain count] 2	// 连锁次数
+			[/special effect]
+			
+			// 范围攻击设置
+			[area attack]
+				[width] 150	// 攻击宽度
+				[height] 100	// 攻击高度
+				[depth] 250	// 攻击深度
+			[/area attack]
+		[/level]
+		
+		// 2级数据
+		[level]
+			[physical attack] 185.0
+			[magical attack] 125.0
+			[attack range] 205.0
+			[hit recovery] 800
+			[attack count] 3
+			[hit info]
+				[blow] 0
+				[blood] 0
+				[shock] 1
+				[element] 2
+				[element damage] 52
+			[/hit info]
+			[special effect]
+				[shock probability] 32
+				[shock duration] 3000
+				[shock damage] 22
+				[chain lightning] 1
+				[chain count] 2
+			[/special effect]
+			[area attack]
+				[width] 155
+				[height] 105
+				[depth] 255
+			[/area attack]
+		[/level]
+		
+		// 3级数据
+		[level]
+			[physical attack] 190.0
+			[magical attack] 130.0
+			[attack range] 210.0
+			[hit recovery] 800
+			[attack count] 3
+			[hit info]
+				[blow] 0
+				[blood] 0
+				[shock] 1
+				[element] 2
+				[element damage] 54
+			[/hit info]
+			[special effect]
+				[shock probability] 34
+				[shock duration] 3000
+				[shock damage] 24
+				[chain lightning] 1
+				[chain count] 2
+			[/special effect]
+			[area attack]
+				[width] 160
+				[height] 110
+				[depth] 260
+			[/area attack]
+		[/level]
+		
+		// 更多等级数据...
+		// 建议每级增加2-3%的伤害和1-2%的特殊效果概率
+		
+	[/level info]
+	
+	// 技能动画设置
+	[animation]
+		[cast] `skill/custom/thunder_slash_cast.ani`	// 施法动画
+		[attack] `skill/custom/thunder_slash_attack.ani`	// 攻击动画
+		[effect] `skill/custom/thunder_slash_effect.ani`	// 特效动画
+		[hit_effect] `skill/custom/thunder_slash_hit.ani`	// 命中特效
+	[/animation]
+	
+	// 音效设置
+	[sound effect]
+		[cast] `THUNDER_SLASH_CAST`	// 施法音效
+		[attack] `THUNDER_SLASH_ATTACK`	// 攻击音效
+		[hit] `THUNDER_SLASH_HIT`	// 命中音效
+		[shock] `THUNDER_SHOCK`	// 感电音效
+	[/sound effect]
+	
+	// 粒子效果设置
+	[particle effect]
+		[lightning] `effect/thunder_lightning.ptl`	// 闪电粒子效果
+		[spark] `effect/thunder_spark.ptl`	// 电火花效果
+		[chain] `effect/chain_lightning.ptl`	// 连锁闪电效果
+	[/particle effect]
+	
+[/skill]
+
+// ================================================================
+// 新技能创建步骤说明：
+// 
+// 1. 确定技能ID：使用99000以上的ID避免与官方技能冲突
+// 2. 设计技能概念：确定技能的作用、效果、属性等
+// 3. 配置基础参数：伤害、范围、冷却、消耗等
+// 4. 设置特殊效果：元素属性、状态效果、连锁效果等
+// 5. 准备资源文件：图标、动画、音效、特效等
+// 6. 配置技能树：在对应的.co文件中添加技能
+// 7. 更新技能列表：在对应的.lst文件中添加技能
+// 8. 测试验证：确保技能正常工作且平衡
+// ================================================================
+
+// ================================================================
+// 新技能常用特殊效果：
+// 
+// 元素属性：
+// [element] 0=无属性, 1=火, 2=雷, 3=冰, 4=光, 5=暗
+// 
+// 状态效果：
+// [burn] 灼烧效果
+// [freeze] 冰冻效果
+// [shock] 感电效果
+// [poison] 中毒效果
+// [curse] 诅咒效果
+// [slow] 减速效果
+// [stun] 眩晕效果
+// 
+// 特殊机制：
+// [penetrate] 穿透效果
+// [bounce] 弹射效果
+// [chain] 连锁效果
+// [splash] 溅射效果
+// [multi_hit] 多重命中
+// [critical_rate] 暴击率
+// [ignore_defense] 无视防御
+// ================================================================
+
+// ================================================================
+// 新技能文件关联说明：
+// 
+// 1. 技能文件(.skl)：本文件，定义技能的所有参数
+// 2. 图标文件(.img)：技能在界面中显示的图标
+// 3. 动画文件(.ani)：技能的各种动画效果
+// 4. 音效文件(.wav/.ogg)：技能的各种音效
+// 5. 指令文件(.cld)：技能的输入指令定义
+// 6. 特效文件(.ptl/.eff)：技能的粒子和特效
+// 7. 技能树文件(.co)：技能在技能树中的位置
+// 8. 技能列表(.lst)：职业可学习的技能列表
+// 
+// 注意：所有关联文件都需要正确配置，否则技能可能无法正常显示或使用
+// ================================================================

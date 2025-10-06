@@ -1,0 +1,139 @@
+// ========================================
+// PVP地图标准模板
+// 适用于: 竞技场、决斗场、团队战场
+// 特点: 平衡设计、固定出生点、无NPC干扰
+// ========================================
+
+[map info]
+	`map type`	`pvp`			// PVP类型地图
+	`width`		1000			// 地图宽度
+	`height`	600			// 地图高度
+	`tile width`	32			// 瓦片宽度
+	`tile height`	32			// 瓦片高度
+	`map name`	`新PVP竞技场`		// 地图显示名称
+
+[layer info]
+	`layer count`	3			// 图层数量
+	`layer 0`	`back`			// 背景层
+	`layer 1`	`tile`			// 瓦片层
+	`layer 2`	`obj`			// 对象层
+
+[map attribute]
+	`skill no effect`	0		// 允许技能效果
+	`sound reverb`		30		// 音效混响
+	`bgm`			`Music/pvp_battle.ogg`	// 背景音乐
+	`camera limit rect`	0	0	1000	600	// 相机限制区域
+
+[tile info]
+	`tile total`		96		// 瓦片总数
+	`tile attribute`	`tile/arena_floor.til`	// 瓦片属性文件
+	`tile image`		`tile/arena_floor.img`	// 瓦片图像文件
+
+[movable area]
+	`area count`	1			// 移动区域数量
+	`area 0`	50	50	900	500	// 主战斗区域
+
+[static player start pos]
+	`pos count`	8			// 玩家起始位置(支持8人)
+	// 左侧队伍出生点
+	`pos 0`		100	300		// 队伍1-玩家1
+	`pos 1`		100	250		// 队伍1-玩家2
+	`pos 2`		100	350		// 队伍1-玩家3
+	`pos 3`		100	200		// 队伍1-玩家4
+	// 右侧队伍出生点
+	`pos 4`		900	300		// 队伍2-玩家1
+	`pos 5`		900	250		// 队伍2-玩家2
+	`pos 6`		900	350		// 队伍2-玩家3
+	`pos 7`		900	200		// 队伍2-玩家4
+
+[passive object]
+	`obj count`	6			// 被动对象数量
+	// 中央障碍物
+	`obj 0`
+		`file name`	`passiveobject/arena_pillar.po`
+		`pos`		500	300
+		`z pos`		0
+	// 左侧掩体
+	`obj 1`
+		`file name`	`passiveobject/arena_wall_low.po`
+		`pos`		300	200
+		`z pos`		0
+	`obj 2`
+		`file name`	`passiveobject/arena_wall_low.po`
+		`pos`		300	400
+		`z pos`		0
+	// 右侧掩体
+	`obj 3`
+		`file name`	`passiveobject/arena_wall_low.po`
+		`pos`		700	200
+		`z pos`		0
+	`obj 4`
+		`file name`	`passiveobject/arena_wall_low.po`
+		`pos`		700	400
+		`z pos`		0
+	// 装饰旗帜
+	`obj 5`
+		`file name`	`passiveobject/arena_banner.po`
+		`pos`		500	100
+		`z pos`		-10
+
+[animation]
+	`ani count`	4			// 动画数量
+	// 四角火盆效果
+	`ani 0`
+		`ani file name`		`sprite/arena_torch.ani`
+		`ani pos`		100	100
+		`ani loop`		1
+		`ani play speed`	100
+	`ani 1`
+		`ani file name`		`sprite/arena_torch.ani`
+		`ani pos`		900	100
+		`ani loop`		1
+		`ani play speed`	100
+	`ani 2`
+		`ani file name`		`sprite/arena_torch.ani`
+		`ani pos`		100	500
+		`ani loop`		1
+		`ani play speed`	100
+	`ani 3`
+		`ani file name`		`sprite/arena_torch.ani`
+		`ani pos`		900	500
+		`ani loop`		1
+		`ani play speed`	100
+
+[sound]
+	`sound count`	2			// 环境音效数量
+	`sound 0`	`Sound/arena_crowd.ogg`		500	50	35	// 观众声
+	`sound 1`	`Sound/arena_ambient.ogg`	500	300	25	// 环境音
+
+// PVP专用配置
+[pvp config]
+	`team count`		2		// 队伍数量
+	`max players per team`	4		// 每队最大人数
+	`respawn time`		5000		// 复活时间(毫秒)
+	`match time limit`	300000		// 比赛时间限制(5分钟)
+	`victory condition`	`elimination`	// 胜利条件: elimination(消灭) / score(积分)
+
+[team spawn area]
+	`area count`	2			// 队伍出生区域
+	`area 0`	50	150	100	300	// 队伍1出生区域
+	`area 1`	850	150	100	300	// 队伍2出生区域
+
+// ========================================
+// 使用说明:
+// 1. 修改 map name 为实际竞技场名称
+// 2. 调整地图尺寸保持平衡性
+// 3. 配置合适的障碍物和掩体
+// 4. 设置对称的出生点位置
+// 5. 避免添加影响平衡的装饰
+// 6. 测试确保无卡位和视野死角
+// ========================================
+
+// ========================================
+// PVP地图设计原则:
+// 1. 对称性: 确保双方条件公平
+// 2. 平衡性: 避免某一方有地形优势
+// 3. 可见性: 减少视野盲区
+// 4. 流畅性: 确保移动路径通畅
+// 5. 策略性: 提供多样的战术选择
+// ========================================
