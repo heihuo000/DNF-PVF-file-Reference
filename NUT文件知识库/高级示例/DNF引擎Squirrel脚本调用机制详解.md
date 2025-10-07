@@ -148,7 +148,7 @@ graph TB
         end
         
         subgraph "Squirrel脚本层"
-            G[loadstate.nut<br/>入口文件]
+            G["loadstate.nut 入口文件"]
             subgraph "职业脚本"
                 H[thief_header.nut]
                 I[thief_load_state.nut]
@@ -405,13 +405,13 @@ flowchart TD
 ```mermaid
 graph LR
     subgraph "性能对比"
-        A[函数签名驱动<br/>第一轨道] --> A1[O(1) 直接调用]
-        B[状态注册驱动<br/>第二轨道] --> B1[O(log n) 映射查找]
+        A["函数签名驱动 第一轨道"] --> A1["O(1) 直接调用"]
+        B["状态注册驱动 第二轨道"] --> B1["O(log n) 映射查找"]
     end
     
     subgraph "使用场景"
-        C[高频事件<br/>如攻击、移动] --> A
-        D[低频事件<br/>如状态变化] --> B
+        C["高频事件 如攻击、移动"] --> A
+        D["低频事件 如状态变化"] --> B
     end
     
     subgraph "优势特点"
@@ -550,8 +550,8 @@ flowchart TD
     A[输入函数名] --> B[按'_'分割字符串]
     B --> C{分割结果 >= 2?}
     C -->|否| D[返回false - 无效签名]
-    C -->|是| E[提取事件类型<br/>parts[0]]
-    E --> F[提取职业类型<br/>parts[last]]
+    C -->|是| E["提取事件类型 parts[0]"]
+    E --> F["提取职业类型 parts[last]"]
     F --> G{验证事件类型}
     G -->|无效| D
     G -->|有效| H{验证职业类型}
