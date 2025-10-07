@@ -1,0 +1,116 @@
+#PVF_File
+
+[name]
+	`御鬼极意`
+
+[basic explain]
+	`    掌握[御鬼极意]后， 增加鬼泣的技能攻击力，
+on状态下[刀魂之卡赞]、[侵蚀之普戾蒙]、[冰霜之萨亚]、[瘟疫之罗刹]、[冰晶之萨亚]跟随角色移动，
+off状态下解除阵法随动，
+[鬼影闪]无需鬼影步跑动无敌状态可直接施放。`
+
+[explain]
+	`    掌握[御鬼极意]后， 增加鬼泣的技能攻击力，
+on状态下[刀魂之卡赞]、[侵蚀之普戾蒙]、[冰霜之萨亚]、[瘟疫之罗刹]、[冰晶之萨亚]跟随角色移动，
+off状态下解除阵法随动，
+[鬼影闪]无需鬼影步跑动无敌状态可直接施放。`
+
+[purchase cost]
+	80
+[/purchase cost]
+
+[required level]
+	65
+
+[required level range]
+	3
+
+[seal enable]
+	1
+
+[type]
+	`[passive]`
+
+[skill class]
+	3
+
+[maximum level]
+	40
+
+[growtype maximum level]
+	0	0	0	0	0	0
+
+[second growtype maximum level]
+	0	0	0	0	30	30	0	0	0	0	0	0
+
+[skill fitness second growtype]
+	1
+[/skill fitness second growtype]
+
+[icon]
+	`Character/Swordman/Effect/SkillIcon.img`	440
+	`Character/Swordman/Effect/SkillIcon.img`	441
+
+[dungeon]
+	[static data]
+	[/static data]
+	[level info]
+		1
+		140
+		160
+		180
+		200
+		220
+		240
+		260
+		280
+		300
+		320
+		340
+		360
+		380
+		400
+		420
+		440
+		460
+		480
+		500
+		520
+		540
+		560
+		580
+		600
+		620
+		640
+		660
+		680
+		700
+		720
+		740
+		760
+		780
+		800
+		820
+		840
+		860
+		880
+		900
+		920
+		940
+		960
+		980
+		1000
+		1020
+		1040
+		1060
+		1080
+		1100
+		1120
+	[/level info]
+[/dungeon]
+
+[level property]
+	1	99
+	`基本攻击和技能攻击力增加 : <int>%%`
+	-1	0	0.1
+[/level property]

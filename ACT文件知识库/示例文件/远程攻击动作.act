@@ -1,0 +1,74 @@
+# 远程攻击动作模板
+# 适用于远程角色的射击攻击动作
+# 包含弹道创建、瞄准、射击音效等
+
+[MOTION]
+	[BASE ANI] `../Animation/shoot_basic.ani`
+	
+	[SUB ANI]
+		`../equipment/weapon/bow_string.ani` 0 100
+		`../effect/charge_effect.ani` 5 80
+	[/SUB ANI]
+	
+	[SPEECH]
+		`shoot_voice_01` 8 40
+		`shoot_voice_02` 8 30
+	[/SPEECH]
+	
+	[SOUND]
+		`BOW_DRAW` 2
+		`ARROW_RELEASE` 8
+	[/SOUND]
+[/MOTION]
+
+[HOLD POSITION]
+
+[DEFAULT ATTACKINFO] `../AttackInfo/ranged_attack.atk`
+
+# 射击时创建弹道
+[TRIGGER]
+	[LIMIT] 0
+	[ENABLE] [ON]
+	[FRAME] 8 8
+	
+	[WHICH] [ME]
+	
+	[CHECKUP]
+		[IS TARGET STATE] 0
+	[/CHECKUP]
+	
+	[DO BEHAVIOR] [ME] 0
+[/TRIGGER]
+
+# 目标距离过近时后退
+[TRIGGER]
+	[LIMIT] 0
+	[ENABLE] [ON]
+	[CHECK TIME] 500
+	
+	[WHICH] [TARGET]
+	
+	[CHECKUP]
+		[DISTANCE] [<] 200
+		[IS TARGET STATE] 0
+	[/CHECKUP]
+	
+	[DO BEHAVIOR] [ME] 1
+[/TRIGGER]
+
+[BEHAVIOR]
+	# 创建箭矢弹道
+	[CREATE PASSIVEOBJECT]
+		[INDEX] 30001
+		[PARTICLE FILENAME] `../Particle/Arrow.ptl`
+		[LEVEL] 1
+		[POS] 30 0 80
+		[USE ANGLE] 0 0 400 2
+		[USE TARGET TEAM]
+		[USE MY DIRECTION]
+	[/CREATE PASSIVEOBJECT]
+[/BEHAVIOR]
+
+[BEHAVIOR]
+	# 后退行为
+[/BEHAVIOR]

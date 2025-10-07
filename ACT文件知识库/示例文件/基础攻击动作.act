@@ -1,0 +1,66 @@
+# 基础攻击动作模板
+# 适用于近战角色的基础攻击动作
+# 包含动画、音效、攻击判定等基础要素
+
+[MOTION]
+	[BASE ANI] `../Animation/attack_basic.ani`
+	
+	[SUB ANI]
+		`../equipment/weapon/sword_effect.ani` 0 100
+	[/SUB ANI]
+	
+	[SPEECH]
+		`attack_voice_01` 0 30
+		`attack_voice_02` 0 50
+	[/SPEECH]
+	
+	[SOUND]
+		`SWORD_SWING` 3
+		`IMPACT_HIT` 8
+	[/SOUND]
+[/MOTION]
+
+[DEFAULT ATTACKINFO] `../AttackInfo/basic_attack.atk`
+
+# 攻击成功时的连击触发器
+[TRIGGER]
+	[LIMIT] 0
+	[ENABLE] [ON]
+	[ON ATTACKSUCCESS]
+	[IS MEET PROB] 30
+	
+	[WHICH] [ME]
+	
+	[CHECKUP]
+		[HP] [>] 50 [%]
+		[DISTANCE] [<=] 100
+	[/CHECKUP]
+	
+	[DO BEHAVIOR] [ME] 1
+[/TRIGGER]
+
+# 受到攻击时的反击触发器
+[TRIGGER]
+	[LIMIT] 1
+	[ENABLE] [ON]
+	[ON DAMAGE]
+	[CHECK STUCK] 0
+	[IS MEET PROB] 20
+	
+	[WHICH] [LAST ATTACKER]
+	
+	[CHECKUP]
+		[DISTANCE] [<=] 150
+		[IS TARGET STATE] 0
+	[/CHECKUP]
+	
+	[DO BEHAVIOR] [ME] 2
+[/TRIGGER]
+
+[BEHAVIOR]
+	# 连击行为
+[/BEHAVIOR]
+
+[BEHAVIOR]
+	# 反击行为
+[/BEHAVIOR]

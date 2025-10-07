@@ -1,0 +1,61 @@
+//基础循环动画示例
+//适用于角色待机动作或简单的UI动画
+
+[LOOP]
+1
+//开启循环播放
+
+[SHADOW]
+1
+//显示阴影
+
+[FRAME MAX]
+4
+//总共4帧动画
+
+[FRAME000]
+[IMAGE]
+`character/knight/equipment/avatar/skin/kn_body0000.img`
+0
+[IMAGE POS]
+-127	-298
+//角色基点位置，通常设置在脚部中心
+[DELAY]
+150
+//每帧显示150毫秒
+[GRAPHIC EFFECT]
+`LINEARDODGE`
+//线性减淡，去除黑色背景
+
+[FRAME001]
+[IMAGE]
+`character/knight/equipment/avatar/skin/kn_body0000.img`
+1
+[IMAGE POS]
+-127	-298
+[DELAY]
+150
+[GRAPHIC EFFECT]
+`LINEARDODGE`
+
+[FRAME002]
+[IMAGE]
+`character/knight/equipment/avatar/skin/kn_body0000.img`
+2
+[IMAGE POS]
+-127	-298
+[DELAY]
+150
+[GRAPHIC EFFECT]
+`LINEARDODGE`
+
+[FRAME003]
+[IMAGE]
+`character/knight/equipment/avatar/skin/kn_body0000.img`
+3
+[IMAGE POS]
+-127	-298
+[DELAY]
+150
+[GRAPHIC EFFECT]
+`LINEARDODGE`

@@ -1,0 +1,177 @@
+//特效动画示例
+//展示复杂的视觉效果，包括颜色变化、旋转、缩放等
+
+[LOOP]
+0
+//特效通常不循环
+
+[SHADOW]
+0
+//特效通常不显示阴影
+
+[FRAME MAX]
+8
+//特效动画8帧
+
+[FRAME000]
+//特效开始帧
+[IMAGE]
+`effect/magic/explosion/explosion_001.img`
+0
+[IMAGE POS]
+-64	-64
+//特效中心点
+[DELAY]
+60
+//特效播放较快
+[GRAPHIC EFFECT]
+`LINEARDODGE`
+[RGBA]
+255	255	255	180
+//稍微透明，营造特效感
+[IMAGE RATE]
+50	50
+//初始较小
+
+[FRAME001]
+//特效展开帧
+[IMAGE]
+`effect/magic/explosion/explosion_001.img`
+1
+[IMAGE POS]
+-64	-64
+[DELAY]
+60
+[GRAPHIC EFFECT]
+`LINEARDODGE`
+[RGBA]
+255	200	100	200
+//偏橙色，模拟爆炸效果
+[IMAGE RATE]
+80	80
+//逐渐放大
+[IMAGE ROTATE]
+0.1
+//轻微旋转
+[PLAY SOUND]
+`sound/effect/explosion_start.wav`
+
+[FRAME002]
+//特效高潮帧1
+[IMAGE]
+`effect/magic/explosion/explosion_001.img`
+2
+[IMAGE POS]
+-64	-64
+[DELAY]
+80
+[GRAPHIC EFFECT]
+`LINEARDODGE`
+[RGBA]
+255	150	50	255
+//更橙红色
+[IMAGE RATE]
+120	120
+//继续放大
+[IMAGE ROTATE]
+0.3
+
+[FRAME003]
+//特效高潮帧2
+[IMAGE]
+`effect/magic/explosion/explosion_001.img`
+3
+[IMAGE POS]
+-64	-64
+[DELAY]
+80
+[GRAPHIC EFFECT]
+`LINEARDODGE`
+[RGBA]
+255	100	0	255
+//红色高潮
+[IMAGE RATE]
+150	150
+//最大尺寸
+[IMAGE ROTATE]
+0.5
+[PLAY SOUND]
+`sound/effect/explosion_peak.wav`
+
+[FRAME004]
+//特效衰减帧1
+[IMAGE]
+`effect/magic/explosion/explosion_001.img`
+4
+[IMAGE POS]
+-64	-64
+[DELAY]
+100
+[GRAPHIC EFFECT]
+`LINEARDODGE`
+[RGBA]
+200	80	0	200
+//开始变暗
+[IMAGE RATE]
+140	140
+//稍微缩小
+[IMAGE ROTATE]
+0.7
+
+[FRAME005]
+//特效衰减帧2
+[IMAGE]
+`effect/magic/explosion/explosion_001.img`
+5
+[IMAGE POS]
+-64	-64
+[DELAY]
+120
+[GRAPHIC EFFECT]
+`LINEARDODGE`
+[RGBA]
+150	60	0	150
+//继续变暗变透明
+[IMAGE RATE]
+120	120
+[IMAGE ROTATE]
+0.9
+
+[FRAME006]
+//特效消散帧1
+[IMAGE]
+`effect/magic/explosion/explosion_001.img`
+6
+[IMAGE POS]
+-64	-64
+[DELAY]
+150
+[GRAPHIC EFFECT]
+`LINEARDODGE`
+[RGBA]
+100	40	0	100
+//很暗很透明
+[IMAGE RATE]
+100	100
+[IMAGE ROTATE]
+1.1
+
+[FRAME007]
+//特效结束帧
+[IMAGE]
+`effect/magic/explosion/explosion_001.img`
+7
+[IMAGE POS]
+-64	-64
+[DELAY]
+200
+[GRAPHIC EFFECT]
+`LINEARDODGE`
+[RGBA]
+50	20	0	50
+//几乎透明
+[IMAGE RATE]
+80	80
+//缩小消失
+[IMAGE ROTATE]
+1.3

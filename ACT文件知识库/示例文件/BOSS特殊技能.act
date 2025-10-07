@@ -1,0 +1,196 @@
+# BOSS特殊技能模板
+# 适用于BOSS级怪物的大型技能
+# 包含多阶段攻击、范围伤害、特殊效果等
+
+[MOTION]
+	[BASE ANI] `../Animation/boss_ultimate.ani`
+	
+	[SUB ANI]
+		`../effect/boss_aura.ani` 0 100
+		`../effect/power_charge.ani` 10 50
+	[/SUB ANI]
+	
+	[SUB ANI WITH XY]
+		`../effect/ground_crack.ani` 30 35 0 -50
+		`../effect/energy_wave.ani` 35 40 0 0
+	[/SUB ANI WITH XY]
+	
+	[SPEECH]
+		`boss_ultimate_voice` 15 100
+	[/SPEECH]
+	
+	[SOUND]
+		`BOSS_CHARGE` 5
+		`EARTH_SHAKE` 30
+		`ULTIMATE_BLAST` 35
+	[/SOUND]
+	
+	[SOUND PROBABILITY]
+		`BOSS_LAUGH` 0 30
+	[/SOUND PROBABILITY]
+[/MOTION]
+
+[HOLD POSITION]
+
+[DEFAULT ATTACKINFO] `../AttackInfo/boss_ultimate.atk`
+
+# 技能发动条件检查
+[TRIGGER]
+	[LIMIT] 1
+	[ENABLE] [ON]
+	[FRAME] 0 0
+	
+	[WHICH] [ME]
+	
+	[CHECKUP]
+		[HP] [<] 50 [%]
+		[CHECK PLAYER NUM] [COUNT] [>=] 2
+	[/CHECKUP]
+	
+	[DO BEHAVIOR] [ME] 0
+[/TRIGGER]
+
+# 蓄力阶段 - 创建警告标记
+[TRIGGER]
+	[LIMIT] 1
+	[ENABLE] [ON]
+	[FRAME] 10 15
+	
+	[WHICH] [ALL CHARACTER]
+	
+	[CHECKUP]
+		[DISTANCE] [<=] 600
+		[IS TARGET STATE] 0
+	[/CHECKUP]
+	
+	[DO BEHAVIOR] [ME] 1
+[/TRIGGER]
+
+# 第一波攻击 - 地面裂缝
+[TRIGGER]
+	[LIMIT] 1
+	[ENABLE] [ON]
+	[FRAME] 30 30
+	
+	[WHICH] [ALL CHARACTER]
+	
+	[CHECKUP]
+		[DISTANCE] [<=] 400
+	[/CHECKUP]
+	
+	[DO BEHAVIOR] [ME] 2
+[/TRIGGER]
+
+# 第二波攻击 - 能量冲击波
+[TRIGGER]
+	[LIMIT] 1
+	[ENABLE] [ON]
+	[FRAME] 35 35
+	
+	[WHICH] [ALL CHARACTER]
+	
+	[CHECKUP]
+		[DISTANCE] [<=] 500
+	[/CHECKUP]
+	
+	[DO BEHAVIOR] [ME] 3
+[/TRIGGER]
+
+# 技能结束后的虚弱状态
+[TRIGGER]
+	[LIMIT] 1
+	[ENABLE] [ON]
+	[FRAME] 45 45
+	
+	[WHICH] [ME]
+	
+	[DO BEHAVIOR] [ME] 4
+[/TRIGGER]
+
+# 被打断时的愤怒反应
+[TRIGGER]
+	[LIMIT] 1
+	[ENABLE] [ON]
+	[ON DAMAGE]
+	[FRAME] 5 25
+	[IS MEET PROB] 20
+	
+	[WHICH] [LAST ATTACKER]
+	
+	[CHECKUP]
+		[IS PHYSICAL DAMAGE]
+		[DAMAGE] [>=] 1000
+	[/CHECKUP]
+	
+	[DO BEHAVIOR] [ME] 5
+[/TRIGGER]
+
+[BEHAVIOR]
+	# 技能启动 - 全屏震动效果
+	[CREATE PASSIVEOBJECT]
+		[INDEX] 30030
+		[PARTICLE FILENAME] `../Particle/ScreenShake.ptl`
+		[LEVEL] 1
+		[POS] 0 0 0
+		[USE ANGLE] 0 0 0 0
+		[USE MAP POS]
+		[USE NEUTRAL TEAM]
+	[/CREATE PASSIVEOBJECT]
+[/BEHAVIOR]
+
+[BEHAVIOR]
+	# 创建警告标记
+	[CREATE PASSIVEOBJECT]
+		[INDEX] 30031
+		[PARTICLE FILENAME] `../Particle/DangerZone.ptl`
+		[LEVEL] 1
+		[POS] 0 0 0
+		[USE ANGLE] 0 0 0 0
+		[USE TARGET TEAM]
+		[USE MY BASEPOS]
+		[WARNING MARK] 0 0 400 3
+	[/CREATE PASSIVEOBJECT]
+[/BEHAVIOR]
+
+[BEHAVIOR]
+	# 地面裂缝攻击
+	[CREATE PASSIVEOBJECT]
+		[INDEX] 30032
+		[PARTICLE FILENAME] `../Particle/GroundCrack.ptl`
+		[LEVEL] 1
+		[POS] 0 0 0
+		[USE ANGLE] 0 0 400 1
+		[USE TARGET TEAM]
+		[USE MY BASEPOS]
+	[/CREATE PASSIVEOBJECT]
+[/BEHAVIOR]
+
+[BEHAVIOR]
+	# 能量冲击波
+	[CREATE PASSIVEOBJECT]
+		[INDEX] 30033
+		[PARTICLE FILENAME] `../Particle/EnergyWave.ptl`
+		[LEVEL] 1
+		[POS] 0 0 100
+		[USE ANGLE] 0 0 500 2
+		[USE TARGET TEAM]
+		[USE MY DIRECTION]
+	[/CREATE PASSIVEOBJECT]
+[/BEHAVIOR]
+
+[BEHAVIOR]
+	# 虚弱状态 - 降低防御力
+[/BEHAVIOR]
+
+[BEHAVIOR]
+	# 被打断的愤怒反击
+	[CREATE PASSIVEOBJECT]
+		[INDEX] 30034
+		[PARTICLE FILENAME] `../Particle/CounterAttack.ptl`
+		[LEVEL] 1
+		[POS] 50 0 80
+		[USE ANGLE] 0 0 200 3
+		[USE TARGET TEAM]
+		[USE MY DIRECTION]
+	[/CREATE PASSIVEOBJECT]
+[/BEHAVIOR]

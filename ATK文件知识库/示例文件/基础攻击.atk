@@ -1,0 +1,44 @@
+#PVF_File
+
+// 基础物理攻击示例
+// 适用于：普通武器攻击、基础技能
+
+[damage] 100                    // 基础伤害100点
+[attack type] [physic]          // 物理攻击类型
+[weapon damage apply] 1         // 应用武器伤害
+
+// 攻击目标设置
+[attack myself] 0               // 不攻击自己
+[attack friend] 0               // 不攻击友军
+[attack enemy] 1                // 攻击敌人
+
+// 元素和反应
+[elemental property] [no element]  // 无元素属性
+[damage reaction] [damage]      // 普通伤害反应
+
+// 击退效果
+[push aside] 150               // 击退150像素
+[lift up] 30                   // 浮空30像素
+[knuck back] 0                 // 普通击退
+
+// 音效设置
+[hit wav] `HIT_SOUND`          // 通用命中音效
+
+// 攻击方向
+[attack direction] [hit lift up]  // 向上击飞
+
+// 命中信息
+[hit info] [cut] [blood] 50 1.0   // 切割类型，有血液，50ms持续，正常大小
+
+// 伤害倍率设置
+[human damage rate] 100.0      // 对人类100%伤害
+[monster damage rate] 100.0    // 对怪物100%伤害
+
+// 命中控制
+[max target hit number] 1      // 单体攻击
+[is hit number increasing] 0   // 不增加连击数
+
+// 特殊属性
+[ignore super armor] 0         // 不无视霸体
+[ignore weight] 0              // 受重量影响
+[ignore diehard] 0             // 不无视死硬

@@ -1,0 +1,150 @@
+# 怪物AI行为模板
+# 适用于智能怪物的复杂行为模式
+# 包含巡逻、追击、攻击、逃跑等AI逻辑
+
+[MOTION]
+	[BASE ANI] `../Animation/monster_idle.ani`
+	
+	[SPEECH]
+		`monster_roar_01` 0 20
+		`monster_growl_01` 0 15
+	[/SPEECH]
+	
+	[SOUND]
+		`MONSTER_BREATH` 0
+	[/SOUND]
+[/MOTION]
+
+[DEFAULT ATTACKINFO] `../AttackInfo/monster_attack.atk`
+
+# 发现敌人时的反应
+[TRIGGER]
+	[LIMIT] 0
+	[ENABLE] [ON]
+	[CHECK TIME] 1000
+	
+	[WHICH] [CHARACTER]
+	
+	[CHECKUP]
+		[DISTANCE] [<=] 300
+		[WITHIN SIGHT]
+		[IS TEAM] [ENEMY TEAM]
+	[/CHECKUP]
+	
+	[GET TARGET] 1 [DISTANCE] [LOW]
+	[DO BEHAVIOR] [ME] 0
+[/TRIGGER]
+
+# 攻击目标
+[TRIGGER]
+	[LIMIT] 0
+	[ENABLE] [ON]
+	[CHECK TIME] 2000
+	
+	[WHICH] [TARGET]
+	
+	[CHECKUP]
+		[DISTANCE] [<=] 150
+		[IS TARGET STATE] 0
+	[/CHECKUP]
+	
+	[DO BEHAVIOR] [ME] 1
+[/TRIGGER]
+
+# 生命值过低时逃跑
+[TRIGGER]
+	[LIMIT] 1
+	[ENABLE] [ON]
+	[CHECK TIME] 500
+	
+	[WHICH] [ME]
+	
+	[CHECKUP]
+		[HP] [<] 30 [%]
+		[DISTANCE] [<=] 200
+	[/CHECKUP]
+	
+	[DO BEHAVIOR] [ME] 2
+[/TRIGGER]
+
+# 受到攻击时的愤怒反应
+[TRIGGER]
+	[LIMIT] 3
+	[ENABLE] [ON]
+	[ON DAMAGE]
+	[IS MEET PROB] 40
+	
+	[WHICH] [LAST ATTACKER]
+	
+	[CHECKUP]
+		[DISTANCE] [<=] 250
+		[IS TARGET STATE] 0
+	[/CHECKUP]
+	
+	[DO BEHAVIOR] [ME] 3
+[/TRIGGER]
+
+# 失去目标时的搜索行为
+[TRIGGER]
+	[LIMIT] 0
+	[ENABLE] [ON]
+	[CHECK TIME] 3000
+	
+	[WHICH] [TARGET]
+	
+	[CHECKUP]
+		[DISTANCE] [>] 400
+	[/CHECKUP]
+	
+	[DO BEHAVIOR] [ME] 4
+[/TRIGGER]
+
+# 队友被攻击时的支援
+[TRIGGER]
+	[LIMIT] 0
+	[ENABLE] [ON]
+	[IS OURTEAMATTACKED]
+	
+	[WHICH] [ALL MONSTER TEAM]
+	
+	[CHECKUP]
+		[DISTANCE] [<=] 300
+		[HP] [<] 80 [%]
+	[/CHECKUP]
+	
+	[GET TARGET] 1 [LAST ATTACKSUCCESS] [HIGH]
+	[DO BEHAVIOR] [ME] 5
+[/TRIGGER]
+
+[BEHAVIOR]
+	# 发现敌人 - 进入战斗状态
+[/BEHAVIOR]
+
+[BEHAVIOR]
+	# 攻击目标
+[/BEHAVIOR]
+
+[BEHAVIOR]
+	# 逃跑行为
+[/BEHAVIOR]
+
+[BEHAVIOR]
+	# 愤怒攻击
+	[CREATE PASSIVEOBJECT]
+		[INDEX] 30020
+		[PARTICLE FILENAME] `../Particle/MonsterRage.ptl`
+		[LEVEL] 1
+		[POS] 0 0 50
+		[USE ANGLE] 0 0 0 0
+		[USE MY BASEPOS]
+		[USE NEUTRAL TEAM]
+	[/CREATE PASSIVEOBJECT]
+[/BEHAVIOR]
+
+[BEHAVIOR]
+	# 搜索目标
+[/BEHAVIOR]
+
+[BEHAVIOR]
+	# 支援队友
+[/BEHAVIOR]

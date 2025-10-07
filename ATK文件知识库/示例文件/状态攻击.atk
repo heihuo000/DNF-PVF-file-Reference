@@ -1,0 +1,84 @@
+#PVF_File
+
+// 状态效果攻击示例
+// 适用于：控制技能、异常状态技能、辅助攻击
+
+[damage] 50                     // 较低的直接伤害
+[attack type] [physic]          // 物理攻击类型
+[weapon damage apply] 0         // 不应用武器伤害
+
+// 攻击目标设置
+[attack myself] 0               // 不攻击自己
+[attack friend] 0               // 不攻击友军
+[attack enemy] 1                // 攻击敌人
+
+// 元素属性
+[elemental property] [dark]     // 暗元素属性
+[damage reaction] [damage]      // 普通伤害反应
+
+// 击退效果（控制技能通常击退较小）
+[push aside] 50                // 击退50像素
+[lift up] 10                   // 浮空10像素
+[knuck back] 0                 // 普通击退
+
+// 多种状态效果组合
+[active status] [poison] 80 20 12000 80
+//                       ↑  ↑   ↑    ↑
+//                    概率 等级 时间 伤害
+
+[active status] [slow] 70 15 10000 30 30
+//                     ↑  ↑   ↑    ↑  ↑
+//                  概率 等级 时间 移动 攻击
+
+[active status] [curse] 60 10 8000 15 15 15 15
+//                      ↑  ↑   ↑   ↑  ↑  ↑  ↑
+//                   概率 等级 时间 力量 智力 体力 精神
+
+[active status] [weakness] 50 12 6000 20 20 20 20
+//                         ↑  ↑   ↑   ↑  ↑  ↑  ↑
+//                      概率 等级 时间 物攻 魔攻 物防 魔防
+
+// 音效设置
+[hit wav] `DARK_HIT`           // 暗属性命中音效
+
+// 攻击方向
+[attack direction] [hit down]   // 向下攻击
+
+// 命中信息
+[hit info] [blow] [no blood] 40 0.8  // 爆炸类型，无血液，40ms持续，0.8倍大小
+
+// 伤害倍率设置
+[human damage rate] 100.0      // 对人类100%伤害
+[monster damage rate] 100.0    // 对怪物100%伤害
+
+// 命中控制
+[max target hit number] 5      // 可命中5个目标（群体控制）
+[is hit number increasing] 1   // 增加连击数
+
+// 特殊属性
+[ignore super armor] 1         // 无视霸体（控制技能特性）
+[ignore weight] 1              // 无视重量
+[ignore defense] 0             // 不无视防御
+
+// 暴击设置
+[critical hit] 5               // 5%暴击率（控制技能暴击率较低）
+
+// 特殊控制效果
+[stuck] 30                     // 30%概率僵直
+[weakness] 25                  // 25%概率虚弱
+
+// PVP平衡设置
+[pvp]
+    [damage bonus] -40         // PVP模式减少40%伤害（控制技能PVP削弱较多）
+    [human damage rate] 80.0   // PVP对人类80%伤害
+    
+    // PVP中降低状态效果
+    [active status] [poison] 50 15 8000 50
+    [active status] [slow] 40 10 6000 20 20
+    [active status] [curse] 30 8 5000 10 10 10 10
+    [active status] [weakness] 25 8 4000 15 15 15 15
+    
+    // PVP中降低控制概率
+    [stuck] 15                 // 降低到15%
+    [weakness] 12              // 降低到12%
+[/pvp]

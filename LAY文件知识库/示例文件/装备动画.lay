@@ -1,0 +1,88 @@
+#PVF_File
+
+[LAYER]
+	0
+
+[waiting motion]
+	`%s/Stay.ani`
+
+[move motion]
+	`%s/Move.ani`
+
+[sit motion]
+	`%s/Sit.ani`
+
+[damage motion 1]
+	`%s/Damage1.ani`
+
+[damage motion 2]
+	`%s/Damage2.ani`
+
+[down motion]
+	`%s/Down.ani`
+
+[overturn motion]
+	`%s/Overturn.ani`
+
+[jump motion]
+	`%s/Jump.ani`
+
+[jumpattack motion]
+	`%s/JumpAttack.ani`
+
+[rest motion]
+	`%s/Rest.ani`
+
+[throw motion 1-1]
+	`%s/Throw1.ani`
+
+[throw motion 1-2]
+	`%s/Throw2.ani`
+
+[throw motion 2-1]
+	`%s/Summon1.ani`
+
+[throw motion 2-2]
+	`%s/Summon2.ani`
+
+[dash motion]
+	`%s/Dash.ani`
+
+[dashattack motion]
+	`%s/DashAttack.ani`
+
+[getitem motion]
+	`%s/GetItem.ani`
+
+[buff motion]
+	`%s/Summon2.ani`
+
+[back motion]
+	`%s/Attack3.ani`
+
+[attack motion]
+	`%s/Attack1.ani`
+	`%s/Attack2.ani`
+	`%s/Attack3.ani`
+[/attack motion]
+
+[etc motion]
+	`%s/Guard.ani`
+	`%s/HardAttack.ani`
+	`%s/HitBack.ani`
+	`%s/WeaponComboShort1.ani`
+	`%s/WeaponComboShort2.ani`
+	`%s/WeaponComboShort3.ani`
+	`%s/WeaponComboBlade1.ani`
+	`%s/WeaponComboBlade2.ani`
+	`%s/WeaponComboBlade3.ani`
+	`%s/WeaponComboBlade4.ani`
+	`%s/WeaponComboBlunt1.ani`
+	`%s/WeaponComboBlunt2.ani`
+	`%s/WeaponComboBlunt3.ani`
+	`%s/WeaponComboHeavy1.ani`
+	`%s/WeaponComboHeavy2.ani`
+	`%s/WeaponComboLight1.ani`
+	`%s/WeaponComboLight2.ani`
+	`%s/WeaponComboLight3.ani`
+[/etc motion]

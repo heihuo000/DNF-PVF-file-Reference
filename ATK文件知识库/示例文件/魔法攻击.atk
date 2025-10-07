@@ -1,0 +1,59 @@
+#PVF_File
+
+// 魔法攻击示例
+// 适用于：法师技能、魔法武器、元素攻击
+
+[damage] 200                    // 基础魔法伤害200点
+[attack type] [magic]           // 魔法攻击类型
+[weapon damage apply] 0         // 不应用武器伤害
+
+// 攻击目标设置
+[attack myself] 0               // 不攻击自己
+[attack friend] 0               // 不攻击友军
+[attack enemy] 1                // 攻击敌人
+
+// 元素属性
+[elemental property] [fire]     // 火元素属性
+[damage reaction] [damage]      // 普通伤害反应
+
+// 击退效果（魔法攻击通常击退较小）
+[push aside] 80                // 击退80像素
+[lift up] 20                   // 浮空20像素
+[knuck back] 0                 // 普通击退
+
+// 状态效果 - 燃烧
+[active status] [burn] 60 15 8000 50 10 1 2000
+//                     ↑  ↑   ↑    ↑  ↑  ↑  ↑
+//                  概率 等级 时间 伤害 间隔 次数 延迟
+
+// 音效设置
+[hit wav] `MAGIC_HIT`          // 魔法命中音效
+
+// 攻击方向
+[attack direction] [hit down]   // 向下攻击
+
+// 命中信息
+[hit info] [blow] [no blood] 30 1.2  // 爆炸类型，无血液，30ms持续，1.2倍大小
+
+// 伤害倍率设置
+[human damage rate] 90.0       // 对人类90%伤害（魔法对人类稍弱）
+[monster damage rate] 110.0    // 对怪物110%伤害（魔法对怪物较强）
+
+// 命中控制
+[max target hit number] 3      // 可命中3个目标
+[is hit number increasing] 1   // 增加连击数
+
+// 特殊属性
+[ignore super armor] 0         // 不无视霸体
+[ignore weight] 1              // 无视重量（魔法攻击特性）
+[ignore defense] 0             // 不无视防御
+
+// 暴击设置
+[critical hit] 15              // 15%暴击率
+
+// PVP平衡设置
+[pvp]
+    [damage bonus] -25         // PVP模式减少25%伤害
+    [human damage rate] 75.0   // PVP对人类75%伤害
+    [active status] [burn] 40 10 5000 30 10 1 2000  // 降低燃烧效果
+[/pvp]

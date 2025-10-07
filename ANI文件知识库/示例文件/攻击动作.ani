@@ -1,0 +1,123 @@
+//攻击动作示例
+//包含攻击判定框和音效的完整攻击动画
+
+[LOOP]
+0
+//攻击动作不循环播放
+
+[SHADOW]
+1
+//显示阴影
+
+[FRAME MAX]
+6
+//攻击动作共6帧
+
+[FRAME000]
+//起手准备帧
+[IMAGE]
+`character/knight/equipment/weapon/sword/kn_sword001.img`
+0
+[IMAGE POS]
+-100	-250
+[DELAY]
+80
+//起手较快
+[GRAPHIC EFFECT]
+`LINEARDODGE`
+[DAMAGE TYPE]
+`NORMAL`
+//普通状态，可被打断
+
+[FRAME001]
+//蓄力帧
+[IMAGE]
+`character/knight/equipment/weapon/sword/kn_sword001.img`
+1
+[IMAGE POS]
+-100	-250
+[DELAY]
+120
+[GRAPHIC EFFECT]
+`LINEARDODGE`
+[DAMAGE TYPE]
+`SUPERARMOR`
+//霸体状态，不可被打断
+[PLAY SOUND]
+`sound/effect/sword_charge.wav`
+//播放蓄力音效
+
+[FRAME002]
+//攻击前摇帧
+[IMAGE]
+`character/knight/equipment/weapon/sword/kn_sword001.img`
+2
+[IMAGE POS]
+-100	-250
+[DELAY]
+60
+[GRAPHIC EFFECT]
+`LINEARDODGE`
+[DAMAGE TYPE]
+`SUPERARMOR`
+
+[FRAME003]
+//攻击判定帧
+[IMAGE]
+`character/knight/equipment/weapon/sword/kn_sword001.img`
+3
+[IMAGE POS]
+-100	-250
+[DELAY]
+100
+[GRAPHIC EFFECT]
+`LINEARDODGE`
+[DAMAGE TYPE]
+`SUPERARMOR`
+[ATTACK BOX]
+-30	-120	-40
+80	-20	40
+//攻击判定框，覆盖剑的攻击范围
+[DAMAGE BOX]
+-25	-150	-25
+25	0	25
+//被击判定框，覆盖角色身体
+[PLAY SOUND]
+`sound/effect/sword_slash.wav`
+//播放攻击音效
+
+[FRAME004]
+//攻击后摇帧
+[IMAGE]
+`character/knight/equipment/weapon/sword/kn_sword001.img`
+4
+[IMAGE POS]
+-100	-250
+[DELAY]
+150
+[GRAPHIC EFFECT]
+`LINEARDODGE`
+[DAMAGE TYPE]
+`NORMAL`
+//恢复普通状态
+[DAMAGE BOX]
+-25	-150	-25
+25	0	25
+
+[FRAME005]
+//收招帧
+[IMAGE]
+`character/knight/equipment/weapon/sword/kn_sword001.img`
+5
+[IMAGE POS]
+-100	-250
+[DELAY]
+200
+//收招较慢，增加攻击间隔
+[GRAPHIC EFFECT]
+`LINEARDODGE`
+[DAMAGE TYPE]
+`NORMAL`
+[DAMAGE BOX]
+-25	-150	-25
+25	0	25

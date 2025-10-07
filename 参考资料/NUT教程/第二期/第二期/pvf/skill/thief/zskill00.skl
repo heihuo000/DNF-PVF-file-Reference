@@ -1,0 +1,90 @@
+#PVF_File
+
+[name]
+`教學技能`
+
+[name2]
+`Shuriken`
+
+[basic explain]
+`教學技能`
+
+[explain]
+`教學技能`
+
+[purchase cost]
+0	
+[/purchase cost]
+
+[executable states]
+8	0	14	
+[/executable states]
+
+[required level]
+1	
+[required level range]
+2	
+[type]
+`[active]`
+
+[skill class]
+1	
+[maximum level]
+70	
+[growtype maximum level]
+50	50	50	50	50	50	
+[skill fitness growtype]
+0	1	2	3	4	
+[/skill fitness growtype]
+
+[durability decrease rate]
+20	
+[weapon effect type]
+`[physical]`
+
+[icon]
+`Character/Thief/Effect/SkillIcon.img`
+0	`Character/Thief/Effect/SkillIcon.img`
+1	
+[command]
+{6=`(RIGHT)`}
+{8=`,`}
+{6=`(UP)`}
+{8=`,`}
+{6=`(SKILL)`}
+
+[/command]
+
+[command key explain]
+`操作指令 : →↑ + Z`
+
+[dungeon]
+
+[consume MP]
+1	1	
+[cool time]
+120	120	
+[static data]
+5	
+[/static data]
+
+[level info]
+1	100	200	300	400	500	600	700	800	900	1000	1100	1200	1300	1400	1500	1600	1700	1800	1900	2000	2100	2200	2300	2400	2500	2600	2700	2800	2900	3000	3100	3200	3300	3400	3500	3600	3700	3800	3900	4000	
+[/level info]
+
+[/dungeon]
+
+[death tower]
+
+[/death tower]
+
+[warroom]
+
+[/warroom]
+
+[level property]
+1	99	`動態數據 : <int>%%
+靜態數據 : <int>次`
+-1	0	1.0	0	0	1.0	
+[/level property]
+

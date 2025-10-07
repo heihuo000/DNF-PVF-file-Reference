@@ -1,0 +1,129 @@
+# 技能施法动作模板
+# 适用于法师类角色的技能施法
+# 包含吟唱、施法、特效创建等完整流程
+
+[MOTION]
+	[BASE ANI] `../Animation/cast_spell.ani`
+	
+	[SUB ANI]
+		`../equipment/weapon/staff_glow.ani` 0 100
+		`../effect/magic_circle.ani` 10 90
+	[/SUB ANI]
+	
+	[SUB ANI WITH XY]
+		`../effect/cast_aura.ani` 5 15 0 -20
+		`../effect/magic_spark.ani` 8 12 20 60
+	[/SUB ANI WITH XY]
+	
+	[SPEECH]
+		`cast_voice_01` 5 50
+		`cast_voice_02` 5 30
+	[/SPEECH]
+	
+	[SOUND]
+		`MAGIC_CHARGE` 3
+		`SPELL_CAST` 15
+		`MAGIC_RELEASE` 20
+	[/SOUND]
+[/MOTION]
+
+[HOLD POSITION]
+
+[DEFAULT ATTACKINFO] `../AttackInfo/magic_spell.atk`
+
+# 施法开始时的准备阶段
+[TRIGGER]
+	[LIMIT] 1
+	[ENABLE] [ON]
+	[FRAME] 0 0
+	
+	[WHICH] [ME]
+	
+	[CHECKUP]
+		[MP] [>=] 30 [%]
+	[/CHECKUP]
+	
+	[DO BEHAVIOR] [ME] 0
+[/TRIGGER]
+
+# 施法完成时创建魔法效果
+[TRIGGER]
+	[LIMIT] 1
+	[ENABLE] [ON]
+	[FRAME] 20 20
+	
+	[WHICH] [TARGET]
+	
+	[CHECKUP]
+		[DISTANCE] [<=] 500
+		[IS TARGET STATE] 0
+	[/CHECKUP]
+	
+	[DO BEHAVIOR] [ME] 1
+[/TRIGGER]
+
+# 施法被打断时的处理
+[TRIGGER]
+	[LIMIT] 0
+	[ENABLE] [ON]
+	[ON DAMAGE]
+	[FRAME] 5 18
+	
+	[WHICH] [ME]
+	
+	[CHECKUP]
+		[CHECK STUCK] 1
+	[/CHECKUP]
+	
+	[DO BEHAVIOR] [ME] 2
+[/TRIGGER]
+
+# MP不足时的处理
+[TRIGGER]
+	[LIMIT] 0
+	[ENABLE] [ON]
+	[CHECK TIME] 100
+	
+	[WHICH] [ME]
+	
+	[CHECKUP]
+		[MP] [<] 20 [%]
+	[/CHECKUP]
+	
+	[DO BEHAVIOR] [ME] 3
+[/TRIGGER]
+
+[BEHAVIOR]
+	# 施法准备阶段 - 创建魔法阵
+	[CREATE PASSIVEOBJECT]
+		[INDEX] 30010
+		[PARTICLE FILENAME] `../Particle/MagicCircle.ptl`
+		[LEVEL] 1
+		[POS] 0 0 0
+		[USE ANGLE] 0 0 0 0
+		[USE MY BASEPOS]
+		[USE NEUTRAL TEAM]
+		[WARNING MARK] 0 0 100 5
+	[/CREATE PASSIVEOBJECT]
+[/BEHAVIOR]
+
+[BEHAVIOR]
+	# 施法完成 - 创建攻击魔法
+	[CREATE PASSIVEOBJECT]
+		[INDEX] 30011
+		[PARTICLE FILENAME] `../Particle/FireBall.ptl`
+		[LEVEL] 1
+		[POS] 50 0 100
+		[USE ANGLE] 0 0 350 2
+		[USE TARGET TEAM]
+		[USE MY DIRECTION]
+	[/CREATE PASSIVEOBJECT]
+[/BEHAVIOR]
+
+[BEHAVIOR]
+	# 施法被打断 - 清理效果
+[/BEHAVIOR]
+
+[BEHAVIOR]
+	# MP不足处理 - 停止施法
+[/BEHAVIOR]
