@@ -133,30 +133,93 @@ obj.sq_AddSetStatePacket()     // 添加状态包
 
 ### 整体架构图
 
+```mermaid
+graph TB
+    subgraph "DNF游戏引擎"
+        subgraph "C++核心引擎"
+            A[渲染系统] 
+            B[物理系统]
+            C[网络系统]
+            subgraph "Squirrel虚拟机"
+                D[脚本加载器]
+                E[函数调用器]
+                F[内存管理器]
+            end
+        end
+        
+        subgraph "Squirrel脚本层"
+            G[loadstate.nut<br/>入口文件]
+            subgraph "职业脚本"
+                H[thief_header.nut]
+                I[thief_load_state.nut]
+                J[技能脚本文件]
+            end
+            subgraph "公共脚本"
+                K[common.nut]
+                L[dnf_enum_header.nut]
+            end
+            M[工具脚本]
+        end
+        
+        subgraph "游戏数据层"
+            N[PVF文件]
+            O[技能配置]
+            P[角色数据]
+        end
+    end
+    
+    %% 依赖关系
+    D --> G
+    G --> H
+    G --> K
+    G --> L
+    H --> I
+    I --> J
+    E --> J
+    J --> N
+    J --> O
+    J --> P
+    
+    %% 样式
+    classDef coreEngine fill:#e1f5fe
+    classDef scriptLayer fill:#f3e5f5
+    classDef dataLayer fill:#e8f5e8
+    
+    class A,B,C,D,E,F coreEngine
+    class G,H,I,J,K,L,M scriptLayer
+    class N,O,P dataLayer
 ```
-DNF游戏引擎
-├── C++核心引擎
-│   ├── 渲染系统
-│   ├── 物理系统
-│   ├── 网络系统
-│   └── Squirrel虚拟机
-│       ├── 脚本加载器
-│       ├── 函数调用器
-│       └── 内存管理器
-├── Squirrel脚本层
-│   ├── loadstate.nut (入口文件)
-│   ├── 职业脚本
-│   │   ├── thief_header.nut
-│   │   ├── thief_load_state.nut
-│   │   └── 技能脚本文件
-│   ├── 公共脚本
-│   │   ├── common.nut
-│   │   └── dnf_enum_header.nut
-│   └── 工具脚本
-└── 游戏数据层
-    ├── PVF文件
-    ├── 技能配置
-    └── 角色数据
+
+### 脚本依赖关系图
+
+```mermaid
+graph LR
+    subgraph "脚本加载顺序"
+        A[loadstate.nut] --> B[dnf_enum_header.nut]
+        A --> C[common.nut]
+        A --> D[职业_header.nut]
+        D --> E[职业_load_state.nut]
+        E --> F[职业_common.nut]
+        E --> G[技能脚本.nut]
+        G --> H[技能_appendage.nut]
+    end
+    
+    subgraph "依赖类型"
+        I[常量定义] -.-> B
+        J[公共函数] -.-> C
+        K[职业常量] -.-> D
+        L[状态注册] -.-> E
+        M[职业函数] -.-> F
+        N[技能逻辑] -.-> G
+        O[附加效果] -.-> H
+    end
+    
+    %% 样式
+    classDef loadOrder fill:#bbdefb
+    classDef depType fill:#c8e6c9
+    
+    class A,B,C,D,E,F,G,H loadOrder
+    class I,J,K,L,M,N,O depType
 ```
 
 ### 脚本文件层次结构
@@ -181,32 +244,63 @@ DNF游戏引擎
 
 ### 加载时机与顺序
 
-#### 1. 游戏启动时加载
-```
-游戏启动
-    ↓
-加载 loadstate.nut
-    ↓
-执行 sq_RunScript() 加载基础脚本
-    ↓
-执行各职业的 load_state.nut
-    ↓
-注册技能状态和脚本映射
-    ↓
-脚本系统就绪
+#### 1. 游戏启动时加载流程图
+
+```mermaid
+flowchart TD
+    A[游戏启动] --> B[初始化Squirrel虚拟机]
+    B --> C[加载 loadstate.nut]
+    C --> D[执行 sq_RunScript 加载基础脚本]
+    D --> E[加载 dnf_enum_header.nut]
+    D --> F[加载 common.nut]
+    E --> G[执行各职业的 load_state.nut]
+    F --> G
+    G --> H[注册技能状态和脚本映射]
+    H --> I[构建函数签名映射表]
+    I --> J[脚本系统就绪]
+    
+    %% 样式
+    classDef startProcess fill:#ffcdd2
+    classDef loadProcess fill:#c8e6c9
+    classDef readyProcess fill:#bbdefb
+    
+    class A,B startProcess
+    class C,D,E,F,G,H,I loadProcess
+    class J readyProcess
 ```
 
-#### 2. 运行时动态加载
-```
-技能触发
-    ↓
-检查状态映射表
-    ↓
-动态加载对应脚本（如果未加载）
-    ↓
-执行脚本函数
-    ↓
-脚本执行完毕（可选择卸载）
+#### 2. 运行时动态加载流程图
+
+```mermaid
+flowchart TD
+    A[技能触发/事件发生] --> B{检查函数签名映射}
+    B -->|找到匹配| C[直接调用函数]
+    B -->|未找到| D{检查状态映射表}
+    D -->|找到映射| E{脚本是否已加载?}
+    D -->|未找到映射| F[忽略事件]
+    E -->|已加载| G[调用对应脚本函数]
+    E -->|未加载| H[动态加载脚本文件]
+    H --> I[缓存脚本到内存]
+    I --> G
+    C --> J[执行脚本逻辑]
+    G --> J
+    J --> K{是否需要卸载?}
+    K -->|是| L[卸载脚本释放内存]
+    K -->|否| M[保持脚本在内存中]
+    L --> N[执行完毕]
+    M --> N
+    F --> N
+    
+    %% 样式
+    classDef triggerProcess fill:#fff3e0
+    classDef checkProcess fill:#e1f5fe
+    classDef executeProcess fill:#e8f5e8
+    classDef endProcess fill:#f3e5f5
+    
+    class A triggerProcess
+    class B,D,E,K checkProcess
+    class C,G,H,I,J executeProcess
+    class F,L,M,N endProcess
 ```
 
 ### 加载函数对比分析
@@ -267,23 +361,74 @@ sq_RunScript("sqr/loadstate.nut");
 
 DNF引擎采用独特的"双轨触发机制"来调用Squirrel脚本，这种设计兼顾了性能和灵活性。
 
-### 机制概述
+### 机制概述图
 
+```mermaid
+flowchart TD
+    A[事件发生] --> B{双轨触发机制}
+    
+    subgraph "第一轨道 - 函数签名驱动"
+        B --> C[扫描全局函数签名]
+        C --> D{函数名匹配?}
+        D -->|是| E[直接调用函数]
+        D -->|否| F[转入第二轨道]
+    end
+    
+    subgraph "第二轨道 - 状态注册驱动"
+        F --> G[检查状态映射表]
+        G --> H{找到状态映射?}
+        H -->|是| I[调用对应脚本]
+        H -->|否| J[忽略事件]
+    end
+    
+    E --> K[执行脚本逻辑]
+    I --> K
+    K --> L[脚本执行完毕]
+    J --> L
+    
+    %% 样式
+    classDef eventNode fill:#ffeb3b
+    classDef track1 fill:#4caf50
+    classDef track2 fill:#2196f3
+    classDef executeNode fill:#ff9800
+    classDef endNode fill:#9c27b0
+    
+    class A eventNode
+    class C,D,E,F track1
+    class G,H,I,J track2
+    class K executeNode
+    class L endNode
 ```
-事件发生
-    ↓
-┌─────────────────┬─────────────────┐
-│   第一轨道        │    第二轨道        │
-│ 函数签名驱动机制    │  状态注册驱动机制   │
-└─────────────────┴─────────────────┘
-    ↓                    ↓
-扫描全局函数签名        检查状态映射表
-    ↓                    ↓
-匹配则自动调用          找到则调用对应脚本
-    ↓                    ↓
-┌─────────────────────────────────────┐
-│           执行脚本逻辑                │
-└─────────────────────────────────────┘
+
+### 双轨机制性能对比图
+
+```mermaid
+graph LR
+    subgraph "性能对比"
+        A[函数签名驱动<br/>第一轨道] --> A1[O(1) 直接调用]
+        B[状态注册驱动<br/>第二轨道] --> B1[O(log n) 映射查找]
+    end
+    
+    subgraph "使用场景"
+        C[高频事件<br/>如攻击、移动] --> A
+        D[低频事件<br/>如状态变化] --> B
+    end
+    
+    subgraph "优势特点"
+        A1 --> E[性能最优]
+        B1 --> F[灵活性强]
+        E --> G[适合固定事件]
+        F --> H[适合动态事件]
+    end
+    
+    %% 样式
+    classDef performance fill:#c8e6c9
+    classDef scenario fill:#bbdefb
+    classDef advantage fill:#fff3e0
+    
+    class A,B,A1,B1 performance
+    class C,D scenario
+    class E,F,G,H advantage
 ```
 
 ### 双轨机制的优势
@@ -369,20 +514,102 @@ function onPlayerLeave(playerObj)                    // 玩家离开
 
 ### 函数签名扫描机制
 
-#### 1. 扫描时机
-```
-脚本加载完成
-    ↓
-引擎扫描全局函数表
-    ↓
-提取函数名并解析签名
-    ↓
-建立事件-函数映射表
-    ↓
-等待事件触发
+#### 1. 扫描时机流程图
+
+```mermaid
+sequenceDiagram
+    participant Engine as DNF引擎
+    participant VM as Squirrel虚拟机
+    participant Script as 脚本文件
+    participant Map as 映射表
+    
+    Engine->>VM: 初始化虚拟机
+    Engine->>Script: 加载脚本文件
+    Script->>VM: 注册全局函数
+    VM->>Engine: 脚本加载完成
+    Engine->>VM: 扫描全局函数表
+    VM-->>Engine: 返回函数列表
+    
+    loop 遍历每个函数
+        Engine->>Engine: 解析函数签名
+        alt 签名匹配成功
+            Engine->>Map: 注册事件处理器
+        else 签名不匹配
+            Engine->>Engine: 忽略该函数
+        end
+    end
+    
+    Engine->>Map: 映射表构建完成
+    Note over Engine,Map: 系统就绪，等待事件触发
 ```
 
-#### 2. 签名解析算法
+#### 2. 签名解析算法流程图
+
+```mermaid
+flowchart TD
+    A[输入函数名] --> B[按'_'分割字符串]
+    B --> C{分割结果 >= 2?}
+    C -->|否| D[返回false - 无效签名]
+    C -->|是| E[提取事件类型<br/>parts[0]]
+    E --> F[提取职业类型<br/>parts[last]]
+    F --> G{验证事件类型}
+    G -->|无效| D
+    G -->|有效| H{验证职业类型}
+    H -->|无效| D
+    H -->|有效| I[构建映射键值]
+    I --> J[注册到映射表]
+    J --> K[返回true - 成功注册]
+    
+    %% 样式
+    classDef inputNode fill:#e3f2fd
+    classDef processNode fill:#e8f5e8
+    classDef decisionNode fill:#fff3e0
+    classDef errorNode fill:#ffebee
+    classDef successNode fill:#e1f5fe
+    
+    class A inputNode
+    class B,E,F,I,J processNode
+    class C,G,H decisionNode
+    class D errorNode
+    class K successNode
+```
+
+#### 3. 事件-函数映射表结构图
+
+```mermaid
+erDiagram
+    EventMap {
+        string EventType
+        string ClassType
+        string FunctionName
+        pointer FunctionPtr
+        int Priority
+    }
+    
+    EventType ||--o{ EventMap : contains
+    ClassType ||--o{ EventMap : contains
+    
+    EventType {
+        string useSkill
+        string onAttack
+        string onDamage
+        string onStateChange
+        string onLevelUp
+    }
+    
+    ClassType {
+        string Swordman
+        string Fighter
+        string Gunner
+        string Mage
+        string Priest
+        string Thief
+        string ATGunner
+    }
+```
+
+#### 4. 签名解析算法代码
+
 ```cpp
 // 伪代码：引擎内部的签名解析逻辑
 bool ParseFunctionSignature(string functionName)
@@ -479,6 +706,65 @@ function onDamage(obj, attacker, damage, damageType)
 ### 工作原理
 
 状态注册驱动机制通过显式注册状态与脚本的映射关系，实现精确的状态控制和脚本调用。
+
+### 状态注册流程图
+
+```mermaid
+flowchart TD
+    A[游戏启动] --> B[加载职业脚本]
+    B --> C[执行load_state.nut]
+    C --> D[调用IRDSQRCharacter.pushState]
+    D --> E[注册状态映射]
+    E --> F{是否还有状态?}
+    F -->|是| D
+    F -->|否| G[构建状态映射表]
+    G --> H[系统就绪]
+    
+    subgraph "状态触发流程"
+        I[技能/事件触发] --> J[查找状态映射]
+        J --> K{找到映射?}
+        K -->|是| L[加载对应脚本]
+        K -->|否| M[忽略事件]
+        L --> N[调用生命周期函数]
+        N --> O[执行脚本逻辑]
+    end
+    
+    H --> I
+    
+    %% 样式
+    classDef initProcess fill:#e1f5fe
+    classDef registerProcess fill:#e8f5e8
+    classDef triggerProcess fill:#fff3e0
+    classDef executeProcess fill:#f3e5f5
+    
+    class A,B,C initProcess
+    class D,E,F,G,H registerProcess
+    class I,J,K,L triggerProcess
+    class M,N,O executeProcess
+```
+
+### 状态生命周期图
+
+```mermaid
+stateDiagram-v2
+    [*] --> 状态注册: pushState()
+    状态注册 --> 等待触发: 映射建立
+    等待触发 --> 状态开始: 事件触发
+    状态开始 --> onStart: 调用onStart_前缀()
+    onStart --> 状态运行: 初始化完成
+    状态运行 --> proc: 每帧调用proc_前缀()
+    proc --> 状态运行: 继续执行
+    状态运行 --> 动画结束: onEndCurrentAni_前缀()
+    状态运行 --> 时间事件: onTimeEvent_前缀()
+    状态运行 --> 攻击事件: onAttack_前缀()
+    状态运行 --> 受伤事件: onDamage_前缀()
+    动画结束 --> 状态结束: 条件满足
+    时间事件 --> 状态运行: 事件处理完成
+    攻击事件 --> 状态运行: 事件处理完成
+    受伤事件 --> 状态运行: 事件处理完成
+    状态结束 --> onEnd: 调用onEnd_前缀()
+    onEnd --> [*]: 状态清理完成
+```
 
 #### 1. 注册函数详解
 
@@ -716,186 +1002,240 @@ bool CallStateScript(int characterJob, int stateID, string functionName, params.
 
 ### 完整执行时序图
 
+```mermaid
+sequenceDiagram
+    participant User as 用户操作
+    participant Engine as DNF引擎
+    participant Dispatcher as 事件分发器
+    participant FuncSig as 函数签名匹配
+    participant StateMap as 状态映射查找
+    participant Script as Squirrel脚本
+    participant VM as 虚拟机环境
+    
+    User->>Engine: 游戏事件/用户输入
+    Engine->>Dispatcher: 事件检测
+    
+    par 双轨机制并行处理
+        Dispatcher->>FuncSig: 扫描全局函数签名
+        FuncSig->>FuncSig: 匹配函数名模式
+        alt 匹配成功
+            FuncSig->>Script: 直接调用函数
+        else 匹配失败
+            FuncSig->>StateMap: 转入第二轨道
+        end
+    and
+        Dispatcher->>StateMap: 查找状态映射表
+        StateMap->>StateMap: 检查状态注册
+        alt 找到映射
+            StateMap->>Script: 加载/调用脚本
+        else 未找到映射
+            StateMap->>Engine: 忽略事件
+        end
+    end
+    
+    Script->>VM: 进入脚本执行环境
+    
+    rect rgb(240, 248, 255)
+        Note over VM: 脚本执行环境
+        VM->>VM: 局部变量栈管理
+        VM->>VM: 全局变量表访问
+        VM->>VM: 函数调用栈维护
+        VM->>Engine: 引擎API接口调用
+    end
+    
+    VM->>Script: 执行脚本逻辑
+    Script->>Engine: 返回执行结果
+    Engine->>Engine: 引擎后处理
+    Engine->>User: 事件处理完成
 ```
-用户操作/游戏事件
-    ↓
-引擎事件检测
-    ↓
-┌─────────────────────────────────────┐
-│           事件分发器                │
-├─────────────────┬───────────────────┤
-│   函数签名匹配   │    状态映射查找    │
-│      ↓          │        ↓          │
-│  扫描全局函数    │   查找状态映射表   │
-│      ↓          │        ↓          │
-│  匹配成功？      │   找到映射？       │
-│      ↓          │        ↓          │
-│    调用函数      │   加载/调用脚本    │
-└─────────────────┴───────────────────┘
-    ↓
-脚本函数执行
-    ↓
-┌─────────────────────────────────────┐
-│           脚本执行环境              │
-│  ┌─────────────────────────────┐   │
-│  │        局部变量栈           │   │
-│  ├─────────────────────────────┤   │
-│  │        全局变量表           │   │
-│  ├─────────────────────────────┤   │
-│  │        函数调用栈           │   │
-│  ├─────────────────────────────┤   │
-│  │      引擎API接口            │   │
-│  └─────────────────────────────┘   │
-└─────────────────────────────────────┘
-    ↓
-返回执行结果
-    ↓
-引擎后处理
-    ↓
-事件处理完成
+
+### 脚本执行环境架构图
+
+```mermaid
+graph TB
+    subgraph "Squirrel虚拟机环境"
+        subgraph "内存管理"
+            A[局部变量栈]
+            B[全局变量表]
+            C[函数调用栈]
+            D[垃圾回收器]
+        end
+        
+        subgraph "执行引擎"
+            E[字节码解释器]
+            F[JIT编译器]
+            G[异常处理器]
+        end
+        
+        subgraph "API接口层"
+            H[引擎API绑定]
+            I[游戏对象接口]
+            J[系统函数库]
+        end
+    end
+    
+    subgraph "DNF引擎核心"
+        K[渲染系统]
+        L[物理系统]
+        M[音频系统]
+        N[网络系统]
+    end
+    
+    %% 连接关系
+    A --> E
+    B --> E
+    C --> E
+    E --> F
+    E --> G
+    H --> K
+    H --> L
+    H --> M
+    H --> N
+    I --> H
+    J --> H
+    
+    %% 样式
+    classDef memoryNode fill:#e3f2fd
+    classDef engineNode fill:#e8f5e8
+    classDef apiNode fill:#fff3e0
+    classDef coreNode fill:#fce4ec
+    
+    class A,B,C,D memoryNode
+    class E,F,G engineNode
+    class H,I,J apiNode
+    class K,L,M,N coreNode
 ```
 
 ### 技能释放完整流程
 
-#### 1. 输入检测阶段
-```
-玩家按键输入
-    ↓
-输入系统捕获
-    ↓
-检查当前状态是否允许技能释放
-    ↓
-调用 checkCommandEnable_技能名(obj)
-    ↓
-返回 true/false
-```
-
-#### 2. 技能检查阶段
-```
-输入验证通过
-    ↓
-调用 checkExecutableSkill_技能名(obj)
-    ↓
-检查技能可用性
-├── MP是否足够
-├── 冷却时间是否结束
-├── 前置条件是否满足
-└── 技能等级是否有效
-    ↓
-所有检查通过
-    ↓
-调用 obj.sq_AddSetStatePacket(STATE_技能, STATE_PRIORITY_USER, false)
-```
-
-#### 3. 状态设置阶段
-```
-状态包添加到队列
-    ↓
-引擎处理状态队列
-    ↓
-查找状态映射表
-    ↓
-找到对应脚本和函数前缀
-    ↓
-调用 onStart_技能名(obj, state, datas, isResetTimer)
-    ↓
-设置技能初始状态
-├── 停止移动
-├── 设置动画
-├── 设置攻击信息
-└── 初始化变量
-```
-
-#### 4. 技能执行阶段
-```
-技能状态激活
-    ↓
-每帧调用 proc_技能名(obj)
-    ↓
-处理持续逻辑
-├── 检查输入
-├── 更新位置
-├── 处理特效
-└── 检查结束条件
-    ↓
-时间事件触发
-    ↓
-调用 onTimeEvent_技能名(obj, timeEventIndex, timeEventCount)
-    ↓
-处理阶段性逻辑
-```
-
-#### 5. 攻击判定阶段
-```
-攻击框激活
-    ↓
-碰撞检测
-    ↓
-发现目标
-    ↓
-调用 onAttack_技能名(obj, damager, boundingBox, isStuck)
-    ↓
-处理攻击逻辑
-├── 计算伤害
-├── 应用效果
-├── 播放特效
-└── 记录数据
-```
-
-#### 6. 技能结束阶段
-```
-动画播放完毕
-    ↓
-调用 onEndCurrentAni_技能名(obj)
-    ↓
-状态转换
-    ↓
-调用 onEnd_技能名(obj)
-    ↓
-清理资源
-├── 重置变量
-├── 清除效果
-├── 恢复状态
-└── 释放内存
+```mermaid
+flowchart TD
+    A[玩家按键输入] --> B[输入系统捕获]
+    B --> C{当前状态允许技能释放?}
+    C -->|否| D[忽略输入]
+    C -->|是| E[调用checkCommandEnable_技能名]
+    E --> F{命令检查通过?}
+    F -->|否| D
+    F -->|是| G[调用checkExecutableSkill_技能名]
+    
+    G --> H{技能可用性检查}
+    H --> H1{MP足够?}
+    H1 -->|否| I[显示MP不足]
+    H1 -->|是| H2{冷却结束?}
+    H2 -->|否| J[显示冷却中]
+    H2 -->|是| H3{前置条件满足?}
+    H3 -->|否| K[显示条件不足]
+    H3 -->|是| H4{技能等级有效?}
+    H4 -->|否| L[显示等级不足]
+    H4 -->|是| M[添加状态包到队列]
+    
+    M --> N[引擎处理状态队列]
+    N --> O[查找状态映射表]
+    O --> P[找到脚本和函数前缀]
+    P --> Q[调用onStart_技能名]
+    
+    Q --> R[设置技能初始状态]
+    R --> R1[停止移动]
+    R --> R2[设置动画]
+    R --> R3[设置攻击信息]
+    R --> R4[初始化变量]
+    
+    R1 --> S[技能状态激活]
+    R2 --> S
+    R3 --> S
+    R4 --> S
+    
+    S --> T[每帧调用proc_技能名]
+    T --> U[处理持续逻辑]
+    U --> U1[检查输入]
+    U --> U2[更新位置]
+    U --> U3[处理特效]
+    U --> U4[检查结束条件]
+    
+    U4 --> V{是否触发时间事件?}
+    V -->|是| W[调用onTimeEvent_技能名]
+    V -->|否| X{是否有攻击判定?}
+    W --> X
+    
+    X -->|是| Y[攻击框激活]
+    X -->|否| Z{技能是否结束?}
+    Y --> Y1[碰撞检测]
+    Y1 --> Y2{发现目标?}
+    Y2 -->|是| Y3[调用onAttack_技能名]
+    Y2 -->|否| Z
+    Y3 --> Y4[处理攻击逻辑]
+    Y4 --> Z
+    
+    Z -->|否| T
+    Z -->|是| AA[动画播放完毕]
+    AA --> BB[调用onEndCurrentAni_技能名]
+    BB --> CC[状态转换]
+    CC --> DD[调用onEnd_技能名]
+    DD --> EE[清理资源]
+    EE --> FF[技能释放完成]
+    
+    %% 样式
+    classDef inputNode fill:#e3f2fd
+    classDef checkNode fill:#fff3e0
+    classDef executeNode fill:#e8f5e8
+    classDef endNode fill:#f3e5f5
+    classDef errorNode fill:#ffebee
+    
+    class A,B inputNode
+    class C,E,F,G,H,H1,H2,H3,H4,V,X,Y2,Z checkNode
+    class M,N,O,P,Q,R,R1,R2,R3,R4,S,T,U,U1,U2,U3,U4,W,Y,Y1,Y3,Y4,AA,BB,CC,DD,EE executeNode
+    class FF endNode
+    class D,I,J,K,L errorNode
 ```
 
 ### 错误处理流程
 
-#### 1. 脚本加载错误
-```
-脚本加载失败
-    ↓
-记录错误日志
-    ↓
-使用默认行为
-    ↓
-通知开发者
-```
-
-#### 2. 函数调用错误
-```
-函数不存在或参数错误
-    ↓
-捕获异常
-    ↓
-记录错误信息
-    ↓
-跳过当前调用
-    ↓
-继续后续处理
-```
-
-#### 3. 运行时错误
-```
-脚本执行异常
-    ↓
-保存错误上下文
-    ↓
-安全退出脚本
-    ↓
-恢复游戏状态
-    ↓
-显示错误提示
+```mermaid
+flowchart TD
+    subgraph "脚本加载错误处理"
+        A1[脚本加载失败] --> A2[记录错误日志]
+        A2 --> A3[使用默认行为]
+        A3 --> A4[通知开发者]
+        A4 --> A5[继续游戏运行]
+    end
+    
+    subgraph "函数调用错误处理"
+        B1[函数不存在或参数错误] --> B2[捕获异常]
+        B2 --> B3[记录错误信息]
+        B3 --> B4[跳过当前调用]
+        B4 --> B5[继续后续处理]
+    end
+    
+    subgraph "运行时错误处理"
+        C1[脚本执行异常] --> C2[保存错误上下文]
+        C2 --> C3[安全退出脚本]
+        C3 --> C4[恢复游戏状态]
+        C4 --> C5[显示错误提示]
+        C5 --> C6[记录崩溃报告]
+    end
+    
+    subgraph "错误恢复策略"
+        D1[检测错误类型] --> D2{错误严重程度}
+        D2 -->|轻微| D3[忽略并继续]
+        D2 -->|中等| D4[回退到安全状态]
+        D2 -->|严重| D5[重启脚本系统]
+        D2 -->|致命| D6[游戏安全退出]
+    end
+    
+    A1 --> D1
+    B1 --> D1
+    C1 --> D1
+    
+    %% 样式
+    classDef errorNode fill:#ffebee
+    classDef processNode fill:#e8f5e8
+    classDef recoveryNode fill:#e3f2fd
+    classDef severityNode fill:#fff3e0
+    
+    class A1,B1,C1 errorNode
+    class A2,A3,A4,A5,B2,B3,B4,B5,C2,C3,C4,C5,C6 processNode
+    class D1,D3,D4,D5,D6 recoveryNode
+    class D2 severityNode
 ```
 
 ---
@@ -903,6 +1243,51 @@ bool CallStateScript(int characterJob, int stateID, string functionName, params.
 ## 性能优化策略
 
 ### 脚本加载优化
+
+```mermaid
+graph TD
+    subgraph "预加载策略架构"
+        A[游戏启动] --> B[检测可用内存]
+        B --> C{内存充足?}
+        C -->|是| D[全量预加载]
+        C -->|否| E[按需预加载]
+        
+        D --> F[加载核心脚本]
+        D --> G[加载职业脚本]
+        D --> H[加载通用工具]
+        
+        E --> I[加载必需脚本]
+        E --> J[延迟加载其他]
+        
+        F --> K[脚本缓存池]
+        G --> K
+        H --> K
+        I --> K
+        J --> K
+        
+        K --> L[运行时调用]
+    end
+    
+    subgraph "缓存管理策略"
+        M[LRU缓存算法] --> N[热点脚本识别]
+        N --> O[优先级排序]
+        O --> P[内存回收策略]
+        P --> Q[缓存更新机制]
+    end
+    
+    L --> M
+    
+    %% 样式
+    classDef startNode fill:#e8f5e8
+    classDef decisionNode fill:#fff3e0
+    classDef processNode fill:#e3f2fd
+    classDef cacheNode fill:#f3e5f5
+    
+    class A startNode
+    class C decisionNode
+    class B,D,E,F,G,H,I,J,L processNode
+    class K,M,N,O,P,Q cacheNode
+```
 
 #### 1. 预加载策略
 ```squirrel
@@ -1147,6 +1532,65 @@ function FastLoop(obj)
 
 ### 调试工具和方法
 
+```mermaid
+graph TD
+    subgraph "调试工具架构"
+        A[调试请求] --> B{调试类型}
+        B -->|日志调试| C[日志输出系统]
+        B -->|断点调试| D[条件断点系统]
+        B -->|性能调试| E[性能监控系统]
+        B -->|错误调试| F[错误追踪系统]
+        
+        C --> G[控制台输出]
+        C --> H[文件日志]
+        C --> I[网络日志]
+        
+        D --> J[条件检查]
+        D --> K[状态快照]
+        D --> L[调用栈追踪]
+        
+        E --> M[执行时间统计]
+        E --> N[内存使用监控]
+        E --> O[函数调用频率]
+        
+        F --> P[异常捕获]
+        F --> Q[错误上下文]
+        F --> R[恢复策略]
+    end
+    
+    subgraph "调试数据流"
+        S[原始调试数据] --> T[数据过滤]
+        T --> U[格式化处理]
+        U --> V[输出路由]
+        V --> W[存储/显示]
+    end
+    
+    G --> S
+    H --> S
+    I --> S
+    J --> S
+    K --> S
+    L --> S
+    M --> S
+    N --> S
+    O --> S
+    P --> S
+    Q --> S
+    R --> S
+    
+    %% 样式
+    classDef debugNode fill:#e8f5e8
+    classDef toolNode fill:#e3f2fd
+    classDef outputNode fill:#fff3e0
+    classDef dataNode fill:#f3e5f5
+    
+    class A debugNode
+    class B debugNode
+    class C,D,E,F toolNode
+    class G,H,I,J,K,L,M,N,O,P,Q,R outputNode
+    class S,T,U,V,W dataNode
+```
+
 #### 1. 日志输出系统
 ```squirrel
 // 自定义日志函数
@@ -1242,6 +1686,74 @@ function onSetState_ComplexSkill(obj, state, datas, isResetTimer)
 ```
 
 ### 常见错误类型和解决方案
+
+```mermaid
+graph TD
+    subgraph "常见错误分类"
+        A[脚本错误] --> B[空指针错误]
+        A --> C[函数签名错误]
+        A --> D[状态注册错误]
+        A --> E[变量作用域错误]
+        A --> F[资源泄漏错误]
+        A --> G[性能问题]
+    end
+    
+    subgraph "错误检测机制"
+        H[静态检查] --> I[语法验证]
+        H --> J[类型检查]
+        H --> K[依赖分析]
+        
+        L[运行时检查] --> M[空指针检测]
+        L --> N[边界检查]
+        L --> O[状态验证]
+        
+        P[性能监控] --> Q[执行时间]
+        P --> R[内存使用]
+        P --> S[调用频率]
+    end
+    
+    subgraph "错误处理策略"
+        T[预防策略] --> U[防御性编程]
+        T --> V[参数验证]
+        T --> W[资源管理]
+        
+        X[恢复策略] --> Y[优雅降级]
+        X --> Z[状态回滚]
+        X --> AA[重试机制]
+        
+        BB[监控策略] --> CC[日志记录]
+        BB --> DD[性能统计]
+        BB --> EE[错误报告]
+    end
+    
+    B --> M
+    C --> I
+    D --> O
+    E --> J
+    F --> R
+    G --> Q
+    
+    M --> U
+    I --> V
+    O --> W
+    J --> Y
+    R --> Z
+    Q --> AA
+    
+    U --> CC
+    V --> DD
+    W --> EE
+    
+    %% 样式
+    classDef errorType fill:#ffebee
+    classDef detection fill:#e8f5e8
+    classDef strategy fill:#e3f2fd
+    classDef connection fill:#fff3e0
+    
+    class A,B,C,D,E,F,G errorType
+    class H,I,J,K,L,M,N,O,P,Q,R,S detection
+    class T,U,V,W,X,Y,Z,AA,BB,CC,DD,EE strategy
+```
 
 #### 1. 空指针错误
 ```squirrel
@@ -1678,6 +2190,81 @@ function PlayEffectWithFallback(effectPath, position, fallbackEffect = null)
 
 ### 代码复用和模块化
 
+```mermaid
+graph TD
+    subgraph "模块化架构"
+        A[核心模块] --> B[基础工具模块]
+        A --> C[角色管理模块]
+        A --> D[技能系统模块]
+        A --> E[特效系统模块]
+        A --> F[UI交互模块]
+        
+        B --> G[数学计算]
+        B --> H[字符串处理]
+        B --> I[数据结构]
+        B --> J[时间管理]
+        
+        C --> K[角色属性]
+        C --> L[状态管理]
+        C --> M[动画控制]
+        
+        D --> N[技能逻辑]
+        D --> O[伤害计算]
+        D --> P[冷却管理]
+        
+        E --> Q[粒子效果]
+        E --> R[音效播放]
+        E --> S[屏幕震动]
+        
+        F --> T[按键响应]
+        F --> U[界面更新]
+        F --> V[消息提示]
+    end
+    
+    subgraph "依赖关系"
+        W[高级模块] --> X[中级模块]
+        X --> Y[基础模块]
+        Y --> Z[核心库]
+        
+        AA[技能脚本] --> BB[角色模块]
+        AA --> CC[特效模块]
+        BB --> DD[基础工具]
+        CC --> DD
+    end
+    
+    subgraph "复用策略"
+        EE[接口标准化] --> FF[统一API]
+        EE --> GG[参数规范]
+        EE --> HH[返回值约定]
+        
+        II[组件化设计] --> JJ[功能封装]
+        II --> KK[松耦合]
+        II --> LL[高内聚]
+        
+        MM[版本管理] --> NN[向后兼容]
+        MM --> OO[渐进升级]
+        MM --> PP[废弃策略]
+    end
+    
+    D --> W
+    E --> W
+    F --> W
+    B --> Y
+    C --> X
+    
+    %% 样式
+    classDef coreModule fill:#e8f5e8
+    classDef subModule fill:#e3f2fd
+    classDef dependency fill:#fff3e0
+    classDef strategy fill:#f3e5f5
+    
+    class A coreModule
+    class B,C,D,E,F subModule
+    class G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V subModule
+    class W,X,Y,Z,AA,BB,CC,DD dependency
+    class EE,FF,GG,HH,II,JJ,KK,LL,MM,NN,OO,PP strategy
+```
+
 #### 1. 公共函数库
 ```squirrel
 // character_common.nut - 角色公共函数
@@ -1751,4 +2338,118 @@ class SkillBase
         this.OnStart(obj, state, datas, isResetTimer);
     }
     
-    function Update(obj
+    function Update(obj)
+    {
+        if (!this.isActive) return;
+        this.OnUpdate(obj);
+    }
+    
+    function End(obj)
+    {
+        this.isActive = false;
+        this.OnEnd(obj);
+    }
+}
+```
+
+---
+
+## 总结
+
+### DNF引擎Squirrel脚本调用机制全景图
+
+```mermaid
+graph TB
+    subgraph "DNF引擎架构层次"
+        A[C++核心引擎] --> B[Squirrel虚拟机]
+        B --> C[脚本执行环境]
+        C --> D[游戏逻辑脚本]
+    end
+    
+    subgraph "脚本加载机制"
+        E[游戏启动] --> F[loadstate.nut]
+        F --> G[职业脚本加载]
+        G --> H[技能脚本注册]
+        H --> I[运行时动态加载]
+    end
+    
+    subgraph "双轨触发机制"
+        J[事件触发] --> K{触发类型}
+        K -->|函数签名驱动| L[签名扫描匹配]
+        K -->|状态注册驱动| M[状态映射查找]
+        L --> N[直接函数调用]
+        M --> O[状态生命周期管理]
+    end
+    
+    subgraph "脚本执行流程"
+        P[输入检测] --> Q[技能检查]
+        Q --> R[状态设置]
+        R --> S[脚本执行]
+        S --> T[攻击判定]
+        T --> U[技能结束]
+    end
+    
+    subgraph "性能优化体系"
+        V[预加载策略] --> W[缓存管理]
+        W --> X[内存优化]
+        X --> Y[执行效率优化]
+    end
+    
+    subgraph "调试与错误处理"
+        Z[调试工具] --> AA[错误检测]
+        AA --> BB[错误处理]
+        BB --> CC[性能监控]
+    end
+    
+    subgraph "模块化设计"
+        DD[核心模块] --> EE[功能模块]
+        EE --> FF[工具模块]
+        FF --> GG[复用策略]
+    end
+    
+    %% 连接关系
+    D --> J
+    I --> V
+    N --> P
+    O --> P
+    U --> Z
+    Y --> DD
+    
+    %% 样式定义
+    classDef engineLayer fill:#e8f5e8
+    classDef loadingMech fill:#e3f2fd
+    classDef triggerMech fill:#fff3e0
+    classDef execFlow fill:#f3e5f5
+    classDef optimization fill:#fce4ec
+    classDef debugging fill:#e0f2f1
+    classDef modular fill:#f1f8e9
+    
+    class A,B,C,D engineLayer
+    class E,F,G,H,I loadingMech
+    class J,K,L,M,N,O triggerMech
+    class P,Q,R,S,T,U execFlow
+    class V,W,X,Y optimization
+    class Z,AA,BB,CC debugging
+    class DD,EE,FF,GG modular
+```
+
+### 关键技术要点总结
+
+1. **架构设计**：C++引擎 + Squirrel虚拟机的双层架构
+2. **加载机制**：启动时预加载 + 运行时动态加载的混合策略
+3. **触发机制**：函数签名驱动 + 状态注册驱动的双轨并行
+4. **执行流程**：从输入检测到技能结束的完整生命周期管理
+5. **性能优化**：多层次缓存 + 内存管理 + 执行效率优化
+6. **调试支持**：完整的调试工具链和错误处理机制
+7. **模块化**：高内聚低耦合的组件化设计
+
+### 最佳实践建议
+
+1. **遵循命名规范**：严格按照函数签名规范命名
+2. **防御性编程**：充分的参数验证和错误处理
+3. **性能意识**：合理使用缓存和避免不必要的计算
+4. **模块化思维**：将复杂逻辑拆分为可复用的模块
+5. **调试友好**：添加充分的日志和调试信息
+6. **版本兼容**：考虑向后兼容性和渐进升级
+
+通过深入理解这些机制和最佳实践，开发者可以更高效地开发DNF技能脚本，创造出更丰富的游戏体验。
