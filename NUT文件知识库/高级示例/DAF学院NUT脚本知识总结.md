@@ -1731,3 +1731,972 @@ function optimizedPathfinding(startPos, endPos, obstacles)
 {
     // 简单的直线路径检查
     if (isDirectPathClear(startPos, endPos, obstacles)) {
+        return [startPos, endPos];
+    }
+    
+    // 使用简化的A*算法
+    return findPathAStar(startPos, endPos, obstacles);
+}
+```
+
+---
+
+## 调试与测试
+
+### 调试工具
+
+#### 1. 日志系统
+```squirrel
+// 日志级别枚举
+enum LogLevel
+{
+    DEBUG = 0,
+    INFO = 1,
+    WARNING = 2,
+    ERROR = 3,
+    CRITICAL = 4
+}
+
+// 全局日志配置
+local g_logConfig = {
+    level = LogLevel.INFO,
+    enableFileOutput = true,
+    enableConsoleOutput = true,
+    maxLogFileSize = 1024 * 1024,  // 1MB
+    logFilePath = "logs/nut_debug.log"
+};
+
+// 高级日志函数
+function AdvancedLog(level, category, message, obj = null)
+{
+    if (level < g_logConfig.level) return;
+    
+    local timestamp = GetCurrentTimeString();
+    local levelStr = ["DEBUG", "INFO", "WARN", "ERROR", "CRITICAL"][level];
+    
+    local logMessage = "[" + timestamp + "] [" + levelStr + "] [" + category + "] " + message;
+    
+    // 添加对象信息
+    if (obj) {
+        local objInfo = " (Obj: " + obj.sq_GetObjectIndex() + 
+                       ", State: " + obj.sq_GetState() + 
+                       ", Pos: " + obj.sq_GetPos().x + "," + obj.sq_GetPos().y + ")";
+        logMessage += objInfo;
+    }
+    
+    // 输出到控制台
+    if (g_logConfig.enableConsoleOutput) {
+        print(logMessage);
+    }
+    
+    // 输出到文件
+    if (g_logConfig.enableFileOutput) {
+        writeToLogFile(logMessage);
+    }
+}
+
+// 专用调试宏
+function DebugSkill(skillName, message, obj = null)
+{
+    AdvancedLog(LogLevel.DEBUG, "SKILL_" + skillName, message, obj);
+}
+
+function InfoSkill(skillName, message, obj = null)
+{
+    AdvancedLog(LogLevel.INFO, "SKILL_" + skillName, message, obj);
+}
+
+function ErrorSkill(skillName, message, obj = null)
+{
+    AdvancedLog(LogLevel.ERROR, "SKILL_" + skillName, message, obj);
+}
+```
+
+#### 2. 断点调试
+```squirrel
+// 条件断点系统
+local g_breakpoints = {};
+
+function setBreakpoint(name, condition = null)
+{
+    g_breakpoints[name] <- {
+        condition = condition,
+        hitCount = 0,
+        enabled = true
+    };
+}
+
+function checkBreakpoint(name, obj = null)
+{
+    if (!(name in g_breakpoints)) return false;
+    
+    local bp = g_breakpoints[name];
+    if (!bp.enabled) return false;
+    
+    bp.hitCount++;
+    
+    // 检查条件
+    if (bp.condition && !bp.condition(obj)) {
+        return false;
+    }
+    
+    // 触发断点
+    AdvancedLog(LogLevel.CRITICAL, "BREAKPOINT", 
+                "Breakpoint '" + name + "' hit (count: " + bp.hitCount + ")", obj);
+    
+    // 显示调试信息
+    if (obj) {
+        showDetailedDebugInfo(obj);
+    }
+    
+    return true;
+}
+
+function showDetailedDebugInfo(obj)
+{
+    AdvancedLog(LogLevel.DEBUG, "DEBUG_INFO", "=== Detailed Debug Info ===");
+    AdvancedLog(LogLevel.DEBUG, "DEBUG_INFO", "Object Index: " + obj.sq_GetObjectIndex());
+    AdvancedLog(LogLevel.DEBUG, "DEBUG_INFO", "Current State: " + obj.sq_GetState());
+    AdvancedLog(LogLevel.DEBUG, "DEBUG_INFO", "Position: " + obj.sq_GetPos().x + ", " + obj.sq_GetPos().y);
+    AdvancedLog(LogLevel.DEBUG, "DEBUG_INFO", "HP: " + obj.sq_GetHP() + "/" + obj.sq_GetMaxHP());
+    AdvancedLog(LogLevel.DEBUG, "DEBUG_INFO", "MP: " + obj.sq_GetMp() + "/" + obj.sq_GetMaxMp());
+    AdvancedLog(LogLevel.DEBUG, "DEBUG_INFO", "Direction: " + obj.sq_GetDirection());
+    AdvancedLog(LogLevel.DEBUG, "DEBUG_INFO", "Is Moving: " + obj.sq_IsMoving());
+    AdvancedLog(LogLevel.DEBUG, "DEBUG_INFO", "Current Animation: " + obj.sq_GetCurrentAnimation());
+    
+    // 显示静态变量
+    for (local i = 0; i < 10; i++) {
+        local intVal = obj.sq_GetStaticInt(i);
+        local floatVal = obj.sq_GetStaticFloat(i);
+        AdvancedLog(LogLevel.DEBUG, "DEBUG_INFO", "Static Int[" + i + "]: " + intVal);
+        AdvancedLog(LogLevel.DEBUG, "DEBUG_INFO", "Static Float[" + i + "]: " + floatVal);
+    }
+    
+    AdvancedLog(LogLevel.DEBUG, "DEBUG_INFO", "=== End Debug Info ===");
+}
+```
+
+### 单元测试
+
+#### 1. 测试框架
+```squirrel
+// 简单的单元测试框架
+class TestSuite
+{
+    constructor(name)
+    {
+        this.name = name;
+        this.tests = [];
+        this.results = {
+            passed = 0,
+            failed = 0,
+            total = 0
+        };
+    }
+    
+    function addTest(testName, testFunc)
+    {
+        this.tests.append({
+            name = testName,
+            func = testFunc
+        });
+    }
+    
+    function run()
+    {
+        AdvancedLog(LogLevel.INFO, "TEST", "Running test suite: " + this.name);
+        
+        foreach (test in this.tests) {
+            this.runSingleTest(test);
+        }
+        
+        this.printResults();
+    }
+    
+    function runSingleTest(test)
+    {
+        this.results.total++;
+        
+        try {
+            local result = test.func();
+            if (result) {
+                this.results.passed++;
+                AdvancedLog(LogLevel.INFO, "TEST", "PASS: " + test.name);
+            } else {
+                this.results.failed++;
+                AdvancedLog(LogLevel.ERROR, "TEST", "FAIL: " + test.name);
+            }
+        } catch (e) {
+            this.results.failed++;
+            AdvancedLog(LogLevel.ERROR, "TEST", "ERROR: " + test.name + " - " + e);
+        }
+    }
+    
+    function printResults()
+    {
+        AdvancedLog(LogLevel.INFO, "TEST", "=== Test Results for " + this.name + " ===");
+        AdvancedLog(LogLevel.INFO, "TEST", "Total: " + this.results.total);
+        AdvancedLog(LogLevel.INFO, "TEST", "Passed: " + this.results.passed);
+        AdvancedLog(LogLevel.INFO, "TEST", "Failed: " + this.results.failed);
+        AdvancedLog(LogLevel.INFO, "TEST", "Success Rate: " + 
+                   (this.results.passed * 100.0 / this.results.total) + "%");
+    }
+}
+
+// 断言函数
+function assertEqual(actual, expected, message = "")
+{
+    if (actual == expected) {
+        return true;
+    } else {
+        AdvancedLog(LogLevel.ERROR, "ASSERT", "assertEqual failed: " + message + 
+                   " (expected: " + expected + ", actual: " + actual + ")");
+        return false;
+    }
+}
+
+function assertTrue(condition, message = "")
+{
+    if (condition) {
+        return true;
+    } else {
+        AdvancedLog(LogLevel.ERROR, "ASSERT", "assertTrue failed: " + message);
+        return false;
+    }
+}
+
+function assertNotNull(value, message = "")
+{
+    if (value != null) {
+        return true;
+    } else {
+        AdvancedLog(LogLevel.ERROR, "ASSERT", "assertNotNull failed: " + message);
+        return false;
+    }
+}
+```
+
+#### 2. 技能测试用例
+```squirrel
+// 创建技能测试套件
+function createSkillTestSuite()
+{
+    local testSuite = TestSuite("SkillSystem");
+    
+    // 测试伤害计算
+    testSuite.addTest("DamageCalculation", function() {
+        local mockAttacker = createMockCharacter(1000, 500, 100);  // 攻击力, 力量, 武器攻击
+        local mockTarget = createMockCharacter(0, 0, 0, 200);      // 防御力
+        
+        local damage = calculatePhysicalDamage(mockAttacker, mockTarget, 1.0);
+        
+        return assertTrue(damage > 0, "Damage should be positive") &&
+               assertTrue(damage < 2000, "Damage should be reasonable");
+    });
+    
+    // 测试技能冷却
+    testSuite.addTest("SkillCooldown", function() {
+        local mockObj = createMockCharacter();
+        
+        // 第一次使用技能应该成功
+        local firstUse = isSkillReady(mockObj, "TestSkill", 5000);
+        
+        // 记录使用时间
+        recordSkillUse(mockObj, "TestSkill");
+        
+        // 立即再次检查应该失败
+        local secondUse = isSkillReady(mockObj, "TestSkill", 5000);
+        
+        return assertTrue(firstUse, "First skill use should be ready") &&
+               assertTrue(!secondUse, "Second skill use should be on cooldown");
+    });
+    
+    // 测试MP消耗
+    testSuite.addTest("MPConsumption", function() {
+        local mockObj = createMockCharacter();
+        mockObj.mp = 100;
+        
+        local initialMP = mockObj.mp;
+        local mpCost = 50;
+        
+        // 模拟MP消耗
+        mockObj.mp -= mpCost;
+        
+        return assertEqual(mockObj.mp, initialMP - mpCost, "MP should be reduced correctly");
+    });
+    
+    return testSuite;
+}
+
+// 创建模拟角色对象
+function createMockCharacter(attack = 1000, str = 500, weaponAttack = 100, defense = 200)
+{
+    return {
+        attack = attack,
+        str = str,
+        weaponAttack = weaponAttack,
+        defense = defense,
+        hp = 1000,
+        maxHp = 1000,
+        mp = 500,
+        maxMp = 500,
+        position = { x = 0, y = 0, z = 0 },
+        state = STATE_STAND,
+        direction = 1,
+        
+        // 模拟引擎函数
+        sq_GetPhysicalAttack = function() { return this.attack; },
+        sq_GetSTR = function() { return this.str; },
+        sq_GetWeaponPhysicalAttack = function() { return this.weaponAttack; },
+        sq_GetPhysicalDefense = function() { return this.defense; },
+        sq_GetHP = function() { return this.hp; },
+        sq_GetMaxHP = function() { return this.maxHp; },
+        sq_GetMp = function() { return this.mp; },
+        sq_GetMaxMp = function() { return this.maxMp; },
+        sq_GetPos = function() { return this.position; },
+        sq_GetState = function() { return this.state; },
+        sq_GetDirection = function() { return this.direction; }
+    };
+}
+```
+
+---
+
+## 常见问题解决
+
+### 性能问题
+
+#### 1. 内存泄漏
+```squirrel
+// 内存泄漏检测和预防
+class MemoryTracker
+{
+    constructor()
+    {
+        this.allocatedObjects = {};
+        this.allocationCount = 0;
+    }
+    
+    function trackAllocation(objectName, objectRef)
+    {
+        local id = this.allocationCount++;
+        this.allocatedObjects[id] <- {
+            name = objectName,
+            ref = objectRef,
+            timestamp = GetCurrentTime()
+        };
+        return id;
+    }
+    
+    function trackDeallocation(id)
+    {
+        if (id in this.allocatedObjects) {
+            delete this.allocatedObjects[id];
+        }
+    }
+    
+    function checkForLeaks()
+    {
+        local currentTime = GetCurrentTime();
+        local leakThreshold = 60000;  // 1分钟
+        
+        foreach (id, obj in this.allocatedObjects) {
+            if (currentTime - obj.timestamp > leakThreshold) {
+                AdvancedLog(LogLevel.WARNING, "MEMORY", 
+                           "Potential memory leak detected: " + obj.name + 
+                           " (age: " + (currentTime - obj.timestamp) + "ms)");
+            }
+        }
+    }
+    
+    function getStats()
+    {
+        return {
+            totalAllocated = this.allocatedObjects.len(),
+            totalCreated = this.allocationCount
+        };
+    }
+}
+
+// 全局内存跟踪器
+local g_memoryTracker = MemoryTracker();
+
+// 安全的对象创建和销毁
+function createTrackedObject(name, createFunc)
+{
+    local obj = createFunc();
+    local id = g_memoryTracker.trackAllocation(name, obj);
+    obj._trackingId <- id;
+    return obj;
+}
+
+function destroyTrackedObject(obj)
+{
+    if ("_trackingId" in obj) {
+        g_memoryTracker.trackDeallocation(obj._trackingId);
+    }
+    // 执行实际的清理逻辑
+    cleanupObject(obj);
+}
+```
+
+#### 2. 性能瓶颈识别
+```squirrel
+// 性能热点分析
+class PerformanceHotspotAnalyzer
+{
+    constructor()
+    {
+        this.functionStats = {};
+        this.callStack = [];
+    }
+    
+    function enterFunction(functionName)
+    {
+        local entry = {
+            name = functionName,
+            startTime = GetCurrentTimeMs(),
+            childTime = 0
+        };
+        
+        this.callStack.append(entry);
+        
+        if (!(functionName in this.functionStats)) {
+            this.functionStats[functionName] <- {
+                totalTime = 0,
+                callCount = 0,
+                maxTime = 0,
+                minTime = 999999
+            };
+        }
+    }
+    
+    function exitFunction(functionName)
+    {
+        if (this.callStack.len() == 0) return;
+        
+        local entry = this.callStack.pop();
+        if (entry.name != functionName) {
+            AdvancedLog(LogLevel.ERROR, "PERF", "Function call stack mismatch");
+            return;
+        }
+        
+        local duration = GetCurrentTimeMs() - entry.startTime;
+        local selfTime = duration - entry.childTime;
+        
+        // 更新统计信息
+        local stats = this.functionStats[functionName];
+        stats.totalTime += selfTime;
+        stats.callCount++;
+        stats.maxTime = max(stats.maxTime, selfTime);
+        stats.minTime = min(stats.minTime, selfTime);
+        
+        // 更新父函数的子函数时间
+        if (this.callStack.len() > 0) {
+            this.callStack[this.callStack.len() - 1].childTime += duration;
+        }
+    }
+    
+    function getHotspots(topN = 10)
+    {
+        local hotspots = [];
+        
+        foreach (name, stats in this.functionStats) {
+            hotspots.append({
+                name = name,
+                totalTime = stats.totalTime,
+                avgTime = stats.totalTime / stats.callCount,
+                callCount = stats.callCount,
+                maxTime = stats.maxTime,
+                minTime = stats.minTime
+            });
+        }
+        
+        // 按总时间排序
+        hotspots.sort(function(a, b) {
+            return b.totalTime <=> a.totalTime;
+        });
+        
+        return hotspots.slice(0, topN);
+    }
+    
+    function printReport()
+    {
+        local hotspots = this.getHotspots();
+        
+        AdvancedLog(LogLevel.INFO, "PERF", "=== Performance Hotspots ===");
+        foreach (hotspot in hotspots) {
+            AdvancedLog(LogLevel.INFO, "PERF", 
+                       hotspot.name + ": " + hotspot.totalTime + "ms total, " +
+                       hotspot.avgTime + "ms avg, " + hotspot.callCount + " calls");
+        }
+    }
+}
+
+// 性能分析装饰器
+function profileFunction(func, name)
+{
+    return function(...) {
+        g_performanceAnalyzer.enterFunction(name);
+        local result = func.acall(this, vargv);
+        g_performanceAnalyzer.exitFunction(name);
+        return result;
+    };
+}
+```
+
+### 脚本错误
+
+#### 1. 常见错误类型
+```squirrel
+// 错误处理和恢复
+class ErrorHandler
+{
+    constructor()
+    {
+        this.errorCounts = {};
+        this.errorThreshold = 10;
+        this.recoveryStrategies = {};
+    }
+    
+    function handleError(errorType, errorMessage, context = null)
+    {
+        // 记录错误
+        if (!(errorType in this.errorCounts)) {
+            this.errorCounts[errorType] <- 0;
+        }
+        this.errorCounts[errorType]++;
+        
+        AdvancedLog(LogLevel.ERROR, "ERROR_HANDLER", 
+                   "Error [" + errorType + "]: " + errorMessage);
+        
+        // 检查是否超过阈值
+        if (this.errorCounts[errorType] > this.errorThreshold) {
+            AdvancedLog(LogLevel.CRITICAL, "ERROR_HANDLER", 
+                       "Error threshold exceeded for: " + errorType);
+            this.executeRecoveryStrategy(errorType, context);
+        }
+    }
+    
+    function registerRecoveryStrategy(errorType, strategy)
+    {
+        this.recoveryStrategies[errorType] <- strategy;
+    }
+    
+    function executeRecoveryStrategy(errorType, context)
+    {
+        if (errorType in this.recoveryStrategies) {
+            try {
+                this.recoveryStrategies[errorType](context);
+                AdvancedLog(LogLevel.INFO, "ERROR_HANDLER", 
+                           "Recovery strategy executed for: " + errorType);
+            } catch (e) {
+                AdvancedLog(LogLevel.CRITICAL, "ERROR_HANDLER", 
+                           "Recovery strategy failed: " + e);
+            }
+        }
+    }
+}
+
+// 全局错误处理器
+local g_errorHandler = ErrorHandler();
+
+// 注册恢复策略
+g_errorHandler.registerRecoveryStrategy("NULL_OBJECT", function(context) {
+    // 空对象错误的恢复策略
+    AdvancedLog(LogLevel.INFO, "RECOVERY", "Attempting to recover from null object error");
+    // 重置相关状态
+    if (context && "obj" in context) {
+        context.obj = getValidPlayerObject();
+    }
+});
+
+g_errorHandler.registerRecoveryStrategy("INVALID_STATE", function(context) {
+    // 无效状态错误的恢复策略
+    AdvancedLog(LogLevel.INFO, "RECOVERY", "Attempting to recover from invalid state");
+    if (context && "obj" in context) {
+        context.obj.sq_AddSetStatePacket(STATE_STAND, STATE_PRIORITY_FORCE, false);
+    }
+});
+```
+
+#### 2. 调试辅助工具
+```squirrel
+// 脚本状态监控
+class ScriptMonitor
+{
+    constructor()
+    {
+        this.monitoredObjects = {};
+        this.alertThresholds = {
+            stateChangeFrequency = 10,  // 每秒状态变化次数
+            functionCallFrequency = 100, // 每秒函数调用次数
+            memoryUsage = 1024 * 1024   // 内存使用量(字节)
+        };
+    }
+    
+    function startMonitoring(obj, objectName)
+    {
+        local objIndex = obj.sq_GetObjectIndex();
+        this.monitoredObjects[objIndex] <- {
+            name = objectName,
+            obj = obj,
+            stateChanges = [],
+            functionCalls = [],
+            lastState = obj.sq_GetState(),
+            startTime = GetCurrentTime()
+        };
+    }
+    
+    function stopMonitoring(obj)
+    {
+        local objIndex = obj.sq_GetObjectIndex();
+        if (objIndex in this.monitoredObjects) {
+            delete this.monitoredObjects[objIndex];
+        }
+    }
+    
+    function recordStateChange(obj, newState)
+    {
+        local objIndex = obj.sq_GetObjectIndex();
+        if (!(objIndex in this.monitoredObjects)) return;
+        
+        local monitor = this.monitoredObjects[objIndex];
+        local currentTime = GetCurrentTime();
+        
+        monitor.stateChanges.append({
+            timestamp = currentTime,
+            oldState = monitor.lastState,
+            newState = newState
+        });
+        
+        monitor.lastState = newState;
+        
+        // 检查状态变化频率
+        this.checkStateChangeFrequency(monitor);
+    }
+    
+    function checkStateChangeFrequency(monitor)
+    {
+        local currentTime = GetCurrentTime();
+        local oneSecondAgo = currentTime - 1000;
+        
+        // 计算最近1秒内的状态变化次数
+        local recentChanges = 0;
+        foreach (change in monitor.stateChanges) {
+            if (change.timestamp > oneSecondAgo) {
+                recentChanges++;
+            }
+        }
+        
+        if (recentChanges > this.alertThresholds.stateChangeFrequency) {
+            AdvancedLog(LogLevel.WARNING, "MONITOR", 
+                       "High state change frequency detected for " + monitor.name + 
+                       ": " + recentChanges + " changes/sec");
+        }
+    }
+    
+    function generateReport(obj)
+    {
+        local objIndex = obj.sq_GetObjectIndex();
+        if (!(objIndex in this.monitoredObjects)) return;
+        
+        local monitor = this.monitoredObjects[objIndex];
+        local currentTime = GetCurrentTime();
+        local duration = currentTime - monitor.startTime;
+        
+        AdvancedLog(LogLevel.INFO, "MONITOR", "=== Monitor Report for " + monitor.name + " ===");
+        AdvancedLog(LogLevel.INFO, "MONITOR", "Duration: " + duration + "ms");
+        AdvancedLog(LogLevel.INFO, "MONITOR", "Total state changes: " + monitor.stateChanges.len());
+        AdvancedLog(LogLevel.INFO, "MONITOR", "Current state: " + monitor.lastState);
+        
+        // 显示最近的状态变化
+        local recentChanges = monitor.stateChanges.slice(-5);  // 最近5次变化
+        foreach (change in recentChanges) {
+            AdvancedLog(LogLevel.INFO, "MONITOR", 
+                       "State change: " + change.oldState + " -> " + change.newState + 
+                       " at " + change.timestamp);
+        }
+    }
+}
+
+// 全局脚本监控器
+local g_scriptMonitor = ScriptMonitor();
+```
+
+---
+
+## 进阶开发指南
+
+### 高级技术应用
+
+#### 1. 协程应用
+```squirrel
+// 协程管理器
+class CoroutineManager
+{
+    constructor()
+    {
+        this.coroutines = [];
+        this.nextId = 0;
+    }
+    
+    function startCoroutine(func, ...args)
+    {
+        local co = newthread(func);
+        local id = this.nextId++;
+        
+        this.coroutines.append({
+            id = id,
+            coroutine = co,
+            args = args,
+            status = "running"
+        });
+        
+        return id;
+    }
+    
+    function update()
+    {
+        for (local i = this.coroutines.len() - 1; i >= 0; i--) {
+            local coInfo = this.coroutines[i];
+            
+            if (coInfo.status != "running") continue;
+            
+            try {
+                local result = coInfo.coroutine.call(coInfo.args);
+                
+                if (coInfo.coroutine.getstatus() == "dead") {
+                    coInfo.status = "completed";
+                    this.coroutines.remove(i);
+                }
+            } catch (e) {
+                AdvancedLog(LogLevel.ERROR, "COROUTINE", "Coroutine error: " + e);
+                coInfo.status = "error";
+                this.coroutines.remove(i);
+            }
+        }
+    }
+    
+    function stopCoroutine(id)
+    {
+        foreach (i, coInfo in this.coroutines) {
+            if (coInfo.id == id) {
+                coInfo.status = "stopped";
+                this.coroutines.remove(i);
+                break;
+            }
+        }
+    }
+}
+
+// 协程示例：渐进式技能效果
+function gradualSkillEffect(obj, duration, effectFunc)
+{
+    local startTime = GetCurrentTime();
+    local endTime = startTime + duration;
+    
+    while (GetCurrentTime() < endTime) {
+        local progress = (GetCurrentTime() - startTime) / duration.tofloat();
+        effectFunc(obj, progress);
+        
+        // 让出控制权，下一帧继续执行
+        suspend();
+    }
+    
+    // 确保效果完成
+    effectFunc(obj, 1.0);
+}
+```
+
+#### 2. 事件系统
+```squirrel
+// 事件系统
+class EventSystem
+{
+    constructor()
+    {
+        this.listeners = {};
+        this.eventQueue = [];
+    }
+    
+    function addEventListener(eventType, listener, priority = 0)
+    {
+        if (!(eventType in this.listeners)) {
+            this.listeners[eventType] <- [];
+        }
+        
+        this.listeners[eventType].append({
+            callback = listener,
+            priority = priority
+        });
+        
+        // 按优先级排序
+        this.listeners[eventType].sort(function(a, b) {
+            return b.priority <=> a.priority;
+        });
+    }
+    
+    function removeEventListener(eventType, listener)
+    {
+        if (!(eventType in this.listeners)) return;
+        
+        for (local i = this.listeners[eventType].len() - 1; i >= 0; i--) {
+            if (this.listeners[eventType][i].callback == listener) {
+                this.listeners[eventType].remove(i);
+                break;
+            }
+        }
+    }
+    
+    function dispatchEvent(eventType, eventData = null)
+    {
+        this.eventQueue.append({
+            type = eventType,
+            data = eventData,
+            timestamp = GetCurrentTime()
+        });
+    }
+    
+    function processEvents()
+    {
+        while (this.eventQueue.len() > 0) {
+            local event = this.eventQueue[0];
+            this.eventQueue.remove(0);
+            
+            this.processEvent(event);
+        }
+    }
+    
+    function processEvent(event)
+    {
+        if (!(event.type in this.listeners)) return;
+        
+        foreach (listener in this.listeners[event.type]) {
+            try {
+                listener.callback(event);
+            } catch (e) {
+                AdvancedLog(LogLevel.ERROR, "EVENT", 
+                           "Event listener error for " + event.type + ": " + e);
+            }
+        }
+    }
+}
+
+// 全局事件系统
+local g_eventSystem = EventSystem();
+
+// 技能事件示例
+g_eventSystem.addEventListener("skill_cast", function(event) {
+    local skillName = event.data.skillName;
+    local caster = event.data.caster;
+    
+    AdvancedLog(LogLevel.INFO, "SKILL_EVENT", 
+               "Skill cast: " + skillName + " by " + caster.sq_GetObjectIndex());
+});
+
+g_eventSystem.addEventListener("skill_hit", function(event) {
+    local damage = event.data.damage;
+    local target = event.data.target;
+    
+    // 创建伤害数字显示
+    createDamageNumber(target.sq_GetPos(), damage);
+});
+```
+
+### 最佳实践总结
+
+#### 1. 代码组织原则
+```squirrel
+/*
+代码组织最佳实践：
+
+1. 单一职责原则
+   - 每个函数只做一件事
+   - 每个文件只包含相关功能
+   - 避免过度复杂的函数
+
+2. 开放封闭原则
+   - 对扩展开放，对修改封闭
+   - 使用配置驱动的设计
+   - 提供清晰的接口
+
+3. 依赖倒置原则
+   - 依赖抽象而不是具体实现
+   - 使用接口和回调
+   - 避免硬编码依赖
+
+4. 组合优于继承
+   - 使用组件化设计
+   - 避免深层继承结构
+   - 提高代码复用性
+
+5. 保持简单
+   - 优先选择简单的解决方案
+   - 避免过度设计
+   - 代码要易于理解和维护
+*/
+```
+
+#### 2. 性能优化指南
+```squirrel
+/*
+性能优化最佳实践：
+
+1. 算法优化
+   - 选择合适的数据结构
+   - 避免不必要的循环
+   - 使用缓存减少重复计算
+
+2. 内存管理
+   - 及时释放不需要的对象
+   - 使用对象池减少分配
+   - 避免内存泄漏
+
+3. 函数调用优化
+   - 减少深层函数调用
+   - 避免频繁的字符串操作
+   - 使用局部变量缓存频繁访问的值
+
+4. 批处理操作
+   - 批量处理相似操作
+   - 减少引擎调用次数
+   - 使用时间分片处理大量数据
+
+5. 条件优化
+   - 将最可能的条件放在前面
+   - 使用短路求值
+   - 避免不必要的计算
+*/
+```
+
+---
+
+## 总结
+
+本文档全面总结了DAF学院在NUT脚本开发方面的核心知识和实践经验。通过系统性的学习和实践，开发者可以：
+
+1. **掌握核心技术**：深入理解Squirrel语言和DNF引擎机制
+2. **规范开发流程**：遵循最佳实践，提高代码质量
+3. **优化性能表现**：运用各种优化技术，提升脚本效率
+4. **解决实际问题**：具备调试和问题排查能力
+5. **持续改进**：建立可维护、可扩展的代码架构
+
+### 学习建议
+
+1. **循序渐进**：从基础概念开始，逐步深入高级技术
+2. **实践为主**：通过实际项目加深理解
+3. **持续学习**：关注新技术和最佳实践的发展
+4. **团队协作**：与其他开发者交流经验和技巧
+5. **文档记录**：及时记录和分享开发经验
+
+### 参考资源
+
+- DNF官方开发文档
+- Squirrel语言参考手册
+- 社区最佳实践分享
+- 开源项目案例研究
+
+---
+
+*本文档由DAF学院NUT脚本开发团队编写，持续更新中...*
