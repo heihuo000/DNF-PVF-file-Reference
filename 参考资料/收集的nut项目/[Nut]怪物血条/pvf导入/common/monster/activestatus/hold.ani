@@ -1,0 +1,41 @@
+#PVF_File
+
+[FRAME MAX]
+	3
+
+[FRAME000]
+	[IMAGE]
+		`common/hiteffect/unusualcondition_effect_01.img`
+		16
+	[IMAGE POS]
+		-38	-11
+	[DELAY]
+		80
+	[RGBA]
+		255	255	255	100
+	[INTERPOLATION]
+		1
+
+[FRAME001]
+	[IMAGE]
+		`common/hiteffect/unusualcondition_effect_01.img`
+		16
+	[IMAGE POS]
+		-38	-11
+	[DELAY]
+		700
+	[INTERPOLATION]
+		1
+
+[FRAME002]
+	[IMAGE]
+		`common/hiteffect/unusualcondition_effect_01.img`
+		16
+	[IMAGE POS]
+		-38	-100
+	[DELAY]
+		200
+	[RGBA]
+		255	255	255	100
+	[INTERPOLATION]
+		1

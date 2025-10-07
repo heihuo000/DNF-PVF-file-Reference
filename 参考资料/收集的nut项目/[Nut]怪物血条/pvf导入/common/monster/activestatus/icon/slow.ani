@@ -1,0 +1,13 @@
+#PVF_File
+
+[FRAME MAX]
+	1
+
+[FRAME000]
+	[IMAGE]
+		`interface/status_icon.img`
+		159
+	[IMAGE POS]
+		5	0
+	[DELAY]
+		99

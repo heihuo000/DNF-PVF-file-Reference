@@ -1,0 +1,17 @@
+#PVF_File
+
+[SHADOW]
+	0
+[FRAME MAX]
+	1
+
+[FRAME000]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/invincibility/invincibility.img`
+		13
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		1000

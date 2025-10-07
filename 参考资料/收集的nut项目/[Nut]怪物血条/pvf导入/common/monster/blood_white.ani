@@ -1,0 +1,15 @@
+#PVF_File
+
+[FRAME MAX]
+	1
+
+[FRAME000]
+	[IMAGE]
+		`interface/newstyle/windows/monster_hp/bossmonsterhp_cn.img`
+		2
+	[IMAGE POS]
+		0	-2
+	[IMAGE RATE]
+		1	1
+	[DELAY]
+		800

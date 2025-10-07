@@ -1,0 +1,138 @@
+#PVF_File
+
+[LOOP]
+	1
+[FRAME MAX]
+	12
+
+[FRAME000]
+	[IMAGE]
+		``
+		0
+	[IMAGE POS]
+		5	0
+	[DELAY]
+		1000
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+
+[FRAME001]
+	[IMAGE]
+		`interface2/gcontents/common/holdimmunesystem/unholdingeffect.img`
+		5
+	[IMAGE POS]
+		5	0
+	[DELAY]
+		40
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+
+[FRAME002]
+	[IMAGE]
+		`interface2/gcontents/common/holdimmunesystem/unholdingeffect.img`
+		1
+	[IMAGE POS]
+		5	0
+	[DELAY]
+		40
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+
+[FRAME003]
+	[IMAGE]
+		`interface2/gcontents/common/holdimmunesystem/unholdingeffect.img`
+		2
+	[IMAGE POS]
+		5	0
+	[DELAY]
+		40
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+
+[FRAME004]
+	[IMAGE]
+		`interface2/gcontents/common/holdimmunesystem/unholdingeffect.img`
+		3
+	[IMAGE POS]
+		5	0
+	[DELAY]
+		40
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+
+[FRAME005]
+	[IMAGE]
+		`interface2/gcontents/common/holdimmunesystem/unholdingeffect.img`
+		4
+	[IMAGE POS]
+		5	0
+	[DELAY]
+		40
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+
+[FRAME006]
+	[IMAGE]
+		`interface2/gcontents/common/holdimmunesystem/unholdingeffect.img`
+		5
+	[IMAGE POS]
+		5	0
+	[DELAY]
+		40
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+
+[FRAME007]
+	[IMAGE]
+		`interface2/gcontents/common/holdimmunesystem/unholdingeffect.img`
+		6
+	[IMAGE POS]
+		5	0
+	[DELAY]
+		40
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+
+[FRAME008]
+	[IMAGE]
+		`interface2/gcontents/common/holdimmunesystem/unholdingeffect.img`
+		7
+	[IMAGE POS]
+		5	0
+	[DELAY]
+		40
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+
+[FRAME009]
+	[IMAGE]
+		`interface2/gcontents/common/holdimmunesystem/unholdingeffect.img`
+		8
+	[IMAGE POS]
+		5	0
+	[DELAY]
+		40
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+
+[FRAME010]
+	[IMAGE]
+		`interface2/gcontents/common/holdimmunesystem/unholdingeffect.img`
+		9
+	[IMAGE POS]
+		5	0
+	[DELAY]
+		40
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+
+[FRAME011]
+	[IMAGE]
+		`interface2/gcontents/common/holdimmunesystem/unholdingeffect.img`
+		10
+	[IMAGE POS]
+		5	0
+	[DELAY]
+		40
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`

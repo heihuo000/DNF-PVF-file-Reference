@@ -1,0 +1,151 @@
+#PVF_File
+
+[SHADOW]
+	0
+[COORD]
+	1
+[FRAME MAX]
+	13
+
+[FRAME000]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/invincibility/invincibility.img`
+		0
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		80
+
+[FRAME001]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/invincibility/invincibility.img`
+		1
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		80
+
+[FRAME002]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/invincibility/invincibility.img`
+		2
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		80
+
+[FRAME003]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/invincibility/invincibility.img`
+		3
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		80
+
+[FRAME004]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/invincibility/invincibility.img`
+		4
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		80
+
+[FRAME005]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/invincibility/invincibility.img`
+		5
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		80
+
+[FRAME006]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/invincibility/invincibility.img`
+		6
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		80
+
+[FRAME007]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/invincibility/invincibility.img`
+		7
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		80
+
+[FRAME008]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/invincibility/invincibility.img`
+		8
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		80
+
+[FRAME009]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/invincibility/invincibility.img`
+		9
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		80
+
+[FRAME010]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/invincibility/invincibility.img`
+		10
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		80
+
+[FRAME011]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/invincibility/invincibility.img`
+		11
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		80
+
+[FRAME012]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/invincibility/invincibility.img`
+		12
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		80

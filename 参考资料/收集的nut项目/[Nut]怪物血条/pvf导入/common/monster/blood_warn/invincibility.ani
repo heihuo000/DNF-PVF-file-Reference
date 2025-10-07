@@ -1,0 +1,15 @@
+#PVF_File
+
+[SHADOW]
+	0
+[FRAME MAX]
+	1
+
+[FRAME000]
+	[IMAGE]
+		`interface2/common/hpstategague/showhpstate.img`
+		3
+	[IMAGE POS]
+		50	0
+	[DELAY]
+		100

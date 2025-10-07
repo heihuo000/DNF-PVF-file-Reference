@@ -1,0 +1,129 @@
+#PVF_File
+
+[SHADOW]
+	0
+[COORD]
+	1
+[FRAME MAX]
+	11
+
+[FRAME000]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/holding/holding.img`
+		0
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		90
+
+[FRAME001]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/holding/holding.img`
+		1
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		90
+
+[FRAME002]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/holding/holding.img`
+		2
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		90
+
+[FRAME003]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/holding/holding.img`
+		3
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		90
+
+[FRAME004]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/holding/holding.img`
+		4
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		90
+
+[FRAME005]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/holding/holding.img`
+		5
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		90
+
+[FRAME006]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/holding/holding.img`
+		6
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		90
+
+[FRAME007]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/holding/holding.img`
+		7
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		90
+
+[FRAME008]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/holding/holding.img`
+		8
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		90
+
+[FRAME009]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/holding/holding.img`
+		9
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		90
+
+[FRAME010]
+	[IMAGE]
+		`interface2/common/hpstategague/effect/holding/holding.img`
+		9
+	[IMAGE POS]
+		0	0
+	[GRAPHIC EFFECT]
+		`LINEARDODGE`
+	[DELAY]
+		400

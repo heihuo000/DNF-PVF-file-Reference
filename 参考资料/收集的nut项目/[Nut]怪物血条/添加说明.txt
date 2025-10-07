@@ -1,0 +1,10 @@
+//怪物血条绘制 挂载
+sq_RunScript("yusheng_1535201866/monster_blood/monster_blood.nut");
+
+function drawCustomUI_职业名函数下添加
+	//怪物血条
+	drawMonsterBlood(obj);
+
+
+BOSS无法控制提示  无敌提示   异常状态图标显示
+普通怪物异常状态图标显示
